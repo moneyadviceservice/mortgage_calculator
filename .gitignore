@@ -1,0 +1,18 @@
+.bundle
+Gemfile.lock
+
+# Ignore all logfiles and tempfiles in the dummy app.
+spec/dummy/log/*
+spec/dummy/tmp/*
+spec/dummy/public/decision-trees/assets/**
+spec/dummy/public/assets/**
+spec/dummy/public/version
+
+.jhw-cache
+vendor/cache/**
+
+tmp
+
+*.DS_Store
+.sass-cache
+.idea/
