@@ -3,7 +3,7 @@ module MortgageCalculator
     attr_reader :price
 
     def initialize(options = {})
-      @price = options[:price] || 0
+      @price = options.fetch(:price){ 0 }
     end
 
     def percentage_rate

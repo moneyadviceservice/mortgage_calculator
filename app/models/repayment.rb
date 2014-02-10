@@ -3,9 +3,9 @@ module MortgageCalculator
     attr_reader :debt, :term_years, :interest_rate
 
     def initialize(options = {})
-      @debt = options[:debt]
-      @term_years = options[:term_years]
-      @interest_rate = options[:interest_rate]
+      @debt = options.fetch(:debt)
+      @term_years = options.fetch(:term_years)
+      @interest_rate = options.fetch(:interest_rate)
     end
 
     def monthly_payment
