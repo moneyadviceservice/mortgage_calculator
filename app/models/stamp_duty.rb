@@ -22,6 +22,10 @@ module MortgageCalculator
       (price * rate).to_i
     end
 
+    def total_due
+      price + tax_due
+    end
+
     private
 
     def rate

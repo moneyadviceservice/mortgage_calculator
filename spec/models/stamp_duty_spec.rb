@@ -12,6 +12,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 0' do
         subject.tax_due.should be_zero
       end
+
+      it '#total_due returns 0' do
+        subject.total_due.should be_zero
+      end
     end
 
     context 'when house price is 125000' do
@@ -23,6 +27,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 0' do
         subject.tax_due.should be_zero
+      end
+
+      it '#total_due returns 0' do
+        subject.total_due.should == 125000
       end
     end
 
@@ -36,6 +44,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 1250.00' do
         subject.tax_due.should == 1250.00
       end
+
+      it '#total_due returns 126250.01' do
+        subject.total_due.should == 126250.01
+      end
     end
 
     context 'when house price is 250000' do
@@ -47,6 +59,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 2500' do
         subject.tax_due.should == 2500
+      end
+
+      it '#total_due returns 252500' do
+        subject.total_due.should == 252500
       end
     end
 
@@ -60,6 +76,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 7500' do
         subject.tax_due.should == 7500
       end
+
+      it '#total_due returns 257500.01' do
+        subject.total_due.should == 257500.01
+      end
     end
 
     context 'when house price is 500000' do
@@ -71,6 +91,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 15000' do
         subject.tax_due.should == 15000
+      end
+
+      it '#total_due returns 515000' do
+        subject.total_due.should == 515000
       end
     end
 
@@ -84,6 +108,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 20000' do
         subject.tax_due.should == 20000
       end
+
+      it '#total_due returns 520000.01' do
+        subject.total_due.should == 520000.01
+      end
     end
 
     context 'when house price is 1000000' do
@@ -95,6 +123,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 40000' do
         subject.tax_due.should == 40000
+      end
+
+      it '#total_due returns 1040000' do
+        subject.total_due.should == 1040000
       end
     end
 
@@ -108,6 +140,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 50000' do
         subject.tax_due.should == 50000
       end
+
+      it '#total_due returns 1050000.01' do
+        subject.total_due.should == 1050000.01
+      end
     end
 
     context 'when house price is 2000000' do
@@ -119,6 +155,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 100000' do
         subject.tax_due.should == 100000
+      end
+
+      it '#total_due returns 2100000' do
+        subject.total_due.should == 2100000
       end
     end
 
@@ -132,6 +172,10 @@ describe MortgageCalculator::StampDuty do
       it '#tax_due returns 140000' do
         subject.tax_due.should == 140000
       end
+
+      it '#total_due returns 2140000.01' do
+        subject.total_due.should == 2140000.01
+      end
     end
 
     context 'when house price is 3000000' do
@@ -143,6 +187,10 @@ describe MortgageCalculator::StampDuty do
 
       it '#tax_due returns 210000' do
         subject.tax_due.should == 210000
+      end
+
+      it '#total_due returns 3210000' do
+        subject.total_due.should == 3210000
       end
     end
   end
