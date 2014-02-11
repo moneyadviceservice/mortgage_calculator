@@ -21,21 +21,15 @@ module MortgageCalculator
     end
 
     def remaining_balances
-      array = [debt]
-
-      (1..term_years).each do |year|
+      [debt] + (1..term_years).map do |year|
         month = year * 12
 
         a1 = debt * ((1 + monthly_rate) ** month)
         b1 = -monthly_payment
         c1 = ((1 + monthly_rate) ** month) - 1
         d1 = (b1 * c1) / monthly_rate
-        outstanding_balance = a1 + d1
-
-        array.push outstanding_balance
+        a1 + d1
       end
-
-      array
     end
 
     private
