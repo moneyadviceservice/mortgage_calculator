@@ -6,7 +6,7 @@ module MortgageCalculator
       500000 => 4,
       250000 => 3,
       125000 => 1,
-      0 => 0
+      -1 => 0
     }
 
     attr_reader :price
@@ -16,7 +16,7 @@ module MortgageCalculator
     end
 
     def percentage_rate
-      BigDecimal(RATES.detect{|value,_| price > value || price == 0}.last)
+      BigDecimal(RATES.detect{|value,_| price > value}.last)
     end
 
     def tax_due
