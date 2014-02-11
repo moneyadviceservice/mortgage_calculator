@@ -21,7 +21,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 125000' do
       subject{ described_class.new(price: 125000) }
 
-      it 'returns 0' do
+      it '#percentage_rate returns 0' do
         subject.percentage_rate.should be_zero
       end
 
@@ -37,7 +37,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 125000.01' do
       subject{ described_class.new(price: 125000.01) }
 
-      it 'returns 1' do
+      it '#percentage_rate returns 1' do
         subject.percentage_rate.should == 1
       end
 
@@ -53,7 +53,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 250000' do
       subject{ described_class.new(price: 250000) }
 
-      it 'returns 1' do
+      it '#percentage_rate returns 1' do
         subject.percentage_rate.should == 1
       end
 
@@ -69,7 +69,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 250000.01' do
       subject{ described_class.new(price: 250000.01) }
 
-      it 'returns 3' do
+      it '#percentage_rate returns 3' do
         subject.percentage_rate.should == 3
       end
 
@@ -85,7 +85,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 500000' do
       subject{ described_class.new(price: 500000) }
 
-      it 'returns 3' do
+      it '#percentage_rate returns 3' do
         subject.percentage_rate.should == 3
       end
 
@@ -101,7 +101,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 500000.01' do
       subject{ described_class.new(price: 500000.01) }
 
-      it 'returns 4' do
+      it '#percentage_rate returns 4' do
         subject.percentage_rate.should == 4
       end
 
@@ -117,7 +117,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 1000000' do
       subject{ described_class.new(price: 1000000) }
 
-      it 'returns 4' do
+      it '#percentage_rate returns 4' do
         subject.percentage_rate.should == 4
       end
 
@@ -133,7 +133,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 1000000.01' do
       subject{ described_class.new(price: 1000000.01) }
 
-      it 'returns 5' do
+      it '#percentage_rate returns 5' do
         subject.percentage_rate.should == 5
       end
 
@@ -149,7 +149,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 2000000' do
       subject{ described_class.new(price: 2000000) }
 
-      it 'returns 5' do
+      it '#percentage_rate returns 5' do
         subject.percentage_rate.should == 5
       end
 
@@ -165,7 +165,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 2000000.01' do
       subject{ described_class.new(price: 2000000.01) }
 
-      it 'returns 7' do
+      it '#percentage_rate returns 7' do
         subject.percentage_rate.should == 7
       end
 
@@ -181,7 +181,7 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 3000000' do
       subject{ described_class.new(price: 3000000) }
 
-      it 'returns 7' do
+      it '#percentage_rate returns 7' do
         subject.percentage_rate.should == 7
       end
 
