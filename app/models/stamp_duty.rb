@@ -16,7 +16,7 @@ module MortgageCalculator
     end
 
     def percentage_rate
-      BigDecimal(RATES.detect{|value, rate| rate if price > value || price == 0}.last)
+      BigDecimal(RATES.detect{|value,_| price > value || price == 0}.last)
     end
 
     def tax_due
