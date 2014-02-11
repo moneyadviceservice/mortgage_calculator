@@ -1,5 +1,14 @@
 module MortgageCalculator
   class StampDuty
+    RATES = {
+      2000000 => 7,
+      1000000 => 5,
+      500000 => 4,
+      250000 => 3,
+      125000 => 1,
+      0 => 0
+    }
+
     attr_reader :price
 
     def initialize(options = {})
@@ -7,15 +16,7 @@ module MortgageCalculator
     end
 
     def percentage_rate
-      lookup = {
-        125000 => 0,
-        250000 => 1,
-        500000 => 3,
-        1000000 => 4,
-        2000000 => 5
-      }
-
-      BigDecimal(Array(lookup.detect{|k,_| price <= k}).last || 7)
+      BigDecimal(RATES.detect{|value, rate| rate if price > value || price == 0}.last)
     end
 
     def tax_due
