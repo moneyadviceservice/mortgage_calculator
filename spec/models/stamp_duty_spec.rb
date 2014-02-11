@@ -85,33 +85,17 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 2000000.01' do
       subject{ described_class.new(price: 2000000.01) }
 
-      it '#percentage_rate returns 7' do
-        subject.percentage_rate.should == 7
-      end
-
-      it '#tax_due returns 140000' do
-        subject.tax_due.should == 140000
-      end
-
-      it '#total_due returns 2140000.01' do
-        subject.total_due.should == 2140000.01
-      end
+      its(:percentage_rate) { should == 7 }
+      its(:tax_due) { should == 140000 }
+      its(:total_due) { should == 2140000.01 }
     end
 
     context 'when house price is 3000000' do
       subject{ described_class.new(price: 3000000) }
 
-      it '#percentage_rate returns 7' do
-        subject.percentage_rate.should == 7
-      end
-
-      it '#tax_due returns 210000' do
-        subject.tax_due.should == 210000
-      end
-
-      it '#total_due returns 3210000' do
-        subject.total_due.should == 3210000
-      end
+      its(:percentage_rate) { should == 7 }
+      its(:tax_due) { should == 210000 }
+      its(:total_due) { should == 3210000 }
     end
   end
 end

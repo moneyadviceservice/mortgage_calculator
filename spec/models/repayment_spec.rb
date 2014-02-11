@@ -4,29 +4,21 @@ describe MortgageCalculator::Repayment do
   subject{ described_class.new debt: 100000, term_years: 25, interest_rate: 7.5 }
 
   describe 'mortgage attributes' do
-    it 'are set correctly' do
-      subject.debt.should == 100000
-      subject.term_years.should == 25
-      subject.interest_rate.should == 7.5
-    end
+    its(:debt){ should == 100000 }
+    its(:term_years){ should == 25 }
+    its(:interest_rate){ should == 7.5 }
   end
 
   describe :monthly_payment do
-    it 'returns 738.99' do
-      subject.monthly_payment.should be_within(0.01).of(738.99)
-    end
+    its(:monthly_payment){ should be_within(0.01).of(738.99) }
   end
 
   describe :total_interest do
-    it 'returns 121697' do
-      subject.total_interest.should be_within(1).of(121697)
-    end
+    its(:total_interest){ should be_within(1).of(121697) }
   end
 
   describe :total_payable do
-    it 'returns 221697' do
-      subject.total_payable.should be_within(1).of(221697)
-    end
+    its(:total_payable){ should be_within(1).of(221697) }
   end
 
   describe :remaining_balances do
