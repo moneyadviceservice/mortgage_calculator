@@ -1,4 +1,5 @@
 require 'mas/assets'
+require 'sass-rails'
 
 module MortgageCalculator
   class Engine < ::Rails::Engine
