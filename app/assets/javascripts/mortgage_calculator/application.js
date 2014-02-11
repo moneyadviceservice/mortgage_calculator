@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
+//= require underscore
 //= require mortgageCalculatorApp
 //= require_tree ./angular
 //= require_tree .
