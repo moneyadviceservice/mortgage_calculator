@@ -13,7 +13,6 @@ gem 'mas-development_dependencies', :git => 'git@github.com:moneyadviceservice/m
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  gem 'jquery-rails'
   gem 'coffee-rails'
   gem 'sass-rails'
 end
