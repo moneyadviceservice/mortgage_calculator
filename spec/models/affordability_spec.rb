@@ -3,7 +3,7 @@ require 'spec_helper'
 module MortgageCalculator
   describe Affordability do
     context 'when the user is a sole buyer' do
-      let(:person1){ Affordability::Person.new({ annual_income: 100000, extra_income: 10000 }) }
+      let(:person1){ Person.new({ annual_income: 100000, extra_income: 10000 }) }
 
       subject{ described_class.new([person1], 1000) }
 
@@ -13,8 +13,8 @@ module MortgageCalculator
     end
 
     context 'when there are multiple applicants' do
-      let(:person1){ Affordability::Person.new({ annual_income: 100000, extra_income: 10000 }) }
-      let(:person2){ Affordability::Person.new({ annual_income: 50000, extra_income: 5000 }) }
+      let(:person1){ Person.new({ annual_income: 100000, extra_income: 10000 }) }
+      let(:person2){ Person.new({ annual_income: 50000, extra_income: 5000 }) }
 
       subject{ described_class.new([person1, person2], 1000) }
 
