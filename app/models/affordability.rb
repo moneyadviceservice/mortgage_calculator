@@ -2,20 +2,28 @@ module MortgageCalculator
   class Affordability
     INCOME_MULTIPLIER = 4.5
 
-    attr_reader :annual_income, :extra_income, :monthly_debt
+    attr_reader :people, :monthly_debt
 
-    def initialize(options = {})
-      @annual_income = options.fetch(:annual_income){ 0 }
-      @extra_income = options.fetch(:extra_income){ 0 }
-      @monthly_debt = options.fetch(:monthly_debt){ 0 }
+    def initialize(people, monthly_debt)
+      @people = people
+      @monthly_debt = monthly_debt
     end
 
     def total_income
-      annual_income + extra_income
+      @total_income ||= people.inject(0){|sum, p| sum + p.annual_income + p.extra_income}
     end
 
     def can_borrow
-      ((total_income) - (12 * monthly_debt)) * INCOME_MULTIPLIER
+      @can_borrow ||= ((total_income) - (12 * monthly_debt)) * INCOME_MULTIPLIER
+    end
+
+    class Person
+      attr_reader :annual_income, :extra_income
+
+      def initialize(options = {})
+        @annual_income = options.fetch(:annual_income){ 0 }
+        @extra_income = options.fetch(:extra_income){ 0 }
+      end
     end
   end
 end
