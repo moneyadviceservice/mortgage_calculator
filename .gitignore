@@ -10,6 +10,7 @@ spec/dummy/tmp/*
 spec/dummy/public/decision-trees/assets/**
 spec/dummy/public/assets/**
 spec/dummy/public/version
+spec/dummy/db/*.sqlite3
 
 .jhw-cache
 vendor/cache/**

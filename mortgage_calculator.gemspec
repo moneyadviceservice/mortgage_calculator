@@ -7,11 +7,11 @@ require "mortgage_calculator/version"
 Gem::Specification.new do |s|
   s.name        = "mortgage_calculator"
   s.version     = MortgageCalculator::Version::STRING
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MortgageCalculator."
-  s.description = "TODO: Description of MortgageCalculator."
+  s.authors     = ["Team D"]
+  s.email       = ["team.d@moneyadviceservice.org.uk"]
+  s.homepage    = "http://www.moneyadviceservice.co.uk"
+  s.summary     = "A Mortgage Calculator"
+  s.description = "A Mortgage Calculator"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*", "features/**/*"]
