@@ -1,6 +1,7 @@
 module MortgageCalculator
   class Affordability
     INCOME_MULTIPLIER = 4.5
+    private_constant :INCOME_MULTIPLIER
 
     attr_reader :people, :monthly_debt
 
