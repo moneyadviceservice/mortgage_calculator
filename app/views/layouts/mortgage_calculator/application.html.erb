@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MortgageCalculator</title>
+  <title>Mortgage Calculator</title>
   <%= stylesheet_link_tag    "mortgage_calculator/application", :media => "all" %>
   <%= javascript_include_tag "mortgage_calculator/application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="mortgageCalculatorApp">
 
 <%= yield %>
 
 </body>
+
 </html>
