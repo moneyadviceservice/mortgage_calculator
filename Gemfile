@@ -2,9 +2,6 @@ source "http://rubygems.org"
 
 gemspec
 
-# jquery-rails is used by the dummy application
-gem "jquery-rails"
-gem 'angularjs-rails'
 
 gem 'mas-build', :git => 'git@github.com:moneyadviceservice/mas-build' if ENV['MAS_BUILD']
 gem 'mas-assets', :git => 'git@github.com:moneyadviceservice/mas-assets'
