@@ -8,6 +8,7 @@ describe MortgageCalculator::Affordability do
 
     its(:total_income){ should == 110000 }
     its(:can_borrow){ should == 441000.00 }
+    its(:number_of_applicants){ should == 1 }
   end
 
   context 'when there are multiple applicants' do
@@ -18,5 +19,6 @@ describe MortgageCalculator::Affordability do
 
     its(:total_income){ should == 165000 }
     its(:can_borrow){ should == 688500.00 }
+    its(:number_of_applicants){ should == 2 }
   end
 end

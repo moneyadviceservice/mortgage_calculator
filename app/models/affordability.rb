@@ -17,6 +17,10 @@ module MortgageCalculator
       @can_borrow ||= ((total_income) - (12 * monthly_debt)) * INCOME_MULTIPLIER
     end
 
+    def number_of_applicants
+      people.length
+    end
+
     class Person
       attr_reader :annual_income, :extra_income
 
