@@ -6,10 +6,10 @@ describe MortgageCalculator::Person do
   describe 'validations' do
     it 'annual income must be greater than 0' do
       subject.annual_income = 0
-      subject.valid?.should be_false
+      expect(subject).to_not be_valid
 
       subject.annual_income = 0.01
-      subject.valid?.should be_true
+      expect(subject).to be_valid
     end
   end
 end
