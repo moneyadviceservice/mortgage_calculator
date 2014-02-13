@@ -20,4 +20,6 @@ describe('Controller: CalculatorCtrl', function () {
     expect(CalculatorCtrl.scope).not.toBe(null);
   });
 
+
+
 });

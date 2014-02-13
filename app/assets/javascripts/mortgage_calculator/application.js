@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
-//= require angular-resource
+//= require angular-mocks
 //= require angular-ui-router
 //= require underscore
 //= require mortgage_calculator/mortgage_calculator_app
