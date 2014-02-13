@@ -1,9 +1,13 @@
 module MortgageCalculator
   class Affordability
+    include CurrencyInput::Macro
+
     INCOME_MULTIPLIER = 4.5
     private_constant :INCOME_MULTIPLIER
 
     attr_reader :people, :monthly_debt
+
+    currency_inputs :monthly_debt
 
     def initialize(people, monthly_debt = 0)
       @people = people
