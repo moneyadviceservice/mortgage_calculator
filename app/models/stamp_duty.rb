@@ -1,6 +1,7 @@
 module MortgageCalculator
   class StampDuty
     include ActiveModel::Validations
+    include CurrencyInput::Macro
 
     RATES = {
       2000000 => 7,
@@ -13,12 +14,10 @@ module MortgageCalculator
 
     attr_reader :price
 
+    currency_inputs :price
+
     def initialize(options = {})
       self.price = options.fetch(:price){ 0 }
-    end
-
-    def price=(value)
-      @price = parse_currency_input(value)
     end
 
     def percentage_rate
@@ -37,10 +36,6 @@ module MortgageCalculator
 
     def rate
       percentage_rate / 100
-    end
-
-    def parse_currency_input(input)
-      BigDecimal(input.to_s.gsub(",",""))
     end
   end
 end
