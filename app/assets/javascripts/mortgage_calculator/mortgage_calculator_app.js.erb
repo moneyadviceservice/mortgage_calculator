@@ -1,0 +1,17 @@
+
+
+'use strict';
+
+window.App = angular.module('mortgageCalculatorApp', [
+  'ui.router'
+  ])
+  .config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('affordability', {
+        url: '/affordability',
+        templateUrl: '<%= asset_path("mortgage_calculator/templates/affordability.html") %>',
+        controller: 'CalculatorCtrl'
+      });
+  });
+
+
