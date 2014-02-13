@@ -7,39 +7,7 @@ describe MortgageCalculator::StampDuty do
     end
   end
 
-  describe 'currency price input' do
-    context 'when it is a string' do
-      subject{ described_class.new(price: "100") }
-
-      it 'is parsed correctly' do
-        subject.price.should == 100
-      end
-    end
-
-    context 'when a string with a commas' do
-      subject{ described_class.new(price: "1,000,000.01") }
-
-      it 'is parsed correctly' do
-        subject.price.to_s.should == "1000000.01"
-      end
-    end
-
-    context 'when integer' do
-      subject{ described_class.new(price: 1000) }
-
-      it 'is parsed correctly' do
-        subject.price.should == 1000
-      end
-    end
-
-    context 'when float' do
-      subject{ described_class.new(price: 1000.00) }
-
-      it 'is parsed correctly' do
-        subject.price.should == 1000
-      end
-    end
-  end
+  it_should_behave_like "currency inputs", [:price]
 
   describe 'calculations' do
     context 'when house price is 0' do
