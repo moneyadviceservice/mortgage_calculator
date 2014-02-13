@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe MortgageCalculator::StampDuty do
+  describe 'validations' do
+    it { should validate_presence_of(:price) }
+  end
+
   describe 'calculations' do
     context 'when house price is 0' do
       subject{ described_class.new(price: 0) }

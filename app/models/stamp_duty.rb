@@ -1,5 +1,7 @@
 module MortgageCalculator
   class StampDuty
+    include ActiveModel::Validations
+
     RATES = {
       2000000 => 7,
       1000000 => 5,
@@ -9,7 +11,9 @@ module MortgageCalculator
       -1 => 0
     }
 
-    attr_reader :price
+    attr_accessor :price
+
+    validates_presence_of :price
 
     def initialize(options = {})
       @price = options.fetch(:price){ 0 }
