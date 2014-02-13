@@ -1,6 +1,10 @@
 module MortgageCalculator
   class Person
-    attr_reader :annual_income, :extra_income
+    include ActiveModel::Validations
+
+    attr_accessor :annual_income, :extra_income
+
+    validates_presence_of :annual_income
 
     def initialize(options = {})
       @annual_income = options.fetch(:annual_income){ 0 }
