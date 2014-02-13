@@ -1,4 +1,5 @@
 require "mortgage_calculator/engine"
+require 'mortgage_calculator/currency_input'
 
 module MortgageCalculator
   DAYS_IN_A_MONTH = 30.4368
