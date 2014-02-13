@@ -5,7 +5,7 @@ module MortgageCalculator
 
     attr_reader :people, :monthly_debt
 
-    def initialize(people, monthly_debt)
+    def initialize(people, monthly_debt = 0)
       @people = people
       @monthly_debt = monthly_debt
     end
