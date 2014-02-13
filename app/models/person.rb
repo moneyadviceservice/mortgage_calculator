@@ -5,7 +5,7 @@ module MortgageCalculator
 
     attr_accessor :annual_income, :extra_income
 
-    validates_numericality_of :annual_income, greater_than: 0
+    validates :annual_income, numericality: { greater_than: 0 }
 
     currency_inputs :annual_income, :extra_income
 
