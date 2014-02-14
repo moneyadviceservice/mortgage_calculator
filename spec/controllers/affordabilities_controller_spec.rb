@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module MortgageCalculator
-  describe StampDutiesController do
+  describe AffordabilitiesController do
     describe :show do
       it 'responds with 200' do
         get :show, :locale => 'en'
