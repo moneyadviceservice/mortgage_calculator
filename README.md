@@ -9,19 +9,13 @@ Rails engine, providing a suite of calculators to determine affordability.
 Add this line to your application's Gemfile:
 
 ```sh
-gem 'mortgage_calculator'
+git clone git@github.com:moneyadviceservice/mortgage_calculator.git
 ```
 
 And then execute:
 
 ```sh
 $ bundle
-```
-
-Or install it yourself as:
-
-```sh
-$ gem install mortgage_calculator
 ```
 
 ## Usage
@@ -33,16 +27,36 @@ $ cd spec/dummy
 $ rails s
 ```
 
-## Running Tests
+## Running JS Tests
 
-To run JS tests you need to have Node installed and Karma via NPM:
+Unit tests are handled by Karma while End 2 End tests are dealt with Protractor. To run tests you
+need to have both installed which can be done via NPM (note, you also need to have node installed)
+to do this.
 
 ```sh
 $ npm install -g karma
-$ npm install -g karma-ng-scenario
-$ karma start spec/javascripts/karma/config/karma.conf.js
-
+$ npm install -g protractor
+$ webdriver-manager update
+$ webdriver-manager start
 ```
+
+
+Run unit tests:
+
+```sh
+$ karma start spec/javascripts/karma/config/karma.conf.js
+```
+
+Run e2e tests:
+
+```sh
+$ protractor spec/javascripts/protractor/config/protractor_conf.js
+```
+
+To learn more about the format for writing e2e tests with Protractor, see this link:
+
+http://www.ng-newsletter.com/posts/practical-protractor.html
+
 
 ## Contributing
 
