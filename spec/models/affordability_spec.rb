@@ -15,7 +15,8 @@ module MortgageCalculator
       subject{ described_class.new([person1], 1000) }
 
       its(:total_income){ should == 110_000 }
-      its(:can_borrow){ should == 441_000.00 }
+      its(:can_borrow_from){ should == 294_000.00 }
+      its(:can_borrow_upto){ should == 392_000.00 }
       its(:number_of_applicants){ should == 1 }
     end
 
@@ -23,7 +24,8 @@ module MortgageCalculator
       subject{ described_class.new([person1, person2], 1000) }
 
       its(:total_income){ should == 165_000 }
-      its(:can_borrow){ should == 688_500.00 }
+      its(:can_borrow_from){ should == 459_000.00 }
+      its(:can_borrow_upto){ should == 612_000.00 }
       its(:number_of_applicants){ should == 2 }
     end
   end
