@@ -3,6 +3,8 @@ exports.config = {
 
   seleniumAddress: 'http://0.0.0.0:4444/wd/hub',
 
+  baseUrl: 'http://localhost:3000/en/mortgage_calculator',
+
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
