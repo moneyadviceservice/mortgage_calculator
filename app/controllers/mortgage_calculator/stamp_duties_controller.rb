@@ -1,11 +1,11 @@
 module MortgageCalculator
   class StampDutiesController < ApplicationController
     def show
-      @stamp_duty = StampDuty.new
+      @stamp_duty = StampDutyPresenter.new(StampDuty.new)
     end
 
     def create
-      @stamp_duty = StampDuty.new(params[:stamp_duty])
+      @stamp_duty = StampDutyPresenter.new(StampDuty.new(params[:stamp_duty]))
     end
   end
 end
