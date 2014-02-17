@@ -4,5 +4,5 @@ Given /^a user visits the home page$/ do
 end
 
 Then /^they should see the affordability calculator$/ do
-  expect(page).to have_content('Affordability')
+  expect(page).to have_content('Mortgage Calculators')
 end
