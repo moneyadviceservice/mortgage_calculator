@@ -6,6 +6,10 @@ module MortgageCalculator
 
     def create
       @stamp_duty = StampDutyPresenter.new(StampDuty.new(params[:stamp_duty]))
+
+      unless @stamp_duty.valid?
+        render :show
+      end
     end
   end
 end

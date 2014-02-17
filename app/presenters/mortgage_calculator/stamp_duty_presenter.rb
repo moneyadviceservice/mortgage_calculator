@@ -4,7 +4,7 @@ module MortgageCalculator
 
     attr_reader :model
 
-    delegate :persisted?, to: :model
+    delegate :persisted?, :valid?, :errors, to: :model
 
     def initialize(model)
       @model = model

@@ -16,6 +16,13 @@ module MortgageCalculator
         post :create, stamp_duty: { price: "200000" }
         response.should be_success
       end
+
+      context 'when the price is blank' do
+        it 'renders show template' do
+          post :create, stamp_duty: { price: "" }
+          response.should render_template('show')
+        end
+      end
     end
   end
 end

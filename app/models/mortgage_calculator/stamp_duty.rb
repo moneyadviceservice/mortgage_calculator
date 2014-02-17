@@ -17,8 +17,10 @@ module MortgageCalculator
 
     currency_inputs :price
 
+    validates :price, presence: true
+
     def initialize(options = {})
-      self.price = options.fetch(:price){ 0 }
+      self.price = options.fetch(:price){ nil }
     end
 
     def percentage_rate

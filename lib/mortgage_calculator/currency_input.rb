@@ -20,6 +20,8 @@ module MortgageCalculator
       end
 
       def parse
+        return nil if input.blank?
+
         BigDecimal(input.to_s.gsub(",",""))
       end
 
