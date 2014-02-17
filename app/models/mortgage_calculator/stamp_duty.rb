@@ -1,6 +1,7 @@
 module MortgageCalculator
   class StampDuty
     include ActiveModel::Validations
+    include ActiveModel::Conversion
     include CurrencyInput::Macro
 
     RATES = {
@@ -30,6 +31,10 @@ module MortgageCalculator
 
     def total_due
       price + tax_due
+    end
+
+    def persisted?
+      false
     end
 
     private
