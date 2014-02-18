@@ -6,12 +6,18 @@ describe('Service: Affordability', function () {
   beforeEach(module('mortgageCalculatorApp'));
 
   // instantiate service
-  var affordability;
+  var affordability,
+  // Utility function to isolate tests to single applicant
+      resetApplicantTwoIncome = function () {
+        affordability.personTwoAnnualIncome = 0;
+        affordability.personTwoExtraIncome = 0;
+      };
+
   beforeEach(inject(function ($injector) {
     affordability = $injector.get('Affordability');
-    affordability.annualIncome = 20000;
+    affordability.annualIncome = 50000;
     affordability.extraIncome = 1000;
-    affordability.personTwoAnnualIncome = 20000;
+    affordability.personTwoAnnualIncome = 30000;
     affordability.personTwoExtraIncome = 1000;
   }));
 
@@ -19,28 +25,41 @@ describe('Service: Affordability', function () {
     expect(!!affordability).toBe(true);
   });
 
-  describe('#calculateTotalIncome', function() {
+  describe('#totalIncome', function() {
 
     it('should calculate the total amount of income for a single applicant', function () {
-      expect(affordability.calculateTotalIncome()).toBe(21000);
+      resetApplicantTwoIncome();
+      expect(affordability.totalIncome()).toBe(51000);
     });
 
     it('should calculate the total amount of income for two applicants', function () {
-      expect(affordability.calculateTotalIncome()).toBe(42000);
+      expect(affordability.totalIncome()).toBe(82000);
     });
 
   });
 
-  describe('#calculateTotalBorrowing', function() {
+  describe('#minimumBorrowing', function() {
 
-    it('should calculate the total amount a single applicant can borrow', function () {
-      expect(affordability.calculateTotalBorrowing()).toBe(94500);
+    it('should calculate the minimum amount a single applicant can borrow', function () {
+      resetApplicantTwoIncome();
+      expect(affordability.minimumBorrowing()).toBe(153000);
     });
 
-    it('should calculate the total amount two applicants can borrow', function () {
-      expect(affordability.calculateTotalBorrowing()).toBe(189000);
+    it('should calculate the minimum amount two applicants can borrow', function () {
+      expect(affordability.minimumBorrowing()).toBe(246000);
+    });
+  });
+
+  describe('#maximumBorrowing', function() {
+
+    it('should calculate the maximum amount a single applicant can borrow', function () {
+      resetApplicantTwoIncome();
+      expect(affordability.maximumBorrowing()).toBe(204000);
     });
 
+    it('should calculate the maximum amount two applicants can borrow', function () {
+      expect(affordability.maximumBorrowing()).toBe(328000);
+    });
   });
 
 
