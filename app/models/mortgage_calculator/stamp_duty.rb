@@ -1,6 +1,7 @@
 module MortgageCalculator
   class StampDuty
     include ActiveModel::Validations
+    include ActiveModel::Conversion
     include CurrencyInput::Macro
 
     RATES = {
@@ -16,8 +17,10 @@ module MortgageCalculator
 
     currency_inputs :price
 
+    validates :price, presence: true, numericality: true
+
     def initialize(options = {})
-      self.price = options.fetch(:price){ 0 }
+      self.price = options.fetch(:price){ nil }
     end
 
     def percentage_rate
@@ -30,6 +33,10 @@ module MortgageCalculator
 
     def total_due
       price + tax_due
+    end
+
+    def persisted?
+      false
     end
 
     private

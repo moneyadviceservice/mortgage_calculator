@@ -1,0 +1,7 @@
+cy:
+  number:
+    currency:
+      format:
+        precision: 2
+        unit: £
+
