@@ -9,6 +9,7 @@
           Annual Income
           </label>
         <input type="text" ng-pattern="/^\d+$/" name="annualIncome" class="form-control" ng-model="affordability.annualIncome" placeholder="Your yearly income" required autofocus />
+        <p ng-show="affordability_form.annualIncome.$invalid && !affordability_form.annualIncome.$pristine" class="help-block">Please enter an amount</p>
       </fieldset>
 
       <fieldset>
@@ -16,6 +17,7 @@
           Extra Income
         </label>
         <input type="text" ng-pattern="/^\d+$/" class="form-control" name="extraIncome" ng-model="affordability.extraIncome" placeholder="Any extra income"  />
+        <p ng-show="affordability_form.extraIncome.$invalid && !affordability_form.extraIncome.$pristine" class="help-block">Only numbers</p>
       </fieldset>
 
       <div ng-show="affordability.selectedOption == 2">
@@ -24,6 +26,7 @@
             Person 2 Annual Income
           </label>
           <input type="text" ng-pattern="/^\d+$/" name="personTwoAnnualIncome" class="form-control" ng-model="affordability.personTwoAnnualIncome" placeholder="Your yearly income"  autofocus />
+          <p ng-show="affordability_form.personTwoAnnualIncome.$invalid && !affordability_form.personTwoAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
         </fieldset>
 
         <fieldset>
@@ -31,6 +34,7 @@
             Person 2 Extra Income
           </label>
           <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personTwoExtraIncome" ng-model="affordability.personTwoExtraIncome" placeholder="Any extra income"  />
+          <p ng-show="affordability_form.personTwoExtraIncome.$invalid && !affordability_form.personTwoExtraIncome.$pristine" class="help-block">Only numbers</p>
         </fieldset>
       </div>
 
@@ -46,6 +50,7 @@
           Personal Spend
         </label>
         <input type="text" ng-pattern="/^\d+$/" class="form-control" name="committedSpend" ng-model="affordability.committedSpend" placeholder="Spending"  />
+        <p ng-show="affordability_form.committedSpend.$invalid && affordability_form.committedSpend.$dirty" class="help-block">Only numbers</p>
       </fieldset>
 
     <!-- END AFFORDABILITY CALCULATOR -->
