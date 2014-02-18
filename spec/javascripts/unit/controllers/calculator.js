@@ -20,6 +20,10 @@ describe('Controller: CalculatorCtrl', function () {
     expect(CalculatorCtrl.scope).not.toBe(null);
   });
 
+  it('should attach the Affordability service', function () {
+    expect(scope.affordability).toBeDefined();
+  });
+
 
 
 });

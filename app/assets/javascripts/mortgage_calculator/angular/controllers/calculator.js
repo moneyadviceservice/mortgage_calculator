@@ -2,8 +2,8 @@
 
 angular.module('mortgageCalculatorApp')
 
-  .controller('CalculatorCtrl', ['$scope', function ($scope) {
+  .controller('CalculatorCtrl', ['$scope', 'Affordability', function ($scope, Affordability) {
 
-    $scope.title = 'Affordability Calculator';
+    $scope.affordability = Affordability;
 
   }]);

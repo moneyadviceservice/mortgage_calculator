@@ -11,7 +11,7 @@ describe('E2E: affordability calculator page', function() {
 
   it('should load the affordability calculator page', function() {
 
-    var ele = by.id('main-heading');
+    var ele = by.css('h2');
     expect(ptor.isElementPresent(ele)).toBe(true);
 
   });
