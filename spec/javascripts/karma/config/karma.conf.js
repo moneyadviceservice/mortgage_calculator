@@ -16,7 +16,6 @@ module.exports = function(config) {
     files: [
      'vendor/assets/javascripts/angular.js',
      'vendor/assets/javascripts/angular-mocks.js',
-     'vendor/assets/javascripts/angular-ui-router.js',
      'app/assets/javascripts/mortgage_calculator/mortgage_calculator_app.js.erb',
      'app/assets/javascripts/mortgage_calculator/angular/**/*.js',
      'spec/javascripts/unit/**/*.js',

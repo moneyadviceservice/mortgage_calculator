@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-mocks
-//= require angular-ui-router
 //= require underscore
 //= require mortgage_calculator/mortgage_calculator_app
 //= require_tree ./angular/services
