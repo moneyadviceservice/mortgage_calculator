@@ -5,5 +5,5 @@ Feature: Calculators Page
   I want to view a calculator I can use
 
   Scenario: Can view the Affordability Calculator
-    Given a user visits the home page
-    Then they should see the affordability calculator
+    Given a user visits the Affordability page
+    Then they should see the Affordability calculator
