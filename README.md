@@ -57,6 +57,16 @@ To learn more about the format for writing e2e tests with Protractor, see this l
 
 http://www.ng-newsletter.com/posts/practical-protractor.html
 
+## Running Ruby Tests
+
+RSpec is used for unit tests. These tests can be ran with the following command.
+
+```sh
+bundle exec rspec
+```
+
+There are yet any integration tests. These will be added soon.
+
 
 ## Contributing
 
