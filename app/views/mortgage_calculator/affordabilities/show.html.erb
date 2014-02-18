@@ -1,3 +1,67 @@
 <div ng-controller="CalculatorCtrl">
   <h1>Find out how much you can borrow</h1>
+
+    <form name="affordability_form" role="form" novalidate>
+    <!-- START AFFORDABILITY CALCULATOR -->
+
+      <fieldset>
+        <label for="annualIncome">
+          Annual Income
+          </label>
+        <input type="text" ng-pattern="/^\d+$/" name="annualIncome" class="form-control" ng-model="affordability.annualIncome" placeholder="Your yearly income" required autofocus />
+      </fieldset>
+
+      <fieldset>
+        <label for="extraIncome">
+          Extra Income
+        </label>
+        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="extraIncome" ng-model="affordability.extraIncome" placeholder="Any extra income"  />
+      </fieldset>
+
+      <div ng-show="affordability.selectedOption == 2">
+        <fieldset>
+          <label for="personTwoAnnualIncome">
+            Person 2 Annual Income
+          </label>
+          <input type="text" ng-pattern="/^\d+$/" name="personTwoAnnualIncome" class="form-control" ng-model="affordability.personTwoAnnualIncome" placeholder="Your yearly income"  autofocus />
+        </fieldset>
+
+        <fieldset>
+          <label for="personTwoExtraIncome">
+            Person 2 Extra Income
+          </label>
+          <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personTwoExtraIncome" ng-model="affordability.personTwoExtraIncome" placeholder="Any extra income"  />
+        </fieldset>
+      </div>
+
+      <fieldset>
+        <label for="numberOfPeople">
+          Number of people
+        </label>
+        <select ng-change="normalizeValues()" ng-options="i for i in affordability.numberOfPeople " ng-model="affordability.selectedOption" name="numberOfPeople" class="form-control" required></select>
+      </fieldset>
+
+      <fieldset>
+        <label for="committedSpend">
+          Personal Spend
+        </label>
+        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="committedSpend" ng-model="affordability.committedSpend" placeholder="Spending"  />
+      </fieldset>
+
+    <!-- END AFFORDABILITY CALCULATOR -->
+
+  </form>
+
+  <div ng-show="affordability.annualIncome">
+    <p >
+      Based on your total income of
+      <span class='label label-primary'>{{ affordability.totalIncome() | currency:"£" }}</span>
+      and your total expenditure of
+      <span class='label label-danger'>{{ affordability.committedSpend | currency:"£" }}</span>,
+      the maximum mortgage you can borrow is between
+      <span class='label label-success'>{{ affordability.minimumBorrowing() | currency:"£" }}</span>
+      to
+      <span class='label label-success'>{{ affordability.maximumBorrowing() | currency:"£" }}</span>
+    </p>
+  </div>
 </div>

@@ -24,6 +24,10 @@ describe('Controller: CalculatorCtrl', function () {
     expect(scope.affordability).toBeDefined();
   });
 
+  it('should set the selected number of people to 1', function () {
+    expect(scope.affordability.selectedOption).toBe(1);
+  });
+
 
 
 });

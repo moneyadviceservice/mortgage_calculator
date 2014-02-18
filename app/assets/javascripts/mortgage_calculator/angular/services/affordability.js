@@ -3,14 +3,12 @@
 angular.module('mortgageCalculatorApp')
   .service('Affordability', function() {
 
-    this.annualIncome          = null;
-    this.extraIncome           = null;
-    this.personTwoAnnualIncome = null;
-    this.personTwoExtraIncome  = null;
-    this.numberOfPeople        = [1, 2];
-    this.personalSpend         = null;
-    this.minimumBorrowing      = null;
-    this.maximumBorrowing      = null;
+    this.annualIncome           = null;
+    this.extraIncome            = null;
+    this.personTwoAnnualIncome  = null;
+    this.personTwoExtraIncome   = null;
+    this.numberOfPeople         = [1, 2];
+    this.personalSpend          = null;
 
 
     //Calculate Income and Total Mortgage
@@ -20,13 +18,12 @@ angular.module('mortgageCalculatorApp')
     };
 
     this.minimumBorrowing = function() {
-      this.minimumBorrowing = this.totalIncome() * 3;
-      return this.minimumBorrowing;
+      return this.totalIncome() * 3;
     };
 
     this.maximumBorrowing = function() {
-      this.maximumBorrowing = this.totalIncome() * 4;
-      return this.maximumBorrowing;
+      return this.totalIncome() * 4;
+
     };
 
     //Private
