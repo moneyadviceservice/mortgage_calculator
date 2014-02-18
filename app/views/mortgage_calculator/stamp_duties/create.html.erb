@@ -1,0 +1,4 @@
+<%= render 'top' %>
+<%= render 'form' %>
+
+Based on your total purchase price of <%= number_to_currency @stamp_duty.price %> you will have to pay <%= number_to_percentage(@stamp_duty.percentage_rate, precision: 0) %> in stamp duty, costing <%= number_to_currency @stamp_duty.tax_due %>. Bringing your total spend to <%= number_to_currency @stamp_duty.total_due %>

@@ -3,13 +3,31 @@ require 'spec_helper'
 describe MortgageCalculator::StampDuty do
   describe 'default state' do
     it 'sets price to zero' do
-      subject.price.should == 0
+      subject.price.should be_nil
     end
   end
 
   it_should_behave_like "currency inputs", [:price]
 
   describe 'calculations' do
+    context 'when house price is blank' do
+      subject{ described_class.new(price: "") }
+
+      it 'has errors' do
+        subject.valid?
+        subject.errors.should_not be_empty
+      end
+    end
+
+    context 'when house price is text' do
+      subject{ described_class.new(price: "asd") }
+
+      it 'has errors' do
+        subject.valid?
+        subject.errors.should_not be_empty
+      end
+    end
+
     context 'when house price is 0' do
       subject{ described_class.new(price: 0) }
 

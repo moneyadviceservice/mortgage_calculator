@@ -9,5 +9,9 @@ module MortgageCalculator
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.after_initialize do |app|
+      app.config.paths.add 'app/decorators', eager_load: true
+    end
   end
 end
