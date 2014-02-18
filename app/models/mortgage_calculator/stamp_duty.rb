@@ -17,7 +17,7 @@ module MortgageCalculator
 
     currency_inputs :price
 
-    validates :price, presence: true
+    validates :price, presence: true, numericality: true
 
     def initialize(options = {})
       self.price = options.fetch(:price){ nil }

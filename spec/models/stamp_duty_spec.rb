@@ -19,6 +19,15 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
+    context 'when house price is text' do
+      subject{ described_class.new(price: "asd") }
+
+      it 'has errors' do
+        subject.valid?
+        subject.errors.should_not be_empty
+      end
+    end
+
     context 'when house price is 0' do
       subject{ described_class.new(price: 0) }
 
