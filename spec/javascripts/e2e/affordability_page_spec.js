@@ -3,7 +3,7 @@ describe('E2E: affordability calculator page', function() {
   var ptor;
 
   beforeEach(function() {
-    browser.get('#/affordability');
+    browser.get('mortgage_calculator/affordability');
     ptor = protractor.getInstance();
   });
 
@@ -11,7 +11,7 @@ describe('E2E: affordability calculator page', function() {
 
   it('should load the affordability calculator page', function() {
 
-    var ele = by.css('h2');
+    var ele = by.css('h1');
     expect(ptor.isElementPresent(ele)).toBe(true);
 
   });
