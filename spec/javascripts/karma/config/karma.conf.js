@@ -16,7 +16,8 @@ module.exports = function(config) {
     files: [
      'vendor/assets/javascripts/angular.js',
      'vendor/assets/javascripts/angular-mocks.js',
-     'vendor/assets/javascripts/angular-ui-router.js',
+     'vendor/assets/javascripts/underscore.js',
+     'app/assets/javascripts/mortgage_calculator/application.js',
      'app/assets/javascripts/mortgage_calculator/mortgage_calculator_app.js.erb',
      'app/assets/javascripts/mortgage_calculator/angular/**/*.js',
      'spec/javascripts/unit/**/*.js',
@@ -39,7 +40,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['progress', 'growl'],
 
 
     // web server port

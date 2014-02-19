@@ -1,21 +1,19 @@
+
+
 describe('E2E: affordability calculator page', function() {
 
-  var ptor;
+
+ var affordabilityPage = new AffordabilityPage();
+
 
   beforeEach(function() {
-    browser.get('#/affordability');
-    ptor = protractor.getInstance();
+    affordabilityPage.get();
   });
-
-
 
   it('should load the affordability calculator page', function() {
-
-    var ele = by.id('main-heading');
-    expect(ptor.isElementPresent(ele)).toBe(true);
-
+    expect(affordabilityPage.title.getText()).toBe('Find out how much you can borrow');
   });
-
 
 
 });
+
