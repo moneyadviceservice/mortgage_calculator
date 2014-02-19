@@ -34,12 +34,9 @@ need to have both installed which can be done via NPM (note, you also need to ha
 to do this.
 
 ```sh
-$ npm install -g karma
-$ npm install -g protractor
+$ npm install
 $ webdriver-manager update
-$ webdriver-manager start
 ```
-
 
 Run unit tests:
 
@@ -50,6 +47,7 @@ $ karma start spec/javascripts/karma/config/karma.conf.js
 Run e2e tests:
 
 ```sh
+$ webdriver-manager start
 $ protractor spec/javascripts/protractor/config/protractor_conf.js
 ```
 
