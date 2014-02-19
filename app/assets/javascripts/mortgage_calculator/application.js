@@ -17,7 +17,7 @@
 //= require underscore
 //= require mortgage_calculator/mortgage_calculator_app
 //= require_tree ./angular/services
-//= require_tree ./angular/factories
+//= require_tree ./angular/filters
 //= require_tree ./angular/directives
 //= require_tree ./angular/controllers
 //= require_self
