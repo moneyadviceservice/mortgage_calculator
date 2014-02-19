@@ -41,7 +41,7 @@ $ webdriver-manager update
 Run unit tests:
 
 ```sh
-$ karma start spec/javascripts/karma/config/karma.conf.js
+$ rake app:karma:run
 ```
 
 Run e2e tests:

@@ -3,6 +3,7 @@
   "dependencies" : {
     "karma":  ">= 0.10.9",
     "karma-jasmine": "0.1.5",
+    "karma-growl-reporter": "~0.1",
     "phantomjs": "1.9.7-1",
     "protractor": "0.18.1"
   }
