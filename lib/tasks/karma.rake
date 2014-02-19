@@ -1,7 +1,4 @@
 namespace :karma  do
-  task :start => :environment do
-    with_tmp_config :start
-  end
 
   task :run => :environment do
     with_tmp_config :start
