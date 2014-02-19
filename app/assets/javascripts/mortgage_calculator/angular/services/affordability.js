@@ -33,7 +33,6 @@ angular.module('mortgageCalculatorApp')
       extraIncome = extraIncome || 0;
       secondIncome = secondIncome || 0;
       secondExtraIncome = secondExtraIncome || 0;
-
       return (parseInt(income) + parseInt(extraIncome) + parseInt(secondIncome) + parseInt(secondExtraIncome));
     };
 
