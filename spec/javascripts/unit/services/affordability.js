@@ -9,16 +9,16 @@ describe('Service: Affordability', function () {
   var affordability,
   // Utility function to isolate tests to single applicant
       resetApplicantTwoIncome = function () {
-        affordability.personTwoAnnualIncome = 0;
-        affordability.personTwoExtraIncome = 0;
+        affordability.earnings.personTwo.annual = 0;
+        affordability.earnings.personTwo.extra = 0;
       };
 
   beforeEach(inject(function (Affordability) {
     affordability = Affordability;
-    affordability.annualIncome = 50000;
-    affordability.extraIncome = 1000;
-    affordability.personTwoAnnualIncome = 30000;
-    affordability.personTwoExtraIncome = 1000;
+    affordability.earnings.personOne.annual = 50000;
+    affordability.earnings.personOne.extra = 1000;
+    affordability.earnings.personTwo.annual = 30000;
+    affordability.earnings.personTwo.extra = 1000;
   }));
 
   it('should instantiate an instance of the service', function () {

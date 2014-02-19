@@ -5,15 +5,23 @@ angular.module('mortgageCalculatorApp')
 
     var affordability = {
 
-      annualIncome          : null,
-      extraIncome           : null,
-      personTwoAnnualIncome : null,
-      personTwoExtraIncome  : null,
+      earnings: {
+
+        personOne : {
+          annual: 0,
+          extra: 0
+        },
+        personTwo : {
+          annual: 0,
+          extra: 0
+        }
+
+      },
       numberOfPeople        : [1, 2],
       personalSpend         : null,
 
       totalIncome: function() {
-        return convertToNumbers(this.annualIncome, this.extraIncome, this.personTwoAnnualIncome, this.personTwoExtraIncome);
+        return convertToNumbers(this.earnings);
       },
 
       minimumBorrowing: function() {
@@ -25,19 +33,21 @@ angular.module('mortgageCalculatorApp')
       }
     };
 
-
-
-    //Calculate Income and Total Mortgage
-
     //Private
 
-    var convertToNumbers = function(income, extraIncome, secondIncome, secondExtraIncome) {
-      income = income || 0;
-      extraIncome = extraIncome || 0;
-      secondIncome = secondIncome || 0;
-      secondExtraIncome = secondExtraIncome || 0;
-      return (parseInt(income) + parseInt(extraIncome) + parseInt(secondIncome) + parseInt(secondExtraIncome));
+    var convertToNumbers = function(earnings) {
+
+      var sum = _.reduce(earnings, function(memo, person){
+        var annual = person.annual || 0,
+            extra  = person.extra  || 0;
+        return memo + (parseInt(annual) + parseInt(extra));
+      }, 0);
+
+      return sum;
+
     };
+
+
 
     return affordability;
 
