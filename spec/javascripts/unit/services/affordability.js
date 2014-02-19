@@ -13,8 +13,8 @@ describe('Service: Affordability', function () {
         affordability.personTwoExtraIncome = 0;
       };
 
-  beforeEach(inject(function ($injector) {
-    affordability = $injector.get('Affordability');
+  beforeEach(inject(function (Affordability) {
+    affordability = Affordability;
     affordability.annualIncome = 50000;
     affordability.extraIncome = 1000;
     affordability.personTwoAnnualIncome = 30000;
