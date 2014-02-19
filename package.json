@@ -1,0 +1,9 @@
+{
+  "name": "Mortgage Calculator",
+  "dependencies" : {
+    "karma":  ">= 0.10.9",
+    "karma-jasmine": "0.1.5",
+    "phantomjs": "1.9.7-1",
+    "protractor": "0.18.1"
+  }
+}
