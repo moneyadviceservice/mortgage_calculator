@@ -3,4 +3,5 @@ MortgageCalculator::Engine.routes.draw do
 
   resource :stamp_duty
   resource :affordability
+  resource :repayment
 end
