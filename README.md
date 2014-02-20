@@ -35,7 +35,6 @@ to do this.
 
 ```sh
 $ npm install
-$ webdriver-manager update
 ```
 
 Run unit tests:
@@ -44,16 +43,6 @@ Run unit tests:
 $ rake app:karma:run
 ```
 
-Run e2e tests:
-
-```sh
-$ webdriver-manager start
-$ protractor spec/javascripts/protractor/config/protractor_conf.js
-```
-
-To learn more about the format for writing e2e tests with Protractor, see this link:
-
-http://www.ng-newsletter.com/posts/practical-protractor.html
 
 ## Running Ruby Tests
 
