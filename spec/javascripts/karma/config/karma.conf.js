@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path, that will be used to resolve files and exclude
-    basePath: '../../../..',
+    basePath: '..',
 
 
     // frameworks to use
@@ -14,9 +14,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-     'vendor/assets/javascripts/angular.js',
-     'vendor/assets/javascripts/angular-mocks.js',
-     'vendor/assets/javascripts/underscore.js',
+     APPLICATION_SPEC,
      'app/assets/javascripts/mortgage_calculator/application.js',
      'app/assets/javascripts/mortgage_calculator/mortgage_calculator_app.js.erb',
      'app/assets/javascripts/mortgage_calculator/angular/**/*.js',

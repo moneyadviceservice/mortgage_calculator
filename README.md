@@ -34,28 +34,15 @@ need to have both installed which can be done via NPM (note, you also need to ha
 to do this.
 
 ```sh
-$ npm install -g karma
-$ npm install -g protractor
-$ webdriver-manager update
-$ webdriver-manager start
+$ npm install
 ```
-
 
 Run unit tests:
 
 ```sh
-$ karma start spec/javascripts/karma/config/karma.conf.js
+$ rake app:karma:run
 ```
 
-Run e2e tests:
-
-```sh
-$ protractor spec/javascripts/protractor/config/protractor_conf.js
-```
-
-To learn more about the format for writing e2e tests with Protractor, see this link:
-
-http://www.ng-newsletter.com/posts/practical-protractor.html
 
 ## Running Ruby Tests
 

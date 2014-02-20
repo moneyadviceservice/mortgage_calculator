@@ -16,15 +16,15 @@ describe('Controller: CalculatorCtrl', function () {
     });
   }));
 
-  it('should contain the scope', function () {
+  it('contains the scope', function () {
     expect(CalculatorCtrl.scope).not.toBe(null);
   });
 
-  it('should attach the Affordability service', function () {
+  it('attaches the Affordability service', function () {
     expect(scope.affordability).toBeDefined();
   });
 
-  it('should set the selected number of people to 1', function () {
+  it('sets the selected number of people to 1', function () {
     expect(scope.affordability.selectedOption).toBe(1);
   });
 
