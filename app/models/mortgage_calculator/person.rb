@@ -13,5 +13,9 @@ module MortgageCalculator
       self.annual_income = options.fetch(:annual_income){ 0 }
       self.extra_income = options.fetch(:extra_income){ 0 }
     end
+
+    def persisted?
+      false
+    end
   end
 end

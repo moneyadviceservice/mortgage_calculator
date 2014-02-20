@@ -1,6 +1,8 @@
 module MortgageCalculator
   class Affordability
     include CurrencyInput::Macro
+    extend ActiveModel::Naming
+    include ActiveModel::Conversion
 
     attr_reader :people, :monthly_debt
 
@@ -25,6 +27,10 @@ module MortgageCalculator
 
     def number_of_applicants
       people.length
+    end
+
+    def to_key
+      nil
     end
 
   private
