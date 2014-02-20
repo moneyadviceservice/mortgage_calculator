@@ -10,22 +10,22 @@ Scenario: Can view the Affordability Calculator
 @javascript
 Scenario: There is one applicant
   Given a user visits the Affordability page
-  When they fill in "annualIncome" with "100000"
+  When they fill in "personOneAnnualIncome" with "100000"
   Then they see "3" inputs
   And they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income
   Given a user visits the Affordability page
-  When they fill in "annualIncome" with "100000"
-  And they fill in "extraIncome" with "10000"
+  When they fill in "personOneAnnualIncome" with "100000"
+  And they fill in "personOneExtraIncome" with "10000"
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "annualIncome" with "100000"
-  And they fill in "extraIncome" with "10000"
+  When they fill in "personOneAnnualIncome" with "100000"
+  And they fill in "personOneExtraIncome" with "10000"
   And they fill in "committedSpend" with "1000"
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
@@ -38,8 +38,8 @@ Scenario: There are two applicants
 @javascript
 Scenario: There are two applicants with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "annualIncome" with "100000"
-  And they fill in "extraIncome" with "10000"
+  When they fill in "personOneAnnualIncome" with "100000"
+  And they fill in "personOneExtraIncome" with "10000"
   And they select 2 people
   And they fill in "personTwoAnnualIncome" with "50000"
   And they fill in "personTwoExtraIncome" with "5000"
@@ -49,11 +49,11 @@ Scenario: There are two applicants with extra income and commited spend
 @javascript
 Scenario: User enters invalid annual income
   Given a user visits the Affordability page
-  When they fill in "annualIncome" with "one"
+  When they fill in "personOneAnnualIncome" with "one"
   Then they see "Please enter an amount"
 
 @javascript
 Scenario: User enters invalid extra income
   Given a user visits the Affordability page
-  When they fill in "extraIncome" with "one"
+  When they fill in "personOneExtraIncome" with "one"
   Then they see "Only numbers"

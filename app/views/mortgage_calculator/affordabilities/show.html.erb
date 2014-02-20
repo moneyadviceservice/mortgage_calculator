@@ -5,19 +5,19 @@
     <!-- START AFFORDABILITY CALCULATOR -->
 
       <fieldset>
-        <label for="annualIncome">
+        <label for="personOneAnnualIncome">
           Annual Income
           </label>
-        <input type="text" ng-pattern="/^\d+$/" name="annualIncome" class="form-control" ng-model="affordability.earnings.personOne.annual" placeholder="Your yearly income" required autofocus />
-        <p ng-show="affordability_form.annualIncome.$invalid && !affordability_form.annualIncome.$pristine" class="help-block">Please enter an amount</p>
+        <input type="text" ng-pattern="/^\d+$/" name="personOneAnnualIncome" class="form-control" ng-model="affordability.earnings.personOne.annual" placeholder="Your yearly income" required autofocus />
+        <p ng-show="affordability_form.personOneAnnualIncome.$invalid && !affordability_form.personOneAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
       </fieldset>
 
       <fieldset>
-        <label for="extraIncome">
+        <label for="personOneExtraIncome">
           Extra Income
         </label>
-        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="extraIncome" ng-model="affordability.earnings.personOne.extra" placeholder="Any extra income"  />
-        <p ng-show="affordability_form.extraIncome.$invalid && !affordability_form.extraIncome.$pristine" class="help-block">Only numbers</p>
+        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personOneExtraIncome" ng-model="affordability.earnings.personOne.extra" placeholder="Any extra income"  />
+        <p ng-show="affordability_form.personOneExtraIncome.$invalid && !affordability_form.personOneExtraIncome.$pristine" class="help-block">Only numbers</p>
       </fieldset>
 
       <div ng-show="affordability.selectedOption == 2">
