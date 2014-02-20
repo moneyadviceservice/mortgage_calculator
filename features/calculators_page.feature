@@ -11,7 +11,8 @@ Scenario: Can view the Affordability Calculator
 Scenario: There is one applicant
   Given a user visits the Affordability page
   When they fill in "annualIncome" with "100000"
-  Then they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
+  Then they see "3" inputs
+  And they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income
@@ -29,6 +30,12 @@ Scenario: There is one applicant with extra income and commited spend
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
+Scenario: There are two applicants
+  Given a user visits the Affordability page
+  When they select 2 people
+  Then they see "5" inputs
+
+@javascript
 Scenario: There are two applicants with extra income and commited spend
   Given a user visits the Affordability page
   When they fill in "annualIncome" with "100000"
@@ -38,3 +45,15 @@ Scenario: There are two applicants with extra income and commited spend
   And they fill in "personTwoExtraIncome" with "5000"
   And they fill in "committedSpend" with "2000"
   Then they see "the maximum mortgage you can borrow is between £495,000.00 to £660,000.00"
+
+@javascript
+Scenario: User enters invalid annual income
+  Given a user visits the Affordability page
+  When they fill in "annualIncome" with "one"
+  Then they see "Please enter an amount"
+
+@javascript
+Scenario: User enters invalid extra income
+  Given a user visits the Affordability page
+  When they fill in "extraIncome" with "one"
+  Then they see "Only numbers"
