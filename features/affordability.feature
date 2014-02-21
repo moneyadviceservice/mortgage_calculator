@@ -1,4 +1,4 @@
-Feature: Calculators Page
+Feature: Affordability Calculator
 So that I can determine my affordability
 As a user
 I want to view a calculator I can use

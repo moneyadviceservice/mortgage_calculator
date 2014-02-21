@@ -1,6 +1,5 @@
 
 <div ng-controller="CalculatorCtrl">
-  <h1>How much stamp duty will I have to pay?</h1>
 
     <form name="stamp_duty_form" role="form" novalidate>
 
@@ -14,7 +13,7 @@
   </form>
 
   <div ng-show="stampDuty.propertyPrice">
-    <p >
+    <p class="results">
       Based on your total purchase price of
       <span class='label label-primary'>{{ stampDuty.propertyPrice | currency:"£" }}</span>,
       you will have to pay
