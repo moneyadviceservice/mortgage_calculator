@@ -4,36 +4,36 @@
       <!-- START AFFORDABILITY CALCULATOR -->
 
       <%= field_set_tag do %>
-        <label for="personOneAnnualIncome">
+        <label for="person1AnnualIncome">
           Annual Income
           </label>
-        <input type="text" ng-pattern="/^\d+$/" name="personOneAnnualIncome" class="form-control" ng-model="affordability.earnings.personOne.annual" placeholder="Your yearly income" required autofocus />
-        <p ng-show="affordability_form.personOneAnnualIncome.$invalid && !affordability_form.personOneAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
+        <input type="text" ng-pattern="/^\d+$/" name="person1AnnualIncome" class="form-control" ng-model="affordability.earnings.person1.annual" placeholder="Your yearly income" required autofocus />
+        <p ng-show="affordability_form.person1AnnualIncome.$invalid && !affordability_form.person1AnnualIncome.$pristine" class="help-block">Please enter an amount</p>
       <% end %>
 
       <%= field_set_tag do %>
-        <label for="personOneExtraIncome">
+        <label for="person1ExtraIncome">
           Extra Income
         </label>
-        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personOneExtraIncome" ng-model="affordability.earnings.personOne.extra" placeholder="Any extra income"  />
-        <p ng-show="affordability_form.personOneExtraIncome.$invalid && !affordability_form.personOneExtraIncome.$pristine" class="help-block">Only numbers</p>
+        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="person1ExtraIncome" ng-model="affordability.earnings.person1.extra" placeholder="Any extra income"  />
+        <p ng-show="affordability_form.person1ExtraIncome.$invalid && !affordability_form.person1ExtraIncome.$pristine" class="help-block">Only numbers</p>
       <% end %>
 
       <div ng-show="affordability.selectedOption == 2">
       <%= field_set_tag do %>
-          <label for="personTwoAnnualIncome">
+          <label for="person2AnnualIncome">
             Person 2 Annual Income
           </label>
-          <input type="text" ng-pattern="/^\d+$/" name="personTwoAnnualIncome" class="form-control" ng-model="affordability.earnings.personTwo.annual" placeholder="Your yearly income"  autofocus />
-          <p ng-show="affordability_form.personTwoAnnualIncome.$invalid && !affordability_form.personTwoAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
+          <input type="text" ng-pattern="/^\d+$/" name="person2AnnualIncome" class="form-control" ng-model="affordability.earnings.person2.annual" placeholder="Your yearly income"  autofocus />
+          <p ng-show="affordability_form.person2AnnualIncome.$invalid && !affordability_form.person2AnnualIncome.$pristine" class="help-block">Please enter an amount</p>
         <% end %>
 
       <%= field_set_tag do %>
-          <label for="personTwoExtraIncome">
+          <label for="person2ExtraIncome">
             Person 2 Extra Income
           </label>
-          <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personTwoExtraIncome" ng-model="affordability.earnings.personTwo.extra" placeholder="Any extra income"  />
-          <p ng-show="affordability_form.personTwoExtraIncome.$invalid && !affordability_form.personTwoExtraIncome.$pristine" class="help-block">Only numbers</p>
+          <input type="text" ng-pattern="/^\d+$/" class="form-control" name="person2ExtraIncome" ng-model="affordability.earnings.person2.extra" placeholder="Any extra income"  />
+          <p ng-show="affordability_form.person2ExtraIncome.$invalid && !affordability_form.person2ExtraIncome.$pristine" class="help-block">Only numbers</p>
         <% end %>
       </div>
 
@@ -57,7 +57,7 @@
 
   <% end %>
 
-  <div ng-show="affordability.earnings.personOne.annual">
+  <div ng-show="affordability.earnings.person1.annual">
     <p>
       Based on your total income of
       <span class='label label-primary'>{{ affordability.totalIncome() | currency:"£" }}</span>
