@@ -10,22 +10,22 @@ Scenario: Can view the Affordability Calculator
 @javascript
 Scenario: There is one applicant
   Given a user visits the Affordability page
-  When they fill in "person1AnnualIncome" with "100000"
+  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
   Then they see "3" inputs
   And they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income
   Given a user visits the Affordability page
-  When they fill in "person1AnnualIncome" with "100000"
-  And they fill in "person1ExtraIncome" with "10000"
+  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
+  And they fill in "affordability[people_attributes][0][extra_income]" with "10000"
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "person1AnnualIncome" with "100000"
-  And they fill in "person1ExtraIncome" with "10000"
+  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
+  And they fill in "affordability[people_attributes][0][extra_income]" with "10000"
   And they fill in "affordability[monthly_debt]" with "1000"
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
@@ -38,22 +38,22 @@ Scenario: There are two applicants
 @javascript
 Scenario: There are two applicants with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "person1AnnualIncome" with "100000"
-  And they fill in "person1ExtraIncome" with "10000"
+  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
+  And they fill in "affordability[people_attributes][0][extra_income]" with "10000"
   And they select 2 people
-  And they fill in "person2AnnualIncome" with "50000"
-  And they fill in "person2ExtraIncome" with "5000"
+  And they fill in "affordability[people_attributes][1][annual_income]" with "50000"
+  And they fill in "affordability[people_attributes][1][extra_income]" with "5000"
   And they fill in "affordability[monthly_debt]" with "2000"
   Then they see "the maximum mortgage you can borrow is between £495,000.00 to £660,000.00"
 
 @javascript
 Scenario: User enters invalid annual income
   Given a user visits the Affordability page
-  When they fill in "person1AnnualIncome" with "one"
+  When they fill in "affordability[people_attributes][0][annual_income]" with "one"
   Then they see "Please enter an amount"
 
 @javascript
 Scenario: User enters invalid extra income
   Given a user visits the Affordability page
-  When they fill in "person1ExtraIncome" with "one"
-  Then they see "Only numbers"
+  When they fill in "affordability[people_attributes][0][extra_income]" with "one"
+  Then they see "Please enter an amount"

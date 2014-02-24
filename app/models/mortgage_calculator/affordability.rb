@@ -8,6 +8,9 @@ module MortgageCalculator
 
     currency_inputs :monthly_debt
 
+    def people_attributes=(attributes)
+    end
+
     def initialize(people, monthly_debt = 0)
       @people = people
       @monthly_debt = monthly_debt
