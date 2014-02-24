@@ -26,7 +26,7 @@ When(/^click submit$/) do
   find("input[type=submit]").click
 end
 
-Then(/^they see "(.*?)" select dropdown$/) do |count|
+Then(/^they see "(.*?)" select dropdowns$/) do |count|
   all("select").length.should == count.to_i
 end
 
