@@ -18,6 +18,15 @@ When(/^they select (\d+) people$/) do |number|
   select(number, from: 'numberOfPeople')
 end
 
-Then(/^they see "(.*?)" inputs$/) do |count|
-  all("input").length.should == count.to_i
+Then(/^they see "(.*?)" text inputs$/) do |count|
+  all("input[type=text]").length.should == count.to_i
 end
+
+When(/^click submit$/) do
+  find("input[type=submit]").click
+end
+
+Then(/^they see "(.*?)" select dropdown$/) do |count|
+  all("select").length.should == count.to_i
+end
+

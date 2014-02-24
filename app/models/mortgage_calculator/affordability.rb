@@ -13,7 +13,7 @@ module MortgageCalculator
 
     def initialize(people, monthly_debt = 0)
       @people = people
-      @monthly_debt = monthly_debt
+      self.monthly_debt = monthly_debt
     end
 
     def total_income
@@ -34,6 +34,10 @@ module MortgageCalculator
 
     def to_key
       nil
+    end
+
+    def persisted?
+      false
     end
 
   private
