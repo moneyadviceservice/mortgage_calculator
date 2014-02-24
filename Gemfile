@@ -1,11 +1,9 @@
+source "http://gems.test.mas"
 source "http://rubygems.org"
 
 gemspec
 
-
-gem 'mas-build', :git => 'git@github.com:moneyadviceservice/mas-build' if ENV['MAS_BUILD']
-gem 'mas-assets', :git => 'git@github.com:moneyadviceservice/mas-assets'
-gem 'mas-development_dependencies', :git => 'git@github.com:moneyadviceservice/mas-development_dependencies'
+gem 'mas-build'
 
 group :test do
   gem 'factory_girl_rails'
