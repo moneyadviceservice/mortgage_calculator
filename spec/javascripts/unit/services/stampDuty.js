@@ -79,7 +79,7 @@ describe('Service: StampDuty', function () {
     });
 
     it('applies a 7% rate for properties over £2 million', function () {
-      setPrice(1100000);
+      setPrice(2100000);
       expect(stampDuty.rate()).toBe(0.07);
       expect(stampDuty.cost()).toBe(147000);
       expect(stampDuty.totalPurchase()).toBe(2247000);

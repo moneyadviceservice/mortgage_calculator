@@ -10,7 +10,7 @@ module MortgageCalculator
       500000 => 4,
       250000 => 3,
       125000 => 1,
-      -1 => 0
+      -0 => 0
     }
 
     attr_reader :price
