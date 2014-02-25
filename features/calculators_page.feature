@@ -44,31 +44,21 @@ Scenario: There is one applicant with extra income and commited spend
   Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
-Scenario: There are two applicants
-  Given a user visits the Affordability page
-  When they select 2 people
-  Then they see "5" text inputs
-
-@javascript
 Scenario: There are two applicants with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
-  And they fill in "affordability[people_attributes][0][extra_income]" with "10000"
-  And they select 2 people
-  And they fill in "affordability[people_attributes][1][annual_income]" with "50000"
-  And they fill in "affordability[people_attributes][1][extra_income]" with "5000"
-  And they fill in "affordability[monthly_debt]" with "2000"
-  Then they see "the maximum mortgage you can borrow is between £495,000.00 to £660,000.00" # This is not correct personal spend is not taken into consideration
+  When  they enter all details for applicant "1"
+  And   they select 2 people
+  And   they enter all details for applicant "2"
+  And   they enter their monthly debt
+  Then  they see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
 
 Scenario: There are two applicants with extra income and commited spend
   Given a user visits the Affordability page
-  When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
-  And they fill in "affordability[people_attributes][0][extra_income]" with "10000"
-  And they fill in "affordability[people_attributes][1][annual_income]" with "50000"
-  And they fill in "affordability[people_attributes][1][extra_income]" with "5000"
-  And they fill in "affordability[monthly_debt]" with "2000"
-  And click submit
-  Then they see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
+  When  they enter all details for applicant "1"
+  And   they enter all details for applicant "2"
+  And   they enter their monthly debt
+  And   submit their details
+  Then  they see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
 
 @javascript
 Scenario: User enters invalid annual income

@@ -22,7 +22,7 @@ Then(/^they see "(.*?)" text inputs$/) do |count|
   all("input[type=text]").length.should == count.to_i
 end
 
-When(/^click submit$/) do
+When(/^submit their details$/) do
   find("input[type=submit]").click
 end
 
@@ -43,5 +43,19 @@ end
 
 Then(/^they see an error message$/) do
   expect(page).to have_content('Please enter an amount')
+end
+
+When(/^they enter all details for applicant "(.*?)"$/) do |applicant|
+  if applicant.to_i == 1
+    fill_in "affordability[people_attributes][0][annual_income]", :with => "100000"
+    fill_in "affordability[people_attributes][0][extra_income]", :with => "10000"
+  elsif applicant.to_i == 2
+    fill_in "affordability[people_attributes][1][annual_income]", :with => "50000"
+    fill_in "affordability[people_attributes][1][extra_income]", :with => "5000"
+  end
+end
+
+When(/^they enter their monthly debt$/) do
+  fill_in "affordability[monthly_debt]", :with => "2000"
 end
 
