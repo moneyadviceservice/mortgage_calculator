@@ -1,12 +1,40 @@
 require 'spec_helper'
 
 describe MortgageCalculator::Repayment do
-  subject{ described_class.new debt: 100000, term_years: 25, interest_rate: 7.5 }
+  subject{ described_class.new debt: "100000", term_years: "25", interest_rate: "7.5" }
+
+  it_should_behave_like "currency inputs", [:debt]
 
   describe 'mortgage attributes' do
     its(:debt){ should == 100000 }
     its(:term_years){ should == 25 }
     its(:interest_rate){ should == 7.5 }
+  end
+
+  describe 'validations' do
+    context 'when debt is blank' do
+      subject{ described_class.new debt: "", term_years: "25", interest_rate: "7.5" }
+
+      it 'is not valid' do
+        subject.should_not be_valid
+      end
+    end
+
+    context 'when term years is blank' do
+      subject{ described_class.new debt: "100000", term_years: "", interest_rate: "7.5" }
+
+      it 'is not valid' do
+        subject.should_not be_valid
+      end
+    end
+
+    context 'when interest rate is blank' do
+      subject{ described_class.new debt: "100000", term_years: "25", interest_rate: "" }
+
+      it 'is not valid' do
+        subject.should_not be_valid
+      end
+    end
   end
 
   describe :monthly_payment do
@@ -31,7 +59,7 @@ describe MortgageCalculator::Repayment do
       balances[10].should be_within(1).of(79718)
       balances[24].should be_within(1).of(8518)
 
-      balances.last.should == 0
+      balances.last.should be_within(1).of(0)
     end
   end
 end

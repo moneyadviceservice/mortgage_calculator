@@ -1,11 +1,42 @@
 module MortgageCalculator
   class Repayment
+    extend ActiveModel::Naming
+    include ActiveModel::Conversion
+    include CurrencyInput::Macro
+    include ActiveModel::Validations
+
     attr_reader :debt, :term_years, :interest_rate
 
+    currency_inputs :debt
+
+    validates :term_years, presence: true
+    validates :debt, presence: true
+    validates :interest_rate, presence: true
+
     def initialize(options = {})
-      @debt = options.fetch(:debt)
-      @term_years = options.fetch(:term_years)
-      @interest_rate = options.fetch(:interest_rate)
+      self.debt = options.fetch(:debt){ nil }
+      self.term_years = options.fetch(:term_years){ nil }
+      self.interest_rate = options.fetch(:interest_rate){ nil }
+    end
+
+    def term_years=(value)
+      @term_years = if value.present?
+        value.to_i
+      else
+        nil
+      end
+    end
+
+    def interest_rate=(value)
+      @interest_rate = if value.present?
+        value.to_f
+      else
+        nil
+      end
+    end
+
+    def persisted?
+      false
     end
 
     def monthly_payment
