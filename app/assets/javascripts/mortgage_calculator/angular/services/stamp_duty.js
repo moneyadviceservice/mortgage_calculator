@@ -18,12 +18,19 @@ angular.module('mortgageCalculatorApp')
       rate : function() {
         var value = _.find(this.rates, function(value, key) {
           var incomeThreshold = parseInt(key);
-          if (this.propertyPrice >= incomeThreshold) {
+          if (this.propertyPrice > incomeThreshold) {
+
             return value;
           }
         }, this) || 0;
 
+
+
         return value;
+      },
+
+      percentRate : function() {
+        return Math.round(this.rate() * 100);
       },
 
       cost : function() {
@@ -31,10 +38,10 @@ angular.module('mortgageCalculatorApp')
       },
 
       totalPurchase : function() {
-        return this.propertyPrice + this.cost();
+        return (parseInt(this.propertyPrice) + parseInt(this.cost()));
       }
 
-    }
+    };
 
     return stampDuty;
   });

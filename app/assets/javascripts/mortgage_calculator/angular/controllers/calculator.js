@@ -2,8 +2,9 @@
 
 angular.module('mortgageCalculatorApp')
 
-  .controller('CalculatorCtrl', ['$scope', 'Affordability', function ($scope, Affordability) {
+  .controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', function ($scope, Affordability, StampDuty) {
 
+    //Affordability Calculations
     $scope.affordability = Affordability;
     $scope.affordability.earnings.personOne.annual = '';
     $scope.affordability.earnings.personOne.extra = '';
@@ -15,5 +16,12 @@ angular.module('mortgageCalculatorApp')
         $scope.affordability.earnings.personTwo.extra = '';
       }
     };
+
+
+    //Stamp Duty Calculations
+    $scope.stampDuty = StampDuty;
+    $scope.stampDuty.propertyPrice = '';
+
+
 
   }]);

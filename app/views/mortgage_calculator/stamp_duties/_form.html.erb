@@ -17,7 +17,7 @@
       Based on your total purchase price of
       <span class='label label-primary'>{{ stampDuty.propertyPrice | currency:"£" }}</span>,
       you will have to pay
-      <span class='label label-primary'>{{ stampDuty.rate() | currency:"£" }}</span>
+      <span class='label label-primary'>{{ stampDuty.percentRate() | number: 0 }}</span>
       in stamp duty, costing
       <span class='label label-primary'>{{ stampDuty.cost() | currency:"£" }}</span>.
       Bringing your total spend to
