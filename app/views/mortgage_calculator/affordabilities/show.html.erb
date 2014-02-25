@@ -1,64 +1,67 @@
 <div ng-controller="CalculatorCtrl">
   <h1>Find out how much you can borrow</h1>
+    <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+      <!-- START AFFORDABILITY CALCULATOR -->
 
-    <form name="affordability_form" role="form" novalidate>
-    <!-- START AFFORDABILITY CALCULATOR -->
+      <%= f.fields_for :people do |person| %>
+        <% count = @affordability.people.find_index(person.object) %>
 
-      <fieldset>
-        <label for="personOneAnnualIncome">
-          Annual Income
-          </label>
-        <input type="text" ng-pattern="/^\d+$/" name="personOneAnnualIncome" class="form-control" ng-model="affordability.earnings.personOne.annual" placeholder="Your yearly income" required autofocus />
-        <p ng-show="affordability_form.personOneAnnualIncome.$invalid && !affordability_form.personOneAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
-      </fieldset>
+        <% if count != 0 %>
+          <div ng-show="affordability.selectedOption == 2">
+        <% end %>
 
-      <fieldset>
-        <label for="personOneExtraIncome">
-          Extra Income
-        </label>
-        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personOneExtraIncome" ng-model="affordability.earnings.personOne.extra" placeholder="Any extra income"  />
-        <p ng-show="affordability_form.personOneExtraIncome.$invalid && !affordability_form.personOneExtraIncome.$pristine" class="help-block">Only numbers</p>
-      </fieldset>
+        <%= field_set_tag do %>
+          <%= person.label :annual_income  %>
+          <%= person.text_field :annual_income,
+                                "ng-pattern" => "/^\\d+$/",
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person#{count + 1}.annual",
+                                "placeholder" => "Your yearly income",
+                                "value" => nil
+          %>
 
-      <div ng-show="affordability.selectedOption == 2">
-        <fieldset>
-          <label for="personTwoAnnualIncome">
-            Person 2 Annual Income
-          </label>
-          <input type="text" ng-pattern="/^\d+$/" name="personTwoAnnualIncome" class="form-control" ng-model="affordability.earnings.personTwo.annual" placeholder="Your yearly income"  autofocus />
-          <p ng-show="affordability_form.personTwoAnnualIncome.$invalid && !affordability_form.personTwoAnnualIncome.$pristine" class="help-block">Please enter an amount</p>
-        </fieldset>
+          <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
 
-        <fieldset>
-          <label for="personTwoExtraIncome">
-            Person 2 Extra Income
-          </label>
-          <input type="text" ng-pattern="/^\d+$/" class="form-control" name="personTwoExtraIncome" ng-model="affordability.earnings.personTwo.extra" placeholder="Any extra income"  />
-          <p ng-show="affordability_form.personTwoExtraIncome.$invalid && !affordability_form.personTwoExtraIncome.$pristine" class="help-block">Only numbers</p>
-        </fieldset>
-      </div>
+          <%= person.label :extra_income  %>
+          <%= person.text_field :extra_income,
+                                "ng-pattern" => "/^\\d+$/",
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person#{count + 1}.extra",
+                                "placeholder" => "Any extra income",
+                                "value" => nil
+          %>
 
-      <fieldset>
+          <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
+          <% if count != 0 %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <%= field_set_tag do %>
         <label for="numberOfPeople">
           Number of people
         </label>
         <select ng-change="normalizeValues()" ng-options="i for i in affordability.numberOfPeople " ng-model="affordability.selectedOption" name="numberOfPeople" class="form-control" required></select>
-      </fieldset>
+      <% end %>
 
-      <fieldset>
-        <label for="committedSpend">
-          Personal Spend
-        </label>
-        <input type="text" ng-pattern="/^\d+$/" class="form-control" name="committedSpend" ng-model="affordability.committedSpend" placeholder="Spending"  />
+      <%= field_set_tag do %>
+        <%= f.label :monthly_debt, 'Personal Spend' %>
+        <%= f.text_field :monthly_debt, "ng-patern" => "/^\d+$/",
+                                        "class" => "form-control",
+                                        "ng-model" => "affordability.committedSpend",
+                                        "placeholder" => "Spending" %>
         <p ng-show="affordability_form.committedSpend.$invalid && affordability_form.committedSpend.$dirty" class="help-block">Only numbers</p>
-      </fieldset>
+      <% end %>
+
+      <%= f.submit %>
 
     <!-- END AFFORDABILITY CALCULATOR -->
 
-  </form>
+  <% end %>
 
-  <div ng-show="affordability.earnings.personOne.annual">
-    <p >
+  <div ng-show="affordability.earnings.person1.annual">
+    <p>
       Based on your total income of
       <span class='label label-primary'>{{ affordability.totalIncome() | currency:"£" }}</span>
       and your total expenditure of
