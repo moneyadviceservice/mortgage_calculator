@@ -22,7 +22,7 @@ Then(/^I see "(.*?)" text inputs$/) do |count|
   all("input[type=text]").length.should == count.to_i
 end
 
-When(/^submit their details$/) do
+When(/^I submit the details$/) do
   find("input[type=submit]").click
 end
 
@@ -55,7 +55,19 @@ When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
   end
 end
 
-When(/^I enter their monthly debt$/) do
+When(/^I enter some details for applicant "(.*?)"$/) do |applicant|
+  if applicant.to_i == 1
+    fill_in "affordability[people_attributes][0][annual_income]", :with => "100000"
+  elsif applicant.to_i == 2
+    fill_in "affordability[people_attributes][1][annual_income]", :with => "50000"
+  end
+end
+
+When(/^I enter my monthly debt$/) do
+  fill_in "affordability[monthly_debt]", :with => "1000"
+end
+
+When(/^I enter our monthly debt$/) do
   fill_in "affordability[monthly_debt]", :with => "2000"
 end
 
