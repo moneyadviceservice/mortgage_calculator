@@ -10,8 +10,11 @@ module MortgageCalculator
     currency_inputs :annual_income, :extra_income
 
     def initialize(options = {})
-      self.annual_income = options.fetch(:annual_income){ 0 }
-      self.extra_income = options.fetch(:extra_income){ 0 }
+      annual_income = options[:annual_income].presence || 0
+      extra_income = options[:extra_income].presence || 0
+
+      self.annual_income = annual_income
+      self.extra_income = extra_income
     end
 
     def persisted?

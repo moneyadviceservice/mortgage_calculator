@@ -24,7 +24,6 @@ Scenario: There is one applicant
   When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
   Then they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
 
-@wip
 Scenario: There is one applicant
   Given a user visits the Affordability page
   When they fill in "affordability[people_attributes][0][annual_income]" with "100000"
