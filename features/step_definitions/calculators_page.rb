@@ -27,6 +27,21 @@ When(/^click submit$/) do
 end
 
 Then(/^they see "(.*?)" select dropdowns$/) do |count|
-  all("select").length.should == count.to_i
+end
+
+Then(/^they can change the number of applicants$/) do
+  all("select").length.should == 1
+end
+
+Then(/^they can not change the number of applicants$/) do
+  all("select").length.should == 0
+end
+
+When(/^they submit invalid details$/) do
+  fill_in "affordability[people_attributes][0][annual_income]", :with => "one"
+end
+
+Then(/^they see an error message$/) do
+  expect(page).to have_content('Please enter an amount')
 end
 

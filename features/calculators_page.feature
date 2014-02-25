@@ -10,11 +10,11 @@ Scenario: Can view the Affordability Calculator
 @javascript
 Scenario: When javascript is enabled
   Given a user visits the Affordability page
-  And they see "1" select dropdowns
+  Then they can change the number of applicants
 
 Scenario: When javascript is disabled
   Given a user visits the Affordability page
-  And they see "0" select dropdowns
+  Then they can not change the number of applicants
 
 @javascript
 Scenario: There is one applicant
@@ -73,17 +73,10 @@ Scenario: There are two applicants with extra income and commited spend
 @javascript
 Scenario: User enters invalid annual income
   Given a user visits the Affordability page
-  When they fill in "affordability[people_attributes][0][annual_income]" with "one"
-  Then they see "Please enter an amount"
+  When they submit invalid details
+  Then they see an error message
 
 Scenario: User enters invalid annual income
   Given a user visits the Affordability page
-  When they fill in "affordability[people_attributes][0][annual_income]" with "one"
-  And click submit
-  Then they see "Please enter an amount"
-
-@javascript
-Scenario: User enters invalid extra income
-  Given a user visits the Affordability page
-  When they fill in "affordability[people_attributes][0][extra_income]" with "one"
-  Then they see "Please enter an amount"
+  When they submit invalid details
+  Then they see an error message
