@@ -3,16 +3,22 @@ module MortgageCalculator
     include CurrencyInput::Macro
     extend ActiveModel::Naming
     include ActiveModel::Conversion
+    include ActiveModel::Validations
 
     attr_reader :people, :monthly_debt
 
     currency_inputs :monthly_debt
+
+    validates :monthly_debt, numericality: true
+    validate :validate_people
 
     def people_attributes=(attributes)
     end
 
     def initialize(people, monthly_debt = 0)
       @people = people
+      monthly_debt = monthly_debt.presence || 0
+
       self.monthly_debt = monthly_debt
     end
 
@@ -41,6 +47,16 @@ module MortgageCalculator
     end
 
   private
+
+    def validate_people
+      people.each do |person|
+        unless person.valid?
+          person.errors.each do |error|
+            errors.add(:base, error)
+          end
+        end
+      end
+    end
 
     def lower_profit_multiplier
       3

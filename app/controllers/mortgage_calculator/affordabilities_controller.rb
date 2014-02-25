@@ -11,6 +11,11 @@ module MortgageCalculator
       monthly_debt = params[:affordability][:monthly_debt]
 
       @affordability = ::MortgageCalculator::Affordability.new(people, monthly_debt)
+
+      unless @affordability.valid?
+        render :show
+      end
     end
   end
 end
+

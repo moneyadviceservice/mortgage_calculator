@@ -11,6 +11,35 @@ module MortgageCalculator
       it_should_behave_like "currency inputs", [:monthly_debt]
     end
 
+    describe 'validations' do
+      context 'when monthly_debt is text' do
+        subject{ described_class.new([person1], 'abc') }
+
+        it 'is not valid' do
+          subject.valid?.should be_false
+        end
+      end
+
+      context 'when a person is not valid' do
+        let(:person1){ Person.new({ annual_income: "abc", extra_income: "10000" }) }
+        subject{ described_class.new([person1], '0') }
+
+        it 'is not valid' do
+          subject.valid?.should be_false
+        end
+      end
+
+      context 'when it is valid' do
+        let(:person1){ Person.new({ annual_income: "100000", extra_income: "" }) }
+        let(:person2){ Person.new({ annual_income: "", extra_income: "" }) }
+        subject{ described_class.new([person1], '') }
+
+        it 'is valid' do
+          subject.valid?.should be_true
+        end
+      end
+    end
+
     context 'when the user is a sole buyer' do
       subject{ described_class.new([person1], "1000") }
 

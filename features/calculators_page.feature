@@ -78,6 +78,12 @@ Scenario: User enters invalid annual income
   When they fill in "affordability[people_attributes][0][annual_income]" with "one"
   Then they see "Please enter an amount"
 
+Scenario: User enters invalid annual income
+  Given a user visits the Affordability page
+  When they fill in "affordability[people_attributes][0][annual_income]" with "one"
+  And click submit
+  Then they see "Please enter an amount"
+
 @javascript
 Scenario: User enters invalid extra income
   Given a user visits the Affordability page
