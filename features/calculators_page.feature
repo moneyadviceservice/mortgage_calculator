@@ -10,12 +10,10 @@ Scenario: Can view the Affordability Calculator
 @javascript
 Scenario: When javascript is enabled
   Given a user visits the Affordability page
-  Then they see "3" text inputs
   And they see "1" select dropdowns
 
 Scenario: When javascript is disabled
   Given a user visits the Affordability page
-  Then they see "5" text inputs
   And they see "0" select dropdowns
 
 @javascript
