@@ -1,24 +1,24 @@
-Given /^a user visits the Affordability page$/ do
+Given /^I visit the Affordability page$/ do
   visit '/en/mortgage_calculator/affordability'
 end
 
-Then /^they should see the Affordability calculator$/ do
+Then /^I should see the Affordability calculator$/ do
   expect(page).to have_content('Find out how much you can borrow')
 end
 
-When(/^they fill in "(.*?)" with "(.*?)"$/) do |field, value|
+When(/^I fill in "(.*?)" with "(.*?)"$/) do |field, value|
   fill_in field, :with => value
 end
 
-Then(/^they see "(.*?)"$/) do |content|
+Then(/^I see "(.*?)"$/) do |content|
   expect(page).to have_content(content)
 end
 
-When(/^they select (\d+) people$/) do |number|
+When(/^I select (\d+) people$/) do |number|
   select(number, from: 'numberOfPeople')
 end
 
-Then(/^they see "(.*?)" text inputs$/) do |count|
+Then(/^I see "(.*?)" text inputs$/) do |count|
   all("input[type=text]").length.should == count.to_i
 end
 
@@ -26,26 +26,26 @@ When(/^submit their details$/) do
   find("input[type=submit]").click
 end
 
-Then(/^they see "(.*?)" select dropdowns$/) do |count|
+Then(/^I see "(.*?)" select dropdowns$/) do |count|
 end
 
-Then(/^they can change the number of applicants$/) do
+Then(/^I can change the number of applicants$/) do
   all("select").length.should == 1
 end
 
-Then(/^they can not change the number of applicants$/) do
+Then(/^I can not change the number of applicants$/) do
   all("select").length.should == 0
 end
 
-When(/^they submit invalid details$/) do
+When(/^I submit invalid details$/) do
   fill_in "affordability[people_attributes][0][annual_income]", :with => "one"
 end
 
-Then(/^they see an error message$/) do
+Then(/^I see an error message$/) do
   expect(page).to have_content('Please enter an amount')
 end
 
-When(/^they enter all details for applicant "(.*?)"$/) do |applicant|
+When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
   if applicant.to_i == 1
     fill_in "affordability[people_attributes][0][annual_income]", :with => "100000"
     fill_in "affordability[people_attributes][0][extra_income]", :with => "10000"
@@ -55,7 +55,7 @@ When(/^they enter all details for applicant "(.*?)"$/) do |applicant|
   end
 end
 
-When(/^they enter their monthly debt$/) do
+When(/^I enter their monthly debt$/) do
   fill_in "affordability[monthly_debt]", :with => "2000"
 end
 
