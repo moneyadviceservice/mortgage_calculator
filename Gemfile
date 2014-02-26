@@ -11,7 +11,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'coffee-rails'
   gem 'sass-rails'
-  gem 'mas-development-dependencies'
+  gem 'mas-development_dependencies'
 end
 
 group :build, :test do
