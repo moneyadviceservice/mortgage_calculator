@@ -13,18 +13,18 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is blank' do
       subject{ described_class.new(price: "") }
 
-      it 'has errors' do
+      it 'has an error' do
         subject.valid?
-        subject.errors.should_not be_empty
+        subject.errors.count.should == 1
       end
     end
 
     context 'when house price is text' do
       subject{ described_class.new(price: "asd") }
 
-      it 'has errors' do
+      it 'has an error' do
         subject.valid?
-        subject.errors.should_not be_empty
+        subject.errors.count.should == 1
       end
     end
 

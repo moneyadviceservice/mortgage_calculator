@@ -12,6 +12,8 @@ module MortgageCalculator
 
     def price
       number_to_currency model.price, unit: nil
+    rescue TypeError
+      model.price
     end
 
     def percentage_rate
