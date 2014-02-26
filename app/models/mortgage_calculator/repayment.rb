@@ -10,7 +10,10 @@ module MortgageCalculator
     currency_inputs :debt
 
     validates :term_years, presence: true
+    validates :term_years, numericality: {only_integer: true}, if: Proc.new{|r| r.term_years.present?}
     validates :debt, presence: true
+    validates :debt, numericality: true, if: Proc.new{|r| r.debt.present?}
+    validates :interest_rate, numericality: true, if: Proc.new{|r| r.interest_rate.present?}
     validates :interest_rate, presence: true
 
     def initialize(options = {})
@@ -20,18 +23,18 @@ module MortgageCalculator
     end
 
     def term_years=(value)
-      @term_years = if value.present?
+      @term_years = if value.present? && /\A([0-9]+)\z/ =~ value
         value.to_i
       else
-        nil
+        value
       end
     end
 
     def interest_rate=(value)
-      @interest_rate = if value.present?
+      @interest_rate = if value.present? && /\A([0-9]*)(\.?)([0-9]*)\z/ =~ value
         value.to_f
       else
-        nil
+        value
       end
     end
 

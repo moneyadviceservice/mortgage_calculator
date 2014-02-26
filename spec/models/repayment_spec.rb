@@ -35,6 +35,52 @@ describe MortgageCalculator::Repayment do
         subject.should_not be_valid
       end
     end
+
+    it 'debts years must be a decimal' do
+      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "1.0"
+      expect(subject).to be_valid
+
+      subject = described_class.new debt: "100000.01", term_years: "25", interest_rate: "1.0"
+      expect(subject).to be_valid
+
+      subject = described_class.new debt: "100,000.01", term_years: "25", interest_rate: "1.0"
+      expect(subject).to be_valid
+
+      subject = described_class.new debt: "asd", term_years: "25", interest_rate: "1.0"
+      expect(subject).to_not be_valid
+
+      subject = described_class.new debt: "", term_years: "25", interest_rate: "1.0"
+      expect(subject).to_not be_valid
+      expect(subject.errors.count).to eq(1)
+    end
+
+    it 'term years must be an integer' do
+      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "1.0"
+      expect(subject).to be_valid
+
+      subject = described_class.new debt: "100000", term_years: "25.1", interest_rate: "1.0"
+      expect(subject).to_not be_valid
+
+      subject = described_class.new debt: "100000", term_years: "abc", interest_rate: "1.0"
+      expect(subject).to_not be_valid
+
+      subject = described_class.new debt: "100000", term_years: "", interest_rate: "1.0"
+      expect(subject).to_not be_valid
+      expect(subject.errors.count).to eq(1)
+    end
+
+    it 'interest rate must be a number' do
+      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "1.0"
+      expect(subject).to be_valid
+
+      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "abc"
+      expect(subject).to_not be_valid
+      expect(subject.errors.count).to eq(1)
+
+      subject = described_class.new debt: "100000", term_years: "25", interest_rate: ""
+      expect(subject).to_not be_valid
+      expect(subject.errors.count).to eq(1)
+    end
   end
 
   describe :monthly_payment do

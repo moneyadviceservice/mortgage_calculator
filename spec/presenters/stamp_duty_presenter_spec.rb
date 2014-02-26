@@ -19,5 +19,13 @@ module MortgageCalculator
     its(:total_due){ subject.total_due.should == "309,000.00" }
 
     its(:to_key){ subject.to_key.should be_nil }
+
+    context 'when price is text' do
+      let(:model){ StampDuty.new :price => 'abc' }
+
+      it 'returns original input' do
+        subject.price.should == "abc"
+      end
+    end
   end
 end
