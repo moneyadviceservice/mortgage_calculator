@@ -12,6 +12,7 @@ group :test do
   gem 'coffee-rails'
   gem 'sass-rails'
   gem 'mas-development_dependencies'
+  gem 'rspec_junit_formatter'
 end
 
 group :build, :test do
