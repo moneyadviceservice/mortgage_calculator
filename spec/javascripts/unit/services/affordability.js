@@ -6,17 +6,17 @@ describe('Service: Affordability', function () {
 
 
   var affordability,
-      resetApplicantTwoIncome = function () {
-        affordability.earnings.personTwo.annual = 0;
-        affordability.earnings.personTwo.extra = 0;
+      resetApplicant2Income = function () {
+        affordability.earnings.person2.annual = 0;
+        affordability.earnings.person2.extra = 0;
       };
 
   beforeEach(inject(function (Affordability) {
     affordability = Affordability;
-    affordability.earnings.personOne.annual = 50000;
-    affordability.earnings.personOne.extra = 1000;
-    affordability.earnings.personTwo.annual = 30000;
-    affordability.earnings.personTwo.extra = 1000;
+    affordability.earnings.person1.annual = 50000;
+    affordability.earnings.person1.extra = 1000;
+    affordability.earnings.person2.annual = 30000;
+    affordability.earnings.person2.extra = 1000;
   }));
 
   it('instantiates an instance of the service', function () {
@@ -26,7 +26,7 @@ describe('Service: Affordability', function () {
   describe('#totalIncome', function() {
 
     it('calculates the total amount of income for a single applicant', function () {
-      resetApplicantTwoIncome();
+      resetApplicant2Income();
       expect(affordability.totalIncome()).toBe(51000);
     });
 
@@ -39,7 +39,7 @@ describe('Service: Affordability', function () {
   describe('#minimumBorrowing', function() {
 
     it('calculates the minimum amount a single applicant can borrow', function () {
-      resetApplicantTwoIncome();
+      resetApplicant2Income();
       expect(affordability.minimumBorrowing()).toBe(153000);
     });
 
@@ -51,7 +51,7 @@ describe('Service: Affordability', function () {
   describe('#maximumBorrowing', function() {
 
     it('calculates the maximum amount a single applicant can borrow', function () {
-      resetApplicantTwoIncome();
+      resetApplicant2Income();
       expect(affordability.maximumBorrowing()).toBe(204000);
     });
 

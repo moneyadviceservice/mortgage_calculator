@@ -4,8 +4,8 @@ describe MortgageCalculator::Person do
   it_should_behave_like "currency inputs", [:annual_income, :extra_income]
 
   describe 'validations' do
-    it 'annual income must be greater than 0' do
-      subject.annual_income = 0
+    it 'annual income must be a number' do
+      subject.annual_income = 'abc'
       expect(subject).to_not be_valid
 
       subject.annual_income = 0.01

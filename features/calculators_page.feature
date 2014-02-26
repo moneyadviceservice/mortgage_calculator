@@ -1,59 +1,70 @@
 Feature: Calculators Page
 So that I can determine my affordability
 As a user
-I want to view a calculator I can use
+I want to enter my income and expenses
 
 Scenario: Can view the Affordability Calculator
-  Given a user visits the Affordability page
-  Then they should see the Affordability calculator
+  Given I visit the Affordability page
+  Then  I should see the Affordability calculator
+
+@javascript
+Scenario: When javascript is enabled
+  Given I visit the Affordability page
+  Then  I can change the number of applicants
+
+Scenario: When javascript is disabled
+  Given I visit the Affordability page
+  Then  I can not change the number of applicants
 
 @javascript
 Scenario: There is one applicant
-  Given a user visits the Affordability page
-  When they fill in "personOneAnnualIncome" with "100000"
-  Then they see "3" inputs
-  And they see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
+  Given I visit the Affordability page
+  When  I enter some details for applicant "1"
+  Then  I see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
+
+Scenario: There is one applicant
+  Given I visit the Affordability page
+  When  I enter some details for applicant "1"
+  And   I submit the details
+  Then  I see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income
-  Given a user visits the Affordability page
-  When they fill in "personOneAnnualIncome" with "100000"
-  And they fill in "personOneExtraIncome" with "10000"
-  Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
+  Given I visit the Affordability page
+  When  I enter all details for applicant "1"
+  Then  I see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
 Scenario: There is one applicant with extra income and commited spend
-  Given a user visits the Affordability page
-  When they fill in "personOneAnnualIncome" with "100000"
-  And they fill in "personOneExtraIncome" with "10000"
-  And they fill in "committedSpend" with "1000"
-  Then they see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
-
-@javascript
-Scenario: There are two applicants
-  Given a user visits the Affordability page
-  When they select 2 people
-  Then they see "5" inputs
+  Given I visit the Affordability page
+  When  I enter all details for applicant "1"
+  And   I enter my monthly debt
+  Then  I see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
 @javascript
 Scenario: There are two applicants with extra income and commited spend
-  Given a user visits the Affordability page
-  When they fill in "personOneAnnualIncome" with "100000"
-  And they fill in "personOneExtraIncome" with "10000"
-  And they select 2 people
-  And they fill in "personTwoAnnualIncome" with "50000"
-  And they fill in "personTwoExtraIncome" with "5000"
-  And they fill in "committedSpend" with "2000"
-  Then they see "the maximum mortgage you can borrow is between £495,000.00 to £660,000.00"
+  Given I visit the Affordability page
+  When  I enter all details for applicant "1"
+  And   I select 2 people
+  And   I enter all details for applicant "2"
+  And   I enter our monthly debt
+  Then  I see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
+
+Scenario: There are two applicants with extra income and commited spend
+  Given I visit the Affordability page
+  When  I enter all details for applicant "1"
+  And   I enter all details for applicant "2"
+  And   I enter our monthly debt
+  And   I submit the details
+  Then  I see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
 
 @javascript
-Scenario: User enters invalid annual income
-  Given a user visits the Affordability page
-  When they fill in "personOneAnnualIncome" with "one"
-  Then they see "Please enter an amount"
+Scenario: I enter invalid details
+  Given I visit the Affordability page
+  When  I submit invalid details
+  Then  I see an error message
 
-@javascript
-Scenario: User enters invalid extra income
-  Given a user visits the Affordability page
-  When they fill in "personOneExtraIncome" with "one"
-  Then they see "Only numbers"
+Scenario: I enter invalid details
+  Given I visit the Affordability page
+  When  I submit invalid details
+  Then  I see an error message

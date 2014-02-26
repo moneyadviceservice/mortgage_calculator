@@ -1,19 +1,21 @@
 namespace :karma  do
-
   task :run => :environment do
     with_tmp_config :start
+  end
+
+  desc 'Run the karma tests once'
+  task :run_once => :environment do
+    with_tmp_config :start, "--single-run"
   end
 
   private
 
   def with_tmp_config(command, args = nil)
-
     Tempfile.open('karma_unit.js', MortgageCalculator::Engine.root.join('tmp') ) do |f|
       f.write unit_js(application_spec_files)
       f.flush
 
       system "./node_modules/.bin/karma #{command} #{f.path} #{args}"
-
     end
   end
 

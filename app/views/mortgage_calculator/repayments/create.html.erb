@@ -1,0 +1,6 @@
+<%= render 'form' %>
+
+monthly payment <%= number_to_currency @repayment.monthly_payment %><br>
+total interest payable <%= number_to_currency @repayment.total_interest %><br>
+total payable <%= number_to_currency @repayment.total_payable %>
+
