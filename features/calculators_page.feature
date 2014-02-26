@@ -12,6 +12,7 @@ Scenario: When javascript is enabled
   Given I visit the Affordability page
   Then  I can change the number of applicants
 
+@wip
 Scenario: When javascript is disabled
   Given I visit the Affordability page
   Then  I can not change the number of applicants
@@ -41,7 +42,7 @@ Scenario: There is one applicant with extra income and commited spend
   And   I enter my monthly debt
   Then  I see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
 
-@javascript
+@wip @javascript
 Scenario: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
   When  I enter all details for applicant "1"

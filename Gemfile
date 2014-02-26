@@ -3,11 +3,17 @@ source "http://rubygems.org"
 
 gemspec
 
-gem 'mas-build'
+
 
 group :test do
+  gem 'rspec'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'coffee-rails'
   gem 'sass-rails'
+  gem 'mas-development-dependencies'
+end
+
+group :build, :test do
+  gem 'mas-build', '~> 2.0'
 end
