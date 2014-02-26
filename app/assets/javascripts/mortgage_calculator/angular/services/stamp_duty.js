@@ -16,17 +16,14 @@ angular.module('mortgageCalculatorApp')
 
 
       rate : function() {
-        var value = _.find(this.rates, function(value, key) {
+        var applied_rate;
+        _.each(this.rates, function(value, key) {
           var incomeThreshold = parseInt(key);
-          if (this.propertyPrice > incomeThreshold) {
-
-            return value;
+          if (this.propertyPrice >= incomeThreshold) {
+            applied_rate = value;
           }
         }, this) || 0;
-
-
-
-        return value;
+        return applied_rate;
       },
 
       percentRate : function() {
