@@ -10,3 +10,7 @@ Then(/^they do not see the result output$/) do
   expect(page).not_to have_selector('p.results')
 end
 
+When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
+  fill_in "propertyPrice", :with => amount
+end
+
