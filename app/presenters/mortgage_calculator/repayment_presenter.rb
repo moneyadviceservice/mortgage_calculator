@@ -12,6 +12,8 @@ module MortgageCalculator
 
     def debt
       number_to_currency model.debt, unit: nil
+    rescue TypeError
+      model.debt
     end
 
     def term_years
