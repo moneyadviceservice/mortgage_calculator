@@ -11,10 +11,6 @@ CI_EXECUTOR_NUMBER=${GO_AGENT_NUMBER-0}
 
 bundle install
 
-if [ -n "$GO_PIPELINE_NAME" ]; then
-  # set up a test DB if running on CI
-  rake app:build:setup[$CI_EXECUTOR_NUMBER]
-fi
 
 rspec
 cucumber
