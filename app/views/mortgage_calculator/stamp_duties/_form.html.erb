@@ -8,6 +8,7 @@
           Property Price
           </label>
         <input type="text" ng-pattern="/^\d+$/" name="propertyPrice" class="form-control" ng-model="stampDuty.propertyPrice" placeholder="The cost of the property" required autofocus />
+        <p ng-show="stamp_duty_form.propertyPrice.$invalid && !stamp_duty_form.propertyPrice.$pristine" class="help-block">Please enter an amount</p>
       </fieldset>
 
   </form>
