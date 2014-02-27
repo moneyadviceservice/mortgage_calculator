@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MortgageCalculator::StampDuty do
   describe 'default state' do
     it 'sets price to zero' do
-      subject.price.should be_nil
+      subject.price.should be_zero
     end
   end
 
