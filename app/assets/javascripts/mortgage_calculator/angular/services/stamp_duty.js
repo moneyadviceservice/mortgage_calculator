@@ -17,12 +17,8 @@ angular.module('mortgageCalculatorApp')
 
       rate : function() {
         var value = _.find(this.rates, function(el) {
-
-
           var thresh = Number(_.keys(el));
-
           return this.propertyPrice >= thresh;
-
         }, this);
 
         var applied_rate = Number(_.values(value));
