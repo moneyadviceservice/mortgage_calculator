@@ -3,7 +3,7 @@ Given /^a user visits the Stamp Duty page$/ do
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(page).to have_content('How much stamp duty will I have to pay?')
+  expect(page).to have_content('How much will the stamp duty be for this property?')
 end
 
 Then(/^they do not see the result output$/) do
