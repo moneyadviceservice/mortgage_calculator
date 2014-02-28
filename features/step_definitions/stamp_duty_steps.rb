@@ -14,3 +14,6 @@ When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
   fill_in "propertyPrice", :with => amount
 end
 
+Then(/^they see "(.*?)"$/) do |content|
+  expect(page).to have_content(content)
+end
