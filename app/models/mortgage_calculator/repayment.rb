@@ -9,14 +9,14 @@ module MortgageCalculator
 
     currency_inputs :debt
 
-    validates :term_years, presence: true
+    validates :term_years, presence: true, numericality: {greater_than: 0}
     validates :debt, presence: true
-    validates :interest_rate, presence: true
+    validates :interest_rate, presence: true, numericality: {greater_than: 0}
 
     def initialize(options = {})
-      self.debt = options.fetch(:debt){ nil }
-      self.term_years = options.fetch(:term_years){ nil }
-      self.interest_rate = options.fetch(:interest_rate){ nil }
+      self.debt = options.fetch(:debt){ 0 }
+      self.term_years = options.fetch(:term_years){ 0 }
+      self.interest_rate = options.fetch(:interest_rate){ 0 }
     end
 
     def term_years=(value)
