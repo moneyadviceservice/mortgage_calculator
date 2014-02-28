@@ -5,11 +5,11 @@ angular.module('mortgageCalculatorApp')
 
     var affordability = {
       earnings: {
-        personOne : {
+        person1 : {
           annual: 0,
           extra: 0
         },
-        personTwo : {
+        person2 : {
           annual: 0,
           extra: 0
         }
