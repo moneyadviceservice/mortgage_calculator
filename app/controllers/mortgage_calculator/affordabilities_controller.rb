@@ -3,7 +3,7 @@ module MortgageCalculator
     def show
       people = [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
 
-      @affordability = ::MortgageCalculator::Affordability.new(people)
+      @affordability = AffordabilityPresenter.new(Affordability.new(people))
     end
 
     def create

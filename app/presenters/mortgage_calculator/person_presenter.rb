@@ -17,5 +17,9 @@ module MortgageCalculator
     def extra_income
       number_to_currency model.extra_income, unit: nil
     end
+
+    def self.model_name
+      ActiveModel::Name.new(Person, MortgageCalculator)
+    end
   end
 end

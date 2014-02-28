@@ -6,7 +6,7 @@
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
-        <% if count != 0 %>
+        <% unless count.zero? %>
           <div ng-show="affordability.selectedOption == 2">
         <% end %>
 
