@@ -21,8 +21,8 @@ angular.module('mortgageCalculatorApp')
           return this.propertyPrice >= thresh;
         }, this);
 
-        var applied_rate = Number(_.values(value));
-        return applied_rate;
+        var appliedRate = Number(_.values(value));
+        return appliedRate;
 
       },
 
