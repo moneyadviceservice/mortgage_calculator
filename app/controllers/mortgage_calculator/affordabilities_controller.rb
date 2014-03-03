@@ -1,9 +1,9 @@
 module MortgageCalculator
   class AffordabilitiesController < ApplicationController
     def show
-      people = [Person.new, Person.new]
+      people = [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
 
-      @affordability = ::MortgageCalculator::Affordability.new(people)
+      @affordability = AffordabilityPresenter.new(Affordability.new(people))
     end
 
     def create

@@ -6,7 +6,7 @@
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
-        <% if count != 0 %>
+        <% unless count.zero? %>
           <div ng-show="affordability.selectedOption == 2">
         <% end %>
 
@@ -16,8 +16,7 @@
                                 "ng-pattern" => "/^\\d+$/",
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person#{count + 1}.annual",
-                                "placeholder" => "Your yearly income",
-                                "value" => nil
+                                "placeholder" => "Your yearly income"
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
@@ -27,8 +26,7 @@
                                 "ng-pattern" => "/^\\d+$/",
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person#{count + 1}.extra",
-                                "placeholder" => "Any extra income",
-                                "value" => nil
+                                "placeholder" => "Any extra income"
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
