@@ -21,6 +21,7 @@ angular.module('mortgageCalculatorApp')
     //Stamp Duty Calculations
     $scope.stampDuty = StampDuty;
     $scope.stampDuty.propertyPrice = '';
+    $scope.fallback = false;
 
 
 

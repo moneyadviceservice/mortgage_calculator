@@ -20,7 +20,10 @@
         <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Please enter an amount</p>
       <% end %>
 
-      <%= f.submit %>
+      <div ng-hide="!fallback">
+        <%= f.submit %>
+      </div>
+
     <% end %>
 
 
