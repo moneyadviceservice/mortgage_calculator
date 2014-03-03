@@ -15,7 +15,7 @@ angular.module('mortgageCalculatorApp')
         }
       },
       numberOfPeople        : [1, 2],
-      personalSpend         : null,
+      personalSpend         : 0,
 
       /**
        * Calculates applicant(s) total income
