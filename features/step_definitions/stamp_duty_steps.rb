@@ -11,7 +11,7 @@ Then(/^they do not see the result output$/) do
 end
 
 When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
-  fill_in "propertyPrice", :with => amount
+  fill_in "stamp_duty[price]", :with => amount
 end
 
 Then(/^they see "(.*?)"$/) do |content|
