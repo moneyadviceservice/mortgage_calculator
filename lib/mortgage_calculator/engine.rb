@@ -3,7 +3,7 @@ require 'sass-rails'
 require 'jquery-rails'
 require 'angularjs-rails'
 require 'underscore-rails'
-
+require 'mas/feedback'
 
 module MortgageCalculator
   class Engine < ::Rails::Engine
