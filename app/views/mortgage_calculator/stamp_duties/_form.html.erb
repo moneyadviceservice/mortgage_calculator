@@ -1,17 +1,29 @@
 
 <div ng-controller="CalculatorCtrl">
 
-    <form name="stamp_duty_form" role="form" novalidate>
+    <% @stamp_duty.errors.full_messages.each do |m| %>
+      <span style="color:red;"><%= m %></span>
+    <% end %>
 
-      <fieldset>
-        <label for="propertyPrice">
-          Property Price
-          </label>
-        <input type="text" ng-pattern="/^\d+$/" name="propertyPrice" class="form-control" ng-model="stampDuty.propertyPrice" placeholder="The cost of the property" required autofocus integer />
-        <p ng-show="stamp_duty_form.propertyPrice.$invalid && !stamp_duty_form.propertyPrice.$pristine" class="help-block">Please enter an amount</p>
-      </fieldset>
+    <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form' } do |f| %>
+      <%= field_set_tag do %>
+        <%= f.label :price, 'Property Price' %>
+        <%= f.text_field :price,
+                         "ng-pattern" => "/^\\d+$/",
+                         "class" => "form-control",
+                         "ng-model" => "stampDuty.propertyPrice",
+                         "placeholder" => "The cost of the property",
+                         "required" => '',
+                         "autofocus" => '',
+                         "integer" => '' %>
 
-  </form>
+        <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Please enter an amount</p>
+      <% end %>
+
+      <%= f.submit %>
+    <% end %>
+
+
 
   <div ng-show="stampDuty.propertyPrice">
     <p class="results">
