@@ -28,6 +28,10 @@ describe('Controller: CalculatorCtrl', function () {
     expect(scope.affordability.selectedOption).toBe(1);
   });
 
+  it('should attach the StampDuty service', function () {
+    expect(scope.stampDuty).toBeDefined();
+  });
+
 
 
 });

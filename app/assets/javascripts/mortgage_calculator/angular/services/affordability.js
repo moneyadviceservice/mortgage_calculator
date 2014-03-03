@@ -15,14 +15,14 @@ angular.module('mortgageCalculatorApp')
         }
       },
       numberOfPeople        : [1, 2],
-      personalSpend         : null,
+      personalSpend         : 0,
 
       /**
        * Calculates applicant(s) total income
        * @return {integer} Returns total income of applicant(s)
        */
       totalIncome: function() {
-        return convertToNumbers(this.earnings);
+        return _convertToNumbers(this.earnings);
       },
 
       /**
@@ -48,7 +48,7 @@ angular.module('mortgageCalculatorApp')
      * @param  {object} earnings An object containing data on the applicant(s) supplied income
      * @return {integer}         Returns total sum of applicant(s) supplied income
      */
-    var convertToNumbers = function(earnings) {
+    var _convertToNumbers = function(earnings) {
       var sum = _.reduce(earnings, function(memo, person){
         var annual = person.annual || 0,
             extra  = person.extra  || 0;
