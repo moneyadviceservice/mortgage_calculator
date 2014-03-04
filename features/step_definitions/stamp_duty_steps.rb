@@ -1,5 +1,5 @@
 Given /^a user visits the Stamp Duty page$/ do
-  @stamp_duty = PageObjects::StampDuty.new
+  @stamp_duty = UI::Pages::StampDuty.new
   @stamp_duty.load
 end
 

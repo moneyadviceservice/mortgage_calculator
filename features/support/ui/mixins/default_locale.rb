@@ -1,4 +1,4 @@
-module PageObjects
+module UI
   module DefaultLocale
     def locale
       "en"
