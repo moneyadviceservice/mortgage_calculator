@@ -1,11 +1,16 @@
 Feature: Stamp Duty Calculator
-So that I can determine the stamp duty cost of a property
+So that I know how much stamp duty to pay
 As a user
-I want to view a calculator I can use
+I want to enter my house price
 
 Scenario: Can view the Stamp Duty Calculator
   Given a user visits the Stamp Duty page
   Then they should see the Stamp Duty calculator
+
+Scenario: When javascript is enabled
+  Given I visit the Stamp Duty page
+  When  I enter my house price
+  Then  I see how much stamp duty I will have to pay
 
 @javascript
 Scenario: House price which is less than £125,000
