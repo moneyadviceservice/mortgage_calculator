@@ -1,19 +1,20 @@
 Given /^a user visits the Stamp Duty page$/ do
-  visit '/en/mortgage_calculator/stamp_duty'
+  @stamp_duty = UI::Pages::StampDuty.new
+  @stamp_duty.load
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(page).to have_content('How much will the stamp duty be for this property?')
+  expect(@stamp_duty.h1).to have_content('How much will the stamp duty be for this property?')
 end
 
 Then(/^they do not see the result output$/) do
-  expect(page).not_to have_selector('p.results')
+  expect(@stamp_duty).to_not have_results
 end
 
 When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
-  fill_in "stamp_duty[price]", :with => amount
+  @stamp_duty.property_price.set amount
 end
 
 Then(/^they see "(.*?)"$/) do |content|
-  expect(page).to have_content(content)
+  expect(@stamp_duty).to have_content(content)
 end

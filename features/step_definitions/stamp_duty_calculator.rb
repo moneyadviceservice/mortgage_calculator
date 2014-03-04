@@ -1,9 +1,5 @@
 # encoding: UTF-8
 
-Given(/^I visit the Stamp Duty page$/) do
-  visit '/en/mortgage_calculator/stamp_duty'
-end
-
 When(/^I enter my house price$/) do
   fill_in "stamp_duty[price]", :with => "300000"
   find("input[type=submit]").click
