@@ -11,8 +11,9 @@ Scenario: When viewing the tool for the first time
   And   I see some descriptive blurb
   And   I see the repayment url
 
-Scenario: When viewing the tool
+Scenario: When using the tool for the first time
   Given I visit the Repayment calculator
-  Then  I can enter the price
-  And   I can enter the deposit
+  When  I enter my repayment house price
+  And   I enter my deposit
+  Then  I see my monthly repayment
 
