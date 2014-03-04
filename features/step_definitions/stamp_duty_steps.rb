@@ -1,4 +1,6 @@
-Given /^a user visits the Stamp Duty page$/ do
+# encoding: UTF-8
+
+Given /^I visit the Stamp Duty page$/ do
   @stamp_duty = UI::Pages::StampDuty.new
   @stamp_duty.load
 end
@@ -18,3 +20,13 @@ end
 Then(/^they see "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
 end
+
+When(/^I enter my house price$/) do
+  @stamp_duty.property_price.set "300000"
+  @stamp_duty.submit.click
+end
+
+Then(/^I see how much stamp duty I will have to pay$/) do
+  expect(@stamp_duty).to have_content("Based on your total purchase price of £300,000.00 you will have to pay 3% in stamp duty, costing £9,000.00. Bringing your total spend to £309,000.00")
+end
+
