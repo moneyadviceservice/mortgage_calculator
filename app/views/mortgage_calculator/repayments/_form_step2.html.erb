@@ -1,0 +1,15 @@
+<%= form_for @repayment, url: repayment_path do |f| %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :deposit %>
+  <%= f.text_field :deposit %>
+
+  <%= f.label :term_years %>
+  <%= f.text_field :term_years %>
+
+  <%= f.label :interest_rate %>
+  <%= f.text_field :interest_rate %>
+
+  <%= f.submit %>
+<% end %>

@@ -17,3 +17,8 @@ Scenario: When using the tool for the first time
   And   I enter my deposit
   Then  I see my monthly repayment
 
+Scenario: When updating values in the tool
+  Given I have entered some details into the repayment tool
+  When  I update my repayment details
+  Then  I see my updated monthly repayment
+
