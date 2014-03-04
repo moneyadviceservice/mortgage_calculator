@@ -8,7 +8,7 @@ Then /^they should see the Stamp Duty calculator$/ do
 end
 
 Then(/^they do not see the result output$/) do
-  expect(@stamp_duty.has_results?).to be_false
+  expect(@stamp_duty).to_not have_results
 end
 
 When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
