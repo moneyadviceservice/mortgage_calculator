@@ -20,7 +20,7 @@ module MortgageCalculator
     validates :price, presence: true, numericality: true
 
     def initialize(options = {})
-      self.price = options.fetch(:price){ nil }
+      self.price = options.fetch(:price){ 0 }
     end
 
     def percentage_rate
