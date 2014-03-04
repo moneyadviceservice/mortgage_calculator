@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe MortgageCalculator::Repayment do
-  subject{ described_class.new debt: "100000", term_years: "25", interest_rate: "7.5" }
+  subject{ described_class.new price: "120000", deposit: "20000", term_years: "25", interest_rate: "7.5" }
 
-  it_should_behave_like "currency inputs", [:debt]
+  it_should_behave_like "currency inputs", [:price, :deposit]
 
   describe 'mortgage attributes' do
+    its(:price){ should == 120000 }
+    its(:deposit){ should == 20000 }
     its(:debt){ should == 100000 }
     its(:term_years){ should == 25 }
     its(:interest_rate){ should == 7.5 }
@@ -14,14 +16,16 @@ describe MortgageCalculator::Repayment do
   describe 'defaults' do
     subject{ described_class.new }
 
+    its(:price){ should be_zero }
+    its(:deposit){ should be_zero }
     its(:debt){ should be_zero }
-    its(:term_years){ should be_zero }
-    its(:interest_rate){ should be_zero }
+    its(:term_years){ should == 25 }
+    its(:interest_rate){ should == 5 }
   end
 
   describe 'validations' do
-    context 'when debt is blank' do
-      subject{ described_class.new debt: "", term_years: "25", interest_rate: "7.5" }
+    context 'when price is blank' do
+      subject{ described_class.new price: "", deposit: "20000", term_years: "25", interest_rate: "7.5" }
 
       it 'is not valid' do
         subject.should_not be_valid
@@ -29,7 +33,7 @@ describe MortgageCalculator::Repayment do
     end
 
     context 'when term years is blank' do
-      subject{ described_class.new debt: "100000", term_years: "", interest_rate: "7.5" }
+      subject{ described_class.new price: "100000", term_years: "", interest_rate: "7.5" }
 
       it 'is not valid' do
         subject.should_not be_valid
@@ -37,7 +41,7 @@ describe MortgageCalculator::Repayment do
     end
 
     context 'when interest rate is blank' do
-      subject{ described_class.new debt: "100000", term_years: "25", interest_rate: "" }
+      subject{ described_class.new price: "100000", term_years: "25", interest_rate: "" }
 
       it 'is not valid' do
         subject.should_not be_valid
@@ -45,16 +49,16 @@ describe MortgageCalculator::Repayment do
     end
 
     it 'interest rate must be greater than zero' do
-      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "0"
+      subject = described_class.new price: "100000", term_years: "25", interest_rate: "0"
       subject.should_not be_valid
-      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "0.01"
+      subject = described_class.new price: "100000", term_years: "25", interest_rate: "0.01"
       subject.should be_valid
     end
 
     it 'term years must be greater than zero' do
-      subject = described_class.new debt: "100000", term_years: "0", interest_rate: "1"
+      subject = described_class.new price: "100000", term_years: "0", interest_rate: "1"
       subject.should_not be_valid
-      subject = described_class.new debt: "100000", term_years: "25", interest_rate: "1"
+      subject = described_class.new price: "100000", term_years: "25", interest_rate: "1"
       subject.should be_valid
     end
   end

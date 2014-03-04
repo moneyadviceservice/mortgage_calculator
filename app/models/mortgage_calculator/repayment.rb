@@ -5,18 +5,23 @@ module MortgageCalculator
     include CurrencyInput::Macro
     include ActiveModel::Validations
 
-    attr_reader :debt, :term_years, :interest_rate
+    attr_reader :term_years, :interest_rate, :price, :deposit
 
-    currency_inputs :debt
+    currency_inputs :price, :deposit
 
     validates :term_years, presence: true, numericality: {greater_than: 0}
-    validates :debt, presence: true
+    validates :price, presence: true
     validates :interest_rate, presence: true, numericality: {greater_than: 0}
 
     def initialize(options = {})
-      self.debt = options.fetch(:debt){ 0 }
-      self.term_years = options.fetch(:term_years){ 0 }
-      self.interest_rate = options.fetch(:interest_rate){ 0 }
+      self.price = options.fetch(:price){ 0 }
+      self.deposit = options.fetch(:deposit){ 0 }
+      self.term_years = options.fetch(:term_years){ 25 }
+      self.interest_rate = options.fetch(:interest_rate){ 5 }
+    end
+
+    def debt
+      price - deposit
     end
 
     def term_years=(value)
