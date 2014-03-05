@@ -14,6 +14,14 @@ module MortgageCalculator
       number_to_currency model.debt, unit: nil
     end
 
+    def price
+      number_to_currency model.price, unit: nil
+    end
+
+    def deposit
+      number_to_currency model.deposit, unit: nil
+    end
+
     def term_years
       return nil if model.term_years.blank?
 
