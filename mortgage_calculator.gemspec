@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "underscore-rails"
   s.add_dependency "mas-assets"
   s.add_dependency "mas-feedback"
+  s.add_dependency "mas-templating"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "mas-development_dependencies"
