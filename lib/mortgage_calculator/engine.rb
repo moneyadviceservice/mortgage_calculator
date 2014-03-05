@@ -15,6 +15,8 @@ module MortgageCalculator
       g.test_framework :rspec
     end
 
+    config.parent_controller = 'ApplicationController'
+
     config.after_initialize do |app|
       app.config.paths.add 'app/decorators', eager_load: true
     end
