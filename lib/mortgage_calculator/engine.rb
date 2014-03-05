@@ -4,6 +4,7 @@ require 'jquery-rails'
 require 'angularjs-rails'
 require 'underscore-rails'
 require 'mas/feedback'
+require 'mas/templating'
 
 module MortgageCalculator
   mattr_accessor :feedback_config
@@ -13,6 +14,8 @@ module MortgageCalculator
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.parent_controller = 'ApplicationController'
 
     config.after_initialize do |app|
       app.config.paths.add 'app/decorators', eager_load: true
