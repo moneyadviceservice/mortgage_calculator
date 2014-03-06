@@ -1,6 +1,9 @@
 <%= form_for @repayment, url: repayment_path do |f| %>
-  <%= f.label :debt %>
-  <%= f.text_field :debt %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :deposit %>
+  <%= f.text_field :deposit %>
 
   <%= f.label :term_years %>
   <%= f.text_field :term_years %>

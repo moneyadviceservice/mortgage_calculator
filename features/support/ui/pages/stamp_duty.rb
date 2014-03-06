@@ -8,6 +8,7 @@ module UI
       element :property_price, "input[name='stamp_duty[price]']"
       element :h1, "h1"
       element :results, "p[class='results']"
+      element :submit, "input[type=submit]"
     end
   end
 end

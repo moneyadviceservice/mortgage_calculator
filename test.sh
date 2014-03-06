@@ -9,6 +9,8 @@ export DISPLAY=:99
 CI_PIPELINE_COUNTER=${GO_PIPELINE_COUNTER-0}
 CI_EXECUTOR_NUMBER=${GO_AGENT_NUMBER-0}
 
+mkdir -p spec/dummy/tmp/capybara
+
 bundle install
 
 
