@@ -35,8 +35,13 @@ describe("Directives: Currency", function() {
     expect(form.$error.invalidCurrency).toBeDefined();
   });
 
-  it('should not contain invalidCurrency when a user enters numbers', function(){
+  it('should not contain invalidCurrency when a user enters a property price without commas', function(){
     form.annualIncome.$setViewValue('50000');
+    expect(form.$error.invalidCurrency).not.toBeDefined();
+  });
+
+  it('should not contain invalidCurrency when a user enters a property price with commas', function(){
+    form.annualIncome.$setViewValue('50,000');
     expect(form.$error.invalidCurrency).not.toBeDefined();
   });
 

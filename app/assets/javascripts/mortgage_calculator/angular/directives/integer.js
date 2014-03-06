@@ -5,7 +5,7 @@ angular.module('mortgageCalculatorApp')
         require: 'ngModel',
         link: function(scope, ele, attr, ctrl){
             ctrl.$parsers.unshift(function(viewValue){
-                return parseInt(viewValue);
+                if (viewValue) return parseInt(viewValue.replace(/,/g, ''), 10);
             });
         }
     };
