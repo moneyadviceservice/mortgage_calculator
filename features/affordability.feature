@@ -63,7 +63,7 @@ Scenario: There are two applicants with extra income and commited spend
 Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details
-  Then  I see an error message
+  Then  I do not see the result output
 
 Scenario: I enter invalid details
   Given I visit the Affordability page
