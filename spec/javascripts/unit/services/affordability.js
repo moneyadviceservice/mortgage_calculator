@@ -28,11 +28,11 @@ describe('Service: Affordability', function () {
 
     it('calculates the total amount of income for a single applicant less their personal expenses', function () {
       resetApplicant2Income();
-      expect(affordability.totalIncome()).toBe(50000);
+      expect(affordability.totalIncome()).toBe(39000);
     });
 
     it('calculates the total amount of income for two applicants less their personal expenses', function () {
-      expect(affordability.totalIncome()).toBe(81000);
+      expect(affordability.totalIncome()).toBe(70000);
     });
 
   });
@@ -41,11 +41,11 @@ describe('Service: Affordability', function () {
 
     it('calculates the minimum amount a single applicant can borrow', function () {
       resetApplicant2Income();
-      expect(affordability.minimumBorrowing()).toBe(150000);
+      expect(affordability.minimumBorrowing()).toBe(117000);
     });
 
     it('calculates the minimum amount two applicants can borrow', function () {
-      expect(affordability.minimumBorrowing()).toBe(243000);
+      expect(affordability.minimumBorrowing()).toBe(210000);
     });
   });
 
@@ -53,11 +53,11 @@ describe('Service: Affordability', function () {
 
     it('calculates the maximum amount a single applicant can borrow', function () {
       resetApplicant2Income();
-      expect(affordability.maximumBorrowing()).toBe(200000);
+      expect(affordability.maximumBorrowing()).toBe(156000);
     });
 
     it('calculates the maximum amount two applicants can borrow', function () {
-      expect(affordability.maximumBorrowing()).toBe(324000);
+      expect(affordability.maximumBorrowing()).toBe(280000);
     });
   });
 

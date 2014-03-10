@@ -22,7 +22,7 @@ angular.module('mortgageCalculatorApp')
        * @return {integer} Returns total income of applicant(s)
        */
       totalIncome: function() {
-        return _convertToNumbers(this.earnings) - this.personalSpend;
+        return _convertToNumbers(this.earnings) - (this.personalSpend * 12);
       },
 
       /**
