@@ -7,5 +7,9 @@ module MortgageCalculator
     layout 'mortgage_calculator/application'
 
     parent_template :embedded
+
+    def tool_name
+      "mortgage-calculator-beta"
+    end
   end
 end
