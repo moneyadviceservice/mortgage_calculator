@@ -13,7 +13,6 @@ mkdir -p spec/dummy/tmp/capybara
 
 bundle install
 
-
-rspec
-cucumber
-rake app:karma:run_once
+bundle exec rspec
+bundle exec cucumber
+bundle exec rake app:karma:run_once
