@@ -52,7 +52,7 @@ Scenario: House price which is over £2 million
 Scenario: User enters invalid property price
   Given I visit the Stamp Duty page
   When they enter the cost of a property with "sx"
-  Then they see "Please enter an amount"
+  Then they do not see the result output
 
 @javascript
 Scenario: User enters 0 as the property price

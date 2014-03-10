@@ -13,20 +13,20 @@
         <%= field_set_tag do %>
           <%= person.label :annual_income  %>
           <%= person.text_field :annual_income,
-                                "ng-pattern" => "/^\\d+$/",
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person#{count + 1}.annual",
-                                "placeholder" => "Your yearly income"
+                                "placeholder" => "Your yearly income",
+                                "format" => 'number'
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
 
           <%= person.label :extra_income  %>
           <%= person.text_field :extra_income,
-                                "ng-pattern" => "/^\\d+$/",
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person#{count + 1}.extra",
-                                "placeholder" => "Any extra income"
+                                "placeholder" => "Any extra income",
+                                "format" => 'number'
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
@@ -45,11 +45,11 @@
 
       <%= field_set_tag do %>
         <%= f.label :monthly_debt, 'Personal Spend' %>
-        <%= f.text_field :monthly_debt, "ng-patern" => "/^\d+$/",
-                                        "class" => "form-control",
-                                        "ng-model" => "affordability.committedSpend",
-                                        "placeholder" => "Spending" %>
-        <p ng-show="affordability_form.committedSpend.$invalid && affordability_form.committedSpend.$dirty" class="help-block">Only numbers</p>
+        <%= f.text_field :monthly_debt, "class" => "form-control",
+                                        "ng-model" => "affordability.personalSpend",
+                                        "placeholder" => "Spending",
+                                        "format" => 'number' %>
+        <p ng-show="affordability_form.personalSpend.$invalid && affordability_form.personalSpend.$dirty" class="help-block">Only numbers</p>
       <% end %>
 
       <%= f.submit %>
@@ -59,11 +59,11 @@
   <% end %>
 
   <div ng-show="affordability.earnings.person1.annual">
-    <p>
+    <p class="results">
       Based on your total income of
       <span class='label label-primary'>{{ affordability.totalIncome() | currency:"£" }}</span>
       and your total expenditure of
-      <span class='label label-danger'>{{ affordability.committedSpend | currency:"£" }}</span>,
+      <span class='label label-danger'>{{ affordability.personalSpend | currency:"£" }}</span>,
       the maximum mortgage you can borrow is between
       <span class='label label-success'>{{ affordability.minimumBorrowing() | currency:"£" }}</span>
       to

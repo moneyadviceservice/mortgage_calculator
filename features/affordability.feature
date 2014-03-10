@@ -40,7 +40,7 @@ Scenario: There is one applicant with extra income and commited spend
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
   And   I enter my monthly debt
-  Then  I see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
+  Then  I see "the maximum mortgage you can borrow is between £294,000.00 to £392,000.00"
 
 @wip @javascript
 Scenario: There are two applicants with extra income and commited spend
@@ -63,7 +63,7 @@ Scenario: There are two applicants with extra income and commited spend
 Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details
-  Then  I see an error message
+  Then  I do not see the result output
 
 Scenario: I enter invalid details
   Given I visit the Affordability page
