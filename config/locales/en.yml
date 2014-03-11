@@ -13,7 +13,18 @@ en:
     title: Calculate your monthly mortgage repayment
     intro: Use this calculator to estimate what your monthly mortgage repayment will be based on your circumstances
     next: Next
+    a_month: a month
     step_1:
       intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
+    tabs:
+      repayment:
+        title: Repayment
+        tip_1: You pay off what you borrow plus interest accrued
+        tip_2: At the end of the mortgage you will own the property
+      interest_only:
+        title: Interest Only
     tips:
       hidden_costs: Remember to plan for other costs like; mortgage fees, legal fees and stamp duty.
+    interest_changer:
+      title: Make sure you can afford it
+      intro: If your interest rate goes up by %{change}% your monthly repayments will be
