@@ -9,6 +9,8 @@
 
 <p><%= link_to I18n.t("repayment.tabs.interest_only.title"), "#" %></p>
 
+<p><%= number_to_currency @interest_only.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
+
 <p><%= I18n.t("repayment.interest_changer.title") %></p>
 <p><%= I18n.t("repayment.interest_changer.intro", change: 1) %></p>
 

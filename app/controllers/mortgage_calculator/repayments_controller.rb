@@ -6,6 +6,7 @@ module MortgageCalculator
 
     def create
       @repayment = RepaymentPresenter.new(Repayment.new(params[:repayment]))
+      @interest_only = InterestOnly.new(params[:repayment])
 
       unless @repayment.valid?
         render :show

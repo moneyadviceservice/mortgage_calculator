@@ -1,11 +1,20 @@
 module MortgageCalculator
   class InterestOnly
-    attr_reader :debt, :term_years, :interest_rate
+    include CurrencyInput::Macro
+
+    attr_reader :price, :deposit, :term_years, :interest_rate
+
+    currency_inputs :price, :deposit
 
     def initialize(options = {})
-      @debt = options.fetch(:debt)
-      @term_years = options.fetch(:term_years)
-      @interest_rate = options.fetch(:interest_rate)
+      self.price = options.fetch(:price)
+      self.deposit = options.fetch(:deposit){ 0 }
+      @term_years = options.fetch(:term_years){ 25 }
+      @interest_rate = options.fetch(:interest_rate){ 5 }
+    end
+
+    def debt
+      price - deposit
     end
 
     def monthly_payment
