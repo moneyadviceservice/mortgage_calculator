@@ -4,4 +4,16 @@ en:
       format:
         precision: 2
         unit: £
-
+  helpers:
+    label:
+      repayment:
+        price: Total price of the Property is
+        deposit: Deposit available is
+  repayment:
+    title: Calculate your monthly mortgage repayment
+    intro: Use this calculator to estimate what your monthly mortgage repayment will be based on your circumstances
+    next: Next
+    step_1:
+      intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
+    tips:
+      hidden_costs: Remember to plan for other costs like; mortgage fees, legal fees and stamp duty.

@@ -1,3 +1,9 @@
+<h1><%= I18n.t("repayment.title")%></h1>
+
+<p>
+  <%= I18n.t("repayment.intro")%>
+</p>
+
 <% @repayment.errors.full_messages.each do |m| %>
   <span style="color:red;"><%= m %></span>
 <% end %>
