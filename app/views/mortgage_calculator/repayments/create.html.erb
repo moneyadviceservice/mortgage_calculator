@@ -14,5 +14,7 @@
 <p><%= I18n.t("repayment.interest_changer.title") %></p>
 <p><%= I18n.t("repayment.interest_changer.intro", change: 1) %></p>
 
+<p><%= number_to_currency @changer.monthly_payment %></p>
+
 <%= render 'form_step2' %>
 

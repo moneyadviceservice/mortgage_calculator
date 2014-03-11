@@ -9,6 +9,8 @@ en:
       repayment:
         price: Total price of the Property is
         deposit: Deposit available is
+        term_years: Mortgage Length is
+        interest_rate: Rate of Interest is
   repayment:
     title: Calculate your monthly mortgage repayment
     intro: Use this calculator to estimate what your monthly mortgage repayment will be based on your circumstances
