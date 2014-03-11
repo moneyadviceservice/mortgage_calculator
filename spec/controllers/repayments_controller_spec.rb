@@ -21,4 +21,11 @@ describe MortgageCalculator::RepaymentsController do
       end
     end
   end
+
+  describe :next_steps do
+    it 'works' do
+      get :next_steps, locale: :en
+      response.should be_success
+    end
+  end
 end

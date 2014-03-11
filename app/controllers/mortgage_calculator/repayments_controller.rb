@@ -15,5 +15,9 @@ module MortgageCalculator
         render :show
       end
     end
+
+    def next_steps
+
+    end
   end
 end
