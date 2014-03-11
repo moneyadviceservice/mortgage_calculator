@@ -3,11 +3,15 @@
 </p>
 
 <%= form_for @repayment, url: repayment_path do |f| %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
+  <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
 
-  <%= f.label :deposit %>
-  <%= f.text_field :deposit %>
+  <div>
+    <%= f.label :deposit %>
+    <%= f.text_field :deposit %>
+  </div>
 
   <%= f.submit I18n.t("repayment.next") %>
 <% end %>
