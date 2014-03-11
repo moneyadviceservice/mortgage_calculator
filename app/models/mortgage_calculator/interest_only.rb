@@ -9,8 +9,24 @@ module MortgageCalculator
     def initialize(options = {})
       self.price = options.fetch(:price)
       self.deposit = options.fetch(:deposit){ 0 }
-      @term_years = options.fetch(:term_years){ 25 }
-      @interest_rate = options.fetch(:interest_rate){ 5 }
+      self.term_years = options.fetch(:term_years){ 25 }
+      self.interest_rate = options.fetch(:interest_rate){ 5 }
+    end
+
+    def term_years=(value)
+      @term_years = if value.present?
+        value.to_i
+      else
+        nil
+      end
+    end
+
+    def interest_rate=(value)
+      @interest_rate = if value.present?
+        value.to_f
+      else
+        nil
+      end
     end
 
     def debt

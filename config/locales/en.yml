@@ -4,6 +4,7 @@ en:
       format:
         precision: 2
         unit: £
+        strip_insignificant_zeros: false
   helpers:
     label:
       repayment:
