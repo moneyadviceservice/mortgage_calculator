@@ -16,6 +16,9 @@
   @include respond-to($mq-s) {
     @include column(6);
   }
+
+  font-family: 'museo_sans';
+  font-weight: 300;
 }
 
 .morgagecalc__panel--with-form {
