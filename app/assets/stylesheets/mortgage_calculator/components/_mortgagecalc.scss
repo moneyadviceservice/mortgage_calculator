@@ -4,9 +4,11 @@
 
 .mortgagecalc__container {
   @include column(12);
+  position: relative;
   background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
   border: 1px solid #ccc;
   max-width: 600px;
+  padding: 15px;
 }
 
 .morgagecalc__panel {
@@ -14,7 +16,15 @@
   @include respond-to($mq-s) {
     @include column(6);
   }
+}
 
-  font-family: 'museo_sans';
-  font-weight: 300;
+.morgagecalc__panel--with-form {
+  padding-bottom: 50px;
+}
+
+.mortgagecalc__submit {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
 }

@@ -2,7 +2,7 @@
   <p><%= I18n.t("repayment.step_1.intro") %></p>
 </div>
 
-<div class="morgagecalc__panel">
+<div class="morgagecalc__panel morgagecalc__panel--with-form">
   <%= form_for @repayment, url: repayment_path do |f| %>
     <div>
       <%= f.label :price %>
@@ -14,10 +14,10 @@
       <%= f.text_field :deposit %>
     </div>
 
-    <%= f.submit I18n.t("repayment.next"), class: "button button--primary" %>
+    <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit" %>
   <% end %>
 
   <div class="callout">
-    <p><%= I18n.t("repayment.tips.hidden_costs") %></p>
+    <%= I18n.t("repayment.tips.hidden_costs") %>
   </div>
 </div>

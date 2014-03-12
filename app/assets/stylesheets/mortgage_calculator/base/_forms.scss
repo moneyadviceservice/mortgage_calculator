@@ -1,9 +1,11 @@
 label {
   display: block;
   font-weight: 500;
+  margin: 18px 0 6px;
 }
 
 input[type="text"] {
+  width: 100%;
   border: 1px solid #ccc;
   border-top: 3px solid $color-green-bright;
   padding: 4px 8px;
