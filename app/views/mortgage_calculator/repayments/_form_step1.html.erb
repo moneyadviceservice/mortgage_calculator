@@ -1,21 +1,23 @@
-<p>
-  <%= I18n.t("repayment.step_1.intro") %>
-</p>
+<div class="large-6 small-12">
+  <p><%= I18n.t("repayment.step_1.intro") %></p>
+</div>
 
-<%= form_for @repayment, url: repayment_path do |f| %>
-  <div>
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
+<div class="large-6 small-12">
+  <%= form_for @repayment, url: repayment_path do |f| %>
+    <div>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </div>
 
-  <div>
-    <%= f.label :deposit %>
-    <%= f.text_field :deposit %>
-  </div>
+    <div>
+      <%= f.label :deposit %>
+      <%= f.text_field :deposit %>
+    </div>
 
-  <%= f.submit I18n.t("repayment.next") %>
-<% end %>
+    <%= f.submit I18n.t("repayment.next") %>
+  <% end %>
 
-<p>
-  <%= I18n.t("repayment.tips.hidden_costs") %>
-</p>
+  <p>
+    <%= I18n.t("repayment.tips.hidden_costs") %>
+  </p>
+</div>

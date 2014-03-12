@@ -4,9 +4,13 @@
   <%= csrf_meta_tags %>
 <% end %>
 
+<%= render 'header' %>
+
 <% content_for(:tool_content) do %>
-  <div ng-app="mortgageCalculatorApp">
-    <%= yield %>
+  <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
+  	<div class="l-mortgagecalc">
+	    <%= yield %>
+    </div>
   </div>
 <% end %>
 
