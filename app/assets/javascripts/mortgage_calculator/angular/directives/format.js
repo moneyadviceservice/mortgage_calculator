@@ -1,6 +1,4 @@
-angular.module('mortgageCalculatorApp')
-
-  .directive('format', ['$filter', function($filter){
+App.directive('format', ['$filter', function($filter){
     // requires an isloated model
     return {
 

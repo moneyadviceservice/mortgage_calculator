@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('mortgageCalculatorApp')
-  .factory('StampDuty', function() {
+App.factory('StampDuty', function() {
 
     var stampDuty = {
       propertyPrice : 0,
