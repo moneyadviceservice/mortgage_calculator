@@ -1,12 +1,17 @@
-input[type="text"] {
-	border: 1px solid #ccc;
-	border-top: 3px solid $color-green-bright;
-	padding: 4px 8px;
-	border-radius: 3px;
+label {
+  display: block;
+  font-weight: 500;
+}
 
-	&:focus,
-	&:active {
-		border-top-color: $color-green-primary;
-		outline: 0;
-	}
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-top: 3px solid $color-green-bright;
+  padding: 4px 8px;
+  border-radius: 3px;
+
+  &:focus,
+  &:active {
+    border-top-color: $color-green-primary;
+    outline: 0;
+  }
 }
