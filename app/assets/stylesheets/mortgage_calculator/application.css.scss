@@ -12,11 +12,13 @@
  */
 
 
-.mortgagecalc {
+.ns-mortgage-calc {
   @import 'lib/variables';
   @import 'lib/utils';
 
   @import 'frontend/app/assets/stylesheets/lib';
+
+  // @import 'frontend/app/assets/stylesheets/base/fonts';
 
   @import 'frontend/app/assets/stylesheets/utilities/clearfix';
   @import 'frontend/app/assets/stylesheets/utilities/visually_hidden';

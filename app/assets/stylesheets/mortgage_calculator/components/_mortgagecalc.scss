@@ -1,4 +1,8 @@
 .mortgagecalc {
+  
+}
+
+.mortgagecalc__container {
   background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
   @include column(12);
   max-width: 600px;
