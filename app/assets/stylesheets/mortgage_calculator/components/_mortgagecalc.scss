@@ -6,7 +6,7 @@
 
 .morgagecalc__panel {
   @include column(12);
-  @include respond-to($mq-m) {
+  @include respond-to($mq-s) {
     @include column(6);
   }
 }
