@@ -24,10 +24,12 @@ module MortgageCalculator
     config.after_initialize do |app|
       contents = File.open(MortgageCalculator::Engine.root.join('config','zendesk.yml')).read
       MortgageCalculator.feedback_config = YAML.load(contents).with_indifferent_access
+    end
 
-      Rails.application.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
-      Rails.application.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "vendor", "assets", "fonts")
-      Rails.application.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
+    initializer :append_frontend_assets do |app|
+      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
+      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "vendor", "assets", "fonts")
+      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
     end
   end
 end
