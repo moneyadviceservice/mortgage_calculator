@@ -1,10 +1,11 @@
 .mortgagecalc {
-  
+
 }
 
 .mortgagecalc__container {
-  background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
   @include column(12);
+  background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
+  border: 1px solid #ccc;
   max-width: 600px;
 }
 
@@ -13,4 +14,7 @@
   @include respond-to($mq-s) {
     @include column(6);
   }
+
+  font-family: 'museo_sans';
+  font-weight: 300;
 }

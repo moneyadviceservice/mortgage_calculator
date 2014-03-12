@@ -1,6 +1,6 @@
 {
   "name": "mortgage-calculator",
   "dependencies": {
-    "frontend": "git@github.com:moneyadviceservice/frontend.git#bower-fonts"
+    "frontend": "git@github.com:moneyadviceservice/frontend.git"
   }
 }
