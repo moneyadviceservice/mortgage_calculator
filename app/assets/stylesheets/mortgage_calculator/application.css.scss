@@ -15,12 +15,12 @@
 .mortgagecalc {
   @import 'lib/variables';
   @import 'lib/utils';
-  
-  @import 'frontend/app/assets/stylesheets/lib/grid';
+
+  @import 'frontend/app/assets/stylesheets/lib';
 
   @import 'frontend/app/assets/stylesheets/utilities/clearfix';
   @import 'frontend/app/assets/stylesheets/utilities/visually_hidden';
   @import 'frontend/app/assets/stylesheets/utilities/inline_block';
 
-  @import 'layouts/mortgagecalc';
+  @import 'components/mortgagecalc';
 }

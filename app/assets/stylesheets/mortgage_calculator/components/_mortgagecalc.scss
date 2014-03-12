@@ -1,0 +1,12 @@
+.mortgagecalc {
+  background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
+  @include column(12);
+  max-width: 600px;
+}
+
+.morgagecalc__panel {
+  @include column(12);
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
+}
