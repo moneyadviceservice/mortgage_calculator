@@ -1,5 +1,6 @@
 module MortgageCalculator
-  class AffordabilitiesController < ApplicationController
+  # Load order issue - subclass a class explicitly
+  class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def show
       people = [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
 
