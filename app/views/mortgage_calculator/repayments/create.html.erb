@@ -1,6 +1,21 @@
+<%= render 'header' %>
+
+<p><%= link_to I18n.t("repayment.tabs.repayment.title"), "#" %></p>
+
+<p><%= number_to_currency @repayment.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
+
+<p><%= I18n.t("repayment.tabs.repayment.tip_1") %></p>
+<p><%= I18n.t("repayment.tabs.repayment.tip_2") %></p>
+
+<p><%= link_to I18n.t("repayment.tabs.interest_only.title"), "#" %></p>
+
+<p><%= number_to_currency @interest_only.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
+
+<p><%= I18n.t("repayment.interest_changer.title") %></p>
+<p><%= I18n.t("repayment.interest_changer.intro", change: 1) %></p>
+
+<p><%= number_to_currency @changer.monthly_payment %></p>
+
 <%= render 'form_step2' %>
 
-monthly payment <%= number_to_currency @repayment.monthly_payment %><br>
-total interest payable <%= number_to_currency @repayment.total_interest %><br>
-total payable <%= number_to_currency @repayment.total_payable %>
-
+<p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path %></p>

@@ -68,6 +68,11 @@ module MortgageCalculator
       end
     end
 
+    def change_interest_rate_by(val)
+      self.interest_rate += val
+      self
+    end
+
     private
 
     def term_months
