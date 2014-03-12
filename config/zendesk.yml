@@ -12,3 +12,10 @@ affordability:
   cy:
     id: "20283353"
     url: "https://mastest.zendesk.com"
+repayment:
+  en:
+    id: "20283343"
+    url: "https://mastest.zendesk.com"
+  cy:
+    id: "20291388"
+    url: "https://mastest.zendesk.com"
