@@ -3,8 +3,6 @@ source "http://rubygems.org"
 
 gemspec
 
-
-
 group :test do
   gem 'rspec'
   gem 'factory_girl_rails'
@@ -13,6 +11,7 @@ group :test do
   gem 'sass-rails'
   gem 'mas-development_dependencies'
   gem 'rspec_junit_formatter'
+  gem 'simplecov', :require => false
 end
 
 group :build, :test do

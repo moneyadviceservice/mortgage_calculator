@@ -9,15 +9,15 @@
       <%= field_set_tag do %>
         <%= f.label :price, 'Property Price' %>
         <%= f.text_field :price,
-                         "ng-pattern" => "/^\\d+$/",
                          "class" => "form-control",
                          "ng-model" => "stampDuty.propertyPrice",
                          "placeholder" => "The cost of the property",
                          "required" => '',
                          "autofocus" => '',
-                         "integer" => '' %>
+                         "format" => 'number' %>
 
-        <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Please enter an amount</p>
+
+        <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Field required</p>
       <% end %>
 
 

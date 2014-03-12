@@ -1,6 +1,8 @@
 Given /^I visit the Affordability page$/ do
-  visit '/en/mortgage_calculator/affordability'
+  @affordability = UI::Pages::Affordability.new
+  @affordability.load
 end
+
 
 Then /^I should see the Affordability calculator$/ do
   expect(page).to have_content('Find out how much you can borrow')
@@ -32,6 +34,10 @@ end
 
 Then(/^I see an error message$/) do
   expect(page).to have_content('Please enter an amount')
+end
+
+Then(/^I do not see the result output$/) do
+  expect(@affordability).to_not have_results
 end
 
 When(/^I enter all details for applicant "(.*?)"$/) do |applicant|

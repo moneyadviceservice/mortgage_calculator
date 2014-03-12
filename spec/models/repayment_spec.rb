@@ -23,6 +23,16 @@ describe MortgageCalculator::Repayment do
     its(:interest_rate){ should == 5 }
   end
 
+  describe :change_interest_rate_by do
+    it 'increases the interest rate' do
+      subject.change_interest_rate_by(1).interest_rate.should == 8.5
+    end
+
+    it 'decreases the interest rate' do
+      subject.change_interest_rate_by(-1).interest_rate.should == 6.5
+    end
+  end
+
   describe 'validations' do
     context 'when price is blank' do
       subject{ described_class.new price: "", deposit: "20000", term_years: "25", interest_rate: "7.5" }
