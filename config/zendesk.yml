@@ -5,3 +5,10 @@ stamp_duty:
   cy:
     id: "20281613"
     url: "https://mastest.zendesk.com"
+affordability:
+  en:
+    id: "20293976"
+    url: "https://mastest.zendesk.com"
+  cy:
+    id: "20283353"
+    url: "https://mastest.zendesk.com"
