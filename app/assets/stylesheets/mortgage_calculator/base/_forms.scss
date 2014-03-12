@@ -10,6 +10,7 @@ input[type="text"] {
   border-top: 3px solid $color-green-bright;
   padding: 4px 8px;
   border-radius: 3px;
+  transition: all 0.2s linear;
 
   &:focus,
   &:active {
