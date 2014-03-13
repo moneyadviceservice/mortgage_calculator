@@ -5,14 +5,11 @@
 <% end %>
 
 <% content_for(:tool_content) do %>
-<div class="ns-mortgage-calc">
-  <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
-
-  	<div class="mortgagecalc__container">
-	    <%= yield %>
+  <div class="ns-mortgage-calc">
+    <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
+      <%= yield %>
     </div>
   </div>
-</div>
 <% end %>
 
 <%= render template: parent_template %>

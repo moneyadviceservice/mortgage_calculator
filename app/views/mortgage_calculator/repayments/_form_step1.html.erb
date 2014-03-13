@@ -1,23 +1,25 @@
+<h3><%= I18n.t("repayment.step_1.intro") %></h3>
+
+<%= form_for @repayment, url: repayment_path do |f| %>
 <div class="morgagecalc__panel">
-  <p><%= I18n.t("repayment.step_1.intro") %></p>
+  <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
 </div>
 
 <div class="morgagecalc__panel morgagecalc__panel--with-form">
-  <%= form_for @repayment, url: repayment_path do |f| %>
-    <div>
-      <%= f.label :price %>
-      <%= f.text_field :price %>
-    </div>
-
-    <div>
-      <%= f.label :deposit %>
-      <%= f.text_field :deposit %>
-    </div>
-
-    <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit" %>
-  <% end %>
-
-  <div class="callout">
-    <%= I18n.t("repayment.tips.hidden_costs") %>
+  <div>
+    <%= f.label :deposit %>
+    <%= f.text_field :deposit %>
   </div>
+
+  <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit" %>
+
+
+<div class="callout">
+  <%= I18n.t("repayment.tips.hidden_costs") %>
 </div>
+</div>
+
+<% end %>
