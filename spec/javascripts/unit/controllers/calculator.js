@@ -32,6 +32,10 @@ describe('Controller: CalculatorCtrl', function () {
     expect(scope.stampDuty).toBeDefined();
   });
 
+  it('should attach the Repayment service', function () {
+    expect(scope.repayments).toBeDefined();
+  });
+
 
 
 });

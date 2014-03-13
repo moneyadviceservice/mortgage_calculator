@@ -1,6 +1,6 @@
 'use strict';
 
-App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', function ($scope, Affordability, StampDuty) {
+App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', function ($scope, Affordability, StampDuty, Repayments) {
 
     //Affordability Calculations
     $scope.affordability = Affordability;
@@ -16,6 +16,9 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', functi
 
     //Stamp Duty Calculations
     $scope.stampDuty = StampDuty;
+
+    //Repayment Calculations
+    $scope.repayments = Repayments;
 
 
   }]);
