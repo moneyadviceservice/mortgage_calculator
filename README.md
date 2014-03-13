@@ -28,33 +28,19 @@ $ cd spec/dummy
 $ rails s
 ```
 
-## Running JS Tests
+## Tests
 
-Unit tests are handled by Karma while End 2 End tests are dealt with Protractor. To run tests you
-need to have both installed which can be done via NPM (note, you also need to have node installed)
-to do this.
+Ensure you have node and npm installed
 
 ```sh
 $ npm install
 ```
-
-Run unit tests:
-
-```sh
-$ rake app:karma:run
-```
-
-
-## Running Ruby Tests
-
-RSpec is used for unit tests. These tests can be ran with the following command.
+Then run the test suite
 
 ```sh
-bundle exec rspec
+bundle exec rake
 ```
-
-There are yet any integration tests. These will be added soon.
-
+This will run cucumber tests through poltergeist with and without javascript. It will then run rspec and karma.
 
 ## Contributing
 
