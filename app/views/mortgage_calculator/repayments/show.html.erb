@@ -1,8 +1,12 @@
-<% @repayment.errors.full_messages.each do |m| %>
-  <span style="color:red;"><%= m %></span>
-<% end %>
+<%= render 'header' %>
 
-<%= render 'form_step1' %>
+<div class="mortgagecalc__container">
+  <% @repayment.errors.full_messages.each do |m| %>
+    <span style="color:red;"><%= m %></span>
+  <% end %>
+
+  <%= render 'form_step1' %>
+</div>
 
 <%= zendesk_feedback_tab(zendesk_repayment_config) %>
 
