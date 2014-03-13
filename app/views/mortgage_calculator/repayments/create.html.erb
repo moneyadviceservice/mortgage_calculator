@@ -12,13 +12,13 @@
 
   <div class="callout">
     <h4><%= I18n.t("repayment.interest_changer.title") %></h4>
-    <p><%= I18n.t("repayment.interest_changer.intro", change: 1) %></p>
+    <p><%= raw I18n.t("repayment.interest_changer.intro", change: 1) %></p>
 
     <p><%= number_to_currency @changer.monthly_payment %></p>
   </div>
 </div>
 
-<div class="morgagecalc__panel">
+<div class="morgagecalc__panel morgagecalc__panel--with-form">
   <%= render 'form_step2' %>
 
   <p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit" %></p>

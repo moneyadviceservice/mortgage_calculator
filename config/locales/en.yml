@@ -31,7 +31,7 @@ en:
       hidden_costs: Remember to plan for other costs like; mortgage fees, legal fees and stamp duty.
     interest_changer:
       title: Make sure you can afford it
-      intro: If your interest rate goes up by %{change}% your monthly repayments will be
+      intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly repayments will be
     next_steps:
       title: 3 steps to lower your monthly repayments
       tip_1: Increase your deposit
