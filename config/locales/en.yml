@@ -4,4 +4,44 @@ en:
       format:
         precision: 2
         unit: £
-
+        strip_insignificant_zeros: false
+  helpers:
+    label:
+      repayment:
+        price: Total price of the Property is
+        deposit: Deposit available is
+        term_years: Mortgage Length is
+        interest_rate: Rate of Interest is
+  repayment:
+    title: Calculate your monthly mortgage repayment
+    intro: Use this calculator to estimate what your monthly mortgage repayment will be based on your circumstances
+    next: Next
+    a_month: a month
+    recalculate: Recalculate
+    step_1:
+      intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
+    tabs:
+      repayment:
+        title: Repayment
+        tip_1: You pay off what you borrow plus interest accrued
+        tip_2: At the end of the mortgage you will own the property
+      interest_only:
+        title: Interest Only
+    tips:
+      hidden_costs: Remember to plan for other costs like; mortgage fees, legal fees and stamp duty.
+    interest_changer:
+      title: Make sure you can afford it
+      intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly repayments will be
+    next_steps:
+      title: 3 steps to lower your monthly repayments
+      tip_1: Increase your deposit
+      tip_2: Decrease the price of the property
+      tip_3: "Increase the length your mortgage. Be aware this means you'll pay back more in interest overall"
+      learn_more:
+        title: Learn more
+        tip_1: Pro tip
+        tip_2: Uber tip
+      find_out_more:
+        title: Find out more
+        tip_1: Pro tip
+        tip_2: Uber tip

@@ -12,8 +12,8 @@ CI_EXECUTOR_NUMBER=${GO_AGENT_NUMBER-0}
 mkdir -p spec/dummy/tmp/capybara
 
 bundle install
+bower install
 
-
-rspec
-cucumber
-rake app:karma:run_once
+bundle exec rspec
+bundle exec cucumber
+bundle exec rake app:karma:run_once

@@ -1,9 +1,23 @@
-<%= form_for @repayment, url: repayment_path do |f| %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
+<div class="morgagecalc__panel">
+  <p><%= I18n.t("repayment.step_1.intro") %></p>
+</div>
 
-  <%= f.label :deposit %>
-  <%= f.text_field :deposit %>
+<div class="morgagecalc__panel morgagecalc__panel--with-form">
+  <%= form_for @repayment, url: repayment_path do |f| %>
+    <div>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <div>
+      <%= f.label :deposit %>
+      <%= f.text_field :deposit %>
+    </div>
+
+    <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit" %>
+  <% end %>
+
+  <div class="callout">
+    <%= I18n.t("repayment.tips.hidden_costs") %>
+  </div>
+</div>
