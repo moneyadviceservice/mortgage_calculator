@@ -16,6 +16,7 @@ And then execute:
 
 ```sh
 $ bundle
+$ bower install
 ```
 
 ## Usage
