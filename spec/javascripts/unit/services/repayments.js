@@ -6,18 +6,26 @@ describe('Service: Repayments', function () {
 
 
   var repayments,
-      mortgage = function(price, deposit) {
+      setMortgage = function(price, deposit) {
         repayments.propertyPrice = price;
         repayments.deposit = deposit;
       };
 
   beforeEach(inject(function (Repayments) {
     repayments = Repayments;
-    mortgage(500000, 50000);
+    setMortgage(500000, 50000);
   }));
 
   it('instantiates an instance of the service', function () {
     expect(!!repayments).toBe(true);
+  });
+
+  describe('#mortgage', function() {
+
+    it('calculates the total mortgage for an applicant', function () {
+      expect(repayments.mortgage()).toBe(450000);
+    });
+
   });
 
   describe('#monthlyRepayment', function() {

@@ -9,6 +9,10 @@ App.factory('Repayments', function() {
     termYears               : 25,
     annualInterestRate      : 5,
 
+    mortgage                : function() {
+      return _debt();
+    },
+
     monthlyRepayment        : function() {
       return Math.round((_debt() * _monthlyInterestRate() * _compoundInterest()) / (_compoundInterest() - 1) * 100) / 100;
     },
