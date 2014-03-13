@@ -12,7 +12,6 @@ CI_EXECUTOR_NUMBER=${GO_AGENT_NUMBER-0}
 mkdir -p spec/dummy/tmp/capybara
 
 bundle install
-bower install
 
 bundle exec rspec
 bundle exec cucumber
