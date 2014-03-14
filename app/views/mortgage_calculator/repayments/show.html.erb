@@ -1,12 +1,38 @@
 <%= render 'header' %>
 
-<div class="mortgagecalc__container">
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
   <% @repayment.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
   <% end %>
 
-  <%= render 'form_step1' %>
+
+
+  <wizard on-finish="finishedWizard()" hide-indicators='true'>
+
+    <wz-step title="Starting">
+      <div class="rendered-from-js">
+        <%= render 'form_step1' %>
+      </div>
+    </wz-step>
+
+    <wz-step title="Continuing">
+      <div class="rendered-from-js">
+        <%= render 'form_step2' %>
+      </div>
+
+    </wz-step>
+
+    <wz-step title="More steps">
+      <div class="rendered-from-js">
+        <%= render 'next_steps_content' %>
+      </div>
+      <input type="submit" wz-next value="Finish now" />
+    </wz-step>
+
+  </wizard>
+
 </div>
+
 
 <%= zendesk_feedback_tab(zendesk_repayment_config) %>
 

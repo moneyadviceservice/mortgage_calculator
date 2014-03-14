@@ -1,19 +1,7 @@
 <%= render 'header' %>
 
 <div class="mortgagecalc__container">
-  <p><%= I18n.t("repayment.next_steps.title") %></p>
-
-  <p><%= I18n.t("repayment.next_steps.tip_1") %></p>
-  <p><%= I18n.t("repayment.next_steps.tip_2") %></p>
-  <p><%= I18n.t("repayment.next_steps.tip_3") %></p>
-
-  <p><%= I18n.t("repayment.next_steps.learn_more.title") %></p>
-  <p><%= I18n.t("repayment.next_steps.learn_more.tip_1") %></p>
-  <p><%= I18n.t("repayment.next_steps.learn_more.tip_2") %></p>
-
-  <p><%= I18n.t("repayment.next_steps.find_out_more.title") %></p>
-  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_1") %></p>
-  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_2") %></p>
+  <%= render 'next_steps_content'  %>
 </div>
 
 <%= zendesk_feedback_tab(zendesk_repayment_config) %>

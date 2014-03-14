@@ -1,0 +1,6 @@
+<div class="callout">
+  <h4><%= I18n.t("repayment.interest_changer.title") %></h4>
+  <p><%= raw I18n.t("repayment.interest_changer.intro", change: 1) %></p>
+
+  <p><%= number_to_currency @changer.monthly_payment %></p>
+</div>

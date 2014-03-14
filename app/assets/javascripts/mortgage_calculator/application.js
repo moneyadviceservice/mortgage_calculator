@@ -17,6 +17,7 @@
 //= require angular-mocks
 //= require underscore
 //= require angular-ui
+//= require angular-wizard
 //= require mortgage_calculator/mortgage_calculator_app
 //= require_tree ./angular/services
 //= require_tree ./angular/controllers
