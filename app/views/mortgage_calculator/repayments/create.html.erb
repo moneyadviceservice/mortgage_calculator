@@ -1,26 +1,9 @@
 <%= render 'header' %>
 
 <div class="mortgagecalc__container">
-  <div class="morgagecalc__panel">
-    <h4><%= link_to I18n.t("repayment.tabs.repayment.title"), "#" %></h4>
+  <%= render 'calc_left_panel' %>
 
-    <p><%= number_to_currency @repayment.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
-
-    <p><%= I18n.t("repayment.tabs.repayment.tip_1") %></p>
-    <p><%= I18n.t("repayment.tabs.repayment.tip_2") %></p>
-
-    <h4><%= link_to I18n.t("repayment.tabs.interest_only.title"), "#" %></h4>
-
-    <p><%= number_to_currency @interest_only.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
-
-    <%= render 'callout_panel' %>
-  </div>
-
-  <div class="morgagecalc__panel morgagecalc__panel--with-form">
-    <%= render 'form_step2' %>
-
-    <p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit" %></p>
-  </div>
+  <%= render 'calc_right_panel' %>
 </div>
 
 <%= zendesk_feedback_tab(zendesk_repayment_config) %>
