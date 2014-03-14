@@ -25,3 +25,9 @@
 
   @import 'components/mortgagecalc';
 }
+
+.no-js {
+  .rendered-from-js {
+    display: none;
+  }
+}

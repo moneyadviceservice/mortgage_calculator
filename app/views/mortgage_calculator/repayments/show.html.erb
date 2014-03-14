@@ -10,9 +10,7 @@
   <wizard on-finish="finishedWizard()" hide-indicators='true'>
 
     <wz-step title="Starting">
-      <div class="rendered-from-js">
-        <%= render 'form_step1' %>
-      </div>
+      <%= render 'form_step1' %>
     </wz-step>
 
     <wz-step title="Continuing">
@@ -26,7 +24,6 @@
       <div class="rendered-from-js">
         <%= render 'next_steps_content' %>
       </div>
-      <input type="submit" wz-next value="Finish now" />
     </wz-step>
 
   </wizard>
