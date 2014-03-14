@@ -11,7 +11,7 @@ end
 
 Then(/^I enter my deposit$/) do
   @repayment.deposit.set "10000"
-  @repayment.submit.click
+  @repayment.next.click
 end
 
 Then(/^I see my monthly repayment$/) do
@@ -26,11 +26,11 @@ Given(/^I have entered some details into the repayment tool$/) do
 end
 
 When(/^I update my repayment details$/) do
-  @repayment.price.set "90000"
-  @repayment.deposit.set "20000"
+  @repayment.step_two_price.set "90000"
+  @repayment.step_two_deposit.set "20000"
   @repayment.term_years.set "30"
   @repayment.interest_rate.set "4"
-  @repayment.submit.click
+  @repayment.recalculate.click
 end
 
 Then(/^I see my updated monthly repayment$/) do
