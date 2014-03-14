@@ -27,7 +27,7 @@ module MortgageCalculator
       end
 
       def repayment_model
-        @repayment_model = Repayment.new(repayment_params)
+        Repayment.new(repayment_params)
       end
 
       def repayment

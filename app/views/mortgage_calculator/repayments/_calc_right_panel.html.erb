@@ -1,5 +1,6 @@
 <div class="morgagecalc__panel morgagecalc__panel--with-form">
   <%= render 'form_step2' %>
 
-  <p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit" %></p>
+  <p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit",
+                                                                      'wz-next' => '' %></p>
 </div>
