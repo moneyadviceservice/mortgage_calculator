@@ -31,3 +31,8 @@
   right: 15px;
   cursor: pointer;
 }
+
+.previous {
+  @extend .mortgagecalc__submit;
+  margin-right: 85px;
+}
