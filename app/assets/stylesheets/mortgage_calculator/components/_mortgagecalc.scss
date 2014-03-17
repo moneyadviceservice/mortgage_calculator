@@ -30,6 +30,17 @@
   @include respond-to($mq-s) {
     @include column(6);
   }
+
+  &.mortgagecalc__panel--full {
+    @include respond-to($mq-s) {
+      @include column(12);
+    } 
+  }
+
+  &.mortgagecalc__panel--nudge {
+    padding: 1.125rem;
+    margin: 1.5rem 0;
+  }
 }
 
 .mortgagecalc__panel--with-form {
@@ -41,6 +52,11 @@
   bottom: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+.mortgagecalc__helper {
+  float:left;
+  margin-right: 40px;
 }
 
 .previous {

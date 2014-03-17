@@ -1,10 +1,14 @@
-<h2 class="mortgagecalc__heading"><%= I18n.t("repayment.next_steps.title") %></h2>
+<div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <h2 class="mortgagecalc__heading"><%= I18n.t("repayment.next_steps.title") %></h2>
 
-<ol class="featured-list">
-  <li><%= I18n.t("repayment.next_steps.tip_1") %></li>
-  <li><%= I18n.t("repayment.next_steps.tip_2") %></li>
-  <li><%= I18n.t("repayment.next_steps.tip_3") %></li>
-</ol>
+  <%= image_tag "mortgage_calculator/next-steps-helper.png", :class => "mortgagecalc__helper" %>
+
+  <ol class="featured-list">
+    <li><%= I18n.t("repayment.next_steps.tip_1") %></li>
+    <li><%= I18n.t("repayment.next_steps.tip_2") %></li>
+    <li><%= I18n.t("repayment.next_steps.tip_3") %></li>
+  </ol>
+</div>
 
 <div class="mortgagecalc__panel">
 
@@ -16,7 +20,7 @@
 
 </div>
 
-<div class="mortgagecalc__panel">
+<div class="mortgagecalc__panel mortgagecalc__panel--nudge">
   <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %></h4>
   <p><%= I18n.t("repayment.next_steps.find_out_more.tip_1") %></p>
   <p><%= I18n.t("repayment.next_steps.find_out_more.tip_2") %></p>

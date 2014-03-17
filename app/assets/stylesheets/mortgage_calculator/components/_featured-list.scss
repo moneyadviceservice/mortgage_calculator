@@ -4,6 +4,7 @@
   font-weight: 500;
   color: #333;
   counter-reset:li;
+  margin: 4em 0 0 1.5em;
 
   > li {
       position:relative;
@@ -18,7 +19,7 @@
      
       position:absolute;
       top:-2px;
-      left:-2em;
+      margin-left:-2.8em;
       box-sizing:border-box;
       width:2em;
       height:2em;
@@ -37,3 +38,7 @@
   }
 }
 
+
+.featured-list--left {
+  float: left;
+}
