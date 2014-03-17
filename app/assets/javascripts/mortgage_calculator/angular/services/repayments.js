@@ -30,26 +30,23 @@ App.factory('Repayments', function() {
   };
 
   var _monthlyInterestRate = function(increment) {
-
-    //If interest rate increment is supplied, adds it otherwise uses default annualInterestRate property.
-    var args = Args([
-      {interestRate:  Args.INT | Args.Optional,
-        _default: 0}
-    ], arguments);
-    return ((repayments.annualInterestRate + args.interestRate) / 12 / 100);
+    return ((repayments.annualInterestRate + _setDefaults(increment).interestRate) / 12 / 100);
   };
 
   var _annualInterestRate = function(increment) {
-
-    var args = Args([
-      {interestRate:  Args.INT | Args.Optional,
-        _default: 0}
-    ], arguments);
-    return ((repayments.annualInterestRate + args.interestRate) / 100);
+    return ((repayments.annualInterestRate + _setDefaults(increment).interestRate) / 100);
   };
 
   var _compoundInterest = function(increment) {
     return Math.pow(1 + _monthlyInterestRate(increment), _termMonths());
+  };
+
+  var _setDefaults = function() {
+    var args = Args([
+      {interestRate:  Args.INT | Args.Optional,
+        _default: 0}
+    ], arguments);
+    return args;
   };
 
 
