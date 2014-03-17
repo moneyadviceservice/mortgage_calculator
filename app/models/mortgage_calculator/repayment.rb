@@ -10,14 +10,14 @@ module MortgageCalculator
     currency_inputs :price, :deposit
 
     validates :term_years, presence: true, numericality: {greater_than: 0}
-    validates :price, presence: true
+    validates :price, presence: true, numericality: {greater_than: 0}
     validates :interest_rate, presence: true, numericality: {greater_than: 0}
 
     def initialize(options = {})
-      self.price = options.fetch(:price){ 0 }
-      self.deposit = options.fetch(:deposit){ 0 }
-      self.term_years = options.fetch(:term_years){ 25 }
-      self.interest_rate = options.fetch(:interest_rate){ 5 }
+      self.price = options[:price].presence || 0
+      self.deposit = options[:deposit].presence || 0
+      self.term_years = options[:term_years].presence || 25
+      self.interest_rate = options[:interest_rate].presence || 5
     end
 
     def debt

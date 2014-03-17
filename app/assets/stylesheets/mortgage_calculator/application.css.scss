@@ -25,10 +25,17 @@
 
   @import 'components/mortgagecalc';
   @import 'components/callout';
+  @import 'components/featured-list';
 }
 
 .no-js {
   .rendered-from-js {
+    display: none;
+  }
+}
+
+.js {
+  .hide-with-js {
     display: none;
   }
 }

@@ -23,6 +23,16 @@ describe MortgageCalculator::Repayment do
     its(:interest_rate){ should == 5 }
   end
 
+  describe 'defaults with empty strings' do
+    subject{ described_class.new price: "", deposit: "", term_years: "", interest_rate: "" }
+
+    its(:price){ should be_zero }
+    its(:deposit){ should be_zero }
+    its(:debt){ should be_zero }
+    its(:term_years){ should == 25 }
+    its(:interest_rate){ should == 5 }
+  end
+
   describe :change_interest_rate_by do
     it 'increases the interest rate' do
       subject.change_interest_rate_by(1).interest_rate.should == 8.5
@@ -36,22 +46,6 @@ describe MortgageCalculator::Repayment do
   describe 'validations' do
     context 'when price is blank' do
       subject{ described_class.new price: "", deposit: "20000", term_years: "25", interest_rate: "7.5" }
-
-      it 'is not valid' do
-        subject.should_not be_valid
-      end
-    end
-
-    context 'when term years is blank' do
-      subject{ described_class.new price: "100000", term_years: "", interest_rate: "7.5" }
-
-      it 'is not valid' do
-        subject.should_not be_valid
-      end
-    end
-
-    context 'when interest rate is blank' do
-      subject{ described_class.new price: "100000", term_years: "25", interest_rate: "" }
 
       it 'is not valid' do
         subject.should_not be_valid
