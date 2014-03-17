@@ -19,8 +19,7 @@
     <%= f.text_field :interest_rate %>
   </div>
 
-  <div>
-    <%= f.submit I18n.t("repayment.recalculate"),
-                        'wz-next' => '' %>
+  <div class="hide-with-js">
+    <%= f.submit I18n.t("repayment.recalculate") %>
   </div>
 <% end %>
