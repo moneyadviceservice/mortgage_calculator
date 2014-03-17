@@ -1,8 +1,10 @@
 .mortgagecalc {
-
+  font-family: 'museo_sans';
+  font-weight: 300;
 }
 
 .mortgagecalc__heading {
+  font-family: 'museo_sans';
   font-weight: 500;
   font-size: 24px;
   color: #333;
@@ -23,9 +25,11 @@
   @include respond-to($mq-s) {
     @include column(6);
   }
+}
 
-  font-family: 'museo_sans';
-  font-weight: 300;
+.morgagecalc__callout {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .morgagecalc__panel--with-form {
