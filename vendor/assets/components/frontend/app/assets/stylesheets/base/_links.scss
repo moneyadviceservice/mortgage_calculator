@@ -1,0 +1,20 @@
+// Basic primary links and their accompanying hover and focus states
+//
+// :visited - Foo
+// :hover - Foo
+// :focus - Foo
+// .link-nav - Foo
+// .link-nav:visited - Foo
+// .link-nav:hover - Foo
+// .link-nav:focus - Foo
+//
+// Styleguide a
+
+a {
+  @include links($color-link-default);
+}
+
+%link-nav,
+.link-nav {
+  @include links($color-link-nav, $color-link-nav-visited);
+}

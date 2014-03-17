@@ -1,0 +1,25 @@
+.mobile-nav {
+  @extend .list--unstyled;
+  display: none;
+}
+
+.mobile-nav__item {
+  @extend %type-navigation;
+  padding: $baseline-unit*1.5 $baseline-unit*2;
+  border-radius: $baseline-unit;
+  background-color: $color-green-tertiary;
+  &:last-child {
+    padding: 4px 9px;
+  }
+
+  a {
+    @include links($color-primary-nav, $color-primary-nav-visited);
+  }
+
+  .icon--search {
+    @include typography(body, 20);
+    @include respond-to($mq-m) {
+      @include typography(body, 22);
+    }
+  }
+}

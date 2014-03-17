@@ -1,0 +1,89 @@
+%unstyled-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.styleguide-nav-container {
+  width: 100%;
+  height: 51px;
+}
+
+.styleguide-nav {
+  @include typography(body, 14);
+  z-index: 9;
+  background-color: $color-nav-background;
+  border-bottom: 1px solid $color-nav-border;
+  width: 100%;
+  @extend %unstyled-nav;
+
+  > li {
+    width: 100%;
+    @include respond-to($mq-l) {
+      @include inline-block;
+      width: auto;
+      border-bottom: none;
+    }
+  }
+
+  a,
+  a:visited {
+    @include inline-block;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    color: $color-nav-text;
+  }
+
+  a:hover {
+    border: none;
+    text-decoration: none;
+    color: $color-green-secondary;
+  }
+
+  a:focus {
+    outline: 1px solid;
+    border-bottom: none;
+  }
+
+}
+
+.has-sub-menu > a:first-child {
+  font-weight: 600;
+}
+
+.styleguide-nav__submenu {
+  @extend %unstyled-nav;
+  position: relative;
+  z-index: 1;
+  background-color: $color-nav-background;
+  @include respond-to($mq-s) {
+    position: absolute;
+  }
+}
+
+.styleguide-nav__toggle {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid $color-nav-border;
+  color: $color-nav-text;
+  background-color: $color-nav-background;
+  text-align: left;
+  line-height: 2;
+  @include respond-to($mq-s) {
+    display: none;
+  }
+}
+
+.js .styleguide-nav {
+  display: none;
+  @include respond-to($mq-s) {
+    display: block;
+  }
+}
+
+.js .styleguide-nav__submenu {
+  display: none;
+}

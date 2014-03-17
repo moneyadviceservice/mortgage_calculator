@@ -21,5 +21,4 @@ tmp
 .sass-cache
 .idea/
 node_modules
-vendor/assets/*
 coverage/

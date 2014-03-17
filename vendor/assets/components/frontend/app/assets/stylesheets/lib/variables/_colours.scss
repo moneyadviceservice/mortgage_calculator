@@ -1,0 +1,139 @@
+$color-white: #FFF; // not in the standard palette
+$color-off-white: #F5F7F7;
+$color-white-translucent: rgba(255, 255, 255, 0.2); // not in the standard palette
+$color-transparent: transparent;
+
+$color-black: #555555;
+$color-grey-primary: #6d6d6d;
+
+$color-green-primary: #388426;
+$color-green-secondary: #61a612;
+$color-green-tertiary: #115329;
+$color-green-quaternary: rgba(51,105,19,0.7);
+
+$color-green-paler: #f5f7f8;
+$color-green-pale: #dceea3;
+$color-green-light: #b9dd48;
+$color-green-medium: #81c724;
+$color-green-bright: #adcf3f;
+
+$color-teal-light: #109e89;
+$color-teal-dark: #0e7f6c;
+
+$color-blue-pale: #ebf2f5;
+$color-blue-light: #e6f2f7; // not in the standard palette
+$color-blue-medium: #1f6faa;
+$color-blue-dark: #18507a;
+$color-blue-extra-dark: #0a4358;
+
+$color-grey-palest: #dce3e1;
+
+$color-grey-paler: #f2f4f5;
+$color-grey-pale: #F6F8F7;
+
+$color-grey-paleo: #ecf0ef;
+$color-grey-light: #a8b2ba;
+
+$color-grey-medium: #526675;
+$color-grey-dark: #394752;
+
+$color-bluegrey-dark: #96b4c0;
+$color-bluegrey-medium: #cbdae0;
+$color-bluegrey-light: #dae1df;
+
+$color-pink-medium: #e43c8a;
+$color-pink-dark: #bf2682;
+
+$color-red-medium: #d52b30;
+$color-red-dark: #af2745;
+
+$color-orange-medium: #f06431;
+$color-orange-dark: #c95d2d;
+
+$color-yellow-light: #ebd520;
+$color-yellow-dark: #ddae1f;
+
+// Global Colours
+$color-site-bg: $color-green-primary;
+$color-heading: $color-green-secondary;
+
+// Typography
+$color-text-default: $color-black;
+$color-text-icon: $color-white;
+
+// Default Links
+$color-link-default: $color-blue-medium;
+$color-link-visited: $color-blue-dark ;
+$color-link-focus: $color-blue-light;
+
+// Navigation Links
+$color-link-nav: $color-green-primary;
+$color-link-nav-visited: $color-green-secondary;
+
+// Article Links
+$color-link-external: $color-grey-light;
+
+// Tables
+$color-table-heading: $color-white;
+$color-table-background: $color-green-primary;
+$color-table-background-alt: $color-green-paler;
+$color-table-border: $color-grey-light;
+
+// Lists
+$color-list-bullet: $color-green-secondary;
+$color-list-yes: $color-green-secondary;
+$color-list-no: $color-red-dark;
+
+// Buttons
+$color-button-default: $color-green-light;
+$color-button-default-border: $color-green-medium;
+$color-button-default-text: $color-black;
+
+$color-button-primary: $color-yellow-light;
+$color-button-primary-border: $color-yellow-dark;
+
+// Footer
+$color-footer-bg: $color-grey-pale;
+
+// Message Bars
+$color-opt-out-background: $color-blue-pale;
+$color-feedback-background: $color-blue-extra-dark;
+
+// Callout Colours
+$color-callout-background: $color-green-pale;
+
+// Action Plans
+$color-action-item-heading: $color-white;
+$color-action-item-heading-bg: $color-grey-medium;
+$color-action-item-border: $color-bluegrey-light;
+$color-icon-open: $color-yellow-light;
+$color-article-cta: $color-blue-light;
+
+// Navigation
+$color-primary-nav: $color-off-white;
+$color-primary-nav-visited: $color-off-white;
+$color-primary-nav-focus: $color-transparent;
+
+
+$color-submenu-background: $color-grey-paler;
+$color-submenu-border: $color-green-primary;
+$color-submenu-list-border: $color-grey-palest;
+
+$color-skip-to-content: $color-grey-pale;
+
+// Search
+$color-search-background: $color-green-quaternary;
+$color-search-text: $color-green-secondary;
+
+// Category Pages
+$color-category-border: $color-grey-paleo;
+$color-filter-border: $color-white;
+$color-filter-background: $color-grey-paler;
+
+// VARIABLES ONLY TO BE USED IN THE STYLEGUIDE
+
+// Colours
+$color-nav-text: lighten(#333333, 20%);
+$color-nav-border: #E6E6E6;
+$color-nav-background: rgba(255, 255, 255, 0.9);
+$color-sub-menu-background: #393939;

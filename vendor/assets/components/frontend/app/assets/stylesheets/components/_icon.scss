@@ -1,0 +1,132 @@
+// Icons
+//
+// .icon--masLogo       - .png
+// .icon--youtube       - \e605
+// .icon--facebook      - \e61c
+// .icon--twitter       - \e608
+// .icon--tick          - \e609
+// .icon--externalLink  - \e619
+// .icon--doc           - \e611
+// .icon--pdf           - \e602
+// .icon--open          - \e603
+// .icon--closed        - \e0012
+// .icon--close         - \e60A
+// .icon--desktop       - \e603
+// .icon--speech        - \e609
+// .icon--search        - \e00E
+//
+// Styleguide icons
+
+.icon {
+  background-color: transparent;
+  line-height: 1;
+  font-family: 'icon-font';
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+.icon--youtube {
+  &:before {
+    content: '\f167';
+  }
+}
+
+.icon--facebook {
+  &:before {
+    content: '\f09A';
+  }
+}
+
+.icon--twitter {
+  &:before {
+    content: '\f099';
+  }
+}
+
+.icon--external-link {
+  &:after {
+    content: '\e608';
+  }
+}
+
+.icon--tick {
+  &:before {
+    content: '\e01E';
+  }
+}
+
+.icon--doc {
+  &:before {
+    content: '\e601';
+  }
+}
+
+.icon--pdf {
+  &:before {
+    content: '\e602';
+  }
+}
+
+.icon--open {
+  &:before {
+    content: "\e606";
+  }
+}
+
+.icon--closed {
+  &:before {
+    content: '\e607';
+  }
+}
+
+.icon--close {
+  &:before {
+    content: '\e012';
+  }
+}
+
+.icon--desktop {
+  &:before {
+    content: '\e60A';
+  }
+}
+
+.icon--speech {
+  &:before {
+    content: '\e609';
+  }
+}
+
+.icon--search {
+  &:before {
+    content: '\e00E';
+  }
+}
+
+.icon--menu {
+  &:before {
+    content: '\e00A';
+  }
+}
+
+.icon--globe {
+  &:before {
+    content: '\e60c';
+  }
+}
+
+
+.icon--tool {
+  &:before {
+    content: '\e602';
+  }
+}
+
+.icon--video {
+  &:before {
+    content: '\e601';
+  }
+}
+
