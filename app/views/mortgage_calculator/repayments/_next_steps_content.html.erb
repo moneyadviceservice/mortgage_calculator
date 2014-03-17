@@ -1,15 +1,25 @@
-<p><%= I18n.t("repayment.next_steps.title") %></p>
+<h2 class="mortgagecalc__heading"><%= I18n.t("repayment.next_steps.title") %></h2>
 
-<p><%= I18n.t("repayment.next_steps.tip_1") %></p>
-<p><%= I18n.t("repayment.next_steps.tip_2") %></p>
-<p><%= I18n.t("repayment.next_steps.tip_3") %></p>
+<ol class="featured-list">
+  <li><%= I18n.t("repayment.next_steps.tip_1") %></li>
+  <li><%= I18n.t("repayment.next_steps.tip_2") %></li>
+  <li><%= I18n.t("repayment.next_steps.tip_3") %></li>
+</ol>
 
-<p><%= I18n.t("repayment.next_steps.learn_more.title") %></p>
-<p><%= I18n.t("repayment.next_steps.learn_more.tip_1") %></p>
-<p><%= I18n.t("repayment.next_steps.learn_more.tip_2") %></p>
+<div class="mortgagecalc__panel">
 
-<p><%= I18n.t("repayment.next_steps.find_out_more.title") %></p>
-<p><%= I18n.t("repayment.next_steps.find_out_more.tip_1") %></p>
-<p><%= I18n.t("repayment.next_steps.find_out_more.tip_2") %></p>
+  <div class="callout">
+    <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.learn_more.title") %></h4>
+    <p><%= I18n.t("repayment.next_steps.learn_more.tip_1") %></p>
+    <p><%= I18n.t("repayment.next_steps.learn_more.tip_2") %></p>
+  </div>
 
-<p><input type="submit" class='button mortgagecalc__submit' wz-previous value="Back" /></p>
+</div>
+
+<div class="mortgagecalc__panel">
+  <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %></h4>
+  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_1") %></p>
+  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_2") %></p>
+
+  <p><input type="submit" class='button mortgagecalc__submit' wz-previous value="Back" /></p>
+</div>

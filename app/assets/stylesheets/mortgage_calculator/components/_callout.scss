@@ -1,12 +1,12 @@
 .callout {
-  font-size: 18px;
+  font-size: $font-medium;
   font-family: 'museo_sans';
   font-weight: 500;
 
   > p {
     font-family: 'museo_sans';
     font-weight: 300;
-    font-size: 18px;
+    font-size: $font-medium;
     color: #333;
 
     strong {
@@ -20,6 +20,6 @@
   font-family: 'museo_sans';
   font-weight: 500;
   color: #333;
-  font-size: 24px;
+  font-size: $font-large;
   margin-top: 0;
 }

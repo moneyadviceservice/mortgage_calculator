@@ -3,12 +3,17 @@
   font-weight: 300;
 }
 
-.mortgagecalc__heading {
+.mortgagecalc__heading,
+.mortgagecalc__subheading {
   font-family: 'museo_sans';
   font-weight: 500;
-  font-size: 24px;
+  font-size: $font-large;
   color: #333;
   margin-top: 0;
+}
+
+.mortgagecalc__subheading {
+  font-size: $font-medium;
 }
 
 .mortgagecalc__container {
