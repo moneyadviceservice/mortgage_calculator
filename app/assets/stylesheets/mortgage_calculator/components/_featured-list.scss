@@ -3,4 +3,37 @@
   font-size:$font-medium;
   font-weight: 500;
   color: #333;
+  counter-reset:li;
+
+  > li {
+      position:relative;
+      margin:0 0 18px 2em;
+      padding:4px 8px;
+      list-style:none;
+  }
+
+  > li:before {
+      content:counter(li);
+      counter-increment:li;
+     
+      position:absolute;
+      top:-2px;
+      left:-2em;
+      box-sizing:border-box;
+      width:2em;
+      height:2em;
+      border-radius: 2em;
+      margin-right:8px;
+      line-height: 2em;
+      padding:4px;
+      color:#333;
+      background:#ecd600;
+      border-bottom:2px solid #ddaf00;
+      font-weight:500;
+      font-family: 'museo_sans';
+      font-size:$font-medium;
+      line-height: 1.5em;
+      text-align:center;
+  }
 }
+
