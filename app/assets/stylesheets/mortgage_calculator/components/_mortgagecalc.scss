@@ -41,16 +41,16 @@
     padding: 1.125rem;
     margin: 1.5rem 0;
   }
-}
 
-.mortgagecalc__panel--with-form {
-  padding-bottom: 50px;
+  &.mortgagecalc__panel--with-form {
+    padding-bottom: 50px;
+  }
 }
 
 .mortgagecalc__submit {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 30px;
+  right: 30px;
   cursor: pointer;
 }
 
@@ -62,4 +62,9 @@
 .previous {
   @extend .mortgagecalc__submit;
   margin-right: 85px;
+}
+
+.button {
+  font-family: 'museo_sans';
+  font-weight: 500;
 }
