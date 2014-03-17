@@ -30,7 +30,7 @@ When(/^I update my repayment details$/) do
   @repayment.step_two_deposit.set "20000"
   @repayment.term_years.set "30"
   @repayment.interest_rate.set "4"
-  @repayment.recalculate.click
+  @repayment.recalculate.click if js_disabled?
 end
 
 Then(/^I see my updated monthly repayment$/) do
