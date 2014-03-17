@@ -1,7 +1,6 @@
 module MortgageCalculator
   class RepaymentsController < ApplicationController
     def show
-      @repayment = RepaymentPresenter.new(Repayment.new)
       calculate_repayment
       calculate_interest_only
       adjust_interest_rate

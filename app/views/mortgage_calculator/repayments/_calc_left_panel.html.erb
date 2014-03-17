@@ -1,14 +1,23 @@
 <div class="mortgagecalc__panel">
   <h4><%= link_to I18n.t("repayment.tabs.repayment.title"), "#" %></h4>
 
-  <p><%= number_to_currency @repayment.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
+  <p>
+    <span ng-hide="repayments.propertyPrice"><%= number_to_currency @repayment.monthly_payment %></span>
+    <span class='rendered-from-js'>{{ repayments.monthlyRepayment() | currency:"£" }}</span>
+    <%= I18n.t("repayment.a_month") %>
+  </p>
 
   <p><%= I18n.t("repayment.tabs.repayment.tip_1") %></p>
   <p><%= I18n.t("repayment.tabs.repayment.tip_2") %></p>
 
   <h4><%= link_to I18n.t("repayment.tabs.interest_only.title"), "#" %></h4>
 
-  <p><%= number_to_currency @interest_only.monthly_payment %> <%= I18n.t("repayment.a_month") %></p>
+
+  <p>
+    <span ng-hide="repayments.propertyPrice"><%= number_to_currency @repayment.monthly_payment %></span>
+    <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment() | currency:"£" }}</span>
+    <%= I18n.t("repayment.a_month") %>
+  </p>
 
   <div class="callout">
     <h4><%= I18n.t("repayment.interest_changer.title") %></h4>
