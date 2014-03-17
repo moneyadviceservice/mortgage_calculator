@@ -14,7 +14,7 @@
 .mortgagecalc__container {
   @include column(12);
   position: relative;
-  background: #f2f4f5 image_url('mortgage_calculator/MAS_Logo_40opacity.png') bottom left no-repeat;
+  background: #f2f4f5;
   border: 1px solid #ccc;
   max-width: 600px;
   padding: 25px;
