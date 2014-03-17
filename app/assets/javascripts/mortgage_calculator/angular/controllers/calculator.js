@@ -22,5 +22,18 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     //Repayment Calculations
     $scope.repayments = Repayments;
 
+    $scope.viewMonthlyRepayments = true;
+    $scope.viewInterestRepayments = false;
+
+    $scope.showMonthly = function() {
+      $scope.viewMonthlyRepayments = true;
+      $scope.viewInterestRepayments = false;
+    };
+
+    $scope.showInterest = function() {
+      $scope.viewMonthlyRepayments = false;
+      $scope.viewInterestRepayments = true;
+    };
+
 
   }]);
