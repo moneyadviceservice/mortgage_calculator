@@ -7,10 +7,10 @@ module MortgageCalculator
     currency_inputs :price, :deposit
 
     def initialize(options = {})
-      self.price = options.fetch(:price)
-      self.deposit = options.fetch(:deposit){ 0 }
-      self.term_years = options.fetch(:term_years){ 25 }
-      self.interest_rate = options.fetch(:interest_rate){ 5 }
+      self.price = options[:price].presence || 0
+      self.deposit = options[:deposit].presence || 0
+      self.term_years = options[:term_years].presence || 25
+      self.interest_rate = options[:interest_rate].presence || 5
     end
 
     def term_years=(value)

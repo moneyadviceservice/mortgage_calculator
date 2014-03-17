@@ -3,6 +3,15 @@ require 'spec_helper'
 describe MortgageCalculator::InterestOnly do
   subject{ described_class.new price: "120000", deposit: "20000" }
 
+  describe 'defaults' do
+    subject{ described_class.new price: "", deposit: "", term_years: "", interest_rate: "" }
+
+    its(:price){ should be_zero }
+    its(:deposit){ should be_zero }
+    its(:term_years){ should == 25 }
+    its(:interest_rate){ should == 5 }
+  end
+
   describe 'mortgage attributes' do
     its(:price){ should == 120000 }
     its(:deposit){ should == 20000 }
