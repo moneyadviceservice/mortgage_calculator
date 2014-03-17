@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('mortgageCalculatorApp')
-
-  .controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', function ($scope, Affordability, StampDuty) {
+App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', function ($scope, Affordability, StampDuty, Repayments) {
 
     //Affordability Calculations
     $scope.affordability = Affordability;
@@ -19,6 +17,8 @@ angular.module('mortgageCalculatorApp')
     //Stamp Duty Calculations
     $scope.stampDuty = StampDuty;
 
+    //Repayment Calculations
+    $scope.repayments = Repayments;
 
 
   }]);

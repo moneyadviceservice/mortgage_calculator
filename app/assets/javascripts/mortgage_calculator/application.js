@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.slider
 //= require angular
 //= require angular-mocks
 //= require underscore
+//= require angular-ui
+//= require angular-wizard
 //= require require_config
 //= require mortgage_calculator/mortgage_calculator_app
 //= require_tree ./angular/services

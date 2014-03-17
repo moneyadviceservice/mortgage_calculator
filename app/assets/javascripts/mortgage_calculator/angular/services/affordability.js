@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('mortgageCalculatorApp')
-  .factory('Affordability', function() {
+App.factory('Affordability', function() {
 
     var affordability = {
       earnings: {
