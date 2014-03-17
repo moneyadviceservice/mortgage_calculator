@@ -1,0 +1,5 @@
+<p>
+  <span ng-hide="js"><%= number_to_currency @interest_only.monthly_payment %></span>
+  <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment() | currency:"£" }}</span>
+  <%= I18n.t("repayment.a_month") %>
+</p>

@@ -1,22 +1,17 @@
 <div class="mortgagecalc__panel">
   <h4 ng-click="showMonthly()"><%= link_to I18n.t("repayment.tabs.repayment.title"), "#" %></h4>
 
-  <p>
-    <span ng-hide="js"><%= number_to_currency @repayment.monthly_payment %></span>
-    <span class='rendered-from-js'>{{ repayments.monthlyRepayment() | currency:"£" }}</span>
-    <%= I18n.t("repayment.a_month") %>
-  </p>
-
-  <p><%= I18n.t("repayment.tabs.repayment.tip_1") %></p>
-  <p><%= I18n.t("repayment.tabs.repayment.tip_2") %></p>
+  <div ng-show="viewMonthlyRepayments">
+    <%= render 'monthly_repayments' %>
+    <%= render 'repayment_tip' %>
+  </div>
 
   <h4 ng-click="showInterest()"><%= link_to I18n.t("repayment.tabs.interest_only.title"), "#" %></h4>
 
-  <p>
-    <span ng-hide="js"><%= number_to_currency @interest_only.monthly_payment %></span>
-    <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment() | currency:"£" }}</span>
-    <%= I18n.t("repayment.a_month") %>
-  </p>
+  <div ng-show="viewInterestRepayments">
+    <%= render 'interest_only_repayments' %>
+    <%= render 'repayment_tip' %>
+  </div>
 
   <div class="callout">
     <h4 class="callout__heading"><%= I18n.t("repayment.interest_changer.title") %></h4>
