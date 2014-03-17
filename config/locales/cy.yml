@@ -1,4 +1,5 @@
 cy:
+  tool_name: "cyfrifiannell-morgais-beta"
   number:
     currency:
       format:

@@ -9,7 +9,7 @@ module MortgageCalculator
     parent_template :embedded
 
     def tool_name
-      "mortgage-calculator-beta"
+      I18n.t('tool_name')
     end
   end
 end
