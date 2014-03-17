@@ -14,8 +14,7 @@ spec/dummy/db/*.sqlite3
 
 .jhw-cache
 vendor/cache/**
-vendor/assets/**
-
+vendor/assets/components/**
 tmp
 
 *.DS_Store
