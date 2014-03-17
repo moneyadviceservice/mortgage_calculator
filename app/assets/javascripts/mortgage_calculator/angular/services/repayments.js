@@ -16,8 +16,8 @@ App.factory('Repayments', function() {
     monthlyRepayment        : function() {
       return Math.round((_debt() * _monthlyInterestRate() * _compoundInterest()) / (_compoundInterest() - 1) * 100) / 100;
     },
-    monthlyInterestRepayment : function() {
-      return Math.round(((_debt() * _annualInterestRate()) / 12) * 100 ) / 100;
+    monthlyInterestRepayment : function(increment) {
+      return Math.round(((_debt() * _annualInterestRate(increment)) / 12) * 100 ) / 100;
     }
   };
 
@@ -30,11 +30,23 @@ App.factory('Repayments', function() {
   };
 
   var _monthlyInterestRate = function() {
-    return (repayments.annualInterestRate / 12 / 100);
+
+    var args = Args([
+      {interestRate:  Args.INT | Args.Optional,
+        _default: 0}
+    ], arguments);
+
+    return ((repayments.annualInterestRate + args.interestRate) / 12 / 100);
   };
 
-  var _annualInterestRate = function() {
-    return (repayments.annualInterestRate / 100);
+  var _annualInterestRate = function(num) {
+
+    var args = Args([
+      {interestRate:  Args.INT | Args.Optional,
+        _default: 0}
+    ], arguments);
+
+    return ((repayments.annualInterestRate + args.interestRate) / 100);
   };
 
   var _compoundInterest = function() {

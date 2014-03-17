@@ -2,7 +2,7 @@
   <h4><%= link_to I18n.t("repayment.tabs.repayment.title"), "#" %></h4>
 
   <p>
-    <span ng-hide="repayments.propertyPrice"><%= number_to_currency @repayment.monthly_payment %></span>
+    <span ng-hide="js"><%= number_to_currency @repayment.monthly_payment %></span>
     <span class='rendered-from-js'>{{ repayments.monthlyRepayment() | currency:"£" }}</span>
     <%= I18n.t("repayment.a_month") %>
   </p>
@@ -14,7 +14,7 @@
 
 
   <p>
-    <span ng-hide="repayments.propertyPrice"><%= number_to_currency @repayment.monthly_payment %></span>
+    <span ng-hide="js"><%= number_to_currency @repayment.monthly_payment %></span>
     <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment() | currency:"£" }}</span>
     <%= I18n.t("repayment.a_month") %>
   </p>
@@ -23,6 +23,9 @@
     <h4><%= I18n.t("repayment.interest_changer.title") %></h4>
     <p><%= raw I18n.t("repayment.interest_changer.intro", change: 1) %></p>
 
-    <p><%= number_to_currency @changer.monthly_payment %></p>
+    <p>
+      <span ng-hide="js"><%= number_to_currency @changer.monthly_payment %></span>
+      <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment(1) | currency:"£" }}</span>
+    </p>
   </div>
 </div>

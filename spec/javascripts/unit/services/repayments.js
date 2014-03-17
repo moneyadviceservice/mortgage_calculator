@@ -34,6 +34,8 @@ describe('Service: Repayments', function () {
       expect(repayments.monthlyRepayment()).toBe(2630.66);
     });
 
+
+
   });
 
   describe('#monthlyInterestRepayment', function() {
