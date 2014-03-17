@@ -20,19 +20,19 @@
   padding: 25px;
 }
 
-.morgagecalc__panel {
+.mortgagecalc__panel {
   @include column(12);
   @include respond-to($mq-s) {
     @include column(6);
   }
 }
 
-.morgagecalc__callout {
+.mortgagecalc__callout {
   font-size: 18px;
   font-weight: 500;
 }
 
-.morgagecalc__panel--with-form {
+.mortgagecalc__panel--with-form {
   padding-bottom: 50px;
 }
 

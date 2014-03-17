@@ -1,14 +1,14 @@
 <h2 class="mortgagecalc__heading"><%= I18n.t("repayment.step_1.intro") %></h2>
 
 <%= form_for @repayment, url: repayment_path do |f| %>
-<div class="morgagecalc__panel">
+<div class="mortgagecalc__panel">
   <div>
     <%= f.label :price %>
     <%= f.text_field :price %>
   </div>
 </div>
 
-<div class="morgagecalc__panel morgagecalc__panel--with-form">
+<div class="mortgagecalc__panel mortgagecalc__panel--with-form">
   <div>
     <%= f.label :deposit %>
     <%= f.text_field :deposit %>
@@ -18,7 +18,7 @@
                                          'wz-next' => '' %>
 
 
-<div class="callout morgagecalc__callout">
+<div class="callout mortgagecalc__callout">
   <%= I18n.t("repayment.tips.hidden_costs") %>
 </div>
 </div>
