@@ -3,6 +3,13 @@
   font-weight: 300;
 }
 
+.mortgagecalc__pageheading {
+  font-family: 'museo_sans';
+  font-weight: 700;
+  font-size: $font-xlarge;
+  max-width: $calc-width * 1.2;
+}
+
 .mortgagecalc__heading,
 .mortgagecalc__subheading {
   font-family: 'museo_sans';
@@ -10,6 +17,7 @@
   font-size: $font-large;
   color: #333;
   margin-top: 0;
+  max-width: $calc-width;
 }
 
 .mortgagecalc__subheading {
@@ -21,8 +29,9 @@
   position: relative;
   background: #f2f4f5;
   border: 1px solid #ccc;
-  max-width: 600px;
+  max-width: $calc-width;
   padding: 25px;
+  margin:0;
 }
 
 .mortgagecalc__panel {
@@ -59,9 +68,16 @@
   margin-right: 40px;
 }
 
+.mortgagecalc__feedback {
+  clear: both;
+  max-width: $calc-width;
+  text-align: right;
+  padding: 15px 0;
+}
+
 .previous {
   @extend .mortgagecalc__submit;
-  margin-right: 85px;
+  margin-right: 100px;
 }
 
 .button {
