@@ -2,9 +2,9 @@
 
   <div class="tabs">
     <dl class="tabs__list rendered-from-js">
-      <dt><a href="#" class="tabs__link" ng-click="showMonthly()" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("repayment.tabs.repayment.title") %></a></dt>
+      <dt><a href="#" class="tabs__link" ng-click="showMonthly($event)" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("repayment.tabs.repayment.title") %></a></dt>
 
-      <dt><a href="#" class="tabs__link" ng-click="showInterest()" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("repayment.tabs.interest_only.title") %></a></dt>
+      <dt><a href="#" class="tabs__link" ng-click="showInterest($event)" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("repayment.tabs.interest_only.title") %></a></dt>
     </dl>
 
     <div class="tabs__content">

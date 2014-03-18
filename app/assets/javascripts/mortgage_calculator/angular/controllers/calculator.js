@@ -25,12 +25,14 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.viewMonthlyRepayments = true;
     $scope.viewInterestRepayments = false;
 
-    $scope.showMonthly = function() {
+    $scope.showMonthly = function($event) {
+      $event.preventDefault();
       $scope.viewMonthlyRepayments = true;
       $scope.viewInterestRepayments = false;
     };
 
-    $scope.showInterest = function() {
+    $scope.showInterest = function($event) {
+      $event.preventDefault();
       $scope.viewMonthlyRepayments = false;
       $scope.viewInterestRepayments = true;
     };
