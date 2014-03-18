@@ -20,6 +20,10 @@
   max-width: $calc-width;
 }
 
+.mortgagecalc__heading--xlarge {
+  font-size: $font-xlarge;
+}
+
 .mortgagecalc__subheading {
   font-size: $font-medium;
 }
@@ -83,4 +87,9 @@
 .button {
   font-family: 'museo_sans';
   font-weight: 700;
+}
+
+.squeeze {
+  margin-top: 0;
+  margin-bottom: 0;
 }
