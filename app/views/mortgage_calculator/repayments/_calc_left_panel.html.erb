@@ -1,18 +1,20 @@
 <div class="mortgagecalc__panel">
 
   <div class="tabs">
-    <dl class="tabs__list">
-      <dt tabindex="0" ng-click="showMonthly()" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("repayment.tabs.repayment.title") %></dt>
+    <dl class="tabs__list rendered-from-js">
+      <dt><a href="#" class="tabs__link" ng-click="showMonthly()" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("repayment.tabs.repayment.title") %></a></dt>
 
-      <dt tabindex="0" ng-click="showInterest()" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("repayment.tabs.interest_only.title") %></dt>
+      <dt><a href="#" class="tabs__link" ng-click="showInterest()" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("repayment.tabs.interest_only.title") %></a></dt>
     </dl>
 
     <div class="tabs__content">
-      <div ng-show="viewMonthlyRepayments">
+      <div class="tabs__panel" ng-show="viewMonthlyRepayments">
+        <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.repayment.title") %></h3>
         <%= render 'monthly_repayments' %>
         <%= render 'repayment_tip' %>
       </div>
-      <div ng-show="viewInterestRepayments">
+      <div class="tabs__panel" ng-show="viewInterestRepayments">
+        <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.interest_only.title") %></h3>
         <%= render 'interest_only_repayments' %>
         <%= render 'repayment_tip' %>
       </div>
