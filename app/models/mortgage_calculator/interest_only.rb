@@ -44,6 +44,11 @@ module MortgageCalculator
     def total_payable
       total_interest + debt
     end
+
+    def change_interest_rate_by(val)
+      @interest_rate += val
+      self
+    end
   end
 end
 

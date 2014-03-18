@@ -37,3 +37,7 @@ Then(/^I see my updated monthly repayment$/) do
   expect(@repayment).to have_content("£334.19")
 end
 
+Then(/^I see my monthly interest only repayment$/) do
+  expect(@repayment).to have_content("£450.00")
+end
+

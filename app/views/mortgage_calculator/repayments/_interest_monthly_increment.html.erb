@@ -1,4 +1,4 @@
 <p>
-  <span ng-hide="js"><%= number_to_currency @changer.monthly_payment %></span>
+  <span ng-hide="js"><%= number_to_currency @interest_only_changer.monthly_payment %></span>
   <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment(1) | currency:"£" }}</span>
 </p>

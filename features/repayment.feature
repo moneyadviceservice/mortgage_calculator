@@ -23,6 +23,7 @@ Scenario: When using the tool for the first time
   When  I enter my repayment house price
   And   I enter my deposit
   Then  I see my monthly repayment
+  And   I see my monthly interest only repayment
 
 @javascript
 Scenario: When updating values in the tool
