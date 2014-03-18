@@ -16,13 +16,13 @@ App.directive('uiSlider', ['ui.config', function (uiConfig) {
         var expression = {};
         // Set attribute from element
         if (!angular.isUndefined(scope.min)) {
-                expression['min'] = parseInt(scope.min);
+                expression['min'] = parseFloat(scope.min);
         }
         if (!angular.isUndefined(scope.max)) {
-                expression['max'] = parseInt(scope.max);
+                expression['max'] = parseFloat(scope.max);
         }
         if (!angular.isUndefined(scope.step)) {
-                expression['step'] = parseInt(scope.step);
+                expression['step'] = parseFloat(scope.step);
         }
 
         var options = {
