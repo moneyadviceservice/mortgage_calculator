@@ -1,0 +1,37 @@
+.tabs {
+
+}
+
+.tabs__list {
+  position: relative;
+  margin:0;
+
+  dt {
+    display:inline-block;
+    font-size: $font-medium;
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 0.7em 0.5em;
+    border: 1px solid transparent;
+    border-width: 1px 1px 0 1px;
+
+    cursor: pointer;
+
+    &.tabs__current,
+    &:hover,
+    &:focus,
+    &:active {
+      color: #66a600;
+      background: #fff;
+      border-color: #ccc;
+      text-decoration: none;
+    }
+  }
+}
+
+.tabs__content {
+  background: #fff;
+  border:1px solid #ccc;
+  margin-top: -1px;
+  padding: 1em;
+}
