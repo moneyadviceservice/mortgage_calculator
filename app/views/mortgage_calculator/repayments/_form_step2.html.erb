@@ -1,25 +1,38 @@
 <%= form_for @repayment, url: repayment_path, html: { class: 'step_two'} do |f| %>
   <div>
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price,
+                     "ng-model" => "repayments.propertyPrice",
+                     "placeholder" => "eg 20,000",
+                     "format" => 'number' %>
   </div>
 
   <div>
     <%= f.label :deposit %>
-    <%= f.text_field :deposit %>
+    <%= f.text_field :deposit,
+                     "ng-model" => "repayments.deposit",
+                     "placeholder" => "eg 20,000",
+                     "format" => 'number' %>
   </div>
 
   <div>
     <%= f.label :term_years %>
-    <%= f.text_field :term_years %>
+    <%= f.text_field :term_years,
+                     "ng-model" => "repayments.termYears",
+                     "placeholder" => "eg 25",
+                     "format" => 'number' %>
   </div>
 
   <div>
     <%= f.label :interest_rate %>
-    <%= f.text_field :interest_rate %>
+    <%= f.text_field :interest_rate,
+                     "ng-model" => "repayments.annualInterestRate",
+                     "placeholder" => "eg 5",
+                     "format" => 'number' %>
   </div>
 
   <div class="hide-with-js">
-    <%= f.submit I18n.t("repayment.recalculate") %>
+    <%= f.submit I18n.t("repayment.recalculate"),
+                        'wz-next' => '' %>
   </div>
 <% end %>

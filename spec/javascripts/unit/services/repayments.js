@@ -34,12 +34,22 @@ describe('Service: Repayments', function () {
       expect(repayments.monthlyRepayment()).toBe(2630.66);
     });
 
+    it('calculates the monthly repayment for a mortgage when interest incremented by one', function () {
+      expect(repayments.monthlyRepayment(1)).toBe(2899.36);
+    });
+
+
+
   });
 
   describe('#monthlyInterestRepayment', function() {
 
     it('calculates the monthly interest only repayment for a mortgage', function () {
       expect(repayments.monthlyInterestRepayment()).toBe(1875.00);
+    });
+
+    it('calculates the monthly interest only repayment for a mortgage when interest is incremented by one', function () {
+      expect(repayments.monthlyInterestRepayment(1)).toBe(2250.00);
     });
 
   });

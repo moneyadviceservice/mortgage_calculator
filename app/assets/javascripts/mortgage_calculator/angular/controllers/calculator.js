@@ -2,6 +2,8 @@
 
 App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', function ($scope, Affordability, StampDuty, Repayments) {
 
+    $scope.js = true;
+
     //Affordability Calculations
     $scope.affordability = Affordability;
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
@@ -19,6 +21,19 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     //Repayment Calculations
     $scope.repayments = Repayments;
+
+    $scope.viewMonthlyRepayments = true;
+    $scope.viewInterestRepayments = false;
+
+    $scope.showMonthly = function() {
+      $scope.viewMonthlyRepayments = true;
+      $scope.viewInterestRepayments = false;
+    };
+
+    $scope.showInterest = function() {
+      $scope.viewMonthlyRepayments = false;
+      $scope.viewInterestRepayments = true;
+    };
 
 
   }]);
