@@ -35,5 +35,10 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.viewInterestRepayments = true;
     };
 
+    // Show expanded helpers?
+    $scope.expandedMortgageInformation = false;
+    $scope.toggleExpanded = function() {
+      $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
+    };
 
   }]);
