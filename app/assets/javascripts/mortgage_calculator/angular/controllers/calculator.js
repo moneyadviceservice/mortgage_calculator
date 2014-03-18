@@ -37,7 +37,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     // Show expanded helpers?
     $scope.expandedMortgageInformation = false;
-    $scope.toggleExpanded = function() {
+    $scope.toggleExpanded = function($event) {
+      $event.preventDefault();
       $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
     };
 
