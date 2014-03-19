@@ -17,6 +17,7 @@
 //= require angular-mocks
 //= require underscore
 //= require args
+//= require angular-ui
 //= require angular-wizard
 //= require require_config
 //= require mortgage_calculator/mortgage_calculator_app

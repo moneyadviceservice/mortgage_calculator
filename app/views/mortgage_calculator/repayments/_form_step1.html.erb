@@ -21,10 +21,11 @@
     </div>
 
     <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
-                                           'wz-next' => '' %>
+                                           'wz-next' => '',
+                                           'ng-disabled' => '!repayments.propertyPrice' %>
 
 
-    <div class="callout">
+    <div ng-show="repayments.propertyPrice" class="callout">
       <%= I18n.t("repayment.tips.hidden_costs") %>
     </div>
   </div>

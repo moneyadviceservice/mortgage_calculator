@@ -5,6 +5,8 @@
                      "ng-model" => "repayments.propertyPrice",
                      "placeholder" => "eg 20,000",
                      "format" => 'number' %>
+
+    <div class="slider price" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.propertyPrice"></div>
   </div>
 
   <div>
@@ -13,6 +15,8 @@
                      "ng-model" => "repayments.deposit",
                      "placeholder" => "eg 20,000",
                      "format" => 'number' %>
+
+    <div class="slider deposit" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.deposit"></div>
   </div>
 
   <div>
@@ -21,6 +25,8 @@
                      "ng-model" => "repayments.termYears",
                      "placeholder" => "eg 25",
                      "format" => 'number' %>
+
+    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears"></div>
   </div>
 
   <div>
@@ -29,6 +35,8 @@
                      "ng-model" => "repayments.annualInterestRate",
                      "placeholder" => "eg 5",
                      "format" => 'number' %>
+
+    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
   </div>
 
   <div class="hide-with-js">
