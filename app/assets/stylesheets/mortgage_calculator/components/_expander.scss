@@ -1,10 +1,10 @@
 .expander {
-	display: inline-block;
-	background: url(/assets/mortgage_calculator/expander.png) 0 0 no-repeat;
-	padding-left: 30px;
-	font-size:0.875em;
+  display: inline-block;
+  background: url(/assets/mortgage_calculator/expander.png) 0 0 no-repeat;
+  padding-left: 30px;
+  font-size:0.875em;
 
-	&.expander--expanded {
-		background-position: 0 -38px;
-	}
+  &.expander--expanded {
+    background-position: 0 -38px;
+  }
 }
