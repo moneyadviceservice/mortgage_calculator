@@ -11,7 +11,7 @@
       <div class="tabs__panel" ng-show="viewMonthlyRepayments">
         <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.repayment.title") %></h3>
         <%= render 'monthly_repayments' %>
-        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)">How is this calculated?</a></p>
+        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("repayment.tabs.explain") %></a></p>
 
         <div ng-show="expandedMortgageInformation">
           <%= render 'repayment_tip' %>
@@ -22,10 +22,10 @@
         <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.interest_only.title") %></h3>
         <%= render 'interest_only_repayments' %>
 
-        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)">How is this calculated?</a></p>
+        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("repayment.tabs.explain") %></a></p>
 
         <div ng-show="expandedMortgageInformation">
-          <%= render 'repayment_tip' %>
+          <%= render 'interest_only_repayment_tip' %>
         </div>
       </div>
   </div>

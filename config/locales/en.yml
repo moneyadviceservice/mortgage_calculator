@@ -9,27 +9,30 @@ en:
   helpers:
     label:
       repayment:
-        price: Total price of the Property is
+        price: Total price of the property is
         deposit: Deposit available is
         term_years: Mortgage Length is
-        interest_rate: Rate of Interest is
+        interest_rate: Interest rate is
   repayment:
-    title: Calculate your monthly mortgage repayment
-    intro: Use this calculator to estimate what your monthly mortgage repayment will be based on your circumstances
+    title: Calculate your monthly mortgage payment
+    intro: Use this calculator to estimate what your monthly mortgage payment will be based on your circumstances.
     next: Next
     a_month: a month
     recalculate: Recalculate
     step_1:
       intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
     tabs:
+      explain: "What does this cover?"
       repayment:
         title: Repayment
-        tip_1: You pay off what you borrow plus interest accrued
-        tip_2: At the end of the mortgage you will own the property
+        tip_1: You pay off what you borrowed plus interest.
+        tip_2: At the end of the mortgage you will own the property.
       interest_only:
         title: Interest Only
+        tip_1: You only repay the interest on the mortgage.
+        tip_2: In order to own the property you must also save into a repayment plan to pay back the original amount borrowed.
     tips:
-      hidden_costs: Remember to plan for other costs like; mortgage fees, legal fees and stamp duty.
+      hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and stamp duty tax.
     interest_changer:
       title: Make sure you can afford it
       intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly repayments will be
