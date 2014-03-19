@@ -1,8 +1,6 @@
 MortgageCalculator::Engine.routes.draw do
-  root to: "home#index"
+  root to: "repayments#show"
 
-  resource :stamp_duty
-  resource :affordability
   resource :repayment do
     collection do
       get 'next_steps'

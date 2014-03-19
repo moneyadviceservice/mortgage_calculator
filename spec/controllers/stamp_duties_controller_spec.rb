@@ -4,6 +4,10 @@ module MortgageCalculator
   describe StampDutiesController do
     routes { MortgageCalculator::Engine.routes }
 
+    before :each do
+      pending 'stamp duty to be launched at a later date'
+    end
+
     describe :show do
       it 'responds with 200' do
         get :show
