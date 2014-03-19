@@ -38,7 +38,7 @@ App.directive('uiSlider', ['ui.config', function (uiConfig) {
         };
 
 
-        // Watch for changes in value, update all sliders bind to the same model within scope
+
         scope.$watch('value', function (newVal, oldVal) {
             if (!angular.isUndefined(newVal) && newVal != oldVal) {
                 elm.slider('value', newVal)
@@ -61,8 +61,7 @@ App.directive('uiSlider', ['ui.config', function (uiConfig) {
             }
         });
 
-        //Set the options from the directive's configuration
-        console.log(expression);
+
         angular.extend(options, uiConfig.uiSlider, expression);
         elm.slider(options);
     }
