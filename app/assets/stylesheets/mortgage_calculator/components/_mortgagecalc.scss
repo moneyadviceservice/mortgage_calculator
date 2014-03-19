@@ -77,6 +77,16 @@
   max-width: $calc-width;
   text-align: right;
   padding: 15px 0;
+  
+  #feedback-tab {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    
+    a {
+      font-family: 'museo_sans';
+      font-size: $font-medium;
+    }
+  }
 }
 
 .previous {
