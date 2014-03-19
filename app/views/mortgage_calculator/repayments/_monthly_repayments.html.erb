@@ -1,5 +1,3 @@
-<p>
-  <span ng-hide="js"><%= number_to_currency @repayment.monthly_payment %></span>
-  <span class='rendered-from-js'>{{ repayments.monthlyRepayment() | currency:"£" }}</span>
-  <%= I18n.t("repayment.a_month") %>
-</p>
+  <p ng-hide="js" class="mortgagecalc__heading mortgagecalc__heading--xlarge squeeze"><%= number_to_currency @repayment.monthly_payment %></p>
+  <p class="rendered-from-js mortgagecalc__heading mortgagecalc__heading--xlarge squeeze">{{ repayments.monthlyRepayment() | currency:"£" }}</p>
+  <p class="squeeze"><%= I18n.t("repayment.a_month") %></p>
