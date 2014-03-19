@@ -1,4 +1,5 @@
 <p>
+  <h5 ng-hide="js"><%= I18n.t("repayment.repayment") %>:</h5>
   <span ng-hide="js"><%= number_to_currency @changer.monthly_payment %></span>
   <span class='rendered-from-js'>{{ repayments.monthlyRepayment(2) | currency:"£" }}</span>
 </p>

@@ -19,6 +19,8 @@ en:
     next: Next
     a_month: a month
     recalculate: Recalculate
+    interest_only: Interest only
+    repayment: Repayment
     step_1:
       intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
     tabs:
