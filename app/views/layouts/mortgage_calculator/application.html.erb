@@ -2,6 +2,10 @@
   <%= stylesheet_link_tag    "mortgage_calculator/application", :media => "all" %>
   <%= javascript_include_tag "mortgage_calculator/application" %>
   <%= csrf_meta_tags %>
+
+  <!--[if ( lte IE 8 ) ]>
+    <%= stylesheet_link_tag 'mortgage_calculator/basic', media: 'all' %>
+  <![endif]-->
 <% end %>
 
 <% content_for(:tool_content) do %>
