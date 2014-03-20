@@ -103,3 +103,8 @@
   margin-top: 0;
   margin-bottom: 3px;
 }
+
+.visibly-hidden {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}

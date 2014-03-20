@@ -1,0 +1,21 @@
+.ui-slider {
+  margin: 1em 0 3em;
+}
+
+.ui-widget-content {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.ui-widget-header {
+  background: #ddee8a;
+}
+
+.ui-slider-handle {
+  background: transparent url(/assets/mortgage_calculator/slider-handle.png) 0 0 no-repeat;
+  width: 25px;
+  height: 26px;
+  border: 0;
+  top: -8px;
+}
