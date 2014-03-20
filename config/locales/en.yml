@@ -39,15 +39,34 @@ en:
       title: Make sure you can afford it
       intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly repayments will be
     next_steps:
-      title: 3 steps to lower your monthly repayments
-      tip_1: Increase your deposit
-      tip_2: Decrease the price of the property
-      tip_3: "Increase the length your mortgage. Be aware this means you'll pay back more in interest overall"
+      title: "Three steps to lower your monthly repayments:"
+      tip_1:
+        heading: Increase your deposit
+        info: ideas to help you save money
+        url: "https://www.moneyadviceservice.org.uk/en/search?utf8=%E2%9C%93&query=ideas+to+help+save+money&commit=Search"
+      tip_2:
+        heading: Decrease the price of the property
+        info: consider looking for homes in other areas
+      tip_3:
+        heading: "Increase the length of your mortgage"
+        info: "be aware this means you'll pay back more in interest overall"
       learn_more:
         title: Learn more
-        tip_1: Pro tip
-        tip_2: Uber tip
+        tip_1: "Having a bigger deposit or buying a cheaper property means you'll lower the amount you’re borrowing, compared to the property's value. This is known as the <b>Loan To Value (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
       find_out_more:
         title: Find out more
-        tip_1: Pro tip
-        tip_2: Uber tip
+        tip_1:
+          copy: Mortgage comparison
+          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+        tip_2:
+          copy: Choosing the right mortgage
+          url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+        tip_3:
+          copy: Affordable housing schemes
+          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+        tip_4:
+          copy: Interest rates
+          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+        tip_5:
+          copy: Think about other costs
+          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"

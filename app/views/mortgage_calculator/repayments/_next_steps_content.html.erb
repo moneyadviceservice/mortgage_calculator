@@ -4,26 +4,27 @@
   <%= image_tag "mortgage_calculator/next-steps-helper.png", :class => "mortgagecalc__helper" %>
 
   <ol class="featured-list">
-    <li><%= I18n.t("repayment.next_steps.tip_1") %></li>
-    <li><%= I18n.t("repayment.next_steps.tip_2") %></li>
-    <li><%= I18n.t("repayment.next_steps.tip_3") %></li>
+    <li><%= I18n.t("repayment.next_steps.tip_1.heading") %> - <%= link_to I18n.t("repayment.next_steps.tip_1.info"), I18n.t("repayment.next_steps.tip_1.url"), target: "_blank" %></li>
+    <li><%= I18n.t("repayment.next_steps.tip_2.heading") %> - <%= I18n.t("repayment.next_steps.tip_2.info") %></li>
+    <li><%= I18n.t("repayment.next_steps.tip_3.heading") %> - <%= I18n.t("repayment.next_steps.tip_3.info") %></li>
   </ol>
 </div>
 
 <div class="mortgagecalc__panel">
 
   <div class="callout">
-    <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.learn_more.title") %></h4>
-    <p><%= I18n.t("repayment.next_steps.learn_more.tip_1") %></p>
-    <p><%= I18n.t("repayment.next_steps.learn_more.tip_2") %></p>
+    <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.learn_more.title") %>:</h4>
+    <p><%= I18n.t("repayment.next_steps.learn_more.tip_1").html_safe %></p>
   </div>
 
 </div>
 
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge mortgagecalc__panel--with-form">
-  <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %></h4>
-  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_1") %></p>
-  <p><%= I18n.t("repayment.next_steps.find_out_more.tip_2") %></p>
+  <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %>:</h4>
+  <% (1..5).each do |n| %>
+    <p><%= link_to I18n.t("repayment.next_steps.find_out_more.tip_#{n}.copy"), I18n.t("repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></p>
+  <% end %>
 
   <p><input type="submit" class='button mortgagecalc__submit' wz-previous value="Back" /></p>
 </div>
+
