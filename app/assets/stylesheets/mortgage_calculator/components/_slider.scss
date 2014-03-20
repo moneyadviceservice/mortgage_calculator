@@ -369,6 +369,6 @@
 
   &:focus,
   &:active {
-    background-image: url(/assets/mortgage_calculator/slider-handle-over.png);
+    outline: 1px dotted #ccc;
   }
 }
