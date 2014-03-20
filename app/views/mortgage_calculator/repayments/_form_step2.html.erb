@@ -43,7 +43,7 @@
     <%= f.text_field :interest_rate,
                      "ng-model" => "repayments.annualInterestRate",
                      "placeholder" => "eg 5",
-                     "format" => "number",
+                     "percentage" => "",
                      "aria-labelledby" => "label_rate" %>
 
     <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
