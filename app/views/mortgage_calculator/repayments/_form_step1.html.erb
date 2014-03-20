@@ -3,21 +3,25 @@
 <%= form_for @repayment, url: repayment_path do |f| %>
   <div class="mortgagecalc__panel">
     <div>
-      <%= f.label :price %>
+      <%= f.label :price,
+        "id" => "label_initial_price" %>
       <%= f.text_field :price,
                       "ng-model" => "repayments.propertyPrice",
                       "placeholder" => "eg 20,000",
-                      "format" => 'number' %>
+                      "format" => 'number',
+                      "aria-labelledby" => "label_initial_price" %>
     </div>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <div>
-      <%= f.label :deposit %>
+      <%= f.label :deposit,
+        "id" => "label_initial_deposit" %>
       <%= f.text_field :deposit,
                        "ng-model" => "repayments.deposit",
                        "placeholder" => "eg 10,000",
-                       "format" => 'number' %>
+                       "format" => 'number',
+                       "aria-labelledby" => "label_initial_deposit" %>
     </div>
 
     <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
