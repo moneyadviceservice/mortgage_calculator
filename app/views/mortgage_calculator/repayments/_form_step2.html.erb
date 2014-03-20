@@ -4,7 +4,8 @@
     <%= f.text_field :price,
                      "ng-model" => "repayments.propertyPrice",
                      "placeholder" => "eg 20,000",
-                     "format" => 'number' %>
+                     "currency" => '',
+                     "data-a-sign" =>"£" %>
 
     <div class="slider price" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.propertyPrice"></div>
   </div>
@@ -14,7 +15,8 @@
     <%= f.text_field :deposit,
                      "ng-model" => "repayments.deposit",
                      "placeholder" => "eg 20,000",
-                     "format" => 'number' %>
+                     "currency" => '',
+                     "data-a-sign" =>"£" %>
 
     <div class="slider deposit" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.deposit"></div>
   </div>
@@ -24,7 +26,7 @@
     <%= f.text_field :term_years,
                      "ng-model" => "repayments.termYears",
                      "placeholder" => "eg 25",
-                     "format" => 'number' %>
+                     "format" => "number" %>
 
     <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears"></div>
   </div>
@@ -34,7 +36,7 @@
     <%= f.text_field :interest_rate,
                      "ng-model" => "repayments.annualInterestRate",
                      "placeholder" => "eg 5",
-                     "format" => 'number' %>
+                     "format" => "number" %>
 
     <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
   </div>

@@ -17,6 +17,7 @@
 //= require angular-mocks
 //= require underscore
 //= require args
+//= require autonumeric
 //= require angular-ui
 //= require angular-wizard
 //= require require_config

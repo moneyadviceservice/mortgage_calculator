@@ -21,6 +21,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     //Repayment Calculations
     $scope.repayments = Repayments;
+    $scope.repayments.propertyPrice = '';
+    $scope.repayments.deposit = '';
 
     $scope.viewMonthlyRepayments = true;
     $scope.viewInterestRepayments = false;

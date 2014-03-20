@@ -7,7 +7,8 @@
       <%= f.text_field :price,
                       "ng-model" => "repayments.propertyPrice",
                       "placeholder" => "eg 20,000",
-                      "format" => 'number' %>
+                      "currency" => '',
+                      "data-a-sign" =>"£" %>
     </div>
   </div>
 
@@ -17,7 +18,8 @@
       <%= f.text_field :deposit,
                        "ng-model" => "repayments.deposit",
                        "placeholder" => "eg 10,000",
-                       "format" => 'number' %>
+                       "currency" => '',
+                       "data-a-sign" =>"£" %>
     </div>
 
     <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
