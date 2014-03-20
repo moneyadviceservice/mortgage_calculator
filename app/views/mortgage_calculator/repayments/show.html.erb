@@ -5,8 +5,6 @@
     <span style="color:red;"><%= m %></span>
   <% end %>
 
-
-
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
 
     <div wz-step title="Mortgage Amount">
@@ -30,6 +28,7 @@
 
 </div>
 
+<%= render 'caveat' %>
 
 <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_repayment_config) %></div>
 

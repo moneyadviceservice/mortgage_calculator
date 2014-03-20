@@ -34,7 +34,7 @@
   background: #f2f2f2;
   max-width: $calc-width;
   padding: 25px;
-  margin:2em 0 0;
+  margin:2em 0 2em;
 }
 
 .mortgagecalc__panel {
@@ -71,16 +71,21 @@
   margin-right: 40px;
 }
 
+.mortgagecalc__caveat {
+  clear: both;
+  max-width: $calc-width;
+}
+
 .mortgagecalc__feedback {
   clear: both;
   max-width: $calc-width;
   text-align: right;
   padding: 15px 0;
-  
+
   #feedback-tab {
     padding-top: 11px;
     padding-bottom: 11px;
-    
+
     a {
       font-family: 'museo_sans';
       font-size: $font-medium;
