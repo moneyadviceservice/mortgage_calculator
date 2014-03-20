@@ -93,18 +93,3 @@
   @extend .mortgagecalc__submit;
   margin-right: 100px;
 }
-
-.button {
-  font-family: 'museo_sans';
-  font-weight: 700;
-}
-
-.squeeze {
-  margin-top: 0;
-  margin-bottom: 3px;
-}
-
-.visibly-hidden {
-  opacity: 0;
-  transition: opacity 0.3s linear;
-}

@@ -1,3 +1,3 @@
 <p ng-hide="js" class="mortgagecalc__heading mortgagecalc__heading--xlarge squeeze"><%= number_to_currency @interest_only.monthly_payment %></p>
 <p class="rendered-from-js mortgagecalc__heading mortgagecalc__heading--xlarge squeeze">{{ repayments.monthlyInterestRepayment() | currency:"£" }}</p>
-<p class="squeeze"><%= I18n.t("repayment.a_month") %></p>
+<p class="squeeze"><strong><%= I18n.t("repayment.a_month") %></strong></p>

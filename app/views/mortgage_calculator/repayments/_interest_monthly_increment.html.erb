@@ -1,5 +1,3 @@
-<p>
-  <h5 ng-hide="js"><%= I18n.t("repayment.interest_only") %>:</h5>
-  <span ng-hide="js"><%= number_to_currency @interest_only_changer.monthly_payment %></span>
-  <span class='rendered-from-js'>{{ repayments.monthlyInterestRepayment(2) | currency:"£" }}</span>
-</p>
+<h5 ng-hide="js"><%= I18n.t("repayment.interest_only") %>:</h5>
+<p ng-hide="js"><strong><%= number_to_currency @interest_only_changer.monthly_payment %></strong></p>
+<p class='rendered-from-js'><strong>{{ repayments.monthlyInterestRepayment(2) | currency:"£" }}</strong></p>
