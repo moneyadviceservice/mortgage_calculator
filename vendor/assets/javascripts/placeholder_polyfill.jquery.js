@@ -4,10 +4,223 @@
  * Updated by Dirk Ginader: 2013-03-31 
  */ 
 jQuery.onFontResize=function(e){return e(document).ready(function(){var t=e("<iframe />").attr("id","frame-onFontResize"+Date.parse(new Date)).css({width:"100em",height:"10px",position:"absolute",borderWidth:0,top:"-5000px",left:"-5000px"}).appendTo("body"),n=/(msie) ([\w.]+)/.exec(navigator.userAgent.toLowerCase())||[],i=n[1]||"";if("msie"===i)t.bind("resize",function(){e.onFontResize.trigger(t[0].offsetWidth/100)});else{var o=t[0].contentWindow||t[0].contentDocument||t[0].document;o=o.document||o,o.open(),o.write('<div id="em" style="width:100em;height:10px;"></div>'),o.write('<script>window.onload = function(){var em = document.getElementById("em");window.onresize = function(){if(parent.jQuery.onFontResize){parent.jQuery.onFontResize.trigger(em.offsetWidth / 100);}}};</script>'),o.close()}}),{trigger:function(t){e(document).trigger("fontresize",[t])}}}(jQuery);
-/** 
- * Html5 Placeholder Polyfill - v2.0.9 - 2014-01-21 
- * web: http://blog.ginader.de/dev/jquery/HTML5-placeholder-polyfill/ 
- * issues: https://github.com/ginader/HTML5-placeholder-polyfill/issues 
- * Copyright (c) 2014 Dirk Ginader; Licensed MIT, GPL 
- */
-(function(e){function o(e,o){""===e.val()?e.data("placeholder").removeClass(o.hideClass):e.data("placeholder").addClass(o.hideClass)}function t(e,o){e.data("placeholder").addClass(o.hideClass)}function i(e,o){var t=o.is("textarea"),i=parseFloat(o.css("padding-top")),a=parseFloat(o.css("padding-left")),n=o.offset();i&&(n.top+=i),a&&(n.left+=a),e.css({width:o.innerWidth()-(t?20:4),height:o.innerHeight()-6,lineHeight:o.css("line-height"),whiteSpace:t?"normal":"nowrap",overflow:"hidden"}).offset(n)}function a(e,o){var i=e.val();(function a(){r=requestAnimationFrame(a),e.val()!==i&&(t(e,o),s(),n(e,o))})()}function n(e,t){(function i(){r=requestAnimationFrame(i),o(e,t)})()}function s(){window.cancelAnimationFrame&&cancelAnimationFrame(r)}function l(e){d&&window.console&&window.console.log&&window.console.log(e)}var r,d=!1;e.fn.placeHolder=function(n){l("init placeHolder");var r=this,d=e(this).length;return this.options=e.extend({className:"placeholder",visibleToScreenreaders:!0,visibleToScreenreadersHideClass:"placeholder-hide-except-screenreader",visibleToNoneHideClass:"placeholder-hide",hideOnFocus:!1,removeLabelClass:"visuallyhidden",hiddenOverrideClass:"visuallyhidden-with-placeholder",forceHiddenOverride:!0,forceApply:!1,autoInit:!0},n),this.options.hideClass=this.options.visibleToScreenreaders?this.options.visibleToScreenreadersHideClass:this.options.visibleToNoneHideClass,e(this).each(function(n){function c(){!r.options.hideOnFocus&&window.requestAnimationFrame?a(v,r.options):t(v,r.options)}var h,p,u,f,v=e(this),m=v.attr("placeholder"),w=v.attr("id");return(""===m||void 0===m)&&(m=v[0].attributes.placeholder.value),h=v.closest("label"),v.removeAttr("placeholder"),h.length||w?(h=h.length?h:e('label[for="'+w+'"]').first(),h.length?(f=e(h).find(".placeholder"),f.length?(i(f,v),f.text(m),v):(h.hasClass(r.options.removeLabelClass)&&h.removeClass(r.options.removeLabelClass).addClass(r.options.hiddenOverrideClass),p=e("<span>").addClass(r.options.className).text(m).appendTo(h),u=p.width()>v.width(),u&&p.attr("title",m),i(p,v),v.data("placeholder",p),p.data("input",v),p.click(function(){e(this).data("input").focus()}),v.focusin(c),v.focusout(function(){o(e(this),r.options),r.options.hideOnFocus||s()}),o(v,r.options),e(document).bind("fontresize resize",function(){i(p,v)}),e.event.special.resize?e("textarea").bind("resize",function(o){e(this).is(":visible")&&i(p,v),o.stopPropagation(),o.preventDefault()}):e("textarea").css("resize","none"),n>=d-1&&e.attrHooks!==void 0&&(e.attrHooks.placeholder={get:function(o){return"input"===o.nodeName.toLowerCase()||"textarea"===o.nodeName.toLowerCase()?e(o).data("placeholder")?e(e(o).data("placeholder")).text():e(o)[0].placeholder:void 0},set:function(o,t){return e(e(o).data("placeholder")).text(t)}}),v.is(":focus")&&c(),void 0)):(l("the input element with the placeholder needs a label!"),void 0)):(l("the input element with the placeholder needs an id!"),void 0)})},e(function(){var o=window.placeHolderConfig||{};return o.autoInit===!1?(l("placeholder:abort because autoInit is off"),void 0):("placeholder"in e("<input>")[0]||"placeHolder"in e("<input>")[0])&&!o.forceApply?(l("placeholder:abort because browser has native support"),void 0):(e("input[placeholder], textarea[placeholder]").placeHolder(o),void 0)})})(jQuery);
+
+
+/**
+* HTML5 placeholder polyfill
+* @requires jQuery - tested with 1.6.2 but might as well work with older versions
+*
+* code: https://github.com/ginader/HTML5-placeholder-polyfill
+* please report issues at: https://github.com/ginader/HTML5-placeholder-polyfill/issues
+*
+* Copyright (c) 2012 Dirk Ginader (ginader.de)
+* Dual licensed under the MIT and GPL licenses:
+* http://www.opensource.org/licenses/mit-license.php
+* http://www.gnu.org/licenses/gpl.html
+*
+*/
+
+(function($) {
+    var debug = false,
+        animId;
+    function showPlaceholderIfEmpty(input,options) {
+        if( input.val() === '' ){
+            input.data('placeholder').removeClass(options.hideClass);
+        }else{
+            input.data('placeholder').addClass(options.hideClass);
+        }
+    }
+    function hidePlaceholder(input,options){
+        input.data('placeholder').addClass(options.hideClass);
+    }
+    function positionPlaceholder(placeholder,input){
+        var ta  = input.is('textarea');
+        var pt = parseFloat(input.css('padding-top'));
+        var pl = parseFloat(input.css('padding-left'));
+
+        // Determine if we need to shift the header down more.
+        // var offset = input.offset();
+        // if (pt) {
+        //     offset.top += pt;
+        // }
+        // if (pl) {
+        //     offset.left += pl;
+        // }
+
+        placeholder.css({
+            width : 200,//input.innerWidth()-(ta ? 20 : 4),
+            height : 50,//input.innerHeight()-6,
+            lineHeight : input.css('line-height'),
+            whiteSpace : ta ? 'normal' : 'nowrap',
+            overflow : 'hidden',
+            top: 35,
+            left: 10
+        });
+    }
+    function startFilledCheckChange(input,options){
+        var val = input.val();
+        (function checkloop(){
+            animId = requestAnimationFrame(checkloop);
+            if(input.val() !== val){
+                hidePlaceholder(input,options);
+                stopCheckChange();
+                startEmptiedCheckChange(input,options);
+            }
+        }());
+    }
+    function startEmptiedCheckChange(input,options){
+        (function checkloop(){
+            animId = requestAnimationFrame(checkloop);
+            showPlaceholderIfEmpty(input,options);
+        }());
+    }
+    function stopCheckChange(){
+        if (window.cancelAnimationFrame) {
+          cancelAnimationFrame(animId);
+        }
+    }
+    function log(msg){
+        if(debug && window.console && window.console.log){
+            window.console.log(msg);
+        }
+    }
+
+    $.fn.placeHolder = function(config) {
+        log('init placeHolder');
+        var o = this;
+        var l = $(this).length;
+        this.options = $.extend({
+            className: 'placeholder', // css class that is used to style the placeholder
+            visibleToScreenreaders : true, // expose the placeholder text to screenreaders or not
+            visibleToScreenreadersHideClass : 'placeholder-hide-except-screenreader', // css class is used to visually hide the placeholder
+            visibleToNoneHideClass : 'placeholder-hide', // css class used to hide the placeholder for all
+            hideOnFocus : false, // either hide the placeholder on focus or on type
+            removeLabelClass : 'visuallyhidden', // remove this class from a label (to fix hidden labels)
+            hiddenOverrideClass : 'visuallyhidden-with-placeholder', // replace the label above with this class
+            forceHiddenOverride : true, // allow the replace of the removeLabelClass with hiddenOverrideClass or not
+            forceApply : false, // apply the polyfill even for browser with native support
+            autoInit : true // init automatically or not
+        }, config);
+        this.options.hideClass = this.options.visibleToScreenreaders ? this.options.visibleToScreenreadersHideClass : this.options.visibleToNoneHideClass;
+        return $(this).each(function(index) {
+            var input = $(this),
+                text = input.attr('placeholder'),
+                id = input.attr('id'),
+                label,placeholder,titleNeeded,polyfilled;
+
+            function onFocusIn() {
+                if(!o.options.hideOnFocus && window.requestAnimationFrame){
+                    startFilledCheckChange(input,o.options);
+                }else{
+                    hidePlaceholder(input,o.options);
+                }
+            }
+
+            if(text === "" || text === undefined) {
+              text = input[0].attributes["placeholder"].value;
+            }
+            label = input.closest('label');
+            input.removeAttr('placeholder');
+            if(!label.length && !id){
+                log('the input element with the placeholder needs an id!');
+                return;
+            }
+            label = label.length ? label : $('label[for="'+id+'"]').first();
+            if(!label.length){
+                log('the input element with the placeholder needs a label!');
+                return;
+            }
+            polyfilled = $(label).find('.placeholder');
+            if(polyfilled.length) {
+                //log('the input element already has a polyfilled placeholder!');
+                positionPlaceholder(polyfilled,input);
+                polyfilled.text(text);
+                return input;
+            }
+            if(label.hasClass(o.options.removeLabelClass)){
+                label.removeClass(o.options.removeLabelClass)
+                     .addClass(o.options.hiddenOverrideClass);
+            }
+
+            placeholder = $('<span>').addClass(o.options.className).text(text).appendTo(label);
+
+            titleNeeded = (placeholder.width() > input.width());
+            if(titleNeeded){
+                placeholder.attr('title',text);
+            }
+            positionPlaceholder(placeholder,input);
+            input.data('placeholder',placeholder);
+            placeholder.data('input',input);
+            placeholder.click(function(){
+                $(this).data('input').focus();
+            });
+            input.focusin(onFocusIn);
+            input.focusout(function(){
+                showPlaceholderIfEmpty($(this),o.options);
+                if(!o.options.hideOnFocus){
+                    stopCheckChange();
+                }
+            });
+            showPlaceholderIfEmpty(input,o.options);
+
+            // reformat on window resize and optional reformat on font resize - requires: http://www.tomdeater.com/jquery/onfontresize/
+            $(document).bind("fontresize resize", function(){
+                positionPlaceholder(placeholder,input);
+            });
+
+            // optional reformat when a textarea is being resized - requires http://benalman.com/projects/jquery-resize-plugin/
+            if($.event.special.resize){
+                $("textarea").bind("resize", function(event){
+					if ($(this).is(":visible")) {
+						positionPlaceholder(placeholder,input);
+					}
+					event.stopPropagation();
+					event.preventDefault();
+                });
+            }else{
+                // we simply disable the resizeablilty of textareas when we can't react on them resizing
+                $("textarea").css('resize','none');
+            }
+
+            if(index >= l-1 && typeof $.attrHooks !== 'undefined'){
+                $.attrHooks.placeholder = {
+                    get: function(elem) {
+                        if (elem.nodeName.toLowerCase() === 'input' || elem.nodeName.toLowerCase() === 'textarea') {
+                            if( $(elem).data('placeholder') ){
+                                // has been polyfilled
+                                return $( $(elem).data('placeholder') ).text();
+                            }else{
+                                // native / not yet polyfilled
+                                return $(elem)[0].placeholder;
+                            }
+                        }else{
+                            return undefined;
+                        }
+                    },
+                    set: function(elem, value){
+                        return $( $(elem).data('placeholder') ).text(value);
+                    }
+                };
+            }
+
+            if (input.is(":focus")) {
+                onFocusIn();
+            }
+        });
+
+
+
+    };
+    $(function(){
+        var config = window.placeHolderConfig || {};
+        if(config.autoInit === false){
+            log('placeholder:abort because autoInit is off');
+            return;
+        }
+        if(('placeholder' in $('<input>')[0] || 'placeHolder' in $('<input>')[0]) && !config.forceApply){ // don't run the polyfill when the browser has native support
+            log('placeholder:abort because browser has native support');
+            return;
+        }
+        $('input.js-polyfill[placeholder], textarea.js-polyfill[placeholder]').placeHolder(config);
+    });
+}(jQuery));
