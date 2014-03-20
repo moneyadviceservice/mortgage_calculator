@@ -31,6 +31,9 @@
   @import 'components/tabs';
   @import 'components/expander';
   @import 'components/slider';
+
+  // this is a polyfill
+  @import 'vendor/placeholder';
 }
 
 .no-js {
