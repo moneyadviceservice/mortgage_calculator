@@ -31,8 +31,7 @@
 .mortgagecalc__container {
   @include column(12);
   position: relative;
-  background: #f2f4f5;
-  border: 1px solid #ccc;
+  background: #f2f2f2;
   max-width: $calc-width;
   padding: 25px;
   margin:2em 0 0;
