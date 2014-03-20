@@ -21,9 +21,11 @@
 
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge mortgagecalc__panel--with-form">
   <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %>:</h4>
+  <ul>
   <% (1..5).each do |n| %>
-    <p><%= link_to I18n.t("repayment.next_steps.find_out_more.tip_#{n}.copy"), I18n.t("repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></p>
+    <li><%= link_to I18n.t("repayment.next_steps.find_out_more.tip_#{n}.copy"), I18n.t("repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></li>
   <% end %>
+  </ul>
 
   <p><input type="submit" class='button mortgagecalc__submit' wz-previous value="Back" /></p>
 </div>

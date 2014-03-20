@@ -11,24 +11,23 @@ en:
       repayment:
         price: Total price of the property is
         deposit: Deposit available is
-        term_years: Mortgage Length is
+        term_years: Mortgage term is
         interest_rate: Interest rate is
   repayment:
     title: Calculate your monthly mortgage payment
-    intro: Use this calculator to estimate what your monthly mortgage payment will be based on your circumstances.
     next: Next
     a_month: a month
     recalculate: Recalculate
     interest_only: Interest only
     repayment: Repayment
     step_1:
-      intro: Plan ahead by finding out how much your monthly mortgage payments will cost you
+      intro: Plan ahead and estimate your monthly mortgage payment.
     tabs:
       explain: "What does this cover?"
       repayment:
         title: Repayment
-        tip_1: You pay off what you borrowed plus interest.
-        tip_2: At the end of the mortgage you will own the property.
+        tip_1: You pay off what you borrowed, plus interest.
+        tip_2: At the end of the mortgage term you will own the property.
       interest_only:
         title: Interest Only
         tip_1: You only repay the interest on the mortgage.
@@ -36,10 +35,10 @@ en:
     tips:
       hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and stamp duty tax.
     interest_changer:
-      title: Make sure you can afford it
-      intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly repayments will be
+      title: Make sure you can afford it!
+      intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly payment will be
     next_steps:
-      title: "Three steps to lower your monthly repayments:"
+      title: "Three steps to lower your monthly payments:"
       tip_1:
         heading: Increase your deposit
         info: ideas to help you save money
@@ -56,16 +55,16 @@ en:
       find_out_more:
         title: Find out more
         tip_1:
-          copy: Mortgage comparison
+          copy: Mortgage comparison table
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
         tip_2:
-          copy: Choosing the right mortgage
+          copy: Choose the right mortgage
           url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
         tip_3:
           copy: Affordable housing schemes
           url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
         tip_4:
-          copy: Interest rates
+          copy: Interest rates explained
           url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
         tip_5:
           copy: Think about other costs
