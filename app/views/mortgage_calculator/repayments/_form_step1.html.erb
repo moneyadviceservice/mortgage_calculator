@@ -8,7 +8,8 @@
       <%= f.text_field :price,
                       "ng-model" => "repayments.propertyPrice",
                       "placeholder" => "eg 20,000",
-                      "format" => 'number',
+                      "currency" => '',
+                      "data-a-sign" =>"£",
                       "aria-labelledby" => "label_initial_price" %>
     </div>
   </div>
@@ -20,7 +21,8 @@
       <%= f.text_field :deposit,
                        "ng-model" => "repayments.deposit",
                        "placeholder" => "eg 10,000",
-                       "format" => 'number',
+                       "currency" => '',
+                       "data-a-sign" =>"£",
                        "aria-labelledby" => "label_initial_deposit" %>
     </div>
 

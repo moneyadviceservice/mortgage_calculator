@@ -15,7 +15,7 @@ App.directive('format', ['$filter', function($filter){
           if (viewValue) {
             var plainNumber = viewValue.replace(/[^\d|\-+|\.+]/g, '');
             ele.val($filter('number')(plainNumber));
-            return parseInt(plainNumber.replace(/,/g, ''), 10);
+            return parseFloat(plainNumber.replace(/,/g, ''), 10);
           }
         });
      }

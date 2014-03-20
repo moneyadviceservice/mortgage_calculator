@@ -12,16 +12,18 @@
 //
 //= require jquery
 //= require angular
-//= require angular-mocks 
+//= require angular-mocks
 //= require jquery-ui-mod
 //= require placeholder_polyfill.jquery
 //= require underscore
 //= require args
+//= require autonumeric
 //= require angular-ui
 //= require angular-wizard
 //= require require_config
 //= require mortgage_calculator/mortgage_calculator_app
 //= require_tree ./angular/services
 //= require_tree ./angular/controllers
+//= require_tree ./angular/filters
 //= require_tree ./angular/directives
 //= require_self
