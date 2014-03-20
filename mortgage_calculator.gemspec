@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency "modernizr-rails"
   s.add_dependency "jquery-rails"
-  s.add_dependency "jquery-ui-rails"
+  # s.add_dependency "jquery-ui-rails"
+  s.add_dependency "jquery-ui-mod"
   s.add_dependency "angularjs-rails", '1.2.13'
   s.add_dependency "underscore-rails"
   s.add_dependency "mas-assets"
