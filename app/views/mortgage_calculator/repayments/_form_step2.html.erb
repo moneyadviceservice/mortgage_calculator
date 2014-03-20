@@ -1,42 +1,50 @@
 <%= form_for @repayment, url: repayment_path, html: { class: 'step_two'} do |f| %>
   <div>
-    <%= f.label :price %>
+    <%= f.label :price,
+    	"id" => "label_price" %>
     <%= f.text_field :price,
                      "ng-model" => "repayments.propertyPrice",
                      "placeholder" => "eg 20,000",
                      "currency" => '',
-                     "data-a-sign" =>"£" %>
+                     "data-a-sign" =>"£",
+                     "aria-labelledby" => "label_price" %>
 
     <div class="slider price" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.propertyPrice"></div>
   </div>
 
   <div>
-    <%= f.label :deposit %>
+    <%= f.label :deposit,
+    	"id" => "label_deposit" %>
     <%= f.text_field :deposit,
                      "ng-model" => "repayments.deposit",
                      "placeholder" => "eg 20,000",
                      "currency" => '',
-                     "data-a-sign" =>"£" %>
+                     "data-a-sign" =>"£",
+                     "aria-labelledby" => "label_deposit" %>
 
     <div class="slider deposit" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.deposit"></div>
   </div>
 
   <div>
-    <%= f.label :term_years %>
+    <%= f.label :term_years,
+    	"id" => "label_term" %>
     <%= f.text_field :term_years,
                      "ng-model" => "repayments.termYears",
                      "placeholder" => "eg 25",
-                     "format" => "number" %>
+                     "format" => "number",
+                     "aria-labelledby" => "label_term" %>
 
     <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears"></div>
   </div>
 
   <div>
-    <%= f.label :interest_rate %>
+    <%= f.label :interest_rate,
+    	"id" => "label_rate" %>
     <%= f.text_field :interest_rate,
                      "ng-model" => "repayments.annualInterestRate",
                      "placeholder" => "eg 5",
-                     "format" => "number" %>
+                     "format" => "number",
+                     "aria-labelledby" => "label_rate" %>
 
     <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
   </div>

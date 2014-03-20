@@ -11,10 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery.ui.slider
 //= require angular
-//= require angular-mocks
+//= require angular-mocks 
+//= require jquery-ui-mod
 //= require underscore
 //= require args
 //= require autonumeric
