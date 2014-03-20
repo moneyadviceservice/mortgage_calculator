@@ -28,6 +28,10 @@ module MortgageCalculator
       MortgageCalculator.feedback_config = YAML.load(contents).with_indifferent_access
     end
 
+    initializer :append_precompile_assets do |app|
+      app.config.assets.precompile += %w( mortgage_calculator/basic.css )
+    end
+
     initializer :append_frontend_assets do |app|
       app.config.assets.paths << Engine.root.join("vendor", "assets", "components")
       app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
