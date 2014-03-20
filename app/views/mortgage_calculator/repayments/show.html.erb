@@ -7,26 +7,26 @@
 
 
 
-  <wizard on-finish="finishedWizard()" hide-indicators='true'>
+  <div wizard on-finish="finishedWizard()" hide-indicators='true'>
 
-    <wz-step title="Mortgage Amount">
+    <div wz-step title="Mortgage Amount">
       <%= render 'form_step1' %>
-    </wz-step>
+    </div>
 
-    <wz-step title="Results">
+    <div wz-step title="Results">
       <div class="rendered-from-js">
         <%= render 'calc_left_panel' %>
         <%= render 'calc_right_panel' %>
       </div>
-    </wz-step>
+    </div>
 
-    <wz-step title="Next Steps">
+    <div wz-step title="Next Steps">
       <div class="rendered-from-js">
         <%= render 'next_steps_content' %>
       </div>
-    </wz-step>
+    </div>
 
-  </wizard>
+  </div>
 
 </div>
 
