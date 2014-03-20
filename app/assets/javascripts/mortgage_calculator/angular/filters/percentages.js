@@ -1,5 +1,5 @@
 App
-  .filter('percentage', function() {
+  .filter('percentages', function() {
     return function(input) {
       var rounded = Math.round(input * 100) / 100;
       if (rounded == NaN) {

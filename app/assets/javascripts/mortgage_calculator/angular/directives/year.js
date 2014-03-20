@@ -1,15 +1,17 @@
-App.directive('percentage', ['$filter', function($filter) {
+App.directive('year', ['$filter', function($filter) {
   var linker = function(scope, element, attrs, ctrl) {
 
     ctrl.$parsers.unshift(function(viewValue) {
       if (viewValue) {
-        return parseFloat(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
+        var plainNumber = viewValue.replace(/[^\d|\-+|\.+]/g, '');
+        element.val($filter('years')(plainNumber));
+        return parseInt(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
       }
     });
 
     ctrl.$formatters.unshift(function(a) {
       if (a)
-        return $filter('percentages')(ctrl.$modelValue);
+        return $filter('years')(ctrl.$modelValue);
     });
   };
 
