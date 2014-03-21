@@ -32,6 +32,8 @@
 
     <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
                                            'ng-click' => 'navigateAndFocus($event)',
+                                           'analytics-completion' => '',
+                                           'wz-next' => '',
                                            'ng-disabled' => '!repayments.propertyPrice' %>
 
 

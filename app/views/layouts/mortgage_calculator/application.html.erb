@@ -13,6 +13,10 @@
 <% end %>
 
 <% content_for(:analytics) do %>
+  <script type='text/javascript'>
+    var _gaq = _gaq || [];
+  </script>
+
   <% if Rails.env.production? || Rails.env.qa? %>
     <script type='text/javascript'>
       _gaq.push(['_setAccount','<%= GA.tracker %>']);
