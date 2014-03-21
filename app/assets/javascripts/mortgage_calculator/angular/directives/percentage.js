@@ -3,7 +3,7 @@ App.directive('percentage', ['$filter', function($filter) {
 
     ctrl.$parsers.unshift(function(viewValue) {
       if (viewValue) {
-        var formatted = parseFloat(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
+        var formatted = parseFloat(viewValue.replace(/[^\d|\-+|\.+]/g, '.'));
         element.val($filter('percentages')(formatted));
         return formatted;
       }
