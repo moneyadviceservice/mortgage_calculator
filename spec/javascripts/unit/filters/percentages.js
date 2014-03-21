@@ -6,13 +6,18 @@ describe("Filters: Percentages", function() {
 
   beforeEach(module('mortgageCalculatorApp'));
 
-  it('exists in the mortgage calculator', inject(function($filter) {
-    expect($filter('percentages')).not.toBeNull();
+  var percentagesFilter;
+  beforeEach(inject(function ($filter) {
+    percentagesFilter = $filter('percentages');
   }));
 
-  it('applies a percentage suffix', inject(function($filter) {
-    expect($filter('percentages')('4.5')).toBe('4.5%');
-  }));
+  it('exists in the mortgage calculator', function() {
+    expect(percentagesFilter).not.toBeNull();
+  });
+
+  it('applies a percentage suffix', function() {
+    expect(percentagesFilter('4.5')).toBe('4.5%');
+  });
 
 });
 
