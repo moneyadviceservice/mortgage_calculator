@@ -21,6 +21,10 @@ Then(/^My repayment refinement interaction is tracked$/) do
   expected = ['_trackEvent','Mortgage Calculator','Refinement','Click']
   gaq = page.evaluate_script('window._gaq')
   expect(gaq.count(expected)).to eql(6)
-  # this should be 4. in the browser it is 4 but tests show 6 for unknown reason
+  # this should be 4. in the browser it is 4 but tests show 6
+  # this is phantomjs firing the event twice
+  # as the field is present twice and updates itself
+  # phantomjs may not be clever enough to detect value is the same
+  # hence fires the event twice
 end
 
