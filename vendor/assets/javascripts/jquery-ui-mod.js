@@ -1435,6 +1435,8 @@ $.widget( "ui.slider", $.ui.mouse, {
 				this._animateOff = true;
 				this._refreshValue();
 				this._animateOff = false;
+
+				this.element.attr("aria-value" + key, value);
 				break;
 			case "range":
 				this._animateOff = true;

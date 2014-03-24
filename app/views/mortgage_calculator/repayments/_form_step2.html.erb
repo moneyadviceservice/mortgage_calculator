@@ -9,7 +9,7 @@
                      "data-a-sign" =>"£",
                      "aria-labelledby" => "label_price" %>
 
-    <div class="slider price" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.propertyPrice"></div>
+    <div class="slider price" ui-slider el='repayment_price' ng-model="repayments.propertyPrice"></div>
   </div>
 
   <div>
@@ -22,7 +22,7 @@
                      "data-a-sign" =>"£",
                      "aria-labelledby" => "label_deposit" %>
 
-    <div class="slider deposit" ui-slider min="0" max="1000000" step="10000" ng-model="repayments.deposit"></div>
+    <div class="slider deposit" ui-slider el='repayment_deposit' ng-model="repayments.deposit"></div>
   </div>
 
   <div>
