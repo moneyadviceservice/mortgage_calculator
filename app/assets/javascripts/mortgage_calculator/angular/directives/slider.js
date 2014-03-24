@@ -11,6 +11,7 @@ App.directive('uiSlider', function() {
     //Set initial slider state
     var options = {
       range: 'min',
+      value: scope.value,
       slide: function (event, ui) {
           scope.$apply(function () {
               scope.value = ui.value;
