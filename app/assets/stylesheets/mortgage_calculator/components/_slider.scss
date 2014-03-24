@@ -347,6 +347,16 @@
 
 .ui-slider {
   margin: 1em 0 3em;
+  display: block;
+
+  // Hide sliders on small touch-enabled screens
+  .touch & {
+    display: none;
+
+    @include respond-to($mq-s) {
+      display: block;
+    }
+  }
 }
 
 .ui-widget-content {
