@@ -1,7 +1,7 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
   <%= render 'form_step2' %>
 
-  <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' wz-previous />Back</a></p>
+  <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="backAndFocus($event)" />Back</a></p>
 
   <p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit",
                                                                       'wz-next' => '' %></p>

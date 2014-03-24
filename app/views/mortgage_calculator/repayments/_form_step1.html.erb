@@ -29,7 +29,7 @@
     </div>
 
     <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
-                                           'wz-next' => '',
+                                           'ng-click' => 'nextAndFocus($event)',
                                            'ng-disabled' => '!repayments.propertyPrice' %>
 
 

@@ -1,6 +1,6 @@
 'use strict';
 
-App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', function ($scope, Affordability, StampDuty, Repayments) {
+App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', 'WizardHandler', function ($scope, Affordability, StampDuty, Repayments, WizardHandler) {
 
     $scope.js = true;
 
@@ -44,6 +44,28 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.toggleExpanded = function($event) {
       $event.preventDefault();
       $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
+    };
+
+    // Handle next page keyboard focus
+    var focusOnVisibleInput = function() {
+      setTimeout(function() {
+        $('input[name="repayment[price]"]:visible').focus();
+      }, 100);
+    };
+
+    $scope.nextAndFocus = function($event) {
+      $event.preventDefault();
+      WizardHandler.wizard().next();
+      
+      focusOnVisibleInput();
+    };
+
+    // Handle prev page keyboard focus
+    $scope.backAndFocus = function($event) {
+      $event.preventDefault();
+      WizardHandler.wizard().previous();
+      
+      focusOnVisibleInput();
     };
 
   }]);
