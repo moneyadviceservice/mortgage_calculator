@@ -31,7 +31,7 @@ module MortgageCalculator
     def interest_rate
       return nil if model.interest_rate.blank?
 
-      number_to_human model.interest_rate, strip_insignificant_zeros: true
+      model.interest_rate
     end
 
     def monthly_payment

@@ -20,7 +20,7 @@ module MortgageCalculator
     its(:deposit){ should == "20,000.00" }
     its(:debt){ should == "300,000.00" }
     its(:term_years){ should == 25 }
-    its(:interest_rate){ should == "3.5" }
+    its(:interest_rate){ should == 3.5 }
 
     its(:monthly_payment){ should == "1,501.87" }
     its(:total_interest){ should == "150,561.03" }
