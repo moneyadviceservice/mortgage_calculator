@@ -8,6 +8,11 @@ App.directive('uiSlider', function() {
     expression = {},
     value;
 
+    var gaRefinement = function(){
+      window._gaq = window._gaq || [];
+      window._gaq.push(['_trackEvent','Mortgage Calculator','Refinement','Click']);
+    };
+
     //Set initial slider state
     var options = {
       range: 'min',
@@ -15,6 +20,7 @@ App.directive('uiSlider', function() {
       slide: function (event, ui) {
           scope.$apply(function () {
               scope.value = ui.value;
+              gaRefinement();
           });
       }
     };

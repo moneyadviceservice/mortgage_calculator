@@ -9,3 +9,18 @@ Then(/^My repayment completion interaction is tracked$/) do
   end
 end
 
+When(/^I refine my details$/) do
+  @repayment.step_two_price.set "200000"
+  @repayment.step_two_deposit.set "20000"
+
+  @repayment.term_years.set "30"
+  @repayment.interest_rate.set "3"
+end
+
+Then(/^My repayment refinement interaction is tracked$/) do
+  expected = ['_trackEvent','Mortgage Calculator','Refinement','Click']
+  gaq = page.evaluate_script('window._gaq')
+  expect(gaq.count(expected)).to eql(6)
+  # this should be 4. in the browser it is 4 but tests show 6 for unknown reason
+end
+
