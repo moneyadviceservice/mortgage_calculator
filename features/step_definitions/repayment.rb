@@ -22,7 +22,6 @@ Given(/^I have entered some details into the repayment tool$/) do
   step "I visit the Repayment calculator"
   step "I enter my repayment house price"
   step "I enter my deposit"
-  step "I see my monthly repayment"
 end
 
 When(/^I update my repayment details$/) do
