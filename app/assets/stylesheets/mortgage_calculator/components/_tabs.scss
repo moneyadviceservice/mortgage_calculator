@@ -16,7 +16,7 @@
   font-size: $font-medium;
   font-weight: 700;
   text-decoration: underline;
-  padding: 0.7em 0.5em;
+  padding: 10px 8px;
   border: 1px solid transparent;
   border-width: 1px 1px 0 1px;
 
@@ -36,4 +36,5 @@
   background: #fff;
   border:1px solid #ccc;
   padding: 2em 1em 1em;
+  margin-top: -1px;
 }
