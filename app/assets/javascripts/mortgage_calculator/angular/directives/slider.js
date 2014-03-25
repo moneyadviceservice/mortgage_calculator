@@ -5,8 +5,9 @@ App.directive('uiSlider', function() {
 
     //Dynamically grab input id passed in from view
     var input = angular.element("input#" + attrs.el),
-    expression = {},
-    value;
+      expression = {},
+      value,
+      debouncer;
 
     var gaRefinement = function(){
       window._gaq = window._gaq || [];
@@ -20,7 +21,9 @@ App.directive('uiSlider', function() {
       slide: function (event, ui) {
           scope.$apply(function () {
               scope.value = ui.value;
-              gaRefinement();
+
+              clearTimeout(debouncer);
+              debouncer = setTimeout(gaRefinement, 300);
           });
       }
     };
