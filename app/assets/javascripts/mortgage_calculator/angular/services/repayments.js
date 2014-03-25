@@ -52,7 +52,7 @@ App.factory('Repayments', function() {
   };
 
   var _normalizedResults = function(result) {
-    return (result < 0) ? 0 : result;
+    return Math.max(0, result);
   };
 
 
