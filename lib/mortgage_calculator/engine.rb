@@ -37,6 +37,7 @@ module MortgageCalculator
       app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
       app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "vendor", "assets", "fonts")
       app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
+      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets", "lib")
     end
   end
 end
