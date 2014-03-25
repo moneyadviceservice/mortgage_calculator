@@ -18,6 +18,7 @@ When(/^I refine my details$/) do
 end
 
 Then(/^My repayment refinement interaction is tracked$/) do
+  sleep(2)
   expected = ['_trackEvent','Mortgage Calculator','Refinement','Click']
   gaq = page.evaluate_script('window._gaq')
   expect(gaq.count(expected)).to eql(6)
