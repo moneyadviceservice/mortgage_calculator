@@ -36,7 +36,7 @@ cy:
       hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
     interest_changer:
       title: Gwnewch yn siŵr eich bod yn medru ei fforddio!
-      intro: Os bydd eich cyfradd llog yn cynyddu <strong>%{change}%<strong> bydd eich taliad misol yn
+      intro: Os bydd eich cyfradd llog yn cynyddu <strong>%{change}%</strong> bydd eich taliad misol yn
     next_steps:
       title: "3 cham i leihau eich ad-daliadau misol:"
       tip_1:
