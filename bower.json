@@ -1,6 +1,6 @@
 {
   "name": "mortgage-calculator",
   "dependencies": {
-    "frontend": "git@github.com:moneyadviceservice/frontend.git"
+    "frontend": "git@github.com:moneyadviceservice/frontend.git#2b339b182b09e265a7351339d610d6f6973d6dad"
   }
 }
