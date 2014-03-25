@@ -1,4 +1,4 @@
-<%= form_for @repayment, url: repayment_path, html: { class: 'step_two'} do |f| %>
+<%= form_for @repayment, url: repayment_path, html: { class: 'step_two', id: 'edit_repayment'} do |f| %>
   <div>
     <%= f.label :price,
     	"id" => "label_price" %>
@@ -8,7 +8,8 @@
                      "currency" => '',
                      "data-a-sign" =>"£",
                      "data-m-dec" =>"0",
-                     "aria-labelledby" => "label_price" %>
+                     "aria-labelledby" => "label_price",
+                     "analytics-refinement" => '' %>
 
     <div class="slider price" ui-slider el='repayment_price' ng-model="repayments.propertyPrice"></div>
   </div>
@@ -22,7 +23,8 @@
                      "currency" => '',
                      "data-a-sign" =>"£",
                      "data-m-dec" =>"0",
-                     "aria-labelledby" => "label_deposit" %>
+                     "aria-labelledby" => "label_deposit",
+                     "analytics-refinement" => '' %>
 
     <div class="slider deposit" ui-slider el='repayment_deposit' ng-model="repayments.deposit"></div>
   </div>
@@ -34,7 +36,8 @@
                      "ng-model" => "repayments.termYears",
                      "placeholder" => "eg 25",
                      "year" => "",
-                     "aria-labelledby" => "label_term" %>
+                     "aria-labelledby" => "label_term",
+                     "analytics-refinement" => '' %>
 
     <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears"></div>
   </div>
@@ -46,7 +49,8 @@
                      "ng-model" => "repayments.annualInterestRate",
                      "placeholder" => "eg 5",
                      "percentage" => "",
-                     "aria-labelledby" => "label_rate" %>
+                     "aria-labelledby" => "label_rate",
+                     "analytics-refinement" => '' %>
 
     <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
   </div>

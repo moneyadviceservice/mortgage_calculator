@@ -4,6 +4,7 @@
   <title>Dummy</title>
   <%= javascript_include_tag :modernizr %>
   <%= yield :head if content_for?(:head) %>
+  <%= yield :analytics if content_for(:analytics) %>
 </head>
 <body>
 
