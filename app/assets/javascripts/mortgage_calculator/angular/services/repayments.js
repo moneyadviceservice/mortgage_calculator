@@ -52,11 +52,7 @@ App.factory('Repayments', function() {
   };
 
   var _normalizedResults = function(result) {
-    if (result < 0) {
-      return 0;
-    } else {
-      return result;
-    }
+    return (result < 0) ? 0 : result;
   };
 
 
