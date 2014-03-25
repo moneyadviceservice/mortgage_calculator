@@ -46,26 +46,14 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
     };
 
-    // Handle next page keyboard focus
-    var focusOnVisibleInput = function() {
+    $scope.navigateAndFocus = function($event, direction) {
+      $event.preventDefault();
+      WizardHandler.wizard()[direction || 'next']();
+
+      // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {
         $('input[name="repayment[price]"]:visible').focus();
-      }, 100);
-    };
-
-    $scope.nextAndFocus = function($event) {
-      $event.preventDefault();
-      WizardHandler.wizard().next();
-      
-      focusOnVisibleInput();
-    };
-
-    // Handle prev page keyboard focus
-    $scope.backAndFocus = function($event) {
-      $event.preventDefault();
-      WizardHandler.wizard().previous();
-      
-      focusOnVisibleInput();
+      });
     };
 
   }]);
