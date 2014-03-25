@@ -1,5 +1,5 @@
 module MortgageCalculator
-  class ApplicationController < Engine.config.parent_controller.constantize
+  class ApplicationController < MortgageCalculator.parent_controller.constantize
     protect_from_forgery
 
     include MAS::Templating::ControllerConcerns::ParentTemplateSupport

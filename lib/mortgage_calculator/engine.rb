@@ -10,6 +10,7 @@ require 'mas/templating'
 
 module MortgageCalculator
   mattr_accessor :feedback_config
+  mattr_accessor :parent_controller
 
   class Engine < ::Rails::Engine
     isolate_namespace MortgageCalculator
@@ -17,7 +18,9 @@ module MortgageCalculator
       g.test_framework :rspec
     end
 
-    config.parent_controller = 'ApplicationController'
+    initializer :setup_defaults do
+      MortgageCalculator.parent_controller ||= 'ApplicationController'
+    end
 
     config.after_initialize do |app|
       app.config.paths.add 'app/decorators', eager_load: true
