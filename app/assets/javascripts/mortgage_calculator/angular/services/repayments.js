@@ -14,10 +14,12 @@ App.factory('Repayments', function() {
     },
 
     monthlyRepayment        : function(increment) {
-      return Math.round((_debt() * _monthlyInterestRate(increment) * _compoundInterest(increment)) / (_compoundInterest(increment) - 1) * 100) / 100;
+      var result = Math.round((_debt() * _monthlyInterestRate(increment) * _compoundInterest(increment)) / (_compoundInterest(increment) - 1) * 100) / 100;
+      return _normalizedResults(result);
     },
     monthlyInterestRepayment : function(increment) {
-      return Math.round(((_debt() * _annualInterestRate(increment)) / 12) * 100 ) / 100;
+      var result = Math.round(((_debt() * _annualInterestRate(increment)) / 12) * 100 ) / 100;
+      return _normalizedResults(result);
     }
   };
 
@@ -49,6 +51,13 @@ App.factory('Repayments', function() {
     return args;
   };
 
+  var _normalizedResults = function(result) {
+    if (result < 0) {
+      return 0;
+    } else {
+      return result;
+    }
+  };
 
 
   return repayments;

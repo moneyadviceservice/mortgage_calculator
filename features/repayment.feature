@@ -36,3 +36,9 @@ Scenario: When updating values in the tool
   When  I update my repayment details
   Then  I see my updated monthly repayment
 
+@javascript
+Scenario: When using the tool
+  Given I visit the Repayment calculator
+  When  I enter a low house price
+  And   I enter my deposit
+  Then  I do not see any repayments

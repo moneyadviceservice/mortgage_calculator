@@ -38,6 +38,11 @@ describe('Service: Repayments', function () {
       expect(repayments.monthlyRepayment(1)).toBe(2899.36);
     });
 
+    it('returns 0 for negative results', function () {
+      setMortgage(1, 50000);
+      expect(repayments.monthlyRepayment()).toBe(0);
+    });
+
 
 
   });
@@ -50,6 +55,11 @@ describe('Service: Repayments', function () {
 
     it('calculates the monthly interest only repayment for a mortgage when interest is incremented by one', function () {
       expect(repayments.monthlyInterestRepayment(1)).toBe(2250.00);
+    });
+
+    it('returns 0 for negative results', function () {
+      setMortgage(1, 50000);
+      expect(repayments.monthlyInterestRepayment()).toBe(0);
     });
 
   });
