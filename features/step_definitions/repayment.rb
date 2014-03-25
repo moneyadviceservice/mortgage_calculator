@@ -33,11 +33,19 @@ When(/^I update my repayment details$/) do
   @repayment.recalculate.click if js_disabled?
 end
 
+When(/^I enter a low house price$/) do
+  @repayment.price.set "1"
+end
+
 Then(/^I see my updated monthly repayment$/) do
   expect(@repayment).to have_content("£334.19")
 end
 
 Then(/^I see my monthly interest only repayment$/) do
   expect(@repayment).to have_content("£525.00")
+end
+
+Then(/^I do not see any repayments$/) do
+  expect(@repayment).to have_content("£0.00")
 end
 
