@@ -17,10 +17,12 @@ en:
     title: Calculate your monthly mortgage payment
     subtitle: "This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender."
     next: Next
+    back: Back
     a_month: a month
     recalculate: Recalculate
     interest_only: Interest only
     repayment: Repayment
+    years: years
     step_1:
       intro: "Plan ahead and estimate your monthly payment now."
     tabs:
