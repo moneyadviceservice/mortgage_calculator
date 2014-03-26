@@ -1,5 +1,5 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <h2 class="mortgagecalc__heading"><%= I18n.t("repayment.next_steps.title") %></h2>
+  <h4 class="mortgagecalc__heading"><%= I18n.t("repayment.next_steps.title") %></h4>
 
   <ol class="featured-list">
     <li><strong><%= I18n.t("repayment.next_steps.tip_1.heading") %> -</strong> <%= link_to I18n.t("repayment.next_steps.tip_1.info"), I18n.t("repayment.next_steps.tip_1.url"), target: "_blank" %></li>
@@ -11,14 +11,14 @@
 <div class="mortgagecalc__panel">
 
   <div class="callout">
-    <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.learn_more.title") %>:</h4>
+    <h5 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.learn_more.title") %>:</h5>
     <p><%= I18n.t("repayment.next_steps.learn_more.tip_1").html_safe %></p>
   </div>
 
 </div>
 
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge mortgagecalc__panel--with-form">
-  <h4 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %>:</h4>
+  <h5 class="mortgagecalc__subheading"><%= I18n.t("repayment.next_steps.find_out_more.title") %>:</h5>
   <ul>
   <% (1..5).each do |n| %>
     <li><%= link_to I18n.t("repayment.next_steps.find_out_more.tip_#{n}.copy"), I18n.t("repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></li>
