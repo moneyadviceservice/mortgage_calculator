@@ -13,7 +13,7 @@
   font-family: 'museo_sans';
   font-weight: 700;
   font-size: $font-xlarge;
-  max-width: $calc-width * 1.2;
+  max-width: $calc-width;
 }
 
 .mortgagecalc__heading,
@@ -40,7 +40,7 @@
   background: #f2f2f2;
   max-width: $calc-width;
   padding: 25px;
-  margin:2em 0 2em;
+  margin:2em 0 10px;
 }
 
 .mortgagecalc__panel {
