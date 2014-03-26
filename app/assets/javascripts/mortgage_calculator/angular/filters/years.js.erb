@@ -1,7 +1,15 @@
 App
   .filter('years', function() {
     return function(input) {
-      if (input)
-        return input + ' <%= I18n.t('repayment.years') %>';
+      var translations = {
+        'locale-en':  '<%= I18n.t('repayment.years', locale: :en) %>',
+        'locale-cy': '<%= I18n.t('repayment.years', locale: :cy) %>'
+      };
+
+      var locale = $('body').is('.locale-en') ? 'locale-en' : 'locale-cy';
+
+      if (input) {
+        return input + ' ' + translations[locale];
+     }
     };
   });
