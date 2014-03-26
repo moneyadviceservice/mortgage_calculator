@@ -16,7 +16,9 @@ cy:
   repayment:
     title: Cyfrifwch eich taliad morgais misol
     next: Nesaf
+    back: Yn ôl
     a_month: bob mis
+    years: mlynedd
     recalculate: Recalculate
     interest_only: Llog yn unig
     repayment: Ad-daliad
