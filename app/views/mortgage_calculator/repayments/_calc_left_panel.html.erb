@@ -22,11 +22,7 @@
         <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.interest_only.title") %></h3>
         <%= render 'interest_only_repayments' %>
 
-        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("repayment.tabs.explain") %></a></p>
-
-        <div ng-show="expandedMortgageInformation">
-          <%= render 'interest_only_repayment_tip' %>
-        </div>
+        <%= render 'interest_only_repayment_tip' %>
       </div>
   </div>
 </div>
