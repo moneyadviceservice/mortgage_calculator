@@ -65,6 +65,12 @@
   }
 }
 
+.mortgagecalc__payment {
+  @extend .mortgagecalc__heading;
+  font-weight: 700;
+  font-size: 40px;
+}
+
 .mortgagecalc__submit {
   position: absolute;
   bottom: 30px;
