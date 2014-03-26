@@ -4,7 +4,7 @@ App.directive('uiSlider', function() {
   var linker = function(scope, element, attrs, ctrl) {
 
     //Dynamically grab input id passed in from view
-    var input = angular.element("input#" + attrs.el),
+    var input = angular.element("input#" + attrs.dynamicFor),
       expression = {},
       value,
       debouncer;

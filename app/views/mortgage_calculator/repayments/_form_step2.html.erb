@@ -11,7 +11,7 @@
                      "aria-labelledby" => "label_price",
                      "analytics-refinement" => '' %>
 
-    <div class="slider price" ui-slider el='repayment_price' ng-model="repayments.propertyPrice"></div>
+    <div class="slider price" ui-slider dynamic-for='repayment_price' ng-model="repayments.propertyPrice"></div>
   </div>
 
   <div>
@@ -26,7 +26,7 @@
                      "aria-labelledby" => "label_deposit",
                      "analytics-refinement" => '' %>
 
-    <div class="slider deposit" ui-slider el='repayment_deposit' ng-model="repayments.deposit"></div>
+    <div class="slider deposit" ui-slider dynamic-for='repayment_deposit' ng-model="repayments.deposit"></div>
   </div>
 
   <div>
