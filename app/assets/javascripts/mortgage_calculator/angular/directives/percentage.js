@@ -1,27 +1,26 @@
-App.directive('percentage', ['$filter', function($filter) {
-  var linker = function(scope, element, attrs, ctrl) {
+App.directive('percentage', function () {
+    var linker = function (scope, element, attrs, ctrl) {
+        element.autoNumeric('init');
 
-    ctrl.$parsers.unshift(function(viewValue) {
-      if (viewValue) {
-        var formatted = parseFloat(viewValue.replace(/[^\d|\-+|\.+]/g, '.'));
-        element.val($filter('percentages')(formatted));
-        return formatted;
-      }
-    });
+        ctrl.$parsers.unshift(function (viewValue) {
+          if (viewValue) {
+            return parseFloat(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
+          }
+        });
 
-    ctrl.$formatters.unshift(function(a) {
-      if (a)
-        return $filter('percentages')(ctrl.$modelValue);
-    });
-  };
+        ctrl.$formatters.unshift(function (a) {
+         if (a)
+          return element.autoNumeric('set', a).val();
+        });
+    };
 
-  var controller = function($scope) {};
+    var controller = function ($scope) {
+    };
 
-  return {
-    restrict: 'A',
-    require: 'ngModel',
-    controller: controller,
-    link: linker
-  };
-}]);
-
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        controller: controller,
+        link: linker
+    };
+});
