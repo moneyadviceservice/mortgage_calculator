@@ -44,7 +44,7 @@ en:
       title: "Three steps to lower your monthly payments:"
       tip_1:
         heading: Increase your deposit
-        info: ideas to help you save money
+        info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
         url: "https://www.moneyadviceservice.org.uk/en/search?utf8=%E2%9C%93&query=ideas+to+help+save+money&commit=Search"
       tip_2:
         heading: Decrease the price of the property
@@ -58,19 +58,19 @@ en:
       find_out_more:
         title: Find out more
         tip_1:
-          copy: Mortgage comparison table
+          copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
         tip_2:
-          copy: Choose the right mortgage
+          copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
         tip_3:
-          copy: Affordable housing schemes
+          copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
         tip_4:
-          copy: Interest rates explained
+          copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
         tip_5:
-          copy: Think about other costs
+          copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
     caveat:
       title: "Important:"
