@@ -35,7 +35,7 @@ App.directive('uiSlider', function() {
         min: value / 2,
         max: value * 2,
         value: value,
-        step: value <= 100000 ? 5000 : 10000
+        step: (value / 100) * 1
       });
     })
 
