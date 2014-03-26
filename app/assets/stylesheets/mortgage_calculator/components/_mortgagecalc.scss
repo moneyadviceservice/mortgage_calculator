@@ -19,11 +19,12 @@
 .mortgagecalc__heading,
 .mortgagecalc__subheading {
   font-family: 'museo_sans';
-  font-weight: 500;
+  font-weight: 700;
   font-size: $font-large;
   color: #333;
   margin-top: 0;
   max-width: $calc-width;
+  line-height: 1.2;
 }
 
 .mortgagecalc__heading--xlarge {

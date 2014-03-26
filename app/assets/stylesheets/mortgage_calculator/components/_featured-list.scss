@@ -1,15 +1,20 @@
 .featured-list {
   font-family: 'museo_sans';
   font-size:$font-medium;
-  font-weight: 500;
   color: #333;
   counter-reset:li;
   margin: 2em 0 0;
 
+  strong {
+    display: block;
+    font-size: $font-large;
+    font-weight: 500;
+  }
+
   @if ($responsive) {
     > li {
         position:relative;
-        margin:0 0 18px 2em;
+        margin:0 0 20px 2.3em;
         padding:4px 8px;
         list-style:none;
     }
@@ -20,22 +25,19 @@
        
         position:absolute;
         top:-2px;
-        margin-left:-2.8em;
+        margin-left:-75px;
         box-sizing:border-box;
-        width:2em;
-        height:2em;
-        border-radius: 2em;
-        margin-right:8px;
-        line-height: 2em;
+        width:1.8em;
+        height:1.8em;
+        border-radius: 1.8em;
         padding:4px;
         color:#333;
         background:#ecd600;
-        border-bottom:2px solid #ddaf00;
         font-weight:500;
         font-family: 'museo_sans';
-        font-size:$font-medium;
-        line-height: 1.5em;
+        font-size:$font-xlarge;
         text-align:center;
+        line-height: 1.65em;
     }
   }
 }
