@@ -11,7 +11,7 @@
                      "aria-labelledby" => "label_price",
                      "analytics-refinement" => '' %>
 
-    <div class="slider price" ui-slider dynamic-for='repayment_price' ng-model="repayments.propertyPrice"></div>
+    <div class="slider price" ui-slider dynamic-for='repayment_price' ng-model="repayments.propertyPrice" aria-labelledby="label_price"></div>
   </div>
 
   <div>
@@ -26,7 +26,7 @@
                      "aria-labelledby" => "label_deposit",
                      "analytics-refinement" => '' %>
 
-    <div class="slider deposit" ui-slider dynamic-for='repayment_deposit' ng-model="repayments.deposit"></div>
+    <div class="slider deposit" ui-slider dynamic-for='repayment_deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit"></div>
   </div>
 
   <div>
@@ -39,7 +39,7 @@
                      "aria-labelledby" => "label_term",
                      "analytics-refinement" => '' %>
 
-    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears"></div>
+    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears" aria-labelledby="label_term"></div>
   </div>
 
   <div>
@@ -54,7 +54,7 @@
                      "aria-labelledby" => "label_rate",
                      "analytics-refinement" => '' %>
 
-    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate"></div>
+    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate" aria-labelledby="label_rate"></div>
   </div>
 
   <div class="hide-with-js">
