@@ -8,7 +8,7 @@
       <%= f.label :price,
         "id" => "label_initial_price" %>
       <%= f.text_field :price,
-                      "class" => "js-polyfill",
+                      "class" => "js-polyfill dynamic-slider-property",
                       "ng-model" => "repayments.propertyPrice",
                       "placeholder" => "£0.00",
                       "currency" => '',
@@ -23,7 +23,7 @@
       <%= f.label :deposit,
         "id" => "label_initial_deposit" %>
       <%= f.text_field :deposit,
-                      "class" => "js-polyfill",
+                      "class" => "js-polyfill dynamic-slider-deposit",
                        "ng-model" => "repayments.deposit",
                        "placeholder" => "£0.00",
                        "currency" => '',
