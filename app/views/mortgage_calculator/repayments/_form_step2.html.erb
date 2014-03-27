@@ -4,7 +4,7 @@
     	"id" => "label_price" %>
     <%= f.text_field :price,
                      id: 'edit_repayment_price',
-                     class: 'dynamic-slider',
+                     class: 'dynamic-slider-property',
                      "ng-model" => "repayments.propertyPrice",
                      "placeholder" => "£0.00",
                      "currency" => '',
@@ -13,7 +13,7 @@
                      "aria-labelledby" => "label_price",
                      "analytics-refinement" => '' %>
 
-    <div class="slider price" ui-slider dynamic-for='dynamic-slider' ng-model="repayments.propertyPrice" aria-labelledby="label_price"></div>
+    <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price"></div>
   </div>
 
   <div>
@@ -21,7 +21,7 @@
     	"id" => "label_deposit" %>
     <%= f.text_field :deposit,
                      id: 'edit_repayment_deposit',
-                     class: 'dynamic-slider',
+                     class: 'dynamic-slider-deposit',
                      "ng-model" => "repayments.deposit",
                      "placeholder" => "£0.00",
                      "currency" => '',
@@ -30,7 +30,7 @@
                      "aria-labelledby" => "label_deposit",
                      "analytics-refinement" => '' %>
 
-    <div class="slider deposit" ui-slider dynamic-for='dynamic-slider' ng-model="repayments.deposit" aria-labelledby="label_deposit"></div>
+    <div class="slider deposit" ui-slider dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit"></div>
   </div>
 
   <div>
