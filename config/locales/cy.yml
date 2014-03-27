@@ -43,7 +43,7 @@ cy:
       title: "3 cham i leihau eich ad-daliadau misol:"
       tip_1:
         heading: Cynyddu eich blaendal
-        info: syniadau i’ch helpu i gynilo arian
+        info_html: "syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
         url: "https://www.moneyadviceservice.org.uk/cy/search?utf8=%E2%9C%93&query=arbed+arian&commit=Mynd"
       tip_2:
         heading: Gostwng pris yr eiddo
@@ -57,19 +57,19 @@ cy:
       find_out_more:
         title: Dewch o hyd i ragor
         tip_1:
-          copy: Cymharu morgeisi
+          copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
         tip_2:
-          copy: Dewis y morgais cywir
+          copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
         tip_3:
-          copy: Cynlluniau tai fforddiadwy
+          copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
         tip_4:
-          copy: Cyfraddau llog
+          copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
         tip_5:
-          copy: Ystyriwch gostau erail
+          copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
     caveat:
       title: Pwysig
