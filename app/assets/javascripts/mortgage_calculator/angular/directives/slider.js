@@ -11,7 +11,7 @@ App.directive('uiSlider', function() {
 
     var gaRefinement = function(){
       window._gaq = window._gaq || [];
-      window._gaq.push(['_trackEvent','Mortgage Calculator','Refinement','Click']);
+      // window._gaq.push(['_trackEvent','Mortgage Calculator','Refinement','Click']);
     };
 
     //Set initial slider state
