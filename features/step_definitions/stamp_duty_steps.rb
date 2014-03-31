@@ -15,6 +15,7 @@ end
 
 When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
+  @stamp_duty.submit.click if js_disabled?
 end
 
 Then(/^they see "(.*?)"$/) do |content|
@@ -27,6 +28,6 @@ When(/^I enter my house price$/) do
 end
 
 Then(/^I see how much stamp duty I will have to pay$/) do
-  expect(@stamp_duty).to have_content("Based on your total purchase price of £300,000.00 you will have to pay 3% in stamp duty, costing £9,000.00. Bringing your total spend to £309,000.00")
+  expect(@stamp_duty).to have_content("Based on your total purchase price of £300,000.00, you will have to pay 3% in stamp duty, costing £9,000.00. Bringing your total spend to £309,000.00")
 end
 

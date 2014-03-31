@@ -1,4 +1,3 @@
-@wip
 Feature: Stamp Duty Calculator Feedback
 So that I can make MAS better
 As a user
