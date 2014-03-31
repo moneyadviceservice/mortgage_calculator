@@ -1,10 +1,4 @@
 cy:
-  number:
-    currency:
-      format:
-        precision: 2
-        unit: £
-        strip_insignificant_zeros: false
   mortgage_calculator:
     tool_name: "cyfrifiannell-morgais-newydd"
     activemodel:
