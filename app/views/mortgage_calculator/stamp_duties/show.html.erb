@@ -9,7 +9,12 @@
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
 
     <div wz-step >
-      <%= render 'form' %>
+      <div class="rendered-from-js">
+        <%= render 'calc_left_panel' %>
+        <%= render 'calc_right_panel' %>
+        <%= render 'bands_table' %>
+      </div>
+
     </div>
 
     <div wz-step >
