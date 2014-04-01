@@ -17,8 +17,9 @@
 
 
   <div class="hide-with-js">
-    <p><br><%= f.submit 'Calculate',
-              'class' => 'button' %></p>
+    <p><br><%= f.submit I18n.t("repayment.recalculate"),
+              'class' => 'button',
+                        'wz-next' => '' %></p>
   </div>
 <% end %>
 

@@ -41,3 +41,9 @@
     </tr>
   </tbody>
 </table>
+
+
+<p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')" /><%= I18n.t('repayment.back') %></a></p>
+
+<p><%= link_to I18n.t('repayment.next'), next_steps_repayment_path, class: "button button--primary mortgagecalc__submit",
+                                                                    'wz-next' => '' %></p>
