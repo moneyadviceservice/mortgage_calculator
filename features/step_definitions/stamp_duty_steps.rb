@@ -6,7 +6,7 @@ Given /^I visit the Stamp Duty page$/ do
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(@stamp_duty.h1).to have_content('How much will the stamp duty be for this property?')
+  expect(@stamp_duty.h2).to have_content('Estimate the Stamp duty on your property')
 end
 
 Then(/^they do not see the result output$/) do
