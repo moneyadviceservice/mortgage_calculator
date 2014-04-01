@@ -1,78 +1,73 @@
 cy:
-  tool_name: "cyfrifiannell-morgais-newydd"
-  number:
-    currency:
-      format:
-        precision: 2
-        unit: £
-        strip_insignificant_zeros: false
-  helpers:
-    label:
-      repayment:
-        price: Cyfanswm pris yr eiddo yw
-        deposit: Y blaendal sydd ar gael yw
-        term_years: Cyfnod y morgais yw
-        interest_rate: Cyfradd llog yw
-  repayment:
-    title: Cyfrifwch eich taliad morgais misol
-    next: Nesaf
-    back: Yn ôl
-    a_month: bob mis
-    years: mlynedd
-    recalculate: Recalculate
-    interest_only: Llog yn unig
-    repayment: Ad-daliad
-    step_1:
-      intro: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
-    tabs:
-      explain: Beth mae hyn yn ei gynnwys?
-      repayment:
-        title: Ad-daliad
-        tip_1: "Rydych yn ad-dalu'r swm yr ydych wedi ei fenthyca, a'r llog"
-        tip_2: "Ar ddiwedd cyfnod y morgais chi fydd berchen yr eiddo."
-      interest_only:
-        title: Llog yn unig
-        tip_1: "Byddwch yn talu'r llog ar y morgais yn unig."
-        tip_2: "Er mwyn bod yn berchen ar yr eiddo rhaid i chi hefyd gynilo i mewn i gynllun ad-dalu i dalu'r swm gwreiddiol a fenthycwyd yn ôl."
-    tips:
-      hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
-    interest_changer:
-      title: Gwnewch yn siŵr eich bod yn medru ei fforddio!
-      intro: Os bydd eich cyfradd llog yn cynyddu <strong>%{change}%</strong> bydd eich taliad misol yn
-    next_steps:
-      title: "3 cham i leihau eich ad-daliadau misol:"
-      tip_1:
-        heading: Cynyddu eich blaendal
-        info_html: "syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-        url: "https://www.moneyadviceservice.org.uk/cy/search?utf8=%E2%9C%93&query=arbed+arian&commit=Mynd"
-      tip_2:
-        heading: Gostwng pris yr eiddo
-        info: ystyriwch chwilio am gartrefi mewn ardaloedd eraill
-      tip_3:
-        heading: Cynyddu hyd eich morgais
-        info: byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan
-      learn_more:
-        title: Dysgu mwy
-        tip_1: Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is
-      find_out_more:
-        title: Dewch o hyd i ragor
+  mortgage_calculator:
+    tool_name: "cyfrifiannell-morgais-newydd"
+    activemodel:
+      attributes:
+        mortgage_calculator/repayment:
+          price: Cyfanswm pris yr eiddo yw
+          deposit: Y blaendal sydd ar gael yw
+          term_years: Cyfnod y morgais yw
+          interest_rate: Cyfradd llog yw
+    repayment:
+      title: Cyfrifwch eich taliad morgais misol
+      next: Nesaf
+      back: Yn ôl
+      a_month: bob mis
+      years: mlynedd
+      recalculate: Recalculate
+      interest_only: Llog yn unig
+      repayment: Ad-daliad
+      step_1:
+        intro: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
+      tabs:
+        explain: Beth mae hyn yn ei gynnwys?
+        repayment:
+          title: Ad-daliad
+          tip_1: "Rydych yn ad-dalu'r swm yr ydych wedi ei fenthyca, a'r llog"
+          tip_2: "Ar ddiwedd cyfnod y morgais chi fydd berchen yr eiddo."
+        interest_only:
+          title: Llog yn unig
+          tip_1: "Byddwch yn talu'r llog ar y morgais yn unig."
+          tip_2: "Er mwyn bod yn berchen ar yr eiddo rhaid i chi hefyd gynilo i mewn i gynllun ad-dalu i dalu'r swm gwreiddiol a fenthycwyd yn ôl."
+      tips:
+        hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
+      interest_changer:
+        title: Gwnewch yn siŵr eich bod yn medru ei fforddio!
+        intro: Os bydd eich cyfradd llog yn cynyddu <strong>%{change}%</strong> bydd eich taliad misol yn
+      next_steps:
+        title: "3 cham i leihau eich ad-daliadau misol:"
         tip_1:
-          copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+          heading: Cynyddu eich blaendal
+          info_html: "syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          url: "https://www.moneyadviceservice.org.uk/cy/search?utf8=%E2%9C%93&query=arbed+arian&commit=Mynd"
         tip_2:
-          copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
+          heading: Gostwng pris yr eiddo
+          info: ystyriwch chwilio am gartrefi mewn ardaloedd eraill
         tip_3:
-          copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
-        tip_4:
-          copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
-        tip_5:
-          copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
-    caveat:
-      title: Pwysig
-      one: Canllaw yn unig yw’r ffigyrau hyn i roi syniad i chi o faint allech chi ei dalu bob mis - bydd yr union gost yn dibynnu ar y morgais penodol y byddwch yn ei ddewis a’r darparwr benthyciadau.
-      two: Efallai bydd gan bobl sydd yn hunangyflogedig neu nad ydynt mewn cyflogaeth llawn amser feini prawf eraill i’w cwrdd.
-      three: Cyn ymgeisio am forgais, dylid gwirio eich statws credyd a gwneud yn siŵr eich bod wedi eich cofrestru ar y gofrestr etholiadol.
+          heading: Cynyddu hyd eich morgais
+          info: byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan
+        learn_more:
+          title: Dysgu mwy
+          tip_1: Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is
+        find_out_more:
+          title: Dewch o hyd i ragor
+          tip_1:
+            copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+          tip_2:
+            copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
+          tip_3:
+            copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          tip_4:
+            copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
+          tip_5:
+            copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+      caveat:
+        title: Pwysig
+        one: Canllaw yn unig yw’r ffigyrau hyn i roi syniad i chi o faint allech chi ei dalu bob mis - bydd yr union gost yn dibynnu ar y morgais penodol y byddwch yn ei ddewis a’r darparwr benthyciadau.
+        two: Efallai bydd gan bobl sydd yn hunangyflogedig neu nad ydynt mewn cyflogaeth llawn amser feini prawf eraill i’w cwrdd.
+        three: Cyn ymgeisio am forgais, dylid gwirio eich statws credyd a gwneud yn siŵr eich bod wedi eich cofrestru ar y gofrestr etholiadol.

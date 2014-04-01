@@ -1,79 +1,74 @@
 en:
-  tool_name: "mortgage-calculator-new"
-  number:
-    currency:
-      format:
-        precision: 2
-        unit: £
-        strip_insignificant_zeros: false
-  helpers:
-    label:
-      repayment:
-        price: Price of the property is
-        deposit: Deposit available is
-        term_years: Mortgage term is
-        interest_rate: Interest rate is
-  repayment:
-    title: Calculate your monthly mortgage payment
-    subtitle: "This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender."
-    next: Next
-    back: Back
-    a_month: a month
-    recalculate: Recalculate
-    interest_only: Interest only
-    repayment: Repayment
-    years: years
-    step_1:
-      intro: "Plan ahead and estimate your monthly payment now."
-    tabs:
-      explain: "What does this mean?"
-      repayment:
-        title: Repayment
-        tip_1: You pay off what you borrowed, plus interest.
-        tip_2: At the end of the mortgage term you will own the property.
-      interest_only:
-        title: Interest Only
-        tip_1: "You only pay off the interest."
-        tip_2: "To own the property you'll need to pay back the amount you borrowed as well, so you must save into a repayment plan."
-    tips:
-      hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and stamp duty tax.
-    interest_changer:
-      title: Make sure you can afford it!
-      intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly payment will be
-    next_steps:
-      title: "Three steps to lower your monthly payments:"
-      tip_1:
-        heading: Increase your deposit
-        info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
-        url: "https://www.moneyadviceservice.org.uk/en/search?utf8=%E2%9C%93&query=ideas+to+help+save+money&commit=Search"
-      tip_2:
-        heading: Decrease the price of the property
-        info: consider looking for homes in other areas
-      tip_3:
-        heading: "Increase the length of your mortgage"
-        info: "be aware this means you'll pay back more in interest overall"
-      learn_more:
-        title: Learn more
-        tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
-      find_out_more:
-        title: Find out more
+  mortgage_calculator:
+    tool_name: "mortgage-calculator-new"
+    activemodel:
+      attributes:
+        mortgage_calculator/repayment:
+          price: Price of the property is
+          deposit: Deposit available is
+          term_years: Mortgage term is
+          interest_rate: Interest rate is
+    repayment:
+      title: Calculate your monthly mortgage payment
+      subtitle: "This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender."
+      next: Next
+      back: Back
+      a_month: a month
+      recalculate: Recalculate
+      interest_only: Interest only
+      repayment: Repayment
+      years: years
+      step_1:
+        intro: "Plan ahead and estimate your monthly payment now."
+      tabs:
+        explain: "What does this mean?"
+        repayment:
+          title: Repayment
+          tip_1: You pay off what you borrowed, plus interest.
+          tip_2: At the end of the mortgage term you will own the property.
+        interest_only:
+          title: Interest Only
+          tip_1: "You only pay off the interest."
+          tip_2: "To own the property you'll need to pay back the amount you borrowed as well, so you must save into a repayment plan."
+      tips:
+        hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and stamp duty tax.
+      interest_changer:
+        title: Make sure you can afford it!
+        intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly payment will be
+      next_steps:
+        title: "Three steps to lower your monthly payments:"
         tip_1:
-          copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+          heading: Increase your deposit
+          info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
+          url: "https://www.moneyadviceservice.org.uk/en/search?utf8=%E2%9C%93&query=ideas+to+help+save+money&commit=Search"
         tip_2:
-          copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+          heading: Decrease the price of the property
+          info: consider looking for homes in other areas
         tip_3:
-          copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
-        tip_4:
-          copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
-        tip_5:
-          copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
-    caveat:
-      title: "Important:"
-      one: These results are a guide to give you an idea of what you might pay each month – the exact cost will depend on the mortgage you choose and the lender.
-      two: People who are self employed or are not in full-time employment may have other criteria to fulfil.
-      three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.
+          heading: "Increase the length of your mortgage"
+          info: "be aware this means you'll pay back more in interest overall"
+        learn_more:
+          title: Learn more
+          tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
+        find_out_more:
+          title: Find out more
+          tip_1:
+            copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+          tip_2:
+            copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+          tip_3:
+            copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+          tip_4:
+            copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+          tip_5:
+            copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+      caveat:
+        title: "Important:"
+        one: These results are a guide to give you an idea of what you might pay each month – the exact cost will depend on the mortgage you choose and the lender.
+        two: People who are self employed or are not in full-time employment may have other criteria to fulfil.
+        three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.

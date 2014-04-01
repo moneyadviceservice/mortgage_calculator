@@ -1,5 +1,5 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <h4 class="mortgagecalc__heading"><%= I18n.t("repayment.step_1.intro") %></h4>
+  <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h4>
 </div>
 
 <%= form_for @repayment, url: repayment_path do |f| %>
@@ -32,14 +32,14 @@
                        "aria-labelledby" => "label_initial_deposit" %>
     </div>
 
-    <%= f.submit I18n.t("repayment.next"), class: "button button--primary mortgagecalc__submit",
+    <%= f.submit I18n.t("mortgage_calculator.repayment.next"), class: "button button--primary mortgagecalc__submit",
                                            'ng-click' => 'navigateAndFocus($event)',
                                            'analytics-completion' => '',
                                            'ng-disabled' => '!repayments.propertyPrice' %>
 
 
     <div ng-class="{ 'visibly-hidden' : !repayments.propertyPrice }" class="callout">
-      <%= I18n.t("repayment.tips.hidden_costs") %>
+      <%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %>
     </div>
   </div>
 
