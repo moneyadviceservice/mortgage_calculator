@@ -10,8 +10,10 @@ describe MortgageCalculator::StampDuty do
   it_should_behave_like "currency inputs", [:price]
 
   describe 'calculations' do
+    subject { described_class.new(price: price)}
+
     context 'when house price is blank' do
-      subject{ described_class.new(price: "") }
+      let(:price) { "" }
 
       it 'has errors' do
         subject.valid?
@@ -20,7 +22,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is text' do
-      subject{ described_class.new(price: "asd") }
+      let(:price) { "asd" }
 
       it 'has errors' do
         subject.valid?
@@ -29,7 +31,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 0' do
-      subject{ described_class.new(price: 0) }
+      let(:price) { 0 }
 
       its(:percentage_rate) { should be_zero }
       its(:tax_due) { should be_zero }
@@ -37,7 +39,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 125000' do
-      subject{ described_class.new(price: 125000) }
+      let(:price) { 125000 }
 
       its(:percentage_rate) { should be_zero }
       its(:tax_due) { should be_zero }
@@ -45,7 +47,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 125000.01' do
-      subject{ described_class.new(price: 125000.01) }
+      let(:price) { 125000.01 }
 
       its(:percentage_rate) { should == 1 }
       its(:tax_due) { should == 1250.00 }
@@ -53,7 +55,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 250000' do
-      subject{ described_class.new(price: 250000) }
+      let(:price) { 250000 }
 
       its(:percentage_rate) { should == 1 }
       its(:tax_due) { should == 2500.00 }
@@ -61,7 +63,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 250000.01' do
-      subject{ described_class.new(price: 250000.01) }
+      let(:price) { 250000.01 }
 
       its(:percentage_rate) { should == 3 }
       its(:tax_due) { should == 7500.00 }
@@ -69,7 +71,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 500000' do
-      subject{ described_class.new(price: 500000) }
+      let(:price) { 500000 }
 
       its(:percentage_rate) { should == 3 }
       its(:tax_due) { should == 15000 }
@@ -77,7 +79,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 500000.01' do
-      subject{ described_class.new(price: 500000.01) }
+      let(:price) { 500000.01 }
 
       its(:percentage_rate) { should == 4 }
       its(:tax_due) { should == 20000 }
@@ -85,7 +87,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 1000000' do
-      subject{ described_class.new(price: 1000000) }
+      let(:price) { 1000000 }
 
       its(:percentage_rate) { should == 4 }
       its(:tax_due) { should == 40000 }
@@ -93,7 +95,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 1000000.01' do
-      subject{ described_class.new(price: 1000000.01) }
+      let(:price) { 1000000.01 }
 
       its(:percentage_rate) { should == 5 }
       its(:tax_due) { should == 50000 }
@@ -101,7 +103,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 2000000' do
-      subject{ described_class.new(price: 2000000) }
+      let(:price) { 2000000 }
 
       its(:percentage_rate) { should == 5 }
       its(:tax_due) { should == 100000 }
@@ -109,7 +111,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 2000000.01' do
-      subject{ described_class.new(price: 2000000.01) }
+      let(:price) { 2000000.01 }
 
       its(:percentage_rate) { should == 7 }
       its(:tax_due) { should == 140000 }
@@ -117,7 +119,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 3000000' do
-      subject{ described_class.new(price: 3000000) }
+      let(:price) { 3000000 }
 
       its(:percentage_rate) { should == 7 }
       its(:tax_due) { should == 210000 }
