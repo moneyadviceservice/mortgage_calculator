@@ -7,7 +7,7 @@
 
     <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form' } do |f| %>
       <%= field_set_tag do %>
-        <%= f.label :price, 'Property Price' %>
+        <%= f.label :price %>
         <%= f.text_field :price,
                          "class" => "form-control",
                          "ng-model" => "stampDuty.propertyPrice",

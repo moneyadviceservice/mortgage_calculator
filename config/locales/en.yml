@@ -8,6 +8,8 @@ en:
           deposit: Deposit available is
           term_years: Mortgage term is
           interest_rate: Interest rate is
+        mortgage_calculator/stamp_duty:
+          price: Price of the property is
     repayment:
       title: Calculate your monthly mortgage payment
       subtitle: "This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender."
