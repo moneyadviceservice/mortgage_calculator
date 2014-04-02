@@ -1,32 +1,25 @@
-
 <div ng-controller="CalculatorCtrl">
+  <% @stamp_duty.errors.full_messages.each do |m| %>
+    <span style="color:red;"><%= m %></span>
+  <% end %>
 
-    <% @stamp_duty.errors.full_messages.each do |m| %>
-      <span style="color:red;"><%= m %></span>
+  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form' } do |f| %>
+    <%= field_set_tag do %>
+      <%= f.label :price %>
+      <%= f.text_field :price,
+                       "class" => "form-control",
+                       "ng-model" => "stampDuty.propertyPrice",
+                       "placeholder" => "The cost of the property",
+                       "required" => '',
+                       "autofocus" => '',
+                       "format" => 'number' %>
+
+
+      <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Field required</p>
     <% end %>
 
-    <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form' } do |f| %>
-      <%= field_set_tag do %>
-        <%= f.label :price %>
-        <%= f.text_field :price,
-                         "class" => "form-control",
-                         "ng-model" => "stampDuty.propertyPrice",
-                         "placeholder" => "The cost of the property",
-                         "required" => '',
-                         "autofocus" => '',
-                         "format" => 'number' %>
-
-
-        <p ng-show="stamp_duty_form['stamp_duty[price]'].$invalid && !stamp_duty_form['stamp_duty[price]'].$pristine" class="help-block">Field required</p>
-      <% end %>
-
-
-      <%= f.submit %>
-
-
-    <% end %>
-
-
+    <%= f.submit %>
+  <% end %>
 
   <div ng-show="stampDuty.propertyPrice">
     <p class="results">
