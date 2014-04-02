@@ -2,16 +2,16 @@
 
   <div class="tabs">
     <dl class="tabs__list rendered-from-js">
-      <dt><a href="#" class="tabs__link" ng-click="showMonthly($event)" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("repayment.tabs.repayment.title") %></a></dt>
+      <dt><a href="#" class="tabs__link" ng-click="showMonthly($event)" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></a></dt>
 
-      <dt><a href="#" class="tabs__link" ng-click="showInterest($event)" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("repayment.tabs.interest_only.title") %></a></dt>
+      <dt><a href="#" class="tabs__link" ng-click="showInterest($event)" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></a></dt>
     </dl>
 
     <div class="tabs__content">
       <div class="tabs__panel" ng-show="viewMonthlyRepayments">
-        <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.repayment.title") %></h3>
+        <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></h3>
         <%= render 'monthly_repayments' %>
-        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("repayment.tabs.explain") %></a></p>
+        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.explain") %></a></p>
 
         <div ng-show="expandedMortgageInformation">
           <%= render 'repayment_tip' %>
@@ -19,7 +19,7 @@
 
       </div>
       <div class="tabs__panel" ng-show="viewInterestRepayments">
-        <h3 class="subheading hide-with-js"><%= I18n.t("repayment.tabs.interest_only.title") %></h3>
+        <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></h3>
         <%= render 'interest_only_repayments' %>
 
         <%= render 'interest_only_repayment_tip' %>
@@ -28,8 +28,8 @@
 </div>
 
   <div class="callout">
-    <h5 class="callout__heading"><%= I18n.t("repayment.interest_changer.title") %></h5>
-    <p><%= raw I18n.t("repayment.interest_changer.intro", change: 2) %></p>
+    <h5 class="callout__heading"><%= I18n.t("mortgage_calculator.repayment.interest_changer.title") %></h5>
+    <p><%= raw I18n.t("mortgage_calculator.repayment.interest_changer.intro", change: 2) %></p>
 
      <div ng-show="viewMonthlyRepayments"><%= render 'monthly_increment' %></div>
      <div ng-show="viewInterestRepayments"><%= render 'interest_monthly_increment' %></div>

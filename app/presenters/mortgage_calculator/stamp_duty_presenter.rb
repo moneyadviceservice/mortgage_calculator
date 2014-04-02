@@ -1,6 +1,11 @@
 module MortgageCalculator
   class StampDutyPresenter
+    extend ActiveModel::Translation
     include ActionView::Helpers::NumberHelper
+
+    def self.i18n_scope
+      "mortgage_calculator.activemodel"
+    end
 
     attr_reader :model
 

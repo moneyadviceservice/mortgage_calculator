@@ -20,5 +20,9 @@ module MortgageCalculator
     def persisted?
       false
     end
+
+    def total_income
+      annual_income + extra_income
+    end
   end
 end

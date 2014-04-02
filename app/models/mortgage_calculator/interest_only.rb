@@ -14,19 +14,11 @@ module MortgageCalculator
     end
 
     def term_years=(value)
-      @term_years = if value.present?
-        value.to_i
-      else
-        nil
-      end
+      @term_years = value.to_i if value.present?
     end
 
     def interest_rate=(value)
-      @interest_rate = if value.present?
-        value.to_f
-      else
-        nil
-      end
+      @interest_rate = value.to_f if value.present?
     end
 
     def debt
@@ -51,4 +43,3 @@ module MortgageCalculator
     end
   end
 end
-

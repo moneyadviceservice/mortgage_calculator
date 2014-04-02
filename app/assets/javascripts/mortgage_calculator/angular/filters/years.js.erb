@@ -2,8 +2,8 @@ App
   .filter('years', function() {
     return function(input) {
       var translations = {
-        'locale-en':  '<%= I18n.t('repayment.years', locale: :en) %>',
-        'locale-cy': '<%= I18n.t('repayment.years', locale: :cy) %>'
+        'locale-en':  '<%= I18n.t('mortgage_calculator.repayment.years', locale: :en) %>',
+        'locale-cy': '<%= I18n.t('mortgage_calculator.repayment.years', locale: :cy) %>'
       };
 
       var locale = $('body').is('.locale-en') ? 'locale-en' : 'locale-cy';

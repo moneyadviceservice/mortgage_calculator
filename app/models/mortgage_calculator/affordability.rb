@@ -23,7 +23,7 @@ module MortgageCalculator
     end
 
     def total_income
-      @total_income ||= people.inject(0){|sum, p| sum + p.annual_income + p.extra_income}
+      @total_income ||= people.map(&:total_income).inject(:+)
     end
 
     def can_borrow_from
