@@ -6,6 +6,7 @@
     <div>
       <%= f.label :price %>
       <%= f.text_field :price,
+                       class: 'dynamic-slider-property',
                        "ng-model" => "stampDuty.propertyPrice",
                        "placeholder" => "£0.00",
                        "currency" => '',

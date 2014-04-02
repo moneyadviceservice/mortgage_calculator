@@ -4,13 +4,14 @@
   <div>
     <%= f.label :price %>
     <%= f.text_field :price,
+                     class: 'dynamic-slider-property',
                      "ng-model" => "stampDuty.propertyPrice",
                      "placeholder" => "£0.00",
                      "currency" => '',
                      "data-a-sign" =>"£",
                      "data-m-dec" =>"0" %>
 
-    <div class="slider" ui-slider min="0" max="2000000" step="1000" ng-model="stampDuty.propertyPrice"></div>
+    <div class="slider" ui-slider dynamic-for='dynamic-slider-property' ng-model="stampDuty.propertyPrice"></div>
 
   </div>
 
