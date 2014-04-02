@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "A Mortgage Calculator"
   s.description = "A Mortgage Calculator"
 
-  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*", "features/**/*"]
 
   s.add_dependency "rails", "~> 3.2.13"
