@@ -53,6 +53,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {
         $('input[name="repayment[price]"]:visible').focus();
+        $('input[name="stamp_duty[price]"]:visible').focus();
       });
     };
 

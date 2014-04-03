@@ -1,4 +1,35 @@
-<%= render 'top' %>
-<%= render 'form' %>
 
-<%= zendesk_feedback_tab(zendesk_stamp_duty_config) %>
+<%= render 'header' %>
+
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
+  <% @stamp_duty.errors.full_messages.each do |m| %>
+    <span style="color:red;"><%= m %></span>
+  <% end %>
+
+  <div wizard on-finish="finishedWizard()" hide-indicators='true'>
+
+    <div wz-step >
+      <%= render 'form_step1' %>
+    </div>
+
+    <div wz-step >
+      <div class="rendered-from-js">
+        <%= render 'calc_left_panel' %>
+        <%= render 'calc_right_panel' %>
+        <%= render 'bands_table' %>
+      </div>
+    </div>
+
+    <div wz-step >
+      <div class="rendered-from-js">
+        <%= render 'next_steps_content' %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<%= render 'caveat' %>
+
+<div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_stamp_duty_config) %></div>
