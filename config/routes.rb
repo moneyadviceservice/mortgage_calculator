@@ -8,6 +8,10 @@ MortgageCalculator::Engine.routes.draw do
   end
 
   if Settings.feature_toggles.enable_stamp_duty_calculator?
-    resource :stamp_duty
+    resource :stamp_duty do
+      collection do
+        get 'next_steps'
+      end
+    end
   end
 end
