@@ -32,7 +32,7 @@ Then(/^I see how much stamp duty I will have to pay$/) do
 end
 
 And(/^I see which band the stamp duty cost falls into$/) do
-  expect(@stamp_duty).to have_content("The 3% of your property price")
+  expect(@stamp_duty).to have_content("3% of your property price")
 end
 
 Then(/^I see the stamp duty I will have to pay is "(.*?)"$/) do |content|

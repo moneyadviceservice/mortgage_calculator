@@ -1,18 +1,14 @@
 <div class="mortgagecalc__panel">
-
   <div class="tabs">
-
     <div class="tabs__content">
       <div class="tabs__panel">
-        <h3 class="subheading hide-with-js">Stamp duty to pay is:</h3>
+        <h3 class="subheading"><%= I18n.t("mortgage_calculator.stamp_duty.results.title") %>:</h3>
         <%= render 'stamp_duty_payment' %>
       </div>
     </div>
-
-
   </div>
 
-  <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)">How is this calculated?</a></p>
+  <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("mortgage_calculator.stamp_duty.how_calculated_toggle") %></a></p>
 
   <div ng-show="expandedMortgageInformation">
     <%= render 'stamp_duty_tip' %>

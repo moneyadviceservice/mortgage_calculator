@@ -75,8 +75,23 @@ en:
         two: People who are self employed or are not in full-time employment may have other criteria to fulfil.
         three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.
     stamp_duty:
-      title: Calculate the Stamp duty on your property
-      subtitle: "Stamp duty is a tax based on the cost of the home you’re buying and is paid on the whole amount above £125,000.00"
+      title: Calculate the stamp duty on your residential property
+      subtitle: "Stamp duty is a tax on the cost of properties over £125, 000. There are different rates and thresholds depending on the price of the property"
       next: Next
       recalculate: Recalculate
       back: Back
+      how_calculated_toggle: "How is this calculated?"
+      how_calculated: "You'll pay a percentage of tax from 1% to 7%, depending on the price"
+      caveat:
+        title: Important
+        one: "This calculator should be used as a guide only and is based on rates and thresholds for residential purchases. For non-residential purposes the rates differ."
+        one_link_copy: Read more about stamp duty
+        one_link_url: "https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty"
+      results:
+        title: "Stamp duty to pay is"
+        sentence: "This is %{percentage} of your property price"
+        sentence_prefix: This is
+        sentence_suffix: "% of your property price"
+      table:
+        property_price_header: "Purchase price of property"
+        rate_header: "Rate of Stamp Duty"

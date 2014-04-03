@@ -1,7 +1,4 @@
-
-
 <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form' } do |f| %>
-
   <div class="mortgagecalc__panel">
     <div>
       <%= f.label :price %>
@@ -17,7 +14,6 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-
     <%= f.submit I18n.t("mortgage_calculator.stamp_duty.next"), class: "button button--primary mortgagecalc__submit",
                                            'ng-click' => 'navigateAndFocus($event)',
                                            'ng-disabled' => '!stampDuty.propertyPrice' %>

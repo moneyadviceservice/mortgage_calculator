@@ -1,4 +1,3 @@
-
 <%= render 'header' %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
@@ -7,7 +6,6 @@
   <% end %>
 
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
-
     <div wz-step >
       <%= render 'form_step1' %>
     </div>
@@ -16,7 +14,6 @@
       <div class="rendered-from-js">
         <%= render 'calc_left_panel' %>
         <%= render 'calc_right_panel' %>
-        <%= render 'bands_table' %>
       </div>
     </div>
 
@@ -25,11 +22,10 @@
         <%= render 'next_steps_content' %>
       </div>
     </div>
-
   </div>
-
 </div>
 
 <%= render 'caveat' %>
 
 <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_stamp_duty_config) %></div>
+
