@@ -13,9 +13,9 @@ Then(/^they do not see the result output$/) do
   expect(@stamp_duty).to_not have_results
 end
 
-When(/^they enter the cost of a property with "(.*?)"$/) do |amount|
+When(/^I enter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
-  @stamp_duty.submit.click if js_disabled?
+  @stamp_duty.next.click if js_disabled?
 end
 
 Then(/^they see "(.*?)"$/) do |content|
@@ -24,10 +24,21 @@ end
 
 When(/^I enter my house price$/) do
   @stamp_duty.property_price.set "300000"
-  @stamp_duty.submit.click
+  @stamp_duty.next.click
 end
 
 Then(/^I see how much stamp duty I will have to pay$/) do
-  expect(@stamp_duty).to have_content("Based on your total purchase price of £300,000.00, you will have to pay 3% in stamp duty, costing £9,000.00. Bringing your total spend to £309,000.00")
+  expect(@stamp_duty).to have_content("£9,000.00")
 end
 
+And(/^I see which band the stamp duty cost falls into$/) do
+  expect(@stamp_duty).to have_content("The 3% of your property price")
+end
+
+Then(/^I see the stamp duty I will have to pay is "(.*?)"$/) do |content|
+  expect(@stamp_duty).to have_content(content)
+end
+
+And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content|
+  expect(@stamp_duty).to have_content(content)
+end
