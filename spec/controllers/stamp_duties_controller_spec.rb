@@ -36,6 +36,15 @@ module MortgageCalculator
           response.should render_template('show')
         end
       end
+
+      context 'when price is invalid' do
+        render_views
+
+        it 'renders show template' do
+          post :create, stamp_duty: { price: "asd" }
+          response.should render_template('show')
+        end
+      end
     end
 
     describe :next_steps do

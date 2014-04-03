@@ -12,7 +12,7 @@
 
     <div wz-step >
       <div class="rendered-from-js">
-        <%= render 'calc_left_panel' %>
+        <%= render 'calc_left_panel' if @stamp_duty.valid? %>
         <%= render 'calc_right_panel' %>
       </div>
     </div>

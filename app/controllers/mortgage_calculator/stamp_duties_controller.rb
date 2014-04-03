@@ -13,7 +13,6 @@ module MortgageCalculator
     end
 
     def next_steps
-
     end
   end
 end
