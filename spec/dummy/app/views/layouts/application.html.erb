@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= yield :tool_heading if content_for(:tool_heading) %>
+
 <%= yield :tool_content %>
 
 </body>
