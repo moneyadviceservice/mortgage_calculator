@@ -77,7 +77,7 @@ en:
     stamp_duty:
       h1: Stamp Duty Calculator
       title: Calculate the stamp duty on your residential property
-      subtitle: "Stamp duty is a tax on the cost of properties over £125, 000. There are different rates and thresholds depending on the price of the property"
+      subtitle: "Stamp duty is a tax on the cost of properties over £125,000. There are different rates depending on the price of the property."
       next: Next
       recalculate: Recalculate
       back: Back
