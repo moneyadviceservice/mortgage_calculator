@@ -21,3 +21,11 @@ Feature: Google analytics
 #   When  I have entered some details into the repayment tool
 #   And   I refine my details
 #   Then  My repayment refinement interaction is tracked
+
+# @javascript
+# Scenario: When a user uses the stamp duty calculator
+#   Given I visit the stamp duty calculator
+#   When  I enter my house price
+#   And   I go to next steps
+#   Then  My stamp duty next steps interaction is tracked
+

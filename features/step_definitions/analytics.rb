@@ -35,3 +35,8 @@ Then(/^My repayment refinement interaction is tracked$/) do
   # hence fires the event twice
 end
 
+Then(/^My stamp duty next steps interaction is tracked$/) do
+  expected = ['_trackEvent','Stamp Duty Calculator','Next Steps','Click']
+  gaq = page.evaluate_script('window._gaq')
+  expect(gaq).to include(expected)
+end
