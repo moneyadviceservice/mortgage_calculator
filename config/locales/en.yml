@@ -41,14 +41,14 @@ en:
         title: "Three steps to lower your monthly payments:"
         tip_1:
           heading: Increase your deposit
-          info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
+          info_html: "Ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal"
         tip_2:
           heading: Find a cheaper property
-          info: consider looking in other areas
+          info: Consider looking in other areas
         tip_3:
           heading: "Shop around for a better mortgage deal"
-          info_html: "use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
+          info_html: "Use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
         learn_more:
           title: Learn about LTV
@@ -103,13 +103,13 @@ en:
       next_steps:
         title: "Three steps to help budget for costs"
         tip_1:
-          heading: Understand the true costs of buying a home
+          heading_html: "Understand the true costs of buying a home <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs
         tip_2:
-          heading: Work out your home buying budget
+          heading_html: "Work out your home buying budget <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner/short-form/edit/money-in
         tip_3:
-          heading: Build an emergency savings fund
+          heading_html: "Build an emergency savings fund <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
         learn_more:
           title: "Did you know?"
