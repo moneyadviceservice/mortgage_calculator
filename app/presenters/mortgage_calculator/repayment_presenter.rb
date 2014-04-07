@@ -16,39 +16,39 @@ module MortgageCalculator
     end
 
     def debt
-      number_to_currency model.debt, unit: nil
+      convert_to_currency(model.debt)
     end
 
     def price
-      number_to_currency model.price, unit: nil
+      convert_to_currency(model.price)
     end
 
     def deposit
-      number_to_currency model.deposit, unit: nil
+      convert_to_currency(model.deposit)
     end
 
     def term_years
-      return nil if model.term_years.blank?
-
-      model.term_years
+      model.term_years.presence
     end
 
     def interest_rate
-      return nil if model.interest_rate.blank?
-
-      model.interest_rate
+      model.interest_rate.presence
     end
 
     def monthly_payment
-      number_to_currency model.monthly_payment, unit: nil
+      convert_to_currency(model.monthly_payment)
     end
 
     def total_interest
-      number_to_currency model.total_interest, unit: nil
+      convert_to_currency(model.total_interest)
     end
 
     def total_payable
-      number_to_currency model.total_payable, unit: nil
+      convert_to_currency(model.total_payable)
+    end
+
+    def convert_to_currency(value)
+      number_to_currency(value.presence || 0, unit: '')
     end
 
     def self.model_name
