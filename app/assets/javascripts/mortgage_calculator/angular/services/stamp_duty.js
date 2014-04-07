@@ -1,7 +1,6 @@
 'use strict';
 
 App.factory('StampDuty', function() {
-
     var stampDuty = {
       propertyPrice : 0,
       rates         : [
@@ -13,16 +12,14 @@ App.factory('StampDuty', function() {
         {'0'       : 0}
       ],
 
-
       rate : function() {
         var value = _.find(this.rates, function(el) {
           var thresh = Number(_.keys(el));
-          return this.propertyPrice >= thresh;
+          return this.propertyPrice > thresh;
         }, this);
 
         var appliedRate = Number(_.values(value));
         return appliedRate;
-
       },
 
       percentRate : function() {
@@ -36,11 +33,8 @@ App.factory('StampDuty', function() {
       totalPurchase : function() {
         return (this.propertyPrice + this.cost());
       }
-
     };
 
     return stampDuty;
   });
-
-
 

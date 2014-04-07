@@ -1,9 +1,7 @@
 'use strict';
 
 describe('Service: StampDuty', function () {
-
   beforeEach(module('mortgageCalculatorApp'));
-
 
   var stampDuty,
       setPrice = function(price) {
@@ -19,37 +17,31 @@ describe('Service: StampDuty', function () {
     expect(!!stampDuty).toBe(true);
   });
 
-
   describe('#rate', function() {
-
     it('calculates the stamp duty percentage rate of a property price', function () {
       expect(stampDuty.rate()).toBe(0.03);
     });
   });
 
   describe('#percentRate', function() {
-
     it('returns the percentage rate of a stamp duty rate', function () {
       expect(stampDuty.percentRate()).toBe(3);
     });
   });
 
   describe('#cost', function() {
-
     it('calculates the stamp duty cost of a property price', function () {
       expect(stampDuty.cost()).toBe(7800);
     });
   });
 
   describe('#totalPurchase', function() {
-
     it('calculates the total purchase price of a property including the stamp duty cost', function () {
       expect(stampDuty.totalPurchase()).toBe(267800);
     });
   });
 
   describe('Stamp Duty Bands', function() {
-
     it('applies no stamp duty rate for properties less than £125000', function () {
       setPrice(120000);
       expect(stampDuty.rate()).toBe(0);
@@ -64,6 +56,14 @@ describe('Service: StampDuty', function () {
       expect(stampDuty.percentRate()).toBe(1);
       expect(stampDuty.cost()).toBe(1260);
       expect(stampDuty.totalPurchase()).toBe(127260);
+    });
+
+    it('applies a 1% rate for properties exactly £250000', function () {
+      setPrice(250000);
+      expect(stampDuty.rate()).toBe(0.01);
+      expect(stampDuty.percentRate()).toBe(1);
+      expect(stampDuty.cost()).toBe(2500);
+      expect(stampDuty.totalPurchase()).toBe(252500);
     });
 
     it('applies a 3% rate for properties over £250000', function () {
@@ -97,11 +97,6 @@ describe('Service: StampDuty', function () {
       expect(stampDuty.cost()).toBe(147000);
       expect(stampDuty.totalPurchase()).toBe(2247000);
     });
-
   });
-
-
-
-
-
 });
+
