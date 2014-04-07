@@ -15,7 +15,7 @@ App.factory('StampDuty', function() {
       rate : function() {
         var value = _.find(this.rates, function(el) {
           var thresh = Number(_.keys(el));
-          return this.propertyPrice > thresh;
+          return this.propertyPrice >= thresh;
         }, this);
 
         var appliedRate = Number(_.values(value));
