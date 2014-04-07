@@ -4,17 +4,15 @@
   <ol class="featured-list">
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_1.heading") %> -</strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_1.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_1.url"), target: "_blank" %></li>
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.heading") %> -</strong> <%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.info") %></li>
-    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.heading") %> -</strong> <%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.info") %></li>
+    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.heading") %> -</strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_3.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_3.url"), target: "_blank" %></li>
   </ol>
 </div>
 
 <div class="mortgagecalc__panel">
-
   <div class="callout">
     <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.title") %>:</h5>
-    <p><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.tip_1").html_safe %></p>
+    <p><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.tip_1").html_safe %> <%= link_to t("mortgage_calculator.repayment.next_steps.learn_more.more.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.learn_more.more.url"), target: "_blank" %></p>
   </div>
-
 </div>
 
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge mortgagecalc__panel--with-form">

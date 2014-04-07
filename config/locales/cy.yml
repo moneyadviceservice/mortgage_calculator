@@ -8,15 +8,18 @@ cy:
           deposit: Y blaendal sydd ar gael yw
           term_years: Cyfnod y morgais yw
           interest_rate: Cyfradd llog yw
+        mortgage_calculator/stamp_duty:
+          price: Cyfanswm pris yr eiddo yw
     repayment:
       title: Cyfrifwch eich taliad morgais misol
+      subtitle: "Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau."
       next: Nesaf
       back: Yn ôl
       a_month: bob mis
-      years: mlynedd
-      recalculate: Recalculate
+      recalculate: Ailgyfrifo
       interest_only: Llog yn unig
       repayment: Ad-daliad
+      years: mlynedd
       step_1:
         intro: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
       tabs:
@@ -45,10 +48,14 @@ cy:
           info: ystyriwch chwilio am gartrefi mewn ardaloedd eraill
         tip_3:
           heading: Cynyddu hyd eich morgais
-          info: byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan
+          info_html: "byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
         learn_more:
           title: Dysgu mwy
-          tip_1: Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is
+          tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
+          more:
+            copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
         find_out_more:
           title: Dewch o hyd i ragor
           tip_1:

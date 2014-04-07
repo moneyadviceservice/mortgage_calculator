@@ -42,16 +42,20 @@ en:
         tip_1:
           heading: Increase your deposit
           info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/search?utf8=%E2%9C%93&query=ideas+to+help+save+money&commit=Search"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal"
         tip_2:
-          heading: Decrease the price of the property
-          info: consider looking for homes in other areas
+          heading: Find a cheaper property
+          info: consider looking in other areas
         tip_3:
-          heading: "Increase the length of your mortgage"
-          info: "be aware this means you'll pay back more in interest overall"
+          heading: "Shop around for a better mortgage deal"
+          info_html: "use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
+          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
         learn_more:
-          title: Learn more
+          title: Learn about LTV
           tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
+          more:
+            copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
         find_out_more:
           title: Find out more
           tip_1:
