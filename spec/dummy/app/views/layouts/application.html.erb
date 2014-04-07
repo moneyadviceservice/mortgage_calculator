@@ -6,7 +6,7 @@
   <%= yield :head if content_for?(:head) %>
   <%= yield :analytics if content_for(:analytics) %>
 </head>
-<body>
+<body class="locale-<%= I18n.locale %>">
 
 <%= yield :tool_heading if content_for(:tool_heading) %>
 
