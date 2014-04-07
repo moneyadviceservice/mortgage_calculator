@@ -14,7 +14,10 @@
       <div class="rendered-from-js">
         <%= render 'calc_left_panel' if @stamp_duty.valid? %>
         <%= render 'calc_right_panel' %>
-        <%= render 'stamp_duty_tip' %>
+
+        <div class="mortgagecalc__panel mortgagecalc__panel--full" ng-show="expandedMortgageInformation">
+          <%= render 'stamp_duty_tip' %>
+        </div>
       </div>
     </div>
 
