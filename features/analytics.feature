@@ -10,6 +10,13 @@ Feature: Google analytics
 #   Then  My repayment completion interaction is tracked
 
 # @javascript
+# Scenario: When a user uses the mortgage calculator
+#   Given I visit the Repayment calculator
+#   When  I have entered some details into the repayment tool
+#   And   I go to mortgage calculator next steps
+#   Then  My repayment next steps interaction is tracked
+
+# @javascript
 # Scenario: When a user uses the stamp duty calculator
 #   Given I visit the stamp duty calculator
 #   When  I enter my house price

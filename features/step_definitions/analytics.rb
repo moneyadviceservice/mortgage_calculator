@@ -40,3 +40,10 @@ Then(/^My stamp duty next steps interaction is tracked$/) do
   gaq = page.evaluate_script('window._gaq')
   expect(gaq).to include(expected)
 end
+
+Then(/^My repayment next steps interaction is tracked$/) do
+  expected = ['_trackEvent','Mortgage Calculator','Next Steps','Click']
+  gaq = page.evaluate_script('window._gaq')
+  expect(gaq).to include(expected)
+end
+

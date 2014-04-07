@@ -48,3 +48,7 @@ Then(/^I do not see any repayments$/) do
   expect(@repayment).to have_content("£0.00")
 end
 
+When(/^I go to mortgage calculator next steps$/) do
+  @repayment.next_steps.click
+end
+
