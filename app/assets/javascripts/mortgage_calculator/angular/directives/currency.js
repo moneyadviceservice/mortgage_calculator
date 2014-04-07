@@ -1,26 +1,34 @@
-App.directive('currency', function () {
-    var linker = function (scope, element, attrs, ctrl) {
-        element.autoNumeric('init');
+App.directive('currency', function() {
+  var linker = function(scope, element, attrs, ngModel) {
+    element.autoNumeric('init');
 
-        ctrl.$parsers.unshift(function (viewValue) {
-          if (viewValue) {
-            return parseInt(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
-          }
-        });
+    if (!ngModel) return;
 
-        ctrl.$formatters.unshift(function (a) {
-         if (a)
-          return element.autoNumeric('set', a).val();
-        });
+    ngModel.$render = function () {
+      element.autoNumeric('set', (ngModel.$viewValue || ''));
     };
 
-    var controller = function ($scope) {
-    };
+    element.on('change keyup', function () {
+      scope.$apply(function () {
+        ngModel.$setViewValue(element.val());
+      });
+    });
 
-    return {
-        restrict: 'A',
-        require: 'ngModel',
-        controller: controller,
-        link: linker
-    };
+    ngModel.$parsers.unshift(function(viewValue) {
+      if (viewValue) {
+        return parseInt(viewValue.replace(/[^\d|\-+|\.+]/g, ''));
+      }
+    });
+
+  };
+
+  var controller = function($scope) {
+  };
+
+  return {
+    restrict: 'A',
+    require: '?ngModel',
+    controller: controller,
+    link: linker
+  };
 });

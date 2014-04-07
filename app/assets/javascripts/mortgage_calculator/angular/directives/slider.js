@@ -29,7 +29,7 @@ App.directive('uiSlider', function() {
     };
 
     //Reconfigre slider when input blurs
-    input.on('blur', function() {
+    input.on('blur keyup', function() {
       value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, ''));
       element.slider({
         min: value / 2,
