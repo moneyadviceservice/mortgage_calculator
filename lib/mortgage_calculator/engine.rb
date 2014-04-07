@@ -37,10 +37,10 @@ module MortgageCalculator
 
     initializer :append_frontend_assets do |app|
       app.config.assets.paths << Engine.root.join("vendor", "assets", "components")
-      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
-      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "frontend", "vendor", "assets", "fonts")
-      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets")
-      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "frontend", "app", "assets", "stylesheets", "lib")
+      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets")
+      app.config.assets.paths << Engine.root.join("vendor", "assets", "components", "mortgage_calculator", "frontend", "vendor", "assets", "fonts")
+      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets")
+      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets", "lib")
     end
   end
 end
