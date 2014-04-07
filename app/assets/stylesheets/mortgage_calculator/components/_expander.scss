@@ -7,4 +7,8 @@
   &.expander--expanded {
     background-position: 0 -66px;
   }
+
+  &.expander--nudge {
+    margin-top: 15px;
+  }
 }

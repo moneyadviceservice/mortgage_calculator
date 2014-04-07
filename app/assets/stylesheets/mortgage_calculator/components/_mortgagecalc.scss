@@ -63,6 +63,7 @@
 
   &.mortgagecalc__panel--with-form {
     padding-bottom: 50px;
+    min-height: 150px;
   }
 }
 
@@ -111,4 +112,10 @@
 .previous {
   @extend .mortgagecalc__submit;
   margin-right: 100px;
+}
+
+.mortgagecalc__table {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 78px;
 }
