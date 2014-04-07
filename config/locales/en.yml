@@ -41,14 +41,14 @@ en:
         title: "Three steps to lower your monthly payments:"
         tip_1:
           heading: Increase your deposit
-          info_html: "ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
+          info_html: "Ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal"
         tip_2:
           heading: Find a cheaper property
-          info: consider looking in other areas
+          info: Consider looking in other areas
         tip_3:
           heading: "Shop around for a better mortgage deal"
-          info_html: "use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
+          info_html: "Use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
         learn_more:
           title: Learn about LTV

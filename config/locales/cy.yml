@@ -41,14 +41,14 @@ cy:
         title: "3 cham i leihau eich ad-daliadau misol:"
         tip_1:
           heading: Cynyddu eich blaendal
-          info_html: "syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          info_html: "Syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://www.moneyadviceservice.org.uk/cy/search?utf8=%E2%9C%93&query=arbed+arian&commit=Mynd"
         tip_2:
           heading: Gostwng pris yr eiddo
-          info: ystyriwch chwilio am gartrefi mewn ardaloedd eraill
+          info: Ystyriwch chwilio am gartrefi mewn ardaloedd eraill
         tip_3:
           heading: Cynyddu hyd eich morgais
-          info_html: "byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          info_html: "Byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
           url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
         learn_more:
           title: Dysgu mwy
