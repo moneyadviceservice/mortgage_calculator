@@ -103,13 +103,13 @@ en:
       next_steps:
         title: "Three steps to help budget for costs"
         tip_1:
-          heading: Understand the true costs of buying a home
+          heading_html: "Understand the true costs of buying a home <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs
         tip_2:
-          heading: Work out your home buying budget
+          heading_html: "Work out your home buying budget <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner/short-form/edit/money-in
         tip_3:
-          heading: Build an emergency savings fund
+          heading_html: "Build an emergency savings fund <span class='visually-hidden'>(opens in a new window)</span>"
           url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
         learn_more:
           title: "Did you know?"
