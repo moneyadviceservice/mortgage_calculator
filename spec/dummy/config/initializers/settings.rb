@@ -1,3 +1,1 @@
-Settings = OpenStruct.new
-Settings.feature_toggles = OpenStruct.new(:enable_stamp_duty_calculator? => true)
-
+MortgageCalculator.stamp_duty_enabled = true
