@@ -3,16 +3,17 @@ Feature: Google analytics
   As a MAS minion
   We want to measure the activity of our users
 
-Scenario: When a user uses the mortgage calculator
-  Given I visit the Repayment calculator
-  When  I have entered some details into the repayment tool
-  Then  My repayment completion interaction is tracked
-
 # @javascript
 # Scenario: When a user uses the mortgage calculator
 #   Given I visit the Repayment calculator
 #   When  I have entered some details into the repayment tool
 #   Then  My repayment completion interaction is tracked
+
+# @javascript
+# Scenario: When a user uses the stamp duty calculator
+#   Given I visit the stamp duty calculator
+#   When  I enter my house price
+#   Then  My stamp duty completion interaction is tracked
 
 # @javascript
 # Scenario: When a user uses the mortgage calculator

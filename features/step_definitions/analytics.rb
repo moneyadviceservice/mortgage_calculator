@@ -9,6 +9,12 @@ Then(/^My repayment completion interaction is tracked$/) do
   end
 end
 
+Then(/^My stamp duty completion interaction is tracked$/) do
+  expected = ['_trackEvent','Stamp Duty Calculator','Completion','Click']
+  gaq = page.evaluate_script('window._gaq')
+  expect(gaq).to include(expected)
+end
+
 When(/^I refine my details$/) do
   @repayment.step_two_price.set "200000"
   @repayment.step_two_deposit.set "20000"

@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-Given /^I visit the Stamp Duty page$/ do
+Given /^I visit the Stamp Duty (?:page|calculator)$/i do
   @stamp_duty = UI::Pages::StampDuty.new
   @stamp_duty.load
 end
