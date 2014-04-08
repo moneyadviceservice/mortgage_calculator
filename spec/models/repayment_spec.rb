@@ -35,11 +35,11 @@ describe MortgageCalculator::Repayment do
 
   describe :change_interest_rate_by do
     it 'increases the interest rate' do
-      subject.change_interest_rate_by(1).interest_rate.should == 8.5
+      expect(subject.change_interest_rate_by(1).interest_rate).to eq(8.5)
     end
 
     it 'decreases the interest rate' do
-      subject.change_interest_rate_by(-1).interest_rate.should == 6.5
+      expect(subject.change_interest_rate_by(-1).interest_rate).to eq(6.5)
     end
   end
 
@@ -48,22 +48,22 @@ describe MortgageCalculator::Repayment do
       subject{ described_class.new price: "", deposit: "20000", term_years: "25", interest_rate: "7.5" }
 
       it 'is not valid' do
-        subject.should_not be_valid
+        expect(subject).not_to be_valid
       end
     end
 
     it 'interest rate must be greater than zero' do
       subject = described_class.new price: "100000", term_years: "25", interest_rate: "0"
-      subject.should_not be_valid
+      expect(subject).not_to be_valid
       subject = described_class.new price: "100000", term_years: "25", interest_rate: "0.01"
-      subject.should be_valid
+      expect(subject).to be_valid
     end
 
     it 'term years must be greater than zero' do
       subject = described_class.new price: "100000", term_years: "0", interest_rate: "1"
-      subject.should_not be_valid
+      expect(subject).not_to be_valid
       subject = described_class.new price: "100000", term_years: "25", interest_rate: "1"
-      subject.should be_valid
+      expect(subject).to be_valid
     end
   end
 
@@ -83,13 +83,13 @@ describe MortgageCalculator::Repayment do
     it 'returns correct remaining balances' do
       balances = subject.remaining_balances
 
-      balances.first.should == 100000
+      expect(balances.first).to eq(100000)
 
-      balances[1].should be_within(1).of(98585)
-      balances[10].should be_within(1).of(79718)
-      balances[24].should be_within(1).of(8518)
+      expect(balances[1]).to be_within(1).of(98585)
+      expect(balances[10]).to be_within(1).of(79718)
+      expect(balances[24]).to be_within(1).of(8518)
 
-      balances.last.should be_within(1).of(0)
+      expect(balances.last).to be_within(1).of(0)
     end
   end
 end

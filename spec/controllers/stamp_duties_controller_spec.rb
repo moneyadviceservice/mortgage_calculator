@@ -10,30 +10,30 @@ module MortgageCalculator
       end
 
       it 'the stamp duty calculator is not available' do
-        Settings.feature_toggles.stub(:enable_stamp_duty_calculator?){ false }
+        allow(Settings.feature_toggles).to receive(:enable_stamp_duty_calculator?){ false }
 
         get :show
-        response.should_not be_success
+        expect(response).not_to be_success
       end
     end
 
     describe :show do
       it 'responds with 200' do
         get :show
-        response.should be_success
+        expect(response).to be_success
       end
     end
 
     describe :create do
       it 'responds with 200' do
         post :create, stamp_duty: { price: "200000" }
-        response.should be_success
+        expect(response).to be_success
       end
 
       context 'when the price is blank' do
         it 'renders show template' do
           post :create, stamp_duty: { price: "" }
-          response.should render_template('show')
+          expect(response).to render_template('show')
         end
       end
 
@@ -42,7 +42,7 @@ module MortgageCalculator
 
         it 'renders show template' do
           post :create, stamp_duty: { price: "asd" }
-          response.should render_template('show')
+          expect(response).to render_template('show')
         end
       end
     end

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MortgageCalculator::StampDuty do
   describe 'default state' do
     it 'sets price to zero' do
-      subject.price.should be_zero
+      expect(subject.price).to be_zero
     end
   end
 
@@ -17,7 +17,7 @@ describe MortgageCalculator::StampDuty do
 
       it 'has errors' do
         subject.valid?
-        subject.errors.should_not be_empty
+        expect(subject.errors).not_to be_empty
       end
     end
 
@@ -26,7 +26,7 @@ describe MortgageCalculator::StampDuty do
 
       it 'has errors' do
         subject.valid?
-        subject.errors.should_not be_empty
+        expect(subject.errors).not_to be_empty
       end
     end
 

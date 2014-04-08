@@ -8,13 +8,13 @@ module MortgageCalculator
     describe 'class methods' do
       describe :model_name do
         it 'is the same as repayment model' do
-          described_class.model_name.should == MortgageCalculator::Repayment.to_s
+          expect(described_class.model_name).to eq(MortgageCalculator::Repayment.to_s)
         end
       end
     end
 
-    its(:to_key){ subject.to_key.should be_nil }
-    its(:persisted?){ subject.persisted?.should be_false }
+    its(:to_key){ expect(subject.to_key).to be_nil }
+    its(:persisted?){ expect(subject.persisted?).to be_false }
 
     its(:price){ should == "320,000.00" }
     its(:deposit){ should == "20,000.00" }

@@ -16,7 +16,7 @@ module MortgageCalculator
         subject{ described_class.new([person1], 'abc') }
 
         it 'is not valid' do
-          subject.valid?.should be_false
+          expect(subject).to_not be_valid
         end
       end
 
@@ -25,7 +25,7 @@ module MortgageCalculator
         subject{ described_class.new([person1], '0') }
 
         it 'is not valid' do
-          subject.valid?.should be_false
+          expect(subject).to_not be_valid
         end
       end
 
@@ -35,7 +35,7 @@ module MortgageCalculator
         subject{ described_class.new([person1], '') }
 
         it 'is valid' do
-          subject.valid?.should be_true
+          expect(subject).to be_valid
         end
       end
     end
