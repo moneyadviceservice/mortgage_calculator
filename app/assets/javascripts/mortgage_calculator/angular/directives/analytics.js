@@ -22,9 +22,8 @@ App.directive('analytics', function () {
           var refined = element.attr('refined');
           if (!(typeof refined !== 'undefined' && refined !== false)) {
             _gaq.push(['_trackEvent',category,action,label]);
+            element.attr('refined', '');
           }
-
-          element.attr('refined', '');
         } else {
           _gaq.push(['_trackEvent',category,action,label]);
         }
