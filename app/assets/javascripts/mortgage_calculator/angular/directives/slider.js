@@ -6,12 +6,22 @@ App.directive('uiSlider', function() {
     //Dynamically grab input id passed in from view
     var input = angular.element("input." + attrs.dynamicFor),
       expression = {},
-      value,
-      debouncer;
+      value;
 
     var gaRefinement = function(){
       window._gaq = window._gaq || [];
-      // window._gaq.push(['_trackEvent','Mortgage Calculator','Refinement','Click']);
+
+      category = attrs['analyticsCategory'];
+      action = attrs['analyticsAction'];
+      label = attrs['analyticsLabel'];
+      var refined = element.attr('refined');
+
+      if (action == 'Refinement') {
+        if (!(typeof refined !== 'undefined' && refined !== false)) {
+          window._gaq.push(['_trackEvent',category,action,label]);
+          element.attr('refined', '');
+        }
+      }
     };
 
     //Set initial slider state
@@ -21,9 +31,7 @@ App.directive('uiSlider', function() {
       slide: function (event, ui) {
           scope.$apply(function () {
               scope.value = ui.value;
-
-              clearTimeout(debouncer);
-              debouncer = setTimeout(gaRefinement, 300);
+              gaRefinement();
           });
       }
     };
