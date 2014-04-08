@@ -21,3 +21,10 @@ module UI
   end
 end
 
+module UI
+  module Pages
+    class WelshStampDuty < StampDuty
+      set_url "/cy/mortgage_calculator/treth_stamp"
+    end
+  end
+end

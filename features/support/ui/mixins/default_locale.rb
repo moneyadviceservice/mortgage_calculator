@@ -1,11 +1,7 @@
 module UI
   module DefaultLocale
     def locale
-      @locale || "en"
-    end
-
-    def locale=(value)
-      @locale = value
+      "en"
     end
 
     def url(expansion = {})

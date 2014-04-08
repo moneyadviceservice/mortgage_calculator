@@ -13,5 +13,11 @@ MortgageCalculator::Engine.routes.draw do
         get 'next_steps'
       end
     end
+
+    resource :stamp_duty, path: 'treth_stamp' do
+      collection do
+        get 'next_steps'
+      end
+    end
   end
 end

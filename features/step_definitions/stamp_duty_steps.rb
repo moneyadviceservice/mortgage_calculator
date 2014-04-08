@@ -4,7 +4,7 @@ Given /^I visit the( Welsh)? Stamp Duty (?:page|calculator)$/i do |welsh|
   welsh = (welsh =~ /welsh/i)
 
   @stamp_duty = UI::Pages::StampDuty.new
-  @stamp_duty.locale = "cy" if welsh
+  @stamp_duty = UI::Pages::WelshStampDuty.new if welsh
 
   @stamp_duty.load
 end
