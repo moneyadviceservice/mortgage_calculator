@@ -69,6 +69,15 @@
   }
 }
 
+.mortgagecalc__form {
+  margin-top: -6px;
+
+  &.mortgagecalc__form--pull {
+    margin-top: -20px;
+  }
+
+}
+
 .mortgagecalc__payment {
   @extend .mortgagecalc__heading;
   font-weight: 700;
