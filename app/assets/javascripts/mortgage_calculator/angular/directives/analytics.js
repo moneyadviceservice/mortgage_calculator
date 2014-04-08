@@ -10,6 +10,17 @@ App.directive('analytics', function () {
         _gaq.push(['_trackEvent',category,action,label]);
       }
     });
+
+    element.on('change', function(){
+      type = attrs['analyticsOn'];
+      category = attrs['analyticsCategory'];
+      action = attrs['analyticsAction'];
+      label = attrs['analyticsLabel'];
+
+      if (type == 'change'){
+        _gaq.push(['_trackEvent',category,action,label]);
+      }
+    });
   };
 
   return {

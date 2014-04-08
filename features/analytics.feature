@@ -22,12 +22,12 @@ Scenario: When a user uses the stamp duty calculator
   When  I enter my house price
   Then  My stamp duty completion interaction is tracked
 
-# @javascript
-# Scenario: When a user uses the mortgage calculator
-#   Given I visit the Repayment calculator
-#   When  I have entered some details into the repayment tool
-#   And   I refine my details
-#   Then  My repayment refinement interaction is tracked
+@javascript
+Scenario: When a user uses the mortgage calculator
+  Given I visit the Repayment calculator
+  When  I have entered some details into the repayment tool
+  And   I refine my details
+  Then  My repayment refinement interaction is tracked
 
 @javascript
 Scenario: When a user uses the stamp duty calculator
