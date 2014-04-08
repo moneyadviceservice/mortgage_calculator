@@ -1,7 +1,11 @@
 # encoding: UTF-8
 
-Given /^I visit the Stamp Duty (?:page|calculator)$/i do
+Given /^I visit the( Welsh)? Stamp Duty (?:page|calculator)$/i do |welsh|
+  welsh = (welsh =~ /welsh/i)
+
   @stamp_duty = UI::Pages::StampDuty.new
+  @stamp_duty.locale = "cy" if welsh
+
   @stamp_duty.load
 end
 
@@ -45,5 +49,9 @@ end
 
 When(/^I go to next steps$/) do
   @stamp_duty.next_steps.click
+end
+
+Then(/^I see the Welsh stamp duty calculator$/) do
+  expect(@stamp_duty.h1).to have_content('Cyfrifiannell Treth Stamp')
 end
 

@@ -5,6 +5,7 @@ module UI
 
       set_url "/{locale}/mortgage_calculator/stamp_duty"
 
+      element :h1, "h1"
       element :h2, "h2"
       element :property_price, "form.new_stamp_duty input[name='stamp_duty[price]']"
       element :property_price_step_two, "form.step_two input[name='stamp_duty[price]']"

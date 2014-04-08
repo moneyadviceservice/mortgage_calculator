@@ -7,6 +7,10 @@ Scenario: Can view the Stamp Duty Calculator
   Given I visit the Stamp Duty page
   Then they should see the Stamp Duty calculator
 
+Scenario: Welsh users
+  Given I visit the Welsh Stamp Duty page
+  Then  I see the Welsh stamp duty calculator
+
 @javascript
 Scenario: When javascript is enabled
   Given I visit the Stamp Duty page
