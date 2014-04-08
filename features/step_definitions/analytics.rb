@@ -17,6 +17,8 @@ end
 
 When(/^I refine my details$/) do
   @repayment.step_two_price.set "200000"
+  @repayment.step_two_price.set "300000"
+  @repayment.step_two_price.set "400000"
   @repayment.step_two_deposit.set "20000"
 
   @repayment.term_years.set "30"
@@ -26,7 +28,7 @@ end
 Then(/^My repayment refinement interaction is tracked$/) do
   expected = ['_trackEvent','Mortgage Calculator','Refinement','Price']
   gaq = page.evaluate_script('window._gaq')
-  expect(gaq).to include(expected)
+  expect(gaq.count(expected)).to eql(1)
 end
 
 Then(/^My stamp duty next steps interaction is tracked$/) do

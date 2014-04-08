@@ -18,7 +18,16 @@ App.directive('analytics', function () {
       label = attrs['analyticsLabel'];
 
       if (type == 'change'){
-        _gaq.push(['_trackEvent',category,action,label]);
+        if (action == 'Refinement') {
+          var refined = element.attr('refined');
+          if (!(typeof refined !== 'undefined' && refined !== false)) {
+            _gaq.push(['_trackEvent',category,action,label]);
+          }
+
+          element.attr('refined', '');
+        } else {
+          _gaq.push(['_trackEvent',category,action,label]);
+        }
       }
     });
   };
