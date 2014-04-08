@@ -11,9 +11,14 @@
                      "data-a-sign" =>"£",
                      "data-m-dec" =>"0",
                      "aria-labelledby" => "label_price",
-                     "analytics-refinement" => '' %>
+                     "analytics" => '',
+                     "analytics-on" => 'change',
+                     "analytics-category" => 'Mortgage Calculator',
+                     "analytics-action" => 'Refinement',
+                     "analytics-label" => 'Price'
+                     %>
 
-    <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price"></div>
+    <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
   </div>
 
   <div>
@@ -28,9 +33,14 @@
                      "data-a-sign" =>"£",
                      "data-m-dec" =>"0",
                      "aria-labelledby" => "label_deposit",
-                     "analytics-refinement" => '' %>
+                     "analytics" => '',
+                     "analytics-on" => 'change',
+                     "analytics-category" => 'Mortgage Calculator',
+                     "analytics-action" => 'Refinement',
+                     "analytics-label" => 'Deposit'
+                     %>
 
-    <div class="slider deposit" ui-slider dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit"></div>
+    <div class="slider deposit" ui-slider dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Deposit"></div>
   </div>
 
   <div>
@@ -41,9 +51,14 @@
                      "placeholder" => "eg 25",
                      "year" => "",
                      "aria-labelledby" => "label_term",
-                     "analytics-refinement" => '' %>
+                     "analytics" => '',
+                     "analytics-on" => 'change',
+                     "analytics-category" => 'Mortgage Calculator',
+                     "analytics-action" => 'Refinement',
+                     "analytics-label" => 'Years'
+                     %>
 
-    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears" aria-labelledby="label_term"></div>
+    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears" aria-labelledby="label_term" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Years"></div>
   </div>
 
   <div>
@@ -56,9 +71,14 @@
                      "data-a-sign" => "%",
                      "data-p-sign" => "s",
                      "aria-labelledby" => "label_rate",
-                     "analytics-refinement" => '' %>
+                     "analytics" => '',
+                     "analytics-on" => 'change',
+                     "analytics-category" => 'Mortgage Calculator',
+                     "analytics-action" => 'Refinement',
+                     "analytics-label" => 'Interest Rate'
+                     %>
 
-    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate" aria-labelledby="label_rate"></div>
+    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate" aria-labelledby="label_rate" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Interest Rate"></div>
   </div>
 
   <div class="hide-with-js">

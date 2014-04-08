@@ -8,6 +8,7 @@ module UI
       element :price, "form.new_repayment input[name='repayment[price]']"
       element :deposit, "form.new_repayment input[name='repayment[deposit]']"
       element :next, "form.new_repayment input[type=submit]"
+      element :next_steps, "a[href^='/en/mortgage_calculator/repayment/next_steps']"
 
       element :step_two_price, "form.step_two input[name='repayment[price]']"
       element :step_two_deposit, "form.step_two input[name='repayment[deposit]']"

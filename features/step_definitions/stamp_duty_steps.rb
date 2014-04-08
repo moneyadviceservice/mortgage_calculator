@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-Given /^I visit the Stamp Duty page$/ do
+Given /^I visit the Stamp Duty (?:page|calculator)$/i do
   @stamp_duty = UI::Pages::StampDuty.new
   @stamp_duty.load
 end
@@ -42,3 +42,8 @@ end
 And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
 end
+
+When(/^I go to next steps$/) do
+  @stamp_duty.next_steps.click
+end
+

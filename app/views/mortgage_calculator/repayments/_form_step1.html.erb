@@ -33,10 +33,15 @@
                        "aria-labelledby" => "label_initial_deposit" %>
     </div>
 
-    <%= f.submit I18n.t("mortgage_calculator.repayment.next"), class: "button button--primary mortgagecalc__submit",
-                                           'ng-click' => 'navigateAndFocus($event)',
-                                           'analytics-completion' => '',
-                                           'ng-disabled' => '!repayments.propertyPrice' %>
+    <%= f.submit I18n.t("mortgage_calculator.repayment.next"),
+                 class: "button button--primary mortgagecalc__submit",
+                 'ng-click' => 'navigateAndFocus($event)',
+                 'analytics' => '',
+                 'analytics-on' => 'click',
+                 'analytics-category' => 'Mortgage Calculator',
+                 'analytics-action' => 'Completion',
+                 'analytics-label' => 'Click',
+                 'ng-disabled' => '!repayments.propertyPrice' %>
 
 
     <div ng-class="{ 'visibly-hidden' : !repayments.propertyPrice }" class="callout">
