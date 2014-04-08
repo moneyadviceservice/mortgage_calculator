@@ -1,42 +1,12 @@
 module MortgageCalculator
-  class StampDutyPresenter
-    extend ActiveModel::Translation
-    include ActionView::Helpers::NumberHelper
+  class StampDutyPresenter < CalculatorPresenter
 
-    def self.i18n_scope
-      "mortgage_calculator.activemodel"
-    end
+    convert_to_currency :price, :tax_due, :total_due
 
-    attr_reader :model
-
-    delegate :persisted?, :valid?, :errors, to: :model
-
-    def initialize(model)
-      @model = model
-    end
-
-    def price
-      number_to_currency model.price, unit: nil
-    end
-
-    def percentage_rate
-      model.percentage_rate
-    end
-
-    def tax_due
-      number_to_currency model.tax_due, unit: nil
-    end
-
-    def total_due
-      number_to_currency model.total_due, unit: nil
-    end
+    delegate :percentage_rate, to: :model
 
     def self.model_name
       StampDuty.model_name
-    end
-
-    def to_key
-      nil
     end
   end
 end
