@@ -79,7 +79,7 @@ cy:
         two: Efallai bydd gan bobl sydd yn hunangyflogedig neu nad ydynt mewn cyflogaeth llawn amser feini prawf eraill i’w cwrdd.
         three: Cyn ymgeisio am forgais, dylid gwirio eich statws credyd a gwneud yn siŵr eich bod wedi eich cofrestru ar y gofrestr etholiadol.
     stamp_duty:
-      pretitle: Use this calculator to work out much stamp duty you’ll need to pay on a new home
+      pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
       h1: "Cyfrifiannell treth stamp"
       title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
       subtitle: "Mae treth stamp yn dreth ar gost eiddo dros £125,000. Mae gwahanol gyfraddau gan ddibynnu ar bris yr eiddo."
