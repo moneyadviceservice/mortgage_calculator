@@ -6,4 +6,5 @@ module MortgageCalculator
   DAYS_IN_A_YEAR = 365.242
 
   mattr_accessor :stamp_duty_enabled
+  mattr_accessor :stamp_duty_welsh_fix
 end
