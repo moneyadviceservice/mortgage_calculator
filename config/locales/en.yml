@@ -90,8 +90,6 @@ en:
       caveat:
         title: Important
         one: "This calculator is a guide only to stamp duty on residential properties. Different rates apply to properties for non-residential use."
-        one_link_copy: Read more about stamp duty
-        one_link_url: "https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty"
       results:
         title: "Stamp duty to pay is"
         sentence: "This is %{percentage} of your property price"
