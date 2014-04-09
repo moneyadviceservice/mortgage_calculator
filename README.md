@@ -25,6 +25,13 @@ In your application.html.erb layout or equivalent. Javascript code uses this att
 <body class="locale-<%= I18n.locale %>">
 ```
 
+In the short term, this lambda or equivalent must be set. Public website, for example, injects a lambda that sets the tool's translation URL.
+
+```ruby
+MortgageCalculator.stamp_duty_welsh_fix = lambda do |tool, locale|
+end
+```
+
 
 ## Usage
 
