@@ -52,6 +52,6 @@ When(/^I go to next steps$/) do
 end
 
 Then(/^I see the Welsh stamp duty calculator$/) do
-  expect(@stamp_duty.h1).to have_content('Cyfrifiannell Treth Stamp')
+  expect(@stamp_duty.h1).to have_content('Cyfrifiannell treth stamp')
 end
 
