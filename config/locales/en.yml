@@ -80,6 +80,7 @@ en:
         three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.
     stamp_duty:
       h1: Stamp duty calculator
+      intro: Use this calculator to work out much stamp duty you’ll need to pay on a new home.
       title: Calculate the stamp duty on your residential property
       subtitle: "Stamp duty is a tax on the cost of properties over £125,000. There are different rates depending on the price of the property."
       next: Next
