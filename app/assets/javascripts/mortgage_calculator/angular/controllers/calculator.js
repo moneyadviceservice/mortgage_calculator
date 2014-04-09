@@ -39,7 +39,11 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.viewInterestRepayments = true;
     };
 
-    // Show expanded helpers?
+
+    // All Calculator Helpers
+    $scope.preventFormSubmission = function($event) {
+      $event.preventDefault();
+    };
     $scope.expandedMortgageInformation = false;
     $scope.toggleExpanded = function($event) {
       $event.preventDefault();
