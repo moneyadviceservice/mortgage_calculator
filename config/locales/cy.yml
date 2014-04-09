@@ -80,3 +80,56 @@ cy:
         three: Cyn ymgeisio am forgais, dylid gwirio eich statws credyd a gwneud yn siŵr eich bod wedi eich cofrestru ar y gofrestr etholiadol.
     stamp_duty:
       h1: "Cyfrifiannell treth stamp"
+      title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
+      subtitle: "Mae treth stamp yn dreth ar gost eiddo dros £125,000. Mae gwahanol gyfraddau gan ddibynnu ar bris yr eiddo."
+      next: "Nesaf"
+      recalculate: Ailgyfrifo
+      back: "Yn ôl"
+      how_calculated_toggle: "Sut y cyfrifir hyn?"
+      how_calculated: "Cyfrifir treth stamp fel canran o bris eich eiddo"
+      caveat:
+        title: "Pwysig"
+        one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl. Darllenwch fwy am dreth stamp."
+      results:
+        title: "Y dreth stamp i'w thalu yw"
+        sentence: "Dyma %{percentage} o bris eich eiddo"
+        sentence_prefix: "Dyma"
+        sentence_suffix: "% o bris eich eiddo"
+      table:
+        property_price_header: "Pris Prynu"
+        rate_header: "Cyfradd treth stamp"
+        over: Dros
+        million: miliwn
+      next_steps:
+        title: "Tri cham i helpu i gyllidebu am gostau"
+        tip_1:
+          heading_html: "Deall costau gwirioneddol prynu cartref"
+          url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+        tip_2:
+          heading_html: "Cyfrifwch eich cyllideb ar gyfer prynu cartref"
+          url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
+        tip_3:
+          heading_html: "Adeiladwch gronfa cynilion argyfwng"
+          url: "https://www.moneyadviceservice.org.uk/cy/action_plans/adeiladu-cronfa-cynilion-argyfwng"
+        learn_more:
+          title: "A wyddech chi?"
+          tip_1: "Mae rhai sefyllfaoedd lle nad yw treth stamp yn gymwys. I ddysgu rhagor amdanynt neu sut y gallwch leihau treth stamp ar brynu eiddo, %{link}."
+          tip_1_link_text: darllenwch fwy am dreth stamp
+          tip_1_link_url: "https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
+        find_out_more:
+          title: "Darganfyddwch fwy"
+          tip_1:
+            copy_html: "Cyfrifiannell Morgais"
+            url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais-newydd"
+          tip_2:
+            copy_html: "Costau ymlaen llaw prynu cartref"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          tip_3:
+            copy_html: "Ffioedd a chostau morgais"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
+          tip_4:
+            copy_html: "Costau argyfwng"
+            url: "https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng"
+          tip_5:
+            copy_html: "Costau diwrnod symud"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"

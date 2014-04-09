@@ -98,6 +98,8 @@ en:
       table:
         property_price_header: "Purchase price of property"
         rate_header: "Rate of Stamp Duty"
+        over: Over
+        million: million
       next_steps:
         title: "Three steps to help budget for costs"
         tip_1:
@@ -111,7 +113,7 @@ en:
           url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
         learn_more:
           title: "Did you know?"
-          tip_1: "There are some situations in which stamp duty doesn't apply. To learn more about them or how you can minimise stamp duty on a property purchase, %{link}"
+          tip_1: "There are some situations in which stamp duty doesn't apply. To learn more about them or how you can minimise stamp duty on a property purchase, %{link}."
           tip_1_link_text: read more about stamp duty
           tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
         find_out_more:
