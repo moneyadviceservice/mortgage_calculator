@@ -89,7 +89,7 @@ cy:
       how_calculated: "Cyfrifir treth stamp fel canran o bris eich eiddo"
       caveat:
         title: "Pwysig"
-        one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl. Darllenwch fwy am dreth stamp."
+        one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
       results:
         title: "Y dreth stamp i'w thalu yw"
         sentence: "Dyma %{percentage} o bris eich eiddo"
