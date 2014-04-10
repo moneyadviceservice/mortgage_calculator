@@ -1,5 +1,4 @@
 require 'modernizr-rails'
-require 'mas/assets'
 require 'sass-rails'
 require 'jquery-rails'
 # require 'jquery-ui-rails'
