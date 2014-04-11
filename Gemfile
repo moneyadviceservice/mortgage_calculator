@@ -16,6 +16,8 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'simplecov', :require => false
   gem 'sqlite3'
+
+  gem 'mas-templating'
 end
 
 group :build, :test do
