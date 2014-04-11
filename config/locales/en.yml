@@ -33,7 +33,7 @@ en:
           tip_1: "You only pay off the interest."
           tip_2: "To own the property you'll need to pay back the amount you borrowed as well, so you must save into a repayment plan."
       tips:
-        hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and stamp duty tax.
+        hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
       interest_changer:
         title: Make sure you can afford it!
         intro: If your interest rate goes up by <strong>%{change}%</strong> your monthly payment will be
@@ -79,10 +79,10 @@ en:
         two: People who are self employed or are not in full-time employment may have other criteria to fulfil.
         three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.
     stamp_duty:
-      pretitle: Use this calculator to work out much stamp duty you’ll need to pay on a new home
-      h1: Stamp duty calculator
-      title: Calculate the stamp duty on your residential property
-      subtitle: "Stamp duty is a tax on the cost of properties over £125,000. There are different rates depending on the price of the property."
+      pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
+      h1: Stamp Duty calculator
+      title: Calculate the Stamp Duty on your residential property
+      subtitle: "Stamp Duty is a tax on the cost of properties over £125,000. There are different rates depending on the price of the property."
       next: Next
       recalculate: Recalculate
       back: Back
@@ -90,9 +90,9 @@ en:
       how_calculated: "You'll pay a percentage of tax from 1% to 7%, depending on the price"
       caveat:
         title: Important
-        one: "This calculator is a guide only to stamp duty on residential properties. Different rates apply to properties for non-residential use."
+        one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
       results:
-        title: "Stamp duty to pay is"
+        title: "Stamp Duty to pay is"
         sentence: "This is %{percentage} of your property price"
         sentence_prefix: This is
         sentence_suffix: "% of your property price"
@@ -114,8 +114,8 @@ en:
           url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
         learn_more:
           title: "Did you know?"
-          tip_1: "There are some situations in which stamp duty doesn't apply. To learn more about them or how you can minimise stamp duty on a property purchase, %{link}."
-          tip_1_link_text: read more about stamp duty
+          tip_1: "There are some situations in which Stamp Duty doesn't apply. To learn more about them or how you can minimise Stamp Duty on a property purchase, %{link}."
+          tip_1_link_text: read more about Stamp Duty
           tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
         find_out_more:
           title: Find out more
