@@ -1,11 +1,10 @@
 require 'modernizr-rails'
 require 'sass-rails'
 require 'jquery-rails'
-# require 'jquery-ui-rails'
 require 'angularjs-rails'
 require 'underscore-rails'
 require 'mas/feedback'
-require 'mas/templating'
+
 
 module MortgageCalculator
   mattr_accessor :feedback_config
