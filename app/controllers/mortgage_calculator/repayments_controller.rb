@@ -1,5 +1,6 @@
 module MortgageCalculator
-  class RepaymentsController < ApplicationController
+  class RepaymentsController < ::MortgageCalculator::ApplicationController
+
     def show
       calculate_repayment
       calculate_interest_only

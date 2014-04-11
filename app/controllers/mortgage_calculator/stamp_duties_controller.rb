@@ -1,5 +1,5 @@
 module MortgageCalculator
-  class StampDutiesController < ApplicationController
+  class StampDutiesController < ::MortgageCalculator::ApplicationController
     def show
       MortgageCalculator.stamp_duty_welsh_fix.call(@tool, I18n.locale)
       @stamp_duty = StampDutyPresenter.new(StampDuty.new)
