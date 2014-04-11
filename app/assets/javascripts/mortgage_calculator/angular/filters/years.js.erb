@@ -2,11 +2,11 @@ App
   .filter('years', function() {
     return function(input) {
       var translations = {
-        'locale-en':  '<%= I18n.t('mortgage_calculator.repayment.years', locale: :en) %>',
-        'locale-cy': '<%= I18n.t('mortgage_calculator.repayment.years', locale: :cy) %>'
+        'en':  '<%= I18n.t('mortgage_calculator.repayment.years', locale: :en) %>',
+        'cy': '<%= I18n.t('mortgage_calculator.repayment.years', locale: :cy) %>'
       };
 
-      var locale = $('body').is('.locale-en') ? 'locale-en' : 'locale-cy';
+      var locale = $('html').attr('lang')
 
       if (input) {
         return input + ' ' + translations[locale];
