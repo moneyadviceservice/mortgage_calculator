@@ -20,4 +20,9 @@ MortgageCalculator::Engine.routes.draw do
       end
     end
   end
+
+  if MortgageCalculator.affordability_enabled
+    resource :affordability do
+    end
+  end
 end

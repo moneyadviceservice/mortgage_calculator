@@ -1,4 +1,3 @@
-@wip
 Feature: Affordability Calculator Feedback
 So that I can make MAS better
 As a user

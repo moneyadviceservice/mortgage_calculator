@@ -1,4 +1,3 @@
-@wip
 Feature: Affordability Calculator
 So that I can determine my affordability
 As a user
@@ -60,7 +59,7 @@ Scenario: There are two applicants with extra income and commited spend
   And   I submit the details
   Then  I see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
 
-@javascript
+@javascript @wip
 Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details

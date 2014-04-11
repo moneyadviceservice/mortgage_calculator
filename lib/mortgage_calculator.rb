@@ -7,6 +7,7 @@ module MortgageCalculator
 
   mattr_accessor :stamp_duty_enabled
   mattr_accessor :stamp_duty_welsh_fix
+  mattr_accessor :affordability_enabled
 
   def self.configure
     yield self
