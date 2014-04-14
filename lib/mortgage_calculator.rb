@@ -9,10 +9,6 @@ module MortgageCalculator
   mattr_accessor :stamp_duty_welsh_fix
   mattr_accessor :affordability_enabled
 
-  def self.stamp_duty_welsh_fix
-    @@stamp_duty_welsh_fix ||= lambda { |tool, locale| }
-  end
-
   def self.configure
     yield self
   end
