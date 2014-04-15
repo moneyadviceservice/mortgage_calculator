@@ -55,22 +55,11 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
       // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {
-        $scope.resizeIframe();
+        affectsHeight.helpers.resizeIframe();
         $('input[name="repayment[price]"]:visible').focus();
         $('input[name="stamp_duty[price]"]:visible').focus();
       });
     };
 
-    $scope.resizeIframe = function() {
-      var minPageHeight = 250; // px
-      if (window.postMessage) {
-        var height = document.documentElement.offsetHeight;
-        height = Math.max(height, minPageHeight);
-        window.parent.postMessage('MASRESIZE-' + height, '*');
-      }
-    };
-
-    setTimeout(function() {
-      $scope.resizeIframe();
-    });
+    affectsHeight.helpers.resizeIframe();
   }]);
