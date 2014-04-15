@@ -1,6 +1,6 @@
 'use strict';
 
-App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', 'WizardHandler', function ($scope, Affordability, StampDuty, Repayments, WizardHandler) {
+App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', 'WizardHandler', 'iframeHelpers', function ($scope, Affordability, StampDuty, Repayments, WizardHandler, iframeHelpers) {
 
     $scope.js = true;
 
@@ -39,7 +39,6 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.viewInterestRepayments = true;
     };
 
-
     // All Calculator Helpers
     $scope.preventFormSubmission = function($event) {
       $event.preventDefault();
@@ -56,9 +55,11 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
       // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {
+        iframeHelpers.resizeIframe();
         $('input[name="repayment[price]"]:visible').focus();
         $('input[name="stamp_duty[price]"]:visible').focus();
       });
     };
 
+    iframeHelpers.resizeIframe();
   }]);
