@@ -23,6 +23,14 @@
   <% end %>
   </ul>
 
-  <p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
 </div>
+
+<div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.have_you_tried.title") %>:</h4>
+
+  <p><%= link_to I18n.t('mortgage_calculator.repayment.next_steps.have_you_tried.stamp_duty'), stamp_duty_path,
+               class: "button button--primary mortgagecalc__submit"%></p>
+</div>
+
+<p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
 

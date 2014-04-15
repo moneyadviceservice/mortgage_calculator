@@ -73,6 +73,9 @@ en:
           tip_5:
             copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
             url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+        have_you_tried:
+          title: 'Have you tried'
+          stamp_duty: "Stamp Duty Calculator"
       caveat:
         title: "Important:"
         one: These results are a guide to give you an idea of what you might pay each month – the exact cost will depend on the mortgage you choose and the lender.
@@ -117,9 +120,6 @@ en:
           tip_1: "There are some situations in which Stamp Duty doesn't apply. To learn more about them or how you can minimise Stamp Duty on a property purchase, %{link}."
           tip_1_link_text: read more about Stamp Duty
           tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
-        have_you_tried:
-          title: 'Have you tried'
-          mortgage_calculator: "Mortgage Calculator"
         find_out_more:
           title: Find out more
           tip_1:
@@ -137,3 +137,6 @@ en:
           tip_5:
             copy_html: Costs of moving day
             url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+        have_you_tried:
+          title: 'Have you tried'
+          mortgage_calculator: "Mortgage Calculator"
