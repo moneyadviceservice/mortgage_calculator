@@ -117,6 +117,9 @@ en:
           tip_1: "There are some situations in which Stamp Duty doesn't apply. To learn more about them or how you can minimise Stamp Duty on a property purchase, %{link}."
           tip_1_link_text: read more about Stamp Duty
           tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
+        have_you_tried:
+          title: 'Have you tried'
+          mortgage_calculator: "Mortgage Calculator"
         find_out_more:
           title: Find out more
           tip_1:

@@ -117,6 +117,9 @@ cy:
           tip_1: "Mae rhai sefyllfaoedd lle nad yw treth stamp yn gymwys. I ddysgu rhagor amdanynt neu sut y gallwch leihau treth stamp ar brynu eiddo, %{link}."
           tip_1_link_text: darllenwch fwy am dreth stamp
           tip_1_link_url: "https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
+        have_you_tried:
+          title: 'Have you tried'
+          mortgage_calculator: "Darganfyddwch Fwy"
         find_out_more:
           title: "Darganfyddwch fwy"
           tip_1:
