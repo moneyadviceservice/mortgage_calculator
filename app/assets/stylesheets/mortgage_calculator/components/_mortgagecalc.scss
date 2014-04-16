@@ -66,11 +66,12 @@
   &.mortgagecalc__panel--with-form {
     padding-bottom: 50px;
     min-height: 150px;
-    &.with-border {
-      border-top: 1px solid #dae1df;
-      margin-top: 5px;
-      padding-top: 25px;
-    }
+  }
+
+  &.mortgagecalc__panel--border {
+    border-top: 1px solid #dae1df;
+    margin-top: 5px;
+    padding-top: 25px;
   }
 }
 
