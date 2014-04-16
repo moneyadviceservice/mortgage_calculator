@@ -54,7 +54,7 @@
   &.mortgagecalc__panel--full {
     @include respond-to($mq-s) {
       @include column(12);
-    } 
+    }
   }
 
   &.mortgagecalc__panel--nudge {
@@ -66,6 +66,11 @@
   &.mortgagecalc__panel--with-form {
     padding-bottom: 50px;
     min-height: 150px;
+    &.with-border {
+      border-top: 1px solid #dae1df;
+      margin-top: 5px;
+      padding-top: 25px;
+    }
   }
 }
 

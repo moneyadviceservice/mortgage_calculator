@@ -75,7 +75,7 @@ cy:
             url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
         have_you_tried:
           title: 'Have you tried'
-          stamp_duty: "Cyfrifiannell Treth Stamp"
+          stamp_duty: "cyfrifiannell Treth Stamp"
       caveat:
         title: Pwysig
         one: Canllaw yn unig yw’r ffigyrau hyn i roi syniad i chi o faint allech chi ei dalu bob mis - bydd yr union gost yn dibynnu ar y morgais penodol y byddwch yn ei ddewis a’r darparwr benthyciadau.
@@ -85,7 +85,7 @@ cy:
       pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
       h1: "Cyfrifiannell treth stamp"
       title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
-      subtitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd. Mae treth stamp yn dreth ar gost eiddo dros £125,000. Mae gwahanol gyfraddau gan ddibynnu ar bris yr eiddo."
+      subtitle: "Mae treth stamp yn dreth ar gost eiddo dros £125,000, gyda gwahanol gyfraddau yn ddibynnol ar y pris prynu. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp fydd angen i chi dalu ar gartref newydd."
       next: "Nesaf"
       recalculate: Ailgyfrifo
       back: "Yn ôl"
@@ -139,4 +139,4 @@ cy:
             url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
         have_you_tried:
           title: 'Have you tried'
-          mortgage_calculator: "Darganfyddwch Fwy"
+          mortgage_calculator: "cyfrifiannell Morgais"
