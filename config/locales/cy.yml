@@ -74,7 +74,7 @@ cy:
             copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
             url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
         have_you_tried:
-          title: 'Rhowch gynnig ar'
+          title: 'Rhowch gynnig ar?'
           stamp_duty: "cyfrifiannell Treth Stamp"
       caveat:
         title: Pwysig
@@ -138,5 +138,5 @@ cy:
             copy_html: "Costau diwrnod symud"
             url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
         have_you_tried:
-          title: 'Rhowch gynnig ar'
+          title: 'Rhowch gynnig ar?'
           mortgage_calculator: "cyfrifiannell Morgais"

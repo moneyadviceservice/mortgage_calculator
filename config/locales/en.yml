@@ -74,7 +74,7 @@ en:
             copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
             url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
         have_you_tried:
-          title: 'Have you tried'
+          title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"
       caveat:
         title: "Important:"
@@ -138,5 +138,5 @@ en:
             copy_html: Costs of moving day
             url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
         have_you_tried:
-          title: 'Have you tried'
+          title: 'Have you tried?'
           mortgage_calculator: "Mortgage calculator"
