@@ -7,18 +7,18 @@
 
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
 
-    <div wz-step >
+    <div wz-step class="ng-hide">
       <%= render 'form_step1' %>
     </div>
 
-    <div wz-step >
+    <div wz-step class="ng-hide">
       <div class="rendered-from-js">
         <%= render 'calc_left_panel' %>
         <%= render 'calc_right_panel' %>
       </div>
     </div>
 
-    <div wz-step >
+    <div wz-step class="ng-hide">
       <div class="rendered-from-js">
         <%= render 'next_steps_content' %>
       </div>

@@ -20,9 +20,9 @@ $ bower install
 ```
 ### Dependencies
 
-In your application.html.erb layout or equivalent. Javascript code uses this attribute to determine which locale to display.
+Requires a HTML lang attribute set. Javascript code uses this attribute to determine which locale to display.
 ```erb
-<body class="locale-<%= I18n.locale %>">
+<html lang="<%= I18n.locale %>">
 ```
 
 In the short term, this lambda or equivalent must be set. Public website, for example, injects a lambda that sets the tool's translation URL.
