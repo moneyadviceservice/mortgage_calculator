@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<div class="mortgagecalc__panel mortgagecalc__panel--nudge mortgagecalc__panel--with-form">
+<div class="mortgagecalc__panel mortgagecalc__panel--nudge">
   <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.title") %>:</h5>
   <ul>
   <% (1..5).each do |n| %>
@@ -25,11 +25,11 @@
 
 </div>
 
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
+<div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form">
   <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.have_you_tried.title") %>:</h4>
 
   <p><%= link_to I18n.t('mortgage_calculator.repayment.next_steps.have_you_tried.stamp_duty'), stamp_duty_path,
-               class: "button button--primary mortgagecalc__submit"%></p>
+               class: "button button--primary mortgagecalc__spread"%></p>
 </div>
 
 <p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
