@@ -10,7 +10,7 @@ gem 'mas-development_dependencies'
 group :test do
   gem 'rspec'
   gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', "2.5.0"
   gem 'coffee-rails'
   gem 'sass-rails'
   gem 'rspec_junit_formatter'
