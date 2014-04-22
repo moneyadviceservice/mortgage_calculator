@@ -15,11 +15,4 @@ class ApplicationController < ActionController::Base
 
   parent_template :embedded
 
-  helper_method :syndicated_tool_request?
-
-  protected
-
-  def syndicated_tool_request?
-    false
-  end
 end
