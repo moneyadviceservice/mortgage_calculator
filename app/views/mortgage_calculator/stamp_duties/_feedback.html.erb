@@ -1,2 +1,4 @@
-<div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_stamp_duty_config) %></div>
+<% unless syndicated_tool_request? %>
+  <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_stamp_duty_config) %></div>
+<% end %>
 
