@@ -12,26 +12,20 @@ Add this line to your application's Gemfile:
 git clone git@github.com:moneyadviceservice/mortgage_calculator.git
 ```
 
-And then execute:
+Ensure you have bundler, node, npm and bower installed and execute:
 
 ```sh
 $ bundle
+$ npm install
 $ bower install
 ```
+
 ### Dependencies
 
 Requires a HTML lang attribute set. Javascript code uses this attribute to determine which locale to display.
 ```erb
 <html lang="<%= I18n.locale %>">
 ```
-
-In the short term, this lambda or equivalent must be set. Public website, for example, injects a lambda that sets the tool's translation URL.
-
-```ruby
-MortgageCalculator.stamp_duty_welsh_fix = lambda do |tool, locale|
-end
-```
-
 
 ## Usage
 
@@ -43,13 +37,6 @@ $ rails s
 ```
 
 ## Tests
-
-Ensure you have node and npm installed
-
-```sh
-$ npm install
-```
-Then run the test suite
 
 ```sh
 bundle exec rake
