@@ -14,5 +14,21 @@ module MortgageCalculator
     def zendesk_repayment_config
       @zendesk_repayment_config ||= MortgageCalculator.feedback_config[:repayment]
     end
+
+    def full_mortgage_calculator_url
+      if I18n.locale == :cy
+        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais-newydd"
+      else
+        "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator-new"
+      end
+    end
+
+    def full_stamp_duty_calculator_url
+      if I18n.locale == :cy
+        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-treth-stamp"
+      else
+        "https://www.moneyadviceservice.org.uk/en/tools/stamp-duty-calculator"
+      end
+    end
   end
 end
