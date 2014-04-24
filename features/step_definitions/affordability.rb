@@ -11,20 +11,8 @@ Then(/^I see "(.*?)"$/) do |content|
   expect(page).to have_content(content)
 end
 
-When(/^I select (\d+) people$/) do |number|
-  select(number, from: 'numberOfPeople')
-end
-
 When(/^I submit the details$/) do
   find("input[type=submit]").click
-end
-
-Then(/^I can change the number of applicants$/) do
-  all("select").length.should == 1
-end
-
-Then(/^I can not change the number of applicants$/) do
-  all("select").length.should == 0
 end
 
 When(/^I submit invalid details$/) do

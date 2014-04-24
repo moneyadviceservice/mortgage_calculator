@@ -8,16 +8,6 @@ Scenario: Can view the Affordability Calculator
   Then  I should see the Affordability calculator
 
 @javascript
-Scenario: When javascript is enabled
-  Given I visit the Affordability page
-  Then  I can change the number of applicants
-
-@wip
-Scenario: When javascript is disabled
-  Given I visit the Affordability page
-  Then  I can not change the number of applicants
-
-@javascript
 Scenario: There is one applicant
   Given I visit the Affordability page
   When  I enter some details for applicant "1"

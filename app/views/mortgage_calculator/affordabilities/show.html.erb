@@ -35,13 +35,6 @@
       <% end %>
 
       <%= field_set_tag do %>
-        <label for="numberOfPeople">
-          Number of people
-        </label>
-        <select ng-change="normalizeValues()" ng-options="i for i in affordability.numberOfPeople " ng-model="affordability.selectedOption" name="numberOfPeople" class="form-control" required></select>
-      <% end %>
-
-      <%= field_set_tag do %>
         <%= f.label :monthly_debt, 'Personal Spend' %>
         <%= f.text_field :monthly_debt, "class" => "form-control",
                                         "ng-model" => "affordability.personalSpend",
