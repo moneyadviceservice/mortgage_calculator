@@ -4,10 +4,6 @@
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
-        <% unless count.zero? %>
-          <div ng-show="affordability.selectedOption == 2">
-        <% end %>
-
         <%= field_set_tag do %>
           <%= person.label :annual_income  %>
           <%= person.text_field :annual_income,
@@ -28,9 +24,6 @@
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
-          <% if count != 0 %>
-            </div>
-          <% end %>
         <% end %>
       <% end %>
 
