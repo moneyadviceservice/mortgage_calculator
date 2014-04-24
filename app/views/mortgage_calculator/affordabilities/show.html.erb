@@ -1,8 +1,6 @@
 <div ng-controller="CalculatorCtrl">
   <h1>Find out how much you can borrow</h1>
     <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
-      <!-- START AFFORDABILITY CALCULATOR -->
-
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
@@ -53,9 +51,6 @@
       <% end %>
 
       <%= f.submit %>
-
-    <!-- END AFFORDABILITY CALCULATOR -->
-
   <% end %>
 
   <div ng-show="affordability.earnings.person1.annual">
