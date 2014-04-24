@@ -38,7 +38,7 @@ App.directive('uiSlider', function() {
 
     //Reconfigre slider when input blurs
     input.on('blur keyup', function() {
-      value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, ''));
+      value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, '')) || 0;
       element.slider({
         min: value / 2,
         max: value * 2,
