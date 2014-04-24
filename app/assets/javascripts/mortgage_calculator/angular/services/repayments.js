@@ -24,7 +24,7 @@ App.factory('Repayments', function() {
   };
 
   var _debt = function() {
-    return repayments.propertyPrice - repayments.deposit;
+    return (repayments.propertyPrice || 0) - (repayments.deposit || 0);
   };
 
   var _termMonths = function() {
