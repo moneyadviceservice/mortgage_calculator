@@ -3,11 +3,11 @@ module MortgageCalculator
     include ActiveModel::Validations
     include CurrencyInput::Macro
 
-    attr_accessor :annual_income, :extra_income
+    attr_accessor :annual_income, :extra_income, :monthly_net_income
 
     validates :annual_income, numericality: true
 
-    currency_inputs :annual_income, :extra_income
+    currency_inputs :annual_income, :extra_income, :monthly_net_income
 
     def initialize(options = {})
       annual_income = options[:annual_income].presence || 0

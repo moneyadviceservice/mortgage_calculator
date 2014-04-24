@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe MortgageCalculator::Person do
-  it_should_behave_like "currency inputs", [:annual_income, :extra_income]
+  it_should_behave_like "currency inputs", [:annual_income, :extra_income, :monthly_net_income]
 
   describe 'validations' do
     it 'annual income must be a number' do
