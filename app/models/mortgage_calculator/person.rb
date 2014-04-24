@@ -12,9 +12,11 @@ module MortgageCalculator
     def initialize(options = {})
       annual_income = options[:annual_income].presence || 0
       extra_income = options[:extra_income].presence || 0
+      monthly_net_income = options[:monthly_net_income].presence || 0
 
       self.annual_income = annual_income
       self.extra_income = extra_income
+      self.monthly_net_income = monthly_net_income
     end
 
     def persisted?

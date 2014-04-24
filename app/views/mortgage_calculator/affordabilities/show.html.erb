@@ -24,6 +24,13 @@
           %>
 
           <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
+
+          <%= person.label :monthly_net_income  %>
+          <%= person.text_field :monthly_net_income,
+                                "class" => "form-control",
+                                "placeholder" => "Monthly Net Income",
+                                "format" => 'number'
+          %>
         <% end %>
       <% end %>
 
