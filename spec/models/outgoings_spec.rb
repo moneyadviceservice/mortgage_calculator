@@ -51,4 +51,10 @@ describe MortgageCalculator::Outgoings do
       expect(subject.committed_costs).to eql(200 + 300 + 200 + 0)
     end
   end
+
+  describe :lifestyle_costs do
+    it "is sum of food, travel, entertainment" do
+      expect(subject.lifestyle_costs).to eql(200 + 150 + 150)
+    end
+  end
 end

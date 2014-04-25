@@ -9,7 +9,7 @@ module MortgageCalculator
 
     validate :validate_people
 
-    delegate :committed_costs, to: :outgoings
+    delegate :committed_costs, :lifestyle_costs, to: :outgoings
 
     def people_attributes=(attributes)
     end
