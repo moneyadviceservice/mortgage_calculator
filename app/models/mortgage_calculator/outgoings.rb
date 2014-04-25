@@ -16,5 +16,9 @@ module MortgageCalculator
       self.travel = attributes[:travel]
       self.entertainment = attributes[:entertainment]
     end
+
+    def committed_costs
+      credit_repayments + utilities + childcare + child_maintenance
+    end
   end
 end
