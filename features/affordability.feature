@@ -1,3 +1,4 @@
+@wip
 Feature: Affordability Calculator
 So that I can determine my affordability
 As a user
