@@ -17,7 +17,7 @@ module MortgageCalculator
     end
 
     def total_income
-      @total_income ||= people.map(&:total_income).inject(:+)
+      @total_income ||= people.sum(&:total_income)
     end
 
     def number_of_applicants
