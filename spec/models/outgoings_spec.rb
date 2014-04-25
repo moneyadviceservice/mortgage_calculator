@@ -16,6 +16,8 @@ describe MortgageCalculator::Outgoings do
 
   subject{ described_class.new(input_hash) }
 
+  it_should_behave_like "currency inputs", [:credit_repayments, :utilities, :childcare, :child_maintenance, :rent_and_mortgage, :food, :travel, :entertainment]
+
   describe 'attributes' do
     it 'is initialised with correct attributes' do
       expect(subject.credit_repayments).to eql(200)
@@ -26,6 +28,21 @@ describe MortgageCalculator::Outgoings do
       expect(subject.food).to eql(200)
       expect(subject.travel).to eql(150)
       expect(subject.entertainment).to eql(150)
+    end
+
+    context "when inputs are not provided" do
+      let(:input_hash){ {} }
+
+      it "they default to zero" do
+        expect(subject.credit_repayments).to eql(0)
+        expect(subject.utilities).to eql(0)
+        expect(subject.childcare).to eql(0)
+        expect(subject.child_maintenance).to eql(0)
+        expect(subject.rent_and_mortgage).to eql(0)
+        expect(subject.food).to eql(0)
+        expect(subject.travel).to eql(0)
+        expect(subject.entertainment).to eql(0)
+      end
     end
   end
 

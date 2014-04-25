@@ -5,9 +5,11 @@ module MortgageCalculator
     include ActiveModel::Conversion
     include ActiveModel::Validations
 
-    attr_reader :people
+    attr_reader :people, :outgoings
 
     validate :validate_people
+
+    delegate :committed_costs, to: :outgoings
 
     def people_attributes=(attributes)
     end

@@ -34,6 +34,17 @@
         <% end %>
       <% end %>
 
+      <%= f.fields_for :outgoings do |outgoings| %>
+        <%= field_set_tag do %>
+          <%= outgoings.label :credit_repayments  %>
+          <%= outgoings.text_field :credit_repayments,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number'
+          %>
+        <% end %>
+      <% end %>
+
       <%= f.submit %>
   <% end %>
 

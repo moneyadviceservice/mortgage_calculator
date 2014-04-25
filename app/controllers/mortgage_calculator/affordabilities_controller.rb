@@ -10,7 +10,7 @@ module MortgageCalculator
 
     def create
       people = params[:affordability][:people_attributes].values.map{|p| Person.new(p)}
-      outgoings = Outgoings.new
+      outgoings = Outgoings.new(params[:affordability][:outgoings])
 
       @affordability = ::MortgageCalculator::Affordability.new(people, outgoings)
 
