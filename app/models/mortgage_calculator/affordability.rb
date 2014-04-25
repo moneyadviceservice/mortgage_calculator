@@ -40,6 +40,10 @@ module MortgageCalculator
       0
     end
 
+    def monthly_net_income
+      people.sum(&:monthly_net_income)
+    end
+
   private
 
     def validate_people
