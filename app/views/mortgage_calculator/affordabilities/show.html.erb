@@ -36,12 +36,35 @@
 
       <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
         <%= field_set_tag do %>
-          <%= outgoings.label :credit_repayments  %>
+          <%= outgoings.label :credit_repayments %>
           <%= outgoings.text_field :credit_repayments,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number'
-          %>
+                                "format" => 'number' %>
+
+          <%= outgoings.label :utilities %>
+          <%= outgoings.text_field :utilities,
+                                "class" => "form-control",
+                                "placeholder" => "utilities",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :childcare %>
+          <%= outgoings.text_field :childcare,
+                                "class" => "form-control",
+                                "placeholder" => "utilities",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :child_maintenance %>
+          <%= outgoings.text_field :child_maintenance,
+                                "class" => "form-control",
+                                "placeholder" => "utilities",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :rent_and_mortgage %>
+          <%= outgoings.text_field :rent_and_mortgage,
+                                "class" => "form-control",
+                                "placeholder" => "utilities",
+                                "format" => 'number' %>
         <% end %>
       <% end %>
 
