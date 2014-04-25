@@ -26,5 +26,23 @@ module MortgageCalculator
     def total_income
       annual_income + extra_income
     end
+
+    def can_borrow_upto
+      total_income * upper_profit_multiplier
+    end
+
+    def can_borrow_from
+      total_income * lower_profit_multiplier
+    end
+
+    private
+
+    def lower_profit_multiplier
+      3
+    end
+
+    def upper_profit_multiplier
+      4
+    end
   end
 end

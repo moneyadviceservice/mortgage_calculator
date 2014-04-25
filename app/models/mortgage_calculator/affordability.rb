@@ -33,11 +33,11 @@ module MortgageCalculator
     end
 
     def can_borrow_upto
-      0
+      people.sum(&:can_borrow_upto)
     end
 
     def can_borrow_from
-      0
+      people.sum(&:can_borrow_from)
     end
 
     def monthly_net_income
@@ -54,14 +54,6 @@ module MortgageCalculator
           end
         end
       end
-    end
-
-    def lower_profit_multiplier
-      3
-    end
-
-    def upper_profit_multiplier
-      4
     end
   end
 end
