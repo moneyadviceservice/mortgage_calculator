@@ -66,6 +66,26 @@
                                 "placeholder" => "utilities",
                                 "format" => 'number' %>
         <% end %>
+
+        <%= field_set_tag do %>
+          <%= outgoings.label :food %>
+          <%= outgoings.text_field :food,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :travel %>
+          <%= outgoings.text_field :travel,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :entertainment %>
+          <%= outgoings.text_field :entertainment,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+        <% end %>
       <% end %>
 
       <%= f.submit %>
