@@ -104,7 +104,9 @@
 }
 
 .mortgagecalc__spread {
-  width: 48%;
+  @include respond-to($mq-s) {
+    width: 48%;
+  }
 }
 
 .mortgagecalc__helper {
