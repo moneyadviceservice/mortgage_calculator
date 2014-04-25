@@ -8,6 +8,7 @@ module MortgageCalculator
     delegate :people, :persisted?, to: :model
     delegate :monthly_debt, to: :model
     delegate :people_attributes=, to: :model
+    delegate :outgoings, to: :model
 
     def initialize(model)
       @model = model

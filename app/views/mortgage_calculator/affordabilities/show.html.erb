@@ -34,7 +34,7 @@
         <% end %>
       <% end %>
 
-      <%= f.fields_for :outgoings do |outgoings| %>
+      <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
         <%= field_set_tag do %>
           <%= outgoings.label :credit_repayments  %>
           <%= outgoings.text_field :credit_repayments,

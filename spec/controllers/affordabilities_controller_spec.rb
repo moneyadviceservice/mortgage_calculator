@@ -25,14 +25,24 @@ module MortgageCalculator
 
     describe :create do
       it 'responds with 200' do
-        post :create, affordability: {people_attributes: {"0"=>{annual_income: "100000", extra_income: "10000"},
-                                                          "1"=>{annual_income: "50000", extra_income: "5000"}}, monthly_debt: "1"}
+        post :create, affordability: {
+                        people_attributes: {
+                          "0"=>{annual_income: "100000", extra_income: "10000"},
+                          "1"=>{annual_income: "50000", extra_income: "5000"}
+                        },
+                        outgoings: {}
+                      }
         expect(response).to be_success
       end
 
       it 'renders the create template' do
-        post :create, affordability: {people_attributes: {"0"=>{annual_income: "100000", extra_income: "10000"},
-                                                          "1"=>{annual_income: "50000", extra_income: "5000"}}, monthly_debt: "1"}
+        post :create, affordability: {
+                        people_attributes: {
+                          "0"=>{annual_income: "100000", extra_income: "10000"},
+                          "1"=>{annual_income: "50000", extra_income: "5000"}
+                        },
+                        outgoings: {}
+                      }
         expect(response).to render_template('create')
       end
     end
