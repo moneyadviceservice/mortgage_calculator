@@ -5,33 +5,19 @@ module MortgageCalculator
     include ActiveModel::Conversion
     include ActiveModel::Validations
 
-    attr_reader :people, :monthly_debt
+    attr_reader :people
 
-    currency_inputs :monthly_debt
-
-    validates :monthly_debt, numericality: true
     validate :validate_people
 
     def people_attributes=(attributes)
     end
 
-    def initialize(people, monthly_debt = 0)
+    def initialize(people)
       @people = people
-      monthly_debt = monthly_debt.presence || 0
-
-      self.monthly_debt = monthly_debt
     end
 
     def total_income
       @total_income ||= people.map(&:total_income).inject(:+)
-    end
-
-    def can_borrow_from
-      @can_borrow_from ||= ((total_income) - (12 * monthly_debt)) * lower_profit_multiplier
-    end
-
-    def can_borrow_upto
-      @can_borrow_upto ||= ((total_income) - (12 * monthly_debt)) * upper_profit_multiplier
     end
 
     def number_of_applicants
@@ -44,6 +30,14 @@ module MortgageCalculator
 
     def persisted?
       false
+    end
+
+    def can_borrow_upto
+      0
+    end
+
+    def can_borrow_from
+      0
     end
 
   private

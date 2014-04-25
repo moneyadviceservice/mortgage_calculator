@@ -7,7 +7,6 @@ module MortgageCalculator
 
     its(:to_key){ should be_nil }
     its(:persisted?){ should be_false }
-    its(:monthly_debt){ should == "0.00" }
     its(:people_attributes=){ expect(subject.people_attributes = ('test')).not_to be_nil }
 
     describe 'class methods' do

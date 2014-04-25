@@ -34,15 +34,6 @@
         <% end %>
       <% end %>
 
-      <%= field_set_tag do %>
-        <%= f.label :monthly_debt, 'Personal Spend' %>
-        <%= f.text_field :monthly_debt, "class" => "form-control",
-                                        "ng-model" => "affordability.personalSpend",
-                                        "placeholder" => "Spending",
-                                        "format" => 'number' %>
-        <p ng-show="affordability_form.personalSpend.$invalid && affordability_form.personalSpend.$dirty" class="help-block">Only numbers</p>
-      <% end %>
-
       <%= f.submit %>
   <% end %>
 
