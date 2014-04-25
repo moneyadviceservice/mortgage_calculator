@@ -12,8 +12,9 @@ module MortgageCalculator
     def people_attributes=(attributes)
     end
 
-    def initialize(people)
+    def initialize(people, outgoings)
       @people = people
+      @outgoings = outgoings
     end
 
     def total_income

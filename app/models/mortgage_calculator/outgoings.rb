@@ -4,7 +4,7 @@ module MortgageCalculator
                   :child_maintenance, :rent_and_mortgage,
                   :food, :travel, :entertainment
 
-    def initialize(attributes)
+    def initialize(attributes = {})
       # Sorry. Rails 3.2 Doesn't have ActiveModel::Model
 
       self.credit_repayments = attributes[:credit_repayments]

@@ -14,14 +14,18 @@ module MortgageCalculator
                    monthly_net_income: 3000 })
     end
 
+    let(:outgoings) do
+      Outgoings.new
+    end
+
     describe 'currency inputs' do
-      subject{ described_class.new([person1]) }
+      subject{ described_class.new([person1], outgoings) }
     end
 
     describe 'validations' do
       context 'when a person is not valid' do
         let(:person1){ Person.new({ annual_income: "abc", extra_income: "10000" }) }
-        subject{ described_class.new([person1]) }
+        subject{ described_class.new([person1], outgoings) }
 
         it 'is not valid' do
           expect(subject).to_not be_valid
@@ -31,7 +35,7 @@ module MortgageCalculator
       context 'when it is valid' do
         let(:person1){ Person.new({ annual_income: "100000", extra_income: "" }) }
         let(:person2){ Person.new({ annual_income: "", extra_income: "" }) }
-        subject{ described_class.new([person1]) }
+        subject{ described_class.new([person1], outgoings) }
 
         it 'is valid' do
           expect(subject).to be_valid
@@ -40,7 +44,7 @@ module MortgageCalculator
     end
 
     context 'when the user is a sole buyer' do
-      subject{ described_class.new([person1]) }
+      subject{ described_class.new([person1], outgoings) }
 
       its(:total_income){ should == 110_000 }
       its(:can_borrow_from){ should == 330_000 }
@@ -50,7 +54,7 @@ module MortgageCalculator
     end
 
     context 'when there are multiple applicants' do
-      subject{ described_class.new([person1, person2]) }
+      subject{ described_class.new([person1, person2], outgoings) }
 
       its(:total_income){ should == 165_000 }
       its(:can_borrow_from){ should == 495_000 }

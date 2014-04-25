@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module MortgageCalculator
   describe AffordabilityPresenter do
-    let(:model){ Affordability.new([Person.new]) }
+    let(:model){ Affordability.new([Person.new], Outgoings.new) }
     subject{ described_class.new model }
 
     its(:to_key){ should be_nil }
