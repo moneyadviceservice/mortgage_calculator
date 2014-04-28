@@ -13,7 +13,6 @@ module MortgageCalculator
       outgoings = Outgoings.new(params[:affordability][:outgoings])
 
       @affordability = ::MortgageCalculator::Affordability.new(people, outgoings)
-      @repayment = Repayment.new(price: @affordability.borrowing)
 
       unless @affordability.valid?
         render :show
