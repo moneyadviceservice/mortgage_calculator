@@ -18,9 +18,7 @@ module MortgageCalculator
       Outgoings.new
     end
 
-    describe 'currency inputs' do
-      subject{ described_class.new([person1], outgoings) }
-    end
+    subject{ described_class.new([person1], outgoings) }
 
     describe 'validations' do
       context 'when a person is not valid' do
@@ -61,6 +59,15 @@ module MortgageCalculator
       its(:can_borrow_upto){ should == 660_000 }
       its(:number_of_applicants){ should == 2 }
       its(:monthly_net_income){ should == 9000 }
+    end
+
+    describe :borrowing do
+      context 'default amount' do
+        it 'is half way between the range they can borrow' do
+          half = (subject.can_borrow_from + subject.can_borrow_upto) / 2
+          expect(subject.borrowing).to eql(half)
+        end
+      end
     end
   end
 end

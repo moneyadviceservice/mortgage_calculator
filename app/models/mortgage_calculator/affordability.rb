@@ -47,7 +47,15 @@ module MortgageCalculator
       people.sum(&:monthly_net_income)
     end
 
+    def borrowing
+      default_borrowing_amount
+    end
+
   private
+
+    def default_borrowing_amount
+      (can_borrow_from + can_borrow_upto) / 2
+    end
 
     def validate_people
       people.each do |person|
