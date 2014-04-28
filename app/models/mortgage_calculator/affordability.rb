@@ -66,6 +66,10 @@ module MortgageCalculator
       :medium
     end
 
+    def remaining
+      monthly_net_income - repayment.monthly_payment - committed_costs - lifestyle_costs
+    end
+
   private
 
     def default_borrowing_amount

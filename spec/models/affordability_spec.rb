@@ -116,5 +116,11 @@ module MortgageCalculator
         end
       end
     end
+
+    describe :remaining do
+      it 'returns remaining amount per month' do
+        expect(subject.remaining.to_i).to eql(2549)
+      end
+    end
   end
 end
