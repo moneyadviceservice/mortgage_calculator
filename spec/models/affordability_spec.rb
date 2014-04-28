@@ -15,7 +15,16 @@ module MortgageCalculator
     end
 
     let(:outgoings) do
-      Outgoings.new
+      Outgoings.new(
+        credit_repayments: 200,
+        utilities: 200,
+        childare: 100,
+        child_maintenance: 0,
+        rent_and_mortgage: 600,
+        food: 200,
+        travel: 200,
+        entertainment: 400
+      )
     end
 
     subject{ described_class.new([person1], outgoings) }
@@ -67,6 +76,12 @@ module MortgageCalculator
           half = (subject.can_borrow_from + subject.can_borrow_upto) / 2
           expect(subject.borrowing).to eql(half)
         end
+      end
+    end
+
+    describe :risk_percentage do
+      it "is (monthly mortgage repayments + commited costs) / take home" do
+        expect(subject.risk_percentage.to_i).to eql(44)
       end
     end
   end

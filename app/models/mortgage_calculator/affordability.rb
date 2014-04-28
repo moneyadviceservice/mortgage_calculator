@@ -19,6 +19,10 @@ module MortgageCalculator
       @outgoings = outgoings
     end
 
+    def repayment
+      @repayment ||= Repayment.new(price: borrowing)
+    end
+
     def total_income
       @total_income ||= people.sum(&:total_income)
     end
@@ -49,6 +53,10 @@ module MortgageCalculator
 
     def borrowing
       default_borrowing_amount
+    end
+
+    def risk_percentage
+      ((committed_costs + repayment.monthly_payment) / monthly_net_income) * 100
     end
 
   private
