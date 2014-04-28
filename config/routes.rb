@@ -23,6 +23,9 @@ MortgageCalculator::Engine.routes.draw do
 
   if MortgageCalculator.affordability_enabled
     resource :affordability do
+      collection do
+        get 'next_steps'
+      end
     end
   end
 end

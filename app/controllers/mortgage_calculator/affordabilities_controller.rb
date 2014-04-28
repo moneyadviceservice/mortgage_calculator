@@ -22,6 +22,9 @@ module MortgageCalculator
       end
     end
 
+    def next_steps
+    end
+
     private
 
     def interest_rate_change_amount

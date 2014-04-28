@@ -46,6 +46,13 @@ module MortgageCalculator
         expect(response).to render_template('create')
       end
     end
+
+    describe :next_steps do
+      it 'works' do
+        get :next_steps
+        expect(response).to be_success
+      end
+    end
   end
 end
 
