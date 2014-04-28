@@ -1,12 +1,10 @@
 module MortgageCalculator
   class StampDutiesController < ::MortgageCalculator::ApplicationController
     def show
-      MortgageCalculator.stamp_duty_welsh_fix.call(@tool, I18n.locale)
       @stamp_duty = StampDutyPresenter.new(StampDuty.new)
     end
 
     def create
-      MortgageCalculator.stamp_duty_welsh_fix.call(@tool, I18n.locale)
       @stamp_duty = StampDutyPresenter.new(StampDuty.new(params[:stamp_duty]))
 
       unless @stamp_duty.valid?
@@ -15,6 +13,12 @@ module MortgageCalculator
     end
 
     def next_steps
+    end
+
+  private
+
+    def tool_name
+      I18n.translate('stamp_duty.tool_name')
     end
   end
 end
