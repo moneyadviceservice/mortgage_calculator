@@ -10,7 +10,7 @@ Given /^I visit the( Welsh)? Stamp Duty (?:page|calculator)$/i do |welsh|
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(@stamp_duty.h2).to have_content(I18n.t('mortgage_calculator.stamp_duty.title'))
+  expect(@stamp_duty.h2).to have_content(I18n.t('stamp_duty.title'))
 end
 
 Then(/^they do not see the result output$/) do

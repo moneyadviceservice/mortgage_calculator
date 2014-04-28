@@ -15,7 +15,7 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-    <%= f.submit I18n.t("mortgage_calculator.stamp_duty.next"),
+    <%= f.submit I18n.t("stamp_duty.next"),
                  class: "button button--primary mortgagecalc__submit",
                  'ng-click' => 'navigateAndFocus($event)',
                  'ng-disabled' => '!stampDuty.propertyPrice',
