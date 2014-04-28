@@ -84,5 +84,37 @@ module MortgageCalculator
         expect(subject.risk_percentage.to_i).to eql(44)
       end
     end
+
+    describe :risk_level do
+      context 'when it is under 40' do
+        it 'returns :low' do
+          subject.stub(:risk_percentage){ 0 }
+          expect(subject.risk_level).to eql(:low)
+
+          subject.stub(:risk_percentage){ 39 }
+          expect(subject.risk_level).to eql(:low)
+        end
+      end
+
+      context 'when it is between 40 and 60' do
+        it 'returns :medium' do
+          subject.stub(:risk_percentage){ 40 }
+          expect(subject.risk_level).to eql(:medium)
+
+          subject.stub(:risk_percentage){ 60 }
+          expect(subject.risk_level).to eql(:medium)
+        end
+      end
+
+      context 'when it is over 60' do
+        it 'returns :high' do
+          subject.stub(:risk_percentage){ 61 }
+          expect(subject.risk_level).to eql(:high)
+
+          subject.stub(:risk_percentage){ 100 }
+          expect(subject.risk_level).to eql(:high)
+        end
+      end
+    end
   end
 end

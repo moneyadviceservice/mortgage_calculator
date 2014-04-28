@@ -59,6 +59,13 @@ module MortgageCalculator
       ((committed_costs + repayment.monthly_payment) / monthly_net_income) * 100
     end
 
+    def risk_level
+      return :low if risk_percentage < 40
+      return :high if risk_percentage > 60
+
+      :medium
+    end
+
   private
 
     def default_borrowing_amount
