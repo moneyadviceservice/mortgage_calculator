@@ -77,6 +77,24 @@ module MortgageCalculator
           expect(subject.borrowing).to eql(half)
         end
       end
+
+      context 'when overriden' do
+        subject{ described_class.new([person1], outgoings, borrowing: 123000) }
+
+        it 'uses overriden value' do
+          expect(subject.borrowing).to eql(123000)
+        end
+      end
+    end
+
+    describe :lifestyle_costs do
+      context 'when overriden' do
+        subject{ described_class.new([person1], outgoings, lifestyle_costs: 123) }
+
+        it 'uses overriden value' do
+          expect(subject.lifestyle_costs.to_i).to eql(123)
+        end
+      end
     end
 
     describe :risk_percentage do

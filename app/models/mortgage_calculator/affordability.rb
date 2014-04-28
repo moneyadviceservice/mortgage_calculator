@@ -9,14 +9,22 @@ module MortgageCalculator
 
     validate :validate_people
 
-    delegate :committed_costs, :lifestyle_costs, to: :outgoings
+    delegate :committed_costs, to: :outgoings
+
+    currency_inputs :lifestyle_costs
 
     def people_attributes=(attributes)
     end
 
-    def initialize(people, outgoings)
+    def lifestyle_costs
+      @lifestyle_costs || outgoings.lifestyle_costs
+    end
+
+    def initialize(people, outgoings, options = {})
       @people = people
       @outgoings = outgoings
+      @borrowing = options[:borrowing]
+      self.lifestyle_costs = options[:lifestyle_costs]
     end
 
     def repayment
@@ -52,7 +60,7 @@ module MortgageCalculator
     end
 
     def borrowing
-      default_borrowing_amount
+      @borrowing || default_borrowing_amount
     end
 
     def risk_percentage

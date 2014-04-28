@@ -45,6 +45,36 @@ module MortgageCalculator
                       }
         expect(response).to render_template('create')
       end
+
+      context "when custom borrowing amount is entered" do
+        it 'sets custom house price' do
+          post :create, affordability: {
+                          people_attributes: {
+                            "0"=>{annual_income: "100000", extra_income: "10000"},
+                            "1"=>{annual_income: "50000", extra_income: "5000"}
+                          },
+                          outgoings: {},
+                          borrowing: "550000"
+                        }
+          expect(response).to be_success
+          expect(assigns(:affordability).borrowing.to_i).to eql(550000)
+        end
+      end
+
+      context "when custom lifestyle amount is entered" do
+        it 'sets custom lifestyle amount' do
+          post :create, affordability: {
+                          people_attributes: {
+                            "0"=>{annual_income: "100000", extra_income: "10000"},
+                            "1"=>{annual_income: "50000", extra_income: "5000"}
+                          },
+                          outgoings: {},
+                          lifestyle_costs: "3000"
+                        }
+          expect(response).to be_success
+          expect(assigns(:affordability).lifestyle_costs.to_i).to eql(3000)
+        end
+      end
     end
 
     describe :next_steps do

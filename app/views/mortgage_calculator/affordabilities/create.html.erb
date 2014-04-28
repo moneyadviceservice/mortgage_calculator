@@ -1,53 +1,68 @@
-<p>
-  Your take home pay per month: <%= number_to_currency @affordability.monthly_net_income %>
-</p>
+<%= form_for @affordability, url: affordability_path do |f| %>
+  <% @affordability.people.each_with_index do |person, index| %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
+  <% end %>
 
-<p>
-  You might be offered between <%= number_to_currency @affordability.can_borrow_from %> and <%= number_to_currency @affordability.can_borrow_upto%>
-</p>
+  <% @affordability.outgoings.instance_variables.each do |var| %>
+    <% attribute = var.to_s[1..-1] %>
+    <%= hidden_field_tag "affordability[outgoings][#{attribute}]", @affordability.outgoings.public_send(attribute).to_s %>
+  <% end %>
 
-<p>
-  Borrowing: <%= number_to_currency @affordability.borrowing %>
-</p>
+  <p>
+    Your take home pay per month: <%= number_to_currency @affordability.monthly_net_income %>
+  </p>
 
-<p>
-  Monthly mortgage repayment: <%= number_to_currency @affordability.repayment.monthly_payment %>
-</p>
+  <p>
+    You might be offered between <%= number_to_currency @affordability.can_borrow_from %> and <%= number_to_currency @affordability.can_borrow_upto%>
+  </p>
 
-<p>
-  Committed costs are <%= number_to_currency @affordability.committed_costs %>
-</p>
+  <p>
+    Borrowing: <%= f.text_field :borrowing %>
+  </p>
 
-<p>
-  Your risk percentage is <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>
-</p>
+  <p>
+    Monthly mortgage repayment: <%= number_to_currency @affordability.repayment.monthly_payment %>
+  </p>
 
-<p>
-  Your risk level is <%= @affordability.risk_level %>
-</p>
+  <p>
+    Committed costs are <%= number_to_currency @affordability.committed_costs %>
+  </p>
 
-<hr>
+  <p>
+    Your risk percentage is <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>
+  </p>
 
-<p>
-  Lifestyle costs are <%= number_to_currency @affordability.lifestyle_costs %>
-</p>
+  <p>
+    Your risk level is <%= @affordability.risk_level %>
+  </p>
 
-<p>
-  Remaining per month is <%= number_to_currency @affordability.remaining %>
-</p>
+  <hr>
 
-<hr>
+  <p>
+    Lifestyle costs are <%= f.text_field :lifestyle_costs %>
+  </p>
 
-<p>
-  If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %>
-</p>
+  <p>
+    Remaining per month is <%= number_to_currency @affordability.remaining %>
+  </p>
 
-<p>
-  Your mortgage repayments will be <%= number_to_currency @changer.monthly_payment %>
-</p>
+  <hr>
 
-<p>
-  Your financial buffer will be <%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.lifestyle_costs) %>
-</p>
+  <p>
+    If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %>
+  </p>
+
+  <p>
+    Your mortgage repayments will be <%= number_to_currency @changer.monthly_payment %>
+  </p>
+
+  <p>
+    Your financial buffer will be <%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.lifestyle_costs) %>
+  </p>
+
+  <%= f.submit "Recalculate" %>
+<% end %>
 
 <%= link_to "Next Steps", next_steps_affordability_path %>
