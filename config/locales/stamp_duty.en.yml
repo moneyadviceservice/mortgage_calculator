@@ -1,0 +1,61 @@
+en:
+  stamp_duty:
+    tool_name: "stamp-duty"
+    pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
+    h1: Stamp Duty calculator
+    title: Calculate the Stamp Duty on your residential property
+    subtitle: "Stamp Duty is a tax on the cost of properties over £125,000, with different rates depending on the purchase price.  Use this calculator to work out how much Stamp Duty you'll need to pay on a new home."
+    next: Next
+    recalculate: Recalculate
+    back: Back
+    how_calculated_toggle: "How is this calculated?"
+    how_calculated: "You'll pay a percentage of tax from 1% to 7%, depending on the price"
+    caveat:
+      title: Important
+      one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
+    results:
+      title: "Stamp Duty to pay is"
+      sentence: "This is %{percentage} of your property price"
+      sentence_prefix: This is
+      sentence_suffix: "% of your property price"
+    table:
+      property_price_header: "Purchase price of property"
+      rate_header: "Rate of Stamp Duty"
+      over: Over
+      million: million
+    next_steps:
+      title: "Three steps to help budget for costs"
+      tip_1:
+        heading_html: "Understand the true costs of buying a home <span class='visually-hidden'>(opens in a new window)</span>"
+        url: https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs
+      tip_2:
+        heading_html: "Work out your home buying budget <span class='visually-hidden'>(opens in a new window)</span>"
+        url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner/short-form/edit/money-in
+      tip_3:
+        heading_html: "Build an emergency savings fund <span class='visually-hidden'>(opens in a new window)</span>"
+        url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
+      learn_more:
+        title: "Did you know?"
+        tip_1: "There are some situations in which Stamp Duty doesn't apply. To learn more about them or how you can minimise Stamp Duty on a property purchase, %{link}."
+        tip_1_link_text: read more about Stamp Duty
+        tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
+      find_out_more:
+        title: Find out more
+        tip_1:
+          copy_html: Mortgage calculator
+          url: "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator-new"
+        tip_2:
+          copy_html: Upfront home buying costs
+          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+        tip_3:
+          copy_html: Mortgage fees and costs
+          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+        tip_4:
+          copy_html: Emergency costs
+          url: "https://www.moneyadviceservice.org.uk/en/news/too-many-first-time-buyers-unprepared-for-emergency-costs-14022014"
+        tip_5:
+          copy_html: Costs of moving day
+          url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+      have_you_tried:
+        title: 'Have you tried?'
+        mortgage_calculator: "Mortgage calculator"
