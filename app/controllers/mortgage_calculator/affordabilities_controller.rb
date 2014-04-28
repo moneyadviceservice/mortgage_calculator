@@ -14,10 +14,20 @@ module MortgageCalculator
 
       @affordability = ::MortgageCalculator::Affordability.new(people, outgoings)
 
+      @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
+      @changer.change_interest_rate_by(interest_rate_change_amount)
+
       unless @affordability.valid?
         render :show
       end
     end
+
+    private
+
+    def interest_rate_change_amount
+      2
+    end
+    helper_method :interest_rate_change_amount
   end
 end
 
