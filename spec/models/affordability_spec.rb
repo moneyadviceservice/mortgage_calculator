@@ -88,11 +88,21 @@ module MortgageCalculator
     end
 
     describe :lifestyle_costs do
-      context 'when overriden' do
+      context 'when overridden' do
         subject{ described_class.new([person1], outgoings, lifestyle_costs: 123) }
 
-        it 'uses overriden value' do
+        it 'uses overridden value' do
           expect(subject.lifestyle_costs.to_i).to eql(123)
+        end
+      end
+    end
+
+    describe :interest_rate do
+      context 'when overridden' do
+        subject{ described_class.new([person1], outgoings, interest_rate: 13) }
+
+        it 'use new value' do
+          expect(subject.repayment.interest_rate.to_i).to eql(13)
         end
       end
     end

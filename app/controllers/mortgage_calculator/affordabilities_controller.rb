@@ -13,8 +13,9 @@ module MortgageCalculator
       outgoings = Outgoings.new(params[:affordability][:outgoings])
       borrowing = params[:affordability][:borrowing]
       lifestyle_costs = params[:affordability][:lifestyle_costs]
+      interest_rate = params[:affordability][:interest_rate]
 
-      @affordability = ::MortgageCalculator::Affordability.new(people, outgoings, borrowing: borrowing, lifestyle_costs: lifestyle_costs)
+      @affordability = ::MortgageCalculator::Affordability.new(people, outgoings, borrowing: borrowing, lifestyle_costs: lifestyle_costs, interest_rate: interest_rate)
 
       @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
       @changer.change_interest_rate_by(interest_rate_change_amount)

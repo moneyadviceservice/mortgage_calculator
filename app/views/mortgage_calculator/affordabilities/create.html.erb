@@ -27,8 +27,14 @@
   </p>
 
   <p>
+    Based on interest rate of: <%= f.text_field :interest_rate %>
+  </p>
+
+  <p>
     Committed costs are <%= number_to_currency @affordability.committed_costs %>
   </p>
+
+  <hr>
 
   <p>
     Your risk percentage is <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>

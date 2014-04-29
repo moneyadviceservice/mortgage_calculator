@@ -24,11 +24,16 @@ module MortgageCalculator
       @people = people
       @outgoings = outgoings
       @borrowing = options[:borrowing]
+      @interest_rate = options[:interest_rate]
       self.lifestyle_costs = options[:lifestyle_costs]
     end
 
+    def interest_rate
+      @interest_rate || 5
+    end
+
     def repayment
-      @repayment ||= Repayment.new(price: borrowing)
+      @repayment ||= Repayment.new(price: borrowing, interest_rate: interest_rate)
     end
 
     def total_income
