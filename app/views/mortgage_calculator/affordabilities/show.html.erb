@@ -99,19 +99,8 @@
     <%= f.submit I18n.t("affordability.input_page.submit"),
                  class: "button button--primary" %>
   <% end %>
-
-  <div ng-show="affordability.earnings.person1.annual">
-    <p class="results">
-      Based on your total income of
-      <span class='label label-primary'>{{ affordability.totalIncome() | currency:"£" }}</span>
-      and your total expenditure of
-      <span class='label label-danger'>{{ affordability.personalSpend | currency:"£" }}</span>,
-      the maximum mortgage you can borrow is between
-      <span class='label label-success'>{{ affordability.minimumBorrowing() | currency:"£" }}</span>
-      to
-      <span class='label label-success'>{{ affordability.maximumBorrowing() | currency:"£" }}</span>
-    </p>
-  </div>
 </div>
+
+<%= render 'caveat' %>
 
 <%= zendesk_feedback_tab(zendesk_affordability_config) %>
