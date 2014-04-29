@@ -3,7 +3,7 @@ module UI
     class Affordability < SitePrism::Page
       include DefaultLocale
 
-      set_url "/{locale}/mortgage_calculator/affordability"
+      set_url "/{locale}/mortgage_calculator/affordability-calculator"
 
       element :annual_income, "input[name='affordability[people_attributes][0][annual_income]']"
       element :extra_income, "input[name='affordability[people_attributes][0][extra_income]']"
