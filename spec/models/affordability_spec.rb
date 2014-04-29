@@ -111,6 +111,14 @@ module MortgageCalculator
       it "is (monthly mortgage repayments + commited costs) / take home" do
         expect(subject.risk_percentage.to_i).to eql(44)
       end
+
+      context 'when over 100%' do
+        subject{ described_class.new([person1], outgoings, interest_rate: 50) }
+
+        it 'is capped at 100%' do
+          expect(subject.risk_percentage.to_i).to eql(100)
+        end
+      end
     end
 
     describe :risk_level do

@@ -69,7 +69,9 @@ module MortgageCalculator
     end
 
     def risk_percentage
-      ((committed_costs + repayment.monthly_payment) / monthly_net_income) * 100
+      percent = ((committed_costs + repayment.monthly_payment) / monthly_net_income) * 100
+
+      [100, percent].min
     end
 
     def risk_level
