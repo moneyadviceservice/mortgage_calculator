@@ -17,8 +17,10 @@ en:
         mortgage_calculator/person:
           annual_income_0: "My annual income"
           extra_income_0: "My other annual income"
-          annual_income_1: " Second applicant’s income"
+          monthly_net_income_0: "My monthly take home pay"
+          annual_income_1: " Second applicant's income"
           extra_income_1: "Second applicant's other income"
+          monthly_net_income_1: "Second applicant's take home pay"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthy take home pay"

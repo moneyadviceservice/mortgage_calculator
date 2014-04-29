@@ -29,7 +29,7 @@
         <% count = @affordability.people.find_index(person.object) %>
         <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
 
-        <%= person.label :monthly_net_income  %>
+        <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_#{count}") %>
         <%= person.text_field :monthly_net_income,
                               "class" => "form-control",
                               "placeholder" => "Monthly Net Income",
