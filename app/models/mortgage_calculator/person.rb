@@ -38,11 +38,11 @@ module MortgageCalculator
     private
 
     def lower_profit_multiplier
-      3
+      2.8
     end
 
     def upper_profit_multiplier
-      4
+      4.2
     end
   end
 end
