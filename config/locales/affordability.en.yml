@@ -8,3 +8,5 @@ en:
       monthly_outgoings: "Monthly outgoings"
       estimated_committed: "Estimated monthly committed costs"
       estimated_lifestyle: "Estimated monthly fixed and lifestyle costs"
+    input_page:
+      submit: "Show me how much I can borrow"
