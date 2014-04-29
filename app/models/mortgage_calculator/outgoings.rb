@@ -1,6 +1,11 @@
 module MortgageCalculator
   class Outgoings
+    extend ActiveModel::Translation
     include CurrencyInput::Macro
+
+    def self.i18n_scope
+      "affordability.activemodel"
+    end
 
     attr_accessor :credit_repayments, :utilities, :childcare,
                   :child_maintenance, :rent_and_mortgage,

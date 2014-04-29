@@ -16,6 +16,12 @@ describe MortgageCalculator::Outgoings do
 
   subject{ described_class.new(input_hash) }
 
+  describe 'class methods' do
+    subject{ described_class }
+
+    its(:i18n_scope){ expect(subject.i18n_scope).to eql("affordability.activemodel") }
+  end
+
   it_should_behave_like "currency inputs", [:credit_repayments, :utilities, :childcare, :child_maintenance, :rent_and_mortgage, :food, :travel, :entertainment]
 
   describe 'attributes' do

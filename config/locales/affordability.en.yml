@@ -2,6 +2,17 @@ en:
   affordability:
     title: "How much can I borrow for a mortgage?"
     description: "Use this calculator to estimate how much a lender will offer you for a mortgage, and understand how affordable the monthly payments are, should circumstances change"
+    activemodel:
+      attributes:
+        mortgage_calculator/outgoings:
+          credit_repayments: "Credit card debt / loan repayments"
+          utilities: "Bills and insurance"
+          childcare: "Childcare costs and school fees"
+          child_maintenance: "Child maintenance and alimony"
+          rent_and_mortgage: "Current rent / mortgage repayments"
+          food: "Food, groceries and toiletries"
+          travel: "Travel / commuting"
+          entertainment: "Entertainment and leisure"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthy take home pay"
