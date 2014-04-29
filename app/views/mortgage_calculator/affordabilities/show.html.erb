@@ -1,41 +1,45 @@
+<%= render 'header' %>
+
 <div ng-controller="CalculatorCtrl">
-  <h1>Find out how much you can borrow</h1>
-    <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+  <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+    <%= field_set_tag I18n.t("affordability.titles.annual_income") do %>
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
-        <%= field_set_tag do %>
-          <%= person.label :annual_income  %>
-          <%= person.text_field :annual_income,
-                                "class" => "form-control",
-                                "ng-model" => "affordability.earnings.person#{count + 1}.annual",
-                                "placeholder" => "Your yearly income",
-                                "format" => 'number'
-          %>
+        <%= person.label :annual_income  %>
+        <%= person.text_field :annual_income,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.earnings.person#{count + 1}.annual",
+                              "placeholder" => "Your yearly income",
+                              "format" => 'number' %>
 
-          <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
+        <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
 
-          <%= person.label :extra_income  %>
-          <%= person.text_field :extra_income,
-                                "class" => "form-control",
-                                "ng-model" => "affordability.earnings.person#{count + 1}.extra",
-                                "placeholder" => "Any extra income",
-                                "format" => 'number'
-          %>
-
-          <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
-
-          <%= person.label :monthly_net_income  %>
-          <%= person.text_field :monthly_net_income,
-                                "class" => "form-control",
-                                "placeholder" => "Monthly Net Income",
-                                "format" => 'number'
-          %>
-        <% end %>
+        <%= person.label :extra_income  %>
+        <%= person.text_field :extra_income,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.earnings.person#{count + 1}.extra",
+                              "placeholder" => "Any extra income",
+                              "format" => 'number' %>
       <% end %>
+    <% end %>
 
+    <%= field_set_tag I18n.t("affordability.titles.take_home") do %>
+      <%= f.fields_for :people do |person| %>
+        <% count = @affordability.people.find_index(person.object) %>
+        <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
+
+        <%= person.label :monthly_net_income  %>
+        <%= person.text_field :monthly_net_income,
+                              "class" => "form-control",
+                              "placeholder" => "Monthly Net Income",
+                              "format" => 'number' %>
+      <% end %>
+    <% end %>
+
+    <%= field_set_tag I18n.t("affordability.titles.monthly_outgoings") do %>
       <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
-        <%= field_set_tag do %>
+        <%= field_set_tag I18n.t("affordability.titles.estimated_committed") do %>
           <%= outgoings.label :credit_repayments %>
           <%= outgoings.text_field :credit_repayments,
                                 "class" => "form-control",
@@ -67,7 +71,7 @@
                                 "format" => 'number' %>
         <% end %>
 
-        <%= field_set_tag do %>
+        <%= field_set_tag I18n.t("affordability.titles.estimated_lifestyle") do %>
           <%= outgoings.label :food %>
           <%= outgoings.text_field :food,
                                 "class" => "form-control",
@@ -87,8 +91,9 @@
                                 "format" => 'number' %>
         <% end %>
       <% end %>
+    <% end %>
 
-      <%= f.submit %>
+    <%= f.submit %>
   <% end %>
 
   <div ng-show="affordability.earnings.person1.annual">

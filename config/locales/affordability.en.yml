@@ -1,0 +1,10 @@
+en:
+  affordability:
+    title: "How much can I borrow for a mortgage?"
+    description: "Use this calculator to estimate how much a lender will offer you for a mortgage, and understand how affordable the monthly payments are, should circumstances change"
+    titles:
+      annual_income: "Annual Income"
+      take_home: "Monthy take home pay"
+      monthly_outgoings: "Monthly outgoings"
+      estimated_committed: "Estimated monthly committed costs"
+      estimated_lifestyle: "Estimated monthly fixed and lifestyle costs"
