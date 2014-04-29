@@ -38,6 +38,9 @@
     <% end %>
 
     <%= field_set_tag I18n.t("affordability.titles.monthly_outgoings") do %>
+      <p>
+        <%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %>
+      </p>
       <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
         <%= field_set_tag I18n.t("affordability.titles.estimated_committed") do %>
           <%= outgoings.label :credit_repayments %>

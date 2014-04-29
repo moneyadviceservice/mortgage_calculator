@@ -10,3 +10,4 @@ en:
       estimated_lifestyle: "Estimated monthly fixed and lifestyle costs"
     input_page:
       submit: "Show me how much I can borrow"
+      monthly_outgoings_descriptions: "Lenders will offer you a mortgage based on affordable monthly payments, and they'll work this out by looking at your income as well as various outgoings. Fill in the sections below to get a rough idea of how your budget adds up and understand how affordable monthly payments may be."
