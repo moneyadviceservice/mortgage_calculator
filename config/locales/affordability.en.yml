@@ -14,6 +14,11 @@ en:
           food: "Food, groceries and toiletries"
           travel: "Travel / commuting"
           entertainment: "Entertainment and leisure"
+        mortgage_calculator/person:
+          annual_income_0: "My annual income"
+          extra_income_0: "My other annual income"
+          annual_income_1: " Second applicant’s income"
+          extra_income_1: "Second applicant's other income"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthy take home pay"

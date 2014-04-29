@@ -6,7 +6,7 @@
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
 
-        <%= person.label :annual_income  %>
+        <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_#{count}") %>
         <%= person.text_field :annual_income,
                               "class" => "form-control",
                               "ng-model" => "affordability.earnings.person#{count + 1}.annual",
@@ -15,7 +15,7 @@
 
         <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][annual_income]'].$pristine" class="help-block">Please enter an amount</p>
 
-        <%= person.label :extra_income  %>
+        <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_#{count}") %>
         <%= person.text_field :extra_income,
                               "class" => "form-control",
                               "ng-model" => "affordability.earnings.person#{count + 1}.extra",
