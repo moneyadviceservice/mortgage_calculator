@@ -27,6 +27,7 @@
     <%= field_set_tag I18n.t("affordability.titles.take_home") do %>
       <%= f.fields_for :people do |person| %>
         <% count = @affordability.people.find_index(person.object) %>
+        <% person.object_name = "affordability[people_attributes][#{count}]" %>
         <p ng-show="affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$invalid && !affordability_form['affordability[people_attributes][<%= count %>][extra_income]'].$pristine" class="help-block">Please enter an amount</p>
 
         <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_#{count}") %>
