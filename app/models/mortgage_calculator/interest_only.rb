@@ -23,6 +23,8 @@ module MortgageCalculator
 
     def debt
       price - deposit
+    rescue
+      BigDecimal.new(0)
     end
 
     def monthly_payment

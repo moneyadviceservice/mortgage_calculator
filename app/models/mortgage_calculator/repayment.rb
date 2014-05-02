@@ -22,6 +22,8 @@ module MortgageCalculator
 
     def debt
       price - deposit
+    rescue
+      BigDecimal.new(0)
     end
 
     def term_years=(value)
