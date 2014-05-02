@@ -3,8 +3,8 @@ Given /^I visit the Affordability page$/ do
   @affordability.load
 end
 
-Then /^I should see the Affordability calculator$/ do
-  expect(page).to have_content('Find out how much you can borrow')
+Then /^I should see the Affordability title$/ do
+  expect(@affordability.h2).to have_content(I18n.t("affordability.title"))
 end
 
 Then(/^I see "(.*?)"$/) do |content|
@@ -29,11 +29,22 @@ end
 
 When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
   if applicant.to_i == 1
-    fill_in "affordability[people_attributes][0][annual_income]", :with => "100000"
-    fill_in "affordability[people_attributes][0][extra_income]", :with => "10000"
+    @affordability.annual_income.set "100000"
+    @affordability.extra_income.set "10000"
+    @affordability.monthly_net_income.set "6000"
+
+    @affordability.credit_repayments.set "300"
+    @affordability.utilities.set "300"
+    @affordability.childcare.set "300"
+    @affordability.child_maintenance.set "300"
+    @affordability.rent_and_mortgage.set "300"
+    @affordability.food.set "300"
+    @affordability.travel.set "300"
+    @affordability.entertainment.set "300"
   elsif applicant.to_i == 2
-    fill_in "affordability[people_attributes][1][annual_income]", :with => "50000"
-    fill_in "affordability[people_attributes][1][extra_income]", :with => "5000"
+    @affordability.person_two_annual_income.set "50000"
+    @affordability.person_two_extra_income.set "5000"
+    @affordability.person_two_monthly_net_income.set "3000"
   end
 end
 
@@ -43,13 +54,5 @@ When(/^I enter some details for applicant "(.*?)"$/) do |applicant|
   elsif applicant.to_i == 2
     fill_in "affordability[people_attributes][1][annual_income]", :with => "50000"
   end
-end
-
-When(/^I enter my monthly debt$/) do
-  fill_in "affordability[monthly_debt]", :with => "1000"
-end
-
-When(/^I enter our monthly debt$/) do
-  fill_in "affordability[monthly_debt]", :with => "2000"
 end
 
