@@ -119,6 +119,20 @@ module MortgageCalculator
           expect(subject.risk_percentage.to_i).to eql(100)
         end
       end
+
+      context 'when divide by zero' do
+        subject{ described_class.new([person1], Outgoings.new) }
+
+        let(:person1) do
+          Person.new({ annual_income: "0",
+                       extra_income: "0",
+                       monthly_net_income: 0 })
+        end
+
+        it 'returns 0' do
+          expect(subject.risk_percentage.to_i).to eql(0)
+        end
+      end
     end
 
     describe :risk_level do
