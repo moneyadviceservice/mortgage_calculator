@@ -3,9 +3,9 @@ module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def show
       people = [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
-      outoings = Outgoings.new
+      outgoings = Outgoings.new
 
-      @affordability = AffordabilityPresenter.new(Affordability.new(people, outoings))
+      @affordability = AffordabilityPresenter.new(Affordability.new(people, outgoings))
     end
 
     def create
