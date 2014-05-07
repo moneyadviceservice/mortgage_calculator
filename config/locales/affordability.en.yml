@@ -22,7 +22,7 @@ en:
           extra_income_0: "My other annual income"
           monthly_net_income_0: "My monthly take home pay"
           annual_income_1: " Second applicant's income"
-          extra_income_1: "Second applicant's other income"
+          extra_income_1: "Second other income"
           monthly_net_income_1: "Second applicant's take home pay"
     titles:
       annual_income: "Annual Income"
