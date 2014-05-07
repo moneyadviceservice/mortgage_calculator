@@ -1,0 +1,11 @@
+
+<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
+  Your risk percentage is <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>.
+</p>
+
+<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
+  Your risk level is <%= @affordability.risk_level %>
+</p>
+<p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze results">
+  {{ affordability.takeHomePay() }}
+</p>
