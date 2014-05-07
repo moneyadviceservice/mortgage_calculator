@@ -3,7 +3,7 @@ module UI
     class StampDuty < SitePrism::Page
       include DefaultLocale
 
-      set_url "/{locale}/mortgage_calculator/stamp_duty"
+      set_url "/{locale}/mortgage_calculator/stamp-duty-calculator"
 
       element :h1, "h1"
       element :h2, "h2"
