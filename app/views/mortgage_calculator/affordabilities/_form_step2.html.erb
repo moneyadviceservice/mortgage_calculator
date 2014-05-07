@@ -1,0 +1,47 @@
+<%= form_for @affordability, url: affordability_path do |f| %>
+  <% @affordability.people.each_with_index do |person, index| %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
+  <% end %>
+
+  <% @affordability.outgoings.instance_variables.each do |var| %>
+    <% attribute = var.to_s[1..-1] %>
+    <%= hidden_field_tag "affordability[outgoings][#{attribute}]", @affordability.outgoings.public_send(attribute).to_s %>
+  <% end %>
+
+  <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
+  <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
+
+  <p>
+    Borrowing: <%= f.text_field :borrowing %>
+  </p>
+
+  <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
+
+  <p>
+    Based on interest rate of: <%= f.text_field :interest_rate %>
+  </p>
+
+  <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
+
+  <hr>
+
+  <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
+
+  <hr>
+
+  <p>
+    Lifestyle costs are <%= f.text_field :lifestyle_costs %>
+  </p>
+
+  <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
+
+  <hr>
+
+  <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
+
+  <%= f.submit "Recalculate", class: "button" %>
+<% end %>
+
+<%= link_to "Next Steps", next_steps_affordability_path, class: "button button--primary" %>
