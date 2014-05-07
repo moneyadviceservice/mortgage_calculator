@@ -28,6 +28,10 @@ module MortgageCalculator
     def next_steps
     end
 
+    def tool_name
+      I18n.translate('affordability.tool_name')
+    end
+
     private
 
     def interest_rate_change_amount
