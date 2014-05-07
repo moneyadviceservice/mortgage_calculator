@@ -57,7 +57,7 @@ module MortgageCalculator
                           borrowing: "550000"
                         }
           expect(response).to be_success
-          expect(assigns(:affordability).borrowing.to_i).to eql(550000)
+          expect(assigns(:affordability).borrowing).to eql("550,000")
         end
       end
 
@@ -72,7 +72,7 @@ module MortgageCalculator
                           lifestyle_costs: "3000"
                         }
           expect(response).to be_success
-          expect(assigns(:affordability).lifestyle_costs.to_i).to eql(3000)
+          expect(assigns(:affordability).lifestyle_costs).to eql("3,000")
         end
       end
     end
