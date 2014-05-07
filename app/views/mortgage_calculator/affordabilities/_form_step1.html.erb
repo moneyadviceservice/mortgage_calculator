@@ -1,28 +1,28 @@
 <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
 
+  <!-- INCOME FIELDS -->
   <legend><%= I18n.t("affordability.titles.annual_income") %></legend>
   <%= f.fields_for :people do |person| %>
     <% count = @affordability.people.find_index(person.object) %>
 
     <% if count == 0 %>
+      <div class="mortgagecalc__panel">
+        <div>
+          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.annual",
+                                "placeholder" => "Your yearly income",
+                                "format" => 'number' %>
 
-        <div class="mortgagecalc__panel">
-          <div>
-            <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
-            <%= person.text_field :annual_income,
-                                  "class" => "form-control",
-                                  "ng-model" => "affordability.earnings.person1.annual",
-                                  "placeholder" => "Your yearly income",
-                                  "format" => 'number' %>
-
-            <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
-            <%= person.text_field :extra_income,
-                                  "class" => "form-control",
-                                  "ng-model" => "affordability.earnings.person1.extra",
-                                  "placeholder" => "Any extra income",
-                                  "format" => 'number' %>
-          </div>
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.extra",
+                                "placeholder" => "Any extra income",
+                                "format" => 'number' %>
         </div>
+      </div>
     <% else %>
       <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
         <div>
@@ -51,7 +51,6 @@
     <% person.object_name = "affordability[people_attributes][#{count}]" %>
 
     <% if count == 0 %>
-
         <div class="mortgagecalc__panel">
           <div>
             <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
@@ -72,9 +71,10 @@
         </div>
       </div>
     <% end %>
-
   <% end %>
+  <!-- END INCOME FIELDS -->
 
+  <!-- OUTGOING FIELDS -->
   <legend class="cf"><%= I18n.t("affordability.titles.monthly_outgoings") %></legend>
   <p><%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %></p>
 
@@ -145,11 +145,11 @@
         </div>
       </div>
   <% end %>
+  <!-- END OUTGOING FIELDS -->
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit",
              'wz-next' => '' %>
   </div>
-
 <% end %>
