@@ -3,7 +3,7 @@ $fix-mqs: false !default;
 @mixin respond-min($width) {
   @if $fix-mqs {
     @if $fix-mqs >= $width {
-      @content; 
+      @content;
     }
   }
   @else {
@@ -15,7 +15,7 @@ $fix-mqs: false !default;
 @mixin respond-max($width) {
   @if $fix-mqs {
     @if $fix-mqs < $width {
-      @content; 
+      @content;
     }
   }
   @else {
@@ -32,3 +32,8 @@ $responsive: true !default;
     @content;
   }
 }
+
+.cf {
+  clear: both;
+}
+
