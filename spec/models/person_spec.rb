@@ -10,13 +10,9 @@ describe MortgageCalculator::Person do
   end
 
   describe 'validations' do
-    it 'annual income must be a number' do
-      subject.annual_income = 'abc'
-      expect(subject).to_not be_valid
-
-      subject.annual_income = 0.01
-      expect(subject).to be_valid
-    end
+    it { should validate_numericality_of(:annual_income) }
+    it { should validate_numericality_of(:extra_income) }
+    it { should validate_numericality_of(:monthly_net_income) }
   end
 
   describe 'the range the person can borrow' do
