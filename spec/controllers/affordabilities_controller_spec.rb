@@ -38,8 +38,8 @@ module MortgageCalculator
       it 'renders the create template' do
         post :create, affordability: {
                         people_attributes: {
-                          "0"=>{annual_income: "100000", extra_income: "10000"},
-                          "1"=>{annual_income: "50000", extra_income: "5000"}
+                          "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "6000"},
+                          "1"=>{annual_income: "50000", extra_income: "5000", monthly_net_income: "3000"}
                         },
                         outgoings: {}
                       }

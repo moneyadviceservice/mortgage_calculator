@@ -8,6 +8,7 @@ module MortgageCalculator
     validates :annual_income, numericality: true
     validates :extra_income, numericality: true
     validates :monthly_net_income, numericality: true
+    validate :validate_associated_incomes
 
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
@@ -40,6 +41,18 @@ module MortgageCalculator
     end
 
     private
+
+    def validate_associated_incomes
+      return unless total_income && monthly_net_income
+
+      if !total_income.zero? && monthly_net_income.zero?
+        errors[:base] << "Take home pay should be more than zero if annual income is more than zero"
+      end
+
+      if total_income.zero? && !monthly_net_income.zero?
+        errors[:base] << "Annual income should be more than zero if take home pay is more than zero"
+      end
+    end
 
     def lower_profit_multiplier
       2.8
