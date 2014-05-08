@@ -92,7 +92,7 @@ module MortgageCalculator
   private
 
     def income_greater_than_zero
-      errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero") unless total_income > 0
+      errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero") unless total_income + monthly_net_income > 0
     end
 
     def default_borrowing_amount
