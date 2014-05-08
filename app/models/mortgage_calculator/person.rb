@@ -25,6 +25,8 @@ module MortgageCalculator
 
     def total_income
       annual_income + extra_income
+    rescue
+      0
     end
 
     def can_borrow_upto

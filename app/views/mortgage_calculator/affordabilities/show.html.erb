@@ -1,6 +1,12 @@
 <%= render 'header' %>
 
 <div ng-controller="CalculatorCtrl">
+  <p>
+    <% @affordability.errors.full_messages.each do |message| %>
+      <%= message %><br>
+    <% end %>
+  </p>
+
   <%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
     <%= field_set_tag I18n.t("affordability.titles.annual_income") do %>
       <%= f.fields_for :people do |person| %>

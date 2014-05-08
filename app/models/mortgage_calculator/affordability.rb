@@ -8,6 +8,7 @@ module MortgageCalculator
     attr_reader :people, :outgoings
 
     validate :validate_people
+    validate :income_greater_than_zero
 
     delegate :committed_costs, to: :outgoings
 
@@ -89,6 +90,10 @@ module MortgageCalculator
 
   private
 
+    def income_greater_than_zero
+      errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero") unless total_income > 0
+    end
+
     def default_borrowing_amount
       (can_borrow_from + can_borrow_upto) / 2
     end
@@ -96,8 +101,8 @@ module MortgageCalculator
     def validate_people
       people.each do |person|
         unless person.valid?
-          person.errors.each do |error|
-            errors.add(:base, error)
+          person.errors.full_messages.each do |message|
+            errors.add(:base, message)
           end
         end
       end

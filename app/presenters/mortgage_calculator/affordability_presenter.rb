@@ -19,6 +19,7 @@ module MortgageCalculator
     delegate :risk_percentage, to: :model
     delegate :risk_level, to: :model
     delegate :remaining, to: :model
+    delegate :errors, to: :model
 
     def initialize(model)
       @model = model
