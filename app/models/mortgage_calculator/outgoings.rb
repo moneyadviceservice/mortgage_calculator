@@ -2,6 +2,7 @@ module MortgageCalculator
   class Outgoings
     extend ActiveModel::Translation
     include CurrencyInput::Macro
+    include ActiveModel::Validations
 
     def self.i18n_scope
       "affordability.activemodel"
@@ -14,6 +15,15 @@ module MortgageCalculator
     currency_inputs :credit_repayments, :utilities, :childcare,
                     :child_maintenance, :rent_and_mortgage,
                     :food, :travel, :entertainment
+
+    validates :credit_repayments, numericality: true
+    validates :utilities, numericality: true
+    validates :childcare, numericality: true
+    validates :child_maintenance, numericality: true
+    validates :rent_and_mortgage, numericality: true
+    validates :food, numericality: true
+    validates :travel, numericality: true
+    validates :entertainment, numericality: true
 
     def initialize(attributes = {})
       # Sorry. Rails 3.2 Doesn't have ActiveModel::Model

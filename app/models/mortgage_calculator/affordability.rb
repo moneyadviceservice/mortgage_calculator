@@ -8,6 +8,7 @@ module MortgageCalculator
     attr_reader :people, :outgoings
 
     validate :validate_people
+    validate :validate_outgoings
     validate :income_greater_than_zero
 
     delegate :committed_costs, to: :outgoings
@@ -104,6 +105,14 @@ module MortgageCalculator
           person.errors.full_messages.each do |message|
             errors.add(:base, message)
           end
+        end
+      end
+    end
+
+    def validate_outgoings
+      unless outgoings.valid?
+        outgoings.errors.full_messages.each do |message|
+          errors.add(:base, message)
         end
       end
     end
