@@ -1,12 +1,15 @@
 
 
-<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
-  If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %>
+<p ng-hide="js" class="squeeze results">
+  If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %> your monthly repayment would rise to <%= number_to_currency @changer.monthly_payment %>.
 </p>
-<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
-  Your mortgage repayments will be <%= number_to_currency @changer.monthly_payment %>
+<p ng-hide="js" class=" squeeze results">
+  Your remaining financial buffer will be
 </p>
-<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
 
+<p class="rendered-from-js  squeeze results">
+  If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %> your monthly repayment would rise to <%= number_to_currency @changer.monthly_payment %>.
 </p>
-<p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze results">{{ affordability.takeHomePay() }}</p>
+<p class="rendered-from-js  squeeze results">
+  Your remaining financial buffer will be
+</p>

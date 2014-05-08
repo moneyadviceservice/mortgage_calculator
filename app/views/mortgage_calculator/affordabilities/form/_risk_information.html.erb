@@ -1,11 +1,16 @@
 
-<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
-  Your risk percentage is <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>.
+<p ng-hide="js" class="squeeze results">
+  Mortgage repayments and fixed costs per month: <%= number_to_percentage @affordability.risk_percentage, precision: 0 %> of your monthly take home.
 </p>
 
-<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
-  Your risk level is <%= @affordability.risk_level %>
+<p ng-hide="js" class="squeeze results">
+  What you will have left over: 45% of your monthly takehome
 </p>
-<p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze results">
-  {{ affordability.takeHomePay() }}
+
+<p class="rendered-from-js squeeze results">
+  Mortgage repayments and fixed costs per month: 64% of your monthly take home.
+</p>
+
+<p class="rendered-from-js squeeze results">
+  What you will have left over: 45% of your monthly takehome
 </p>
