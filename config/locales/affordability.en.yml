@@ -24,6 +24,10 @@ en:
           annual_income_1: " Second applicant's income"
           extra_income_1: "Second applicant's other income"
           monthly_net_income_1: "Second applicant's take home pay"
+      errors:
+        mortgage_calculator/affordability:
+          base:
+            income_greater_than_zero: "Your total income must be greater than zero"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthy take home pay"

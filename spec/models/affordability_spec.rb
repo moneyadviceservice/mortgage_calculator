@@ -30,6 +30,16 @@ module MortgageCalculator
     subject{ described_class.new([person1], outgoings) }
 
     describe 'validations' do
+      context 'when it is valid' do
+        let(:person1){ Person.new({ annual_income: "100000", extra_income: "", monthly_net_income: "6000" }) }
+        let(:person2){ Person.new({ annual_income: "", extra_income: "", monthly_net_income: "" }) }
+        subject{ described_class.new([person1], outgoings) }
+
+        it 'is valid' do
+          expect(subject).to be_valid
+        end
+      end
+
       context 'when a person is not valid' do
         let(:person1){ Person.new({ annual_income: "abc", extra_income: "10000" }) }
         subject{ described_class.new([person1], outgoings) }
@@ -39,13 +49,36 @@ module MortgageCalculator
         end
       end
 
-      context 'when it is valid' do
-        let(:person1){ Person.new({ annual_income: "100000", extra_income: "" }) }
-        let(:person2){ Person.new({ annual_income: "", extra_income: "" }) }
+      context 'when outgoings is not valid' do
+        let(:person1){ Person.new({ annual_income: "10000", extra_income: "10000" }) }
+        let(:outgoings) do
+          Outgoings.new(
+            credit_repayments: "asd",
+            utilities: 200,
+            childare: 100,
+            child_maintenance: 0,
+            rent_and_mortgage: 600,
+            food: 200,
+            travel: 200,
+            entertainment: 400
+          )
+        end
         subject{ described_class.new([person1], outgoings) }
 
-        it 'is valid' do
-          expect(subject).to be_valid
+        it 'is not valid' do
+          expect(subject).to_not be_valid
+        end
+      end
+
+      context 'when overall income is zero' do
+        let(:person1){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
+        let(:person2){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
+
+        subject{ described_class.new([person1, person2], outgoings) }
+
+        it 'is not valid' do
+          expect(subject.valid?).to be_false
+          expect(subject.errors.full_messages).to include I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero")
         end
       end
     end

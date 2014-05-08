@@ -52,6 +52,17 @@ describe MortgageCalculator::Outgoings do
     end
   end
 
+  describe 'validations' do
+    it { should validate_numericality_of(:credit_repayments) }
+    it { should validate_numericality_of(:utilities) }
+    it { should validate_numericality_of(:childcare) }
+    it { should validate_numericality_of(:child_maintenance) }
+    it { should validate_numericality_of(:rent_and_mortgage) }
+    it { should validate_numericality_of(:food) }
+    it { should validate_numericality_of(:travel) }
+    it { should validate_numericality_of(:entertainment) }
+  end
+
   describe :commited_costs do
     it "is sum of credit_repayments, utilities, childcare, child_maintenance" do
       expect(subject.committed_costs).to eql(200 + 300 + 200 + 0)

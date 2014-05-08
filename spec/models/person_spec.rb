@@ -10,12 +10,24 @@ describe MortgageCalculator::Person do
   end
 
   describe 'validations' do
-    it 'annual income must be a number' do
-      subject.annual_income = 'abc'
-      expect(subject).to_not be_valid
+    it { should validate_numericality_of(:annual_income) }
+    it { should validate_numericality_of(:extra_income) }
+    it { should validate_numericality_of(:monthly_net_income) }
 
-      subject.annual_income = 0.01
-      expect(subject).to be_valid
+    context 'when annual income is 0 and monthly net income is not' do
+      subject{ described_class.new(annual_income: 100, extra_income: 0, monthly_net_income: 0) }
+
+      it "is not valid" do
+        expect(subject.valid?).to be_false
+      end
+    end
+
+    context 'when net monthly income is 0 and annual income is not' do
+      subject{ described_class.new(annual_income: 0, extra_income: 0, monthly_net_income: 100) }
+
+      it "is not valid" do
+        expect(subject.valid?).to be_false
+      end
     end
   end
 

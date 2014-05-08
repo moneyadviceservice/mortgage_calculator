@@ -7,6 +7,12 @@ label {
   color: #333;
 }
 
+.field_with_errors {
+  input[type="text"] {
+    border-top-color: $color-error;
+  }
+}
+
 input[type="text"] {
   width: 100%;
   border: 1px solid #ccc;
