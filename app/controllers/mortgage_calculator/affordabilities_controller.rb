@@ -24,11 +24,7 @@ module MortgageCalculator
     private
 
       def affordability_model
-        model = ::MortgageCalculator::Affordability.new(people_models,
-                                                        outgoings_model,
-                                                        borrowing: borrowing_params,
-                                                        lifestyle_costs: lifestyle_params,
-                                                        interest_rate: interest_rate_params)
+        Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)
       end
 
       def outgoings_model
