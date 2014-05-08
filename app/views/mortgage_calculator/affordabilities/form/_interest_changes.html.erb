@@ -7,6 +7,6 @@
   Your mortgage repayments will be <%= number_to_currency @changer.monthly_payment %>
 </p>
 <p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results">
-  Your financial buffer will be <%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.lifestyle_costs) %>
+
 </p>
 <p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze results">{{ affordability.takeHomePay() }}</p>
