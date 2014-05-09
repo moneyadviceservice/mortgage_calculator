@@ -1,14 +1,15 @@
-<p ng-hide="js" class="squeeze results">
+
+<p ng-hide="js" class="results">
   If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %> your monthly repayment would rise to <%= number_to_currency @changer.monthly_payment %>.
 </p>
-<p ng-hide="js" class=" squeeze results">
+<p ng-hide="js" class="results">
   Your remaining financial buffer will be <%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.model.lifestyle_costs) %>
 </p>
 
-<p class="rendered-from-js  squeeze results">
+<p class="rendered-from-js results">
   If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %> your monthly repayment would rise to <%= number_to_currency @changer.monthly_payment %>.
 </p>
-<p class="rendered-from-js  squeeze results">
+<p class="rendered-from-js results">
   Your remaining financial buffer will be
 </p>
 
