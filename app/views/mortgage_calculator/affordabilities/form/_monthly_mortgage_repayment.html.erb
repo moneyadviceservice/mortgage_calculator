@@ -1,8 +1,8 @@
 
 <p ng-hide="js" class="results">
-  Monthly mortgage repayment: <%= number_to_currency @affordability.repayment.monthly_payment %>
+  Estimated mortgage repayments per month, approx: <%= number_to_currency @affordability.repayment.monthly_payment %>
 </p>
 
 <p class="rendered-from-js results">
-  Monthly mortgage repayment: {{ affordability.monthlyMortgageRepayment() }}.
+  Estimated mortgage repayments per month, approx: {{ affordability.monthlyMortgageRepayment() }}
 </p>

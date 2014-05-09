@@ -1,8 +1,8 @@
 
 <p ng-hide="js" class=" results">
-  Committed costs are <%= number_to_currency @affordability.committed_costs %>
+  Estimated fixed and spending commitments per month are: <%= number_to_currency @affordability.committed_costs %>
 </p>
 
 <p class="rendered-from-js results">
-  Committed costs are {{ affordability.committedCosts() }}.
+  Estimated fixed and spending commitments per month are: {{ affordability.committedCosts() }}
 </p>
