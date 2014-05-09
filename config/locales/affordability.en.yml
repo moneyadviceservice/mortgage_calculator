@@ -2,8 +2,10 @@ en:
   affordability:
     tool_name: "affordability-calculator"
     title: "How much can I borrow for a mortgage?"
-    description: "Use this calculator to estimate how much a lender will offer you for a mortgage, and understand how affordable the monthly payments are, should circumstances change"
-    caveat: "Important! This tool is designed to give you an approximate idea of how much a lender may offer for a mortgage. It is only an estimate. Actual amounts and affordability criteria will differ across lenders"
+    description: "Use this calculator to estimate how much a lender will offer you for a mortgage. Also, understand more about how affordable the mortgage payments are, and where your financial buffer will come from if circumstances change."
+    caveat:
+      title: "Important"
+      one: "This tool is designed to give you an approximate idea of how much a lender may offer for a mortgage. It is only an estimate. Actual amounts and affordability criteria will differ across lenders"
     activemodel:
       attributes:
         mortgage_calculator/outgoings:
@@ -33,5 +35,5 @@ en:
       estimated_committed: "Estimated monthly committed costs"
       estimated_lifestyle: "Estimated monthly fixed and lifestyle costs"
     input_page:
-      submit: "Show me how much I can borrow"
+      submit: "Find out how much I can borrow"
       monthly_outgoings_descriptions: "Lenders will offer you a mortgage based on affordable monthly payments, and they'll work this out by looking at your income as well as various outgoings. Fill in the sections below to get a rough idea of how your budget adds up and understand how affordable monthly payments may be."

@@ -2,26 +2,13 @@ module MortgageCalculator
   # Load order issue - subclass a class explicitly
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def show
-      people = [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
-      outgoings = Outgoings.new
-
-      @affordability = AffordabilityPresenter.new(Affordability.new(people, outgoings))
+      @affordability = AffordabilityPresenter.new(affordability_model)
+      adjust_interest_rate
     end
 
     def create
-      people = params[:affordability][:people_attributes].values.map{|p| Person.new(p)}
-      outgoings = Outgoings.new(params[:affordability][:outgoings])
-      borrowing = params[:affordability][:borrowing]
-      lifestyle_costs = params[:affordability][:lifestyle_costs]
-      interest_rate = params[:affordability][:interest_rate]
-
-      model = ::MortgageCalculator::Affordability.new(people, outgoings, borrowing: borrowing, lifestyle_costs: lifestyle_costs, interest_rate: interest_rate)
-
-      @affordability = AffordabilityPresenter.new(model)
-
-      @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
-      @changer.change_interest_rate_by(interest_rate_change_amount)
-
+      @affordability = AffordabilityPresenter.new(affordability_model)
+      adjust_interest_rate
       unless @affordability.valid?
         render :show
       end
@@ -36,10 +23,44 @@ module MortgageCalculator
 
     private
 
-    def interest_rate_change_amount
-      2
-    end
-    helper_method :interest_rate_change_amount
+      def affordability_model
+        Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)
+      end
+
+      def outgoings_model
+        outgoings_params ? Outgoings.new(outgoings_params) : Outgoings.new
+      end
+
+      def people_models
+        return params[:affordability][:people_attributes].values.map{|p| Person.new(p)} if params[:affordability]
+        return [Person.new, Person.new]
+      end
+
+      def outgoings_params
+        params[:affordability][:outgoings] if params[:affordability]
+      end
+
+      def borrowing_params
+        params[:affordability][:borrowing] if params[:affordability]
+      end
+
+      def lifestyle_params
+        params[:affordability][:lifestyle_costs] if params[:affordability]
+      end
+
+      def interest_rate_params
+        params[:affordability][:interest_rate] if params[:affordability]
+      end
+
+      def adjust_interest_rate
+        @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
+        @changer.change_interest_rate_by(interest_rate_change_amount)
+      end
+
+      def interest_rate_change_amount
+        2
+      end
+      helper_method :interest_rate_change_amount
   end
 end
 

@@ -1,0 +1,155 @@
+<%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+
+  <!-- INCOME FIELDS -->
+  <legend><%= I18n.t("affordability.titles.annual_income") %></legend>
+  <%= f.fields_for :people do |person| %>
+    <% count = @affordability.people.find_index(person.object) %>
+
+    <% if count == 0 %>
+      <div class="mortgagecalc__panel">
+        <div>
+          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.annual",
+                                "placeholder" => "Your yearly income",
+                                "format" => 'number' %>
+
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.extra",
+                                "placeholder" => "Any extra income",
+                                "format" => 'number' %>
+        </div>
+      </div>
+    <% else %>
+      <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+        <div>
+          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person2.annual",
+                                "placeholder" => "Your yearly income",
+                                "format" => 'number' %>
+
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person2.extra",
+                                "placeholder" => "Any extra income",
+                                "format" => 'number' %>
+        </div>
+      </div>
+    <% end %>
+
+  <% end %>
+
+  <legend><%= I18n.t("affordability.titles.take_home") %></legend>
+  <%= f.fields_for :people do |person| %>
+    <% count = @affordability.people.find_index(person.object) %>
+    <% person.object_name = "affordability[people_attributes][#{count}]" %>
+
+    <% if count == 0 %>
+        <div class="mortgagecalc__panel">
+          <div>
+            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
+            <%= person.text_field :monthly_net_income,
+                                  "class" => "form-control",
+                                  "placeholder" => "Monthly Net Income",
+                                  "format" => 'number' %>
+          </div>
+        </div>
+    <% else %>
+      <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+        <div>
+          <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
+          <%= person.text_field :monthly_net_income,
+                                "class" => "form-control",
+                                "placeholder" => "Monthly Net Income",
+                                "format" => 'number' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <!-- END INCOME FIELDS -->
+
+  <!-- OUTGOING FIELDS -->
+  <legend class="cf"><%= I18n.t("affordability.titles.monthly_outgoings") %></legend>
+  <p><%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %></p>
+
+  <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
+    <legend><%= I18n.t("affordability.titles.estimated_committed") %></legend>
+    <div class="mortgagecalc__panel">
+      <div>
+        <%= outgoings.label :credit_repayments %>
+        <%= outgoings.text_field :credit_repayments,
+                              "class" => "form-control",
+                              "placeholder" => "Credit debts",
+                              "format" => 'number' %>
+
+
+        <%= outgoings.label :childcare %>
+        <%= outgoings.text_field :childcare,
+                              "class" => "form-control",
+                              "placeholder" => "utilities",
+                              "format" => 'number' %>
+
+        <%= outgoings.label :rent_and_mortgage %>
+        <%= outgoings.text_field :rent_and_mortgage,
+                              "class" => "form-control",
+                              "placeholder" => "utilities",
+                              "format" => 'number' %>
+      </div>
+    </div>
+
+    <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+      <div>
+        <%= outgoings.label :child_maintenance %>
+        <%= outgoings.text_field :child_maintenance,
+                              "class" => "form-control",
+                              "placeholder" => "utilities",
+                              "format" => 'number' %>
+
+        <%= outgoings.label :utilities %>
+        <%= outgoings.text_field :utilities,
+                              "class" => "form-control",
+                              "placeholder" => "utilities",
+                              "format" => 'number' %>
+      </div>
+    </div>
+
+    <legend class="cf"><%= I18n.t("affordability.titles.estimated_lifestyle") %></legend>
+      <div class="mortgagecalc__panel">
+        <div>
+          <%= outgoings.label :food %>
+          <%= outgoings.text_field :food,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+
+          <%= outgoings.label :entertainment %>
+          <%= outgoings.text_field :entertainment,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+        </div>
+      </div>
+      <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+        <div>
+          <%= outgoings.label :travel %>
+          <%= outgoings.text_field :travel,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number' %>
+        </div>
+      </div>
+  <% end %>
+  <!-- END OUTGOING FIELDS -->
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+    <%= f.submit I18n.t("affordability.input_page.submit"),
+             class: "button button--primary mortgagecalc__submit",
+             'wz-next' => '' %>
+  </div>
+<% end %>
