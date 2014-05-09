@@ -11,14 +11,20 @@
     <% if count == 0 %>
       <div class="mortgagecalc__panel">
         <div>
+          <input type="radio" ng-model="affordability.selectedOption" value="1" >
+
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
           <%= person.text_field :annual_income,
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person1.annual",
                                 "placeholder" => "Your yearly income",
-                                "format" => 'number',
+                                "autofocus" => "",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted %>
+
 
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
@@ -26,29 +32,41 @@
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person1.extra",
                                 "placeholder" => "Any extra income",
-                                "format" => 'number',
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => person.object.extra_income_formatted %>
         </div>
       </div>
     <% else %>
       <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
         <div>
+          <input type="radio" ng-model="affordability.selectedOption" value="2" >
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
           <%= person.text_field :annual_income,
                                 "class" => "form-control",
+                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
                                 "ng-model" => "affordability.earnings.person2.annual",
                                 "placeholder" => "Your yearly income",
-                                "format" => 'number',
+                                'ng-disabled' => "!isCheckboxSelected('2')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted %>
+
 
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
           <%= person.text_field :extra_income,
                                 "class" => "form-control",
+                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
                                 "ng-model" => "affordability.earnings.person2.extra",
                                 "placeholder" => "Any extra income",
-                                "format" => 'number',
+                                'ng-disabled' => "!isCheckboxSelected('2')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => person.object.extra_income_formatted %>
         </div>
       </div>
@@ -62,15 +80,19 @@
     <% person.object_name = "affordability[people_attributes][#{count}]" %>
 
     <% if count == 0 %>
-      <div class="mortgagecalc__panel">
-        <div>
+        <div class="mortgagecalc__panel">
+          <div>
           <%= f.errors_for person.object, :monthly_net_income %>
-          <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
-          <%= person.text_field :monthly_net_income,
-                                "class" => "form-control",
-                                "placeholder" => "Monthly Net Income",
-                                "format" => 'number',
-                                "value" => person.object.monthly_net_income_formatted %>
+            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
+            <%= person.text_field :monthly_net_income,
+                                  "class" => "form-control",
+                                  "placeholder" => "Monthly Net Income",
+                                  "ng-model" => "affordability.earnings.person1.net_pay",
+                                  "currency" => '',
+                                  "data-a-sign" =>"£",
+                                  "data-m-dec" =>"0",
+                                  "value" => person.object.monthly_net_income_formatted %>
+          </div>
         </div>
       </div>
     <% else %>
@@ -80,9 +102,15 @@
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
           <%= person.text_field :monthly_net_income,
                                 "class" => "form-control",
+                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
                                 "placeholder" => "Monthly Net Income",
-                                "format" => 'number',
+                                'ng-disabled' => "!isCheckboxSelected('2')",
+                                "ng-model" => "affordability.earnings.person2.net_pay",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => person.object.monthly_net_income_formatted %>
+
         </div>
       </div>
     <% end %>
@@ -102,15 +130,20 @@
         <%= outgoings.text_field :credit_repayments,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",
-                              "format" => 'number',
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
                               "value" => outgoings.object.credit_repayments_formatted %>
+
 
         <%= outgoings.errors_for outgoings.object, :childcare %>
         <%= outgoings.label :childcare %>
         <%= outgoings.text_field :childcare,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number',
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
                               "value" => outgoings.object.childcare_formatted %>
 
         <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
@@ -118,7 +151,9 @@
         <%= outgoings.text_field :rent_and_mortgage,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number',
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
                               "value" => outgoings.object.rent_and_mortgage_formatted %>
       </div>
     </div>
@@ -130,7 +165,9 @@
         <%= outgoings.text_field :child_maintenance,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number',
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
                               "value" => outgoings.object.child_maintenance_formatted %>
 
         <%= outgoings.errors_for outgoings.object, :utilities %>
@@ -138,7 +175,9 @@
         <%= outgoings.text_field :utilities,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number',
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
                               "value" => outgoings.object.utilities_formatted %>
       </div>
     </div>
@@ -151,15 +190,20 @@
           <%= outgoings.text_field :food,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number',
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => outgoings.object.food_formatted %>
+
 
           <%= outgoings.errors_for outgoings.object, :entertainment %>
           <%= outgoings.label :entertainment %>
           <%= outgoings.text_field :entertainment,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number',
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => outgoings.object.entertainment_formatted %>
         </div>
       </div>
@@ -170,7 +214,9 @@
           <%= outgoings.text_field :travel,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number',
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
                                 "value" => outgoings.object.travel_formatted %>
         </div>
       </div>
@@ -180,6 +226,6 @@
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit",
-             'wz-next' => '' %>
+             'ng-click' => 'navigateAndFocus($event)' %>
   </div>
 <% end %>
