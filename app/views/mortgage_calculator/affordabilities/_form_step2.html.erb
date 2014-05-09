@@ -74,7 +74,10 @@
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <div>
       <p>
-        Your estimate lifestyle spend per month is: <%= f.text_field :lifestyle_costs %>
+        Your estimate lifestyle spend per month is: <%= f.text_field :lifestyle_costs,
+                                                                     "currency" => '',
+                                                                     "data-a-sign" =>"£",
+                                                                     "data-m-dec" =>"0" %>
       </p>
       <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
     </div>
