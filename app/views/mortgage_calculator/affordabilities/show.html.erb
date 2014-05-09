@@ -1,6 +1,11 @@
 <%= render 'header' %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
+  <p>
+    <% @affordability.errors.full_messages.each do |message| %>
+      <%= message %><br>
+    <% end %>
+  </p>
 
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">

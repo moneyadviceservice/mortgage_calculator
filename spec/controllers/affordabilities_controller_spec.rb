@@ -75,6 +75,24 @@ module MortgageCalculator
           expect(assigns(:affordability).lifestyle_costs).to eql("3,000")
         end
       end
+
+      context "when there is a validation error" do
+        render_views
+
+        before :each do
+          post :create, affordability: {
+                          people_attributes: {
+                            "0"=>{annual_income: "1", extra_income: "0", monthly_net_income: "1000"}
+                          },
+                          outgoings: {},
+                          lifestyle_costs: "3000"
+                        }
+        end
+
+        it "renders the error message" do
+          expect(response.body).to have_content "Your monthly take home pay is higher than your annual income"
+        end
+      end
     end
 
     describe :next_steps do
