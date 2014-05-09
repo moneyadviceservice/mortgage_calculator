@@ -4,7 +4,7 @@
   <%= f.validation_summary %>
 
   <!-- INCOME FIELDS -->
-  <legend><%= I18n.t("affordability.titles.annual_income") %></legend>
+  <p><strong><%= I18n.t("affordability.titles.annual_income") %></strong></p>
   <%= f.fields_for :people do |person| %>
     <% count = @affordability.people.find_index(person.object) %>
 
@@ -56,7 +56,7 @@
 
   <% end %>
 
-  <legend><%= I18n.t("affordability.titles.take_home") %></legend>
+  <p><strong><%= I18n.t("affordability.titles.take_home") %></strong></p>
   <%= f.fields_for :people do |person| %>
     <% count = @affordability.people.find_index(person.object) %>
     <% person.object_name = "affordability[people_attributes][#{count}]" %>
@@ -90,11 +90,11 @@
   <!-- END INCOME FIELDS -->
 
   <!-- OUTGOING FIELDS -->
-  <legend class="cf"><%= I18n.t("affordability.titles.monthly_outgoings") %></legend>
+  <p><strong><%= I18n.t("affordability.titles.monthly_outgoings") %></strong></p>
   <p><%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %></p>
 
   <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
-    <legend><%= I18n.t("affordability.titles.estimated_committed") %></legend>
+    <p><%= I18n.t("affordability.titles.estimated_committed") %></p>
     <div class="mortgagecalc__panel">
       <div>
         <%= outgoings.errors_for outgoings.object, :credit_repayments %>
@@ -143,7 +143,7 @@
       </div>
     </div>
 
-    <legend class="cf"><%= I18n.t("affordability.titles.estimated_lifestyle") %></legend>
+    <p class="cf"><%= I18n.t("affordability.titles.estimated_lifestyle") %></p>
       <div class="mortgagecalc__panel">
         <div>
           <%= outgoings.errors_for outgoings.object, :food %>
