@@ -9,6 +9,7 @@ module MortgageCalculator
     validates :extra_income, numericality: true
     validates :monthly_net_income, numericality: true
     validate :validate_associated_incomes
+    validate :validate_proportional_incomes
 
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
@@ -41,6 +42,12 @@ module MortgageCalculator
     end
 
     private
+
+    def validate_proportional_incomes
+      if total_income < (monthly_net_income || 0) * 12
+        errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
+      end
+    end
 
     def validate_associated_incomes
       return unless total_income && monthly_net_income

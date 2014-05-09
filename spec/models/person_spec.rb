@@ -29,6 +29,24 @@ describe MortgageCalculator::Person do
         expect(subject.valid?).to be_false
       end
     end
+
+    describe 'proportional incomes' do
+      context 'when monthly net income is too big' do
+        subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 10000) }
+
+        it 'is not valid' do
+          expect(subject.valid?).to be_false
+        end
+      end
+
+      context 'when incomes are proportional' do
+        subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 8333.33) }
+
+        it 'is valid' do
+          expect(subject.valid?).to be_true
+        end
+      end
+    end
   end
 
   describe 'the range the person can borrow' do

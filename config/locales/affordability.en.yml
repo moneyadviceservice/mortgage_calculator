@@ -28,6 +28,9 @@ en:
         mortgage_calculator/affordability:
           base:
             income_greater_than_zero: "Your total income must be greater than zero"
+        mortgage_calculator/person:
+          base:
+            proportional_incomes: "Your monthly take home pay is higher than your annual income"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthy take home pay"
