@@ -1,7 +1,12 @@
+<% require "mas/frontend/helpers/validation/ordered_errors" %>
+
 <%= render 'header' %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
   <p>
+    <%
+      errors = ::MAS::Frontend::Helpers::Validation::OrderedErrors.new @affordability.errors, [:annual_income]
+    %>
     <% @affordability.errors.full_messages.each do |message| %>
       <%= message %><br>
     <% end %>
