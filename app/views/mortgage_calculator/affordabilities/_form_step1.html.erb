@@ -1,4 +1,5 @@
 <%= form_for @affordability, builder: MortgageCalculator::MyFormBuilder, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+  <% f.validates(@affordability.people, @affordability) %>
 
   <p>====START====</p>
 
