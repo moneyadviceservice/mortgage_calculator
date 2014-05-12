@@ -1,18 +1,7 @@
 <%= form_for @affordability, builder: MortgageCalculator::MyFormBuilder, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
   <% f.validates(@affordability.people, @affordability) %>
 
-  <p>====START====</p>
-
-  <p>Person 1</p>
-  <%= f.errors_for @affordability.people.first %>
-
-  <p>Person 2</p>
-  <%= f.errors_for @affordability.people.last %>
-
-  <p>Afford</p>
-  <%= f.errors_for @affordability %>
-
-  <p>====END====</p>
+  <%= f.validation_summary %>
 
   <!-- INCOME FIELDS -->
   <legend><%= I18n.t("affordability.titles.annual_income") %></legend>
