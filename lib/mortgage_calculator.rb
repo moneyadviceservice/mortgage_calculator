@@ -13,9 +13,6 @@ module MortgageCalculator
   end
 
   class MyFormBuilder < ActionView::Helpers::FormBuilder
-    def all_errors
-      @all_errors ||= ListOfOrderedErrors.new
-    end
 
     def validates(*objects)
       objects.flatten.each do |object|
@@ -58,6 +55,10 @@ module MortgageCalculator
     end
 
   private
+
+    def all_errors
+      @all_errors ||= ListOfOrderedErrors.new
+    end
 
     def field_errors_id(object, field)
       # The Tag_ class is at the bottom of this file. It is a hack, but I don't know a better
