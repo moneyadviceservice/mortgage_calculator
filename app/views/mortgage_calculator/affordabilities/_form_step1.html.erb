@@ -13,14 +13,16 @@
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person1.annual",
                                 "placeholder" => "Your yearly income",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => person.object.annual_income_formatted %>
 
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
           <%= person.text_field :extra_income,
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person1.extra",
                                 "placeholder" => "Any extra income",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => person.object.extra_income_formatted %>
         </div>
       </div>
     <% else %>
@@ -31,14 +33,16 @@
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person2.annual",
                                 "placeholder" => "Your yearly income",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => person.object.annual_income_formatted %>
 
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
           <%= person.text_field :extra_income,
                                 "class" => "form-control",
                                 "ng-model" => "affordability.earnings.person2.extra",
                                 "placeholder" => "Any extra income",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => person.object.extra_income_formatted %>
         </div>
       </div>
     <% end %>
@@ -51,15 +55,16 @@
     <% person.object_name = "affordability[people_attributes][#{count}]" %>
 
     <% if count == 0 %>
-        <div class="mortgagecalc__panel">
-          <div>
-            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
-            <%= person.text_field :monthly_net_income,
-                                  "class" => "form-control",
-                                  "placeholder" => "Monthly Net Income",
-                                  "format" => 'number' %>
-          </div>
+      <div class="mortgagecalc__panel">
+        <div>
+          <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
+          <%= person.text_field :monthly_net_income,
+                                "class" => "form-control",
+                                "placeholder" => "Monthly Net Income",
+                                "format" => 'number',
+                                "value" => person.object.monthly_net_income_formatted %>
         </div>
+      </div>
     <% else %>
       <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
         <div>
@@ -67,7 +72,8 @@
           <%= person.text_field :monthly_net_income,
                                 "class" => "form-control",
                                 "placeholder" => "Monthly Net Income",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => person.object.monthly_net_income_formatted %>
         </div>
       </div>
     <% end %>

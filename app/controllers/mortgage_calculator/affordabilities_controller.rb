@@ -32,8 +32,8 @@ module MortgageCalculator
       end
 
       def people_models
-        return params[:affordability][:people_attributes].values.map{|p| Person.new(p)} if params[:affordability]
-        return [Person.new, Person.new]
+        return params[:affordability][:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))} if params[:affordability]
+        return [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
       end
 
       def outgoings_params

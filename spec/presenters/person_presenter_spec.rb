@@ -6,9 +6,9 @@ module MortgageCalculator
     subject{ described_class.new model }
 
     its(:persisted?){ should be_false }
-    its(:annual_income){ should == "0.00" }
-    its(:extra_income){ should == "0.00" }
-    its(:monthly_net_income){ should == "0.00" }
+    its(:annual_income_formatted){ should == "0.00" }
+    its(:extra_income_formatted){ should == "0.00" }
+    its(:monthly_net_income_formatted){ should == "0.00" }
 
     describe 'class methods' do
       subject{ described_class }
