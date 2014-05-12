@@ -92,20 +92,22 @@
         <%= outgoings.text_field :credit_repayments,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",
-                              "format" => 'number' %>
-
+                              "format" => 'number',
+                              "value" => outgoings.object.credit_repayments_formatted %>
 
         <%= outgoings.label :childcare %>
         <%= outgoings.text_field :childcare,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number' %>
+                              "format" => 'number',
+                              "value" => outgoings.object.childcare_formatted %>
 
         <%= outgoings.label :rent_and_mortgage %>
         <%= outgoings.text_field :rent_and_mortgage,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number' %>
+                              "format" => 'number',
+                              "value" => outgoings.object.rent_and_mortgage_formatted %>
       </div>
     </div>
 
@@ -115,13 +117,15 @@
         <%= outgoings.text_field :child_maintenance,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number' %>
+                              "format" => 'number',
+                              "value" => outgoings.object.child_maintenance_formatted %>
 
         <%= outgoings.label :utilities %>
         <%= outgoings.text_field :utilities,
                               "class" => "form-control",
                               "placeholder" => "utilities",
-                              "format" => 'number' %>
+                              "format" => 'number',
+                              "value" => outgoings.object.utilities_formatted %>
       </div>
     </div>
 
@@ -132,13 +136,15 @@
           <%= outgoings.text_field :food,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => outgoings.object.food_formatted %>
 
           <%= outgoings.label :entertainment %>
           <%= outgoings.text_field :entertainment,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => outgoings.object.entertainment_formatted %>
         </div>
       </div>
       <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
@@ -147,7 +153,8 @@
           <%= outgoings.text_field :travel,
                                 "class" => "form-control",
                                 "placeholder" => "Credit debts",
-                                "format" => 'number' %>
+                                "format" => 'number',
+                                "value" => outgoings.object.travel_formatted %>
         </div>
       </div>
   <% end %>

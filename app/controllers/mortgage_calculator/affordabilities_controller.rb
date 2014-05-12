@@ -28,7 +28,11 @@ module MortgageCalculator
       end
 
       def outgoings_model
-        outgoings_params ? Outgoings.new(outgoings_params) : Outgoings.new
+        if outgoings_params
+          OutgoingsPresenter.new(Outgoings.new(outgoings_params))
+        else
+          OutgoingsPresenter.new(Outgoings.new)
+        end
       end
 
       def people_models

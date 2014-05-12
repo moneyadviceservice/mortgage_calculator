@@ -45,5 +45,13 @@ module MortgageCalculator
     def lifestyle_costs
       food + travel + entertainment
     end
+
+    def to_key
+      nil
+    end
+
+    def persisted?
+      false
+    end
   end
 end
