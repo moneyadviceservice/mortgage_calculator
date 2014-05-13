@@ -1,10 +1,9 @@
 App.directive('ngPie', function() {
 
   var linker = function(scope, element, attrs, ctrl) {
-    var selector = '.test';
     var dataForWatch = element.attr('data-incoming') + element.attr('data-outgoing');
 
-    var svg = d3.select(selector)
+    var svg = d3.select(element[0])
         .append('svg')
         .append('g');
 
@@ -13,7 +12,7 @@ App.directive('ngPie', function() {
     svg.append('g')
         .attr('class', 'labels');
 
-    var $inner = $(selector),
+    var $inner = $(element),
         width = $inner.width() || $inner.parent().width() || 500,
         radius = width / 2;
 
@@ -27,7 +26,7 @@ App.directive('ngPie', function() {
         .attr('font-size', width / 9)
         .text(element.attr('data-pie-text') + '%');
 
-    var canvas = d3.select(selector + ' svg');
+    var canvas = d3.select('svg');
     canvas
         .attr('preserveAspectRatio', 'xMinYMin')
         .attr('viewBox', '0 0 ' + width + ' ' + width);
