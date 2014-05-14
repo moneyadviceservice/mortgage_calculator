@@ -4,35 +4,54 @@ describe('Service: Affordability', function () {
 
   beforeEach(module('mortgageCalculatorApp'));
 
-
   var affordability,
       resetApplicant2Income = function () {
         affordability.earnings.person2.annual = 0;
         affordability.earnings.person2.extra = 0;
+        affordability.earnings.person2.net_pay = 0;
+      },
+      setIncome = function() {
+        affordability.earnings.person1.annual = 50000;
+        affordability.earnings.person1.extra = 3000;
+        affordability.earnings.person1.net_pay = 3011;
+        affordability.earnings.person2.annual = 30000;
+        affordability.earnings.person2.extra = 1000;
+        affordability.earnings.person2.net_pay = 1946;
+      },
+      setOutgoings = function() {
+        affordability.outgoings.committed.credit_repayments = 300;
+        affordability.outgoings.committed.childcare = 800;
+        affordability.outgoings.fixed.child_maintenance = 200;
+        affordability.outgoings.fixed.travel = 200;
+        affordability.outgoings.fixed.utilities = 300;
+        affordability.outgoings.fixed.rent_and_mortgage = 900;
+        affordability.outgoings.lifestyle.entertainment = 1000;
+        affordability.outgoings.lifestyle.holidays = 1000;
+        affordability.outgoings.lifestyle.food = 140;
       };
 
   beforeEach(inject(function (Affordability) {
     affordability = Affordability;
-    affordability.earnings.person1.annual = 50000;
-    affordability.earnings.person1.extra = 1000;
-    affordability.earnings.person2.annual = 30000;
-    affordability.earnings.person2.extra = 1000;
-    affordability.personalSpend = 1000;
+    setIncome();
+    setOutgoings();
   }));
 
   it('instantiates an instance of the service', function () {
     expect(!!affordability).toBe(true);
   });
 
-  describe('#totalIncome', function() {
+  describe('#takeHomePay', function() {
 
-    it('calculates the total amount of income for a single applicant less their personal expenses', function () {
-      resetApplicant2Income();
-      expect(affordability.totalIncome()).toBe(39000);
+    it('calculates the total take home pay of the applicant(s)', function () {
+      expect(affordability.takeHomePay()).toBe(4957);
     });
 
-    it('calculates the total amount of income for two applicants less their personal expenses', function () {
-      expect(affordability.totalIncome()).toBe(70000);
+  });
+
+  describe('#committedCosts', function() {
+
+    it('calculates the total committed costs of the applicant', function () {
+      expect(affordability.committedCosts()).toBe(1100);
     });
 
   });
