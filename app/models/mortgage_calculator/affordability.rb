@@ -7,8 +7,6 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
-    validate :validate_people
-    validate :validate_outgoings
     validate :income_greater_than_zero
 
     delegate :committed_costs, to: :outgoings
@@ -91,6 +89,10 @@ module MortgageCalculator
       monthly_net_income - repayment.monthly_payment - committed_costs - lifestyle_costs
     end
 
+    def valid?
+      super & outgoings.valid? & !(people.map(&:valid?).include?(false))
+    end
+
   private
 
     def lower_profit_multiplier
@@ -111,24 +113,6 @@ module MortgageCalculator
 
     def default_borrowing_amount
       (can_borrow_from + can_borrow_upto) / 2
-    end
-
-    def validate_people
-      people.each do |person|
-        unless person.valid?
-          person.errors.full_messages.each do |message|
-            errors.add(:base, message)
-          end
-        end
-      end
-    end
-
-    def validate_outgoings
-      unless outgoings.valid?
-        outgoings.errors.full_messages.each do |message|
-          errors.add(:base, message)
-        end
-      end
     end
   end
 end
