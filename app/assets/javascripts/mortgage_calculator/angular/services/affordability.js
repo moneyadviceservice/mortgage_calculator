@@ -6,55 +6,73 @@ App.factory('Affordability', function() {
       earnings: {
         person1 : {
           annual: 0,
-          extra: 0
+          extra: 0,
+          net_pay: 0
         },
         person2 : {
           annual: 0,
-          extra: 0
+          extra: 0,
+          net_pay: 0
+        }
+      },
+      outgoings: {
+        committed: {
+          credit_repayments: 0,
+          childcare: 0
+        },
+        fixed: {
+          child_maintenance: 0,
+          travel: 0,
+          utilities: 0,
+          rent_and_mortgage: 0
+        },
+        lifestyle: {
+          entertainment: 0,
+          holidays: 0,
+          food: 0
         }
       },
       numberOfPeople        : [1, 2],
-      personalSpend         : 0,
 
-      /**
-       * Calculates applicant(s) total income
-       * @return {integer} Returns total income of applicant(s)
-       */
-      totalIncome: function() {
-        return _convertToNumbers(this.earnings) - (this.personalSpend * 12);
+
+      takeHomePay: function() {
+        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
       },
 
-      /**
-       * Calculates minimum borrowing applicant(s) can have with a multiplier of 3
-       * @return {integer} Returns minimum borrowing available
-       */
+      committedCosts: function() {
+        return _sumOf(this.outgoings.committed);
+      },
+
       minimumBorrowing: function() {
-        return this.totalIncome() * 3;
+        return _totalIncome(this.earnings) * 3;
       },
 
-      /**
-       * Calculates the maximum borrowing applicant(s) can have with a multiplier of 4
-       * @return {integer} Returns maximum borrowing available
-       */
+
       maximumBorrowing: function() {
-        return this.totalIncome() * 4;
+        return _totalIncome(this.earnings) * 4;
       }
     };
 
     /**
      * _private
-     * Converts user string inputs (annual and extra income) into integers so calculations can be done correctly
-     * @param  {object} earnings An object containing data on the applicant(s) supplied income
-     * @return {integer}         Returns total sum of applicant(s) supplied income
      */
-    var _convertToNumbers = function(earnings) {
+
+    var _totalIncome = function(earnings) {
       var sum = _.reduce(earnings, function(memo, person){
         var annual = person.annual || 0,
             extra  = person.extra  || 0;
-        return memo + (parseInt(annual) + parseInt(extra));
+        return memo + annual + extra;
       }, 0);
       return sum;
     };
+
+    var _sumOf = function(costs) {
+      var sum = _.reduce(costs, function(memo, cost){
+        return memo + cost;
+      }, 0);
+      return sum;
+    };
+
 
     return affordability;
   });
