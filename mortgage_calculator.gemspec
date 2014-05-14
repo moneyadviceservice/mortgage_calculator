@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency "angularjs-rails", '1.2.13'
   s.add_dependency "underscore-rails"
   s.add_dependency "mas-feedback"
+  s.add_dependency "mas-frontend-helpers"
 end
