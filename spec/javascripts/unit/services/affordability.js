@@ -60,11 +60,11 @@ describe('Service: Affordability', function () {
 
     it('calculates the minimum amount a single applicant can borrow', function () {
       resetApplicant2Income();
-      expect(affordability.minimumBorrowing()).toBe(117000);
+      expect(affordability.minimumBorrowing()).toBe(111440);
     });
 
     it('calculates the minimum amount two applicants can borrow', function () {
-      expect(affordability.minimumBorrowing()).toBe(210000);
+      expect(affordability.minimumBorrowing()).toBe(198240);
     });
   });
 
@@ -72,11 +72,11 @@ describe('Service: Affordability', function () {
 
     it('calculates the maximum amount a single applicant can borrow', function () {
       resetApplicant2Income();
-      expect(affordability.maximumBorrowing()).toBe(156000);
+      expect(affordability.maximumBorrowing()).toBe(167160);
     });
 
     it('calculates the maximum amount two applicants can borrow', function () {
-      expect(affordability.maximumBorrowing()).toBe(280000);
+      expect(affordability.maximumBorrowing()).toBe(297360);
     });
   });
 

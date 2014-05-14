@@ -34,7 +34,6 @@ App.factory('Affordability', function() {
       },
       numberOfPeople        : [1, 2],
 
-
       takeHomePay: function() {
         return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
       },
@@ -44,12 +43,12 @@ App.factory('Affordability', function() {
       },
 
       minimumBorrowing: function() {
-        return _totalIncome(this.earnings) * 3;
+        return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8;
       },
 
 
       maximumBorrowing: function() {
-        return _totalIncome(this.earnings) * 4;
+        return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 4.2;
       }
     };
 
