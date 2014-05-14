@@ -80,6 +80,14 @@ describe('Service: Affordability', function () {
     });
   });
 
+  describe('#borrowing', function() {
+
+    it('calculates the median value between the minimum and maximum borrowing offered', function () {
+      expect(affordability.borrowing()).toBe(247800);
+    });
+
+  });
+
 
 
 });

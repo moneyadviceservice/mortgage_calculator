@@ -46,9 +46,12 @@ App.factory('Affordability', function() {
         return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8;
       },
 
-
       maximumBorrowing: function() {
         return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 4.2;
+      },
+
+      borrowing: function() {
+        return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
       }
     };
 
