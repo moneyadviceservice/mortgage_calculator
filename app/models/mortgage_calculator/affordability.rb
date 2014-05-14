@@ -64,6 +64,8 @@ module MortgageCalculator
 
     def monthly_net_income
       people.sum(&:monthly_net_income)
+    rescue
+      0
     end
 
     def borrowing

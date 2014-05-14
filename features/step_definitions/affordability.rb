@@ -17,6 +17,7 @@ end
 
 When(/^I submit invalid details$/) do
   @affordability.credit_repayments.set "asd"
+  @affordability.monthly_net_income.set "asd"
   @affordability.next.click
 end
 
