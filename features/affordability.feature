@@ -11,7 +11,7 @@ Scenario: There is one applicant
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
   And   I submit the details
-  Then  I see "You might be offered between £308,000.00 and £462,000.00"
+  Then  I see "You might be offered between £267,680.00 and £401,520.00"
 
 @javascript @wip
 Scenario: There is one applicant
@@ -44,7 +44,7 @@ Scenario: There are two applicants with extra income and commited spend
   When  I enter all details for applicant "1"
   And   I enter all details for applicant "2"
   And   I submit the details
-  Then  I see "You might be offered between £462,000.00 and £693,000.00"
+  Then  I see "You might be offered between £421,680.00 and £632,520.00"
 
 @javascript @wip
 Scenario: I enter invalid details

@@ -33,14 +33,6 @@ module MortgageCalculator
       0
     end
 
-    def can_borrow_upto
-      total_income * upper_profit_multiplier
-    end
-
-    def can_borrow_from
-      total_income * lower_profit_multiplier
-    end
-
     private
 
     def validate_proportional_incomes
@@ -59,14 +51,6 @@ module MortgageCalculator
       if total_income.zero? && !monthly_net_income.zero?
         errors[:base] << "Annual income should be more than zero if take home pay is more than zero"
       end
-    end
-
-    def lower_profit_multiplier
-      2.8
-    end
-
-    def upper_profit_multiplier
-      4.2
     end
   end
 end

@@ -55,11 +55,11 @@ module MortgageCalculator
     end
 
     def can_borrow_upto
-      people.sum(&:can_borrow_upto)
+      (total_income - annual_committed_costs) * upper_profit_multiplier
     end
 
     def can_borrow_from
-      people.sum(&:can_borrow_from)
+      (total_income - annual_committed_costs) * lower_profit_multiplier
     end
 
     def monthly_net_income
@@ -90,6 +90,18 @@ module MortgageCalculator
     end
 
   private
+
+    def lower_profit_multiplier
+      2.8
+    end
+
+    def upper_profit_multiplier
+      4.2
+    end
+
+    def annual_committed_costs
+      committed_costs * 12
+    end
 
     def income_greater_than_zero
       errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero") unless total_income + monthly_net_income > 0

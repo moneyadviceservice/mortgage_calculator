@@ -48,9 +48,4 @@ describe MortgageCalculator::Person do
       end
     end
   end
-
-  describe 'the range the person can borrow' do
-    its(:can_borrow_upto){ should == 252_000 }
-    its(:can_borrow_from){ should == 168_000 }
-  end
 end
