@@ -16,11 +16,12 @@ When(/^I submit the details$/) do
 end
 
 When(/^I submit invalid details$/) do
-  fill_in "affordability[people_attributes][0][annual_income]", :with => "one"
+  @affordability.credit_repayments.set "asd"
+  @affordability.next.click
 end
 
 Then(/^I see an error message$/) do
-  expect(page).to have_content('Please enter an amount')
+  expect(page).to have_content('Credit card debt / loan repayments is not a number')
 end
 
 Then(/^I do not see the result output$/) do

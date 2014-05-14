@@ -8,8 +8,10 @@ module MortgageCalculator
 
     def create
       @affordability = AffordabilityPresenter.new(affordability_model)
-      adjust_interest_rate
-      unless @affordability.valid?
+
+      if @affordability.valid?
+        adjust_interest_rate
+      else
         render :show
       end
     end

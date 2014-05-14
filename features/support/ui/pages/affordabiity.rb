@@ -25,6 +25,8 @@ module UI
       element :h1, "h1"
       element :h2, "h2"
       element :results, "p[class='results']"
+
+      element :next, "input[value='Find out how much I can borrow']"
     end
   end
 end

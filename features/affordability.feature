@@ -52,7 +52,6 @@ Scenario: I enter invalid details
   When  I submit invalid details
   Then  I do not see the result output
 
-@wip
 Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details
