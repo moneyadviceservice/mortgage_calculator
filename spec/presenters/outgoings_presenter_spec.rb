@@ -25,5 +25,20 @@ module MortgageCalculator
 
       its(:model_name){ should == "MortgageCalculator::Outgoings" }
     end
+
+    describe :serializable_hash do
+      it 'returns correct hash' do
+        expect(subject.serializable_hash).to eql({
+          "child_maintenance" => "0.00",
+          "childcare" => "0.00",
+          "credit_repayments" => "0.00",
+          "entertainment" => "0.00",
+          "food" => "0.00",
+          "rent_and_mortgage" => "0.00",
+          "travel" => "0.00",
+          "utilities" => "0.00"
+        })
+      end
+    end
   end
 end

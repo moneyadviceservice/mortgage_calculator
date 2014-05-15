@@ -5,9 +5,8 @@
     <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
   <% end %>
 
-  <% @affordability.outgoings.instance_variables.each do |var| %>
-    <% attribute = var.to_s[1..-1] %>
-    <%= hidden_field_tag "affordability[outgoings][#{attribute}]", @affordability.outgoings.public_send(attribute).to_s %>
+  <% @affordability.outgoings.serializable_hash.each do |k,v| %>
+    <%= hidden_field_tag "affordability[outgoings][#{k}]", v %>
   <% end %>
 
 

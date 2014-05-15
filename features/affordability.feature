@@ -7,11 +7,18 @@ Scenario: Can view the Affordability Calculator
   Given I visit the Affordability page
   Then  I should see the Affordability title
 
-Scenario: There is one applicant
+Scenario: Affordability for one applicant
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
   And   I submit the details
   Then  I see "You might be offered between £267,680.00 and £401,520.00"
+
+Scenario: I recalculate
+  Given I have entered all details for applicant "1"
+  When  I update my affordability circumstances
+  And   I recalculate
+  Then  I see "71% of your monthly take home"
+  And   I see "Remaining per month is £859.49"
 
 @javascript @wip
 Scenario: There is one applicant

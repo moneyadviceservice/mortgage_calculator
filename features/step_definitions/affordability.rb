@@ -58,3 +58,17 @@ When(/^I enter some details for applicant "(.*?)"$/) do |applicant|
   end
 end
 
+Given(/^I have entered all details for applicant "(.*?)"$/) do |applicants|
+  step "I visit the Affordability page"
+  step "I enter all details for applicant \"#{applicants.to_i}\""
+  step "I submit the details"
+end
+
+When(/^I update my affordability circumstances$/) do
+  @affordability.interest_rate.set "10"
+end
+
+When(/^I recalculate$/) do
+  @affordability.recalculate.click
+end
+
