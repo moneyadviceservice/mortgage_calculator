@@ -12,7 +12,6 @@
       <div class="mortgagecalc__panel">
         <div>
           <input type="radio" ng-model="affordability.selectedOption" value="1" >
-
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
           <%= person.text_field :annual_income,
@@ -24,7 +23,6 @@
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted %>
-
 
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
@@ -55,7 +53,6 @@
                                 "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted %>
 
-
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
           <%= person.text_field :extra_income,
@@ -82,7 +79,7 @@
     <% if count == 0 %>
         <div class="mortgagecalc__panel">
           <div>
-          <%= f.errors_for person.object, :monthly_net_income %>
+            <%= f.errors_for person.object, :monthly_net_income %>
             <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
             <%= person.text_field :monthly_net_income,
                                   "class" => "form-control",
@@ -94,7 +91,6 @@
                                   "value" => person.object.monthly_net_income_formatted %>
           </div>
         </div>
-      </div>
     <% else %>
       <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
         <div>
@@ -110,7 +106,6 @@
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
                                 "value" => person.object.monthly_net_income_formatted %>
-
         </div>
       </div>
     <% end %>
@@ -134,7 +129,6 @@
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
                               "value" => outgoings.object.credit_repayments_formatted %>
-
 
         <%= outgoings.errors_for outgoings.object, :childcare %>
         <%= outgoings.label :childcare %>
@@ -194,7 +188,6 @@
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
                                 "value" => outgoings.object.food_formatted %>
-
 
           <%= outgoings.errors_for outgoings.object, :entertainment %>
           <%= outgoings.label :entertainment %>
