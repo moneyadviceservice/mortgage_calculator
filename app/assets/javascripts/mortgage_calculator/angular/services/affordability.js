@@ -1,6 +1,8 @@
 'use strict';
 
-App.factory('Affordability', function() {
+App.factory('Affordability', ['Repayments', function(Repayments) {
+
+    var repayments = Repayments;
 
     var affordability = {
       earnings: {
@@ -52,7 +54,9 @@ App.factory('Affordability', function() {
 
       borrowing: function() {
         return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
-      }
+      },
+
+      annualInterestRate: repayments.annualInterestRate
     };
 
     /**
@@ -77,4 +81,4 @@ App.factory('Affordability', function() {
 
 
     return affordability;
-  });
+  }]);

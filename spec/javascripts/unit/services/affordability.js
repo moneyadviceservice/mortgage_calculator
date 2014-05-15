@@ -88,6 +88,14 @@ describe('Service: Affordability', function () {
 
   });
 
+  describe('Interest Rate', function() {
+
+    it('delegates to the repayment service annual interest rate property', function () {
+      expect(affordability.annualInterestRate).toBe(5);
+    });
+
+  });
+
 
 
 });
