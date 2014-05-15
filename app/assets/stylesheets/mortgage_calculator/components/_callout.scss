@@ -3,13 +3,15 @@
   font-family: 'museo_sans';
   font-weight: 500;
   margin: 10px 0 30px;
+  padding: $baseline-unit*3;
+  background-color: $color-callout-background;
 
   p {
     font-family: 'museo_sans';
     font-weight: 300;
     font-size: $font-medium;
     color: #333;
-    margin-top: 10px;
+    margin: 10px 0 0;
 
     strong {
       font-size:24px;
@@ -19,9 +21,10 @@
 }
 
 .callout__heading {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-family: 'museo_sans';
   font-weight: 700;
   color: #333;
   font-size: $font-large;
-  margin-top: 0;
 }
