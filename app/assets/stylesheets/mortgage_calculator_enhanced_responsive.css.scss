@@ -1,0 +1,7 @@
+$responsive: true;
+
+@import 'mortgage_calculator/frontend-assets/stylesheets/font_base64.scss';
+
+.ns-mortgage-calc {
+  @import 'mortgage_calculator/enhanced';
+}
