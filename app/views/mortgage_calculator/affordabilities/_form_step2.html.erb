@@ -22,10 +22,10 @@
   <div class="mortgagecalc__panel">
     <div>
       <p>
-      This is based on a repayment  mortgage at {{ affordabilities.annualInterestRate }}% interest rate over 25 years
+      This is based on a repayment  mortgage at {{ affordability.annualInterestRate }}% interest rate over 25 years
       <%= f.text_field :interest_rate,
                         "autofocus" => "",
-                        "ng-model" => "affordabilities.annualInterestRate",
+                        "ng-model" => "affordability.annualInterestRate",
                         "placeholder" => "eg 5%",
                         "percentage" => "",
                         "data-a-sign" => "%",
