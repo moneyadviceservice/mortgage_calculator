@@ -1,0 +1,8 @@
+
+<p ng-hide="js" class=" results">
+  Borrowing: <%= f.text_field :borrowing %>
+</p>
+
+<p class="rendered-from-js results">
+  Borrowing: {{ affordability.borrowing() | customCurrency:"£"}}
+</p>
