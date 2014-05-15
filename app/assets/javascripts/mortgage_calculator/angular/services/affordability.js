@@ -36,6 +36,13 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
       numberOfPeople        : [1, 2],
 
+      annualInterestRate: repayments.annualInterestRate,
+
+      monthlyRepayment: function() {
+        repayments.propertyPrice = this.borrowing();
+        return repayments.monthlyRepayment();
+      },
+
       takeHomePay: function() {
         return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
       },
@@ -54,9 +61,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       borrowing: function() {
         return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
-      },
-
-      annualInterestRate: repayments.annualInterestRate
+      }
     };
 
     /**
