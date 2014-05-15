@@ -88,10 +88,14 @@ describe('Service: Affordability', function () {
 
   });
 
-  describe('Interest Rate', function() {
+  describe('Repaying the mortgage', function() {
 
-    it('delegates to the repayment service annual interest rate property', function () {
+    it('sets the annual interest rate based of the Repayment service', function () {
       expect(affordability.annualInterestRate).toBe(5);
+    });
+
+    it('calculates the monthly repayments based of the Repayment service', function () {
+      expect(affordability.monthlyRepayment()).toBe(1448.61);
     });
 
   });
