@@ -29,16 +29,24 @@ module MortgageCalculator
       MortgageCalculator.feedback_config = YAML.load(contents).with_indifferent_access
     end
 
-    initializer :append_precompile_assets do |app|
-      app.config.assets.precompile += %w( mortgage_calculator/basic.css )
-    end
+    initializer :append_frontend_assets, :group => :all do |app|
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator', 'frontend-assets')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator', 'frontend-assets', 'stylesheets')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator', 'frontend-assets', 'fonts')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator', 'frontend-assets', 'javascripts')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'javascripts')
+      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'stylesheets')
+      app.config.sass.load_paths   << Engine.root.join('vendor', 'assets', 'bower_components', 'mortgage_calculator', 'frontend-assets', 'stylesheets')
 
-    initializer :append_frontend_assets do |app|
-      app.config.assets.paths << Engine.root.join("vendor", "assets", "bower_components")
-      app.config.assets.paths << Engine.root.join("vendor", "assets", "bower_components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets")
-      app.config.assets.paths << Engine.root.join("vendor", "assets", "bower_components", "mortgage_calculator", "frontend", "vendor", "assets", "fonts")
-      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "bower_components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets")
-      app.config.sass.load_paths << Engine.root.join("vendor", "assets", "bower_components", "mortgage_calculator", "frontend", "app", "assets", "stylesheets", "lib")
+      # Asset dependencies loaded in application.html.erb layout file
+      app.config.assets.precompile += ['mortgage_calculator/application_fixed.css']
+      app.config.assets.precompile += ['mortgage_calculator/application_responsive.css']
+      app.config.assets.precompile += ['mortgage_calculator_basic.css']
+      app.config.assets.precompile += ['mortgage_calculator_enhanced_fixed.css']
+      app.config.assets.precompile += ['mortgage_calculator_enhanced_responsive.css']
+      app.config.assets.precompile += ['mortgage_calculator/frontend-assets/stylesheets/font_base64.css']
     end
   end
 end
