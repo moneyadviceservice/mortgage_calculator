@@ -41,11 +41,11 @@ module MortgageCalculator
     end
 
     def committed_costs
-      credit_repayments + utilities + childcare + child_maintenance
+      credit_repayments + utilities + childcare + child_maintenance + travel
     end
 
     def lifestyle_costs
-      food + travel + entertainment
+      food + entertainment + holidays
     end
 
     def to_key

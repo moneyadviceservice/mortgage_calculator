@@ -87,8 +87,8 @@ module MortgageCalculator
       subject{ described_class.new([person1], outgoings) }
 
       its(:total_income){ should == 110_000 }
-      its(:can_borrow_from){ should == 294_560 }
-      its(:can_borrow_upto){ should == 441_840 }
+      its(:can_borrow_from){ should == 287_840 }
+      its(:can_borrow_upto){ should == 431_760 }
       its(:number_of_applicants){ should == 1 }
       its(:monthly_net_income){ should == 6000 }
     end
@@ -97,8 +97,8 @@ module MortgageCalculator
       subject{ described_class.new([person1, person2], outgoings) }
 
       its(:total_income){ should == 165_000 }
-      its(:can_borrow_from){ should == 448_560 }
-      its(:can_borrow_upto){ should == 672_840 }
+      its(:can_borrow_from){ should == 441_840 }
+      its(:can_borrow_upto){ should == 662_760 }
       its(:number_of_applicants){ should == 2 }
       its(:monthly_net_income){ should == 9000 }
     end
@@ -142,7 +142,7 @@ module MortgageCalculator
 
     describe :risk_percentage do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(42)
+        expect(subject.risk_percentage.to_i).to eql(45)
       end
 
       context 'when over 100%' do
@@ -202,7 +202,7 @@ module MortgageCalculator
 
     describe :remaining do
       it 'returns remaining amount per month' do
-        expect(subject.remaining.to_i).to eql(2647)
+        expect(subject.remaining.to_i).to eql(2696)
       end
     end
   end

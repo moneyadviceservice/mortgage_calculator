@@ -69,7 +69,7 @@ describe MortgageCalculator::Outgoings do
 
   describe :commited_costs do
     it "is sum of credit_repayments, utilities, childcare, child_maintenance" do
-      expect(subject.committed_costs).to eql(200 + 300 + 200 + 0)
+      expect(subject.committed_costs).to eql(200 + 300 + 200 + 0 + 150)
     end
   end
 
