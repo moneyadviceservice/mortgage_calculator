@@ -113,13 +113,13 @@
                               "format" => 'number',
                               "value" => outgoings.object.childcare_formatted %>
 
-        <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
-        <%= outgoings.label :rent_and_mortgage %>
-        <%= outgoings.text_field :rent_and_mortgage,
+        <%= outgoings.errors_for outgoings.object, :travel %>
+        <%= outgoings.label :travel %>
+        <%= outgoings.text_field :travel,
                               "class" => "form-control",
-                              "placeholder" => "utilities",
+                              "placeholder" => "Credit debts",
                               "format" => 'number',
-                              "value" => outgoings.object.rent_and_mortgage_formatted %>
+                              "value" => outgoings.object.travel_formatted %>
       </div>
     </div>
 
@@ -140,11 +140,38 @@
                               "placeholder" => "utilities",
                               "format" => 'number',
                               "value" => outgoings.object.utilities_formatted %>
+
+        <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
+        <%= outgoings.label :rent_and_mortgage %>
+        <%= outgoings.text_field :rent_and_mortgage,
+                              "class" => "form-control",
+                              "placeholder" => "utilities",
+                              "format" => 'number',
+                              "value" => outgoings.object.rent_and_mortgage_formatted %>
       </div>
     </div>
 
     <legend class="cf"><%= I18n.t("affordability.titles.estimated_lifestyle") %></legend>
       <div class="mortgagecalc__panel">
+        <div>
+          <%= outgoings.errors_for outgoings.object, :entertainment %>
+          <%= outgoings.label :entertainment %>
+          <%= outgoings.text_field :entertainment,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number',
+                                "value" => outgoings.object.entertainment_formatted %>
+
+          <%= outgoings.errors_for outgoings.object, :holidays %>
+          <%= outgoings.label :holidays %>
+          <%= outgoings.text_field :holidays,
+                                "class" => "form-control",
+                                "placeholder" => "Credit debts",
+                                "format" => 'number',
+                                "value" => outgoings.object.holidays_formatted %>
+        </div>
+      </div>
+      <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
         <div>
           <%= outgoings.errors_for outgoings.object, :food %>
           <%= outgoings.label :food %>
@@ -153,25 +180,6 @@
                                 "placeholder" => "Credit debts",
                                 "format" => 'number',
                                 "value" => outgoings.object.food_formatted %>
-
-          <%= outgoings.errors_for outgoings.object, :entertainment %>
-          <%= outgoings.label :entertainment %>
-          <%= outgoings.text_field :entertainment,
-                                "class" => "form-control",
-                                "placeholder" => "Credit debts",
-                                "format" => 'number',
-                                "value" => outgoings.object.entertainment_formatted %>
-        </div>
-      </div>
-      <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-        <div>
-          <%= outgoings.errors_for outgoings.object, :travel %>
-          <%= outgoings.label :travel %>
-          <%= outgoings.text_field :travel,
-                                "class" => "form-control",
-                                "placeholder" => "Credit debts",
-                                "format" => 'number',
-                                "value" => outgoings.object.travel_formatted %>
         </div>
       </div>
   <% end %>

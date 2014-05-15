@@ -14,7 +14,7 @@ module MortgageCalculator
     end
 
     [:credit_repayments, :utilities, :childcare, :child_maintenance,
-     :rent_and_mortgage, :food, :travel, :entertainment].each do |name|
+     :rent_and_mortgage, :food, :travel, :entertainment, :holidays].each do |name|
       define_method("#{name}_formatted") do
         number_to_currency model.public_send(name), unit: ""
       end
@@ -29,7 +29,8 @@ module MortgageCalculator
         "rent_and_mortgage" => rent_and_mortgage_formatted,
         "food" => food_formatted,
         "travel" => travel_formatted,
-        "entertainment" => entertainment_formatted
+        "entertainment" => entertainment_formatted,
+        "holidays" => holidays_formatted
       }
     end
 

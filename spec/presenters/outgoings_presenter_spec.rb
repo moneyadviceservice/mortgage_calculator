@@ -19,6 +19,7 @@ module MortgageCalculator
     its(:food_formatted){ expect(subject.food_formatted).to eql("0.00") }
     its(:travel_formatted){ expect(subject.travel_formatted).to eql("0.00") }
     its(:entertainment_formatted){ expect(subject.entertainment_formatted).to eql("0.00") }
+    its(:holidays_formatted){ expect(subject.entertainment_formatted).to eql("0.00") }
 
     describe 'class methods' do
       subject{ described_class }
@@ -36,7 +37,8 @@ module MortgageCalculator
           "food" => "0.00",
           "rent_and_mortgage" => "0.00",
           "travel" => "0.00",
-          "utilities" => "0.00"
+          "utilities" => "0.00",
+          "holidays" => "0.00"
         })
       end
     end

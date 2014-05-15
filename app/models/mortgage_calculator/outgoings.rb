@@ -10,11 +10,11 @@ module MortgageCalculator
 
     attr_accessor :credit_repayments, :utilities, :childcare,
                   :child_maintenance, :rent_and_mortgage,
-                  :food, :travel, :entertainment
+                  :food, :travel, :entertainment, :holidays
 
     currency_inputs :credit_repayments, :utilities, :childcare,
                     :child_maintenance, :rent_and_mortgage,
-                    :food, :travel, :entertainment
+                    :food, :travel, :entertainment, :holidays
 
     validates :credit_repayments, numericality: true
     validates :utilities, numericality: true
@@ -24,6 +24,7 @@ module MortgageCalculator
     validates :food, numericality: true
     validates :travel, numericality: true
     validates :entertainment, numericality: true
+    validates :holidays, numericality: true
 
     def initialize(attributes = {})
       # Sorry. Rails 3.2 Doesn't have ActiveModel::Model
@@ -36,6 +37,7 @@ module MortgageCalculator
       self.food = attributes[:food] || 0
       self.travel = attributes[:travel] || 0
       self.entertainment = attributes[:entertainment] || 0
+      self.holidays = attributes[:holidays] || 0
     end
 
     def committed_costs
