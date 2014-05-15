@@ -25,6 +25,7 @@ module MortgageCalculator
       subject{ described_class }
 
       its(:model_name){ should == "MortgageCalculator::Outgoings" }
+      its(:i18n_scope){ should == "affordability.activemodel" }
     end
 
     describe :serializable_hash do

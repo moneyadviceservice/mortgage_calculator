@@ -1,6 +1,7 @@
 module MortgageCalculator
   class OutgoingsPresenter
     extend ActiveModel::Naming
+    extend ActiveModel::Translation
     include ActionView::Helpers::NumberHelper
     include ActiveModel::Serialization
 
@@ -8,6 +9,10 @@ module MortgageCalculator
 
     delegate :persisted?, to: :model
     delegate :to_key, to: :model
+
+    def self.i18n_scope
+      "affordability.activemodel"
+    end
 
     def initialize(model)
       @model = model
