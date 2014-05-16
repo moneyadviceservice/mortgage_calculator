@@ -10,6 +10,7 @@ module MortgageCalculator
     validate :income_greater_than_zero
 
     delegate :committed_costs, to: :outgoings
+    delegate :fixed_costs, to: :outgoings
 
     currency_inputs :lifestyle_costs
 
@@ -86,7 +87,7 @@ module MortgageCalculator
     end
 
     def remaining
-      monthly_net_income - repayment.monthly_payment - committed_costs - lifestyle_costs
+      monthly_net_income - repayment.monthly_payment - committed_costs - lifestyle_costs - fixed_costs
     end
 
     def valid?
