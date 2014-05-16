@@ -214,6 +214,17 @@
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
                               "value" => outgoings.object.entertainment_formatted %>
+
+        <%= outgoings.errors_for outgoings.object, :holidays %>
+        <%= outgoings.label :holidays %>
+        <%= outgoings.text_field :holidays,
+                              "class" => "form-control",
+                              "placeholder" => "Credit debts",
+                              "ng-model" => "affordability.outgoings.lifestyle.holidays",
+                              "currency" => '',
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "value" => outgoings.object.holidays_formatted %>
       </div>
     </div>
     <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
