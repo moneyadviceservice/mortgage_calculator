@@ -9,7 +9,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
 
     $scope.isCheckboxSelected = function(index) {
-        return index === $scope.affordability.selectedOption;
+      return index === $scope.affordability.selectedOption;
     };
 
     $scope.normalizeValues = function() {
