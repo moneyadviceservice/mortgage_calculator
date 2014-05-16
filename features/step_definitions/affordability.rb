@@ -44,6 +44,7 @@ When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
     @affordability.travel.set "300"
     @affordability.entertainment.set "300"
   elsif applicant.to_i == 2
+    choose('two_applicants') unless js_disabled?
     @affordability.person_two_annual_income.set "50000"
     @affordability.person_two_extra_income.set "5000"
     @affordability.person_two_monthly_net_income.set "3000"

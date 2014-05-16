@@ -39,34 +39,23 @@ Scenario: I enter invalid details
   When  I submit invalid details
   Then  I see an error message
 
-@javascript @wip
-Scenario: There is one applicant
-  Given I visit the Affordability page
-  When  I enter some details for applicant "1"
-  Then  I see "the maximum mortgage you can borrow is between £300,000.00 to £400,000.00"
-
-@javascript @wip
-Scenario: There is one applicant with extra income
+@javascript
+Scenario: Affordability for one applicant
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
-  Then  I see "the maximum mortgage you can borrow is between £330,000.00 to £440,000.00"
+  And   I submit the details
+  Then  I see "You may be offered a range between £287,840.00 to £431,760.00"
+  And   I see "Estimated mortgage repayments per month, approx: £2,103.35"
+  And   I see "Estimated fixed and spending commitments per month are: £600.00"
 
-@javascript @wip
-Scenario: There is one applicant with extra income and commited spend
-  Given I visit the Affordability page
-  When  I enter all details for applicant "1"
-  Then  I see "the maximum mortgage you can borrow is between £294,000.00 to £392,000.00"
-
-@wip @javascript
+@javascript
 Scenario: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
-  And   I select 2 people
   And   I enter all details for applicant "2"
-  Then  I see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
+  And   I submit the details
+  Then  I see "You may be offered a range between £441,840.00 to £662,760.00"
+  And   I see "Estimated mortgage repayments per month, approx: £3,228.69"
+  And   I see "Estimated fixed and spending commitments per month are: £600.00"
 
-@javascript @wip
-Scenario: I enter invalid details
-  Given I visit the Affordability page
-  When  I submit invalid details
-  Then  I do not see the result output
+
