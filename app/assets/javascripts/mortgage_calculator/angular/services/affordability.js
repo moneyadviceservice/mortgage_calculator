@@ -20,10 +20,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       outgoings: {
         committed: {
           credit_repayments: 0,
-          childcare: 0
+          child_maintenance: 0
         },
         fixed: {
-          child_maintenance: 0,
+          childcare: 0,
           travel: 0,
           utilities: 0,
           rent_and_mortgage: 0
