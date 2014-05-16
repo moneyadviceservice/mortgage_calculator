@@ -12,6 +12,8 @@ Scenario: Affordability for one applicant
   When  I enter all details for applicant "1"
   And   I submit the details
   Then  I see "You might be offered between £287,840.00 and £431,760.00"
+  And   I see "Remaining per month is £1,796.65"
+  And   I see "Fixed costs are £1,500.00"
 
 Scenario: I recalculate
   Given I have entered all details for applicant "1"
@@ -19,6 +21,7 @@ Scenario: I recalculate
   And   I recalculate
   Then  I see "64% of your monthly take home"
   And   I see "Remaining per month is £630.50"
+  And   I see "Fixed costs are £1,500.00"
 
 @javascript @wip
 Scenario: There is one applicant
@@ -52,6 +55,8 @@ Scenario: There are two applicants with extra income and commited spend
   And   I enter all details for applicant "2"
   And   I submit the details
   Then  I see "You might be offered between £441,840.00 and £662,760.00"
+  And   I see "Remaining per month is £3,671.31"
+  And   I see "Fixed costs are £1,500.00"
 
 @javascript @wip
 Scenario: I enter invalid details

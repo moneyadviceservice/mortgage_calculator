@@ -16,6 +16,7 @@ module MortgageCalculator
     delegate :can_borrow_upto, to: :model
     delegate :interest_rate, to: :model
     delegate :committed_costs, to: :model
+    delegate :fixed_costs, to: :model
     delegate :risk_percentage, to: :model
     delegate :risk_level, to: :model
     delegate :remaining, to: :model
