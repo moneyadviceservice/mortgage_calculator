@@ -2,8 +2,6 @@
 
 App.factory('Affordability', ['Repayments', function(Repayments) {
 
-    var repayments = Repayments;
-
     var affordability = {
       earnings: {
         person1 : {
@@ -36,11 +34,11 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
       numberOfPeople        : [1, 2],
 
-      annualInterestRate: repayments.annualInterestRate,
+      annualInterestRate: Repayments.annualInterestRate,
 
       monthlyRepayment: function() {
-        repayments.propertyPrice = this.borrowing();
-        return repayments.monthlyRepayment();
+        Repayments.propertyPrice = this.borrowing();
+        return Repayments.monthlyRepayment();
       },
 
       takeHomePay: function() {
