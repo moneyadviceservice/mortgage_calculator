@@ -12,7 +12,7 @@ Then(/^I see "(.*?)"$/) do |content|
 end
 
 When(/^I submit the details$/) do
-  find("input[type=submit]").click
+  @affordability.next.click
 end
 
 When(/^I submit invalid details$/) do

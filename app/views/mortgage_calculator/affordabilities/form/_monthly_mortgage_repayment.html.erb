@@ -1,7 +1,9 @@
 
-<p ng-hide="js" class="results">
-  Estimated mortgage repayments per month, approx: <%= number_to_currency @affordability.repayment.monthly_payment %>
-</p>
+<% if @affordability.valid? %>
+  <p ng-hide="js" class="results">
+    Estimated mortgage repayments per month, approx: <%= number_to_currency @affordability.repayment.monthly_payment %>
+  </p>
+<% end %>
 
 <p class="rendered-from-js results">
   Estimated mortgage repayments per month, approx: {{ affordability.monthlyRepayment() | customCurrency:"£" }}

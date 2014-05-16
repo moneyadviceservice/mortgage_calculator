@@ -1,7 +1,9 @@
 
-<p ng-hide="js" class=" results">
-  Borrowing: <%= f.text_field :borrowing %>
-</p>
+<% if @affordability.valid? %>
+  <p ng-hide="js" class=" results">
+    Borrowing: <%= f.text_field :borrowing %>
+  </p>
+<% end %>
 
 <p class="rendered-from-js results">
   Borrowing: {{ affordability.borrowing() | customCurrency:"£"}}

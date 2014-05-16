@@ -1,4 +1,4 @@
-<%= form_for @affordability, url: affordability_path do |f| %>
+<%= form_for @affordability, url: affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two' } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>

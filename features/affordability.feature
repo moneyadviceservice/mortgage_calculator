@@ -23,6 +23,22 @@ Scenario: I recalculate
   And   I see "Remaining per month is £630.50"
   And   I see "Fixed costs are £1,500.00"
 
+
+Scenario: There are two applicants with extra income and commited spend
+  Given I visit the Affordability page
+  When  I enter all details for applicant "1"
+  And   I enter all details for applicant "2"
+  And   I submit the details
+  Then  I see "You might be offered between £441,840.00 and £662,760.00"
+  And   I see "Remaining per month is £3,671.31"
+  And   I see "Fixed costs are £1,500.00"
+
+
+Scenario: I enter invalid details
+  Given I visit the Affordability page
+  When  I submit invalid details
+  Then  I see an error message
+
 @javascript @wip
 Scenario: There is one applicant
   Given I visit the Affordability page
@@ -49,22 +65,8 @@ Scenario: There are two applicants with extra income and commited spend
   And   I enter all details for applicant "2"
   Then  I see "the maximum mortgage you can borrow is between £423,000.00 to £564,000.00"
 
-Scenario: There are two applicants with extra income and commited spend
-  Given I visit the Affordability page
-  When  I enter all details for applicant "1"
-  And   I enter all details for applicant "2"
-  And   I submit the details
-  Then  I see "You might be offered between £441,840.00 and £662,760.00"
-  And   I see "Remaining per month is £3,671.31"
-  And   I see "Fixed costs are £1,500.00"
-
 @javascript @wip
 Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details
   Then  I do not see the result output
-
-Scenario: I enter invalid details
-  Given I visit the Affordability page
-  When  I submit invalid details
-  Then  I see an error message
