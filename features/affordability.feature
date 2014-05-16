@@ -11,14 +11,14 @@ Scenario: Affordability for one applicant
   Given I visit the Affordability page
   When  I enter all details for applicant "1"
   And   I submit the details
-  Then  I see "You might be offered between £267,680.00 and £401,520.00"
+  Then  I see "You might be offered between £287,840.00 and £431,760.00"
 
 Scenario: I recalculate
   Given I have entered all details for applicant "1"
   When  I update my affordability circumstances
   And   I recalculate
-  Then  I see "71% of your monthly take home"
-  And   I see "Remaining per month is £859.49"
+  Then  I see "64% of your monthly take home"
+  And   I see "Remaining per month is £630.50"
 
 @javascript @wip
 Scenario: There is one applicant
@@ -51,7 +51,7 @@ Scenario: There are two applicants with extra income and commited spend
   When  I enter all details for applicant "1"
   And   I enter all details for applicant "2"
   And   I submit the details
-  Then  I see "You might be offered between £421,680.00 and £632,520.00"
+  Then  I see "You might be offered between £441,840.00 and £662,760.00"
 
 @javascript @wip
 Scenario: I enter invalid details
