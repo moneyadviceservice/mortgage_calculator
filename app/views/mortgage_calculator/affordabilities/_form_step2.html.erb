@@ -25,12 +25,13 @@
       This is based on a repayment  mortgage at {{ affordability.annualInterestRate }}% interest rate over 25 years
       <%= f.text_field :interest_rate,
                         "autofocus" => "",
-                        "ng-model" => "affordability.annualInterestRate",
+                        "ng-model" => "repayments.annualInterestRate",
                         "placeholder" => "eg 5%",
                         "percentage" => "",
                         "data-a-sign" => "%",
                         "data-p-sign" => "s" %>
       </p>
+    <div class="slider" ui-slider min="0.25" max="15" step="0.25" ng-model="repayments.annualInterestRate" aria-labelledby="label_rate" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Interest Rate"></div>
     </div>
   </div>
 

@@ -34,8 +34,6 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
       numberOfPeople        : [1, 2],
 
-      annualInterestRate: Repayments.annualInterestRate,
-
       monthlyRepayment: function() {
         Repayments.propertyPrice = this.borrowing();
         return Repayments.monthlyRepayment();
@@ -63,7 +61,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
     };
 
     /**
-     * _private
+     * @private
      */
 
     var _totalIncome = function(earnings) {
