@@ -1,6 +1,7 @@
 <%= render 'header' %>
 
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container mortgagecalc__container--affordability">
+
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">
       <%= render 'form_step1' %>
@@ -8,9 +9,7 @@
 
     <div wz-step class="ng-hide">
       <div class="rendered-from-js">
-        <% if @affordability.valid? %>
           <%= render 'form_step2' %>
-        <% end %>
       </div>
     </div>
 
