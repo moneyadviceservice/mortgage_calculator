@@ -60,8 +60,6 @@ module Dummy
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Configure the asset pipeline to include Bower components.
-    config.assets.paths << Rails.root.join('..', '..', 'vendor', 'assets', 'bower_components')
     # HACK: allows the fonts to work despite the namespaced bower_components
     config.assets.paths << Rails.root.join('..', '..', 'vendor', 'assets', 'bower_components', 'mortgage_calculator')
   end

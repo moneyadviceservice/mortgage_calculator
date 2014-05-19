@@ -30,10 +30,6 @@ module MortgageCalculator
     end
 
     initializer :append_frontend_assets, :group => :all do |app|
-      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'bower_components')
-      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'javascripts')
-      app.config.assets.paths      << Engine.root.join('vendor', 'assets', 'stylesheets')
-
       # Asset dependencies loaded in application.html.erb layout file
       app.config.assets.precompile += ['mortgage_calculator/application_fixed.css']
       app.config.assets.precompile += ['mortgage_calculator/application_responsive.css']
