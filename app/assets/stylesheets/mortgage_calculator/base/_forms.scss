@@ -16,19 +16,11 @@ label {
 input[type="text"] {
   width: 100%;
   border: 1px solid #ccc;
-  border-top: 4px solid $color-green-bright;
   padding: 8px 8px;
-  border-radius: 5px;
   transition: all 0.2s linear;
   font-family: 'museo_sans';
   font-weight: 500;
   font-size: 18px;
-
-  &:focus,
-  &:active {
-    border-top-color: $color-green-primary;
-    outline: 0;
-  }
 }
 
 .mortgagecalc__container--affordability {
