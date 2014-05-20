@@ -2,9 +2,9 @@
   <h3><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h3>
 </div>
 
-<%= form_for @repayment, url: repayment_path do |f| %>
+<%= form_for @repayment, :html => {:class => "form"}, url: repayment_path do |f| %>
   <div class="mortgagecalc__panel">
-    <div>
+    <div class="form__item">
       <%= f.label :price,
         "id" => "label_initial_price" %>
       <%= f.text_field :price,
@@ -20,7 +20,7 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-    <div>
+    <div class="form__item">
       <%= f.label :deposit,
         "id" => "label_initial_deposit" %>
       <%= f.text_field :deposit,
