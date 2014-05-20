@@ -4,7 +4,7 @@ require 'jquery-rails'
 require 'angularjs-rails'
 require 'underscore-rails'
 require 'mas/feedback'
-require 'mas/frontend/helpers'
+require 'dough'
 
 module MortgageCalculator
   mattr_accessor :feedback_config

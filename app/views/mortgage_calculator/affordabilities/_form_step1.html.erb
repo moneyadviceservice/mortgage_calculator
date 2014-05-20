@@ -1,4 +1,4 @@
-<%= form_for @affordability, builder: MAS::Frontend::Helpers::Forms::Builders::Validation, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
+<%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
   <% f.validates @affordability, @affordability.people.first, @affordability.people.last, @affordability.outgoings %>
 
   <%= f.validation_summary %>
