@@ -15,4 +15,7 @@ class ApplicationController < ActionController::Base
 
   parent_template :embedded
 
+  def syndicated_tool_request?
+    false
+  end
 end
