@@ -373,16 +373,21 @@
 .ui-slider .ui-slider-handle {
   position:absolute;
   z-index:2;
-  width:26px;
-  height:26px;
-  top:-10px;
+  width:30px;
+  height:30px;
+  top:-12px;
   margin-left:-8px;
   cursor:pointer;
   border:2px solid #ccc;
   background:#fff;
-  border-radius: 26px;
+  border-radius: 30px;
   -webkit-box-shadow: 0px 3px 1px #e3e4e6;
   box-shadow: 0px 3px 1px #e3e4e6;
+
+  &:focus,
+  &:active {
+    border-color: $color-green-primary;
+  }
 }
 
 .ui-slider .ui-slider-range {
