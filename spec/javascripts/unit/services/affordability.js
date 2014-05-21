@@ -5,6 +5,7 @@ describe('Service: Affordability', function () {
   beforeEach(module('mortgageCalculatorApp'));
 
   var affordability,
+      repayments,
       resetApplicant2Income = function () {
         affordability.earnings.person2.annual = 0;
         affordability.earnings.person2.extra = 0;
@@ -28,10 +29,14 @@ describe('Service: Affordability', function () {
         affordability.outgoings.lifestyle.entertainment = 1000;
         affordability.outgoings.lifestyle.holidays = 1000;
         affordability.outgoings.lifestyle.food = 140;
+      },
+      calculateRepayments = function() {
+        repayments.propertyPrice = affordability.borrowing();
       };
 
-  beforeEach(inject(function (Affordability) {
+  beforeEach(inject(function (Affordability, Repayments) {
     affordability = Affordability;
+    repayments = Repayments;
     setIncome();
     setOutgoings();
   }));
@@ -91,6 +96,7 @@ describe('Service: Affordability', function () {
   describe('Repaying the mortgage', function() {
 
     it('calculates the monthly repayments based of the Repayment service', function () {
+      calculateRepayments();
       expect(affordability.monthlyRepayment()).toBe(1448.61);
     });
 
