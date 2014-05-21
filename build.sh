@@ -10,5 +10,6 @@ CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 bundle install
 bower install
+npm install
 
 rake app:gem:build
