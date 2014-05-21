@@ -36,6 +36,13 @@ module.exports = function(config) {
     ],
 
 
+    // these plugins will be require() by Karma
+    plugins: [
+      'karma-phantomjs-launcher',
+      'karma-jasmine'
+    ],
+
+
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     reporters: ['progress'],
