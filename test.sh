@@ -14,4 +14,6 @@ mkdir -p spec/dummy/tmp/capybara
 bundle install
 bower install
 
-bundle exec rake
+bundle exec rspec
+bundle exec cucumber
+bundle exec rake app:karma:run_once

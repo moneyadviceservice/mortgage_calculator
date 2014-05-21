@@ -26,7 +26,7 @@ load 'rails/tasks/engine.rake'
 Bundler::GemHelper.install_tasks
 
 task :test do
-  exec "bundle exec rspec && bundle exec cucumber && bundle exec rake app:karma:run_once"
+  system "bundle exec rspec && bundle exec cucumber && bundle exec rake app:karma:run_once"
 end
 
 task :default => :test
