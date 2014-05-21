@@ -15,6 +15,4 @@ bundle install
 bower install
 npm install
 
-bundle exec rspec
-bundle exec cucumber
-bundle exec rake app:karma:run_once
+bundle exec rake
