@@ -13,6 +13,7 @@ mkdir -p spec/dummy/tmp/capybara
 
 bundle install
 bower install
+npm install
 
 bundle exec rspec
 bundle exec cucumber
