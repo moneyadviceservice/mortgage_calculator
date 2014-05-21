@@ -25,7 +25,7 @@ describe("Directives: Currency", function() {
     expect(form.annualIncome.$valid).toBe(true);
   });
 
-  it('element should be initially empty', function() {
+  xit('element should be initially empty', function() {
     expect(element.find('input').val()).toBe('');
   });
 
