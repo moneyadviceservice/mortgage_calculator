@@ -30,5 +30,9 @@ module MortgageCalculator
         "https://www.moneyadviceservice.org.uk/en/tools/stamp-duty-calculator"
       end
     end
+
+    def no_follow?
+      controller.syndicated_tool_request? ? "nofollow" : nil
+    end
   end
 end

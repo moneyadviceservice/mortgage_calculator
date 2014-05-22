@@ -2,16 +2,16 @@
   <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.title") %></h4>
 
   <ol class="featured-list">
-    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_1.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_1.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_1.url"), target: "_blank" %></li>
+    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_1.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_1.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_1.url"), target: "_blank", rel: no_follow? %></li>
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.heading") %></strong> <%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.info") %></li>
-    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_3.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_3.url"), target: "_blank" %></li>
+    <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_3.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_3.url"), target: "_blank", rel: no_follow? %></li>
   </ol>
 </div>
 
 <div class="mortgagecalc__panel">
   <div class="callout">
     <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.title") %>:</h5>
-    <p><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.tip_1").html_safe %> <%= link_to t("mortgage_calculator.repayment.next_steps.learn_more.more.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.learn_more.more.url"), target: "_blank" %></p>
+    <p><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.tip_1").html_safe %> <%= link_to t("mortgage_calculator.repayment.next_steps.learn_more.more.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.learn_more.more.url"), target: "_blank", rel: no_follow? %></p>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
   <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.title") %>:</h5>
   <ul>
   <% (1..5).each do |n| %>
-    <li><%= link_to t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></li>
+    <li><%= link_to t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
   <% end %>
   </ul>
 
@@ -29,7 +29,7 @@
   <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.have_you_tried.title") %>:</h4>
 
   <p><%= link_to I18n.t('mortgage_calculator.repayment.next_steps.have_you_tried.stamp_duty'), full_stamp_duty_calculator_url,
-               class: "button button--primary mortgagecalc__spread", target: "_blank"%></p>
+               class: "button button--primary mortgagecalc__spread", target: "_blank", rel: no_follow? %></p>
 </div>
 
 <p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>

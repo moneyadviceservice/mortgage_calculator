@@ -2,16 +2,25 @@
   <h4 class="mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.title") %>:</h4>
 
   <ol class="featured-list">
-    <li><strong><%= link_to t("stamp_duty.next_steps.tip_1.heading_html"), I18n.t("stamp_duty.next_steps.tip_1.url"), target: "_blank" %></strong></li>
-    <li><strong><%= link_to t("stamp_duty.next_steps.tip_2.heading_html"), I18n.t("stamp_duty.next_steps.tip_2.url"), target: "_blank" %></strong></li>
-    <li><strong><%= link_to t("stamp_duty.next_steps.tip_3.heading_html"), I18n.t("stamp_duty.next_steps.tip_3.url"), target: "_blank" %></strong></li>
+    <li><strong><%= link_to t("stamp_duty.next_steps.tip_1.heading_html"),
+                            I18n.t("stamp_duty.next_steps.tip_1.url"),
+                            target: "_blank",
+                            rel: no_follow? %></strong></li>
+    <li><strong><%= link_to t("stamp_duty.next_steps.tip_2.heading_html"),
+                            I18n.t("stamp_duty.next_steps.tip_2.url"),
+                            target: "_blank",
+                            rel: no_follow? %></strong></li>
+    <li><strong><%= link_to t("stamp_duty.next_steps.tip_3.heading_html"),
+                            I18n.t("stamp_duty.next_steps.tip_3.url"),
+                            target: "_blank",
+                            rel: no_follow? %></strong></li>
   </ol>
 </div>
 
 <div class="mortgagecalc__panel">
   <div class="callout">
     <h5 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h5>
-    <p><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1", link: link_to(I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_text"), (I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_url")), target: "_blank")).html_safe %></p>
+    <p><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1", link: link_to(I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_text"), (I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_url")), target: "_blank", rel: no_follow?)).html_safe %></p>
   </div>
 </div>
 
@@ -19,10 +28,9 @@
   <h5 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h5>
   <ul>
   <% (1..5).each do |n| %>
-    <li><%= link_to t("stamp_duty.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("stamp_duty.next_steps.find_out_more.tip_#{n}.url"), target: "_blank" %></li>
+    <li><%= link_to t("stamp_duty.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("stamp_duty.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
   <% end %>
   </ul>
-
 </div>
 
 <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
@@ -31,9 +39,9 @@
   <p><%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
                  full_mortgage_calculator_url,
                  class: "button button--primary mortgagecalc__spread",
-                 target: "_blank"%></p>
+                 target: "_blank",
+                 rel: no_follow? %></p>
 </div>
 
 <p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
-
 

@@ -7,10 +7,10 @@ module UI
 
       element :h1, "h1"
       element :h2, "h2"
-      element :property_price, "form.new_stamp_duty input[name='stamp_duty[price]']"
+      element :property_price, "form.step_one input[name='stamp_duty[price]']"
       element :property_price_step_two, "form.step_two input[name='stamp_duty[price]']"
 
-      element :next, "form.new_stamp_duty input[type=submit]"
+      element :next, "form.step_one input[type=submit]"
       element :next_steps, "a[href^='/en/mortgage_calculator/stamp_duty/next_steps']"
 
       element :results, "p[class='results']"
