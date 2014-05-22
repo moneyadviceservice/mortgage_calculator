@@ -1,5 +1,5 @@
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)' } do |f| %>
-  <div>
+<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)' } do |f| %>
+  <div class="form__item">
     <%= f.label :price %>
     <%= f.text_field :price,
                      class: 'dynamic-slider-property',

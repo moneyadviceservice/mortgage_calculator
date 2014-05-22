@@ -5,9 +5,9 @@ module UI
 
       set_url "/{locale}/mortgage_calculator/repayment"
 
-      element :price, "form.new_repayment input[name='repayment[price]']"
-      element :deposit, "form.new_repayment input[name='repayment[deposit]']"
-      element :next, "form.new_repayment input[type=submit]"
+      element :price, "form.step_one input[name='repayment[price]']"
+      element :deposit, "form.step_one input[name='repayment[deposit]']"
+      element :next, "form.step_one input[type=submit]"
       element :next_steps, "a[href^='/en/mortgage_calculator/repayment/next_steps']"
 
       element :step_two_price, "form.step_two input[name='repayment[price]']"
