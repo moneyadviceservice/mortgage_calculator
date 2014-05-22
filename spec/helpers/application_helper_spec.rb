@@ -14,7 +14,7 @@ module MortgageCalculator
     describe :no_follow? do
       context 'when tool is not syndicated' do
         before :each do
-          controller.stub(:syndicated_tool_request?).and_return{ false }
+          helper.stub(:syndicated_tool_request?).and_return{ false }
         end
 
         it 'returns false' do
@@ -24,7 +24,7 @@ module MortgageCalculator
 
       context 'when tool is syndicated' do
         before :each do
-          controller.stub(:syndicated_tool_request?).and_return{ true }
+          helper.stub(:syndicated_tool_request?).and_return{ true }
         end
 
         it 'returns nofollow' do
