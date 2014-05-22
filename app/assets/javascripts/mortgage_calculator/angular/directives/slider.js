@@ -81,8 +81,6 @@ App.directive('uiSlider', function() {
         }
     });
 
-    console.log(scope.value)
-
     //Initial declaration of slider
     angular.extend(options, expression);
     element.slider(options);
