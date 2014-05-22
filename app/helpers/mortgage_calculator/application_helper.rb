@@ -32,7 +32,7 @@ module MortgageCalculator
     end
 
     def no_follow?
-      controller.syndicated_tool_request? ? "nofollow" : nil
+      syndicated_tool_request? ? "nofollow" : nil
     end
   end
 end
