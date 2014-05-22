@@ -35,7 +35,6 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       numberOfPeople        : [1, 2],
 
       monthlyRepayment: function() {
-        Repayments.propertyPrice = this.borrowing();
         return Repayments.monthlyRepayment();
       },
 

@@ -25,10 +25,6 @@ describe("Directives: Currency", function() {
     expect(form.annualIncome.$valid).toBe(true);
   });
 
-  xit('element should be initially empty', function() {
-    expect(element.find('input').val()).toBe('');
-  });
-
   it('sets the view value to the correct format', function() {
     form.annualIncome.$setViewValue('£30,000.00');
     expect(form.annualIncome.$viewValue).toBe('£30,000.00');

@@ -5,6 +5,16 @@
   </p>
 <% end %>
 
+<p class="rendered-from-js results dynamic-slider-property">
+  Borrowing: {{ repayments.propertyPrice | customCurrency:"£"}}
+</p>
+
+<div class="slider" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="borrowingStepValue" ng-model="repayments.propertyPrice" aria-labelledby="label_rate" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Interest Rate"></div>
+
 <p class="rendered-from-js results">
-  Borrowing: {{ affordability.borrowing() | customCurrency:"£"}}
+  {{ affordability.minimumBorrowing() | customCurrency:"£"}}
+</p>
+
+<p class="rendered-from-js results">
+  {{ affordability.maximumBorrowing() | customCurrency:"£"}}
 </p>

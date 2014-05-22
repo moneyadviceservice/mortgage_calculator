@@ -19,6 +19,12 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       }
     };
 
+    $scope.calculateRepayments = function() {
+      Repayments.propertyPrice = $scope.affordability.borrowing();
+    };
+
+    $scope.borrowingStepValue = ($scope.affordability.borrowing() / 100) * 1;
+
 
     //Stamp Duty Calculations
     $scope.stampDuty = StampDuty;
@@ -43,7 +49,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.viewInterestRepayments = true;
     };
 
-    // All Calculator Helpers
+    // Helpers
     $scope.preventFormSubmission = function($event) {
       $event.preventDefault();
     };
