@@ -1,10 +1,5 @@
-<!-- <p class="knock-back"><%= I18n.t('stamp_duty.pretitle') %></p> -->
+<% content_for(:tool_heading, I18n.t('stamp_duty.h1')) %>
 
-<% content_for(:tool_heading) do %>
-  <h1><%= I18n.t('stamp_duty.h1') %></h1>
-<% end %>
-
-<h2 class="mortgagecalc__pageheading"><%= I18n.t('stamp_duty.title') %></h2>
-
-<p class="mortgagecalc__heading mortgagecalc__heading--intro"><%= I18n.t('stamp_duty.subtitle') %></p>
+<h2><%= I18n.t('stamp_duty.title') %></h2>
+<p><%= I18n.t('stamp_duty.subtitle') %></p>
 

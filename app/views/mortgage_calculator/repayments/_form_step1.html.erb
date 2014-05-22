@@ -1,10 +1,10 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h4>
+  <h2><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h2>
 </div>
 
-<%= form_for @repayment, url: repayment_path do |f| %>
-  <div class="mortgagecalc__panel">
-    <div>
+<%= form_for @repayment, :html => {:class => "form step_one"}, url: repayment_path do |f| %>
+  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+    <div class="form__item">
       <%= f.label :price,
         "id" => "label_initial_price" %>
       <%= f.text_field :price,
@@ -17,10 +17,8 @@
                       "data-m-dec" =>"0",
                       "aria-labelledby" => "label_initial_price" %>
     </div>
-  </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-    <div>
+    <div class="form__item">
       <%= f.label :deposit,
         "id" => "label_initial_deposit" %>
       <%= f.text_field :deposit,

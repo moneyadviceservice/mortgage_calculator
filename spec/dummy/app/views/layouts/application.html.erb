@@ -4,11 +4,11 @@
   <title>Dummy</title>
   <%= javascript_include_tag :modernizr %>
   <%= yield :head if content_for?(:head) %>
-  <%= yield :analytics if content_for(:analytics) %>
+  <%= yield :analytics if content_for?(:analytics) %>
 </head>
 <body class="locale-<%= I18n.locale %>">
 
-<%= yield :tool_heading if content_for(:tool_heading) %>
+<h1><%= yield :tool_heading if content_for?(:tool_heading) %></h1>
 
 <%= yield :tool_content %>
 
