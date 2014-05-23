@@ -84,6 +84,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
     var _sumOf = function(costs) {
       var sum = _.reduce(costs, function(memo, cost){
+        cost = cost || 0;
         return memo + cost;
       }, 0);
       return sum;
