@@ -1,6 +1,6 @@
-<%= render 'header' %>
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container">
+  <%= render 'header' %>
 
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
   <% @repayment.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
   <% end %>
@@ -26,9 +26,9 @@
 
   </div>
 
-</div>
+  <%= render 'caveat' %>
 
-<%= render 'caveat' %>
+</div>
 
 <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_repayment_config) %></div>
 

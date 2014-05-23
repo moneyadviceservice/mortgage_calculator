@@ -30,6 +30,12 @@
                        "data-m-dec" =>"0",
                        "aria-labelledby" => "label_initial_deposit" %>
     </div>
+  </div>
+
+  <div class="mortgagecalc__panel">
+    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="callout callout--field-align">
+      <%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %>
+    </div>
 
     <%= f.submit I18n.t("mortgage_calculator.repayment.next"),
                  class: "button button--primary mortgagecalc__submit",
@@ -41,10 +47,6 @@
                  'analytics-label' => 'Click',
                  'ng-disabled' => '!repayments.propertyPrice' %>
 
-
-    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="callout">
-      <%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %>
-    </div>
   </div>
 
 <% end %>

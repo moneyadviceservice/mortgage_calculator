@@ -1,6 +1,6 @@
-<%= render 'header' %>
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container">
+  <%= render 'header' %>
 
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container ">
   <% @stamp_duty.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
   <% end %>
@@ -15,9 +15,9 @@
         <%= render 'calc_left_panel' if @stamp_duty.valid? %>
         <%= render 'calc_right_panel' %>
 
-        <div class="mortgagecalc__panel mortgagecalc__panel--full">
-          <%= render 'stamp_duty_tip' %>
-        </div>
+
+        <%= render 'stamp_duty_tip' %>
+
       </div>
     </div>
 
@@ -27,8 +27,9 @@
       </div>
     </div>
   </div>
+
+  <%= render 'caveat' %>
 </div>
 
-<%= render 'caveat' %>
 <%= render 'feedback' %>
 

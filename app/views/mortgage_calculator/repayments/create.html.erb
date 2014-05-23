@@ -1,18 +1,15 @@
 <% content_for(:analytics) do %>
-  <script type='text/javascript'>
-    var _gaq = _gaq || [];
-    _gaq.push(['_trackEvent','Mortgage Calculator','Completion','Click']);
-  </script>
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_trackEvent','Mortgage Calculator','Completion','Click']);
+</script>
 <% end %>
 
-<%= render 'header' %>
-
 <div class="mortgagecalc__container">
+  <%= render 'header' %>
   <%= render 'calc_left_panel' %>
-
   <%= render 'calc_right_panel' %>
+  <%= render 'caveat' %>
 </div>
-
-<%= render 'caveat' %>
 
 <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_repayment_config) %></div>
