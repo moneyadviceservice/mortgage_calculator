@@ -18,13 +18,14 @@ module UI
 
       element :recalculate, "form.step_two input[type=submit]"
     end
-  end
-end
 
-module UI
-  module Pages
     class WelshStampDuty < StampDuty
       set_url "/cy/mortgage_calculator/treth_stamp"
     end
+
+    class SyndicatedStampDuty < StampDuty
+      set_url "/en/mortgage_calculator/stamp-duty-calculator?syndicated"
+    end
   end
 end
+

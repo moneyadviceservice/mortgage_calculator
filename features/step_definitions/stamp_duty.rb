@@ -9,6 +9,11 @@ Given /^I visit the( Welsh)? Stamp Duty (?:page|calculator)$/i do |welsh|
   @stamp_duty.load
 end
 
+Given(/^I visit the Syndicated Stamp Duty page$/) do
+  @stamp_duty = UI::Pages::SyndicatedStampDuty.new
+  @stamp_duty.load
+end
+
 Then /^they should see the Stamp Duty calculator$/ do
   expect(@stamp_duty.h2).to have_content(I18n.t('stamp_duty.title'))
 end

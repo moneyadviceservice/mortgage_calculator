@@ -7,3 +7,7 @@ Scenario: When entering house price
   Given I visit the Stamp Duty page
   Then  I should see the stamp duty feedback tab
 
+Scenario: When using syndicated stamp duty calculator
+  Given I visit the Syndicated Stamp Duty page
+  Then  I should not see the stamp duty feedback tab
+
