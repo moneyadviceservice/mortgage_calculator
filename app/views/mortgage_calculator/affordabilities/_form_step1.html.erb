@@ -244,7 +244,7 @@
   <% end %>
   <!-- END OUTGOING FIELDS -->
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
     <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit",
              'ng-click' => 'navigateAndFocus($event); calculateRepayments()' %>
