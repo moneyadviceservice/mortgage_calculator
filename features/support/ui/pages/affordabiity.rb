@@ -35,6 +35,10 @@ module UI
       element :next, "input[value='Find out how much I can borrow']"
       element :recalculate, "input[value='Recalculate']"
     end
+
+    class SyndicatedAffordability < Affordability
+      set_url "/en/mortgage_calculator/affordability-calculator?syndicated"
+    end
   end
 end
 

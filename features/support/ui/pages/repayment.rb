@@ -16,6 +16,10 @@ module UI
       element :interest_rate, "input[name='repayment[interest_rate]']"
       element :recalculate, "form.step_two input[type=submit]"
     end
+
+    class SyndicatedRepayment < Repayment
+      set_url "/en/mortgage_calculator/repayment?syndicated"
+    end
   end
 end
 

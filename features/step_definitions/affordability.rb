@@ -3,6 +3,11 @@ Given /^I visit the Affordability page$/ do
   @affordability.load
 end
 
+Given(/^I visit the Syndicated Affordability page$/) do
+  @affordability = UI::Pages::SyndicatedAffordability.new
+  @affordability.load
+end
+
 Then /^I should see the Affordability title$/ do
   expect(@affordability.h2).to have_content(I18n.t("affordability.title"))
 end
