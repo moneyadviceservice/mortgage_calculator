@@ -11,9 +11,9 @@
 <% end %>
 
 <p class="rendered-from-js results">
-  If interest rate changes by <strong>2%</strong> your monthly repayment would rise to <strong>{{ repayments.monthlyInterestRepayment(2) | customCurrency:"£" }}</strong>.
+  If interest rate changes by <strong>2%</strong> your monthly repayment would rise to <strong>{{ repayments.monthlyRepayment(2) | customCurrency:"£" }}</strong>.
 </p>
 <p class="rendered-from-js results">
-  Your remaining financial buffer will be <strong>&pound;418.37</strong>.
+  Your remaining financial buffer will be <strong>{{ affordability.remainingPerMonth(2) | currency:"£" }}</strong>.
 </p>
 
