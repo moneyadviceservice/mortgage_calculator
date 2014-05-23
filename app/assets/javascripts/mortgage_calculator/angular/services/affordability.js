@@ -36,18 +36,6 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       lifestyleSpend: 0,
 
-      monthlyRepayment: function() {
-        return Repayments.monthlyRepayment();
-      },
-
-      takeHomePay: function() {
-        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
-      },
-
-      committedCosts: function() {
-        return _sumOf(this.outgoings.committed);
-      },
-
       minimumBorrowing: function() {
         return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8;
       },
@@ -60,8 +48,24 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
       },
 
+      monthlyRepayment: function() {
+        return Repayments.monthlyRepayment();
+      },
+
+      takeHomePay: function() {
+        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
+      },
+
+      committedCosts: function() {
+        return _sumOf(this.outgoings.committed);
+      },
+
       calculateLifestyleSpend: function() {
         return _sumOf(this.outgoings.lifestyle);
+      },
+
+      remainingPerMonth: function() {
+        return this.takeHomePay() - this.monthlyRepayment() - (this.committedCosts() + _sumOf(this.outgoings.fixed)) - this.lifestyleSpend;
       }
     };
 

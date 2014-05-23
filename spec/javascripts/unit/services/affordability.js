@@ -101,6 +101,15 @@ describe('Service: Affordability', function () {
 
   });
 
+  describe('#remainingPerMonth', function() {
+
+    it('calculates the applicant(s) remaining spend per month minus key costs', function () {
+      affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
+      expect(affordability.remainingPerMonth()).toBe(117);
+    });
+
+  });
+
   describe('Repayments', function() {
 
     it('calculates the monthly repayments based of the Repayment service', function () {
