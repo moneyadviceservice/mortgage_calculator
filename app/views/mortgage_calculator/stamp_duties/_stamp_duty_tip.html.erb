@@ -1,8 +1,8 @@
-<div ng-show="expandedMortgageInformation">
-  <%= render 'bands_table' %>
+<div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div ng-show="expandedMortgageInformation">
+    <%= render 'bands_table' %>
+  </div>
 </div>
-
-<p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
 
 <p><%= link_to I18n.t('stamp_duty.next'), next_steps_stamp_duty_path,
                class: "button button--primary mortgagecalc__submit",
@@ -14,3 +14,5 @@
                'analytics-action' => 'Next Steps',
                'analytics-label' => 'Click'
                %></p>
+
+<p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>

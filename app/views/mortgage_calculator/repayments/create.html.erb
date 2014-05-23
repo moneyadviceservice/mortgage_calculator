@@ -5,14 +5,11 @@
   </script>
 <% end %>
 
-<%= render 'header' %>
-
 <div class="mortgagecalc__container">
+  <%= render 'header' %>
   <%= render 'calc_left_panel' %>
-
   <%= render 'calc_right_panel' %>
+  <%= render 'caveat' %>
 </div>
-
-<%= render 'caveat' %>
 
 <div class="mortgagecalc__feedback"><%= zendesk_feedback_tab(zendesk_repayment_config) %></div>

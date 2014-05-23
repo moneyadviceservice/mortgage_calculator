@@ -42,12 +42,16 @@
   font-size: $font-medium;
 }
 
+.mortgagecalc__intro {
+  margin-bottom: 24px;
+}
+
 .mortgagecalc__container {
   @include column(12);
   position: relative;
   max-width: $calc-width;
-  padding: 25px 0;
-  margin:2em 0 10px;
+  padding: 0 0 25px 0;
+  margin:10px 0 0;
 }
 
 .mortgagecalc__panel {
@@ -66,11 +70,6 @@
     padding: 1.125rem;
     margin: 1.5rem 0;
     margin-top: 10px;
-  }
-
-  &.mortgagecalc__panel--with-form {
-    padding-bottom: 60px;
-    min-height: 150px;
   }
 
   &.mortgagecalc__panel--border {
@@ -96,10 +95,8 @@
 }
 
 .mortgagecalc__submit {
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-  cursor: pointer;
+  float:right;
+  margin-bottom: 24px;
 }
 
 .mortgagecalc__spread {
@@ -139,7 +136,7 @@
 
 .previous {
   @extend .mortgagecalc__submit;
-  margin-right: 100px;
+  margin-right: 15px;
 }
 
 .mortgagecalc__table {
