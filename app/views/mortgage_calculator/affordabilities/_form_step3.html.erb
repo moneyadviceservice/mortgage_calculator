@@ -1,0 +1,103 @@
+<%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two' } do |f| %>
+  <% @affordability.people.each_with_index do |person, index| %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
+  <% end %>
+
+  <% @affordability.outgoings.serializable_hash.each do |k,v| %>
+    <%= hidden_field_tag "affordability[outgoings][#{k}]", v %>
+  <% end %>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+   <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
+    <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
+    <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
+  </div>
+
+  <div class="mortgagecalc__panel">
+    <div>
+      <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+    <div>
+      <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
+      <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
+    <div class="mortgagecalc__panel mortgagecalc__panel--full">
+      <h3>How will this effect my budget</h3>
+
+      <p>This mortgage payment your spendng plus commitments are between 40% - 60% of your total take-home pay</p>
+      <p>You could be at risk of overstretching your budget to make these payments</p>
+    </div>
+
+    <div class="mortgagecalc__panel">
+      <div>
+        <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
+      </div>
+    </div>
+
+    <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+      <div>
+        <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <h3>Can you afford this?</h3>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <div>
+      <p><strong>At the moment, you have money left over at the end of each month</strong></p>
+      <p>Think ahead and use our Budget Planner in case you need to make changes to your spending in the future</p>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__panel">
+    <div>
+      <p>
+        Your estimate lifestyle spend per month is: <%= f.text_field :lifestyle_costs,
+                                                                     "currency" => '',
+                                                                     "data-a-sign" =>"£",
+                                                                     "data-m-dec" =>"0" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <div>
+      <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
+    </div>
+  </div>
+
+  <div class="mortgagecalc__caveat callout">
+    <p><strong>But what if interest rates change?</strong></p>
+    <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
+  </div>
+
+  <div class="hide-with-js">
+    <p><br> <%= f.submit "Recalculate", class: "button" %></p>
+  </div>
+
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+
+    <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')">Back</a></p>
+
+    <p><%= link_to "Next", next_steps_affordability_path,
+                   class: "button button--primary mortgagecalc__submit",
+                   'wz-next' => '' %></p>
+  </div>
+<% end %>
+
+

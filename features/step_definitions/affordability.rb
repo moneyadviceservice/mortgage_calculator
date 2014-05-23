@@ -20,14 +20,17 @@ When(/^I submit the details$/) do
   @affordability.next.click
 end
 
+Given(/^I submit the first step$/) do
+  @affordability.step_1_next.click
+end
+
 When(/^I submit invalid details$/) do
-  @affordability.credit_repayments.set "asd"
   @affordability.monthly_net_income.set "asd"
-  @affordability.next.click
+  @affordability.step_1_next.click
 end
 
 Then(/^I see an error message$/) do
-  expect(page).to have_content('Credit card debt / loan repayments is not a number')
+  expect(page).to have_content('Monthly net income is not a number')
 end
 
 Then(/^I do not see the result output$/) do
@@ -40,6 +43,8 @@ When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
     @affordability.extra_income.set "10000"
     @affordability.monthly_net_income.set "6000"
 
+    @affordability.step_1_next.click
+
     @affordability.credit_repayments.set "300"
     @affordability.utilities.set "300"
     @affordability.childcare.set "300"
@@ -48,11 +53,15 @@ When(/^I enter all details for applicant "(.*?)"$/) do |applicant|
     @affordability.food.set "300"
     @affordability.travel.set "300"
     @affordability.entertainment.set "300"
+
+    @affordability.step_2_next.click
   elsif applicant.to_i == 2
     choose('two_applicants') unless js_disabled?
     @affordability.person_two_annual_income.set "50000"
     @affordability.person_two_extra_income.set "5000"
     @affordability.person_two_monthly_net_income.set "3000"
+
+    @affordability.step_1_next.click
   end
 end
 
@@ -67,7 +76,6 @@ end
 Given(/^I have entered all details for applicant "(.*?)"$/) do |applicants|
   step "I visit the Affordability page"
   step "I enter all details for applicant \"#{applicants.to_i}\""
-  step "I submit the details"
 end
 
 When(/^I update my affordability circumstances$/) do

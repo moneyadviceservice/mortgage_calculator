@@ -1,18 +1,26 @@
 module MortgageCalculator
   # Load order issue - subclass a class explicitly
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
-    def show
+    def step_1
       @affordability = AffordabilityPresenter.new(affordability_model)
       adjust_interest_rate
     end
 
-    def create
+    def step_2
+      @affordability = AffordabilityPresenter.new(affordability_model)
+
+      unless @affordability.valid?
+        render :step_1
+      end
+    end
+
+    def step_3
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       if @affordability.valid?
         adjust_interest_rate
       else
-        render :show
+        render :step_2
       end
     end
 

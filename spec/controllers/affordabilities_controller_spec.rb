@@ -16,42 +16,53 @@ module MortgageCalculator
       end
     end
 
-    describe :show do
+    describe :step_1 do
       it 'responds with 200' do
-        get :show
+        get :step_1
         expect(response).to be_success
       end
     end
 
-    describe :create do
-      it 'responds with 200' do
-        post :create, affordability: {
-                        people_attributes: {
-                          "0"=>{annual_income: "100000", extra_income: "10000"},
-                          "1"=>{annual_income: "50000", extra_income: "5000"}
-                        },
-                        outgoings: {}
-                      }
-        expect(response).to be_success
-      end
+    describe :step_2 do
+      context "when there is a validation error" do
+        render_views
 
-      it 'renders the create template' do
-        post :create, affordability: {
+        before :each do
+          post :step_2, affordability: {
+                          people_attributes: {
+                            "0"=>{annual_income: "1", extra_income: "0", monthly_net_income: "1000"}
+                          },
+                          outgoings: {},
+                          lifestyle_costs: "3000"
+                        }
+        end
+
+        it "renders the error message" do
+          expect(response.body).to have_content "Your monthly take home pay is higher than your annual income"
+        end
+      end
+    end
+
+    describe :step_3 do
+      it 'renders the step_3 template' do
+        post :step_3, affordability: {
                         people_attributes: {
                           "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "6000"},
                           "1"=>{annual_income: "50000", extra_income: "5000", monthly_net_income: "3000"}
                         },
                         outgoings: {}
                       }
-        expect(response).to render_template('create')
+
+        expect(response).to be_success
+        expect(response).to render_template('step_3')
       end
 
       context "when custom borrowing amount is entered" do
         it 'sets custom house price' do
-          post :create, affordability: {
+          post :step_3, affordability: {
                           people_attributes: {
-                            "0"=>{annual_income: "100000", extra_income: "10000"},
-                            "1"=>{annual_income: "50000", extra_income: "5000"}
+                            "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "6000"},
+                            "1"=>{annual_income: "50000", extra_income: "5000", monthly_net_income: "3000"}
                           },
                           outgoings: {},
                           borrowing: "550000"
@@ -63,34 +74,16 @@ module MortgageCalculator
 
       context "when custom lifestyle amount is entered" do
         it 'sets custom lifestyle amount' do
-          post :create, affordability: {
+          post :step_3, affordability: {
                           people_attributes: {
-                            "0"=>{annual_income: "100000", extra_income: "10000"},
-                            "1"=>{annual_income: "50000", extra_income: "5000"}
+                            "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "6000"},
+                            "1"=>{annual_income: "50000", extra_income: "5000", monthly_net_income: "3000"}
                           },
                           outgoings: {},
                           lifestyle_costs: "3000"
                         }
           expect(response).to be_success
           expect(assigns(:affordability).lifestyle_costs).to eql("3,000")
-        end
-      end
-
-      context "when there is a validation error" do
-        render_views
-
-        before :each do
-          post :create, affordability: {
-                          people_attributes: {
-                            "0"=>{annual_income: "1", extra_income: "0", monthly_net_income: "1000"}
-                          },
-                          outgoings: {},
-                          lifestyle_costs: "3000"
-                        }
-        end
-
-        it "renders the error message" do
-          expect(response.body).to have_content "Your monthly take home pay is higher than your annual income"
         end
       end
     end
