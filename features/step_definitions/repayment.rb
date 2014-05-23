@@ -5,6 +5,11 @@ Given(/^I visit the Repayment calculator$/) do
   @repayment.load
 end
 
+Given(/^I visit the Syndicated Repayment calculator$/) do
+  @repayment = UI::Pages::SyndicatedRepayment.new
+  @repayment.load
+end
+
 Then(/^I enter my repayment house price$/) do
   @repayment.price.set "100000"
 end
