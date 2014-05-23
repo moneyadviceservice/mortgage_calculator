@@ -34,6 +34,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
       numberOfPeople        : [1, 2],
 
+      lifestyleSpend: 0,
+
       monthlyRepayment: function() {
         return Repayments.monthlyRepayment();
       },
@@ -56,6 +58,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       borrowing: function() {
         return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
+      },
+
+      calculateLifestyleSpend: function() {
+        return _sumOf(this.outgoings.lifestyle);
       }
     };
 

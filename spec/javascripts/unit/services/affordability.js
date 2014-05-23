@@ -93,7 +93,15 @@ describe('Service: Affordability', function () {
 
   });
 
-  describe('Repaying the mortgage', function() {
+  describe('#calculateLifestyleSpend', function() {
+
+    it('calculates the applicant(s) total lifestyle spend', function () {
+      expect(affordability.calculateLifestyleSpend()).toBe(2140);
+    });
+
+  });
+
+  describe('Repayments', function() {
 
     it('calculates the monthly repayments based of the Repayment service', function () {
       calculateRepayments();
