@@ -54,12 +54,16 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.outgoings.credit_repayments + this.outgoings.child_maintenance;
       },
 
-      calculateLifestyleSpend: function() {
-        return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
-      },
-
       fixedCosts: function() {
         return this.outgoings.childcare + this.outgoings.travel + this.outgoings.utilities;
+      },
+
+      riskPercentage: function() {
+        return (this.monthlyRepayment() + (this.committedCosts() + this.fixedCosts())) / 100;
+      },
+
+      calculateLifestyleSpend: function() {
+        return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
 
       remainingPerMonth: function(increment) {
