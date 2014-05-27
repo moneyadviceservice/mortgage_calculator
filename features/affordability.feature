@@ -11,7 +11,7 @@ Scenario: Can view the Affordability Calculator
 Scenario: Affordability for one applicant
   Given I visit the Affordability page
   When  I enter all details for "1" applicants
-  Then  I see "You might be offered between £287,840.00 and £431,760.00"
+  Then  I see "between £287,840.00 and £431,760.00"
   And   I see "Estimated mortgage repayments per month, approx: £2,103.35"
   And   I see "Remaining per month is £1,496.65"
   And   I see "Fixed costs are £1,500.00"
@@ -30,7 +30,7 @@ Scenario: I recalculate
 Scenario: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
   And   I enter all details for "2" applicants
-  Then  I see "You might be offered between £441,840.00 and £662,760.00"
+  Then  I see "between £441,840.00 and £662,760.00"
   And   I see "Estimated mortgage repayments per month, approx: £3,228.69"
   And   I see "Remaining per month is £3,371.31"
   And   I see "Fixed costs are £1,500.00"
