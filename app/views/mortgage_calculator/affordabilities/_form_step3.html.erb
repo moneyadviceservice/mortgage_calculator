@@ -69,7 +69,9 @@
         Your estimate lifestyle spend per month is: <%= f.text_field :lifestyle_costs,
                                                                      "currency" => '',
                                                                      "data-a-sign" =>"£",
-                                                                     "data-m-dec" =>"0" %>
+                                                                     "data-m-dec" => "0",
+                                                                     "ng-model" => "affordability.lifestyleSpend",
+                                                                     "placeholder" => "Lifestyle Spend" %>
       </p>
     </div>
   </div>
