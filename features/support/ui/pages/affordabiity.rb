@@ -9,9 +9,9 @@ module UI
       element :extra_income, "form.new_affordability input[name='affordability[people_attributes][0][extra_income]'][type='text']"
       element :monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][0][monthly_net_income]'][type='text']"
 
-      element :person_two_annual_income, "form.new_affordability input[name='affordability[people_attributes][1][annual_income]']"
-      element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]']"
-      element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]']"
+      element :person_two_annual_income, "form.new_affordability input[name='affordability[people_attributes][1][annual_income]'][type='text']"
+      element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]'][type='text']"
+      element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]'][type='text']"
 
       element :credit_repayments, "form.new_affordability input[name='affordability[outgoings][credit_repayments]']"
       element :child_maintenance, "form.new_affordability input[name='affordability[outgoings][child_maintenance]']"
