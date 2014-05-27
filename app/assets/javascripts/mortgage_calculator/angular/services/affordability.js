@@ -34,17 +34,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
       numberOfPeople        : [1, 2],
 
-      monthlyRepayment: function() {
-        return Repayments.monthlyRepayment();
-      },
-
-      takeHomePay: function() {
-        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
-      },
-
-      committedCosts: function() {
-        return _sumOf(this.outgoings.committed);
-      },
+      lifestyleSpend: 0,
 
       minimumBorrowing: function() {
         return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8;
@@ -56,6 +46,26 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       borrowing: function() {
         return (this.minimumBorrowing() + this.maximumBorrowing()) / 2;
+      },
+
+      monthlyRepayment: function(increment) {
+        return Repayments.monthlyRepayment(increment);
+      },
+
+      takeHomePay: function() {
+        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
+      },
+
+      committedCosts: function() {
+        return _sumOf(this.outgoings.committed);
+      },
+
+      calculateLifestyleSpend: function() {
+        return _sumOf(this.outgoings.lifestyle);
+      },
+
+      remainingPerMonth: function(increment) {
+        return this.takeHomePay() - this.monthlyRepayment(increment) - (this.committedCosts() + _sumOf(this.outgoings.fixed)) - this.lifestyleSpend;
       }
     };
 
@@ -74,6 +84,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
     var _sumOf = function(costs) {
       var sum = _.reduce(costs, function(memo, cost){
+        cost = cost || 0;
         return memo + cost;
       }, 0);
       return sum;

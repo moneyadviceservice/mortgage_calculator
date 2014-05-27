@@ -1,10 +1,10 @@
 
 <% if @affordability.valid? %>
   <p ng-hide="js" class="results">
-    Fixed costs are <%= number_to_currency @affordability.committed_costs + @affordability.fixed_costs %>
+    Fixed costs are <strong><%= number_to_currency @affordability.committed_costs + @affordability.fixed_costs %></strong>
   </p>
 <% end %>
 
 <p class="rendered-from-js results">
-  Estimated fixed and spending commitments per month are: {{ affordability.committedCosts() | customCurrency:"£" }}
+  Estimated fixed and spending commitments per month are: <strong>{{ affordability.committedCosts() | customCurrency:"£" }}</strong>
 </p>

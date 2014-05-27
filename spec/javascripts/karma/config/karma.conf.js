@@ -38,6 +38,7 @@ module.exports = function(config) {
 
     // these plugins will be require() by Karma
     plugins: [
+      "karma-growl-reporter",
       'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
@@ -45,7 +46,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['progress', 'growl'],
 
 
     // web server port

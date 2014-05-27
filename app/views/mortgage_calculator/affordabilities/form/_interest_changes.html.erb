@@ -1,18 +1,19 @@
 
 <% if @affordability.valid? %>
   <p ng-hide="js" class="results">
-    If interest rate changes by <%= number_to_percentage interest_rate_change_amount, precision: 0 %> your monthly repayment would rise to <%= number_to_currency @changer.monthly_payment %>.
+    If interest rate changes by <strong><%= number_to_percentage interest_rate_change_amount, precision: 0 %></strong>
+    your monthly repayment would rise to <strong><%= number_to_currency @changer.monthly_payment %></strong>.
   </p>
 
   <p ng-hide="js" class="results">
-    Your remaining financial buffer will be <%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.model.lifestyle_costs) %>
+    Your remaining financial buffer will be <strong><%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.model.lifestyle_costs) %></strong>.
   </p>
 <% end %>
 
 <p class="rendered-from-js results">
-  If interest rate changes by 2% your monthly repayment would rise to {{ repayments.monthlyInterestRepayment(2) | customCurrency:"£" }}.
+  If interest rate changes by <strong>2%</strong> your monthly repayment would rise to <strong>{{ repayments.monthlyRepayment(2) | customCurrency:"£" }}</strong>.
 </p>
 <p class="rendered-from-js results">
-  Your remaining financial buffer will be
+  Your remaining financial buffer will be <strong>{{ affordability.remainingPerMonth(2) | currency:"£" }}</strong>.
 </p>
 

@@ -6,5 +6,5 @@
 <% end %>
 
 <p class="rendered-from-js results">
-  Your estimated remaining money per month is &pound;750.
+  Your estimated remaining money per month is <strong>{{ affordability.remainingPerMonth() | currency:"£" }}</strong>
 </p>
