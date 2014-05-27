@@ -6,10 +6,10 @@ describe('Service: Affordability', function() {
 
   var affordability,
     repayments,
-    resetApplicant2Income = function() {
-      affordability.earnings.person1.annual = 0;
-      affordability.earnings.person1.extra = 0;
-      affordability.earnings.person1.net_pay = 0;
+    resetApplicantIncome = function(person) {
+      affordability.earnings['person' + person].annual = 0;
+      affordability.earnings['person' + person].extra = 0;
+      affordability.earnings['person' + person].net_pay = 0;
     },
     setIncome = function() {
       affordability.earnings.person0.annual = 40000;
@@ -49,7 +49,7 @@ describe('Service: Affordability', function() {
   describe('#minimumBorrowing', function() {
 
     it('calculates the minimum amount a single applicant can borrow', function() {
-      resetApplicant2Income();
+      resetApplicantIncome(2);
       expect(affordability.minimumBorrowing()).toBe(101920);
     });
 
@@ -61,7 +61,7 @@ describe('Service: Affordability', function() {
   describe('#maximumBorrowing', function() {
 
     it('calculates the maximum amount a single applicant can borrow', function() {
-      resetApplicant2Income();
+      resetApplicantIncome(2);
       expect(affordability.maximumBorrowing()).toBe(152880);
     });
 
@@ -122,8 +122,10 @@ describe('Service: Affordability', function() {
       });
 
       it('returns 0 when divided by 0', function() {
+        resetApplicantIncome(1);
+        resetApplicantIncome(2);
         calculateRepayments();
-        expect(affordability.riskPercentage()).toBe(56);
+        expect(affordability.riskPercentage()).toBe(0);
       });
 
     });

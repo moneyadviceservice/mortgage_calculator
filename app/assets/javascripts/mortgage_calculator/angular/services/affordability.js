@@ -59,7 +59,12 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       riskPercentage: function() {
-        return Math.floor(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100);
+        var result = Math.floor(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100);
+        if (isFinite(result)) {
+          return result;
+        } else {
+          return 0;
+        }
       },
 
       calculateLifestyleSpend: function() {
