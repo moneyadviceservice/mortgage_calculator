@@ -168,6 +168,16 @@ module MortgageCalculator
       end
     end
 
+    describe :inverse_risk_percentage do
+      it 'is the 100 - risk percentage' do
+        subject.stub(:risk_percentage){ 10 }
+        expect(subject.inverse_risk_percentage).to eql(90)
+
+        subject.stub(:risk_percentage){ 50 }
+        expect(subject.inverse_risk_percentage).to eql(50)
+      end
+    end
+
     describe :risk_level do
       context 'when it is under 40' do
         it 'returns :low' do

@@ -79,6 +79,10 @@ module MortgageCalculator
       0
     end
 
+    def inverse_risk_percentage
+      100 - risk_percentage
+    end
+
     def risk_level
       return :low if risk_percentage < 40
       return :high if risk_percentage > 60
