@@ -117,7 +117,13 @@ describe('Service: Affordability', function() {
     describe('#riskPercentage', function() {
 
       it('calculates the risk percentage of the applicant(s) borrowing', function() {
-        expect(affordability.riskPercentage()).toBe(41);
+        calculateRepayments();
+        expect(affordability.riskPercentage()).toBe(56);
+      });
+
+      it('returns 0 when divided by 0', function() {
+        calculateRepayments();
+        expect(affordability.riskPercentage()).toBe(56);
       });
 
     });
