@@ -142,7 +142,7 @@ module MortgageCalculator
 
     describe :risk_percentage do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(40)
+        expect(subject.risk_percentage.to_i).to eql(46)
       end
 
       context 'when over 100%' do
