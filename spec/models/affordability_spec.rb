@@ -142,7 +142,7 @@ module MortgageCalculator
 
     describe :risk_percentage do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(40)
+        expect(subject.risk_percentage.to_i).to eql(46)
       end
 
       context 'when over 100%' do
@@ -165,6 +165,16 @@ module MortgageCalculator
         it 'returns 0' do
           expect(subject.risk_percentage.to_i).to eql(0)
         end
+      end
+    end
+
+    describe :inverse_risk_percentage do
+      it 'is the 100 - risk percentage' do
+        subject.stub(:risk_percentage){ 10 }
+        expect(subject.inverse_risk_percentage).to eql(90)
+
+        subject.stub(:risk_percentage){ 50 }
+        expect(subject.inverse_risk_percentage).to eql(50)
       end
     end
 

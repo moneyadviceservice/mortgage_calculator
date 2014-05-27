@@ -4,7 +4,7 @@
 </p>
 
 <p ng-hide="js" class="results">
-  What you will have left over: 45% of your monthly takehome
+  What you will have left over: <%= number_to_percentage @affordability.inverse_risk_percentage, precision: 0 %> of your monthly takehome
 </p>
 
 <p class="rendered-from-js results">

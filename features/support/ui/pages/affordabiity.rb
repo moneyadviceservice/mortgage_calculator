@@ -5,13 +5,13 @@ module UI
 
       set_url "/{locale}/mortgage_calculator/affordability-calculator"
 
-      element :annual_income, "form.new_affordability input[name='affordability[people_attributes][0][annual_income]']"
-      element :extra_income, "form.new_affordability input[name='affordability[people_attributes][0][extra_income]']"
-      element :monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][0][monthly_net_income]']"
+      element :annual_income, "form.new_affordability input[name='affordability[people_attributes][0][annual_income]'][type='text']"
+      element :extra_income, "form.new_affordability input[name='affordability[people_attributes][0][extra_income]'][type='text']"
+      element :monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][0][monthly_net_income]'][type='text']"
 
-      element :person_two_annual_income, "form.new_affordability input[name='affordability[people_attributes][1][annual_income]']"
-      element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]']"
-      element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]']"
+      element :person_two_annual_income, "form.new_affordability input[name='affordability[people_attributes][1][annual_income]'][type='text']"
+      element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]'][type='text']"
+      element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]'][type='text']"
 
       element :credit_repayments, "form.new_affordability input[name='affordability[outgoings][credit_repayments]']"
       element :child_maintenance, "form.new_affordability input[name='affordability[outgoings][child_maintenance]']"
@@ -32,8 +32,17 @@ module UI
       element :h2, "h2"
       element :results, "p[class='results']"
 
-      element :next, "input[value='Find out how much I can borrow']"
+      elements :nexts, "input[value='Find out how much I can borrow']"
       element :recalculate, "input[value='Recalculate']"
+
+      def step_1_next
+        nexts.first
+      end
+
+      def step_2_next
+        # javascript version renders both forms
+        nexts[1] || nexts[0]
+      end
     end
 
     class SyndicatedAffordability < Affordability

@@ -18,6 +18,7 @@ module MortgageCalculator
     delegate :committed_costs, to: :model
     delegate :fixed_costs, to: :model
     delegate :risk_percentage, to: :model
+    delegate :inverse_risk_percentage, to: :model
     delegate :risk_level, to: :model
     delegate :remaining, to: :model
     delegate :errors, to: :model
