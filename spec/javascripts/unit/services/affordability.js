@@ -128,6 +128,12 @@ describe('Service: Affordability', function() {
         expect(affordability.riskPercentage()).toBe(0);
       });
 
+      it('returns 100% when it is over 100%', function() {
+        repayments.annualInterestRate = 50;
+        calculateRepayments();
+        expect(affordability.riskPercentage()).toBe(100);
+      });
+
     });
 
     describe('#riskLevel', function() {

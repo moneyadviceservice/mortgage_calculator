@@ -59,9 +59,11 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       riskPercentage: function() {
-        var result = Math.floor(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100);
+        var result = Math.floor(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
+            percentage = _.min([100, result]);
+
         if (isFinite(result)) {
-          return result;
+          return percentage;
         } else {
           return 0;
         }
