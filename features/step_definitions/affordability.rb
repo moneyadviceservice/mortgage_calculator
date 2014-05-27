@@ -59,6 +59,7 @@ When(/^I enter all details for "(.*?)" applicants$/) do |applicant|
   @affordability.food.set "300"
   @affordability.travel.set "300"
   @affordability.entertainment.set "300"
+  @affordability.holiday.set "300"
 
   @affordability.step_2_next.click
 end
