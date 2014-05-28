@@ -62,3 +62,5 @@ en:
       estimated_html: "Estimated mortgage repayments per month, approx: %{repayment}"
     remaining:
       estimate_html: "Your estimated remaining money per month is %{remaining}"
+    range:
+      offer_html: "You might be offered between %{min} and %{max}"
