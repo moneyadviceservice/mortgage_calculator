@@ -55,7 +55,7 @@ en:
         percentage: "This mortgage payment and your spending commitments are below 40% of your total take-home pay."
         affordability: "Currently these payments seem affordable."
     interest_changer:
-      title:
+      title: "But what if interest rates change?"
       changes_by_would_increase_html: "If interest rate changes by %{percent} your monthly repayment would rise to %{repayment}."
       remaining_html: "Your remaining financial buffer will be %{remaining}."
     monthly_repayment:
