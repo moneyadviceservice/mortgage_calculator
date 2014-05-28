@@ -160,6 +160,10 @@ describe('Service: Affordability', function() {
 
   describe('#riskAmount', function() {
 
+    it('returns an amount of the take home pay taken by the risk percentage', function() {
+      calculateRepayments();
+      expect(affordability.riskAmount()).toBe(2703.20);
+    });
 
   });
 
@@ -175,6 +179,7 @@ describe('Service: Affordability', function() {
   describe('#remainingPerMonth', function() {
 
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
+      calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
       expect(affordability.remainingPerMonth()).toBe(1339.25);
     });

@@ -75,12 +75,16 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return 'medium';
       },
 
+      riskAmount: function() {
+        return (this.riskPercentage() / 100) * this.takeHomePay();
+      },
+
       calculateLifestyleSpend: function() {
         return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
 
       remainingPerMonth: function(increment) {
-        return this.takeHomePay() - this.monthlyRepayment(increment) - this.committedCosts() - this.fixedCosts() - this.lifestyleSpend;
+        return (this.takeHomePay() - this.riskAmount())  - this.lifestyleSpend;
       }
     };
 
