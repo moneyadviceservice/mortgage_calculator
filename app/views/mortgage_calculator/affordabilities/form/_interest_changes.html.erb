@@ -1,19 +1,24 @@
-
 <% if @affordability.valid? %>
   <p ng-hide="js" class="results">
-    If interest rate changes by <strong><%= number_to_percentage interest_rate_change_amount, precision: 0 %></strong>
-    your monthly repayment would rise to <strong><%= number_to_currency @changer.monthly_payment %></strong>.
+    <%= t "affordability.interest_changer.changes_by_would_increase_html",
+           percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
+           repayment: "<strong>#{number_to_currency @changer.monthly_payment}</strong>".html_safe %>
   </p>
 
   <p ng-hide="js" class="results">
-    Your remaining financial buffer will be <strong><%= number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.model.lifestyle_costs) %></strong>.
+    <%= t "affordability.interest_changer.remaining_html",
+           remaining: "<strong>#{number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.model.lifestyle_costs)}</strong>".html_safe %>
   </p>
 <% end %>
 
 <p class="rendered-from-js results">
-  If interest rate changes by <strong>2%</strong> your monthly repayment would rise to <strong>{{ repayments.monthlyRepayment(2) | customCurrency:"£" }}</strong>.
+  <%= t "affordability.interest_changer.changes_by_would_increase_html",
+         percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
+         repayment: "<strong>{{ repayments.monthlyRepayment(2) | customCurrency:'£' }}</strong>".html_safe %>
 </p>
+
 <p class="rendered-from-js results">
-  Your remaining financial buffer will be <strong>{{ affordability.remainingPerMonth(2) | currency:"£" }}</strong>.
+  <%= t "affordability.interest_changer.remaining_html",
+         remaining: "<strong>{{ affordability.remainingPerMonth(2) | currency:'£' }}</strong>".html_safe %>
 </p>
 
