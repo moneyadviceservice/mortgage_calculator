@@ -86,6 +86,49 @@ module MortgageCalculator
           expect(assigns(:affordability).lifestyle_costs).to eql("3,000")
         end
       end
+
+      describe 'risk' do
+        render_views
+
+        context 'when at high risk' do
+          it 'renders high risk partial' do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "100"}
+                            },
+                            outgoings: {}
+                          }
+
+            expect(response).to render_template('high_budget_affect')
+          end
+        end
+
+        context 'when at medium risk' do
+          it 'renders medium risk partial' do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "4000"}
+                            },
+                            outgoings: {}
+                          }
+
+            expect(response).to render_template('medium_budget_affect')
+          end
+        end
+
+        context 'when at low risk' do
+          it 'renders low risk partial' do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "8000"}
+                            },
+                            outgoings: {}
+                          }
+
+            expect(response).to render_template('low_budget_affect')
+          end
+        end
+      end
     end
 
     describe :next_steps do
