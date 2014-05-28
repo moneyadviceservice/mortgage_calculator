@@ -33,7 +33,7 @@
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
-      <h3>How will this effect my budget</h3>
+      <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
       <%= render "#{@affordability.risk_level}_budget_affect" %>
     </div>
@@ -52,7 +52,7 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <h3>Can you afford this?</h3>
+    <h3><%= t "affordability.titles.can_afford" %></h3>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">

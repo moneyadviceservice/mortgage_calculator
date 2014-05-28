@@ -40,8 +40,8 @@ en:
       estimated_committed: "Estimated monthly committed costs"
       estimated_fixed: "Estimated monthly fixed costs"
       estimated_lifestyle: "Estimated living costs"
-      how_affect_budget:
-      can_afford:
+      how_affect_budget: "How will this effect my budget"
+      can_afford: "Can you afford this?"
     input_page:
       submit: "Find out how much I can borrow"
       monthly_outgoings_descriptions: "Lenders will offer you a mortgage based on affordable monthly payments, and they'll work this out by looking at your income as well as various outgoings. Fill in the sections below to get a rough idea of how your budget adds up and understand how affordable monthly payments may be."
