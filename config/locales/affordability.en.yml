@@ -10,6 +10,8 @@ en:
       one: "This tool is designed to give you an approximate idea of how much a lender may offer for a mortgage. It is only an estimate. Actual amounts and affordability criteria will differ across lenders"
     activemodel:
       attributes:
+        mortgage_calculator/affordability:
+          lifestyle_costs: "Your estimate lifestyle spend per month is:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card debt / loan repayments"
           utilities: "Bills and insurance"

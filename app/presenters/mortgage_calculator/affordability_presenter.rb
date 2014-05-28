@@ -1,5 +1,6 @@
 module MortgageCalculator
   class AffordabilityPresenter
+    extend ActiveModel::Translation
     extend ActiveModel::Naming
     include ActionView::Helpers::NumberHelper
 
@@ -22,6 +23,10 @@ module MortgageCalculator
     delegate :risk_level, to: :model
     delegate :remaining, to: :model
     delegate :errors, to: :model
+
+    def self.i18n_scope
+      "affordability.activemodel"
+    end
 
     def initialize(model)
       @model = model
