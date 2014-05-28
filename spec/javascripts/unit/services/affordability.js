@@ -112,36 +112,33 @@ describe('Service: Affordability', function() {
 
   });
 
-  describe('Risk Information', function() {
 
-    describe('#riskPercentage', function() {
+  describe('#riskPercentage', function() {
 
-      it('calculates the risk percentage of the applicant(s) borrowing', function() {
-        calculateRepayments();
-        expect(affordability.riskPercentage()).toBe(56);
-      });
-
-      it('returns 0 when divided by 0', function() {
-        resetApplicantIncome(1);
-        resetApplicantIncome(2);
-        calculateRepayments();
-        expect(affordability.riskPercentage()).toBe(0);
-      });
-
-      it('returns 100% when it is over 100%', function() {
-        repayments.annualInterestRate = 50;
-        calculateRepayments();
-        expect(affordability.riskPercentage()).toBe(100);
-      });
-
+    it('calculates the risk percentage of the applicant(s) borrowing', function() {
+      calculateRepayments();
+      expect(affordability.riskPercentage()).toBe(56);
     });
 
-    describe('#riskLevel', function() {
+    it('returns 0 when divided by 0', function() {
+      resetApplicantIncome(1);
+      resetApplicantIncome(2);
+      calculateRepayments();
+      expect(affordability.riskPercentage()).toBe(0);
+    });
 
-      it('calculates the risk level of the applicant(s) borrowing based on the risk percentage', function() {
-        expect(affordability.riskLevel()).toBe('medium');
-      });
+    it('returns 100% when it is over 100%', function() {
+      repayments.annualInterestRate = 50;
+      calculateRepayments();
+      expect(affordability.riskPercentage()).toBe(100);
+    });
 
+  });
+
+  describe('#riskLevel', function() {
+
+    it('calculates the risk level of the applicant(s) borrowing based on the risk percentage', function() {
+      expect(affordability.riskLevel()).toBe('medium');
     });
 
   });
