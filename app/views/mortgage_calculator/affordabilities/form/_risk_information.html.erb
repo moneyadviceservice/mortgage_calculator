@@ -1,16 +1,20 @@
-
 <p ng-hide="js" class="results">
-  Mortgage repayments and fixed costs per month: <%= number_to_percentage @affordability.risk_percentage, precision: 0 %> of your monthly take home.
+  <%= t "affordability.budget.outgoing",
+         percent: number_to_percentage(@affordability.risk_percentage, precision: 0) %>
 </p>
 
 <p ng-hide="js" class="results">
-  What you will have left over: <%= number_to_percentage @affordability.inverse_risk_percentage, precision: 0 %> of your monthly takehome
+  <%= t "affordability.budget.leftover",
+         percent: number_to_percentage(@affordability.inverse_risk_percentage, precision: 0) %>
 </p>
 
 <p class="rendered-from-js results">
-  Mortgage repayments and fixed costs per month: 64% of your monthly take home.
+  <%= t "affordability.budget.outgoing",
+         percent: "" %>
 </p>
 
 <p class="rendered-from-js results">
-  What you will have left over: 45% of your monthly takehome
+  <%= t "affordability.budget.leftover",
+         percent: "" %>
 </p>
+

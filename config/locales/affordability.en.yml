@@ -66,3 +66,6 @@ en:
       offer_html: "You might be offered between %{min} and %{max}"
     take_home:
       per_month_html: "Your take home pay per month: %{take_home}"
+    budget:
+      outgoing: "Mortgage repayments and fixed costs per month: %{percent} of your monthly take home."
+      leftover: "What you will have left over: %{percent} of your monthly takehome"
