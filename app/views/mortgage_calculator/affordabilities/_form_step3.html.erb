@@ -87,15 +87,14 @@
   </div>
 
   <div class="hide-with-js">
-    <p><br> <%= f.submit "Recalculate", class: "button" %></p>
+    <p><br><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
   </div>
-
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
 
     <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')">Back</a></p>
 
-    <p><%= link_to "Next", next_steps_affordability_path,
+    <p><%= link_to I18n.t("affordability.next"), next_steps_affordability_path,
                    class: "button button--primary mortgagecalc__submit",
                    'wz-next' => '' %></p>
   </div>
