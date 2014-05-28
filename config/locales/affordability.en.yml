@@ -60,3 +60,5 @@ en:
       remaining_html: "Your remaining financial buffer will be %{remaining}."
     monthly_repayment:
       estimated_html: "Estimated mortgage repayments per month, approx: %{repayment}"
+    remaining:
+      estimate_html: "Your estimated remaining money per month is %{remaining}"
