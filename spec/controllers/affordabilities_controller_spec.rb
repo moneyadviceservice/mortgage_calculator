@@ -38,7 +38,7 @@ module MortgageCalculator
         end
 
         it "renders the error message" do
-          expect(response.body).to have_content "Your monthly take home pay is higher than your annual income"
+          expect(response.body).to have_content "Your monthly take-home pay is higher than your annual income"
         end
       end
     end

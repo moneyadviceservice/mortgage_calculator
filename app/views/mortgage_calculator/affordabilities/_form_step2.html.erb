@@ -11,14 +11,16 @@
 
   <!-- OUTGOING FIELDS -->
   <p><strong><%= I18n.t("affordability.titles.monthly_outgoings") %></strong></p>
+
   <p><%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %></p>
+  <p><%= I18n.t("affordability.input_page.outgoings_second_person") %></p>
 
   <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
     <p><%= I18n.t("affordability.titles.estimated_committed") %></p>
     <div class="mortgagecalc__panel">
       <div>
         <%= outgoings.errors_for outgoings.object, :credit_repayments %>
-        <%= outgoings.label :credit_repayments, 'Credit card / loan repayments' %>
+        <%= outgoings.label :credit_repayments %>
         <%= outgoings.text_field :credit_repayments,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",
@@ -33,7 +35,7 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
       <div>
         <%= outgoings.errors_for outgoings.object, :child_maintenance %>
-        <%= outgoings.label :child_maintenance, 'Child maintenance / Alimony' %>
+        <%= outgoings.label :child_maintenance %>
         <%= outgoings.text_field :child_maintenance,
                               "class" => "form-control",
                               "placeholder" => "utilities",
@@ -49,7 +51,7 @@
     <div class="mortgagecalc__panel">
       <div>
         <%= outgoings.errors_for outgoings.object, :childcare %>
-        <%= outgoings.label :childcare, 'Childcare costs / School fees' %>
+        <%= outgoings.label :childcare %>
         <%= outgoings.text_field :childcare,
                               "class" => "form-control",
                               "placeholder" => "utilities",
@@ -60,7 +62,7 @@
                               "value" => outgoings.object.childcare_formatted %>
 
         <%= outgoings.errors_for outgoings.object, :travel %>
-        <%= outgoings.label :travel, 'Travel / Commuting' %>
+        <%= outgoings.label :travel %>
         <%= outgoings.text_field :travel,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",
@@ -74,7 +76,7 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
       <div>
         <%= outgoings.errors_for outgoings.object, :utilities %>
-        <%= outgoings.label :utilities, 'Bills & insurance' %>
+        <%= outgoings.label :utilities %>
         <%= outgoings.text_field :utilities,
                               "class" => "form-control",
                               "placeholder" => "utilities",
@@ -85,7 +87,7 @@
                               "value" => outgoings.object.utilities_formatted %>
 
         <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
-        <%= outgoings.label :rent_and_mortgage, 'Rent / mortgage repayments' %>
+        <%= outgoings.label :rent_and_mortgage %>
         <%= outgoings.text_field :rent_and_mortgage,
                               "class" => "form-control",
                               "placeholder" => "utilities",
@@ -98,11 +100,16 @@
     </div>
 
     <p class="cf"><%= I18n.t("affordability.titles.estimated_lifestyle") %></p>
-    <div class="mortgagecalc__panel">
-      <div>
 
+    <p>
+      <%= t "affordability.input_page.living_costs_description" %>
+    </p>
+
+    <div class="mortgagecalc__panel">
+
+      <div>
         <%= outgoings.errors_for outgoings.object, :entertainment %>
-        <%= outgoings.label :entertainment, 'Entertainment & leasure' %>
+        <%= outgoings.label :entertainment %>
         <%= outgoings.text_field :entertainment,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",
@@ -127,7 +134,7 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
       <div>
         <%= outgoings.errors_for outgoings.object, :food %>
-        <%= outgoings.label :food, 'Food, groceries, toileteries' %>
+        <%= outgoings.label :food %>
         <%= outgoings.text_field :food,
                               "class" => "form-control",
                               "placeholder" => "Credit debts",

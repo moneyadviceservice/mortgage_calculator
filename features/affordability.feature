@@ -22,7 +22,7 @@ Scenario: I recalculate
   Given I have entered all details for applicant "1"
   When  I update my affordability circumstances
   And   I recalculate
-  Then  I see "79% of your monthly take home"
+  Then  I see "79% of your monthly take-home"
   And   I see "remaining money per month is £330.50"
   And   I see "Fixed costs are £1,500.00"
 
