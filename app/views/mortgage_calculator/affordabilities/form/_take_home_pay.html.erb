@@ -1,5 +1,10 @@
-
 <p ng-hide="js" class="results">
-  Your take home pay per month: <%= number_to_currency @affordability.monthly_net_income %>
+  <%= t "affordability.take_home.per_month_html",
+         take_home: "<strong>#{number_to_currency @affordability.monthly_net_income}</strong>".html_safe %>
 </p>
-<p class="rendered-from-js results">Your take home pay per month: <strong>{{ affordability.takeHomePay() | customCurrency:"£"}}</strong></p>
+
+<p class="rendered-from-js results">
+  <%= t "affordability.take_home.per_month_html",
+         take_home: "<strong>{{ affordability.takeHomePay() | customCurrency:'£'}} </strong>".html_safe %>
+</p>
+
