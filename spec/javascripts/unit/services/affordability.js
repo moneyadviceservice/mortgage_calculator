@@ -137,8 +137,23 @@ describe('Service: Affordability', function() {
 
   describe('#riskLevel', function() {
 
-    it('calculates the risk level of the applicant(s) borrowing based on the risk percentage', function() {
+
+    it('returns low when risk is under 40%', function() {
+      affordability.outgoings.committed.credit_repayments = 0;
+      affordability.outgoings.fixed.travel = 0;
+      calculateRepayments();
+      expect(affordability.riskLevel()).toBe('low');
+    });
+
+    it('returns medium when risk is between 40% - 60%', function() {
+      calculateRepayments();
       expect(affordability.riskLevel()).toBe('medium');
+    });
+
+    it('returns high when risk is over 60%', function() {
+      repayments.annualInterestRate = 10;
+      calculateRepayments();
+      expect(affordability.riskLevel()).toBe('high');
     });
 
   });

@@ -69,6 +69,12 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         }
       },
 
+      riskLevel: function() {
+        if (this.riskPercentage() < 40) return 'low';
+        if (this.riskPercentage() > 60) return 'high';
+        return 'medium';
+      },
+
       calculateLifestyleSpend: function() {
         return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
