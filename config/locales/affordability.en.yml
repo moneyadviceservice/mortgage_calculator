@@ -3,6 +3,7 @@ en:
     tool_name: "affordability-calculator"
     title: "How much can I borrow for a mortgage?"
     description: "Use this calculator to estimate how much a lender will offer you for a mortgage. Also, understand more about how affordable the mortgage payments are, and where your financial buffer will come from if circumstances change."
+    next:
     caveat:
       title: "Important"
       one: "This tool is designed to give you an approximate idea of how much a lender may offer for a mortgage. It is only an estimate. Actual amounts and affordability criteria will differ across lenders"
@@ -38,6 +39,20 @@ en:
       estimated_committed: "Estimated monthly committed costs"
       estimated_fixed: "Estimated monthly fixed costs"
       estimated_lifestyle: "Estimated living costs"
+      how_affect_budget:
+      can_afford:
     input_page:
       submit: "Find out how much I can borrow"
       monthly_outgoings_descriptions: "Lenders will offer you a mortgage based on affordable monthly payments, and they'll work this out by looking at your income as well as various outgoings. Fill in the sections below to get a rough idea of how your budget adds up and understand how affordable monthly payments may be."
+    budget_affect:
+      high:
+        percentage: "This mortgage payment and your spending commitments are above 60% of your total take-home pay"
+        affordability: "You are at high risk of overstretching your budget to make these payments"
+      medium:
+        percentage: "This mortgage payment and your spending commitments are between 40% - 60% of your total take-home pay"
+        affordability: "You could be at risk of overstretching your budget to make these payments"
+      low:
+        percentage: "This mortgage payment and your spending commitments are below 40% of your total take-home pay."
+        affordability: "Currently these payments seem affordable."
+    interest_changer:
+      title:
