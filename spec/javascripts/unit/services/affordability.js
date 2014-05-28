@@ -117,7 +117,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the risk percentage of the applicant(s) borrowing', function() {
       calculateRepayments();
-      expect(affordability.riskPercentage()).toBe(56);
+      expect(affordability.riskPercentage()).toBe(57);
     });
 
     it('returns 0 when divided by 0', function() {
@@ -158,6 +158,11 @@ describe('Service: Affordability', function() {
 
   });
 
+  describe('#riskAmount', function() {
+
+
+  });
+
 
   describe('#calculateLifestyleSpend', function() {
 
@@ -171,7 +176,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
-      expect(affordability.remainingPerMonth()).toBe(2817.45);
+      expect(affordability.remainingPerMonth()).toBe(1339.25);
     });
 
   });

@@ -59,7 +59,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       riskPercentage: function() {
-        var result = Math.floor(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
+        var result = Math.round(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
             percentage = _.min([100, result]);
 
         if (isFinite(result)) {
@@ -80,7 +80,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       remainingPerMonth: function(increment) {
-        return this.takeHomePay() - this.monthlyRepayment(increment) - (this.committedCosts() + this.fixedCosts()) - this.lifestyleSpend;
+        return this.takeHomePay() - this.monthlyRepayment(increment) - this.committedCosts() - this.fixedCosts() - this.lifestyleSpend;
       }
     };
 
