@@ -30,13 +30,6 @@ module MortgageCalculator
         expect(response).to be_success
       end
 
-      context 'when the price is blank' do
-        it 'renders show template' do
-          post :create, stamp_duty: { price: "" }
-          expect(response).to render_template('show')
-        end
-      end
-
       context 'when price is invalid' do
         render_views
 

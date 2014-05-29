@@ -26,7 +26,7 @@ module MortgageCalculator
       @outgoings = outgoings
       @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
-      self.lifestyle_costs = options[:lifestyle_costs]
+      self.lifestyle_costs = options[:lifestyle_costs] if options[:lifestyle_costs].present?
     end
 
     def interest_rate

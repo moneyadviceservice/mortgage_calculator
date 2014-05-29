@@ -5,7 +5,7 @@ module MortgageCalculator
     let(:person1) do
       Person.new({ annual_income: "100000",
                    extra_income: "10000",
-                   monthly_net_income: 6000 })
+                   monthly_net_income: "6000" })
     end
 
     let(:person2) do
@@ -18,7 +18,7 @@ module MortgageCalculator
       Outgoings.new(
         credit_repayments: 200,
         utilities: 200,
-        childare: 100,
+        childcare: 100,
         child_maintenance: 0,
         rent_and_mortgage: 600,
         food: 200,
@@ -142,7 +142,7 @@ module MortgageCalculator
 
     describe :risk_percentage do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(46)
+        expect(subject.risk_percentage.to_i).to eql(48)
       end
 
       context 'when over 100%' do
@@ -212,7 +212,7 @@ module MortgageCalculator
 
     describe :remaining do
       it 'returns remaining amount per month' do
-        expect(subject.remaining.to_i).to eql(2598)
+        expect(subject.remaining.to_i).to eql(2498)
       end
     end
 
