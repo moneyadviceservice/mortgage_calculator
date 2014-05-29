@@ -4,6 +4,7 @@ require 'jquery-rails'
 require 'angularjs-rails'
 require 'underscore-rails'
 require 'mas/feedback'
+require 'mas/fonts'
 require 'dough'
 
 module MortgageCalculator
