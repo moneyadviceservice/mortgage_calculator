@@ -3,7 +3,6 @@
 
   <%= f.validation_summary %>
 
-  <!-- INCOME FIELDS -->
   <p><strong><%= I18n.t("affordability.titles.annual_income") %></strong></p>
   <%= f.fields_for :people do |person| %>
     <% count = @affordability.people.find_index(person.object) %>
@@ -110,7 +109,6 @@
       </div>
     <% end %>
   <% end %>
-  <!-- END INCOME FIELDS -->
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
     <%= f.submit I18n.t("affordability.input_page.submit"),
