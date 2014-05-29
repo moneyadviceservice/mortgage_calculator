@@ -51,15 +51,15 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       committedCosts: function() {
-        return _sumOf([this.outgoings.credit_repayments, this.outgoings.child_maintenance]);
+        return this.outgoings.credit_repayments + this.outgoings.child_maintenance;
       },
 
       calculateLifestyleSpend: function() {
-        return _sumOf([this.outgoings.entertainment, this.outgoings.holidays, this.outgoings.food]);
+        return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
 
       fixedCosts: function() {
-        return _sumOf([this.outgoings.childcare, this.outgoings.travel, this.outgoings.utilities]);
+        return this.outgoings.childcare + this.outgoings.travel + this.outgoings.utilities;
       },
 
       remainingPerMonth: function(increment) {
