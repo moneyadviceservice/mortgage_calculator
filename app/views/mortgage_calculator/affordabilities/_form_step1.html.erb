@@ -1,9 +1,9 @@
 <%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: step_2_affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
   <% f.validates @affordability, @affordability.people.first, @affordability.people.last %>
 
-  <%= f.validation_summary %>
-
   <div class="mortgagecalc__panel">
+
+  <%= f.validation_summary %>
 
     <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
     <%= f.fields_for :people do |person| %>
