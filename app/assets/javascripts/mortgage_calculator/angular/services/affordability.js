@@ -16,21 +16,15 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         }
       },
       outgoings: {
-        committed: {
-          credit_repayments: 0,
-          child_maintenance: 0
-        },
-        fixed: {
-          childcare: 0,
-          travel: 0,
-          utilities: 0,
-          rent_and_mortgage: 0
-        },
-        lifestyle: {
-          entertainment: 0,
-          holidays: 0,
-          food: 0
-        }
+        credit_repayments: 0,
+        child_maintenance: 0,
+        childcare: 0,
+        travel: 0,
+        utilities: 0,
+        rent_and_mortgage: 0,
+        entertainment: 0,
+        holidays: 0,
+        food: 0
       },
       numberOfPeople        : [0, 1],
 
@@ -53,19 +47,23 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       takeHomePay: function() {
-        return this.earnings.person1.net_pay + this.earnings.person2.net_pay;
+        return this.earnings.person0.net_pay + this.earnings.person1.net_pay;
       },
 
       committedCosts: function() {
-        return _sumOf(this.outgoings.committed);
+        return _sumOf([this.outgoings.credit_repayments, this.outgoings.child_maintenance]);
       },
 
       calculateLifestyleSpend: function() {
-        return _sumOf(this.outgoings.lifestyle);
+        return _sumOf([this.outgoings.entertainment, this.outgoings.holidays, this.outgoings.food]);
+      },
+
+      fixedCosts: function() {
+        return _sumOf([this.outgoings.childcare, this.outgoings.travel, this.outgoings.utilities]);
       },
 
       remainingPerMonth: function(increment) {
-        return this.takeHomePay() - this.monthlyRepayment(increment) - (this.committedCosts() + _sumOf(this.outgoings.fixed)) - this.lifestyleSpend;
+        return this.takeHomePay() - this.monthlyRepayment(increment) - (this.committedCosts() + this.fixedCosts()) - this.lifestyleSpend;
       }
     };
 

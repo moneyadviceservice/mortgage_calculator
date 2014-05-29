@@ -6,19 +6,7 @@
   <% end %>
 
   <% @affordability.outgoings.serializable_hash.each do |k,v| %>
-    <%
-    model_cat = "fixed"
-
-    if k == "credit_repayments" || k == "child_maintenance"
-      model_cat = "committed"
-    end
-
-    if k == "entertainment" || k == "holidays" || k == "food"
-      model_cat = "lifestyle"
-    end
-    %>
-
-    <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{model_cat}.#{k}", 'ng-initial' => '' %>
+    <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
