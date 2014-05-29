@@ -14,6 +14,7 @@ en:
         mortgage_calculator/affordability:
           lifestyle_costs: "Your estimate lifestyle spend per month is:"
           borrowing: "Borrowing"
+          interest_rate: "Based on a repayment mortgage, for 25 years, at:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card / loan payments"
           utilities: "Bills / insurance"
