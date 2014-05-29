@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 module MortgageCalculator
   module CurrencyInput
     module Macro
@@ -20,6 +22,8 @@ module MortgageCalculator
       end
 
       def parse
+        purge_currency_symbols!
+
         return nil if input.blank?
         return nil unless /\A[0-9, ]*(\.)?(\d)*\z/ =~ input.to_s
 
@@ -28,7 +32,11 @@ module MortgageCalculator
 
       private
 
-      attr_reader :input
+      attr_accessor :input
+
+      def purge_currency_symbols!
+        input.gsub!("£", "") if input.kind_of?(String)
+      end
     end
   end
 end
