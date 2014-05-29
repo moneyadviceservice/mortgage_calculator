@@ -5,6 +5,7 @@ en:
     preamble: "Lenders offer mortgages based on affordable monthly payments and to do this, they'll look at your income as well as various outgoings."
     description: "This calculator gives you an idea of how much mortgage you might be offered and how affordable those payments will be. It should take about five minutes to complete."
     next: "Next"
+    back: "Back"
     recalculate: "Recalculate"
     caveat:
       title: "Important"
