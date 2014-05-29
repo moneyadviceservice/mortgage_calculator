@@ -215,5 +215,49 @@ module MortgageCalculator
         expect(subject.remaining.to_i).to eql(2598)
       end
     end
+
+    describe :remaining_positive? do
+      context 'when positive' do
+        it 'returns true' do
+          expect(subject.remaining_positive?).to be_true
+        end
+      end
+
+      context 'when zero' do
+        it 'returns true' do
+          subject.stub(:remaining){ BigDecimal.new("0")  }
+          expect(subject.remaining_positive?).to be_true
+        end
+      end
+
+      context 'when negative' do
+        it 'returns false' do
+          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          expect(subject.remaining_positive?).to be_false
+        end
+      end
+    end
+
+    describe :remaining_negative? do
+      context 'when positive' do
+        it 'returns false' do
+          expect(subject.remaining_negative?).to be_false
+        end
+      end
+
+      context 'when zero' do
+        it 'returns false' do
+          subject.stub(:remaining){ BigDecimal.new("0")  }
+          expect(subject.remaining_negative?).to be_false
+        end
+      end
+
+      context 'when negative' do
+        it 'returns true' do
+          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          expect(subject.remaining_negative?).to be_true
+        end
+      end
+    end
   end
 end

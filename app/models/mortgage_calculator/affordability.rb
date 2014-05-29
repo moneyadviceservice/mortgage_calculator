@@ -94,6 +94,14 @@ module MortgageCalculator
       monthly_net_income - repayment.monthly_payment - committed_costs - lifestyle_costs - fixed_costs
     end
 
+    def remaining_positive?
+      remaining.sign >= 0
+    end
+
+    def remaining_negative?
+      !remaining_positive?
+    end
+
     def valid?
       super & outgoings.valid? & !(people.map(&:valid?).include?(false))
     end
