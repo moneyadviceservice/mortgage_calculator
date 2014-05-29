@@ -5,6 +5,7 @@ App.directive('ngInitial', function() {
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var getter, setter, val;
         val = $attrs.ngInitial || $attrs.value;
+        val = parseFloat(val);
         getter = $parse($attrs.ngModel);
         setter = getter.assign;
         setter($scope, val);
