@@ -63,19 +63,5 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
     };
 
-    $scope.navigateAndFocus = function($event, direction) {
-      $event.preventDefault();
-      WizardHandler.wizard()[direction || 'next']();
-
-      // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
-      setTimeout(function() {
-        iframeHelpers.resizeIframe();
-        $('input[name="repayment[price]"]:visible').focus();
-        $('input[name="stamp_duty[price]"]:visible').focus();
-        $('input[name="affordability[interest_rate]"]:visible').focus();
-        $('input[name="affordability[people_attributes][0][annual_income]"]:visible').focus();
-      });
-    };
-
     iframeHelpers.resizeIframe();
   }]);
