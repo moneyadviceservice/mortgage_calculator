@@ -7,6 +7,7 @@ Scenario: Can view the Affordability Calculator
   Given I visit the Affordability page
   Then  I should see the Affordability title
 
+@wip
 @with_and_without_javascript
 Scenario: Affordability for one applicant
   Given I visit the Affordability page
@@ -26,6 +27,7 @@ Scenario: I recalculate
   And   I see "remaining money per month is £330.50"
   And   I see "Estimated fixed and spending commitments per month are: £1,500.00"
 
+@wip
 @with_and_without_javascript
 Scenario: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
