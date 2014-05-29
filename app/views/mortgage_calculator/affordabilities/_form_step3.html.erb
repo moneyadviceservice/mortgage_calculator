@@ -23,7 +23,6 @@
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <div>
       <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
-      <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
     </div>
   </div>
 
@@ -31,6 +30,7 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
+      <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
       <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
       <%= render "#{@affordability.risk_level}_budget_affect" %>
     </div>
