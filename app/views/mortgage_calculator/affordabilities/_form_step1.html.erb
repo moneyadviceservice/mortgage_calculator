@@ -5,88 +5,88 @@
 
   <div class="mortgagecalc__panel">
 
-  <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
-  <%= f.fields_for :people do |person| %>
-    <% count = @affordability.people.find_index(person.object) %>
+    <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
+    <%= f.fields_for :people do |person| %>
+      <% count = @affordability.people.find_index(person.object) %>
 
-    <% if count == 0 %>
-      <div class="form__item">
-        <input type="radio" ng-model="affordability.selectedOption" value="1" name='single_applicant'>
-        <%= f.errors_for person.object, :annual_income %>
-        <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
-        <%= person.text_field :annual_income,
-                              "class" => "form-control",
-                              "ng-model" => "affordability.earnings.person1.annual",
-                              "placeholder" => "Your yearly income",
-                              "autofocus" => "",
-                              "currency" => '',
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "value" => person.object.annual_income_formatted %>
+      <% if count == 0 %>
+        <div class="form__item">
+          <input type="radio" ng-model="affordability.selectedOption" value="1" name='single_applicant'>
+          <%= f.errors_for person.object, :annual_income %>
+          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.annual",
+                                "placeholder" => "Your yearly income",
+                                "autofocus" => "",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.annual_income_formatted %>
 
-        <%= f.errors_for person.object, :extra_income %>
-        <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
-        <%= person.text_field :extra_income,
-                              "class" => "form-control",
-                              "ng-model" => "affordability.earnings.person1.extra",
-                              "placeholder" => "Any extra income",
-                              "currency" => '',
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "value" => person.object.extra_income_formatted %>
-      </div>
-    <% else %>
-      <div class="form__item">
-        <input type="radio" ng-model="affordability.selectedOption" value="2" name='two_applicants'>
-        <%= f.errors_for person.object, :annual_income %>
-        <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
-        <%= person.text_field :annual_income,
-                              "class" => "form-control",
-                              "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
-                              "ng-model" => "affordability.earnings.person2.annual",
-                              "placeholder" => "Your yearly income",
-                              'ng-disabled' => "!isCheckboxSelected('2')",
-                              "currency" => '',
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "value" => person.object.annual_income_formatted %>
+          <%= f.errors_for person.object, :extra_income %>
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person1.extra",
+                                "placeholder" => "Any extra income",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.extra_income_formatted %>
+        </div>
+      <% else %>
+        <div class="form__item">
+          <input type="radio" ng-model="affordability.selectedOption" value="2" name='two_applicants'>
+          <%= f.errors_for person.object, :annual_income %>
+          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
+                                "ng-model" => "affordability.earnings.person2.annual",
+                                "placeholder" => "Your yearly income",
+                                'ng-disabled' => "!isCheckboxSelected('2')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.annual_income_formatted %>
 
-        <%= f.errors_for person.object, :extra_income %>
-        <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
-        <%= person.text_field :extra_income,
-                              "class" => "form-control",
-                              "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
-                              "ng-model" => "affordability.earnings.person2.extra",
-                              "placeholder" => "Any extra income",
-                              'ng-disabled' => "!isCheckboxSelected('2')",
-                              "currency" => '',
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "value" => person.object.extra_income_formatted %>
-      </div>
+          <%= f.errors_for person.object, :extra_income %>
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('2') }",
+                                "ng-model" => "affordability.earnings.person2.extra",
+                                "placeholder" => "Any extra income",
+                                'ng-disabled' => "!isCheckboxSelected('2')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.extra_income_formatted %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
 
-  <h3><%= I18n.t("affordability.titles.take_home") %></h3>
-  <%= f.fields_for :people do |person| %>
-    <% count = @affordability.people.find_index(person.object) %>
-    <% person.object_name = "affordability[people_attributes][#{count}]" %>
+    <h3><%= I18n.t("affordability.titles.take_home") %></h3>
+    <%= f.fields_for :people do |person| %>
+      <% count = @affordability.people.find_index(person.object) %>
+      <% person.object_name = "affordability[people_attributes][#{count}]" %>
 
-    <% if count == 0 %>
-          <div class="form_item">
-            <%= f.errors_for person.object, :monthly_net_income %>
-            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
-            <%= person.text_field :monthly_net_income,
-                                  "class" => "form-control",
-                                  "placeholder" => "Monthly Net Income",
-                                  "ng-model" => "affordability.earnings.person1.net_pay",
-                                  "currency" => '',
-                                  "data-a-sign" =>"£",
-                                  "data-m-dec" =>"0",
-                                  "value" => person.object.monthly_net_income_formatted %>
-          </div>
-    <% else %>
+      <% if count == 0 %>
+        <div class="form_item">
+          <%= f.errors_for person.object, :monthly_net_income %>
+          <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
+          <%= person.text_field :monthly_net_income,
+                                "class" => "form-control",
+                                "placeholder" => "Monthly Net Income",
+                                "ng-model" => "affordability.earnings.person1.net_pay",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.monthly_net_income_formatted %>
+        </div>
+      <% else %>
         <div class="form_item">
           <%= f.errors_for person.object, :monthly_net_income %>
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
@@ -101,9 +101,8 @@
                                 "data-m-dec" =>"0",
                                 "value" => person.object.monthly_net_income_formatted %>
         </div>
+      <% end %>
     <% end %>
-
-  <% end %>
 
   </div>
 
