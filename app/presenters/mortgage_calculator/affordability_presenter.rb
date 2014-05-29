@@ -24,6 +24,9 @@ module MortgageCalculator
     delegate :remaining, to: :model
     delegate :errors, to: :model
 
+    delegate :budget_outgoing, to: :model
+    delegate :budget_leftover, to: :model
+
     def self.i18n_scope
       "affordability.activemodel"
     end
@@ -46,6 +49,14 @@ module MortgageCalculator
 
     def monthly_debt
       number_to_currency model.monthly_debt, unit: nil
+    end
+
+    def budget_outgoing_formatted
+      number_to_currency model.budget_outgoing
+    end
+
+    def budget_leftover_formatted
+      number_to_currency model.budget_leftover
     end
 
     def self.model_name

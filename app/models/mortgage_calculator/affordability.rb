@@ -106,6 +106,14 @@ module MortgageCalculator
       super & outgoings.valid? & !(people.map(&:valid?).include?(false))
     end
 
+    def budget_outgoing
+      repayment.monthly_payment + fixed_costs + committed_costs
+    end
+
+    def budget_leftover
+      monthly_net_income - budget_outgoing
+    end
+
   private
 
     def lower_profit_multiplier

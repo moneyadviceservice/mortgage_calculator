@@ -1,20 +1,24 @@
 <p ng-hide="js" class="results">
   <%= t "affordability.budget.outgoing",
-         percent: number_to_percentage(@affordability.risk_percentage, precision: 0) %>
+         percent: number_to_percentage(@affordability.risk_percentage, precision: 0),
+         absolute: @affordability.budget_outgoing_formatted %>
 </p>
 
 <p ng-hide="js" class="results">
   <%= t "affordability.budget.leftover",
-         percent: number_to_percentage(@affordability.inverse_risk_percentage, precision: 0) %>
+         percent: number_to_percentage(@affordability.inverse_risk_percentage, precision: 0),
+         absolute: @affordability.budget_leftover_formatted %>
 </p>
 
 <p class="rendered-from-js results">
   <%= t "affordability.budget.outgoing",
-         percent: "" %>
+         percent: "",
+         absolute: "" %>
 </p>
 
 <p class="rendered-from-js results">
   <%= t "affordability.budget.leftover",
-         percent: "" %>
+         percent: "",
+         absolute: "" %>
 </p>
 

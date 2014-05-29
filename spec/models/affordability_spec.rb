@@ -259,5 +259,17 @@ module MortgageCalculator
         end
       end
     end
+
+    describe :budget_outgoing do
+      it 'returns mortgage repayment + fix + committed costs' do
+        expect(subject.budget_outgoing.to_i).to eql(2901)
+      end
+    end
+
+    describe :budget_leftover do
+      it 'returns net monthly - budget_outgoing' do
+        expect(subject.budget_leftover.to_i).to eql(3098)
+      end
+    end
   end
 end
