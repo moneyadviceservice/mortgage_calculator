@@ -1,12 +1,24 @@
 <%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two' } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s, 'ng-model' => "affordability", 'ng-init' => "affordability.person#{index + 1}.annual='#{person.annual_income.to_s}'".html_safe %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s, 'ng-model' => "affordability", 'ng-init' => "affordability.person#{index + 1}.extra='#{person.extra_income.to_s}'".html_safe %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s, 'ng-model' => "affordability", 'ng-init' => "affordability.person#{index + 1}.net_pay='#{person.monthly_net_income.to_s}'".html_safe %>
   <% end %>
 
   <% @affordability.outgoings.serializable_hash.each do |k,v| %>
-    <%= hidden_field_tag "affordability[outgoings][#{k}]", v %>
+    <%
+    model_cat = "fixed"
+
+    if k == "credit_repayments" || k == "child_maintenance"
+      model_cat = "committed"
+    end
+
+    if k == "entertainment" || k == "holidays" || k == "food"
+      model_cat = "lifestyle"
+    end
+    %>
+
+    <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability", 'ng-init' => "affordability.outgoings.#{model_cat}.#{k}='#{v.to_s}'".html_safe %>
   <% end %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
@@ -92,8 +104,7 @@
     <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js'><%= t "affordability.back" %></a></p>
 
     <p><%= link_to I18n.t("affordability.next"), next_steps_affordability_path,
-                   class: "button button--primary mortgagecalc__submit",
-                   'wz-next' => '' %></p>
+                   class: "button button--primary mortgagecalc__submit" %></p>
   </div>
 <% end %>
 
