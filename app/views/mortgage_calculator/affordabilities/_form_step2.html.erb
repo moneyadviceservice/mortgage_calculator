@@ -1,8 +1,8 @@
 <%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form' } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s %>
-    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s, 'ng-model' => "affordability.person#{index + 1}.annual", 'ng-initial' => '' %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s, 'ng-model' => "affordability.person#{index + 1}.extra", 'ng-initial' => '' %>
+    <%= hidden_field_tag "affordability[people_attributes][#{index}][monthly_net_income]", person.monthly_net_income.to_s, 'ng-model' => "affordability.person#{index + 1}.net_pay", 'ng-initial' => '' %>
   <% end %>
 
   <% f.validates @affordability, @affordability.outgoings %>
