@@ -13,6 +13,7 @@ en:
       attributes:
         mortgage_calculator/affordability:
           lifestyle_costs: "Your estimate lifestyle spend per month is:"
+          borrowing: "Borrowing"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card / loan payments"
           utilities: "Bills / insurance"
