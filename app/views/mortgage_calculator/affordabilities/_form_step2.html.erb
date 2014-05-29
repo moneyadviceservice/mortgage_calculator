@@ -8,7 +8,6 @@
   <% f.validates @affordability, @affordability.outgoings %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-
     <%= f.validation_summary %>
 
     <h3><%= I18n.t("affordability.titles.monthly_outgoings") %></h3>
@@ -23,7 +22,6 @@
   </div>
 
   <div class="mortgagecalc__panel">
-
     <div class="form_field">
       <%= outgoings.errors_for outgoings.object, :credit_repayments %>
       <%= outgoings.label :credit_repayments %>
@@ -36,7 +34,6 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.credit_repayments_formatted %>
     </div>
-
     <div class="form_field">
       <%= outgoings.errors_for outgoings.object, :child_maintenance %>
       <%= outgoings.label :child_maintenance %>
@@ -56,7 +53,6 @@
   </div>
 
   <div class="mortgagecalc__panel">
-
     <div class="form_field">
       <%= outgoings.errors_for outgoings.object, :childcare %>
       <%= outgoings.label :childcare %>
@@ -80,7 +76,6 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.travel_formatted %>
     </div>
-
     <div class="form_field">
       <%= outgoings.errors_for outgoings.object, :utilities %>
       <%= outgoings.label :utilities %>
@@ -104,7 +99,6 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.rent_and_mortgage_formatted %>
       </div>
-
     </div>
 
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
