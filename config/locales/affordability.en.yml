@@ -74,5 +74,6 @@ en:
     take_home:
       per_month_html: "Your take-home pay per month: %{take_home}"
     budget:
+      commitments_html: "Estimated fixed and spending commitments per month are: %{commitment}"
       outgoing: "Mortgage repayments and fixed costs per month: %{percent} of your monthly take-home."
       leftover: "What you will have left over: %{percent} of your monthly takehome"
