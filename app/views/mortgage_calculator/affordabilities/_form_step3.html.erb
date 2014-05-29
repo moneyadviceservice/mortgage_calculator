@@ -9,10 +9,6 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v %>
   <% end %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
-   <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
-  </div>
-
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
     <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
     <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
@@ -35,6 +31,7 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
+      <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
       <%= render "#{@affordability.risk_level}_budget_affect" %>
     </div>
 
