@@ -4,12 +4,12 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
     var affordability = {
       earnings: {
-        person1 : {
+        person0 : {
           annual: 0,
           extra: 0,
           net_pay: 0
         },
-        person2 : {
+        person1 : {
           annual: 0,
           extra: 0,
           net_pay: 0
@@ -32,7 +32,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
           food: 0
         }
       },
-      numberOfPeople        : [1, 2],
+      numberOfPeople        : [0, 1],
 
       lifestyleSpend: 0,
 
