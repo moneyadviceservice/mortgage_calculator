@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/bash
 
 set -e -x
 
@@ -15,4 +15,6 @@ bundle install
 bower install
 npm install
 
-bundle exec rake
+bundle exec rspec
+bundle exec cucumber
+bundle exec rake app:karma:run_once

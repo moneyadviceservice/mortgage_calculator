@@ -5,7 +5,7 @@ gemspec
 
 gem 'rails', '~>3.2.14'
 
-gem 'mas-development_dependencies'
+gem 'mas-development_dependencies', '~> 2.2'
 
 group :test do
   gem 'rspec'
