@@ -102,6 +102,10 @@ module MortgageCalculator
       !remaining_positive?
     end
 
+    def remaining_vector
+      remaining_positive? ? :positive : :negative
+    end
+
     def valid?
       super & outgoings.valid? & !(people.map(&:valid?).include?(false))
     end

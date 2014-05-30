@@ -271,5 +271,20 @@ module MortgageCalculator
         expect(subject.budget_leftover.to_i).to eql(3098)
       end
     end
+
+    describe :remaining_vector do
+      context 'when positive' do
+        it 'returns positive' do
+          expect(subject.remaining_vector).to eql(:positive)
+        end
+      end
+
+      context 'when negative' do
+        it 'returns negative' do
+          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          expect(subject.remaining_vector).to eql(:negative)
+        end
+      end
+    end
   end
 end
