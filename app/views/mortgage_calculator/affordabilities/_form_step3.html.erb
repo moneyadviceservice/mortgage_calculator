@@ -9,7 +9,7 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border" calculate>
     <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
     <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
   </div>
