@@ -23,7 +23,7 @@ module MortgageCalculator
     its(:interest_rate){ should == 3.5 }
 
     its(:monthly_payment){ should == "1,501.87" }
-    its(:total_interest){ should == "150,561.03" }
-    its(:total_payable){ should == "450,561.03" }
+    its(:total_interest){ should == "150,561.21" }
+    its(:total_payable){ should == "450,561.21" }
   end
 end
