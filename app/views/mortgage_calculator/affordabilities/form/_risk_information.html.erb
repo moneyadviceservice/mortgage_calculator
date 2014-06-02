@@ -17,8 +17,8 @@
 </p>
 
 <p class="rendered-from-js results">
-  <%= t "affordability.budget.leftover",
-         percent: "",
-         absolute: "" %>
+  <%= t "affordability.budget.leftover_html",
+         percent: "<strong> {{ affordability.percentageAfterRisk() }}% </strong>".html_safe,
+         absolute: "<strong>{{ affordability.amountAfterRisk() | customCurrency:'£' }} </strong>".html_safe %>
 </p>
 

@@ -27,7 +27,7 @@ Scenario: I recalculate
   And   I see "remaining money per month is £330.49"
   And   I see "Estimated fixed and spending commitments per month are: £1,500.00"
 
-
+@with_and_without_javascript
 Scenario Outline: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
 

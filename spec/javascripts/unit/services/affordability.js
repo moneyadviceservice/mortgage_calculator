@@ -135,6 +135,16 @@ describe('Service: Affordability', function() {
 
   });
 
+  describe('#percentageAfterRisk', function() {
+
+    it('returns the remaining percentage after the risk percentage', function() {
+      calculateRepayments();
+      expect(affordability.percentageAfterRisk()).toBe(43);
+    });
+
+  });
+
+
   describe('#riskLevel', function() {
 
 
@@ -163,6 +173,15 @@ describe('Service: Affordability', function() {
     it('returns an amount of the take home pay taken by the risk percentage', function() {
       calculateRepayments();
       expect(affordability.riskAmount()).toBe(2703.20);
+    });
+
+  });
+
+  describe('#amountAfterRisk', function() {
+
+    it('returns the remaining percentage after the risk percentage', function() {
+      calculateRepayments();
+      expect(affordability.amountAfterRisk()).toBe(2039.25);
     });
 
   });

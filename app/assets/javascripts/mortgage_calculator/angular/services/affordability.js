@@ -69,6 +69,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         }
       },
 
+      percentageAfterRisk: function() {
+        return 100 - this.riskPercentage();
+      },
+
       riskLevel: function() {
         if (this.riskPercentage() < 40) return 'low';
         if (this.riskPercentage() > 60) return 'high';
@@ -77,6 +81,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       riskAmount: function(increment) {
         return (this.riskPercentage(increment) / 100) * this.takeHomePay();
+      },
+
+      amountAfterRisk: function() {
+        return this.takeHomePay() - this.riskAmount();
       },
 
       calculateLifestyleSpend: function() {
