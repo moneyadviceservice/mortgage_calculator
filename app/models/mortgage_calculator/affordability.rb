@@ -118,6 +118,18 @@ module MortgageCalculator
       monthly_net_income - budget_outgoing
     end
 
+    def missing_lifestyle_costs_warning?
+      lifestyle_costs.zero?
+    end
+
+    def missing_fixed_and_committed_costs_warning?
+      fixed_costs.zero? && committed_costs.zero?
+    end
+
+    def only_rent_and_mortgage_warning?
+      ((outgoings.committed_costs + outgoings.fixed_costs) - outgoings.rent_and_mortgage).zero?
+    end
+
   private
 
     def lower_profit_multiplier

@@ -286,5 +286,53 @@ module MortgageCalculator
         end
       end
     end
+
+    describe 'warnings' do
+      context 'sum of lifestyle costs is zero' do
+        it "missing_lifestyle_costs_warning is true" do
+          subject.stub(:lifestyle_costs){ BigDecimal.new("0") }
+          expect(subject.missing_lifestyle_costs_warning?).to be_true
+        end
+      end
+
+      context 'sum of lifestyle costs is not zero' do
+        it "missing_lifestyle_costs_warning is false" do
+          subject.stub(:lifestyle_costs){ BigDecimal.new("1") }
+          expect(subject.missing_lifestyle_costs_warning?).to be_false
+        end
+      end
+
+      context 'sum of fixed and committed costs is zero' do
+        it "missing_fixed_and_committed_costs_warning returns true" do
+          subject.stub(:fixed_costs){ BigDecimal.new("0") }
+          subject.stub(:committed_costs){ BigDecimal.new("0") }
+          expect(subject.missing_fixed_and_committed_costs_warning?).to be_true
+        end
+      end
+
+      context 'sum of fixed and committed costs is not zero' do
+        it "missing_fixed_and_committed_costs_warning returns false" do
+          subject.stub(:fixed_costs){ BigDecimal.new("1") }
+          subject.stub(:committed_costs){ BigDecimal.new("0") }
+          expect(subject.missing_fixed_and_committed_costs_warning?).to be_false
+        end
+      end
+
+      context 'when only rent and mortgage present' do
+        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 0)) }
+
+        it "only_rent_and_mortgage_warning returns true" do
+          expect(subject.only_rent_and_mortgage_warning?).to be_true
+        end
+      end
+
+      context 'when not only rent and mortgage present' do
+        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 0, credit_repayments: 1)) }
+
+        it "only_rent_and_mortgage_warning returns false" do
+          expect(subject.only_rent_and_mortgage_warning?).to be_false
+        end
+      end
+    end
   end
 end
