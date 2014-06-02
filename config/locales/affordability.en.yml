@@ -85,3 +85,7 @@ en:
       negative:
         remaining: "At the moment, you don't have money left over at the end of each month"
         budget_planner: "Think ahead and use our Budget Planner in case you need to make changes to your spending in the future"
+    warnings:
+      missing_fixed_and_committed_costs: "You haven’t entered any amounts for fixed and committed costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
+      only_rent_and_mortgage: "We need more information from you. Please check that you have input all fixed and committed expenses on the previous page or your results on this page will be incorrect. Go back to do that now."
+      missing_lifestyle_costs: "You haven’t entered any amounts for living expenses on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
