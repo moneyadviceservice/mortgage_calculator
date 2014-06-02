@@ -7,28 +7,28 @@ describe('Service: Affordability', function() {
   var affordability,
     repayments,
     resetApplicant2Income = function() {
-      affordability.earnings.person2.annual = 0;
-      affordability.earnings.person2.extra = 0;
-      affordability.earnings.person2.net_pay = 0;
+      affordability.earnings.person1.annual = 0;
+      affordability.earnings.person1.extra = 0;
+      affordability.earnings.person1.net_pay = 0;
     },
     setIncome = function() {
-      affordability.earnings.person1.annual = 50000;
-      affordability.earnings.person1.extra = 3000;
-      affordability.earnings.person1.net_pay = 3011;
-      affordability.earnings.person2.annual = 30000;
-      affordability.earnings.person2.extra = 1000;
-      affordability.earnings.person2.net_pay = 1946;
+      affordability.earnings.person0.annual = 50000;
+      affordability.earnings.person0.extra = 3000;
+      affordability.earnings.person0.net_pay = 3011;
+      affordability.earnings.person1.annual = 30000;
+      affordability.earnings.person1.extra = 1000;
+      affordability.earnings.person1.net_pay = 1946;
     },
     setOutgoings = function() {
-      affordability.outgoings.committed.credit_repayments = 300;
-      affordability.outgoings.committed.childcare = 800;
-      affordability.outgoings.fixed.child_maintenance = 200;
-      affordability.outgoings.fixed.travel = 200;
-      affordability.outgoings.fixed.utilities = 300;
-      affordability.outgoings.fixed.rent_and_mortgage = 900;
-      affordability.outgoings.lifestyle.entertainment = 1000;
-      affordability.outgoings.lifestyle.holidays = 1000;
-      affordability.outgoings.lifestyle.food = 140;
+      affordability.outgoings.credit_repayments = 300;
+      affordability.outgoings.childcare = 800;
+      affordability.outgoings.child_maintenance = 200;
+      affordability.outgoings.travel = 200;
+      affordability.outgoings.utilities = 300;
+      affordability.outgoings.rent_and_mortgage = 900;
+      affordability.outgoings.entertainment = 1000;
+      affordability.outgoings.holidays = 1000;
+      affordability.outgoings.food = 140;
     },
     calculateRepayments = function() {
       repayments.propertyPrice = affordability.borrowing();
@@ -49,11 +49,11 @@ describe('Service: Affordability', function() {
 
     it('calculates the minimum amount a single applicant can borrow', function() {
       resetApplicant2Income();
-      expect(affordability.minimumBorrowing()).toBe(111440);
+      expect(affordability.minimumBorrowing()).toBe(131600);
     });
 
     it('calculates the minimum amount two applicants can borrow', function() {
-      expect(affordability.minimumBorrowing()).toBe(198240);
+      expect(affordability.minimumBorrowing()).toBe(218400);
     });
   });
 
@@ -61,18 +61,18 @@ describe('Service: Affordability', function() {
 
     it('calculates the maximum amount a single applicant can borrow', function() {
       resetApplicant2Income();
-      expect(affordability.maximumBorrowing()).toBe(167160);
+      expect(affordability.maximumBorrowing()).toBe(197400);
     });
 
     it('calculates the maximum amount two applicants can borrow', function() {
-      expect(affordability.maximumBorrowing()).toBe(297360);
+      expect(affordability.maximumBorrowing()).toBe(327600);
     });
   });
 
   describe('#borrowing', function() {
 
     it('calculates the median value between the minimum and maximum borrowing offered', function() {
-      expect(affordability.borrowing()).toBe(247800);
+      expect(affordability.borrowing()).toBe(273000);
     });
 
   });
@@ -81,7 +81,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the monthly repayments of the borrowing', function() {
       calculateRepayments();
-      expect(affordability.monthlyRepayment()).toBe(1448.61);
+      expect(affordability.monthlyRepayment()).toBe(1595.93);
     });
 
   });
@@ -97,7 +97,7 @@ describe('Service: Affordability', function() {
   describe('#committedCosts', function() {
 
     it('calculates the total committed costs of the applicant(s)', function() {
-      expect(affordability.committedCosts()).toBe(1100);
+      expect(affordability.committedCosts()).toBe(500);
     });
 
   });
@@ -114,7 +114,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
-      expect(affordability.remainingPerMonth()).toBe(117);
+      expect(affordability.remainingPerMonth()).toBe(1017);
     });
 
   });

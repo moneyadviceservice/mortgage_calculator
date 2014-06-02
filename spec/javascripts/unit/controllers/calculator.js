@@ -25,7 +25,7 @@ describe('Controller: CalculatorCtrl', function () {
   });
 
   it('sets the selected number of people to 1', function () {
-    expect(scope.affordability.selectedOption).toBe(1);
+    expect(scope.affordability.selectedOption).toBe(0);
   });
 
   it('should attach the StampDuty service', function () {
