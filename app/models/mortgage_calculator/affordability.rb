@@ -14,6 +14,8 @@ module MortgageCalculator
 
     currency_inputs :lifestyle_costs
 
+    validates :interest_rate, numericality: true
+
     def people_attributes=(attributes)
     end
 

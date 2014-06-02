@@ -86,7 +86,7 @@ module MortgageCalculator
     end
 
     def monthly_rate
-      DAYS_IN_A_MONTH * ((interest_rate / 100) / DAYS_IN_A_YEAR)
+      interest_rate / 100 / 12
     end
 
     def monthly_interest

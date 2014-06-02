@@ -17,7 +17,7 @@ Then(/^I see "(.*?)"$/) do |content|
 end
 
 When(/^I submit the details$/) do
-  @affordability.next.click
+  @affordability.nexts.first.click
 end
 
 Given(/^I submit the first step$/) do
@@ -83,5 +83,9 @@ end
 
 When(/^I recalculate$/) do
   @affordability.recalculate.click
+end
+
+Given(/^I enter (\w+) (\d+\.?\d*)$/) do |field, input|
+  @affordability.public_send(field).set input
 end
 
