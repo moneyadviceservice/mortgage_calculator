@@ -319,7 +319,7 @@ module MortgageCalculator
       end
 
       context 'when only rent and mortgage present' do
-        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 0)) }
+        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 1)) }
 
         it "only_rent_and_mortgage_warning returns true" do
           expect(subject.only_rent_and_mortgage_warning?).to be_true
@@ -327,7 +327,7 @@ module MortgageCalculator
       end
 
       context 'when not only rent and mortgage present' do
-        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 0, credit_repayments: 1)) }
+        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 1, utilities: 1)) }
 
         it "only_rent_and_mortgage_warning returns false" do
           expect(subject.only_rent_and_mortgage_warning?).to be_false

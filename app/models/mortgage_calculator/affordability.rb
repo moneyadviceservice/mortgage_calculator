@@ -127,7 +127,7 @@ module MortgageCalculator
     end
 
     def only_rent_and_mortgage_warning?
-      ((outgoings.committed_costs + outgoings.fixed_costs) - outgoings.rent_and_mortgage).zero?
+      outgoings.fixed_costs.zero? && !outgoings.rent_and_mortgage.zero?
     end
 
   private
