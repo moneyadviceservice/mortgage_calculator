@@ -58,8 +58,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.outgoings.childcare + this.outgoings.travel + this.outgoings.utilities;
       },
 
-      riskPercentage: function() {
-        var result = Math.round(( (this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
+      riskPercentage: function(increment) {
+        var result = Math.round(( (this.monthlyRepayment(increment) + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
             percentage = _.min([100, result]);
 
         if (isFinite(result)) {
@@ -75,8 +75,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return 'medium';
       },
 
-      riskAmount: function() {
-        return (this.riskPercentage() / 100) * this.takeHomePay();
+      riskAmount: function(increment) {
+        return (this.riskPercentage(increment) / 100) * this.takeHomePay();
       },
 
       calculateLifestyleSpend: function() {
@@ -84,7 +84,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       remainingPerMonth: function(increment) {
-        return (this.takeHomePay() - this.riskAmount())  - this.lifestyleSpend;
+        return (this.takeHomePay() - this.riskAmount(increment))  - this.lifestyleSpend;
       }
     };
 
