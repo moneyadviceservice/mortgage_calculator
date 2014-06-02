@@ -49,7 +49,7 @@ describe('Service: Affordability', function() {
   describe('#minimumBorrowing', function() {
 
     it('calculates the minimum amount a single applicant can borrow', function() {
-      resetApplicantIncome(2);
+      resetApplicantIncome(1);
       expect(affordability.minimumBorrowing()).toBe(101920);
     });
 
@@ -61,7 +61,7 @@ describe('Service: Affordability', function() {
   describe('#maximumBorrowing', function() {
 
     it('calculates the maximum amount a single applicant can borrow', function() {
-      resetApplicantIncome(2);
+      resetApplicantIncome(1);
       expect(affordability.maximumBorrowing()).toBe(152880);
     });
 
@@ -121,8 +121,8 @@ describe('Service: Affordability', function() {
     });
 
     it('returns 0 when divided by 0', function() {
+      resetApplicantIncome(0);
       resetApplicantIncome(1);
-      resetApplicantIncome(2);
       calculateRepayments();
       expect(affordability.riskPercentage()).toBe(0);
     });
@@ -139,8 +139,8 @@ describe('Service: Affordability', function() {
 
 
     it('returns low when risk is under 40%', function() {
-      affordability.outgoings.committed.credit_repayments = 0;
-      affordability.outgoings.fixed.travel = 0;
+      affordability.outgoings.credit_repayments = 0;
+      affordability.outgoings.travel = 0;
       calculateRepayments();
       expect(affordability.riskLevel()).toBe('low');
     });

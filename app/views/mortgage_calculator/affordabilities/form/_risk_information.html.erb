@@ -11,9 +11,9 @@
 </p>
 
 <p class="rendered-from-js results">
-  <%= t "affordability.budget.outgoing",
-         percent: "",
-         absolute: "" %>
+  <%= t "affordability.budget.outgoing_html",
+         percent: "<strong> {{ affordability.riskPercentage() }}% </strong>".html_safe,
+         absolute: "<strong>{{ affordability.riskAmount() | customCurrency:'£' }} </strong>".html_safe %>
 </p>
 
 <p class="rendered-from-js results">
