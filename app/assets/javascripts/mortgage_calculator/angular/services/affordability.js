@@ -80,11 +80,11 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       riskAmount: function(increment) {
-        return (this.riskPercentage(increment) / 100) * this.takeHomePay();
+        return Math.round( ((this.riskPercentage(increment) / 100) * this.takeHomePay()) * 100 ) / 100;
       },
 
       amountAfterRisk: function() {
-        return this.takeHomePay() - this.riskAmount();
+        return Math.round((this.takeHomePay() - this.riskAmount()) * 100 ) / 100;
       },
 
       calculateLifestyleSpend: function() {
@@ -92,7 +92,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       remainingPerMonth: function(increment) {
-        return (this.takeHomePay() - this.riskAmount(increment))  - this.lifestyleSpend;
+        return Math.round(( (this.takeHomePay() - this.riskAmount(increment))  - this.lifestyleSpend) * 100 ) / 100;
       }
     };
 
