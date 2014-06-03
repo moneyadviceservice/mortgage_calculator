@@ -20,7 +20,6 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     };
 
     $scope.calculateRepayments = function() {
-      console.log($scope.affordability.borrowing())
       Repayments.propertyPrice = $scope.affordability.borrowing();
     };
 
