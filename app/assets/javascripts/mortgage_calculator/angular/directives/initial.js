@@ -1,3 +1,5 @@
+'use strict';
+
 App.directive('ngInitial', function() {
   return {
     restrict: 'A',

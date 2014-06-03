@@ -1,3 +1,5 @@
+'use strict';
+
 App.directive('year', ['$filter', function($filter) {
   var linker = function(scope, element, attrs, ctrl) {
 

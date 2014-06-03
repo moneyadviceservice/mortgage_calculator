@@ -1,3 +1,5 @@
+'use strict';
+
 App.directive('currency', function() {
   var linker = function(scope, element, attrs, ngModel) {
     element.autoNumeric('init');
