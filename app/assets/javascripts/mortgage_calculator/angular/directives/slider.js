@@ -5,8 +5,12 @@ App.directive('uiSlider', function() {
 
     //Dynamically grab input id passed in from view
     var input = angular.element("input." + attrs.dynamicFor),
-      expression = {},
-      value;
+        expression = {},
+        value,
+        percentageForMin = attrs.percentageForMinimum,
+        percentageForMax = attrs.percentageForMaximum;
+
+    console.log(percentageForMin, percentageForMax);
 
     var gaRefinement = function(){
       window._gaq = window._gaq || [];
@@ -40,8 +44,8 @@ App.directive('uiSlider', function() {
     input.on('blur keyup', function() {
       value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, '')) || 0;
       element.slider({
-        min: value / 2,
-        max: value * 2,
+        min: (percentageForMin / 100) * value,
+        max: (percentageForMax / 100) * value,
         value: value,
         step: (value / 100) * 1
       });

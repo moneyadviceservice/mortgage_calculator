@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <div class="mortgagecalc__panel">
+  <div class="mortgagecalc__panel" calculate>
     <div>
       <p>
         <%= f.label :lifestyle_costs %>
@@ -70,7 +70,17 @@
                          "ng-model" => "affordability.lifestyleSpend",
                          "placeholder" => "Lifestyle Spend" %>
       </p>
-      <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="affordability.lifestyleSpend" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
+      <div class="slider"
+           ui-slider
+           dynamic-for='dynamic-slider-property'
+           percentage-for-minimum="20"
+           percentage-for-maximum="200"
+           ng-model="affordability.lifestyleSpend"
+           aria-labelledby="label_price"
+           analytics-category="Affordability Calculator"
+           analytics-action="Refinement"
+           analytics-label="Life Style Spend">
+      </div>
     </div>
   </div>
 
