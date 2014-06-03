@@ -18,7 +18,7 @@
                      "analytics-label" => 'Price'
                      %>
 
-    <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
+    <div class="slider price" ui-slider percentage-for-minimum="50" percentage-for-maximum="200" dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
   </div>
 
   <div class="form__item">
@@ -40,7 +40,7 @@
                      "analytics-label" => 'Deposit'
                      %>
 
-    <div class="slider deposit" ui-slider dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Deposit"></div>
+    <div class="slider deposit" ui-slider percentage-for-minimum="50" percentage-for-maximum="200" dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Deposit"></div>
   </div>
 
   <div class="form__item">
