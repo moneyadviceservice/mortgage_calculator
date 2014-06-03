@@ -23,6 +23,9 @@ module MortgageCalculator
     delegate :risk_level, to: :model
     delegate :remaining, to: :model
     delegate :errors, to: :model
+    delegate :missing_fixed_and_committed_costs_warning?, to: :model
+    delegate :only_rent_and_mortgage_warning?, to: :model
+    delegate :missing_lifestyle_costs_warning?, to: :model
 
     delegate :budget_outgoing, to: :model
     delegate :budget_leftover, to: :model
