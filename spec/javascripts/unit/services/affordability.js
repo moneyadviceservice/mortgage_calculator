@@ -172,7 +172,7 @@ describe('Service: Affordability', function() {
 
     it('returns an amount of the take home pay taken by the risk percentage', function() {
       calculateRepayments();
-      expect(affordability.riskAmount()).toBe(2703.20);
+      expect(affordability.riskAmount()).toBe(2685.89);
     });
 
   });
@@ -181,7 +181,7 @@ describe('Service: Affordability', function() {
 
     it('returns the remaining percentage after the risk percentage', function() {
       calculateRepayments();
-      expect(affordability.amountAfterRisk()).toBe(2039.25);
+      expect(affordability.amountAfterRisk()).toBe(2056.56);
     });
 
   });
@@ -200,7 +200,18 @@ describe('Service: Affordability', function() {
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
       calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
-      expect(affordability.remainingPerMonth()).toBe(1339.25);
+      expect(affordability.remainingPerMonth()).toBe(1356.56);
+    });
+
+  });
+
+  describe('#remainingBuffer', function() {
+
+    it('calculates the applicant(s) remaining buffer after a 2% increase', function() {
+      repayments.annualInterestRate = 7;
+      calculateRepayments();
+      affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
+      expect(affordability.remainingPerMonth()).toBe(1051.21);
     });
 
   });

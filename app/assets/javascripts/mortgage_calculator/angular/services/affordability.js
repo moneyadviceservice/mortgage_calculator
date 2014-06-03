@@ -79,8 +79,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return 'medium';
       },
 
-      riskAmount: function(increment) {
-        return Math.round( ((this.riskPercentage(increment) / 100) * this.takeHomePay()) * 100 ) / 100;
+      riskAmount: function() {
+        return Math.round((this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) * 100 ) / 100;
       },
 
       amountAfterRisk: function() {
@@ -91,8 +91,12 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
 
-      remainingPerMonth: function(increment) {
-        return Math.round(( (this.takeHomePay() - this.riskAmount(increment))  - this.lifestyleSpend) * 100 ) / 100;
+      remainingPerMonth: function() {
+        return Math.round(( (this.takeHomePay() - this.riskAmount())  - this.lifestyleSpend) * 100 ) / 100;
+      },
+
+      remainingBuffer: function() {
+        return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.lifestyleSpend;
       }
     };
 
