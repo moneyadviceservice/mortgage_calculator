@@ -34,7 +34,7 @@ Scenario Outline: There are two applicants with extra income and commited spend
   And I enter annual_income <annual_income>
   And I enter extra_income <extra_income>
   And I enter monthly_net_income <monthly_net_income>
-
+  And I click on second applicant
   And I enter person_two_annual_income <person_two_annual_income>
   And I enter person_two_extra_income <person_two_extra_income>
   And I enter person_two_monthly_net_income <person_two_monthly_net_income>
