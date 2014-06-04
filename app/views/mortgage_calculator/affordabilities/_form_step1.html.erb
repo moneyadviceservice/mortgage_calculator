@@ -2,8 +2,7 @@
   <% f.validates @affordability, @affordability.people.first, @affordability.people.last %>
 
   <div class="mortgagecalc__panel">
-
-  <%= f.validation_summary %>
+    <%= f.validation_summary %>
 
     <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
     <%= f.fields_for :people do |person| %>
@@ -35,47 +34,41 @@
                                 "value" => person.object.extra_income_formatted %>
         </div>
       <% else %>
-
-
         <div class="form__item">
           <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name="two_applicants" id="second_applicant">
           <label class="inline" for="second_applicant"><%= I18n.t("affordability.titles.second_applicant") %></label>
         </div>
 
         <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
-
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income do %>
             <%= I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
           <% end %>
 
-          <div>
-            <%= person.text_field :annual_income,
-                                  "class" => "form-control",
-                                  "ng-model" => "affordability.earnings.person2.annual",
-                                  "placeholder" => "Your yearly income",
-                                  "ng-disabled" => "!isCheckboxSelected('1')",
-                                  "currency" => '',
-                                  "data-a-sign" =>"£",
-                                  "data-m-dec" =>"0",
-                                  "value" => person.object.annual_income_formatted %>
+          <%= person.text_field :annual_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person2.annual",
+                                "placeholder" => "Your yearly income",
+                                "ng-disabled" => "!isCheckboxSelected('1')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.annual_income_formatted %>
 
-            <%= f.errors_for person.object, :extra_income %>
-            <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
-            <%= person.text_field :extra_income,
-                                  "class" => "form-control",
-                                  "ng-model" => "affordability.earnings.person2.extra",
-                                  "placeholder" => "Any extra income",
-                                  'ng-disabled' => "!isCheckboxSelected('1')",
-                                  "currency" => '',
-                                  "data-a-sign" =>"£",
-                                  "data-m-dec" =>"0",
-                                  "value" => person.object.extra_income_formatted %>
-          </div>
+          <%= f.errors_for person.object, :extra_income %>
+          <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
+          <%= person.text_field :extra_income,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.earnings.person2.extra",
+                                "placeholder" => "Any extra income",
+                                'ng-disabled' => "!isCheckboxSelected('1')",
+                                "currency" => '',
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "value" => person.object.extra_income_formatted %>
         </div>
       <% end %>
     <% end %>
-
 
     <h3><%= I18n.t("affordability.titles.take_home") %></h3>
     <%= f.fields_for :people do |person| %>
