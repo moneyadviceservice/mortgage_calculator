@@ -97,6 +97,10 @@
 .mortgagecalc__submit {
   float:right;
   margin-bottom: 24px;
+
+  &.mortgagecalc__submit--flow {
+    float: none;
+  }
 }
 
 .mortgagecalc__spread {
