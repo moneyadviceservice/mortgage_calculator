@@ -19,6 +19,6 @@
 
 <p class="rendered-from-js results">
   <%= t "affordability.interest_changer.remaining_html",
-         remaining: "<strong>{{ affordability.remainingPerMonth(2) | currency:'£' }}</strong>".html_safe %>
+         remaining: "<strong>{{ affordability.remainingBuffer() | currency:'£' }}</strong>".html_safe %>
 </p>
 

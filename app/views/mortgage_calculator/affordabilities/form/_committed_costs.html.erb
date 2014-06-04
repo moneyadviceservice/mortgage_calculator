@@ -5,6 +5,6 @@
 <% end %>
 
 <p class="rendered-from-js results">
-  <%= t "affordability.budget.commitments_html", commitment: "<strong>{{ affordability.committedCosts() | customCurrency:'£' }}</strong>".html_safe %>
+  <%= t "affordability.budget.commitments_html", commitment: "<strong>{{ affordability.committedCosts() + affordability.fixedCosts() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 

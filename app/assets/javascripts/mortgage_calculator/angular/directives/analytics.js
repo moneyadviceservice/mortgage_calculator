@@ -1,9 +1,11 @@
+'use strict';
+
 App.directive('analytics', function () {
   var linker = function (scope, element, attrs, ctrl) {
-    var type = attrs['analyticsOn'],
-        category = attrs['analyticsCategory'],
-        action = attrs['analyticsAction'],
-        label = attrs['analyticsLabel'];
+    var type = attrs.analyticsOn,
+        category = attrs.analyticsCategory,
+        action = attrs.analyticsAction,
+        label = attrs.analyticsLabel;
 
     element.on('click', function(){
       if (type == 'click'){

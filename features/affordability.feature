@@ -7,7 +7,7 @@ Scenario: Can view the Affordability Calculator
   Given I visit the Affordability page
   Then  I should see the Affordability title
 
-@wip
+
 @with_and_without_javascript
 Scenario: Affordability for one applicant
   Given I visit the Affordability page
@@ -27,13 +27,14 @@ Scenario: I recalculate
   And   I see "remaining money per month is £330.49"
   And   I see "Estimated fixed and spending commitments per month are: £1,500.00"
 
+@with_and_without_javascript
 Scenario Outline: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
 
   And I enter annual_income <annual_income>
   And I enter extra_income <extra_income>
   And I enter monthly_net_income <monthly_net_income>
-
+  And I click on second applicant
   And I enter person_two_annual_income <person_two_annual_income>
   And I enter person_two_extra_income <person_two_extra_income>
   And I enter person_two_monthly_net_income <person_two_monthly_net_income>

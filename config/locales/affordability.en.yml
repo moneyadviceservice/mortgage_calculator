@@ -78,8 +78,8 @@ en:
       per_month_html: "Your take-home pay per month: %{take_home}"
     budget:
       commitments_html: "Estimated fixed and spending commitments per month are: %{commitment}"
-      outgoing: "Mortgage repayments and fixed costs per month: %{percent} of your monthly take-home (%{absolute})"
-      leftover: "What you will have left over: %{percent} of your monthly takehome (%{absolute})"
+      outgoing_html: "Mortgage repayments and fixed costs per month: %{percent} of your monthly take-home (%{absolute})"
+      leftover_html: "What you will have left over: %{percent} of your monthly takehome (%{absolute})"
       positive:
         remaining: "At the moment, you have money left over at the end of each month"
         budget_planner: "Think ahead and use our Budget Planner in case you need to make changes to your spending in the future"

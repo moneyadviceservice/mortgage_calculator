@@ -89,3 +89,7 @@ Given(/^I enter (\w+) (\d+\.?\d*)$/) do |field, input|
   @affordability.public_send(field).set input
 end
 
+Given(/^I click on second applicant$/) do
+  choose('two_applicants') unless js_disabled?
+end
+

@@ -1,6 +1,8 @@
+'use strict';
+
 App.directive('affectsHeight', ['iframeHelpers', function(iframeHelpers) {
   var linker = function (scope, element, attrs, ctrl) {
-    element.on(attrs['affectsHeight'], function(){
+    element.on(attrs.affectsHeight, function(){
       iframeHelpers.resizeIframe();
     });
   };

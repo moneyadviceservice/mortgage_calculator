@@ -54,16 +54,49 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.outgoings.credit_repayments + this.outgoings.child_maintenance;
       },
 
-      calculateLifestyleSpend: function() {
-        return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
-      },
-
       fixedCosts: function() {
         return this.outgoings.childcare + this.outgoings.travel + this.outgoings.utilities;
       },
 
-      remainingPerMonth: function(increment) {
-        return this.takeHomePay() - this.monthlyRepayment(increment) - (this.committedCosts() + this.fixedCosts()) - this.lifestyleSpend;
+      riskPercentage: function(increment) {
+        var result = Math.round(( (this.monthlyRepayment(increment) + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
+            percentage = _.min([100, result]);
+
+        if (isFinite(result)) {
+          return percentage;
+        } else {
+          return 0;
+        }
+      },
+
+      percentageAfterRisk: function() {
+        return 100 - this.riskPercentage();
+      },
+
+      riskLevel: function() {
+        if (this.riskPercentage() < 40) return 'low';
+        if (this.riskPercentage() > 60) return 'high';
+        return 'medium';
+      },
+
+      riskAmount: function() {
+        return Math.round((this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) * 100 ) / 100;
+      },
+
+      amountAfterRisk: function() {
+        return Math.round((this.takeHomePay() - this.riskAmount()) * 100 ) / 100;
+      },
+
+      calculateLifestyleSpend: function() {
+        return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
+      },
+
+      remainingPerMonth: function() {
+        return Math.round(( (this.takeHomePay() - this.riskAmount())  - this.lifestyleSpend) * 100 ) / 100;
+      },
+
+      remainingBuffer: function() {
+        return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.lifestyleSpend;
       }
     };
 
@@ -76,14 +109,6 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         var annual = person.annual || 0,
             extra  = person.extra  || 0;
         return memo + annual + extra;
-      }, 0);
-      return sum;
-    };
-
-    var _sumOf = function(costs) {
-      var sum = _.reduce(costs, function(memo, cost){
-        cost = cost || 0;
-        return memo + cost;
       }, 0);
       return sum;
     };
