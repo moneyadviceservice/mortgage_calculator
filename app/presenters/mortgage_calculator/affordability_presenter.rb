@@ -12,6 +12,8 @@ module MortgageCalculator
     delegate :outgoings, to: :model
     delegate :repayment, to: :model
     delegate :valid?, to: :model
+    delegate :valid_for_step2?, to: :model
+    delegate :valid_for_step3?, to: :model
     delegate :monthly_net_income, to: :model
     delegate :can_borrow_from, to: :model
     delegate :can_borrow_upto, to: :model

@@ -12,9 +12,8 @@ module MortgageCalculator
     def step_2
       @affordability = AffordabilityPresenter.new(affordability_model)
 
-      unless @affordability.valid?
-        flash[:params] = {}
-        flash[:params][:affordability] = params[:affordability]
+      unless @affordability.valid_for_step2?
+        persist_affordability_params_to_flash
         redirect_to step_1_affordability_path
       end
     end
@@ -22,10 +21,11 @@ module MortgageCalculator
     def step_3
       @affordability = AffordabilityPresenter.new(affordability_model)
 
-      if @affordability.valid?
+      if @affordability.valid_for_step3?
         adjust_interest_rate
       else
-        render :step_2
+        persist_affordability_params_to_flash
+        redirect_to step_2_affordability_path
       end
     end
 
@@ -41,6 +41,11 @@ module MortgageCalculator
       def affordability_params
         flash[:params] ||= {}
         params[:affordability] || flash[:params][:affordability]
+      end
+
+      def persist_affordability_params_to_flash
+        flash[:params] = {}
+        flash[:params][:affordability] = params[:affordability]
       end
 
       def affordability_model
