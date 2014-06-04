@@ -35,7 +35,7 @@
                                 "value" => person.object.extra_income_formatted %>
         </div>
       <% else %>
-        <div class="form__item">
+        <div class="form__item" ng-class="{ 'is-disabled' : !isCheckboxSelected('1') }">
 
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income do |l| %>
@@ -44,10 +44,9 @@
           <% end %>
           <%= person.text_field :annual_income,
                                 "class" => "form-control",
-                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('1') }",
                                 "ng-model" => "affordability.earnings.person2.annual",
                                 "placeholder" => "Your yearly income",
-                                'ng-disabled' => "!isCheckboxSelected('1')",
+                                "ng-disabled" => "!isCheckboxSelected('1')",
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
@@ -57,7 +56,6 @@
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
           <%= person.text_field :extra_income,
                                 "class" => "form-control",
-                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('1') }",
                                 "ng-model" => "affordability.earnings.person2.extra",
                                 "placeholder" => "Any extra income",
                                 'ng-disabled' => "!isCheckboxSelected('1')",
@@ -89,12 +87,11 @@
                                 "value" => person.object.monthly_net_income_formatted %>
         </div>
       <% else %>
-        <div class="form__item">
+        <div class="form__item" ng-class="{ 'is-disabled' : !isCheckboxSelected('1') }">
           <%= f.errors_for person.object, :monthly_net_income %>
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
           <%= person.text_field :monthly_net_income,
                                 "class" => "form-control",
-                                "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('1') }",
                                 "placeholder" => "Monthly Net Income",
                                 'ng-disabled' => "!isCheckboxSelected('1')",
                                 "ng-model" => "affordability.earnings.person2.net_pay",
