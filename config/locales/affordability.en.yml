@@ -48,6 +48,7 @@ en:
       estimated_lifestyle: "Estimated monthly living costs"
       how_affect_budget: "How will this effect my budget"
       can_afford: "Can you afford this?"
+      second_applicant: "Is there a second applicant?"
     input_page:
       submit: "Find out how much I can borrow"
       monthly_outgoings_descriptions: "Use this section to get a basic idea of how your monthly budget adds up, and how affordable your monthly mortgage payments will be."
