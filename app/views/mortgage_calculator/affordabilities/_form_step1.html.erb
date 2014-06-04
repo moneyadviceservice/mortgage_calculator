@@ -11,7 +11,6 @@
 
       <% if count == 0 %>
         <div class="form__item">
-          <input type="radio" ng-model="affordability.selectedOption" value="0" name='single_applicant'>
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
           <%= person.text_field :annual_income,
@@ -37,9 +36,12 @@
         </div>
       <% else %>
         <div class="form__item">
-          <input type="radio" ng-model="affordability.selectedOption" value="1" name='two_applicants'>
+
           <%= f.errors_for person.object, :annual_income %>
-          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <%= person.label :annual_income do |l| %>
+            <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name='two_applicants'>
+            <%= I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <% end %>
           <%= person.text_field :annual_income,
                                 "class" => "form-control",
                                 "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('1') }",
@@ -74,7 +76,7 @@
       <% person.object_name = "affordability[people_attributes][#{count}]" %>
 
       <% if count == 0 %>
-        <div class="form_item">
+        <div class="form__item">
           <%= f.errors_for person.object, :monthly_net_income %>
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
           <%= person.text_field :monthly_net_income,
@@ -87,7 +89,7 @@
                                 "value" => person.object.monthly_net_income_formatted %>
         </div>
       <% else %>
-        <div class="form_item">
+        <div class="form__item">
           <%= f.errors_for person.object, :monthly_net_income %>
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
           <%= person.text_field :monthly_net_income,
@@ -106,7 +108,10 @@
 
   </div>
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <%= f.submit I18n.t("affordability.input_page.submit"),
+
+    <div class="form__item">
+      <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit" %>
+   </div>
   </div>
 <% end %>
