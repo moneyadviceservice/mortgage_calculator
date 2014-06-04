@@ -7,6 +7,8 @@ module MortgageCalculator
     end
 
     def step_2
+      return redirect_to_step1 unless request.post?
+
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       unless @affordability.valid?
@@ -15,6 +17,8 @@ module MortgageCalculator
     end
 
     def step_3
+      return redirect_to_step1 unless request.post?
+
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       if @affordability.valid?
@@ -32,6 +36,10 @@ module MortgageCalculator
     end
 
     private
+
+      def redirect_to_step1
+        redirect_to step_1_affordability_path
+      end
 
       def affordability_model
         Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)

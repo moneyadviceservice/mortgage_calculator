@@ -24,6 +24,13 @@ module MortgageCalculator
     end
 
     describe :step_2 do
+      describe 'get request' do
+        it 'redirects back to step 1' do
+          get :step_2
+          expect(response).to redirect_to(step_1_affordability_path)
+        end
+      end
+
       context "when there is a validation error" do
         render_views
 
@@ -44,6 +51,13 @@ module MortgageCalculator
     end
 
     describe :step_3 do
+      describe 'get request' do
+        it 'redirects back to step 1' do
+          get :step_3
+          expect(response).to redirect_to(step_1_affordability_path)
+        end
+      end
+
       it 'renders the step_3 template' do
         post :step_3, affordability: {
                         people_attributes: {
