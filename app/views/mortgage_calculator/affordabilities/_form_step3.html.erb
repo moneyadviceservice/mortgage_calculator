@@ -114,11 +114,9 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-
-    <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js'><%= t "affordability.back" %></a></p>
-
-    <p><%= link_to I18n.t("affordability.next"), next_steps_affordability_path,
-                   class: "button button--primary mortgagecalc__submit" %></p>
+    <p>
+      <a href="javascript:window.history.go(-1);" class='button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js'><%= t "affordability.back" %></a>
+    </p>
   </div>
 <% end %>
 
