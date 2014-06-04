@@ -37,8 +37,8 @@ module MortgageCalculator
                         }
         end
 
-        it "renders the error message" do
-          expect(response.body).to have_content "Your monthly take-home pay is higher than your annual income"
+        it "redirect to step_1" do
+          expect(response.body).to redirect_to(step_1_affordability_path)
         end
       end
     end
