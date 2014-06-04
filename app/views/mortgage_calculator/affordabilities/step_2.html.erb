@@ -1,13 +1,14 @@
-<%= render 'header' %>
-
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container mortgagecalc__container--affordability">
+  <%= render 'header' %>
+
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">
       <%= render 'form_step2' %>
     </div>
   </div>
+
+  <%= render 'caveat' %>
 </div>
 
-<%= render 'caveat' %>
 <%= render 'feedback' %>
 
