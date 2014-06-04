@@ -1,12 +1,5 @@
 .form__item {
   margin: $baseline-unit*3 0 0;
-
-  &.is-disabled {
-    label,
-    input[type="text"] {
-      opacity: 0.6;
-    }
-  }
 }
 
 label {
@@ -15,6 +8,10 @@ label {
   font-size:18px;
   color: $color-grey-primary;
   margin-bottom: $baseline-unit;
+
+  &.label--inline {
+    display: inline;
+  }
 }
 
 .field_with_errors {
