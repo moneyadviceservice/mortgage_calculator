@@ -8,8 +8,8 @@ App.directive('uiSlider', function() {
     var input = angular.element('input.' + attrs.dynamicFor),
         expression = {},
         value,
-        percentageForMin = attrs.percentageForMinimum,
-        percentageForMax = attrs.percentageForMaximum;
+        percentageForMin = attrs.percentageForMinimum || 50,
+        percentageForMax = attrs.percentageForMaximum || 200;
 
     //Fire GA Events
     var gaRefinement = function(){
