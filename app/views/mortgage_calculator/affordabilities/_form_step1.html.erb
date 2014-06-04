@@ -36,9 +36,12 @@
         </div>
       <% else %>
         <div class="form__item">
-          <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name='two_applicants'>
+
           <%= f.errors_for person.object, :annual_income %>
-          <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <%= person.label :annual_income do |l| %>
+            <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name='two_applicants'>
+            <%= I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
+          <% end %>
           <%= person.text_field :annual_income,
                                 "class" => "form-control",
                                 "ng-class" => "{ 'is-disabled' : !isCheckboxSelected('1') }",
