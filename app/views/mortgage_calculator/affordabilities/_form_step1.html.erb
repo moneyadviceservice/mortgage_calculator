@@ -7,9 +7,10 @@
 
     <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
     <%= f.fields_for :people do |person| %>
-      <% count = @affordability.people.find_index(person.object) %>
+      <% index = @affordability.people.find_index(person.object) %>
 
-      <% if count == 0 %>
+      <%# render the first applicant differently to the additional applicants %>
+      <% if index == 0 %>
         <div class="form__item">
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
@@ -70,10 +71,11 @@
 
     <h3><%= I18n.t("affordability.titles.take_home") %></h3>
     <%= f.fields_for :people do |person| %>
-      <% count = @affordability.people.find_index(person.object) %>
-      <% person.object_name = "affordability[people_attributes][#{count}]" %>
+      <% index = @affordability.people.find_index(person.object) %>
+      <% person.object_name = "affordability[people_attributes][#{index}]" %>
 
-      <% if count == 0 %>
+      <%# render the first applicant differently to the additional applicants %>
+      <% if index == 0 %>
         <div class="form__item">
           <%= f.errors_for person.object, :monthly_net_income %>
           <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
