@@ -108,6 +108,16 @@ module MortgageCalculator
       remaining_positive? ? :positive : :negative
     end
 
+    def valid_for_step2?
+      valid?
+      errors[:base].empty? & !(people.map(&:valid?).include?(false))
+    end
+
+    def valid_for_step3?
+      valid?
+      errors[:base].empty? & outgoings.valid?
+    end
+
     def valid?
       super & outgoings.valid? & !(people.map(&:valid?).include?(false))
     end

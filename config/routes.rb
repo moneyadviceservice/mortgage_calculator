@@ -36,8 +36,8 @@ MortgageCalculator::Engine.routes.draw do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
-        post 'step_2', path: "step-2"
-        post 'step_3', path: "step-3"
+        match 'step_2', path: "step-2"
+        match 'step_3', path: "step-3"
         get 'next_steps'
       end
     end
