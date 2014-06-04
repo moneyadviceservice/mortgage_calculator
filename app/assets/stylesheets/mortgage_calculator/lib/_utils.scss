@@ -1,6 +1,5 @@
 $responsive: true !default;
 
-// TEMPORARY FIX TO ALIGN LAYOUTS
-.cf {
-  clear: both;
+.is-hidden {
+  display:none;
 }

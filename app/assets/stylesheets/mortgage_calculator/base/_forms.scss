@@ -1,16 +1,5 @@
 .form__item {
   margin: $baseline-unit*3 0 0;
-
-  &.is-disabled {
-    label,
-    input[type="text"] {
-      opacity: 0.6;
-    }
-  }
-}
-
-.is-hidden {
-  display:none;
 }
 
 label {
@@ -20,7 +9,7 @@ label {
   color: $color-grey-primary;
   margin-bottom: $baseline-unit;
 
-  &.inline {
+  &.label--inline {
     display: inline;
   }
 }

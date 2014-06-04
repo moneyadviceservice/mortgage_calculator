@@ -36,7 +36,7 @@
       <% else %>
         <div class="form__item">
           <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name="two_applicants" id="second_applicant">
-          <label class="inline" for="second_applicant"><%= I18n.t("affordability.titles.second_applicant") %></label>
+          <label class="label--inline" for="second_applicant"><%= I18n.t("affordability.titles.second_applicant") %></label>
         </div>
 
         <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
