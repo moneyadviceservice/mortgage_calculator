@@ -3,6 +3,9 @@ module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def step_1
       @affordability = AffordabilityPresenter.new(affordability_model)
+
+      @affordability.valid? if affordability_params
+
       adjust_interest_rate
     end
 
@@ -10,7 +13,9 @@ module MortgageCalculator
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       unless @affordability.valid?
-        render :step_1
+        flash[:params] = {}
+        flash[:params][:affordability] = params[:affordability]
+        redirect_to step_1_affordability_path
       end
     end
 
@@ -33,6 +38,11 @@ module MortgageCalculator
 
     private
 
+      def affordability_params
+        flash[:params] ||= {}
+        params[:affordability] || flash[:params][:affordability]
+      end
+
       def affordability_model
         Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)
       end
@@ -46,24 +56,24 @@ module MortgageCalculator
       end
 
       def people_models
-        return params[:affordability][:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))} if params[:affordability]
+        return affordability_params[:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))} if affordability_params
         return [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
       end
 
       def outgoings_params
-        params[:affordability][:outgoings] if params[:affordability]
+        affordability_params[:outgoings] if affordability_params
       end
 
       def borrowing_params
-        params[:affordability][:borrowing] if params[:affordability]
+        affordability_params[:borrowing] if affordability_params
       end
 
       def lifestyle_params
-        params[:affordability][:lifestyle_costs] if params[:affordability]
+        affordability_params[:lifestyle_costs] if affordability_params
       end
 
       def interest_rate_params
-        params[:affordability][:interest_rate] if params[:affordability]
+        affordability_params[:interest_rate] if affordability_params
       end
 
       def adjust_interest_rate
