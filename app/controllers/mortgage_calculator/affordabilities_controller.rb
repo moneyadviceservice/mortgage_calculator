@@ -56,7 +56,12 @@ module MortgageCalculator
       end
 
       def people_models
-        return affordability_params[:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))} if affordability_params
+        if affordability_params
+          array =  affordability_params[:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))}
+          array << PersonPresenter.new(Person.new) if array.size == 1
+          return array
+        end
+
         return [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
       end
 
