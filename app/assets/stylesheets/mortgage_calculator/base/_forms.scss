@@ -1,10 +1,13 @@
+.form__item {
+  margin: $baseline-unit*3 0 0;
+}
+
 label {
   display: block;
-  position: relative;
   font-weight: 500;
   font-size:18px;
-  margin: 18px 0 6px;
   color: $color-grey-primary;
+  margin-bottom: $baseline-unit;
 }
 
 .field_with_errors {

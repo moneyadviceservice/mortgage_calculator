@@ -22,7 +22,7 @@
   </div>
 
   <div class="mortgagecalc__panel">
-    <div class="form_field">
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :credit_repayments %>
       <%= outgoings.label :credit_repayments %>
       <%= outgoings.text_field :credit_repayments,
@@ -34,7 +34,7 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.credit_repayments_formatted %>
     </div>
-    <div class="form_field">
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :child_maintenance %>
       <%= outgoings.label :child_maintenance %>
       <%= outgoings.text_field :child_maintenance,
@@ -53,7 +53,7 @@
   </div>
 
   <div class="mortgagecalc__panel">
-    <div class="form_field">
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :childcare %>
       <%= outgoings.label :childcare %>
       <%= outgoings.text_field :childcare,
@@ -76,7 +76,7 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.travel_formatted %>
     </div>
-    <div class="form_field">
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :utilities %>
       <%= outgoings.label :utilities %>
       <%= outgoings.text_field :utilities,
@@ -107,7 +107,7 @@
     </div>
 
     <div class="mortgagecalc__panel">
-      <div class="form_field">
+      <div class="form__item">
         <%= outgoings.errors_for outgoings.object, :entertainment %>
         <%= outgoings.label :entertainment %>
         <%= outgoings.text_field :entertainment,
@@ -130,7 +130,7 @@
                               "data-m-dec" =>"0",
                               "value" => outgoings.object.holidays_formatted %>
       </div>
-      <div class="form_field">
+      <div class="form__item">
         <%= outgoings.errors_for outgoings.object, :food %>
         <%= outgoings.label :food %>
         <%= outgoings.text_field :food,
@@ -146,7 +146,9 @@
   <% end %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <%= f.submit I18n.t("affordability.input_page.submit"),
+    <div class="form__item form__item--spaced">
+      <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit" %>
+    </div>
   </div>
 <% end %>
