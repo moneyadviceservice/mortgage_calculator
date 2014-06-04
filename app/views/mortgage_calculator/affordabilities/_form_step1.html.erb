@@ -11,7 +11,6 @@
 
       <% if count == 0 %>
         <div class="form__item">
-          <input type="radio" ng-model="affordability.selectedOption" value="0" name='single_applicant'>
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
           <%= person.text_field :annual_income,
@@ -37,7 +36,7 @@
         </div>
       <% else %>
         <div class="form__item">
-          <input type="radio" ng-model="affordability.selectedOption" value="1" name='two_applicants'>
+          <input type="checkbox" ng-model="affordability.selectedOption" ng-true-value="1" ng-false-value="0" value="1" name='two_applicants'>
           <%= f.errors_for person.object, :annual_income %>
           <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
           <%= person.text_field :annual_income,
