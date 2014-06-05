@@ -9,7 +9,13 @@ App.directive('uiSlider', function() {
         expression = {},
         value,
         percentageForMin = attrs.percentageForMinimum || 50,
-        percentageForMax = attrs.percentageForMaximum || 200;
+        percentageForMax = attrs.percentageForMaximum || 200,
+        labelFollower = attrs.labelFollower || false,
+        $labelFollower;
+
+    if (labelFollower) {
+      $labelFollower = $(labelFollower);
+    }
 
     //Fire GA Events
     var gaRefinement = function(){
@@ -39,6 +45,16 @@ App.directive('uiSlider', function() {
               scope.value = ui.value;
               gaRefinement();
           });
+
+          // move the job
+          if (labelFollower) {
+            var width = $labelFollower.width();
+            var handleLeft = element.find('.ui-slider-handle').css('left');
+
+            $labelFollower.css({
+              left: handleLeft
+            });
+          }
       }
     };
 
@@ -90,6 +106,10 @@ App.directive('uiSlider', function() {
         step: (value / 100) * 1
       });
     });
+
+    if (labelFollower) {
+      $labelFollower = $labelFollower.appendTo(element);
+    }
   };
 
   var controller = function($scope) {};

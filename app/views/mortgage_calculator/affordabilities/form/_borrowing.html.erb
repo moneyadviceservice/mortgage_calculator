@@ -4,11 +4,11 @@
   </p>
 <% end %>
 
-<p class="rendered-from-js results dynamic-slider-property" id="borrowing-amount">
+<label class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider">
   {{ repayments.propertyPrice | customCurrency:"£"}}
-</p>
+</label>
 
-<div class="slider" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="borrowingStepValue" ng-model="repayments.propertyPrice" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing"></div>
+<div class="slider slider--with-follower-top" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="borrowingStepValue" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="borrowing-amount-slider"></div>
 
 <p class="rendered-from-js results">
   {{ affordability.minimumBorrowing() | customCurrency:"£"}}

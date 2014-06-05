@@ -401,3 +401,15 @@
   background:#d6d6d6;
   left:0;
 }
+
+.ui-slider .label-follower {
+  position: relative;
+
+  &.label-follower--top {
+    margin-top: -$baseline-unit*8;
+  }
+}
+
+.slider--with-follower-top {
+  margin-top: $baseline-unit*10;
+}
