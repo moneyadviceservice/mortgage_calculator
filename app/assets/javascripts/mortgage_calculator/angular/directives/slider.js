@@ -49,10 +49,11 @@ App.directive('uiSlider', function() {
           // move the job
           if (labelFollower) {
             var width = $labelFollower.width();
-            var handleLeft = element.find('.ui-slider-handle').css('left');
+            var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
 
             $labelFollower.css({
-              left: handleLeft
+              left: handleLeft,
+              marginLeft: '-' + (width / 2) + 'px'
             });
           }
       }

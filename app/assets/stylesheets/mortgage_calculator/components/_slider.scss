@@ -404,9 +404,10 @@
 
 .ui-slider .label-follower {
   position: relative;
+  display: inline-block;
 
   &.label-follower--top {
-    margin-top: -$baseline-unit*8;
+    top: -$baseline-unit*8;
   }
 }
 
