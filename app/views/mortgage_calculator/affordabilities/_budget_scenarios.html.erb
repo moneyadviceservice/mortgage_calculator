@@ -1,0 +1,22 @@
+
+
+<div ng-hide="js" class="results">
+  <%= render "#{@affordability.risk_level}_budget_affect" %>
+</div>
+
+<div class="rendered-from-js results">
+
+  <div ng-show="{{affordability.riskLevel() === 'high'}}">
+    <%= render "high_budget_affect" %>
+  </div>
+
+  <div ng-show="{{affordability.riskLevel() === 'medium'}}">
+    <%= render "medium_budget_affect" %>
+  </div>
+
+    <div ng-show="{{affordability.riskLevel() === 'low'}}">
+    <%= render "low_budget_affect" %>
+  </div>
+
+</div>
+
