@@ -10,12 +10,8 @@ App.directive('uiSlider', function() {
         value,
         percentageForMin = attrs.percentageForMinimum || 50,
         percentageForMax = attrs.percentageForMaximum || 200,
-        labelFollower = attrs.labelFollower || false,
-        $labelFollower;
-
-    if (labelFollower) {
-      $labelFollower = $(labelFollower).appendTo(element);
-    }
+        labelFollower = attrs.labelFollower || '',
+        $labelFollower = $(labelFollower).appendTo(element);
 
     //Fire GA Events
     var gaRefinement = function(){
@@ -34,18 +30,6 @@ App.directive('uiSlider', function() {
       }
     };
 
-    var moveFollower = function() {
-      if (!moveFollower) return;
-
-      var width = $labelFollower.width();
-      var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
-
-      $labelFollower.css({
-        left: handleLeft,
-        marginLeft: '-' + (width / 2) + 'px'
-      });
-    };
-
     //Set initial slider state
     var options = {
       range: 'min',
@@ -54,11 +38,23 @@ App.directive('uiSlider', function() {
       value: scope.value,
       slide: function (event, ui) {
         scope.$apply(function () {
-            scope.value = ui.value;
+            if (ui && ui.value) scope.value = ui.value;
             gaRefinement();
         });
 
         moveFollower();
+      }
+    };
+
+    var moveFollower = function() {
+      if ($labelFollower) {
+        var width = $labelFollower.width();
+        var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
+
+        $labelFollower.css({
+          left: handleLeft,
+          marginLeft: '-' + (width / 2) + 'px'
+        });
       }
     };
 
@@ -102,7 +98,7 @@ App.directive('uiSlider', function() {
 
     //Initial declaration of slider
     angular.extend(options, expression);
-    element.slider(options);
+    element.slider(options).on('slide', options.slide);
 
     //Reconfigre slider when input blurs
     input.on('blur keyup', function() {
@@ -113,6 +109,10 @@ App.directive('uiSlider', function() {
         value: value,
         step: (value / 100) * 1
       });
+    });
+
+    setTimeout(function() {
+      element.trigger('slide');
     });
   };
 
