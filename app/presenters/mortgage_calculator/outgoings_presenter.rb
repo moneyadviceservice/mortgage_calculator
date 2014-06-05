@@ -27,15 +27,15 @@ module MortgageCalculator
 
     def attributes
       {
-        "credit_repayments" => credit_repayments_formatted,
-        "utilities" => utilities_formatted,
-        "childcare" => childcare_formatted,
-        "child_maintenance" => child_maintenance_formatted,
-        "rent_and_mortgage" => rent_and_mortgage_formatted,
-        "food" => food_formatted,
-        "travel" => travel_formatted,
-        "entertainment" => entertainment_formatted,
-        "holidays" => holidays_formatted
+        "credit_repayments" => number_to_currency(credit_repayments, unit: "", delimiter: nil),
+        "utilities" => number_to_currency(utilities, unit: "", delimiter: nil),
+        "childcare" => number_to_currency(childcare, unit: "", delimiter: nil),
+        "child_maintenance" => number_to_currency(child_maintenance, unit: "", delimiter: nil),
+        "rent_and_mortgage" => number_to_currency(rent_and_mortgage, unit: "", delimiter: nil),
+        "food" => number_to_currency(food, unit: "", delimiter: nil),
+        "travel" => number_to_currency(travel, unit: "", delimiter: nil),
+        "entertainment" => number_to_currency(entertainment, unit: "", delimiter: nil),
+        "holidays" => number_to_currency(holidays, unit: "", delimiter: nil)
       }
     end
 
