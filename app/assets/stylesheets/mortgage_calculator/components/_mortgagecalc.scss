@@ -151,5 +151,7 @@
 
 .label-follower {
   @extend %font-heading-heavy;
-  color: $color-green-primary;
+  color: $color-green-secondary;
+  padding-bottom: 10px;
+  background: transparent url(/assets/mortgage_calculator/slider-follower.png) 58% 100% no-repeat;
 }

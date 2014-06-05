@@ -386,7 +386,7 @@
 
   &:focus,
   &:active {
-    border-color: $color-green-primary;
+    border-color: $color-green-secondary;
   }
 }
 
@@ -405,6 +405,7 @@
 .ui-slider .label-follower {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 
   &.label-follower--top {
     top: -$baseline-unit*8;
