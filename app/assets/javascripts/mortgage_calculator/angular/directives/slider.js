@@ -31,6 +31,8 @@ App.directive('uiSlider', function() {
     //Set initial slider state
     var options = {
       range: 'min',
+      min: (percentageForMin / 100) * scope.value,
+      max: (percentageForMax / 100) * scope.value,
       value: scope.value,
       slide: function (event, ui) {
           scope.$apply(function () {
