@@ -14,7 +14,7 @@ App.directive('uiSlider', function() {
         $labelFollower;
 
     if (labelFollower) {
-      $labelFollower = $(labelFollower);
+      $labelFollower = $(labelFollower).appendTo(element);
     }
 
     //Fire GA Events
@@ -34,6 +34,18 @@ App.directive('uiSlider', function() {
       }
     };
 
+    var moveFollower = function() {
+      if (!moveFollower) return;
+
+      var width = $labelFollower.width();
+      var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
+
+      $labelFollower.css({
+        left: handleLeft,
+        marginLeft: '-' + (width / 2) + 'px'
+      });
+    };
+
     //Set initial slider state
     var options = {
       range: 'min',
@@ -41,21 +53,12 @@ App.directive('uiSlider', function() {
       max: (percentageForMax / 100) * scope.value,
       value: scope.value,
       slide: function (event, ui) {
-          scope.$apply(function () {
-              scope.value = ui.value;
-              gaRefinement();
-          });
+        scope.$apply(function () {
+            scope.value = ui.value;
+            gaRefinement();
+        });
 
-          // move the job
-          if (labelFollower) {
-            var width = $labelFollower.width();
-            var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
-
-            $labelFollower.css({
-              left: handleLeft,
-              marginLeft: '-' + (width / 2) + 'px'
-            });
-          }
+        moveFollower();
       }
     };
 
@@ -74,22 +77,26 @@ App.directive('uiSlider', function() {
     scope.$watch('value', function (newVal, oldVal) {
       if (!angular.isUndefined(newVal) && newVal != oldVal) {
         element.slider('value', newVal);
+        moveFollower();
       }
     });
 
     scope.$watch('min', function (newVal, oldVal) {
       if (!angular.isUndefined(newVal) && newVal != oldVal) {
         element.slider('option', 'min', newVal);
+        moveFollower();
       }
     });
     scope.$watch('max', function (newVal, oldVal) {
       if (!angular.isUndefined(newVal) && newVal != oldVal) {
         element.slider('option', 'max', newVal);
+        moveFollower();
       }
     });
     scope.$watch('step', function (newVal, oldVal) {
       if (!angular.isUndefined(newVal) && newVal != oldVal) {
         element.slider('option', 'step', newVal);
+        moveFollower();
       }
     });
 
@@ -107,10 +114,6 @@ App.directive('uiSlider', function() {
         step: (value / 100) * 1
       });
     });
-
-    if (labelFollower) {
-      $labelFollower = $labelFollower.appendTo(element);
-    }
   };
 
   var controller = function($scope) {};
