@@ -8,6 +8,13 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.affordability = Affordability;
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
 
+    $scope.data = [
+      {name: "Protein", score: 98},
+      {name: "Meat", score: 96},
+      {name: 'Veg', score: 70},
+      {name: "Salad", score: 30}
+    ];
+
     $scope.isCheckboxSelected = function(index) {
       return index === $scope.affordability.selectedOption;
     };

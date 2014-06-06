@@ -1,111 +1,88 @@
-App.directive('ngPie', function() {
+'use strict';
 
-  var linker = function(scope, element, attrs, ctrl) {
-    var dataForWatch = element.attr('data-incoming') + element.attr('data-outgoing');
+App.directive('ngPie', ['$window',
+  function($window) {
 
-    var svg = d3.select(element[0])
+    var linker = function(scope, element, attrs) {
+
+      var margin = parseInt(attrs.margin) || 20,
+        barHeight = parseInt(attrs.barHeight) || 20,
+        barPadding = parseInt(attrs.barPadding) || 5;
+
+      var svg = d3.select(element[0])
         .append('svg')
-        .append('g');
+        .style('width', '100%');
 
-    svg.append('g')
-        .attr('class', 'slices');
-    svg.append('g')
-        .attr('class', 'labels');
+      // Browser onresize event
+      window.onresize = function() {
+        scope.$apply();
+      };
 
-    var $inner = $(element),
-        width = $inner.width() || $inner.parent().width() || 500,
-        radius = width / 2;
+      // Watch for resize event
+      scope.$watch(function() {
+        return angular.element($window)[0].innerWidth;
+      }, function() {
+        scope.render(scope.data);
+      });
 
-    svg
-        .attr('transform', 'translate(' + width / 2 + ',' + width / 2 + ')');
+      //Watch the data
+      scope.$watch('data', function(newVals, oldVals) {
+        return scope.render(newVals);
+      }, true);
 
-    svg.append('text')
-        .attr('alignment-baseline', 'central')
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'sans-serif')
-        .attr('font-size', width / 9)
-        .text(element.attr('data-pie-text') + '%');
+      scope.render = function(data) {
 
-    var canvas = d3.select('svg');
-    canvas
-        .attr('preserveAspectRatio', 'xMinYMin')
-        .attr('viewBox', '0 0 ' + width + ' ' + width);
+        // remove all previous items before render
+        svg.selectAll('*').remove();
 
-    var pie = d3.layout.pie()
-        .sort(null)
-        .value(function (d) {
-          return d.value;
-        });
+        // If we don't pass any data, return out of the element
+        if (!data) return;
 
-    var arc = d3.svg.arc()
-        .outerRadius(radius * 1)
-        .innerRadius(radius * 0.5);
+        // setup variables
+        var width = d3.select(element[0]).node().offsetWidth - margin,
+          // calculate the height
+          height = scope.data.length * (barHeight + barPadding),
+          // Use the category20() scale function for multicolor support
+          color = d3.scale.category20(),
+          // our xScale
+          xScale = d3.scale.linear()
+            .domain([0, d3.max(data, function(d) {
+              return d.score;
+            })])
+            .range([0, width]);
 
+        // set the height based on the calculations above
+        svg.attr('height', height);
 
-    var key = function (d) {
-      return d.data.label;
+        //create the sample rectangles for the bar chart
+        svg.selectAll('rect')
+          .data(data).enter()
+          .append('rect')
+          .attr('height', barHeight)
+          .attr('width', 140)
+          .attr('x', Math.round(margin / 2))
+          .attr('y', function(d, i) {
+            return i * (barHeight + barPadding);
+          })
+          .attr('fill', function(d) {
+            return color(d.score);
+          })
+          .transition()
+          .duration(1000)
+          .attr('width', function(d) {
+            return xScale(d.score);
+          });
+      };
+
     };
 
-    var color = d3.scale.ordinal()
-        .domain(['Incoming', 'Outgoing'])
-        .range(['#337018', '#38AD26']);
+    return {
+      restrict: 'EA',
+      scope: {
+        data: '='
+      },
+      link: linker
+    };
 
-    function getData() {
-      var labels = color.domain();
-      return labels.map(function (label) {
-        return {
-          label: label,
-          value: parseInt(element.attr('data-' + label))
-        };
-      });
-    }
-
-    function change(data) {
-
-      /* ------- PIE SLICES -------*/
-      var slice = svg.select('.slices').selectAll('path.slice')
-          .data(pie(data), key);
-
-      slice.enter()
-          .insert('path')
-          .style('fill', function (d) {
-            return color(d.data.label);
-          })
-          .attr('class', 'slice');
-
-      slice
-          .transition().duration(1000)
-          .attrTween('d', function (d) {
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function (t) {
-              return arc(interpolate(t));
-            };
-          });
-
-      slice.exit()
-          .remove();
-
-    }
-
-    change(getData());
-
-    scope.$watch(function() { return element.attr('data-incoming') + element.attr('data-outgoing'); }, function(newValue) {
-      if (newValue != dataForWatch) {
-        change(getData());
-      }
-    });
-
-    scope.$watch(function() { return element.attr('data-pie-text'); }, function(newValue) {
-      // update text
-    });
-  };
-
-  return {
-    restrict: 'A',
-    controller: function($scope) {},
-    link: linker
-  };
-
-});
+  }
+]);
