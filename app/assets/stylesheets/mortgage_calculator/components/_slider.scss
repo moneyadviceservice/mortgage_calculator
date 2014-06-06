@@ -408,7 +408,7 @@
   cursor: pointer;
 
   &.label-follower--top {
-    top: -$baseline-unit*8;
+    top: -$baseline-unit*9;
   }
 }
 
@@ -420,14 +420,15 @@
       display: block;
       content: " ";
       position: relative;
-      top: -14px;
+      width: 0;
+      height: 0;
+      top: -$baseline-unit*3;
       left: 50%;
-      width: 17px;
-      height: 10px;
       margin-left: -8px;
-      background-image: url(/assets/mortgage_calculator/slider-follower.png);
-      background-position: top center;
-      background-repeat: no-repeat;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+
+      border-bottom: 8px solid $color-green-secondary;
     }
   }
 }
