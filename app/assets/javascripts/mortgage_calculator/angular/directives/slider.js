@@ -38,18 +38,21 @@ App.directive('uiSlider', function() {
       value: scope.value,
       slide: function (event, ui) {
         scope.$apply(function () {
-            if (ui && ui.value) scope.value = ui.value;
-            gaRefinement();
-            moveFollower();
+          if (ui && ui.value) {
+            scope.value = ui.value;
+          }
+
+          gaRefinement();
+          moveFollower();
         });
       }
     };
 
     var moveFollower = function() {
       if ($labelFollower) {
-        var labelWidth = $labelFollower.width();
-        var sliderWidth = element.width();
-        var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
+        var labelWidth = $labelFollower.width(),
+            sliderWidth = element.width(),
+            handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
 
         if (handleLeft < (labelWidth / 2)) {
           handleLeft = (labelWidth / 2);
