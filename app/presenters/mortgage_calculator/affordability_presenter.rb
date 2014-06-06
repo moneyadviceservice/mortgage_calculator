@@ -33,6 +33,10 @@ module MortgageCalculator
     delegate :budget_leftover, to: :model
     delegate :remaining_vector, to: :model
 
+    delegate :two_applicants, to: :model
+    delegate :two_applicants=, to: :model
+    delegate :two_applicants?, to: :model
+
     def self.i18n_scope
       "affordability.activemodel"
     end

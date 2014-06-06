@@ -7,6 +7,12 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
+    attr_accessor :two_applicants
+
+    def two_applicants?
+      two_applicants == "1"
+    end
+
     validate :income_greater_than_zero
 
     delegate :committed_costs, to: :outgoings
