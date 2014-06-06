@@ -5,31 +5,35 @@ App.directive('ngPie', ['$window',
 
     var linker = function(scope, element, attrs) {
 
+      //Set margins, width, and height
       var margin = parseInt(attrs.margin) || 20,
         barHeight = parseInt(attrs.barHeight) || 20,
         barPadding = parseInt(attrs.barPadding) || 5;
 
+      //Create the d3 element
       var svg = d3.select(element[0])
         .append('svg')
         .style('width', '100%');
 
-      // Browser onresize event
+      //Fire event to re-render when browser resizes
       window.onresize = function() {
         scope.$apply();
       };
 
-      // Watch for resize event
+      //Watch for resize event
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
         scope.render(scope.data);
       });
 
-      //Watch the data
+      //Watch 'data' and run scope.render(newVal) whenever it changes
+      //Use true for 'objectEquality' property so comparisons are done on equality and not reference
       scope.$watch('data', function(newVals, oldVals) {
         return scope.render(newVals);
       }, true);
 
+      //Render graph based on 'data'
       scope.render = function(data) {
 
         // remove all previous items before render
