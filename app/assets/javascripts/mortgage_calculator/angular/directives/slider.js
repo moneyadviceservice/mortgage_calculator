@@ -48,12 +48,21 @@ App.directive('uiSlider', function() {
 
     var moveFollower = function() {
       if ($labelFollower) {
-        var width = $labelFollower.width();
+        var labelWidth = $labelFollower.width();
+        var sliderWidth = element.width();
         var handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
+
+        if (handleLeft < (labelWidth / 2)) {
+          handleLeft = (labelWidth / 2);
+        }
+
+        if (handleLeft + (labelWidth / 2) > sliderWidth) {
+          handleLeft = sliderWidth - (labelWidth / 2);
+        }
 
         $labelFollower.css({
           left: handleLeft,
-          marginLeft: '-' + (width / 2) + 'px'
+          marginLeft: '-' + (labelWidth / 2) + 'px'
         });
       }
     };
