@@ -45,11 +45,11 @@ module MortgageCalculator
       return unless total_income && monthly_net_income
 
       if !total_income.zero? && monthly_net_income.zero?
-        errors[:base] << "Take home pay should be more than zero if annual income is more than zero"
+        errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.take_home_is_zero")
       end
 
       if total_income.zero? && !monthly_net_income.zero?
-        errors[:base] << "Annual income should be more than zero if take home pay is more than zero"
+        errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.annual_income_is_zero")
       end
     end
   end
