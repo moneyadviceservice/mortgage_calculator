@@ -148,3 +148,8 @@
   background: #fff;
   margin-bottom: 78px;
 }
+
+.label-follower {
+  @extend %font-heading-heavy;
+  color: $color-green-secondary;
+}
