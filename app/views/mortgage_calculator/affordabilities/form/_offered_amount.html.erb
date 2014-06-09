@@ -1,12 +1,12 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class="mortgagecalc__heading results">
+  <p ng-hide="js" class="mortgagecalc__heading results mortgagecalc__heading">
     <%= t "affordability.range.offer_html",
            min: number_to_currency(@affordability.can_borrow_from),
            max: number_to_currency(@affordability.can_borrow_upto) %>
   </p>
 <% end %>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results mortgagecalc__heading">
   <%= t "affordability.range.offer_html",
          min: "{{ affordability.minimumBorrowing() | customCurrency:'£' }}".html_safe,
          max: "{{ affordability.maximumBorrowing() | customCurrency:'£' }}".html_safe %>
