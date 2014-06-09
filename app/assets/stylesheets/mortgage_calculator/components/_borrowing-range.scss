@@ -1,0 +1,16 @@
+.borrowing-range {
+  @extend %paragraph-small;
+  @extend %clearfix;
+  margin-bottom: $baseline-unit*4;
+}
+
+.borrowing-range__min {
+  display:block;
+  float: left;
+  width:50%;
+}
+
+.borrowing-range__max {
+  @extend .borrowing-range__min;
+  text-align: right;
+}

@@ -368,6 +368,10 @@
   width:100%;
   clear:both;
   margin:18px 0 35px;
+
+  &.slider--squeeze {
+    margin-bottom: 18px;
+  }
 }
 
 .ui-slider .ui-slider-handle {
