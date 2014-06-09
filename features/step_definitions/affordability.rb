@@ -1,4 +1,4 @@
-Given /^I visit the Affordability page$/ do
+Given /^I visit the Affordability (?:page|calculator)$/i do
   @affordability = UI::Pages::Affordability.new
   @affordability.load
 end

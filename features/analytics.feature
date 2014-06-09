@@ -36,3 +36,8 @@ Feature: Google analytics
 #   And   I go to next steps
 #   Then  My stamp duty next steps interaction is tracked
 
+@javascript
+Scenario: When a user uses completes the affordability calculator
+  Given I visit the Affordability calculator
+  When  I enter all details for "1" applicants
+  Then  My affordability completion interaction is tracked
