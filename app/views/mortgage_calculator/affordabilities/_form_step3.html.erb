@@ -9,7 +9,7 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border" calculate>
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border" calculate>
     <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
     <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
   </div>
@@ -20,13 +20,13 @@
     </div>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+  <div class="mortgagecalc__panel">
     <div>
       <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
     </div>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+    <div class="mortgagecalc__panel">
       <div>
         <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
       </div>
@@ -113,7 +113,7 @@
     <p><br><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+  <div class="mortgagecalc__panel">
     <p>
       <a href="javascript:window.history.go(-1);" class='button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js'><%= t "affordability.back" %></a>
     </p>
