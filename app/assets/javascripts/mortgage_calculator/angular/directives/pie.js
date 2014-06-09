@@ -4,19 +4,8 @@ App.directive('ngPie', ['$window',
   function($window) {
 
     var linker = function(scope, element, attrs) {
-
-      //Set margins, width, and height
-      var margin = parseInt(attrs.margin) || 20,
-        barHeight = parseInt(attrs.barHeight) || 20,
-        barPadding = parseInt(attrs.barPadding) || 5;
-
-      //Create the d3 element
-      var svg = d3.select(element[0])
-        .append('svg')
-        .style('width', '100%');
-
       //Fire event to re-render when browser resizes
-      window.onresize = function() {
+      $window.onresize = function() {
         scope.$apply();
       };
 
@@ -33,49 +22,79 @@ App.directive('ngPie', ['$window',
         return scope.render(newVals);
       }, true);
 
-      //Render graph based on 'data'
-      scope.render = function(data) {
+      var svg = d3.select(element[0])
+          .append('svg')
+          .append('g');
 
-        // remove all previous items before render
-        svg.selectAll('*').remove();
+      svg.append('g')
+          .attr('class', 'slices');
+      svg.append('g')
+          .attr('class', 'labels');
 
-        // If we don't pass any data, return out of the element
-        if (!data) return;
+      var $inner = $(element),
+          width = $inner.width() || $inner.parent().width() || 500,
+          radius = width / 2;
 
-        // setup variables
-        var width = d3.select(element[0]).node().offsetWidth - margin,
-          // calculate the height
-          height = scope.data.length * (barHeight + barPadding),
-          // Use the category20() scale function for multicolor support
-          color = d3.scale.category20(),
-          // our xScale
-          xScale = d3.scale.linear()
-            .domain([0, d3.max(data, function(d) {
-              return d.score;
-            })])
-            .range([0, width]);
+      svg
+          .attr('transform', 'translate(' + width / 2 + ',' + width / 2 + ')');
 
-        // set the height based on the calculations above
-        svg.attr('height', height);
+      var label = svg.append('text')
+          .attr('alignment-baseline', 'central')
+          .attr('text-anchor', 'middle')
+          .attr('font-family', 'sans-serif')
+          .attr('font-size', width / 9)
+          .text(element.attr('data-pie-text') + '%');
 
-        //create the sample rectangles for the bar chart
-        svg.selectAll('rect')
-          .data(data).enter()
-          .append('rect')
-          .attr('height', barHeight)
-          .attr('width', 140)
-          .attr('x', Math.round(margin / 2))
-          .attr('y', function(d, i) {
-            return i * (barHeight + barPadding);
-          })
-          .attr('fill', function(d) {
-            return color(d.score);
-          })
-          .transition()
-          .duration(1000)
-          .attr('width', function(d) {
-            return xScale(d.score);
+      var canvas = d3.select('svg');
+      canvas
+          .attr('preserveAspectRatio', 'xMinYMin')
+          .attr('viewBox', '0 0 ' + width + ' ' + width);
+
+      var pie = d3.layout.pie()
+          .sort(null)
+          .value(function (d) {
+            return d.value;
           });
+
+      var arc = d3.svg.arc()
+          .outerRadius(radius * 1)
+          .innerRadius(radius * 0.5);
+
+
+      var key = function (d) {
+        return d.data.label;
+      };
+
+      /**
+       * Render the pie
+       * @param  {[type]} data
+       * @return {[type]}
+       */
+      scope.render = function(data) {
+        var slice = svg.select('.slices').selectAll('path.slice')
+            .data(pie(data), key);
+
+        slice.enter()
+            .insert('path')
+            .style('fill', function (d) {
+              return d.data.colour;
+            })
+            .attr('class', 'slice');
+
+        slice
+            .transition().duration(1000)
+            .attrTween('d', function (d) {
+              this._current = this._current || d;
+              var interpolate = d3.interpolate(this._current, d);
+              this._current = interpolate(0);
+              return function (t) {
+                return arc(interpolate(t));
+              };
+            });
+
+        slice.exit()
+            .remove();
+
       };
 
     };
