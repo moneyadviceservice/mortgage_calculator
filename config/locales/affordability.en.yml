@@ -71,15 +71,15 @@ en:
       changes_by_would_increase_html: "If interest rate changes by %{percent} your monthly repayment would rise to %{repayment}."
       remaining_html: "Your remaining financial buffer will be %{remaining}."
     monthly_repayment:
-      estimated_html: "Estimated mortgage repayments per month, approx: %{repayment}"
+      estimated_html: "Estimated mortgage repayments per month, approx: <span class=\"accent\">%{repayment}</span>"
     remaining:
-      estimate_html: "Your estimated remaining money per month is %{remaining}"
+      estimate_html: "Your estimated remaining money per month is <span class=\"accent\">%{remaining}</span>"
     range:
       offer_html: "You might be offered between %{min} and %{max}"
     take_home:
-      per_month_html: "Your take-home pay per month: %{take_home}"
+      per_month_html: "Your take-home pay per month: <span class=\"accent\">%{take_home}</span>"
     budget:
-      commitments_html: "Estimated fixed and spending commitments per month are: %{commitment}"
+      commitments_html: "Estimated fixed and spending commitments per month are: <span class=\"accent\">%{commitment}</span>"
       outgoing_html: "Mortgage repayments and fixed costs per month: %{percent} of your monthly take-home (%{absolute})"
       leftover_html: "What you will have left over: %{percent} of your monthly takehome (%{absolute})"
       positive:
