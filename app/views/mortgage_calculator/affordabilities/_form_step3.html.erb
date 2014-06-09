@@ -23,70 +23,58 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
-    <div class="mortgagecalc__panel mortgagecalc__panel--full">
-      <h3><%= t "affordability.titles.how_affect_budget" %></h3>
+    <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
-      <% if @affordability.only_rent_and_mortgage_warning? %>
-        <%= inset_block(I18n.t("affordability.warnings.only_rent_and_mortgage_html").html_safe) %>
-      <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
-        <%= inset_block(I18n.t("affordability.warnings.missing_fixed_and_committed_costs_html").html_safe) %>
-      <% end %>
+    <% if @affordability.only_rent_and_mortgage_warning? %>
+      <%= inset_block(I18n.t("affordability.warnings.only_rent_and_mortgage_html").html_safe) %>
+    <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
+      <%= inset_block(I18n.t("affordability.warnings.missing_fixed_and_committed_costs_html").html_safe) %>
+    <% end %>
 
-      <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
-      <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
-      <%= render "#{@affordability.risk_level}_budget_affect" %>
-    </div>
+    <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
+    <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
+    <%= render "#{@affordability.risk_level}_budget_affect" %>
+  </div>
 
-    <div class="mortgagecalc__panel">
-      <div>
-        <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
-      </div>
-    </div>
+  <div class="mortgagecalc__panel">
+    <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
+  </div>
 
-    <div class="mortgagecalc__panel">
-      <div>
-        <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
-      </div>
-    </div>
+  <div class="mortgagecalc__panel">
+    <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
     <h3><%= t "affordability.titles.can_afford" %></h3>
-  </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
     <% if @affordability.missing_lifestyle_costs_warning? %>
       <%= inset_block(I18n.t("affordability.warnings.missing_lifestyle_costs_html").html_safe) %>
     <% end %>
 
-    <div>
-      <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
-    </div>
+    <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
   </div>
 
   <div class="mortgagecalc__panel" calculate>
-    <div>
-      <p>
-        <%= f.label :lifestyle_costs %>
-        <%= f.text_field :lifestyle_costs,
-                         class: 'dynamic-slider-property',
-                         "currency" => '',
-                         "data-a-sign" =>"£",
-                         "data-m-dec" => "0",
-                         "ng-model" => "affordability.lifestyleSpend",
-                         "placeholder" => "Lifestyle Spend" %>
-      </p>
-      <div class="slider"
-           ui-slider
-           dynamic-for='dynamic-slider-property'
-           percentage-for-minimum="20"
-           percentage-for-maximum="200"
-           ng-model="affordability.lifestyleSpend"
-           aria-labelledby="label_price"
-           analytics-category="Affordability Calculator"
-           analytics-action="Refinement"
-           analytics-label="Life Style Spend">
-      </div>
+    <p>
+      <%= f.label :lifestyle_costs %>
+      <%= f.text_field :lifestyle_costs,
+                       class: 'dynamic-slider-property',
+                       "currency" => '',
+                       "data-a-sign" =>"£",
+                       "data-m-dec" => "0",
+                       "ng-model" => "affordability.lifestyleSpend",
+                       "placeholder" => "Lifestyle Spend" %>
+    </p>
+    <div class="slider"
+         ui-slider
+         dynamic-for='dynamic-slider-property'
+         percentage-for-minimum="20"
+         percentage-for-maximum="200"
+         ng-model="affordability.lifestyleSpend"
+         aria-labelledby="label_price"
+         analytics-category="Affordability Calculator"
+         analytics-action="Refinement"
+         analytics-label="Life Style Spend">
     </div>
   </div>
 
