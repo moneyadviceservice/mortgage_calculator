@@ -30,13 +30,11 @@
     <div class="mortgagecalc__panel mortgagecalc__panel--full">
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
-      <div class="warning">
-        <% if @affordability.only_rent_and_mortgage_warning? %>
-          <%= t "affordability.warnings.only_rent_and_mortgage" %>
-        <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
-          <%= t "affordability.warnings.missing_fixed_and_committed_costs" %>
-        <% end %>
-      </div>
+      <% if @affordability.only_rent_and_mortgage_warning? %>
+        <%= render :partial => 'mortgage_calculator/affordabilities/inset-block', :locals => {:text => I18n.t("affordability.warnings.only_rent_and_mortgage_html").html_safe} %>
+      <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
+        <%= render :partial => 'mortgage_calculator/affordabilities/inset-block', :locals => {:text => I18n.t("affordability.warnings.missing_fixed_and_committed_costs_html").html_safe} %>
+      <% end %>
 
       <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
       <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
@@ -61,11 +59,9 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <div class="warning">
-      <% if @affordability.missing_lifestyle_costs_warning? %>
-        <%= t "affordability.warnings.missing_lifestyle_costs" %>
-      <% end %>
-    </div>
+    <% if @affordability.missing_lifestyle_costs_warning? %>
+      <%= render :partial => 'mortgage_calculator/affordabilities/inset-block', :locals => {:text => I18n.t("affordability.warnings.missing_lifestyle_costs_html").html_safe} %>
+    <% end %>
 
     <div>
       <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
