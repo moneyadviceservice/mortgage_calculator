@@ -93,3 +93,7 @@ Given(/^I click on second applicant$/) do
   check('affordability[two_applicants]') unless js_disabled?
 end
 
+When(/^I refine my affordability borrowing$/) do
+  @affordability.borrowing_slider.set(300000)
+end
+

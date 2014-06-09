@@ -1,3 +1,5 @@
+require_relative '../sections/slider'
+
 module UI
   module Pages
     class Affordability < SitePrism::Page
@@ -26,7 +28,10 @@ module UI
       element :holiday, "form.new_affordability input[name='affordability[outgoings][holidays]']"
       element :food, "form.new_affordability input[name='affordability[outgoings][food]']"
 
+      element :borrowing, "input[name='affordability[borrowing]']"
       element :interest_rate, "input[name='affordability[interest_rate]']"
+
+      section :borrowing_slider, UI::Sections::Slider, "#borrowing-amount-slider"
 
       element :h1, "h1"
       element :h2, "h2"
