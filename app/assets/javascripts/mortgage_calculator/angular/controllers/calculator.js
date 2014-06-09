@@ -21,6 +21,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       }
     ];
 
+    $scope.riskProportion = 60;
+
     $scope.isCheckboxSelected = function(index) {
       return index === $scope.affordability.selectedOption;
     };

@@ -1,7 +1,6 @@
 'use strict';
 
-App.directive('ngPie', ['$window',
-  function($window) {
+App.directive('ngPie', ['$window', function($window) {
 
     var linker = function(scope, element, attrs) {
       //Fire event to re-render when browser resizes
@@ -9,31 +8,30 @@ App.directive('ngPie', ['$window',
         scope.$apply();
       };
 
-      //Watch for resize event
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
         scope.render(scope.data);
       });
 
-      //Watch 'data' and run scope.render(newVal) whenever it changes
-      //Use true for 'objectEquality' property so comparisons are done on equality and not reference
       scope.$watch('data', function(newVals, oldVals) {
         return scope.render(newVals);
+      }, true);
+
+      scope.$watch('riskProportion', function(newVals, oldVals) {
+        return scope.updateLabel(newVals);
       }, true);
 
       var svg = d3.select(element[0])
           .append('svg')
           .append('g');
 
-      svg.append('g')
-          .attr('class', 'slices');
-      svg.append('g')
-          .attr('class', 'labels');
-
       var $inner = $(element),
           width = $inner.width() || $inner.parent().width() || 500,
           radius = width / 2;
+
+      svg.append('g')
+          .attr('class', 'slices');
 
       svg
           .attr('transform', 'translate(' + width / 2 + ',' + width / 2 + ')');
@@ -42,8 +40,7 @@ App.directive('ngPie', ['$window',
           .attr('alignment-baseline', 'central')
           .attr('text-anchor', 'middle')
           .attr('font-family', 'sans-serif')
-          .attr('font-size', width / 9)
-          .text(element.attr('data-pie-text') + '%');
+          .attr('font-size', width / 9);
 
       var canvas = d3.select('svg');
       canvas
@@ -52,7 +49,7 @@ App.directive('ngPie', ['$window',
 
       var pie = d3.layout.pie()
           .sort(null)
-          .value(function (d) {
+          .value(function(d) {
             return d.value;
           });
 
@@ -61,8 +58,12 @@ App.directive('ngPie', ['$window',
           .innerRadius(radius * 0.5);
 
 
-      var key = function (d) {
-        return d.data.label;
+      /**
+       * Update label
+       * @return {[type]}
+       */
+      scope.updateLabel = function() {
+        label.text(parseInt(scope.riskProportion, 10) + '%');
       };
 
       /**
@@ -72,7 +73,9 @@ App.directive('ngPie', ['$window',
        */
       scope.render = function(data) {
         var slice = svg.select('.slices').selectAll('path.slice')
-            .data(pie(data), key);
+            .data(pie(data), function(d) {
+              return d.data.label;
+            });
 
         slice.enter()
             .insert('path')
@@ -94,7 +97,6 @@ App.directive('ngPie', ['$window',
 
         slice.exit()
             .remove();
-
       };
 
     };
@@ -102,7 +104,8 @@ App.directive('ngPie', ['$window',
     return {
       restrict: 'EA',
       scope: {
-        data: '='
+        data: '=',
+        riskProportion: '='
       },
       link: linker
     };
