@@ -1,4 +1,5 @@
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container risk--<%= @affordability.risk_level %>">
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container risk--<%= @affordability.risk_level %>"
+  ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
   <%= render 'header' %>
   <%= render 'form_step3' %>
 </div>
