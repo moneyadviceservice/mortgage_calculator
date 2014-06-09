@@ -40,7 +40,7 @@ App.directive('ngPie', ['$window', function($window) {
           .attr('alignment-baseline', 'central')
           .attr('text-anchor', 'middle')
           .attr('font-family', 'sans-serif')
-          .attr('font-size', width / 9);
+          .attr('font-size', width / 4);
 
       var canvas = d3.select('svg');
       canvas
@@ -55,7 +55,7 @@ App.directive('ngPie', ['$window', function($window) {
 
       var arc = d3.svg.arc()
           .outerRadius(radius * 1)
-          .innerRadius(radius * 0.5);
+          .innerRadius(radius * 0.8);
 
 
       /**
