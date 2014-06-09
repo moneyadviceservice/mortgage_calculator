@@ -91,13 +91,9 @@
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <div>
-      <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
-    </div>
-  </div>
+    <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
 
-  <div class="mortgagecalc__caveat callout">
-    <p><strong><%= t "affordability.interest_changer.title" %></strong></p>
+    <h3><%= t "affordability.interest_changer.title" %></h3>
     <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
   </div>
 
