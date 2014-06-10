@@ -58,14 +58,14 @@ en:
       living_costs_description: "Your lifestyle costs shouldn't change when you get a mortgage, but the lender will want to 'stress test' how you can afford your payments should interest rates rise or your circumstances change."
     budget_affect:
       high:
-        percentage: "This mortgage payment and your spending commitments are above 60% of your total take-home pay"
-        affordability: "You are at high risk of overstretching your budget to make these payments"
+        percentage_html: "This mortgage payment and your spending commitments are <span class=\"risk__accent\">above 60%</span> of your total take-home pay"
+        affordability_html: "You are at <span class=\"risk__accent\">high risk of overstretching your budget</span> to make these payments"
       medium:
-        percentage: "This mortgage payment and your spending commitments are between 40% - 60% of your total take-home pay"
-        affordability: "You could be at risk of overstretching your budget to make these payments"
+        percentage_html: "This mortgage payment and your spending commitments are <span class=\"risk__accent\">between 40% - 60%</span> of your total take-home pay"
+        affordability_html: "You could be at <span class=\"risk__accent\">risk of overstretching your budget</span> to make these payments"
       low:
-        percentage: "This mortgage payment and your spending commitments are below 40% of your total take-home pay."
-        affordability: "Currently these payments seem affordable."
+        percentage_html: "This mortgage payment and your spending commitments are <span class=\"risk__accent\">below 40%</span> of your total take-home pay."
+        affordability_html: "Currently these payments seem <span class=\"risk__accent\">affordable</span>."
     interest_changer:
       title: "But what if interest rates change?"
       changes_by_would_increase_html: "If interest rate changes by %{percent} your monthly repayment would rise to %{repayment}."
@@ -89,6 +89,6 @@ en:
         remaining: "At the moment, you don't have money left over at the end of each month"
         budget_planner: "Think ahead and use our Budget Planner in case you need to make changes to your spending in the future"
     warnings:
-      missing_fixed_and_committed_costs: "You haven’t entered any amounts for fixed and committed costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
-      only_rent_and_mortgage: "We need more information from you. Please check that you have input all fixed and committed expenses on the previous page or your results on this page will be incorrect. Go back to do that now."
-      missing_lifestyle_costs: "You haven’t entered any amounts for living expenses on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
+      missing_fixed_and_committed_costs_html: "You haven’t entered any amounts for fixed and committed costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
+      only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all fixed and committed expenses on the previous page or your results on this page will be incorrect. Go back to do that now."
+      missing_lifestyle_costs_html: "You haven’t entered any amounts for living expenses on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."

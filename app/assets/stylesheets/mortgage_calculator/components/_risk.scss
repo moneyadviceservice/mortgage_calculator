@@ -1,0 +1,21 @@
+.risk__accent {
+  @extend %font-heading-heavy;
+}
+
+.risk--high {
+  .risk__accent {
+    color: $color-red-dark;
+  }
+}
+
+.risk--medium {
+  .risk__accent {
+    color: $color-yellow-dark;
+  }
+}
+
+.risk--low {
+  .risk__accent {
+    color: $color-green-medium;
+  }
+}
