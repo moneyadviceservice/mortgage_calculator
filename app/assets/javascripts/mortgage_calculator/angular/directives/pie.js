@@ -45,6 +45,7 @@ App.directive('ngPie', ['$window', function($window) {
       var canvas = d3.select('svg');
       canvas
           .attr('preserveAspectRatio', 'xMinYMin')
+          .attr('height', width)
           .attr('viewBox', '0 0 ' + width + ' ' + width);
 
       var pie = d3.layout.pie()
