@@ -2,17 +2,18 @@
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
     <%= stylesheet_link_tag 'mortgage_calculator_basic' %>
 
-    <%# Fixed width styles and html5shiv for IE7+8 , styles will not include any media queries, but will include .ie specific fixes %>
-    <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
-    <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
-    <script>var responsiveStyle = false;</script>
-    <![endif]-->
+    <% if disable_responsiveness? %>
+      <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
+    <% else %>
+      <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+      <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
+      <![endif]-->
 
-    <%# Responsive styles for all modern devices, excluded from older IE version %>
-    <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
-    <%= stylesheet_link_tag 'mortgage_calculator_enhanced_responsive', media: 'only all' %>
-    <script>var responsiveStyle = true;</script>
-    <!--<![endif]-->
+      <%# Responsive styles for all modern devices %>
+      <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+      <%= stylesheet_link_tag 'mortgage_calculator_enhanced_responsive', media: 'only all' %>
+      <!--<![endif]-->
+    <% end %>
 
   <%= javascript_include_tag "mortgage_calculator/application" %>
 
