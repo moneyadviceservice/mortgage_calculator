@@ -80,10 +80,9 @@ App.directive('ngPie', ['$window', function($window) {
 
         slice.enter()
             .insert('path')
-            .style('fill', function (d) {
-              return d.data.colour;
-            })
-            .attr('class', 'slice');
+            .attr('class', function (d) {
+              return 'risk-slice risk-slice--' + d.data.label.toLowerCase();
+            });
 
         slice
             .transition().duration(1000)

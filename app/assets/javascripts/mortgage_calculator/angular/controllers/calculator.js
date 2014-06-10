@@ -11,13 +11,11 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.data = [
       {
         label: 'Incoming',
-        value: 50,
-        colour: '#c00'
+        value: 50
       },
       {
         label: 'Outgoings',
-        value: 750,
-        colour: '#ccc'
+        value: 750
       }
     ];
 
