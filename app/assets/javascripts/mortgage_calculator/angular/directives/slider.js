@@ -40,9 +40,9 @@ App.directive('uiSlider', function() {
         scope.$apply(function () {
           if (ui && ui.value) {
             scope.value = ui.value;
+            gaRefinement();
           }
 
-          gaRefinement();
           moveFollower();
         });
       }

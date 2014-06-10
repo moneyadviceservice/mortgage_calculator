@@ -1,3 +1,10 @@
+<% content_for(:analytics) do %>
+  <script type='text/javascript'>
+    var _gaq = _gaq || [];
+    _gaq.push(['_trackEvent','Affordability Calculator','Completion','Click']);
+  </script>
+<% end %>
+
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container risk--<%= @affordability.risk_level %>"
   ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
   <%= render 'header' %>
