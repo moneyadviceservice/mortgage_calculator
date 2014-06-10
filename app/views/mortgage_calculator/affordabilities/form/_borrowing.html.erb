@@ -8,7 +8,7 @@
   {{ repayments.propertyPrice | customCurrency:"£"}}
 </label>
 
-<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="borrowingStepValue" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="borrowing-amount-slider"></div>
+<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="borrowingStepValue" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing"></div>
 
 <p class="rendered-from-js borrowing-range">
   <span class="borrowing-range__min">
