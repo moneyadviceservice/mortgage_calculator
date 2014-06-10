@@ -38,18 +38,18 @@ App.directive('ngPie', ['$window', function($window) {
 
       var $inner = $(element),
           width = $inner.width() || $inner.parent().width() || 500,
-          radius = width / 2.5;
+          radius = width / 3;
 
       svg.append('g')
           .attr('class', 'slices');
 
       svg
-          .attr('transform', 'translate(' + width / 2.5 + ',' + width / 2.5 + ')');
+          .attr('transform', 'translate(' + width / 3 + ',' + width / 3 + ')');
 
       var label = svg.append('text')
           .attr('alignment-baseline', 'central')
           .attr('text-anchor', 'middle')
-          .attr('font-size', width / 5);
+          .attr('font-size', width / 6);
 
       var canvas = d3.select('svg');
       canvas
