@@ -2,11 +2,6 @@
   <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>.
 </p>
 
-<p class="rendered-from-js results">
-  {{ affordability.riskPercentage() }}%
-</p>
+<div class="pie test" ng-pie data="data" risk-proportion="affordability.riskPercentage()">
 
-
-<div class="pie test" ng-pie data="data" risk-proportion="riskProportion">
 </div>
-
