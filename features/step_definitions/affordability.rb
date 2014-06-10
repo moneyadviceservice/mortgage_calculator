@@ -105,3 +105,7 @@ When(/^I refine my affordability interest rate slider$/) do
   @affordability.interest_rate_slider.set(4)
 end
 
+When(/^I refine my affordability lifestyle$/) do
+  @affordability.lifestyle.set(4)
+end
+

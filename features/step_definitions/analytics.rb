@@ -42,3 +42,9 @@ Then(/^My affordability interest rate refinement interaction is tracked$/) do
   expect(gaq.count(expected)).to eql(1)
 end
 
+Then(/^My affordability lifestyle refinement interaction is tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Refinement','Lifestyle']
+  gaq = page.evaluate_script('window._gaq')
+  expect(gaq.count(expected)).to eql(1)
+end
+
