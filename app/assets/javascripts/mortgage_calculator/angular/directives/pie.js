@@ -8,28 +8,15 @@ App.directive('ngPie', ['$window', function($window) {
         scope.$apply();
       };
 
-      var buildPieData = function() {
-        return [
-          {
-            label: 'Incoming',
-            value: 100 - scope.riskProportion
-          },
-          {
-            label: 'Outgoings',
-            value: scope.riskProportion
-          }
-        ];
-      };
-
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
-        scope.render(buildPieData());
+        scope.render();
       });
 
       scope.$watch('riskProportion', function(newVals, oldVals) {
         scope.updateLabel();
-        return scope.render(buildPieData());
+        return scope.render();
       }, true);
 
       var svg = d3.select(element[0])
@@ -81,7 +68,18 @@ App.directive('ngPie', ['$window', function($window) {
        * @param  {[type]} data
        * @return {[type]}
        */
-      scope.render = function(data) {
+      scope.render = function() {
+        var data = [
+          {
+            label: 'Incoming',
+            value: 100 - scope.riskProportion
+          },
+          {
+            label: 'Outgoings',
+            value: scope.riskProportion
+          }
+        ];
+
         var slice = svg.select('.slices').selectAll('path.slice')
             .data(pie(data), function(d) {
               return d.data.label;
