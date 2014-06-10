@@ -64,3 +64,10 @@ Scenario: When a user refines affordability calculator
   When  I refine my affordability lifestyle
   Then  My affordability lifestyle refinement interaction is tracked
 
+@javascript
+Scenario: When a user refines affordability calculator
+  Given I visit the Affordability calculator
+  And   I enter all details for "1" applicants
+  When  I refine my affordability lifestyle slider
+  Then  My affordability lifestyle refinement interaction is tracked
+

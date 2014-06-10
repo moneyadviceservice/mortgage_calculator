@@ -109,3 +109,6 @@ When(/^I refine my affordability lifestyle$/) do
   @affordability.lifestyle.set(4)
 end
 
+When(/^I refine my affordability lifestyle slider$/) do
+  @affordability.lifestyle_slider.set(1000)
+end

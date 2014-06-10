@@ -34,6 +34,7 @@ module UI
 
       section :borrowing_slider, UI::Sections::Slider, "#borrowing-amount-slider"
       section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"
+      section :lifestyle_slider, UI::Sections::Slider, "#slider-lifestyle"
 
       element :h1, "h1"
       element :h2, "h2"
