@@ -43,48 +43,42 @@ Scenario: When a user refines affordability calculator
   When  I refine my affordability borrowing
   Then  My affordability borrowing refinement interaction is tracked
 
-@javascript
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
   And   I enter all details for "1" applicants
   When  I refine my affordability interest rate
   Then  My affordability interest rate refinement interaction is tracked
 
-@javascript
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
   And   I enter all details for "1" applicants
   When  I refine my affordability interest rate slider
   Then  My affordability interest rate refinement interaction is tracked
 
-@javascript
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
   And   I enter all details for "1" applicants
   When  I refine my affordability lifestyle
   Then  My affordability lifestyle refinement interaction is tracked
 
-@javascript
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
   And   I enter all details for "1" applicants
   When  I refine my affordability lifestyle slider
   Then  My affordability lifestyle refinement interaction is tracked
 
-@javascript
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
   When  I enter all details for "1" applicants
   Then  My risk level is tracked
 
-@javascript
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
   When  I enter details giving negative remaining amount
   Then  My negative remainging is tracked
 
-@javascript
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
   When  I enter all details for "1" applicants
   Then  My negative remainging is not tracked
+
