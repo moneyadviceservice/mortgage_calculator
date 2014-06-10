@@ -6,17 +6,16 @@
 
 <div class="rendered-from-js results">
 
-  <div ng-show="{{affordability.riskLevel() === 'high'}}">
+  <div ng-show="affordability.riskPercentage() >= 60">
     <%= render "high_budget_affect" %>
   </div>
 
-  <div ng-show="{{affordability.riskLevel() === 'medium'}}">
+  <div ng-show="affordability.riskPercentage() > 40 && affordability.riskPercentage() < 60">
     <%= render "medium_budget_affect" %>
   </div>
 
-    <div ng-show="{{affordability.riskLevel() === 'low'}}">
+    <div ng-show="affordability.riskPercentage() <= 40">
     <%= render "low_budget_affect" %>
   </div>
 
 </div>
-
