@@ -58,6 +58,6 @@ end
 
 Then(/^My negative remainging is not tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Remaining','Non-positive']
-  expect(page).to have_analytics_event(expected)
+  expect(page).to_not have_analytics_event(expected)
 end
 
