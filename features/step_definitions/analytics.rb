@@ -38,31 +38,26 @@ end
 
 Then(/^My affordability interest rate refinement interaction is tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Refinement','Interest Rate']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(expected)
 end
 
 Then(/^My affordability lifestyle refinement interaction is tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Refinement','Lifestyle']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(expected)
 end
 
 Then(/^My risk level is tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Risk Level','high']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(expected)
 end
 
 Then(/^My negative remainging is tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Remaining','Non-positive']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(expected)
 end
 
 Then(/^My negative remainging is not tracked$/) do
   expected = ['_trackEvent','Affordability Calculator','Remaining','Non-positive']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(0)
+  expect(page).to have_analytics_event(expected)
 end
 
