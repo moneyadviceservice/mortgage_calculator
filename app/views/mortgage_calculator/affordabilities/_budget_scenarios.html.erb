@@ -1,0 +1,21 @@
+
+
+<div ng-hide="js" class="results">
+  <%= render "#{@affordability.risk_level}_budget_affect" %>
+</div>
+
+<div class="rendered-from-js results">
+
+  <div ng-show="affordability.riskPercentage() >= 60">
+    <%= render "high_budget_affect" %>
+  </div>
+
+  <div ng-show="affordability.riskPercentage() > 40 && affordability.riskPercentage() < 60">
+    <%= render "medium_budget_affect" %>
+  </div>
+
+    <div ng-show="affordability.riskPercentage() <= 40">
+    <%= render "low_budget_affect" %>
+  </div>
+
+</div>
