@@ -2,9 +2,17 @@
   @extend %font-heading-heavy;
 }
 
+.risk-slice--incoming {
+  fill: #ccc;
+}
+
 .risk--high {
   .risk__accent {
     color: $color-red-dark;
+  }
+
+  .risk-slice--outgoings {
+    fill: $color-red-dark;
   }
 }
 
@@ -12,10 +20,18 @@
   .risk__accent {
     color: $color-yellow-dark;
   }
+
+  .risk-slice--outgoings {
+    fill: $color-yellow-dark;
+  }
 }
 
 .risk--low {
   .risk__accent {
     color: $color-green-medium;
+  }
+
+  .risk-slice--outgoings {
+    fill: $color-green-medium;
   }
 }
