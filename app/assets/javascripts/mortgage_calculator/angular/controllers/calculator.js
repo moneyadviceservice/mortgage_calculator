@@ -8,19 +8,6 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.affordability = Affordability;
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
 
-    $scope.data = [
-      {
-        label: 'Incoming',
-        value: 50
-      },
-      {
-        label: 'Outgoings',
-        value: 750
-      }
-    ];
-
-    $scope.riskProportion = 60;
-
     $scope.isCheckboxSelected = function(index) {
       return index === $scope.affordability.selectedOption;
     };

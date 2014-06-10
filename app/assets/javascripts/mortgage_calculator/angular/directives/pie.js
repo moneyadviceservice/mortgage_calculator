@@ -8,18 +8,35 @@ App.directive('ngPie', ['$window', function($window) {
         scope.$apply();
       };
 
+      var buildPieData = function() {
+        return [
+          {
+            label: 'Incoming',
+            value: scope.riskIncoming
+          },
+          {
+            label: 'Outgoings',
+            value: scope.riskOutgoings
+          }
+        ];
+      };
+
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
-        scope.render(scope.data);
+        scope.render(scope.buildPieData());
       });
 
-      scope.$watch('data', function(newVals, oldVals) {
-        return scope.render(newVals);
+      scope.$watch('riskIncoming', function(newVals, oldVals) {
+        return scope.render(buildPieData());
+      }, true);
+
+      scope.$watch('riskOutgoings', function(newVals, oldVals) {
+        return scope.render(buildPieData());
       }, true);
 
       scope.$watch('riskProportion', function(newVals, oldVals) {
-        return scope.updateLabel(newVals);
+        return scope.updateLabel(buildPieData());
       }, true);
 
       var svg = d3.select(element[0])
@@ -105,7 +122,9 @@ App.directive('ngPie', ['$window', function($window) {
       restrict: 'EA',
       scope: {
         data: '=',
-        riskProportion: '='
+        riskProportion: '=',
+        riskOutgoings: '=',
+        riskIncoming: '='
       },
       link: linker
     };
