@@ -1,18 +1,9 @@
 Then(/^My repayment completion interaction is tracked$/) do
-  if js_enabled?
-    expected = ['_trackEvent','Mortgage Calculator','Completion','Click']
-    gaq = page.evaluate_script('window._gaq')
-    expect(gaq).to include(expected)
-  else
-    expected = "['_trackEvent','Mortgage Calculator','Completion','Click']"
-    expect(page.html).to have_content(expected)
-  end
+  expect(page).to have_analytics_event(['_trackEvent', 'Mortgage Calculator', 'Completion', 'Click'])
 end
 
 Then(/^My stamp duty completion interaction is tracked$/) do
-  expected = ['_trackEvent','Stamp Duty Calculator','Completion','Click']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq).to include(expected)
+  expect(page).to have_analytics_event(['_trackEvent', 'Stamp Duty Calculator', 'Completion', 'Click'])
 end
 
 When(/^I refine my details$/) do
@@ -26,32 +17,21 @@ When(/^I refine my details$/) do
 end
 
 Then(/^My repayment refinement interaction is tracked$/) do
-  expected = ['_trackEvent','Mortgage Calculator','Refinement','Price']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(['_trackEvent', 'Mortgage Calculator', 'Refinement', 'Price'])
 end
 
 Then(/^My stamp duty next steps interaction is tracked$/) do
-  expected = ['_trackEvent','Stamp Duty Calculator','Next Steps','Click']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq).to include(expected)
+  expect(page).to have_analytics_event(['_trackEvent', 'Stamp Duty Calculator', 'Next Steps', 'Click'])
 end
 
 Then(/^My repayment next steps interaction is tracked$/) do
-  expected = ['_trackEvent','Mortgage Calculator','Next Steps','Click']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq).to include(expected)
+  expect(page).to have_analytics_event(['_trackEvent', 'Mortgage Calculator', 'Next Steps', 'Click'])
 end
 
 Then(/^My affordability completion interaction is tracked$/) do
-  expected = ['_trackEvent','Affordability Calculator','Completion','Click']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq).to include(expected)
+  expect(page).to have_analytics_event(['_trackEvent', 'Affordability Calculator', 'Completion', 'Click'])
 end
 
 Then(/^My affordability borrowing refinement interaction is tracked$/) do
-  expected = ['_trackEvent','Affordability Calculator','Refinement','Borrowing']
-  gaq = page.evaluate_script('window._gaq')
-  expect(gaq.count(expected)).to eql(1)
+  expect(page).to have_analytics_event(['_trackEvent', 'Affordability Calculator', 'Refinement', 'Borrowing'])
 end
-
