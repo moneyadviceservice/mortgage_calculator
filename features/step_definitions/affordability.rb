@@ -64,6 +64,26 @@ When(/^I enter all details for "(.*?)" applicants$/) do |applicant|
   @affordability.step_2_next.click
 end
 
+When(/^I enter details giving negative remaining amount$/) do
+  @affordability.annual_income.set "100000"
+  @affordability.extra_income.set "10000"
+  @affordability.monthly_net_income.set "6000"
+
+  @affordability.step_1_next.click
+
+  @affordability.credit_repayments.set "10000"
+  @affordability.utilities.set "300"
+  @affordability.childcare.set "300"
+  @affordability.child_maintenance.set "300"
+  @affordability.rent_and_mortgage.set "300"
+  @affordability.food.set "300"
+  @affordability.travel.set "300"
+  @affordability.entertainment.set "300"
+  @affordability.holiday.set "300"
+
+  @affordability.step_2_next.click
+end
+
 When(/^I enter some details for applicant "(.*?)"$/) do |applicant|
   if applicant.to_i == 1
     fill_in "affordability[people_attributes][0][annual_income]", :with => "100000"

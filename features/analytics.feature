@@ -74,6 +74,17 @@ Scenario: When a user refines affordability calculator
 @javascript
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  Then  My risk level interaction is tracked
+  When  I enter all details for "1" applicants
+  Then  My risk level is tracked
 
+@javascript
+Scenario: When a user uses affordability calculator
+  Given I visit the Affordability calculator
+  When  I enter details giving negative remaining amount
+  Then  My negative remainging is tracked
+
+@javascript
+Scenario: When a user uses affordability calculator
+  Given I visit the Affordability calculator
+  When  I enter all details for "1" applicants
+  Then  My negative remainging is not tracked
