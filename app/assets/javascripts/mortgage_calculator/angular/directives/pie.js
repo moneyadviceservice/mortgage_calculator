@@ -12,11 +12,11 @@ App.directive('ngPie', ['$window', function($window) {
         return [
           {
             label: 'Incoming',
-            value: scope.riskIncoming
+            value: 100 - scope.riskProportion
           },
           {
             label: 'Outgoings',
-            value: scope.riskOutgoings
+            value: scope.riskProportion
           }
         ];
       };
@@ -24,19 +24,12 @@ App.directive('ngPie', ['$window', function($window) {
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
-        scope.render(scope.buildPieData());
+        scope.render(buildPieData());
       });
 
-      scope.$watch('riskIncoming', function(newVals, oldVals) {
-        return scope.render(buildPieData());
-      }, true);
-
-      scope.$watch('riskOutgoings', function(newVals, oldVals) {
-        return scope.render(buildPieData());
-      }, true);
-
       scope.$watch('riskProportion', function(newVals, oldVals) {
-        return scope.updateLabel(buildPieData());
+        scope.updateLabel();
+        return scope.render(buildPieData());
       }, true);
 
       var svg = d3.select(element[0])
@@ -122,9 +115,7 @@ App.directive('ngPie', ['$window', function($window) {
       restrict: 'EA',
       scope: {
         data: '=',
-        riskProportion: '=',
-        riskOutgoings: '=',
-        riskIncoming: '='
+        riskProportion: '='
       },
       link: linker
     };
