@@ -111,7 +111,6 @@ App.directive('ngPie', ['$window', function($window) {
     return {
       restrict: 'EA',
       scope: {
-        data: '=',
         riskProportion: '='
       },
       link: linker
