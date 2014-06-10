@@ -22,7 +22,8 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
-                                "value" => person.object.annual_income_formatted %>
+                                "value" => person.object.annual_income_formatted,
+                                "pattern" => '\d*' %>
 
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
@@ -34,7 +35,8 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
-                                "value" => person.object.extra_income_formatted %>
+                                "value" => person.object.extra_income_formatted,
+                                "pattern" => '\d*' %>
         </div>
       <% else %>
         <div class="rendered-from-js form__item">
@@ -68,7 +70,8 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
-                                "value" => person.object.annual_income_formatted %>
+                                "value" => person.object.annual_income_formatted,
+                                "pattern" => '\d*' %>
 
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
@@ -81,7 +84,8 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
-                                "value" => person.object.extra_income_formatted %>
+                                "value" => person.object.extra_income_formatted,
+                                "pattern" => '\d*' %>
         </div>
       <% end %>
     <% end %>
@@ -103,8 +107,8 @@
                                 "ng-initial" => "",
                                 "currency" => '',
                                 "data-a-sign" =>"£",
-
-                                "value" => person.object.monthly_net_income_formatted %>
+                                "value" => person.object.monthly_net_income_formatted,
+                                "pattern" => '\d*' %>
         </div>
       <% else %>
         <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
@@ -118,8 +122,8 @@
                                 "ng-initial" => "",
                                 "currency" => '',
                                 "data-a-sign" =>"£",
-
-                                "value" => person.object.monthly_net_income_formatted %>
+                                "value" => person.object.monthly_net_income_formatted,
+                                "pattern" => '\d*' %>
         </div>
       <% end %>
     <% end %>

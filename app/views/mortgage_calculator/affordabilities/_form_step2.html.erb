@@ -33,7 +33,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.credit_repayments_formatted %>
+                            "value" => outgoings.object.credit_repayments_formatted,
+                            "pattern" => '\d*' %>
     </div>
     <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :child_maintenance %>
@@ -46,7 +47,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.child_maintenance_formatted %>
+                            "value" => outgoings.object.child_maintenance_formatted,
+                            "pattern" => '\d*' %>
     </div>
   </div>
 
@@ -66,7 +68,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.childcare_formatted %>
+                            "value" => outgoings.object.childcare_formatted,
+                            "pattern" => '\d*' %>
 
       <%= outgoings.errors_for outgoings.object, :travel %>
       <%= outgoings.label :travel %>
@@ -78,7 +81,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.travel_formatted %>
+                            "value" => outgoings.object.travel_formatted,
+                            "pattern" => '\d*' %>
     </div>
     <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :utilities %>
@@ -91,7 +95,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.utilities_formatted %>
+                            "value" => outgoings.object.utilities_formatted,
+                            "pattern" => '\d*' %>
 
       <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
       <%= outgoings.label :rent_and_mortgage %>
@@ -103,7 +108,8 @@
                             "currency" => '',
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
-                            "value" => outgoings.object.rent_and_mortgage_formatted %>
+                            "value" => outgoings.object.rent_and_mortgage_formatted,
+                            "pattern" => '\d*' %>
       </div>
     </div>
 
@@ -124,7 +130,8 @@
                               "currency" => '',
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
-                              "value" => outgoings.object.entertainment_formatted %>
+                              "value" => outgoings.object.entertainment_formatted,
+                              "pattern" => '\d*' %>
 
         <%= outgoings.errors_for outgoings.object, :holidays %>
         <%= outgoings.label :holidays %>
@@ -136,7 +143,8 @@
                               "currency" => '',
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
-                              "value" => outgoings.object.holidays_formatted %>
+                              "value" => outgoings.object.holidays_formatted,
+                              "pattern" => '\d*' %>
       </div>
       <div class="form__item">
         <%= outgoings.errors_for outgoings.object, :food %>
@@ -149,7 +157,8 @@
                               "currency" => '',
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
-                              "value" => outgoings.object.food_formatted %>
+                              "value" => outgoings.object.food_formatted,
+                              "pattern" => '\d*' %>
       </div>
     </div>
   <% end %>
