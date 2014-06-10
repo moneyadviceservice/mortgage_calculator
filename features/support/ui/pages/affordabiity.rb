@@ -32,6 +32,7 @@ module UI
       element :interest_rate, "input[name='affordability[interest_rate]']"
 
       section :borrowing_slider, UI::Sections::Slider, "#borrowing-amount-slider"
+      section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"
 
       element :h1, "h1"
       element :h2, "h2"

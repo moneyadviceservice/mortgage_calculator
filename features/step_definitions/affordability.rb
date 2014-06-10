@@ -97,3 +97,11 @@ When(/^I refine my affordability borrowing$/) do
   @affordability.borrowing_slider.set(300000)
 end
 
+When(/^I refine my affordability interest rate$/) do
+  @affordability.interest_rate.set(4)
+end
+
+When(/^I refine my affordability interest rate slider$/) do
+  @affordability.interest_rate_slider.set(4)
+end
+

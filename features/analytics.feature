@@ -44,7 +44,16 @@ Scenario: When a user refines affordability calculator
   Then  My affordability borrowing refinement interaction is tracked
 
 @javascript
-Scenario: When a user uses completes the affordability calculator
+Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  When  I enter all details for "1" applicants
-  Then  My affordability completion interaction is tracked
+  And   I enter all details for "1" applicants
+  When  I refine my affordability interest rate
+  Then  My affordability interest rate refinement interaction is tracked
+
+@javascript
+Scenario: When a user refines affordability calculator
+  Given I visit the Affordability calculator
+  And   I enter all details for "1" applicants
+  When  I refine my affordability interest rate slider
+  Then  My affordability interest rate refinement interaction is tracked
+
