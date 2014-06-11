@@ -24,28 +24,29 @@ App.directive('ngPie', ['$window', function($window) {
           .append('g');
 
       var $inner = $(element),
-          width = $inner.width() || $inner.parent().width() || 500,
-          radius = width / 3;
+          width = 170,
+          height = 170,
+          radius = width / 2;
 
       svg.append('g')
           .attr('class', 'slices');
 
       svg
-          .attr('transform', 'translate(' + width / 3 + ',' + width / 3 + ')');
+          .attr('transform', 'translate(' + width / 2 + ',' + width / 2 + ')');
 
       var label = svg.append('text')
           .attr('alignment-baseline', 'central')
           .attr('text-anchor', 'middle')
-          .attr('font-size', width / 6);
+          .attr('font-size', width / 5);
 
       var canvas = d3.select('svg');
       canvas
           .attr('preserveAspectRatio', 'xMinYMin')
-          .attr('height', width)
-          .attr('viewBox', '0 0 ' + width + ' ' + width);
+          .attr('width', width)
+          .attr('height', height)
+          .attr('viewBox', '0 0 ' + width + ' ' + height);
 
       var pie = d3.layout.pie()
-          .sort(null)
           .value(function(d) {
             return d.value;
           });
