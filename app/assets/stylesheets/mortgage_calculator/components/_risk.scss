@@ -17,12 +17,12 @@
     width: 15px;
     height: 15px;
     border-radius: 15px;
-    background: #ccc;
+    background: $color-grey-normal;
   }
 }
 
-.risk-slice--incoming {
-  fill: #ccc;
+.risk-slice--outgoings {
+  fill: $color-grey-normal;
 }
 
 .risk--high {
@@ -30,7 +30,7 @@
     color: $color-red-dark;
   }
 
-  .risk-slice--outgoings {
+  .risk-slice--incoming {
     fill: $color-red-dark;
   }
 
@@ -46,7 +46,7 @@
     color: $color-yellow-dark;
   }
 
-  .risk-slice--outgoings {
+  .risk-slice--incoming {
     fill: $color-yellow-dark;
   }
 
@@ -62,7 +62,7 @@
     color: $color-green-medium;
   }
 
-  .risk-slice--outgoings {
+  .risk-slice--incoming {
     fill: $color-green-medium;
   }
 

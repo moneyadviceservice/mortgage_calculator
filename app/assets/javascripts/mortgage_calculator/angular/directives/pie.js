@@ -74,11 +74,11 @@ App.directive('ngPie', ['$window', function($window) {
       scope.render = function() {
         var data = [
           {
-            label: 'Incoming',
+            label: 'Outgoings',
             value: 100 - scope.riskProportion
           },
           {
-            label: 'Outgoings',
+            label: 'Incoming',
             value: scope.riskProportion
           }
         ];
