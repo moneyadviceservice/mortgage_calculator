@@ -35,8 +35,9 @@ App.directive('ngPie', ['$window', function($window) {
           .attr('transform', 'translate(' + width / 2 + ',' + width / 2 + ')');
 
       var label = svg.append('text')
-          .attr('alignment-baseline', 'central')
+          .attr('alignment-baseline', 'middle')
           .attr('text-anchor', 'middle')
+          .attr('dominant-baseline', 'central')
           .attr('font-size', width / 5);
 
       var canvas = d3.select('svg');
