@@ -6,10 +6,16 @@
                     "placeholder" => "eg 5%",
                     "percentage" => "",
                     "data-a-sign" => "%",
-                    "data-p-sign" => "s" %><span ng-hide="js">%</span>
+                    "data-p-sign" => "s",
+                    "analytics" => '',
+                    "analytics-on" => 'change',
+                    "analytics-category" => 'Affordability Calculator',
+                    "analytics-action" => 'Refinement',
+                    "analytics-label" => 'Interest Rate' %><span ng-hide="js">%</span>
 </p>
 
 <div class="slider"
+     id="slider-interest-rate"
      ui-slider min="0.25"
      max="15" step="0.25"
      ng-model="repayments.annualInterestRate"

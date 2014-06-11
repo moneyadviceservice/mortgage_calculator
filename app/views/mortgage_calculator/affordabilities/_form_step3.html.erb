@@ -64,9 +64,15 @@
                        "data-m-dec" => "0",
                        "ng-model" => "affordability.lifestyleSpend",
                        "placeholder" => "Lifestyle Spend",
-                       "pattern" => '\d*' %>
+                       "pattern" => '\d*',
+                       "analytics" => '',
+                       "analytics-on" => 'change',
+                       "analytics-category" => 'Affordability Calculator',
+                       "analytics-action" => 'Refinement',
+                       "analytics-label" => 'Lifestyle' %>
     </p>
     <div class="slider"
+         id="slider-lifestyle"
          ui-slider
          dynamic-for='dynamic-slider-property'
          percentage-for-minimum="20"
@@ -75,7 +81,7 @@
          aria-labelledby="label_price"
          analytics-category="Affordability Calculator"
          analytics-action="Refinement"
-         analytics-label="Life Style Spend">
+         analytics-label="Lifestyle">
     </div>
   </div>
 

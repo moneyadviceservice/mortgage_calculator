@@ -30,8 +30,11 @@ module UI
 
       element :borrowing, "input[name='affordability[borrowing]']"
       element :interest_rate, "input[name='affordability[interest_rate]']"
+      element :lifestyle, "input[name='affordability[lifestyle_costs]']"
 
-      section :borrowing_slider, UI::Sections::Slider, "#borrowing-amount-slider"
+      section :borrowing_slider, UI::Sections::Slider, "#slider-borrowing"
+      section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"
+      section :lifestyle_slider, UI::Sections::Slider, "#slider-lifestyle"
 
       element :h1, "h1"
       element :h2, "h2"

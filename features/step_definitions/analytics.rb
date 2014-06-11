@@ -35,3 +35,29 @@ end
 Then(/^My affordability borrowing refinement interaction is tracked$/) do
   expect(page).to have_analytics_event(['_trackEvent', 'Affordability Calculator', 'Refinement', 'Borrowing'])
 end
+
+Then(/^My affordability interest rate refinement interaction is tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Refinement','Interest Rate']
+  expect(page).to have_analytics_event(expected)
+end
+
+Then(/^My affordability lifestyle refinement interaction is tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Refinement','Lifestyle']
+  expect(page).to have_analytics_event(expected)
+end
+
+Then(/^My risk level is tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Risk Level','high']
+  expect(page).to have_analytics_event(expected)
+end
+
+Then(/^My negative remainging is tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Remaining','Non-positive']
+  expect(page).to have_analytics_event(expected)
+end
+
+Then(/^My negative remainging is not tracked$/) do
+  expected = ['_trackEvent','Affordability Calculator','Remaining','Non-positive']
+  expect(page).to_not have_analytics_event(expected)
+end
+
