@@ -86,9 +86,9 @@ en:
       outgoing_html: "Mortgage repayments and essential costs per month: %{percent} of your total take-home pay: %{absolute}"
       leftover_html: "What you have left over: %{percent} of your monthly take home: %{absolute}"
       positive:
-        remaining: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? Here’s what you can do now"
+        remaining_html: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? <a href='#'>Here’s what you can do now</a>."
       negative:
-        remaining: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. Here’s what you can do now"
+        remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. <a href='#'>Here’s what you can do now</a>."
     warnings:
       missing_fixed_and_committed_costs_html: "You haven’t entered any amounts for fixed and committed costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. Go back to do that now."
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all fixed and committed costs on the previous page or your results on this page will be incorrect. Go back to do that now."

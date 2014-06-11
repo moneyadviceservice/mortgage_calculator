@@ -22,8 +22,6 @@
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
     <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
-
-    <%= inset_block(t "affordability.caveat.estimate") %>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
@@ -104,6 +102,10 @@
     <p>
       <a href="javascript:window.history.go(-1);" class='button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js'><%= t "affordability.back" %></a>
     </p>
+  </div>
+
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <%= inset_block(t "affordability.caveat.estimate") %>
   </div>
 <% end %>
 
