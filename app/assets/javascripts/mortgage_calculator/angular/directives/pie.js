@@ -47,6 +47,7 @@ App.directive('ngPie', ['$window', function($window) {
           .attr('viewBox', '0 0 ' + width + ' ' + height);
 
       var pie = d3.layout.pie()
+          .sort(null)
           .value(function(d) {
             return d.value;
           });
