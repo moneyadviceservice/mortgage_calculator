@@ -6,7 +6,7 @@
   </p>
 <% end %>
 
-<p class="rendered-from-js results mortgagecalc__heading">
+<p class="rendered-from-js results accent accent--medium">
   <%= t "affordability.range.offer_html",
          min: "{{ affordability.minimumBorrowing() | customCurrency:'£' }}".html_safe,
          max: "{{ affordability.maximumBorrowing() | customCurrency:'£' }}".html_safe %>
