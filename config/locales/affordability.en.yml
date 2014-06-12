@@ -1,6 +1,6 @@
 en:
   affordability:
-    tool_name: "affordability-calculator"
+    tool_name: "mortgage-affordability-calculator"
     title: "How much can you borrow?"
     preamble: "This tool will help you find out how much you can afford to borrow to buy a home. We'll work it out by looking at your income and your outgoings. Mortgage lenders will look at those figures very closely to work out how much they'll offer you."
     description: "It should take you about five minutes to complete."
