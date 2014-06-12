@@ -8,6 +8,8 @@
   <% f.validates @affordability, @affordability.outgoings %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <h2><%= I18n.t("affordability.title") %></h2>
+
     <%= f.validation_summary %>
 
     <h3><%= I18n.t("affordability.titles.monthly_outgoings") %></h3>
