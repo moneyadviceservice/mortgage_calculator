@@ -11,7 +11,10 @@
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container risk--<%= @affordability.risk_level %>"
   ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
-  <%= render 'header' %>
+  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+    <h2><%= I18n.t("affordability.title") %></h2>
+  </div>
+
   <%= render 'form_step3' %>
 </div>
 
