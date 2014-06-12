@@ -7,6 +7,10 @@ Scenario: Can view the Affordability Calculator
   Given I visit the Affordability page
   Then  I should see the Affordability title
 
+Scenario: Welsh users
+  Given I visit the Welsh Affordability page
+  Then  I see the Welsh Affordability calculator
+
 @with_and_without_javascript
 Scenario: Affordability for one applicant
   Given I visit the Affordability page

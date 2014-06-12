@@ -41,5 +41,15 @@ MortgageCalculator::Engine.routes.draw do
         get 'next_steps'
       end
     end
+
+    resource :affordability, path: "morgais-cyfrifiannell-fforddiadwyedd" do
+      get '/', to: "affordabilities#step_1"
+      collection do
+        get 'step_1', path: "step-1"
+        match 'step_2', path: "step-2"
+        match 'step_3', path: "step-3"
+        get 'next_steps'
+      end
+    end
   end
 end

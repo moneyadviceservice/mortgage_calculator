@@ -3,6 +3,15 @@ Given /^I visit the Affordability (?:page|calculator)$/i do
   @affordability.load
 end
 
+Given(/^I visit the Welsh Affordability page$/) do
+  @affordability = UI::Pages::WelshAffordability.new
+  @affordability.load
+end
+
+Then(/^I see the Welsh Affordability calculator$/) do
+  @affordability.should have_content("welsh title")
+end
+
 Given(/^I visit the Syndicated Affordability page$/) do
   @affordability = UI::Pages::SyndicatedAffordability.new
   @affordability.load
