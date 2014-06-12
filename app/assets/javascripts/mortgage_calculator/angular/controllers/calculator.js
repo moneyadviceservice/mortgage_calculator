@@ -27,8 +27,6 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $scope.affordability.lifestyleSpend = $scope.affordability.calculateLifestyleSpend();
     };
 
-    $scope.borrowingStepValue = ($scope.affordability.borrowing() / 100) * 1;
-
 
     //Stamp Duty Calculations
     $scope.stampDuty = StampDuty;
