@@ -1,0 +1,8 @@
+.pie {
+  width: 100%;
+  margin: $baseline-unit*2 0;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-left: 50px;
+  }
+}

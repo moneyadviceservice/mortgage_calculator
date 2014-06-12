@@ -2,9 +2,42 @@
   @extend %font-heading-heavy;
 }
 
+.risk-key {
+  @include body(16, 24);
+  margin: $baseline-unit*2 0 $baseline-unit*4;
+  padding-left: 25px;
+  position: relative;
+
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: $baseline-unit;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: $color-grey-normal;
+  }
+}
+
+.risk-slice--outgoings {
+  fill: $color-grey-normal;
+}
+
 .risk--high {
   .risk__accent {
     color: $color-red-dark;
+  }
+
+  .risk-slice--incoming {
+    fill: $color-red-dark;
+  }
+
+  .risk-key--incoming {
+    &:after {
+      background: $color-red-dark;
+    }
   }
 }
 
@@ -12,10 +45,30 @@
   .risk__accent {
     color: $color-yellow-dark;
   }
+
+  .risk-slice--incoming {
+    fill: $color-yellow-dark;
+  }
+
+  .risk-key--incoming {
+    &:after {
+      background: $color-yellow-dark;
+    }
+  }
 }
 
 .risk--low {
   .risk__accent {
     color: $color-green-medium;
+  }
+
+  .risk-slice--incoming {
+    fill: $color-green-medium;
+  }
+
+  .risk-key--incoming {
+    &:after {
+      background: $color-green-medium;
+    }
   }
 }
