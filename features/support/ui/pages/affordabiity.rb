@@ -56,6 +56,10 @@ module UI
     class SyndicatedAffordability < Affordability
       set_url "/en/mortgage_calculator/mortgage-affordability-calculator?syndicated"
     end
+
+    class WelshAffordability < Affordability
+      set_url "/cy/mortgage_calculator/morgais-cyfrifiannell-fforddiadwyedd"
+    end
   end
 end
 
