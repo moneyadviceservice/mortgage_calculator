@@ -11,7 +11,8 @@ App.directive('uiSlider', function() {
         percentageForMin = attrs.percentageForMinimum || 50,
         percentageForMax = attrs.percentageForMaximum || 200,
         labelFollower = attrs.labelFollower || '',
-        $labelFollower = $(labelFollower).appendTo(element);
+        $labelFollower = $(labelFollower).appendTo(element),
+        sliderDefaultMax = attrs.customSliderMax || 250;
 
     //Fire GA Events
     var gaRefinement = function(){
@@ -34,7 +35,7 @@ App.directive('uiSlider', function() {
     var options = {
       range: 'min',
       min: (percentageForMin / 100) * scope.value,
-      max: (percentageForMax / 100) * scope.value,
+      max: (percentageForMax / 100) * (scope.value || sliderDefaultMax),
       value: scope.value,
       slide: function (event, ui) {
         scope.$apply(function () {
