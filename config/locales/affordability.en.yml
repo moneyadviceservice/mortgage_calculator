@@ -45,7 +45,7 @@ en:
             annual_income_is_zero: "Annual income should be more than zero if take-home pay is more than zero"
     titles:
       annual_income: "Annual Income"
-      take_home: "Monthy take-home pay"
+      take_home: "Monthly take-home pay"
       monthly_outgoings: "Monthly household costs"
       estimated_committed: "Estimated monthly committed costs"
       estimated_fixed: "Estimated monthly fixed costs"
