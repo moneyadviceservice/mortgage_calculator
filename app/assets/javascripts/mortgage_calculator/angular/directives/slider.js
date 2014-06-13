@@ -12,7 +12,7 @@ App.directive('uiSlider', function() {
         percentageForMax = attrs.percentageForMaximum || 200,
         labelFollower = attrs.labelFollower || '',
         $labelFollower = $(labelFollower).appendTo(element),
-        sliderDefaultMax = 250;
+        sliderDefaultMax = attrs.customSliderMax || 250;
 
     //Fire GA Events
     var gaRefinement = function(){
