@@ -1,5 +1,4 @@
 module MortgageCalculator
-  # Load order issue - subclass a class explicitly
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def step_1
       @affordability = AffordabilityPresenter.new(affordability_model)
@@ -13,7 +12,6 @@ module MortgageCalculator
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       unless @affordability.valid_for_step2?
-        persist_affordability_params_to_flash
         redirect_to step_1_affordability_path
       end
     end
@@ -24,7 +22,6 @@ module MortgageCalculator
       if @affordability.valid_for_step3?
         adjust_interest_rate
       else
-        persist_affordability_params_to_flash
         redirect_to step_2_affordability_path
       end
     end
@@ -39,18 +36,34 @@ module MortgageCalculator
     private
 
       def affordability_params
-        flash[:params] ||= {}
-        params[:affordability] || flash[:params][:affordability]
+        session[:affordability] ||= {}
+        hash = if params[:affordability]
+          session[:affordability].deep_merge(params[:affordability])
+        else
+          session[:affordability]
+        end
+        persist_affordability_to_session(hash)
+
+        hash
       end
 
-      def persist_affordability_params_to_flash
-        flash[:params] = {}
-        flash[:params][:affordability] = params[:affordability]
+      def persist_affordability_to_session(hash)
+        session[:affordability] = hash.dup || {}
+
+        remove_step_3_session_details
+
+        session[:affordability]
+      end
+
+      def remove_step_3_session_details
+        session[:affordability]['borrowing'] = nil if session[:affordability]['borrowing']
+        session[:affordability]['interest_rate'] = nil if session[:affordability]['interest_rate']
+        session[:affordability]['lifestyle_costs'] = nil if session[:affordability]['lifestyle_costs']
       end
 
       def affordability_model
         model = Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)
-        model.two_applicants = affordability_params[:two_applicants] if affordability_params
+        model.two_applicants = affordability_params['two_applicants'] if affordability_params
         model
       end
 
@@ -63,8 +76,8 @@ module MortgageCalculator
       end
 
       def people_models
-        if affordability_params
-          array =  affordability_params[:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))}
+        if affordability_params && affordability_params['people_attributes']
+          array =  affordability_params['people_attributes'].values.map{|p| PersonPresenter.new(Person.new(p))}
           array << PersonPresenter.new(Person.new) if array.size == 1
           return array
         end
@@ -73,19 +86,19 @@ module MortgageCalculator
       end
 
       def outgoings_params
-        affordability_params[:outgoings] if affordability_params
+        affordability_params['outgoings'] if affordability_params
       end
 
       def borrowing_params
-        affordability_params[:borrowing] if affordability_params
+        affordability_params['borrowing'] if affordability_params
       end
 
       def lifestyle_params
-        affordability_params[:lifestyle_costs] if affordability_params
+        affordability_params['lifestyle_costs'] if affordability_params
       end
 
       def interest_rate_params
-        affordability_params[:interest_rate] if affordability_params
+        affordability_params['interest_rate'] if affordability_params
       end
 
       def adjust_interest_rate
