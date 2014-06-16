@@ -1,4 +1,4 @@
-<%= form_for @repayment, url: repayment_path, html: { class: 'form step_two mortgagecalc__form', id: 'edit_repayment'} do |f| %>
+<%= form_for @repayment, url: repayment_path, html: { class: 'form step_two mortgagecalc__form', id: 'edit_repayment', novalidate: ''} do |f| %>
   <div class="form__item">
     <%= f.label :price,
     	"id" => "label_price" %>

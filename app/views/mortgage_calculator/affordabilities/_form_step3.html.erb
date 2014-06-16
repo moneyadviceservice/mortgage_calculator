@@ -3,7 +3,7 @@
   <h3><%= t "affordability.titles.what_you_might_be_offered" %></h3>
 </div>
 
-<%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two' } do |f| %>
+<%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '' } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.annual", 'ng-initial' => '' %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.extra", 'ng-initial' => '' %>

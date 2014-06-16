@@ -1,4 +1,4 @@
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one' } do |f| %>
+<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one', novalidate: '' } do |f| %>
   <div class="mortgagecalc__panel">
     <div class="form__item">
       <%= f.label :price %>

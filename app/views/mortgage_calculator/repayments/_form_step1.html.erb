@@ -2,7 +2,7 @@
   <h3><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h3>
 </div>
 
-<%= form_for @repayment, :html => {:class => "form step_one"}, url: repayment_path do |f| %>
+<%= form_for @repayment, :html => {:class => "form step_one", novalidate: ''}, url: repayment_path do |f| %>
   <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
     <div class="form__item">
       <%= f.label :price,

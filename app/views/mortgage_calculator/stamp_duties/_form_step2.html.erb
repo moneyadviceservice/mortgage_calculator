@@ -1,4 +1,4 @@
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)' } do |f| %>
+<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
   <div class="form__item">
     <%= f.label :price %>
     <%= f.text_field :price,
