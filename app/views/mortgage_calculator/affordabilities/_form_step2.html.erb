@@ -8,14 +8,14 @@
   <% f.validates @affordability, @affordability.outgoings %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <h2><%= I18n.t("affordability.title") %></h2>
+    <h2><%= t("affordability.title") %></h2>
 
     <%= f.validation_summary %>
 
-    <h3><%= I18n.t("affordability.titles.monthly_outgoings") %></h3>
+    <h3><%= t("affordability.titles.monthly_outgoings") %></h3>
 
-    <p><%= I18n.t("affordability.input_page.monthly_outgoings_descriptions") %></p>
-    <p><%= I18n.t("affordability.input_page.outgoings_second_person") %></p>
+    <p><%= t("affordability.input_page.monthly_outgoings_descriptions_html") %></p>
+    <p><%= t("affordability.input_page.outgoings_second_person") %></p>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">

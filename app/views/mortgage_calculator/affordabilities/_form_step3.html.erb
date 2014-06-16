@@ -29,9 +29,11 @@
     <h3><%= t "affordability.titles.how_affect_budget" %></h3>
 
     <% if @affordability.only_rent_and_mortgage_warning? %>
-      <%= inset_block(I18n.t("affordability.warnings.only_rent_and_mortgage_html").html_safe) %>
+      <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
+                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
     <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
-      <%= inset_block(I18n.t("affordability.warnings.missing_fixed_and_committed_costs_html").html_safe) %>
+      <%= inset_block(t("affordability.warnings.missing_fixed_and_committed_costs_html",
+                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
     <% end %>
 
     <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
@@ -51,7 +53,8 @@
     <h3><%= t "affordability.titles.can_afford" %></h3>
 
     <% if @affordability.missing_lifestyle_costs_warning? %>
-      <%= inset_block(I18n.t("affordability.warnings.missing_lifestyle_costs_html").html_safe) %>
+      <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
+                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
     <% end %>
 
     <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
