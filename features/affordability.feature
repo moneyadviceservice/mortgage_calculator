@@ -18,18 +18,18 @@ Scenario: Affordability for one applicant
   When  I enter all details for "1" applicants
   Then  I see "between £287,840.00 and £431,760.00"
   And   I see "Your estimated mortgage repayments per month will be approximately: £2,103.35"
-  And   I see "Your estimated monthly remaining budget is therefore: £1,496.65"
-  And   I see "Your estimated fixed and committed spending per month is: £1,500.00"
+  And   I see "The money you have left over after living costs is £1,496.65"
+  And   I see "Your estimated fixed and committed spend per month is: £1,500.00"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to £2,542.99"
-  And   I see "Your remaining budget will be £1,057.01"
+  And   I see "Your financial buffer will now be £1,057.01"
 
 Scenario: I recalculate
   Given I have entered all details for applicant "1"
   When  I update my affordability circumstances
   And   I recalculate
   Then  I see "79% of your total take-home pay"
-  And   I see "Your estimated monthly remaining budget is therefore: £330.49"
-  And   I see "Can you afford these monthly payments? Your estimated fixed and committed spending per month is: £1,500.00"
+  And   I see "The money you have left over after living costs is £330.49"
+  And   I see "Your estimated fixed and committed spend per month is: £1,500.00"
 
 @with_and_without_javascript
 Scenario Outline: There are two applicants with extra income and commited spend
@@ -59,10 +59,10 @@ Scenario Outline: There are two applicants with extra income and commited spend
 
   Then  I see "between <range_min> and <range_max>"
   And   I see "Your estimated mortgage repayments per month will be approximately: <repayment_per_month>"
-  And   I see "Your estimated monthly remaining budget is therefore: <remaining_per_month>"
-  And   I see "Your estimated fixed and committed spending per month is: <spending_commitments>"
+  And   I see "The money you have left over after living costs is <remaining_per_month>"
+  And   I see "Your estimated fixed and committed spend per month is: <spending_commitments>"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to <increased_monthly_repayment>"
-  And   I see "Your remaining budget will be <financial_buffer>"
+  And   I see "Your financial buffer will now be <financial_buffer>"
 
   Examples:
   | annual_income | extra_income | monthly_net_income | person_two_annual_income | person_two_extra_income | person_two_monthly_net_income | credit_repayments | utilities | childcare | child_maintenance | rent_and_mortgage | food | travel | entertainment | holiday | range_min   | range_max   | repayment_per_month | remaining_per_month | spending_commitments | increased_monthly_repayment | financial_buffer |
