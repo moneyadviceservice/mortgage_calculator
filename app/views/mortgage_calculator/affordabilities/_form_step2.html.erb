@@ -69,7 +69,8 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.childcare_formatted,
                             "pattern" => '\d*' %>
-
+    </div>
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :travel %>
       <%= outgoings.label :travel %>
       <%= outgoings.text_field :travel,
@@ -94,7 +95,8 @@
                             "data-m-dec" =>"0",
                             "value" => outgoings.object.utilities_formatted,
                             "pattern" => '\d*' %>
-
+    </div>
+    <div class="form__item">
       <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
       <%= outgoings.label :rent_and_mortgage %>
       <%= outgoings.text_field :rent_and_mortgage,
@@ -127,7 +129,8 @@
                               "data-m-dec" =>"0",
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
-
+      </div>
+      <div class="form__item">
         <%= outgoings.errors_for outgoings.object, :holidays %>
         <%= outgoings.label :holidays %>
         <%= outgoings.text_field :holidays,
