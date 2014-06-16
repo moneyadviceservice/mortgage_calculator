@@ -25,7 +25,8 @@
                                 "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted,
                                 "pattern" => '\d*' %>
-
+        </div>
+        <div class="form__item">
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
           <%= person.text_field :extra_income,
@@ -71,7 +72,8 @@
                                 "data-m-dec" =>"0",
                                 "value" => person.object.annual_income_formatted,
                                 "pattern" => '\d*' %>
-
+        </div>
+        <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
           <%= f.errors_for person.object, :extra_income %>
           <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
           <%= person.text_field :extra_income,
