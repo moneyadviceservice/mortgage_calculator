@@ -59,7 +59,8 @@
 
   <div class="mortgagecalc__panel" calculate>
     <p>
-      <%= f.label :lifestyle_costs %>
+      <%= f.label :lifestyle_costs,
+          "id" => "label_lifestyle" %>
       <%= f.text_field :lifestyle_costs,
                        class: 'dynamic-slider-property',
                        "currency" => '',
@@ -82,7 +83,7 @@
          percentage-for-maximum="200"
          custom-slider-max="250"
          ng-model="affordability.lifestyleSpend"
-         aria-labelledby="label_price"
+         aria-labelledby="label_lifestyle"
          analytics-category="Affordability Calculator"
          analytics-action="Refinement"
          analytics-label="Lifestyle">

@@ -1,6 +1,7 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full">
      <p>
-       <%= f.label :interest_rate %>
+       <%= f.label :interest_rate,
+          "id" => "label_interest_rate" %>
      </p>
 </div>
 
@@ -22,7 +23,7 @@
           ui-slider min="1"
           max="15" step="1"
           ng-model="repayments.annualInterestRate"
-          aria-labelledby="label_rate"
+          aria-labelledby="label_interest_rate"
           analytics-category="Affordability Calculator"
           analytics-action="Refinement"
           analytics-label="Interest Rate">
