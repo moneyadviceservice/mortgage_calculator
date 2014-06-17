@@ -49,9 +49,7 @@ module MortgageCalculator
       end
 
       def affordability_model
-        model = Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params)
-        model.two_applicants = affordability_params[:two_applicants] if affordability_params
-        model
+        Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params, two_applicants: two_applicants_params)
       end
 
       def outgoings_model
@@ -70,6 +68,10 @@ module MortgageCalculator
         end
 
         return [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
+      end
+
+      def two_applicants_params
+        affordability_params[:two_applicants] if affordability_params
       end
 
       def outgoings_params
