@@ -5,8 +5,6 @@ module MortgageCalculator
       @affordability = AffordabilityPresenter.new(affordability_model)
 
       @affordability.valid? if affordability_params
-
-      adjust_interest_rate
     end
 
     def step_2
