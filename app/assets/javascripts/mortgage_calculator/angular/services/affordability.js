@@ -91,12 +91,16 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.outgoings.entertainment + this.outgoings.holidays + this.outgoings.food;
       },
 
+      getLifestyleSpend: function() {
+        return this.lifestyleSpend || 0;
+      },
+
       remainingPerMonth: function() {
-        return Math.round(( (this.takeHomePay() - this.riskAmount())  - this.lifestyleSpend) * 100 ) / 100;
+        return Math.round(( (this.takeHomePay() - this.riskAmount())  - this.getLifestyleSpend()) * 100 ) / 100;
       },
 
       remainingBuffer: function() {
-        return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.lifestyleSpend;
+        return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.getLifestyleSpend();
       }
     };
 

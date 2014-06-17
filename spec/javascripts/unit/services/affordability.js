@@ -195,12 +195,40 @@ describe('Service: Affordability', function() {
 
   });
 
+  describe('#getLifestyleSpend', function() {
+
+    it('returns the lifestyleSpend', function() {
+      affordability.lifestyleSpend = 1234.56;
+
+      expect(affordability.getLifestyleSpend()).toBe(1234.56);
+    });
+
+    it('returns 0 if lifestyleSpend is null', function() {
+      affordability.lifestyleSpend = null;
+
+      expect(affordability.getLifestyleSpend()).toBe(0);
+    });
+
+    it('returns 0 if lifestyleSpend is empty string', function() {
+      affordability.lifestyleSpend = '';
+
+      expect(affordability.getLifestyleSpend()).toBe(0);
+    });
+
+  });
+
   describe('#remainingPerMonth', function() {
 
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
       calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
       expect(affordability.remainingPerMonth()).toBe(1356.56);
+    });
+
+    it('calculates the remaining spend per month, even when lifestyleSpend is null', function() {
+      calculateRepayments();
+      affordability.lifestyleSpend = null;
+      expect(affordability.remainingPerMonth()).toBe(2056.56);
     });
 
   });
@@ -212,6 +240,13 @@ describe('Service: Affordability', function() {
       calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
       expect(affordability.remainingPerMonth()).toBe(1051.21);
+    });
+
+    it('calculates the applicant(s) remaining buffer after a 2% increase, even when lifestyleSpend is null', function() {
+      repayments.annualInterestRate = 7;
+      calculateRepayments();
+      affordability.lifestyleSpend = null;
+      expect(affordability.remainingPerMonth()).toBe(1751.21);
     });
 
   });
