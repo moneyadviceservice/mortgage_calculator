@@ -117,7 +117,7 @@ App.directive('uiSlider', function() {
       value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, '')) || 0;
       element.slider({
         min: (percentageForMin / 100) * value,
-        max: (percentageForMax / 100) * value,
+        max: ((percentageForMax / 100) * value) || sliderDefaultMax,
         value: value,
         step: (value / 100) * 1
       });
