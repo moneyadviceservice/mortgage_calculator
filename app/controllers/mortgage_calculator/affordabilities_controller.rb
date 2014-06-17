@@ -49,7 +49,12 @@ module MortgageCalculator
       end
 
       def affordability_model
-        Affordability.new(people_models, outgoings_model, borrowing: borrowing_params, lifestyle_costs: lifestyle_params, interest_rate: interest_rate_params, two_applicants: two_applicants_params)
+        Affordability.new(people: people_models,
+                          outgoings: outgoings_model,
+                          borrowing: borrowing_params,
+                          lifestyle_costs: lifestyle_params,
+                          interest_rate: interest_rate_params,
+                          two_applicants: two_applicants_params)
       end
 
       def outgoings_model

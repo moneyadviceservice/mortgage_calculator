@@ -27,13 +27,12 @@ module MortgageCalculator
       ))
     end
 
-    subject{ described_class.new([person1], outgoings) }
+    subject{ described_class.new(people: [person1], outgoings: outgoings) }
 
     describe 'validations' do
       context 'when it is valid' do
         let(:person1){ Person.new({ annual_income: "100000", extra_income: "", monthly_net_income: "6000" }) }
         let(:person2){ Person.new({ annual_income: "", extra_income: "", monthly_net_income: "" }) }
-        subject{ described_class.new([person1], outgoings) }
 
         it 'is valid' do
           expect(subject).to be_valid
@@ -42,7 +41,6 @@ module MortgageCalculator
 
       context 'when a person is not valid' do
         let(:person1){ Person.new({ annual_income: "abc", extra_income: "10000" }) }
-        subject{ described_class.new([person1], outgoings) }
 
         it 'is not valid' do
           expect(subject).to_not be_valid
@@ -63,7 +61,6 @@ module MortgageCalculator
             entertainment: 400
           )
         end
-        subject{ described_class.new([person1], outgoings) }
 
         it 'is not valid' do
           expect(subject).to_not be_valid
@@ -74,7 +71,7 @@ module MortgageCalculator
         let(:person1){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
         let(:person2){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
 
-        subject{ described_class.new([person1, person2], outgoings) }
+        subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
         it 'is not valid' do
           expect(subject.valid?).to be_false
@@ -84,8 +81,6 @@ module MortgageCalculator
     end
 
     context 'when the user is a sole buyer' do
-      subject{ described_class.new([person1], outgoings) }
-
       its(:total_income){ should == 110_000 }
       its(:can_borrow_from){ should == 301_280 }
       its(:can_borrow_upto){ should == 451_920 }
@@ -94,7 +89,7 @@ module MortgageCalculator
     end
 
     context 'when there are multiple applicants' do
-      subject{ described_class.new([person1, person2], outgoings) }
+      subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
       its(:total_income){ should == 165_000 }
       its(:can_borrow_from){ should == 455_280 }
@@ -112,7 +107,7 @@ module MortgageCalculator
       end
 
       context 'when overriden' do
-        subject{ described_class.new([person1], outgoings, borrowing: 123000) }
+        subject{ described_class.new(people: [person1], outgoings: outgoings, borrowing: 123000) }
 
         it 'uses overriden value' do
           expect(subject.borrowing).to eql(123000)
@@ -122,7 +117,7 @@ module MortgageCalculator
 
     describe :lifestyle_costs do
       context 'when overridden' do
-        subject{ described_class.new([person1], outgoings, lifestyle_costs: 123) }
+        subject{ described_class.new(people: [person1], outgoings: outgoings, lifestyle_costs: 123) }
 
         it 'uses overridden value' do
           expect(subject.lifestyle_costs.to_i).to eql(123)
@@ -132,7 +127,7 @@ module MortgageCalculator
 
     describe :interest_rate do
       context 'when overridden' do
-        subject{ described_class.new([person1], outgoings, interest_rate: 13) }
+        subject{ described_class.new(people: [person1], outgoings: outgoings, interest_rate: 13) }
 
         it 'use new value' do
           expect(subject.repayment.interest_rate.to_i).to eql(13)
@@ -146,7 +141,7 @@ module MortgageCalculator
       end
 
       context 'when over 100%' do
-        subject{ described_class.new([person1], outgoings, interest_rate: 50) }
+        subject{ described_class.new(people: [person1], outgoings: outgoings, interest_rate: 50) }
 
         it 'is capped at 100%' do
           expect(subject.risk_percentage.to_i).to eql(100)
@@ -154,7 +149,7 @@ module MortgageCalculator
       end
 
       context 'when divide by zero' do
-        subject{ described_class.new([person1], Outgoings.new) }
+        subject{ described_class.new(people: [person1], outgoings: Outgoings.new) }
 
         let(:person1) do
           Person.new({ annual_income: "0",
@@ -319,7 +314,7 @@ module MortgageCalculator
       end
 
       context 'when only rent and mortgage present' do
-        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 1)) }
+        subject{ described_class.new(people: [], outgoings: Outgoings.new(rent_and_mortgage: 1)) }
 
         it "only_rent_and_mortgage_warning returns true" do
           expect(subject.only_rent_and_mortgage_warning?).to be_true
@@ -327,7 +322,7 @@ module MortgageCalculator
       end
 
       context 'when not only rent and mortgage present' do
-        subject{ described_class.new([], Outgoings.new(rent_and_mortgage: 1, utilities: 1)) }
+        subject{ described_class.new(people: [], outgoings: Outgoings.new(rent_and_mortgage: 1, utilities: 1)) }
 
         it "only_rent_and_mortgage_warning returns false" do
           expect(subject.only_rent_and_mortgage_warning?).to be_false
@@ -360,7 +355,7 @@ module MortgageCalculator
 
     describe :save do
       let(:store){ Hash.new }
-      subject{ described_class.new([person1, person2], outgoings) }
+      subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
       before :each do
         subject.save(store)

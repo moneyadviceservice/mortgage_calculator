@@ -29,9 +29,9 @@ module MortgageCalculator
       @lifestyle_costs || outgoings.lifestyle_costs
     end
 
-    def initialize(people, outgoings, options = {})
-      @people = people
-      @outgoings = outgoings
+    def initialize(options = {})
+      @people = options[:people]
+      @outgoings = options[:outgoings]
       @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
       self.two_applicants = options[:two_applicants]
@@ -163,16 +163,14 @@ module MortgageCalculator
       people = store[:people_attributes].values.map do |p|
         PersonPresenter.new(Person.new(p))
       end
-
       people << PersonPresenter.new(Person.new) if people.size == 1
 
       outgoings = OutgoingsPresenter.new(Outgoings.new(store[:outgoings]))
       borrowing = store[:borrowing]
       interest_rate = store[:interest_interest]
       lifestyle_costs = store[:lifestyle_costs]
-      options = { borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs }
 
-      new(people, outgoings, options = {})
+      new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
     end
 
   private
