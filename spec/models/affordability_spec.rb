@@ -15,7 +15,7 @@ module MortgageCalculator
     end
 
     let(:outgoings) do
-      Outgoings.new(
+      OutgoingsPresenter.new(Outgoings.new(
         credit_repayments: 200,
         utilities: 200,
         childcare: 100,
@@ -24,7 +24,7 @@ module MortgageCalculator
         food: 200,
         travel: 200,
         entertainment: 400
-      )
+      ))
     end
 
     subject{ described_class.new([person1], outgoings) }
@@ -332,6 +332,57 @@ module MortgageCalculator
         it "only_rent_and_mortgage_warning returns false" do
           expect(subject.only_rent_and_mortgage_warning?).to be_false
         end
+      end
+    end
+
+    let(:serialized_hash) do
+      { "people_attributes" => {
+          '0' => {'annual_income'=>"100000.0",
+                  'extra_income'=>"10000.0",
+                  'monthly_net_income'=>"6000.0"},
+          '1' => {'annual_income'=>"50000.0",
+                  'extra_income'=>"5000.0",
+                  'monthly_net_income'=>"3000.0"}},
+         "two_applicants" => nil,
+         "outgoings" => {
+           "child_maintenance"=>"0.00",
+           "childcare"=>"100.00",
+           "credit_repayments"=>"200.00",
+           "entertainment"=>"400.00",
+           "food"=>"200.00",
+           "holidays"=>"0.00",
+           "rent_and_mortgage"=>"600.00",
+           "travel"=>"200.00",
+           "utilities"=>"200.00"
+        }
+      }
+    end
+
+    describe :save do
+      let(:store){ Hash.new }
+      subject{ described_class.new([person1, person2], outgoings) }
+
+      before :each do
+        subject.save(store)
+      end
+
+      it 'persists to store' do
+        expect(store[:affordability]).to eql(serialized_hash)
+      end
+    end
+
+    describe :load_from_store do
+      let(:store) do
+        { affordability: serialized_hash }
+      end
+
+      subject{ described_class.load_from_store(store) }
+
+      it 'loads from store' do
+        subject = described_class.load_from_store(store)
+        hash = {}
+        subject.save(hash)
+        expect(hash[:affordability]).to eql(serialized_hash)
       end
     end
   end
