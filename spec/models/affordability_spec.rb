@@ -374,10 +374,39 @@ module MortgageCalculator
       subject{ described_class.load_from_store(store) }
 
       it 'loads from store' do
-        subject = described_class.load_from_store(store)
         hash = {}
         subject.save(hash)
         expect(hash[:affordability]).to eql(serialized_hash)
+      end
+
+      context 'when store is empty' do
+        let(:store){ Hash.new }
+
+        it 'loads nothing' do
+          hash = {}
+          subject.save(hash)
+          expect(hash[:affordability]).to eql(
+            { "people_attributes" => {
+                '0' => {'annual_income'=>"0.0",
+                        'extra_income'=>"0.0",
+                        'monthly_net_income'=>"0.0"},
+                '1' => {'annual_income'=>"0.0",
+                        'extra_income'=>"0.0",
+                        'monthly_net_income'=>"0.0"}},
+               "two_applicants" => nil,
+               "outgoings" => {
+                 "child_maintenance"=>"0.00",
+                 "childcare"=>"0.00",
+                 "credit_repayments"=>"0.00",
+                 "entertainment"=>"0.00",
+                 "food"=>"0.00",
+                 "holidays"=>"0.00",
+                 "rent_and_mortgage"=>"0.00",
+                 "travel"=>"0.00",
+                 "utilities"=>"0.00"
+              }
+            })
+        end
       end
     end
   end

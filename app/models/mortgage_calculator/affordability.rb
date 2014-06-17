@@ -158,17 +158,26 @@ module MortgageCalculator
     end
 
     def self.load_from_store(store)
-      store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability]
+      store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability] || {}
 
-      people = store[:people_attributes].values.map do |p|
-        PersonPresenter.new(Person.new(p))
+      people = []
+      if store[:people_attributes]
+        people = store[:people_attributes].values.map do |p|
+          PersonPresenter.new(Person.new(p))
+        end
       end
+      people << PersonPresenter.new(Person.new) if people.size == 0
       people << PersonPresenter.new(Person.new) if people.size == 1
 
-      outgoings = OutgoingsPresenter.new(Outgoings.new(store[:outgoings]))
-      borrowing = store[:borrowing]
-      interest_rate = store[:interest_interest]
-      lifestyle_costs = store[:lifestyle_costs]
+      if store[:outgoings]
+        outgoings = OutgoingsPresenter.new(Outgoings.new(store[:outgoings]))
+      else
+        outgoings = OutgoingsPresenter.new(Outgoings.new())
+      end
+
+      borrowing = store[:borrowing] if store[:borrowing]
+      interest_rate = store[:interest_rate] if store[:interest_rate]
+      lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
 
       new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
     end
