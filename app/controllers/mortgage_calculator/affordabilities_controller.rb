@@ -53,44 +53,6 @@ module MortgageCalculator
         Affordability.load_from_store(hash)
       end
 
-      def outgoings_model
-        if outgoings_params
-          OutgoingsPresenter.new(Outgoings.new(outgoings_params))
-        else
-          OutgoingsPresenter.new(Outgoings.new)
-        end
-      end
-
-      def people_models
-        if affordability_params
-          array =  affordability_params[:people_attributes].values.map{|p| PersonPresenter.new(Person.new(p))}
-          array << PersonPresenter.new(Person.new) if array.size == 1
-          return array
-        end
-
-        return [PersonPresenter.new(Person.new), PersonPresenter.new(Person.new)]
-      end
-
-      def two_applicants_params
-        affordability_params[:two_applicants] if affordability_params
-      end
-
-      def outgoings_params
-        affordability_params[:outgoings] if affordability_params
-      end
-
-      def borrowing_params
-        affordability_params[:borrowing] if affordability_params
-      end
-
-      def lifestyle_params
-        affordability_params[:lifestyle_costs] if affordability_params
-      end
-
-      def interest_rate_params
-        affordability_params[:interest_rate] if affordability_params
-      end
-
       def adjust_interest_rate
         @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
         @changer.change_interest_rate_by(interest_rate_change_amount)
