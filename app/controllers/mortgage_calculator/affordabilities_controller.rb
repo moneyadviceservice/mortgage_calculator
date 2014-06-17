@@ -9,6 +9,7 @@ module MortgageCalculator
 
     def step_2
       @affordability = AffordabilityPresenter.new(affordability_model)
+      @affordability.save(session)
 
       unless @affordability.valid_for_step2?
         persist_affordability_params_to_flash
@@ -18,6 +19,7 @@ module MortgageCalculator
 
     def step_3
       @affordability = AffordabilityPresenter.new(affordability_model)
+      @affordability.save(session)
 
       if @affordability.valid_for_step3?
         adjust_interest_rate
@@ -37,22 +39,18 @@ module MortgageCalculator
     private
 
       def affordability_params
-        flash[:params] ||= {}
-        params[:affordability] || flash[:params][:affordability]
+        params[:affordability] || session[:affordability]
       end
 
       def persist_affordability_params_to_flash
-        flash[:params] = {}
-        flash[:params][:affordability] = params[:affordability]
+        session[:affordability] = params[:affordability]
       end
 
       def affordability_model
-        Affordability.new(people: people_models,
-                          outgoings: outgoings_model,
-                          borrowing: borrowing_params,
-                          lifestyle_costs: lifestyle_params,
-                          interest_rate: interest_rate_params,
-                          two_applicants: two_applicants_params)
+        hash = (session[:affordability] || {}).deep_merge(params[:affordability] || {})
+        hash = ActiveSupport::HashWithIndifferentAccess.new({affordability: hash})
+
+        Affordability.load_from_store(hash)
       end
 
       def outgoings_model
