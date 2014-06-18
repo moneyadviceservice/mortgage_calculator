@@ -2,11 +2,13 @@ module MortgageCalculator
   # Load order issue - subclass a class explicitly
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def step_1
+      response.headers["Cache-Control"] = "no-store"
       @affordability = AffordabilityPresenter.new(affordability_model)
       @affordability.valid? unless @affordability.empty?
     end
 
     def step_2
+      response.headers["Cache-Control"] = "no-store"
       persist_affordability_params_to_session
 
       @affordability = AffordabilityPresenter.new(affordability_model)
