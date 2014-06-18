@@ -7,10 +7,14 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
-    attr_accessor :two_applicants
+    attr_accessor :two_applicants, :empty
 
     def two_applicants?
       two_applicants == "1"
+    end
+
+    def empty?
+      empty
     end
 
     validate :income_greater_than_zero
@@ -29,11 +33,12 @@ module MortgageCalculator
       @lifestyle_costs || outgoings.lifestyle_costs
     end
 
-    def initialize(people, outgoings, options = {})
-      @people = people
-      @outgoings = outgoings
+    def initialize(options = {})
+      @people = options[:people]
+      @outgoings = options[:outgoings]
       @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
+      self.two_applicants = options[:two_applicants]
       self.lifestyle_costs = options[:lifestyle_costs] if options[:lifestyle_costs].present?
     end
 
@@ -146,6 +151,33 @@ module MortgageCalculator
 
     def only_rent_and_mortgage_warning?
       outgoings.fixed_costs.zero? && !outgoings.rent_and_mortgage.zero?
+    end
+
+    def self.load_from_store(store)
+      store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability] || {}
+
+      people = []
+      if store[:people_attributes]
+        people = store[:people_attributes].values.map do |p|
+          PersonPresenter.new(Person.new(p))
+        end
+      end
+      people << PersonPresenter.new(Person.new) if people.size == 0
+      people << PersonPresenter.new(Person.new) if people.size == 1
+
+      if store[:outgoings]
+        outgoings = OutgoingsPresenter.new(Outgoings.new(store[:outgoings]))
+      else
+        outgoings = OutgoingsPresenter.new(Outgoings.new())
+      end
+
+      borrowing = store[:borrowing] if store[:borrowing]
+      interest_rate = store[:interest_rate] if store[:interest_rate]
+      lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
+
+      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
+      model.empty = store.empty?
+      model
     end
 
   private

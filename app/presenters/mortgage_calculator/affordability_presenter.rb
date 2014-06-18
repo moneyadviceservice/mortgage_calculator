@@ -39,6 +39,8 @@ module MortgageCalculator
 
     delegate :remaining_negative?, to: :model
 
+    delegate :empty?, to: :model
+
     def self.i18n_scope
       "affordability.activemodel"
     end
