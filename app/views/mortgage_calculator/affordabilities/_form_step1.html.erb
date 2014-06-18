@@ -42,8 +42,14 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_extra_income_0",
                                 "value" => person.object.extra_income_formatted,
                                 "pattern" => '\d*' %>
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_0"),
+              html: {
+                id: 'tip_extra_income_0'
+              }
+          %>
         </div>
       <% else %>
         <div class="rendered-from-js form__item">
@@ -76,8 +82,15 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_annual_income_1",
                                 "value" => person.object.annual_income_formatted,
                                 "pattern" => '\d*' %>
+
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_1"),
+              html: {
+                id: 'tip_annual_income_1'
+              }
+          %>
         </div>
         <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
           <%= f.errors_for person.object, :extra_income %>
@@ -90,8 +103,15 @@
                                 "currency" => '',
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_extra_income_1",
                                 "value" => person.object.extra_income_formatted,
                                 "pattern" => '\d*' %>
+
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_1"),
+              html: {
+                id: 'tip_extra_income_1'
+              }
+          %>
         </div>
       <% end %>
     <% end %>
@@ -112,8 +132,15 @@
                                 "ng-initial" => "",
                                 "currency" => '',
                                 "data-a-sign" =>"£",
+                                "aria-describedby" => "tip_monthly_net_income_0",
                                 "value" => person.object.monthly_net_income_formatted,
                                 "pattern" => '\d*' %>
+
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_0"),
+              html: {
+                id: 'tip_monthly_net_income_0'
+              }
+          %>
         </div>
       <% else %>
         <div class="form__item" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
@@ -126,8 +153,15 @@
                                 "ng-initial" => "",
                                 "currency" => '',
                                 "data-a-sign" =>"£",
+                                "aria-describedby" => "tip_monthly_net_income_1",
                                 "value" => person.object.monthly_net_income_formatted,
                                 "pattern" => '\d*' %>
+
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_1"),
+              html: {
+                id: 'tip_monthly_net_income_1'
+              }
+          %>
         </div>
       <% end %>
     <% end %>
