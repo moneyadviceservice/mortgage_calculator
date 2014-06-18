@@ -38,8 +38,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_credit_repayments",
                             "value" => outgoings.object.credit_repayments_formatted,
                             "pattern" => '\d*' %>
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.credit_repayments_html"),
+          html: {
+            id: 'tip_credit_repayments'
+          }
+      %>
     </div>
     <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
       <%= outgoings.errors_for outgoings.object, :child_maintenance %>
@@ -52,8 +58,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_child_maintenance",
                             "value" => outgoings.object.child_maintenance_formatted,
                             "pattern" => '\d*' %>
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.child_maintenance_html"),
+          html: {
+            id: 'tip_child_maintenance'
+          }
+      %>
     </div>
   </div>
 
@@ -73,8 +85,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_childcare",
                             "value" => outgoings.object.childcare_formatted,
                             "pattern" => '\d*' %>
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.childcare_html"),
+          html: {
+            id: 'tip_childcare'
+          }
+      %>
     </div>
     <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
       <%= outgoings.errors_for outgoings.object, :travel %>
@@ -87,8 +105,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_travel",
                             "value" => outgoings.object.travel_formatted,
                             "pattern" => '\d*' %>
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.travel_html"),
+          html: {
+            id: 'tip_travel'
+          }
+      %>
     </div>
     <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
       <%= outgoings.errors_for outgoings.object, :utilities %>
@@ -101,8 +125,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_utilities",
                             "value" => outgoings.object.utilities_formatted,
                             "pattern" => '\d*' %>
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.utilities_html"),
+          html: {
+            id: 'tip_utilities'
+          }
+      %>
     </div>
     <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
       <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
@@ -115,8 +145,14 @@
                             "placeholder" => "£0",
                             "data-a-sign" =>"£",
                             "data-m-dec" =>"0",
+                            "aria-describedby" => "tip_rent_and_mortgage",
                             "value" => outgoings.object.rent_and_mortgage_formatted,
                             "pattern" => '\d*' %>
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.rent_and_mortgage_html"),
+            html: {
+              id: 'tip_rent_and_mortgage'
+            }
+        %>
       </div>
     </div>
 
@@ -137,8 +173,14 @@
                               "placeholder" => "£0",
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_entertainment",
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.entertainment_html"),
+            html: {
+              id: 'tip_entertainment'
+            }
+        %>
       </div>
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
         <%= outgoings.errors_for outgoings.object, :holidays %>
@@ -151,8 +193,14 @@
                               "placeholder" => "£0",
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_holidays",
                               "value" => outgoings.object.holidays_formatted,
                               "pattern" => '\d*' %>
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.holidays_html"),
+            html: {
+              id: 'tip_holidays'
+            }
+        %>
       </div>
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
         <%= outgoings.errors_for outgoings.object, :food %>
@@ -165,8 +213,14 @@
                               "placeholder" => "£0",
                               "data-a-sign" =>"£",
                               "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_food",
                               "value" => outgoings.object.food_formatted,
                               "pattern" => '\d*' %>
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.food_html"),
+            html: {
+              id: 'tip_food'
+            }
+        %>
       </div>
     </div>
   <% end %>
