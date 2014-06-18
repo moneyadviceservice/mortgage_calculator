@@ -79,12 +79,12 @@ en:
         travel: "Tooltip text goes here doesn't it"
         entertainment: "Tooltip text goes here doesn't it"
       mortgage_calculator/person:
-        annual_income_0: "Tooltip text goes here doesn't it"
-        extra_income_0: "Tooltip text goes here doesn't it"
-        monthly_net_income_0: "Tooltip text goes here doesn't it"
-        annual_income_1: "Tooltip text goes here doesn't it"
-        extra_income_1: "Tooltip text goes here doesn't it"
-        monthly_net_income_1: "Tooltip text goes here doesn't it"
+        annual_income_0: "Your income before tax"
+        extra_income_0: "Include: pension, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
+        monthly_net_income_0: "Your monthly income after tax, minus pension, NI, and other deductions"
+        annual_income_1: "Second applicant’s income before tax"
+        extra_income_1: "Include: second applicant's pension, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
+        monthly_net_income_1: "Second applicant’s income after tax, minus pension, NI, and other deductions"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
