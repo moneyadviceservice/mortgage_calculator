@@ -105,7 +105,7 @@
 
   <div class="mortgagecalc__panel">
     <p>
-      <a href="javascript:window.history.go(-1);" class='button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js'><%= t "affordability.back" %></a>
+      <%= link_to t("affordability.back"), step_2_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
       <%= link_to t("affordability.next"), next_steps_affordability_path, class: "button" %>
     </p>
   </div>
