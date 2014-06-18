@@ -94,3 +94,48 @@ en:
       missing_fixed_and_committed_costs_html: "You haven't entered any amounts for living expenses on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. %{back} to do that now."
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all fixed and committed costs on the previous page or your results on this page will be incorrect. %{back} to do that now."
       missing_lifestyle_costs_html: "You haven’t entered any amounts for living costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. %{back} to do that now."
+    next_steps:
+      title: "Three steps to finding an affordable mortgage"
+      tip_1:
+        heading: "What lenders look for when you apply"
+        info_html: "How much can you really afford to borrow?"
+        url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+      tip_2:
+        heading: "Make changes to your spending"
+        info_html: "Use our %{budget_planner} to get the full picture"
+        url_text: "Budget Planner"
+        url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+      tip_3:
+        heading: "Think about borrowing less"
+        info_html: "Try %{saving}, or look for property in a more affordable area"
+        url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+        url_text: "saving for a larger deposit"
+      learn_more:
+        title: "Affording your mortgage"
+        tip_1: "When you’re looking for a mortgage, it’s important to think about your monthly household spend  as well as your monthly repayments."
+        tip_2 : "Spending more than 50% on your mortgage and committed costs puts you at very high risk of overstretching yourself. Make sure that you have some money left over at the end of the month to help with your mortgage payments should interest rates rise or your circumstances change."
+        more:
+          copy_html: "Read more"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow#schemes"
+      find_out_more:
+        title: "Find out more"
+        tip_1:
+          copy_html: "Costs of buying"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+        tip_2:
+          copy_html: "Budget Planner"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+        tip_3:
+          copy_html: "Interest rates explained"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+        tip_4:
+          copy_html: "Affordable housing schemes"
+          url: "https://www.moneyadviceservice.org.uk/en/categories/affordable-housing-schemes"
+        tip_5:
+          copy_html: "Save more"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+      have_you_tried:
+        title: "Have you tried?"
+        mortgage_calculator: "Mortgage Calculator"
+        stamp_duty: "Stamp Duty Calculator"
+
