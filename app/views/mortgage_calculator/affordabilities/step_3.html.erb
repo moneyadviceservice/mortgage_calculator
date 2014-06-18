@@ -9,6 +9,17 @@
   </script>
 <% end %>
 
+<% content_for(:head) do %>
+<!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+<%= javascript_include_tag 'r2d3', charset: 'utf-8' %>
+<![endif]-->
+
+<%# Responsive styles for all modern devices %>
+<!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+<%= javascript_include_tag 'd3' %>
+<!--<![endif]-->
+<% end %>
+
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container risk--<%= @affordability.risk_level %>"
   ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
   <%= render 'form_step3' %>

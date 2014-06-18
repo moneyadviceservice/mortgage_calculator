@@ -7,13 +7,11 @@
     <% else %>
       <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
-      <%= javascript_include_tag 'r2d3', charset: 'utf-8' %>
       <![endif]-->
 
       <%# Responsive styles for all modern devices %>
       <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_responsive', media: 'only all' %>
-      <%= javascript_include_tag 'd3' %>
       <!--<![endif]-->
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
