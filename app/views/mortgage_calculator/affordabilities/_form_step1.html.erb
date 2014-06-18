@@ -24,8 +24,16 @@
                                 "placeholder" => "£0",
                                 "data-a-sign" =>"£",
                                 "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_annual_income_0",
                                 "value" => person.object.annual_income_formatted,
                                 "pattern" => '\d*' %>
+          <%= inset_block text: t("affordability.tooltips.mortgage_calculator/person.annual_income_0"),
+              classname: 'tooltip tooltip--onfocus',
+              html: {
+                role: 'tooltip',
+                id: 'tip_annual_income_0'
+              }
+          %>
         </div>
         <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
           <%= f.errors_for person.object, :extra_income %>
