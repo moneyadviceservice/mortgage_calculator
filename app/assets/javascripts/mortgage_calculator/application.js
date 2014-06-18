@@ -14,7 +14,6 @@
 //= require angular
 //= require angular-mocks
 //= require jquery-ui-mod
-//= require d3
 //= require placeholder_polyfill.jquery
 //= require underscore
 //= require args
