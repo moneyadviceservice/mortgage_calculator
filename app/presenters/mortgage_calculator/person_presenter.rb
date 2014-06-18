@@ -1,7 +1,6 @@
 module MortgageCalculator
   class PersonPresenter
     include ActionView::Helpers::NumberHelper
-    include ActiveModel::Serialization
 
     attr_reader :model
 
@@ -34,20 +33,6 @@ module MortgageCalculator
 
     def self.model_name
       ActiveModel::Name.new(Person, MortgageCalculator)
-    end
-
-    def attributes
-      HashWithIndifferentAccess.new({
-        'annual_income' => annual_income.to_s,
-        'extra_income' => extra_income.to_s,
-        'monthly_net_income' => monthly_net_income.to_s
-      })
-    end
-
-    private
-
-    def read_attribute_for_serialization(key)
-      attributes[key]
     end
   end
 end

@@ -153,14 +153,6 @@ module MortgageCalculator
       outgoings.fixed_costs.zero? && !outgoings.rent_and_mortgage.zero?
     end
 
-    def save(store)
-      store[:affordability] = {
-        "people_attributes" => people_hash,
-        "two_applicants" => two_applicants,
-        "outgoings" => outgoings.serializable_hash
-      }
-    end
-
     def self.load_from_store(store)
       store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability] || {}
 
@@ -189,15 +181,6 @@ module MortgageCalculator
     end
 
   private
-
-    def people_hash
-      array = people.each_with_index.map do |person, i|
-        person = PersonPresenter.new(person)
-        {i.to_s => person.serializable_hash}
-      end
-
-      Hash[*array.map{|e| e.keys.zip e.values}.flatten]
-    end
 
     def lower_profit_multiplier
       2.8

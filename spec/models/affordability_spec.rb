@@ -353,19 +353,6 @@ module MortgageCalculator
       }
     end
 
-    describe :save do
-      let(:store){ Hash.new }
-      subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
-
-      before :each do
-        subject.save(store)
-      end
-
-      it 'persists to store' do
-        expect(store[:affordability]).to eql(serialized_hash)
-      end
-    end
-
     describe :load_from_store do
       let(:store) do
         { affordability: serialized_hash }
@@ -374,38 +361,15 @@ module MortgageCalculator
       subject{ described_class.load_from_store(store) }
 
       it 'loads from store' do
-        hash = {}
-        subject.save(hash)
-        expect(hash[:affordability]).to eql(serialized_hash)
+        expect(subject.total_income).to eql(165000)
       end
 
       context 'when store is empty' do
         let(:store){ Hash.new }
 
         it 'loads nothing' do
-          hash = {}
-          subject.save(hash)
-          expect(hash[:affordability]).to eql(
-            { "people_attributes" => {
-                '0' => {'annual_income'=>"0.0",
-                        'extra_income'=>"0.0",
-                        'monthly_net_income'=>"0.0"},
-                '1' => {'annual_income'=>"0.0",
-                        'extra_income'=>"0.0",
-                        'monthly_net_income'=>"0.0"}},
-               "two_applicants" => nil,
-               "outgoings" => {
-                 "child_maintenance"=>"0.00",
-                 "childcare"=>"0.00",
-                 "credit_repayments"=>"0.00",
-                 "entertainment"=>"0.00",
-                 "food"=>"0.00",
-                 "holidays"=>"0.00",
-                 "rent_and_mortgage"=>"0.00",
-                 "travel"=>"0.00",
-                 "utilities"=>"0.00"
-              }
-            })
+          expect(subject.total_income).to eql(0)
+          expect(subject.lifestyle_costs).to eql(0)
         end
       end
     end
