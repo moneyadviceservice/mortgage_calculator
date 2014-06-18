@@ -44,6 +44,27 @@ en:
             proportional_incomes: "Your monthly take-home pay is higher than your annual income"
             take_home_is_zero: "Take-home pay should be more than zero if annual income is more than zero"
             annual_income_is_zero: "Annual income should be more than zero if take-home pay is more than zero"
+    tooltips:
+      mortgage_calculator/affordability:
+        lifestyle_costs: "Tooltip text goes here doesn't it"
+        borrowing: "Tooltip text goes here doesn't it"
+        interest_rate: "Tooltip text goes here doesn't it"
+      mortgage_calculator/outgoings:
+        credit_repayments: "Tooltip text goes here doesn't it"
+        utilities: "Tooltip text goes here doesn't it"
+        childcare: "Tooltip text goes here doesn't it"
+        child_maintenance: "Tooltip text goes here doesn't it"
+        rent_and_mortgage: "Tooltip text goes here doesn't it"
+        food: "Tooltip text goes here doesn't it"
+        travel: "Tooltip text goes here doesn't it"
+        entertainment: "Tooltip text goes here doesn't it"
+      mortgage_calculator/person:
+        annual_income_0: "Tooltip text goes here doesn't it"
+        extra_income_0: "Tooltip text goes here doesn't it"
+        monthly_net_income_0: "Tooltip text goes here doesn't it"
+        annual_income_1: "Tooltip text goes here doesn't it"
+        extra_income_1: "Tooltip text goes here doesn't it"
+        monthly_net_income_1: "Tooltip text goes here doesn't it"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
