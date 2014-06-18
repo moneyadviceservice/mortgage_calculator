@@ -3,28 +3,27 @@ module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
     def step_1
       @affordability = AffordabilityPresenter.new(affordability_model)
-
-      @affordability.valid? if affordability_params
+      @affordability.valid? unless @affordability.empty?
     end
 
     def step_2
+      persist_affordability_params_to_session
+
       @affordability = AffordabilityPresenter.new(affordability_model)
-      @affordability.save(session)
 
       unless @affordability.valid_for_step2?
-        persist_affordability_params_to_flash
         redirect_to step_1_affordability_path
       end
     end
 
     def step_3
+      persist_affordability_params_to_session
+
       @affordability = AffordabilityPresenter.new(affordability_model)
-      @affordability.save(session)
 
       if @affordability.valid_for_step3?
         adjust_interest_rate
       else
-        persist_affordability_params_to_flash
         redirect_to step_2_affordability_path
       end
     end
@@ -38,19 +37,13 @@ module MortgageCalculator
 
     private
 
-      def affordability_params
-        params[:affordability] || session[:affordability]
-      end
-
-      def persist_affordability_params_to_flash
-        session[:affordability] = params[:affordability]
+      def persist_affordability_params_to_session
+        session[:affordability] ||= {}
+        session[:affordability] = session[:affordability].deep_merge(params[:affordability] || {})
       end
 
       def affordability_model
-        hash = (session[:affordability] || {}).deep_merge(params[:affordability] || {})
-        hash = ActiveSupport::HashWithIndifferentAccess.new({affordability: hash})
-
-        Affordability.load_from_store(hash)
+        Affordability.load_from_store(session)
       end
 
       def adjust_interest_rate

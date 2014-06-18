@@ -7,10 +7,14 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
-    attr_accessor :two_applicants
+    attr_accessor :two_applicants, :empty
 
     def two_applicants?
       two_applicants == "1"
+    end
+
+    def empty?
+      empty
     end
 
     validate :income_greater_than_zero
@@ -179,7 +183,9 @@ module MortgageCalculator
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
 
-      new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
+      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
+      model.empty = store.empty?
+      model
     end
 
   private

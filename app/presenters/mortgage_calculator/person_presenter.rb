@@ -14,6 +14,7 @@ module MortgageCalculator
     delegate :total_income, to: :model
     delegate :valid?, to: :model
     delegate :errors, to: :model
+    delegate :empty?, to: :model
 
     def initialize(model)
       @model = model
