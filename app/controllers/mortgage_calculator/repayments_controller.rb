@@ -35,7 +35,7 @@ module MortgageCalculator
       end
 
       def calculate_repayment
-        @repayment ||= RepaymentPresenter.new(repayment_model)
+        @repayment ||= repayment_model
       end
 
       def calculate_interest_only
@@ -43,7 +43,7 @@ module MortgageCalculator
       end
 
       def adjust_interest_rate
-        @changer = RepaymentPresenter.new(repayment_model.clone.change_interest_rate_by(2))
+        @changer = repayment_model.clone.change_interest_rate_by(2)
         @interest_only_changer = interest_only_model.clone.change_interest_rate_by(2)
       end
   end

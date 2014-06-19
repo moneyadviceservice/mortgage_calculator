@@ -4,6 +4,8 @@ module MortgageCalculator
     include ActiveModel::Conversion
     include CurrencyInput::Macro
     include ActiveModel::Validations
+    include ActionView::Helpers::NumberHelper
+    extend ActiveModel::Translation
 
     attr_reader :term_years, :interest_rate, :price, :deposit
 
@@ -18,6 +20,17 @@ module MortgageCalculator
       self.deposit = options[:deposit].presence || 0
       self.term_years = options[:term_years].presence || 25
       self.interest_rate = options[:interest_rate].presence || 5
+    end
+
+    def self.i18n_scope
+      "mortgage_calculator.activemodel"
+    end
+
+    [:debt, :price, :deposit, :monthly_payment, :total_interest,
+     :total_payable].each do |field|
+      define_method "#{field}_formatted" do
+        number_to_currency(public_send(field).presence || 0, unit: '')
+      end
     end
 
     def debt
