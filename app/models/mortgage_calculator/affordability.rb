@@ -4,10 +4,16 @@ module MortgageCalculator
     extend ActiveModel::Naming
     include ActiveModel::Conversion
     include ActiveModel::Validations
+    extend ActiveModel::Translation
+    include ActionView::Helpers::NumberHelper
 
     attr_reader :people, :outgoings
 
     attr_accessor :two_applicants, :empty
+
+    def self.i18n_scope
+      "affordability.activemodel"
+    end
 
     def two_applicants?
       two_applicants == "1"
@@ -178,6 +184,26 @@ module MortgageCalculator
       model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
       model.empty = store.empty?
       model
+    end
+
+    def borrowing_formatted
+      number_to_currency borrowing, precision: 0, unit: ""
+    end
+
+    def lifestyle_costs_formatted
+      number_to_currency lifestyle_costs, precision: 0, unit: ""
+    end
+
+    def monthly_debt_formatted
+      number_to_currency monthly_debt, unit: nil
+    end
+
+    def budget_outgoing_formatted
+      number_to_currency budget_outgoing
+    end
+
+    def budget_leftover_formatted
+      number_to_currency budget_leftover
     end
 
   private

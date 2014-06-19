@@ -3,14 +3,14 @@ module MortgageCalculator
     before_filter :no_cache, only: [:step_1, :step_2]
 
     def step_1
-      @affordability = AffordabilityPresenter.new(affordability_model)
+      @affordability = affordability_model
       @affordability.valid? unless @affordability.empty?
     end
 
     def step_2
       persist_affordability_params_to_session
 
-      @affordability = AffordabilityPresenter.new(affordability_model)
+      @affordability = affordability_model
 
       unless @affordability.valid_for_step2?
         redirect_to step_1_affordability_path
@@ -20,7 +20,7 @@ module MortgageCalculator
     def step_3
       persist_affordability_params_to_session
 
-      @affordability = AffordabilityPresenter.new(affordability_model)
+      @affordability = affordability_model
 
       if @affordability.valid_for_step3?
         adjust_interest_rate

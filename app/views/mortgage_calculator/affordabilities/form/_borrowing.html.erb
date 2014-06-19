@@ -1,6 +1,6 @@
 <% if @affordability.valid? %>
   <p ng-hide="js" class=" results">
-    <%= f.label :borrowing %><%= f.text_field :borrowing %>
+    <%= f.label :borrowing %><%= f.text_field :borrowing, value: @affordability.borrowing_formatted %>
   </p>
 <% end %>
 
