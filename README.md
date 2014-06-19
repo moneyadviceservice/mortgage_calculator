@@ -4,7 +4,6 @@ Mortgage Calculator
 Rails engine, providing a suite of calculators to determine affordability.
 
 
-
 ## Installation
 
 Add this line to your application's Gemfile:
