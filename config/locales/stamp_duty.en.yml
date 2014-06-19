@@ -10,6 +10,10 @@ en:
     back: Back
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "You'll pay a percentage of tax from 1% to 7%, depending on the price"
+    activemodel:
+      attributes:
+        mortgage_calculator/stamp_duty:
+          price: Price of the property is
     caveat:
       title: Important
       one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
