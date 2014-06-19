@@ -21,6 +21,11 @@ module MortgageCalculator
         get :step_1
         expect(response).to be_success
       end
+
+      it 'uses no-store header for caching' do
+        get :step_1
+        expect(response.headers["Cache-Control"]).to eql("no-store")
+      end
     end
 
     describe :step_2 do
@@ -39,6 +44,10 @@ module MortgageCalculator
 
         it "redirect to step_1" do
           expect(response.body).to redirect_to(step_1_affordability_path)
+        end
+
+        it 'uses no-store header for caching' do
+          expect(response.headers["Cache-Control"]).to eql("no-store")
         end
       end
     end

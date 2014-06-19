@@ -1,6 +1,7 @@
 module MortgageCalculator
-  # Load order issue - subclass a class explicitly
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
+    before_filter :no_cache, only: [:step_1, :step_2]
+
     def step_1
       @affordability = AffordabilityPresenter.new(affordability_model)
       @affordability.valid? unless @affordability.empty?
@@ -36,6 +37,10 @@ module MortgageCalculator
     end
 
     private
+
+      def no_cache
+        response.headers["Cache-Control"] = "no-store"
+      end
 
       def persist_affordability_params_to_session
         session[:affordability] ||= {}
