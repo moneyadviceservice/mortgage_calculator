@@ -15,7 +15,7 @@ module MortgageCalculator
     end
 
     let(:outgoings) do
-      OutgoingsPresenter.new(Outgoings.new(
+      Outgoings.new(
         credit_repayments: 200,
         utilities: 200,
         childcare: 100,
@@ -24,7 +24,7 @@ module MortgageCalculator
         food: 200,
         travel: 200,
         entertainment: 400
-      ))
+      )
     end
 
     subject{ described_class.new(people: [person1], outgoings: outgoings) }

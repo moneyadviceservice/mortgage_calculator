@@ -166,9 +166,9 @@ module MortgageCalculator
       people << Person.new if people.size == 1
 
       if store[:outgoings]
-        outgoings = OutgoingsPresenter.new(Outgoings.new(store[:outgoings]))
+        outgoings = Outgoings.new(store[:outgoings])
       else
-        outgoings = OutgoingsPresenter.new(Outgoings.new())
+        outgoings = Outgoings.new
       end
 
       borrowing = store[:borrowing] if store[:borrowing]
