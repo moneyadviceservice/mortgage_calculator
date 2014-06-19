@@ -15,15 +15,15 @@ en:
     activemodel:
       attributes:
         mortgage_calculator/affordability:
-          lifestyle_costs: "You estimated your monthly livings costs to be:"
+          lifestyle_costs: "You estimated your monthly living costs to be:"
           borrowing: "Borrowing"
-          interest_rate: "Based on a repayment mortgage for 25 years at:"
+          interest_rate: "Based on 25 year repayment mortgage at:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card & loan payments"
           utilities: "Bills & insurance"
           childcare: "Childcare & school fees"
           child_maintenance: "Child & partner maintenance"
-          rent_and_mortgage: "Current rent or mortgage repayment"
+          rent_and_mortgage: "Current rent or mortgage payment"
           food: "Food, groceries & toiletries"
           travel: "Travel costs"
           entertainment: "Entertainment & leisure"
@@ -55,9 +55,12 @@ en:
       can_afford: "How much you have left over"
       second_applicant: "Is there a second applicant?"
       what_you_might_be_offered: "What you might be offered"
+      fix_and_committed_costs: "Fixed & committed costs -"
+      living_costs: "Living costs -"
     input_page:
       submit: "Find out how much I can borrow"
-      monthly_outgoings_descriptions_html: "Use this section to get a basic idea of how your monthly budget adds up, and how affordable your monthly mortgage payments will be. <strong>If you don't have any expenses in these sections right now, imagine what they are likely to be in your new home.</strong>"
+      monthly_outgoings_descriptions_html: "Use this section to get a basic idea of how your monthly budget adds up, and how affordable your monthly mortgage payments will be."
+      monthly_outgoings_descriptions_2_html: "If you don't have any expenses in these sections right now, imagine what they are likely to be in your new home."
       outgoings_second_person: "If you're applying with someone else, add their monthly costs to yours and put them in the fields below."
       living_costs_description: "Your lifestyle costs shouldn't change when you get a mortgage, but the lender will want to 'stress test' how you can afford your payments should interest rates rise or your circumstances change."
     budget_affect:
@@ -84,16 +87,16 @@ en:
       per_month_html: "Your total take-home pay per month is: <span class=\"accent\">%{take_home}</span>"
     budget:
       commitments_html: "Your estimated fixed and committed spend per month is: <span class=\"accent\">%{commitment}</span>"
-      outgoing_html: "Mortgage repayments and essential costs per month amount to %{percent} of your total take-home pay: %{absolute}"
-      leftover_html: "What you have left over is %{percent} of your monthly take home: %{absolute}"
+      outgoing_html: "Mortgage repayments and essential costs per month amount to roughly %{percent} of your total take-home pay: %{absolute}"
+      leftover_html: "What you have left over is roughly %{percent} of your monthly take home: %{absolute}"
       positive:
         remaining_html: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? <a href='#'>Here’s what you can do now</a>."
       negative:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. <a href='#'>Here’s what you can do now</a>."
     warnings:
-      missing_fixed_and_committed_costs_html: "You haven't entered any amounts for living expenses on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. %{back} to do that now."
+      missing_fixed_and_committed_costs_html: "You haven't entered any amounts for living expenses on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all fixed and committed costs on the previous page or your results on this page will be incorrect. %{back} to do that now."
-      missing_lifestyle_costs_html: "You haven’t entered any amounts for living costs on the previous page. Are you sure this is correct? If not, your results on this page may be incorrect. %{back} to do that now."
+      missing_lifestyle_costs_html: "You haven’t entered any amounts for living costs on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
     next_steps:
       title: "Three steps to finding an affordable mortgage"
       tip_1:

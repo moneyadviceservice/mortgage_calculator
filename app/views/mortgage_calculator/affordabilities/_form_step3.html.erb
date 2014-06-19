@@ -27,6 +27,7 @@
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
     <h3><%= t "affordability.titles.how_affect_budget" %></h3>
+    <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
 
     <% if @affordability.only_rent_and_mortgage_warning? %>
       <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
@@ -51,6 +52,7 @@
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
     <h3><%= t "affordability.titles.can_afford" %></h3>
+    <h4><%= t "affordability.titles.living_costs" %></h4>
 
     <% if @affordability.missing_lifestyle_costs_warning? %>
       <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
