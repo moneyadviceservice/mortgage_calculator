@@ -10,12 +10,6 @@ cy:
           interest_rate: Cyfradd llog yw
         mortgage_calculator/stamp_duty:
           price: Cyfanswm pris yr eiddo yw
-      errors:
-        models:
-          mortgage_calculator/repayment:
-            attributes:
-              price:
-                greater_than: "greater than"
     repayment:
       title: Cyfrifwch eich taliad morgais misol
       subtitle: "Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau."
