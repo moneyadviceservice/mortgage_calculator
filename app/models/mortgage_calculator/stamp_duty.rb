@@ -3,6 +3,7 @@ module MortgageCalculator
     include ActiveModel::Validations
     include ActiveModel::Conversion
     include CurrencyInput::Macro
+    include ActionView::Helpers::NumberHelper
 
     RATES = {
       2000000 => 7,
@@ -21,6 +22,12 @@ module MortgageCalculator
 
     def initialize(options = {})
       self.price = options.fetch(:price){ 0 }
+    end
+
+    [:price, :tax_due, :total_due].each do |field|
+      define_method "#{field}_formatted" do
+        number_to_currency(public_send(field).presence || 0, unit: '', precision: 0)
+      end
     end
 
     def percentage_rate

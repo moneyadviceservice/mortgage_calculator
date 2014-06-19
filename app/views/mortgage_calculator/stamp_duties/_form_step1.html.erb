@@ -3,6 +3,7 @@
     <div class="form__item">
       <%= f.label :price %>
       <%= f.text_field :price,
+                       :value => @stamp_duty.price_formatted,
                        class: 'dynamic-slider-property',
                        "autofocus" => '',
                        "ng-model" => "stampDuty.propertyPrice",
