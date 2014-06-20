@@ -1,11 +1,11 @@
 <%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: step_2_affordability_path, html: { name: 'affordability_form', role: 'form', novalidate: '' } do |f| %>
   <% f.validates @affordability, @affordability.people[0], @affordability.people[1] %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affordability__small-12 affordability__medium-8">
     <%= f.validation_summary %>
   </div>
 
-  <div class="mortgagecalc__panel">
+  <div class="affordability__small-12 affordability__medium-6 affordability__large-4">
     <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
     <%= f.fields_for :people do |person| %>
       <% index = @affordability.people.find_index(person.object) %>
@@ -173,7 +173,7 @@
     <% end %>
 
   </div>
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affordability__small-12 affordability__medium-8 affordability__medium">
 
     <div class="form__row">
       <%= f.submit I18n.t("affordability.input_page.submit"),
