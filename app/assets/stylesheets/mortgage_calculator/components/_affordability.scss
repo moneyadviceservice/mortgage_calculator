@@ -2,7 +2,7 @@
   max-width: $affordability-width;
 
   .affcalc__row {
-    @extend %clearfix;
+    clear:both;
     position: relative;
   }
 
