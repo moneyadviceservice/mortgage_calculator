@@ -36,14 +36,6 @@ en:
           monthly_net_income_1: "Second applicant's monthly take-home pay"
       errors:
         title: "Please check the form and correct the following errors"
-        mortgage_calculator/affordability:
-          base:
-            income_greater_than_zero: "Your total income must be greater than zero"
-        mortgage_calculator/person:
-          base:
-            proportional_incomes: "Your monthly take-home pay is higher than your annual income"
-            take_home_is_zero: "Take-home pay should be more than zero if annual income is more than zero"
-            annual_income_is_zero: "Annual income should be more than zero if take-home pay is more than zero"
         messages:
           inclusion: "%{attribute} is not included in the list"
           exclusion: "%{attribute} is reserved"
@@ -64,6 +56,14 @@ en:
           less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}"
           odd: "%{attribute} must be odd"
           even: "%{attribute} must be even"
+        mortgage_calculator/affordability:
+          base:
+            income_greater_than_zero: "Your total income must be greater than zero"
+        mortgage_calculator/person:
+          base:
+            proportional_incomes: "Your monthly take-home pay is higher than your annual income"
+            take_home_is_zero: "Take-home pay should be more than zero if annual income is more than zero"
+            annual_income_is_zero: "Annual income should be more than zero if take-home pay is more than zero"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
