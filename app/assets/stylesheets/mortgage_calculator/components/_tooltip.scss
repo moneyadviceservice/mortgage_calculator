@@ -4,7 +4,7 @@
   .js & {
     @include respond-to($mq-m) {
       position: absolute;
-      margin-top: $baseline-unit*8;
+      margin-top: $baseline-unit*4;
 
       &.tooltip--hidden {
         @include visually-hidden;

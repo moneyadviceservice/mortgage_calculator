@@ -6,7 +6,7 @@ App.directive('ngInitial', function() {
     controller: [
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var getter, setter, val;
-        val = $attrs.ngInitial || $attrs.value;
+        val = $attrs.ngInitial || $attrs.value || '';
 
         if ($attrs.ngInitialAsString !== "true") {
           val = parseFloat(val.replace(/[^\d|\-+|\.+]/g, ''));

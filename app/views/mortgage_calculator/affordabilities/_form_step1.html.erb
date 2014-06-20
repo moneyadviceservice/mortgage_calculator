@@ -98,6 +98,7 @@
             <%= person.label :annual_income do %>
               <%= I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
             <% end %>
+
             <%= person.text_field :annual_income,
                                   "class" => "form-control",
                                   "ng-model" => "affordability.earnings.person1.annual",
@@ -112,6 +113,7 @@
                                   "pattern" => '\d*' %>
           </div>
         </div>
+
         <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_1"),
               html: {
@@ -140,6 +142,7 @@
                                   "pattern" => '\d*' %>
           </div>
         </div>
+
         <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_1"),
               html: {
@@ -178,6 +181,7 @@
                                   "pattern" => '\d*' %>
           </div>
         </div>
+
         <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_0"),
               html: {
@@ -185,7 +189,8 @@
               }
           %>
         </div>
-      <% else %>
+      </div>
+    <% else %>
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
@@ -204,6 +209,7 @@
                                   "pattern" => '\d*' %>
           </div>
         </div>
+
         <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_1"),
               html: {
