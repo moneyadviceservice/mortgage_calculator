@@ -12,38 +12,9 @@
     }
 
   @for $i from 1 through 12 {
-    .affcalc__small-push-#{$i} {
-      @include push(1);
-    }
-  }
-
-  @for $i from 1 through 12 {
-    .affcalc__small-pull-#{$i} {
-      @include pull(1);
-    }
-  }
-}
-
-  @for $i from 1 through 12 {
     @include respond-to($mq-m) {
       .affcalc__medium-#{$i} {
         @include column($i);
-      }
-    }
-  }
-
-  @for $i from 1 through 12 {
-    @include respond-to($mq-m) {
-      .affcalc__medium-push-#{$i} {
-        @include push(1);
-      }
-    }
-  }
-
-  @for $i from 1 through 12 {
-    @include respond-to($mq-m) {
-      .affcalc__medium-pull-#{$i} {
-        @include pull(1);
       }
     }
   }
@@ -57,18 +28,43 @@
   }
 
   @for $i from 1 through 12 {
-    @include respond-to($mq-l) {
-      .affcalc__large-push-#{$i} {
-        @include push(1);
-      }
+    .affcalc__small-push-#{$i} {
+      @include push(1);
     }
   }
 
   @for $i from 1 through 12 {
-    @include respond-to($mq-l) {
-      .affcalc__large-pull-#{$i} {
-        @include pull(1);
-      }
+    .affcalc__small-pull-#{$i} {
+      @include pull(1);
     }
   }
+}
+@for $i from 1 through 12 {
+  @include respond-to($mq-m) {
+    .affcalc__medium-push-#{$i} {
+      @include push(1);
+    }
+  }
+}
+@for $i from 1 through 12 {
+  @include respond-to($mq-m) {
+    .affcalc__medium-pull-#{$i} {
+      @include pull(1);
+    }
+  }
+}
+@for $i from 1 through 12 {
+  @include respond-to($mq-l) {
+    .affcalc__large-push-#{$i} {
+      @include push(1);
+    }
+  }
+}
+@for $i from 1 through 12 {
+  @include respond-to($mq-l) {
+    .affcalc__large-pull-#{$i} {
+      @include pull(1);
+    }
+  }
+}
 }
