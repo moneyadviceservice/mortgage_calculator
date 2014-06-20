@@ -1,6 +1,10 @@
 .affcalc {
   max-width: $affordability-width;
 
+  .affcalc__row {
+    @include row();
+  }
+
   @for $i from 1 through 12 {
     .affcalc__small-#{$i} {
       @include column($i);
