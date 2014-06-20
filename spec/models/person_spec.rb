@@ -18,7 +18,7 @@ describe MortgageCalculator::Person do
       subject{ described_class.new(annual_income: 100, extra_income: 0, monthly_net_income: 0) }
 
       it "is not valid" do
-        expect(subject.valid?).to be_false
+        expect(subject.valid?).to be_falsey
       end
     end
 
@@ -26,7 +26,7 @@ describe MortgageCalculator::Person do
       subject{ described_class.new(annual_income: 0, extra_income: 0, monthly_net_income: 100) }
 
       it "is not valid" do
-        expect(subject.valid?).to be_false
+        expect(subject.valid?).to be_falsey
       end
     end
 
@@ -35,7 +35,7 @@ describe MortgageCalculator::Person do
         subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 10000) }
 
         it 'is not valid' do
-          expect(subject.valid?).to be_false
+          expect(subject.valid?).to be_falsey
         end
       end
 
@@ -43,7 +43,7 @@ describe MortgageCalculator::Person do
         subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 8333.33) }
 
         it 'is valid' do
-          expect(subject.valid?).to be_true
+          expect(subject.valid?).to be_truthy
         end
       end
     end

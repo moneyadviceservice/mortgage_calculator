@@ -74,7 +74,7 @@ module MortgageCalculator
         subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
         it 'is not valid' do
-          expect(subject.valid?).to be_false
+          expect(subject.valid?).to be_falsey
           expect(subject.errors.full_messages).to include I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero")
         end
       end
@@ -214,21 +214,21 @@ module MortgageCalculator
     describe :remaining_positive? do
       context 'when positive' do
         it 'returns true' do
-          expect(subject.remaining_positive?).to be_true
+          expect(subject.remaining_positive?).to be_truthy
         end
       end
 
       context 'when zero' do
         it 'returns true' do
           subject.stub(:remaining){ BigDecimal.new("0")  }
-          expect(subject.remaining_positive?).to be_true
+          expect(subject.remaining_positive?).to be_truthy
         end
       end
 
       context 'when negative' do
         it 'returns false' do
           subject.stub(:remaining){ BigDecimal.new("-1")  }
-          expect(subject.remaining_positive?).to be_false
+          expect(subject.remaining_positive?).to be_falsey
         end
       end
     end
@@ -236,21 +236,21 @@ module MortgageCalculator
     describe :remaining_negative? do
       context 'when positive' do
         it 'returns false' do
-          expect(subject.remaining_negative?).to be_false
+          expect(subject.remaining_negative?).to be_falsey
         end
       end
 
       context 'when zero' do
         it 'returns false' do
           subject.stub(:remaining){ BigDecimal.new("0")  }
-          expect(subject.remaining_negative?).to be_false
+          expect(subject.remaining_negative?).to be_falsey
         end
       end
 
       context 'when negative' do
         it 'returns true' do
           subject.stub(:remaining){ BigDecimal.new("-1")  }
-          expect(subject.remaining_negative?).to be_true
+          expect(subject.remaining_negative?).to be_truthy
         end
       end
     end
@@ -286,14 +286,14 @@ module MortgageCalculator
       context 'sum of lifestyle costs is zero' do
         it "missing_lifestyle_costs_warning is true" do
           subject.stub(:lifestyle_costs){ BigDecimal.new("0") }
-          expect(subject.missing_lifestyle_costs_warning?).to be_true
+          expect(subject.missing_lifestyle_costs_warning?).to be_truthy
         end
       end
 
       context 'sum of lifestyle costs is not zero' do
         it "missing_lifestyle_costs_warning is false" do
           subject.stub(:lifestyle_costs){ BigDecimal.new("1") }
-          expect(subject.missing_lifestyle_costs_warning?).to be_false
+          expect(subject.missing_lifestyle_costs_warning?).to be_falsey
         end
       end
 
@@ -301,7 +301,7 @@ module MortgageCalculator
         it "missing_fixed_and_committed_costs_warning returns true" do
           subject.stub(:fixed_costs){ BigDecimal.new("0") }
           subject.stub(:committed_costs){ BigDecimal.new("0") }
-          expect(subject.missing_fixed_and_committed_costs_warning?).to be_true
+          expect(subject.missing_fixed_and_committed_costs_warning?).to be_truthy
         end
       end
 
@@ -309,7 +309,7 @@ module MortgageCalculator
         it "missing_fixed_and_committed_costs_warning returns false" do
           subject.stub(:fixed_costs){ BigDecimal.new("1") }
           subject.stub(:committed_costs){ BigDecimal.new("0") }
-          expect(subject.missing_fixed_and_committed_costs_warning?).to be_false
+          expect(subject.missing_fixed_and_committed_costs_warning?).to be_falsey
         end
       end
 
@@ -317,7 +317,7 @@ module MortgageCalculator
         subject{ described_class.new(people: [], outgoings: Outgoings.new(rent_and_mortgage: 1)) }
 
         it "only_rent_and_mortgage_warning returns true" do
-          expect(subject.only_rent_and_mortgage_warning?).to be_true
+          expect(subject.only_rent_and_mortgage_warning?).to be_truthy
         end
       end
 
@@ -325,7 +325,7 @@ module MortgageCalculator
         subject{ described_class.new(people: [], outgoings: Outgoings.new(rent_and_mortgage: 1, utilities: 1)) }
 
         it "only_rent_and_mortgage_warning returns false" do
-          expect(subject.only_rent_and_mortgage_warning?).to be_false
+          expect(subject.only_rent_and_mortgage_warning?).to be_falsey
         end
       end
     end

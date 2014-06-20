@@ -18,7 +18,7 @@ module MortgageCalculator
         end
 
         it 'returns false' do
-          expect(helper.no_follow?).to be_false
+          expect(helper.no_follow?).to be_falsey
         end
       end
 
