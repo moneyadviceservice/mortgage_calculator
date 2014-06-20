@@ -68,21 +68,6 @@
               }
           %>
         </div>
-      <% else %>
-        <div class="rendered-from-js form__row">
-          <%= f.label :two_applicants,
-                      class: "label--inline" do %>
-            <%= f.check_box :two_applicants,
-                            "ng-model" => "affordability.selectedOption",
-                            "ng-initial" => @affordability.two_applicants? ? "1" : "0",
-                            "ng-initial-as-string" => "true",
-                            "ng-true-value" => "1",
-                            "ng-false-value" => "0",
-                            "value" => "1",
-                            "name" => "affordability[two_applicants]",
-                            :checked => @affordability.two_applicants? %>
-            <%= I18n.t("affordability.titles.second_applicant") %>
-          <% end %>
       </div>
     <% else %>
 

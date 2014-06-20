@@ -7,7 +7,7 @@
 
   <% f.validates @affordability, @affordability.outgoings %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affcalc__small-12 affcalc__medium-8">
     <h2><%= t("affordability.title") %></h2>
 
     <%= f.validation_summary %>
@@ -20,148 +20,182 @@
     <p><%= t("affordability.input_page.outgoings_second_person") %></p>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
+  <div class="affcalc__small-12">
     <h4><%= I18n.t("affordability.titles.estimated_committed") %></h4>
   </div>
 
-  <div class="mortgagecalc__panel">
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:credit_repayments) %>">
-      <%= outgoings.errors_for outgoings.object, :credit_repayments %>
-      <%= outgoings.label :credit_repayments %>
-      <%= outgoings.text_field :credit_repayments,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.credit_repayments",
-                            "ng-initial" => "",
-                            "autofocus" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_credit_repayments",
-                            "value" => outgoings.object.credit_repayments_formatted,
-                            "pattern" => '\d*' %>
-      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.credit_repayments_html"),
-          html: {
-            id: 'tip_credit_repayments'
-          }
-      %>
-    </div>
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
-      <%= outgoings.errors_for outgoings.object, :child_maintenance %>
-      <%= outgoings.label :child_maintenance %>
-      <%= outgoings.text_field :child_maintenance,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.child_maintenance",
-                            "ng-initial" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_child_maintenance",
-                            "value" => outgoings.object.child_maintenance_formatted,
-                            "pattern" => '\d*' %>
-      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.child_maintenance_html"),
-          html: {
-            id: 'tip_child_maintenance'
-          }
-      %>
-    </div>
-  </div>
+  <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <h4><%= I18n.t("affordability.titles.estimated_fixed") %></h4>
-  </div>
-
-  <div class="mortgagecalc__panel">
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:childcare) %>">
-      <%= outgoings.errors_for outgoings.object, :childcare %>
-      <%= outgoings.label :childcare %>
-      <%= outgoings.text_field :childcare,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.childcare",
-                            "ng-initial" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_childcare",
-                            "value" => outgoings.object.childcare_formatted,
-                            "pattern" => '\d*' %>
-      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.childcare_html"),
-          html: {
-            id: 'tip_childcare'
-          }
-      %>
-    </div>
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
-      <%= outgoings.errors_for outgoings.object, :travel %>
-      <%= outgoings.label :travel %>
-      <%= outgoings.text_field :travel,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.travel",
-                            "ng-initial" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_travel",
-                            "value" => outgoings.object.travel_formatted,
-                            "pattern" => '\d*' %>
-      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.travel_html"),
-          html: {
-            id: 'tip_travel'
-          }
-      %>
-    </div>
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
-      <%= outgoings.errors_for outgoings.object, :utilities %>
-      <%= outgoings.label :utilities %>
-      <%= outgoings.text_field :utilities,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.utilities",
-                            "ng-initial" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_utilities",
-                            "value" => outgoings.object.utilities_formatted,
-                            "pattern" => '\d*' %>
-      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.utilities_html"),
-          html: {
-            id: 'tip_utilities'
-          }
-      %>
-    </div>
-    <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
-      <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
-      <%= outgoings.label :rent_and_mortgage %>
-      <%= outgoings.text_field :rent_and_mortgage,
-                            "class" => "form-control",
-                            "ng-model" => "affordability.outgoings.rent_and_mortgage",
-                            "ng-initial" => "",
-                            "currency" => '',
-                            "placeholder" => "£0",
-                            "data-a-sign" =>"£",
-                            "data-m-dec" =>"0",
-                            "aria-describedby" => "tip_rent_and_mortgage",
-                            "value" => outgoings.object.rent_and_mortgage_formatted,
-                            "pattern" => '\d*' %>
-        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.rent_and_mortgage_html"),
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:credit_repayments) %>">
+        <%= outgoings.errors_for outgoings.object, :credit_repayments %>
+        <%= outgoings.label :credit_repayments %>
+        <%= outgoings.text_field :credit_repayments,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.credit_repayments",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_credit_repayments",
+                              "value" => outgoings.object.credit_repayments_formatted,
+                              "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.credit_repayments_html"),
             html: {
-              id: 'tip_rent_and_mortgage'
+              id: 'tip_credit_repayments'
             }
         %>
       </div>
     </div>
 
-    <div class="mortgagecalc__panel mortgagecalc__panel--full">
-      <h3><%= I18n.t("affordability.titles.estimated_lifestyle") %></h3>
-      <p><%= t "affordability.input_page.living_costs_description" %></p>
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
+        <%= outgoings.errors_for outgoings.object, :child_maintenance %>
+        <%= outgoings.label :child_maintenance %>
+        <%= outgoings.text_field :child_maintenance,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.child_maintenance",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_child_maintenance",
+                              "value" => outgoings.object.child_maintenance_formatted,
+                              "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.child_maintenance_html"),
+            html: {
+              id: 'tip_child_maintenance'
+            }
+        %>
+      </div>
     </div>
 
-    <div class="mortgagecalc__panel">
+<div class="affcalc__small-12">
+  <h4><%= I18n.t("affordability.titles.estimated_fixed") %></h4>
+</div>
+
+<div class="affcalc__row">
+  <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:childcare) %>">
+        <%= outgoings.errors_for outgoings.object, :childcare %>
+        <%= outgoings.label :childcare %>
+        <%= outgoings.text_field :childcare,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.childcare",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_childcare",
+                              "value" => outgoings.object.childcare_formatted,
+                              "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.childcare_html"),
+            html: {
+              id: 'tip_childcare'
+            }
+        %>
+      </div>
+    </div>
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
+        <%= outgoings.errors_for outgoings.object, :travel %>
+        <%= outgoings.label :travel %>
+        <%= outgoings.text_field :travel,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.travel",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_travel",
+                              "value" => outgoings.object.travel_formatted,
+                              "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.travel_html"),
+            html: {
+              id: 'tip_travel'
+            }
+        %>
+      </div>
+    </div>
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
+        <%= outgoings.errors_for outgoings.object, :utilities %>
+        <%= outgoings.label :utilities %>
+        <%= outgoings.text_field :utilities,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.utilities",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_utilities",
+                              "value" => outgoings.object.utilities_formatted,
+                              "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.utilities_html"),
+            html: {
+              id: 'tip_utilities'
+            }
+        %>
+      </div>
+    </div>
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
+        <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
+        <%= outgoings.label :rent_and_mortgage %>
+        <%= outgoings.text_field :rent_and_mortgage,
+                              "class" => "form-control",
+                              "ng-model" => "affordability.outgoings.rent_and_mortgage",
+                              "ng-initial" => "",
+                              "currency" => '',
+                              "placeholder" => "£0",
+                              "data-a-sign" =>"£",
+                              "data-m-dec" =>"0",
+                              "aria-describedby" => "tip_rent_and_mortgage",
+                              "value" => outgoings.object.rent_and_mortgage_formatted,
+                              "pattern" => '\d*' %>
+          </div>
+        </div>
+        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.rent_and_mortgage_html"),
+              html: {
+                id: 'tip_rent_and_mortgage'
+              }
+          %>
+        </div>
+      </div>
+
+  <div class="affcalc__small-12">
+    <h3><%= I18n.t("affordability.titles.estimated_lifestyle") %></h3>
+    <p><%= t "affordability.input_page.living_costs_description" %></p>
+  </div>
+
+  <div class="affcalc__row">
+    <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:entertainment) %>">
         <%= outgoings.errors_for outgoings.object, :entertainment %>
         <%= outgoings.label :entertainment %>
@@ -176,61 +210,80 @@
                               "aria-describedby" => "tip_entertainment",
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
+        </div>
+      </div>
+      <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.entertainment_html"),
             html: {
               id: 'tip_entertainment'
             }
         %>
       </div>
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
-        <%= outgoings.errors_for outgoings.object, :holidays %>
-        <%= outgoings.label :holidays %>
-        <%= outgoings.text_field :holidays,
-                              "class" => "form-control",
-                              "ng-model" => "affordability.outgoings.holidays",
-                              "ng-initial" => "",
-                              "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "aria-describedby" => "tip_holidays",
-                              "value" => outgoings.object.holidays_formatted,
-                              "pattern" => '\d*' %>
-        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.holidays_html"),
-            html: {
-              id: 'tip_holidays'
-            }
-        %>
-      </div>
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
-        <%= outgoings.errors_for outgoings.object, :food %>
-        <%= outgoings.label :food %>
-        <%= outgoings.text_field :food,
-                              "class" => "form-control",
-                              "ng-model" => "affordability.outgoings.food",
-                              "ng-initial" => "",
-                              "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
-                              "data-m-dec" =>"0",
-                              "aria-describedby" => "tip_food",
-                              "value" => outgoings.object.food_formatted,
-                              "pattern" => '\d*' %>
-        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.food_html"),
-            html: {
-              id: 'tip_food'
-            }
-        %>
-      </div>
     </div>
+
+    <div class="affcalc__row">
+      <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
+          <%= outgoings.errors_for outgoings.object, :holidays %>
+          <%= outgoings.label :holidays %>
+          <%= outgoings.text_field :holidays,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.outgoings.holidays",
+                                "ng-initial" => "",
+                                "currency" => '',
+                                "placeholder" => "£0",
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_holidays",
+                                "value" => outgoings.object.holidays_formatted,
+                                "pattern" => '\d*' %>
+          </div>
+        </div>
+        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.holidays_html"),
+              html: {
+                id: 'tip_holidays'
+              }
+          %>
+        </div>
+      </div>
+
+
+    <div class="affcalc__row">
+      <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
+          <%= outgoings.errors_for outgoings.object, :food %>
+          <%= outgoings.label :food %>
+          <%= outgoings.text_field :food,
+                                "class" => "form-control",
+                                "ng-model" => "affordability.outgoings.food",
+                                "ng-initial" => "",
+                                "currency" => '',
+                                "placeholder" => "£0",
+                                "data-a-sign" =>"£",
+                                "data-m-dec" =>"0",
+                                "aria-describedby" => "tip_food",
+                                "value" => outgoings.object.food_formatted,
+                                "pattern" => '\d*' %>
+          </div>
+        </div>
+        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.food_html"),
+              html: {
+                id: 'tip_food'
+              }
+          %>
+        </div>
+      </div>
   <% end %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affcalc__small-12">
     <div class="form__row">
-      <%= link_to t("affordability.back"), step_1_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
+      <p><%= link_to t("affordability.back"), step_1_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
 
       <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
+      </p>
     </div>
   </div>
 <% end %>
