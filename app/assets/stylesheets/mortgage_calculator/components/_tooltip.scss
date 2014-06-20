@@ -1,4 +1,6 @@
 .tooltip {
+  margin-top: $baseline-unit*3;
+
   @include respond-to($mq-m) {
     position: absolute;
     margin-top: $baseline-unit*8;
