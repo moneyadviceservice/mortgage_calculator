@@ -33,7 +33,7 @@ describe MortgageCalculator::Repayment do
     its(:interest_rate){ should == 5 }
   end
 
-  describe :change_interest_rate_by do
+  describe '#change_interest_rate_by' do
     it 'increases the interest rate' do
       expect(subject.change_interest_rate_by(1).interest_rate).to eq(8.5)
     end
@@ -67,19 +67,19 @@ describe MortgageCalculator::Repayment do
     end
   end
 
-  describe :monthly_payment do
+  describe '#monthly_payment' do
     its(:monthly_payment){ should be_within(0.01).of(738.99) }
   end
 
-  describe :total_interest do
+  describe '#total_interest' do
     its(:total_interest){ should be_within(1).of(121697) }
   end
 
-  describe :total_payable do
+  describe '#total_payable' do
     its(:total_payable){ should be_within(1).of(221697) }
   end
 
-  describe :remaining_balances do
+  describe '#remaining_balances' do
     it 'returns correct remaining balances' do
       balances = subject.remaining_balances
 

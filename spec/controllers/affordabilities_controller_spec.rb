@@ -16,7 +16,7 @@ module MortgageCalculator
       end
     end
 
-    describe :step_1 do
+    describe '#step_1' do
       it 'responds with 200' do
         get :step_1
         expect(response).to be_success
@@ -28,7 +28,7 @@ module MortgageCalculator
       end
     end
 
-    describe :step_2 do
+    describe '#step_2' do
       context "when there is a validation error" do
         render_views
 
@@ -52,7 +52,7 @@ module MortgageCalculator
       end
     end
 
-    describe :step_3 do
+    describe '#step_3' do
       it 'renders the step_3 template' do
         post :step_3, affordability: {
                         people_attributes: {
@@ -140,7 +140,7 @@ module MortgageCalculator
       end
     end
 
-    describe :next_steps do
+    describe '#next_steps' do
       it 'works' do
         get :next_steps
         expect(response).to be_success

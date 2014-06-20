@@ -98,7 +98,7 @@ module MortgageCalculator
       its(:monthly_net_income){ should == 9000 }
     end
 
-    describe :borrowing do
+    describe '#borrowing' do
       context 'default amount' do
         it 'is half way between the range they can borrow' do
           half = (subject.can_borrow_from + subject.can_borrow_upto) / 2
@@ -115,7 +115,7 @@ module MortgageCalculator
       end
     end
 
-    describe :lifestyle_costs do
+    describe '#lifestyle_costs' do
       context 'when overridden' do
         subject{ described_class.new(people: [person1], outgoings: outgoings, lifestyle_costs: 123) }
 
@@ -125,7 +125,7 @@ module MortgageCalculator
       end
     end
 
-    describe :interest_rate do
+    describe '#interest_rate' do
       context 'when overridden' do
         subject{ described_class.new(people: [person1], outgoings: outgoings, interest_rate: 13) }
 
@@ -135,7 +135,7 @@ module MortgageCalculator
       end
     end
 
-    describe :risk_percentage do
+    describe '#risk_percentage' do
       it "is (monthly mortgage repayments + commited costs) / take home" do
         expect(subject.risk_percentage.to_i).to eql(48)
       end
@@ -163,55 +163,55 @@ module MortgageCalculator
       end
     end
 
-    describe :inverse_risk_percentage do
+    describe '#inverse_risk_percentage' do
       it 'is the 100 - risk percentage' do
-        subject.stub(:risk_percentage){ 10 }
+        allow(subject).to receive(:risk_percentage){ 10 }
         expect(subject.inverse_risk_percentage).to eql(90)
 
-        subject.stub(:risk_percentage){ 50 }
+        allow(subject).to receive(:risk_percentage){ 50 }
         expect(subject.inverse_risk_percentage).to eql(50)
       end
     end
 
-    describe :risk_level do
+    describe '#risk_level' do
       context 'when it is under 40' do
         it 'returns :low' do
-          subject.stub(:risk_percentage){ 0 }
+          allow(subject).to receive(:risk_percentage){ 0 }
           expect(subject.risk_level).to eql(:low)
 
-          subject.stub(:risk_percentage){ 39 }
+          allow(subject).to receive(:risk_percentage){ 39 }
           expect(subject.risk_level).to eql(:low)
         end
       end
 
       context 'when it is between 40 and 60' do
         it 'returns :medium' do
-          subject.stub(:risk_percentage){ 40 }
+          allow(subject).to receive(:risk_percentage){ 40 }
           expect(subject.risk_level).to eql(:medium)
 
-          subject.stub(:risk_percentage){ 60 }
+          allow(subject).to receive(:risk_percentage){ 60 }
           expect(subject.risk_level).to eql(:medium)
         end
       end
 
       context 'when it is over 60' do
         it 'returns :high' do
-          subject.stub(:risk_percentage){ 61 }
+          allow(subject).to receive(:risk_percentage){ 61 }
           expect(subject.risk_level).to eql(:high)
 
-          subject.stub(:risk_percentage){ 100 }
+          allow(subject).to receive(:risk_percentage){ 100 }
           expect(subject.risk_level).to eql(:high)
         end
       end
     end
 
-    describe :remaining do
+    describe '#remaining' do
       it 'returns remaining amount per month' do
         expect(subject.remaining.to_i).to eql(2498)
       end
     end
 
-    describe :remaining_positive? do
+    describe '#remaining_positive?' do
       context 'when positive' do
         it 'returns true' do
           expect(subject.remaining_positive?).to be_truthy
@@ -220,20 +220,20 @@ module MortgageCalculator
 
       context 'when zero' do
         it 'returns true' do
-          subject.stub(:remaining){ BigDecimal.new("0")  }
+          allow(subject).to receive(:remaining){ BigDecimal.new("0")  }
           expect(subject.remaining_positive?).to be_truthy
         end
       end
 
       context 'when negative' do
         it 'returns false' do
-          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          allow(subject).to receive(:remaining){ BigDecimal.new("-1")  }
           expect(subject.remaining_positive?).to be_falsey
         end
       end
     end
 
-    describe :remaining_negative? do
+    describe '#remaining_negative?' do
       context 'when positive' do
         it 'returns false' do
           expect(subject.remaining_negative?).to be_falsey
@@ -242,32 +242,32 @@ module MortgageCalculator
 
       context 'when zero' do
         it 'returns false' do
-          subject.stub(:remaining){ BigDecimal.new("0")  }
+          allow(subject).to receive(:remaining){ BigDecimal.new("0")  }
           expect(subject.remaining_negative?).to be_falsey
         end
       end
 
       context 'when negative' do
         it 'returns true' do
-          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          allow(subject).to receive(:remaining){ BigDecimal.new("-1")  }
           expect(subject.remaining_negative?).to be_truthy
         end
       end
     end
 
-    describe :budget_outgoing do
+    describe '#budget_outgoing' do
       it 'returns mortgage repayment + fix + committed costs' do
         expect(subject.budget_outgoing.to_i).to eql(2901)
       end
     end
 
-    describe :budget_leftover do
+    describe '#budget_leftover' do
       it 'returns net monthly - budget_outgoing' do
         expect(subject.budget_leftover.to_i).to eql(3098)
       end
     end
 
-    describe :remaining_vector do
+    describe '#remaining_vector' do
       context 'when positive' do
         it 'returns positive' do
           expect(subject.remaining_vector).to eql(:positive)
@@ -276,7 +276,7 @@ module MortgageCalculator
 
       context 'when negative' do
         it 'returns negative' do
-          subject.stub(:remaining){ BigDecimal.new("-1")  }
+          allow(subject).to receive(:remaining){ BigDecimal.new("-1")  }
           expect(subject.remaining_vector).to eql(:negative)
         end
       end
@@ -285,30 +285,30 @@ module MortgageCalculator
     describe 'warnings' do
       context 'sum of lifestyle costs is zero' do
         it "missing_lifestyle_costs_warning is true" do
-          subject.stub(:lifestyle_costs){ BigDecimal.new("0") }
+          allow(subject).to receive(:lifestyle_costs){ BigDecimal.new("0") }
           expect(subject.missing_lifestyle_costs_warning?).to be_truthy
         end
       end
 
       context 'sum of lifestyle costs is not zero' do
         it "missing_lifestyle_costs_warning is false" do
-          subject.stub(:lifestyle_costs){ BigDecimal.new("1") }
+          allow(subject).to receive(:lifestyle_costs){ BigDecimal.new("1") }
           expect(subject.missing_lifestyle_costs_warning?).to be_falsey
         end
       end
 
       context 'sum of fixed and committed costs is zero' do
         it "missing_fixed_and_committed_costs_warning returns true" do
-          subject.stub(:fixed_costs){ BigDecimal.new("0") }
-          subject.stub(:committed_costs){ BigDecimal.new("0") }
+          allow(subject).to receive(:fixed_costs){ BigDecimal.new("0") }
+          allow(subject).to receive(:committed_costs){ BigDecimal.new("0") }
           expect(subject.missing_fixed_and_committed_costs_warning?).to be_truthy
         end
       end
 
       context 'sum of fixed and committed costs is not zero' do
         it "missing_fixed_and_committed_costs_warning returns false" do
-          subject.stub(:fixed_costs){ BigDecimal.new("1") }
-          subject.stub(:committed_costs){ BigDecimal.new("0") }
+          allow(subject).to receive(:fixed_costs){ BigDecimal.new("1") }
+          allow(subject).to receive(:committed_costs){ BigDecimal.new("0") }
           expect(subject.missing_fixed_and_committed_costs_warning?).to be_falsey
         end
       end
@@ -353,7 +353,7 @@ module MortgageCalculator
       }
     end
 
-    describe :load_from_store do
+    describe '#load_from_store' do
       let(:store) do
         { affordability: serialized_hash }
       end

@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe MortgageCalculator::RepaymentsController do
-  describe :show do
+  describe '#show' do
     it 'responds with 200' do
       get :show, :locale => :en
       expect(response).to be_success
     end
   end
 
-  describe :create do
+  describe 'cr#eate' do
     it 'responds with 200' do
       post :create, locale: :en, repayment: { price: 60000, term_years: 10, interest_rate: 3.5 }
       expect(response).to be_success
@@ -29,7 +29,7 @@ describe MortgageCalculator::RepaymentsController do
     end
   end
 
-  describe :next_steps do
+  describe 'next_s#teps' do
     it 'works' do
       get :next_steps, locale: :en
       expect(response).to be_success

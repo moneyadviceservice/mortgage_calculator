@@ -17,14 +17,14 @@ module MortgageCalculator
       end
     end
 
-    describe :show do
+    describe '#show' do
       it 'responds with 200' do
         get :show
         expect(response).to be_success
       end
     end
 
-    describe :create do
+    describe '#create' do
       it 'responds with 200' do
         post :create, stamp_duty: { price: "200000" }
         expect(response).to be_success
@@ -40,7 +40,7 @@ module MortgageCalculator
       end
     end
 
-    describe :next_steps do
+    describe '#next_steps' do
       it 'works' do
         get :next_steps
       end

@@ -19,7 +19,7 @@ describe MortgageCalculator::InterestOnly do
     its(:interest_rate){ should == 5 }
   end
 
-  describe :change_interest_rate_by do
+  describe 'change_interest_rate_by' do
     before :each do
       subject.change_interest_rate_by(1)
     end

@@ -67,19 +67,19 @@ describe MortgageCalculator::Outgoings do
     it { should validate_numericality_of(:holidays) }
   end
 
-  describe :commited_costs do
+  describe 'commited_costs' do
     it "is sum of credit_repayments, child_maintenance" do
       expect(subject.committed_costs).to eql(200 + 0)
     end
   end
 
-  describe :fixed_costs do
+  describe 'fixed_costs' do
     it "is sum of childcare, utilities, travel" do
       expect(subject.fixed_costs).to eql(200 + 300 + 150)
     end
   end
 
-  describe :lifestyle_costs do
+  describe 'lifestyle_costs' do
     it "is sum of food, holidays, entertainment" do
       expect(subject.lifestyle_costs).to eql(200 + 150 + 150)
     end
