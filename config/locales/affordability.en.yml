@@ -77,8 +77,8 @@ en:
         entertainment_html: "<b>Include:</b> eating out, clothing, daily coffees/teas, theatre, museums, evenings out, family days out, personal grooming etc"
         holidays_html: "Think about how much you typically spend on holidays or weekends away per year. <b>Exclude</b> travel insurance or travel for work"
       mortgage_calculator/person:
-        annual_income_0: "Your income before tax"
-        extra_income_0: "Include: pension, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
+        annual_income_0_html: "Your income before tax. <a href='#'>omg such a link</a>"
+        extra_income_0_html: "Include: pension, guaranteed bonus,  <a href='#'>omg such a link</a> regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
         monthly_net_income_0: "Your monthly income after tax, minus pension, NI, and other deductions"
         annual_income_1: "Second applicant’s income before tax"
         extra_income_1: "Include: second applicant's pension, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"

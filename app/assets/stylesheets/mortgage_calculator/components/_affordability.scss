@@ -3,6 +3,7 @@
 
   .affcalc__row {
     @extend %clearfix;
+    position: relative;
   }
 
   @for $i from 1 through 12 {
