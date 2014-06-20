@@ -47,7 +47,7 @@ en:
           too_long: "%{attribute} is too long (maximum is %{count} characters)"
           too_short: "%{attribute} is too short (minimum is %{count} characters)"
           wrong_length: "%{attribute} is the wrong length (should be %{count} characters)"
-          not_a_number: "%{attribute} is not a number"
+          not_a_number: "%{attribute} must be a number"
           not_an_integer: "%{attribute} must be an integer"
           greater_than: "%{attribute} must be greater than %{count}"
           greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}"
@@ -61,9 +61,9 @@ en:
             income_greater_than_zero: "Your total income must be greater than zero"
         mortgage_calculator/person:
           base:
-            proportional_incomes: "Your monthly take-home pay is higher than your annual income"
-            take_home_is_zero: "Take-home pay should be more than zero if annual income is more than zero"
-            annual_income_is_zero: "Annual income should be more than zero if take-home pay is more than zero"
+            proportional_incomes: "Your have typed in a larger amount for your monthly take home pay than you have for your annual income. You will mostly earn more per year than you will per month"
+            take_home_is_zero: "You need to type in an amount for your take home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
+            annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
