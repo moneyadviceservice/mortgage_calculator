@@ -39,7 +39,7 @@ When(/^I submit invalid details$/) do
 end
 
 Then(/^I see an error message$/) do
-  expect(page).to have_content('Monthly net income is not a number')
+  expect(page).to have_content('is not a number')
 end
 
 Then(/^I do not see the result output$/) do
