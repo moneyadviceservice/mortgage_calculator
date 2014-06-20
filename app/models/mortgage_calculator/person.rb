@@ -2,6 +2,7 @@ module MortgageCalculator
   class Person
     include ActiveModel::Validations
     include CurrencyInput::Macro
+    include ActionView::Helpers::NumberHelper
 
     attr_accessor :annual_income, :extra_income, :monthly_net_income
 
@@ -31,6 +32,18 @@ module MortgageCalculator
       annual_income + extra_income
     rescue
       0
+    end
+
+    def annual_income_formatted
+      number_to_currency annual_income, unit: nil
+    end
+
+    def extra_income_formatted
+      number_to_currency extra_income, unit: nil
+    end
+
+    def monthly_net_income_formatted
+      number_to_currency monthly_net_income, unit: nil
     end
 
     private

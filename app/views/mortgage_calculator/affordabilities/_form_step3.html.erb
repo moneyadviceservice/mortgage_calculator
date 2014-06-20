@@ -67,6 +67,7 @@
       <%= f.label :lifestyle_costs,
           "id" => "label_lifestyle" %>
       <%= f.text_field :lifestyle_costs,
+                       :value => @affordability.lifestyle_costs_formatted,
                        class: 'dynamic-slider-property',
                        "currency" => '',
                        "placeholder" => "£0",

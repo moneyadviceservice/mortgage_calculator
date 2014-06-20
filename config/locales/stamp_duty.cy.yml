@@ -10,6 +10,10 @@ cy:
     back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Cyfrifir treth stamp fel canran o bris eich eiddo"
+    activemodel:
+      attributes:
+        mortgage_calculator/stamp_duty:
+          price: Cyfanswm pris yr eiddo yw
     caveat:
       title: "Pwysig"
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
