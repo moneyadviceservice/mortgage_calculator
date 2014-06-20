@@ -103,7 +103,7 @@ end
 
 Given(/^I have entered all details for applicant "(.*?)"$/) do |applicants|
   step "I visit the Affordability page"
-step "I enter all details for \"#{applicants.to_i}\" applicants"
+  step "I enter all details for \"#{applicants.to_i}\" applicants"
 end
 
 When(/^I update my affordability circumstances$/) do
