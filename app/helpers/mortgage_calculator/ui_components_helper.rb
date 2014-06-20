@@ -4,8 +4,8 @@ module MortgageCalculator
         render 'mortgage_calculator/affordabilities/inset_block', text: text
       end
 
-      def field_tooltip(args)
-        render 'mortgage_calculator/affordabilities/field_tooltip', args
+      def field_tooltip(*args)
+        render 'mortgage_calculator/affordabilities/field_tooltip', *args
       end
    end
 end
