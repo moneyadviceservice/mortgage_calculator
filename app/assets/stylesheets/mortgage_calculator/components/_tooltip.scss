@@ -1,5 +1,5 @@
 .tooltip {
-  margin-top: $baseline-unit*3;
+  margin-bottom: $baseline-unit*6;
 
   .js & {
     @include respond-to($mq-m) {
