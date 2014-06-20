@@ -7,13 +7,13 @@ module MortgageCalculator
     extend ActiveModel::Translation
     include ActionView::Helpers::NumberHelper
 
-    attr_reader :people, :outgoings
-
-    attr_accessor :two_applicants, :empty
-
     def self.i18n_scope
       "affordability.activemodel"
     end
+
+    attr_reader :people, :outgoings
+
+    attr_accessor :two_applicants, :empty
 
     def two_applicants?
       two_applicants == "1"

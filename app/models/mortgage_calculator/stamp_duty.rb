@@ -5,6 +5,10 @@ module MortgageCalculator
     include CurrencyInput::Macro
     include ActionView::Helpers::NumberHelper
 
+    def self.i18n_scope
+      "stamp_duty.activemodel"
+    end
+
     RATES = {
       2000000 => 7,
       1000000 => 5,
@@ -22,10 +26,6 @@ module MortgageCalculator
 
     def initialize(options = {})
       self.price = options.fetch(:price){ 0 }
-    end
-
-    def self.i18n_scope
-      "stamp_duty.activemodel"
     end
 
     [:price, :tax_due, :total_due].each do |field|

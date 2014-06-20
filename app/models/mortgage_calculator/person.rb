@@ -4,6 +4,10 @@ module MortgageCalculator
     include CurrencyInput::Macro
     include ActionView::Helpers::NumberHelper
 
+    def self.i18n_scope
+      "affordability.activemodel"
+    end
+
     attr_accessor :annual_income, :extra_income, :monthly_net_income
 
     validates :annual_income, numericality: true

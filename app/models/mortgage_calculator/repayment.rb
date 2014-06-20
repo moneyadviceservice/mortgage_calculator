@@ -7,6 +7,10 @@ module MortgageCalculator
     include ActionView::Helpers::NumberHelper
     extend ActiveModel::Translation
 
+    def self.i18n_scope
+      "mortgage_calculator.activemodel"
+    end
+
     attr_reader :term_years, :interest_rate, :price, :deposit
 
     currency_inputs :price, :deposit
@@ -20,10 +24,6 @@ module MortgageCalculator
       self.deposit = options[:deposit].presence || 0
       self.term_years = options[:term_years].presence || 25
       self.interest_rate = options[:interest_rate].presence || 5
-    end
-
-    def self.i18n_scope
-      "mortgage_calculator.activemodel"
     end
 
     [:debt, :price, :deposit, :monthly_payment, :total_interest,
