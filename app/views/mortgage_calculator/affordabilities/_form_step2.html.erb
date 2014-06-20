@@ -26,7 +26,7 @@
   </div>
 
   <div class="mortgagecalc__panel">
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :credit_repayments %>
       <%= outgoings.label :credit_repayments %>
       <%= outgoings.text_field :credit_repayments,
@@ -41,7 +41,7 @@
                             "value" => outgoings.object.credit_repayments_formatted,
                             "pattern" => '\d*' %>
     </div>
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :child_maintenance %>
       <%= outgoings.label :child_maintenance %>
       <%= outgoings.text_field :child_maintenance,
@@ -62,7 +62,7 @@
   </div>
 
   <div class="mortgagecalc__panel">
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :childcare %>
       <%= outgoings.label :childcare %>
       <%= outgoings.text_field :childcare,
@@ -76,7 +76,7 @@
                             "value" => outgoings.object.childcare_formatted,
                             "pattern" => '\d*' %>
     </div>
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :travel %>
       <%= outgoings.label :travel %>
       <%= outgoings.text_field :travel,
@@ -90,7 +90,7 @@
                             "value" => outgoings.object.travel_formatted,
                             "pattern" => '\d*' %>
     </div>
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :utilities %>
       <%= outgoings.label :utilities %>
       <%= outgoings.text_field :utilities,
@@ -104,7 +104,7 @@
                             "value" => outgoings.object.utilities_formatted,
                             "pattern" => '\d*' %>
     </div>
-    <div class="form__item">
+    <div class="form__row">
       <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
       <%= outgoings.label :rent_and_mortgage %>
       <%= outgoings.text_field :rent_and_mortgage,
@@ -126,7 +126,7 @@
     </div>
 
     <div class="mortgagecalc__panel">
-      <div class="form__item">
+      <div class="form__row">
         <%= outgoings.errors_for outgoings.object, :entertainment %>
         <%= outgoings.label :entertainment %>
         <%= outgoings.text_field :entertainment,
@@ -140,7 +140,7 @@
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
       </div>
-      <div class="form__item">
+      <div class="form__row">
         <%= outgoings.errors_for outgoings.object, :holidays %>
         <%= outgoings.label :holidays %>
         <%= outgoings.text_field :holidays,
@@ -154,7 +154,7 @@
                               "value" => outgoings.object.holidays_formatted,
                               "pattern" => '\d*' %>
       </div>
-      <div class="form__item">
+      <div class="form__row">
         <%= outgoings.errors_for outgoings.object, :food %>
         <%= outgoings.label :food %>
         <%= outgoings.text_field :food,
@@ -172,7 +172,7 @@
   <% end %>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <div class="form__item form__item--spaced">
+    <div class="form__row">
       <%= link_to t("affordability.back"), step_1_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
 
       <%= f.submit I18n.t("affordability.input_page.submit"),
