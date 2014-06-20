@@ -1,0 +1,6 @@
+<div class="tooltip tooltip--onfocus" ng-tooltip role="tooltip"
+  <%== html.map { |k, v| %Q{#{k}="#{v}"} }.join(' ') %>>
+  <div class="tooltip__content-container">
+    <p class="tooltip__text"><%= text %></p>
+  </div>
+</div>
