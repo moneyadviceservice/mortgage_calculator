@@ -39,7 +39,7 @@ When(/^I submit invalid details$/) do
 end
 
 Then(/^I see an error message$/) do
-  expect(page).to have_content('is not a number')
+  expect(page).to have_content(I18n.t("affordability.activemodel.errors.messages.not_a_number", attribute: ''))
 end
 
 Then(/^I do not see the result output$/) do
