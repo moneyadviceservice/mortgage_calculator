@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe MortgageCalculator::Person do
@@ -48,4 +50,49 @@ describe MortgageCalculator::Person do
       end
     end
   end
+
+  describe '#total_income' do
+    subject do
+      described_class.new(
+        annual_income: annual_income,
+        extra_income: extra_income
+      )
+    end
+
+    context 'with annual income of £12,000 and extra_income of £5,000' do
+      let(:annual_income) { 12_000 }
+      let(:extra_income) { 5_000 }
+
+      its(:total_income) { should eq(17_000) }
+    end
+
+    context 'with annual income of £12,000 and no extra_income' do
+      let(:annual_income) { 12_000 }
+      let(:extra_income) { nil }
+
+      its(:total_income) { should eq(12_000) }
+    end
+
+    context 'with no annual income, and extra_income of £5,000' do
+      let(:annual_income) { nil }
+      let(:extra_income) { 5_000 }
+
+      its(:total_income) { should eq(5_000) }
+    end
+
+    context 'with invalid annual income, and extra_income of £5,000' do
+      let(:annual_income) { 'invalid' }
+      let(:extra_income) { 5_000 }
+
+      its(:total_income) { should eq(5_000) }
+    end
+
+    context 'with £12,000 annual income, and invalid extra_income' do
+      let(:annual_income) { 12_000 }
+      let(:extra_income) { 'invalid' }
+
+      its(:total_income) { should eq(12_000) }
+    end
+  end
+
 end

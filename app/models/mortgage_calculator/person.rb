@@ -33,9 +33,7 @@ module MortgageCalculator
     end
 
     def total_income
-      annual_income + extra_income
-    rescue
-      0
+      safe_annual_income + safe_extra_income
     end
 
     def annual_income_formatted
@@ -69,5 +67,20 @@ module MortgageCalculator
         errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.annual_income_is_zero")
       end
     end
+
+  protected
+
+    def safe_annual_income
+      BigDecimal.new(annual_income)
+    rescue
+      0
+    end
+
+    def safe_extra_income
+      BigDecimal.new(extra_income)
+    rescue
+      0
+    end
+
   end
 end

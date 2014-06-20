@@ -9,6 +9,7 @@ gem 'mas-development_dependencies', '~> 2.2'
 
 group :test do
   gem 'rspec', '~> 2.99'
+  gem 'rspec-its'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', "2.5.0"
   gem 'coffee-rails'
