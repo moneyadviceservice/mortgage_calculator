@@ -166,7 +166,10 @@
     <% end %>
   <% end %>
 
-  <h3><%= I18n.t("affordability.titles.take_home") %></h3>
+  <div class="affcalc__small-12">
+    <h3><%= I18n.t("affordability.titles.take_home") %></h3>
+  </div>
+
   <%= f.fields_for :people do |person| %>
     <% index = @affordability.people.find_index(person.object) %>
     <% person.object_name = "affordability[people_attributes][#{index}]" %>

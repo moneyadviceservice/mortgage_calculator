@@ -2,7 +2,7 @@
   max-width: $affordability-width;
 
   .affcalc__row {
-    @include row();
+    @extend %clearfix;
   }
 
   @for $i from 1 through 12 {
