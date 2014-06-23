@@ -14,36 +14,40 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
-  <div class="affcalc__col--clip" calculate>
-    <div ng-docker>
-      <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
-      <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip" calculate>
+      <div ng-docker>
+        <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
+        <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
+      </div>
     </div>
   </div>
 
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
 
   <div class="affcalc__row">
-    <div class="affcalc__col">
+    <div class="affcalc__col--clip">
       <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
     </div>
   </div>
 
-  <div class="affcalc__col mortgagecalc__panel--border">
-    <h3><%= t "affordability.titles.how_affect_budget" %></h3>
-    <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <h3><%= t "affordability.titles.how_affect_budget" %></h3>
+      <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
 
-    <% if @affordability.only_rent_and_mortgage_warning? %>
-      <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
-                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
-    <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
-      <%= inset_block(t("affordability.warnings.missing_fixed_and_committed_costs_html",
-                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
-    <% end %>
+      <% if @affordability.only_rent_and_mortgage_warning? %>
+        <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
+                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+      <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
+        <%= inset_block(t("affordability.warnings.missing_fixed_and_committed_costs_html",
+                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+      <% end %>
 
-    <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
-    <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
-    <%= render "budget_scenarios" %>
+      <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
+      <%= render 'mortgage_calculator/affordabilities/form/take_home_pay' %>
+      <%= render "budget_scenarios" %>
+    </div>
   </div>
 
   <div class="affcalc__row">
@@ -58,16 +62,18 @@
     </div>
   </div>
 
-  <div class="affcalc__col mortgagecalc__panel--border">
-    <h3><%= t "affordability.titles.can_afford" %></h3>
-    <h4><%= t "affordability.titles.living_costs" %></h4>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <h3><%= t "affordability.titles.can_afford" %></h3>
+      <h4><%= t "affordability.titles.living_costs" %></h4>
 
-    <% if @affordability.missing_lifestyle_costs_warning? %>
-      <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
-                        back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
-    <% end %>
+      <% if @affordability.missing_lifestyle_costs_warning? %>
+        <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
+                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+      <% end %>
 
-    <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
+      <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
+    </div>
   </div>
 
   <div class="affcalc__row">
@@ -104,27 +110,33 @@
     </div>
   </div>
 
-  <div class="affcalc__col">
-    <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
 
-    <h3><%= t "affordability.interest_changer.title" %></h3>
-    <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
+      <h3><%= t "affordability.interest_changer.title" %></h3>
+      <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
+    </div>
   </div>
 
   <div class="hide-with-js">
     <p><br><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
   </div>
 
-  <div class="affcalc__col">
-    <p>
-      <%= link_to t("affordability.back"), step_2_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <p>
+        <%= link_to t("affordability.back"), step_2_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
 
-      <%= link_to t("affordability.next"), next_steps_affordability_path, class: "button" %>
-    </p>
+        <%= link_to t("affordability.next"), next_steps_affordability_path, class: "button" %>
+      </p>
+    </div>
   </div>
 
-  <div class="affcalc__col">
-    <%= inset_block(t "affordability.caveat.estimate") %>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <%= inset_block(t "affordability.caveat.estimate") %>
+    </div>
   </div>
 <% end %>
 
