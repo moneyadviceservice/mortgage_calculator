@@ -9,9 +9,10 @@
   position: fixed;
   margin: 0;
   top: 0;
-  padding: $baseline-unit*3 0;
+  padding: $baseline-unit*3;
   background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ccc;
   z-index: 1;
 
   .slider--with-follower-top {
