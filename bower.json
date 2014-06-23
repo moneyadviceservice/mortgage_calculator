@@ -1,6 +1,7 @@
 {
   "name": "mortgage-calculator",
   "dependencies": {
-    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets#master"
+    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets#master",
+    "jquery-waypoints": "2.0.*"
   }
 }

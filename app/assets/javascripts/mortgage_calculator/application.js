@@ -14,6 +14,7 @@
 //= require angular
 //= require angular-mocks
 //= require jquery-ui-mod
+//= require jquery-waypoints/waypoints
 //= require placeholder_polyfill.jquery
 //= require underscore
 //= require args
