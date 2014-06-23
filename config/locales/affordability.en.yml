@@ -2,7 +2,7 @@ en:
   affordability:
     tool_name: "mortgage-affordability-calculator"
     title: "How much can you borrow?"
-    preamble: "This tool will help you find out how much you can afford to borrow to buy a home. We'll work it out by looking at your income and your outgoings. Mortgage lenders will look at those figures very closely to work out how much they'll offer you."
+    preamble: "This tool will help you estimate how much you can afford to borrow to buy a home. We’ll work it out by looking at your income and your outgoings.  Mortgage lenders will look at those figures very closely to work out how much they’ll offer you."
     description: "It should take you about five minutes to complete."
     next: "Next"
     back: "Back"
@@ -115,7 +115,7 @@ en:
     interest_changer:
       title: "What if interest rates rise?"
       changes_by_would_increase_html: "If interest rates rise by %{percent}, your monthly repayment will rise to %{repayment}"
-      remaining_html: "Your financial buffer will now be %{remaining}"
+      remaining_html: "Your remaining budget will be %{remaining}"
     monthly_repayment:
       estimated_html: "Your estimated mortgage repayments per month will be approximately: <span class=\"accent\">%{repayment}</span>"
     remaining:
@@ -129,7 +129,8 @@ en:
       outgoing_html: "Mortgage repayments and essential costs per month amount to roughly %{percent} of your total take-home pay: %{absolute}"
       leftover_html: "What you have left over is roughly %{percent} of your monthly take home: %{absolute}"
       positive:
-        remaining_html: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? <a href='#'>Here’s what you can do now</a>."
+        remaining_html: "You are at risk of overstretching your budget to meet these repayments, particularly if circumstances change"
+        link_text: "Here’s what you can do now"
       negative:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. <a href='#'>Here’s what you can do now</a>."
     warnings:

@@ -1,2 +1,3 @@
-<p><strong><%= t "affordability.budget.#{@affordability.remaining_vector}.remaining_html" %></strong></p>
+<p><strong><%= t("affordability.budget.#{@affordability.remaining_vector}.remaining_html",
+                  link: link_to(t("affordability.budget.#{@affordability.remaining_vector}.link_text"), next_steps_affordability_path)) %></strong></p>
 
