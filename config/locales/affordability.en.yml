@@ -2,8 +2,8 @@ en:
   affordability:
     tool_name: "mortgage-affordability-calculator"
     title: "How much can you borrow?"
-    preamble: "This tool will help you estimate how much you can afford to borrow to buy a home. We’ll work it out by looking at your income and your outgoings.  Mortgage lenders will look at those figures very closely to work out how much they’ll offer you."
-    description: "It should take you about five minutes to complete."
+    preamble: "This tool will help you estimate how much you can afford to borrow to buy a home. We’ll work it out by looking at your income and your outgoings. Mortgage lenders will look at these figures very closely to work out how much they’ll offer you."
+    description: "It should take about five minutes to complete."
     next: "Next"
     back: "Back"
     go_back: "Go back"
@@ -97,11 +97,11 @@ en:
       fix_and_committed_costs: "Fixed & committed costs -"
       living_costs: "Living costs -"
     input_page:
-      submit: "Find out how much I can borrow"
+      submit: "Find out how much you can borrow"
       monthly_outgoings_descriptions_html: "Use this section to get a basic idea of how your monthly budget adds up, and how affordable your monthly mortgage payments will be."
       monthly_outgoings_descriptions_2_html: "If you don't have any expenses in these sections right now, imagine what they are likely to be in your new home."
       outgoings_second_person: "If you're applying with someone else, add their monthly costs to yours and put them in the fields below."
-      living_costs_description: "Your lifestyle costs shouldn't change when you get a mortgage, but the lender will want to 'stress test' how you can afford your payments should interest rates rise or your circumstances change."
+      living_costs_description: "Your lifestyle costs shouldn't change when you get a mortgage, but lenders will want to 'stress test' if you can afford your payments should interest rates rise or your circumstances change."
     budget_affect:
       high:
         percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">more than 60%</span> of your total take-home pay."
