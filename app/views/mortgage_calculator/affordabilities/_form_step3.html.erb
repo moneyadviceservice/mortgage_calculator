@@ -14,9 +14,11 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
-  <div class="affcalc__col--clip" calculate ng-docker>
-    <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
-    <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
+  <div class="affcalc__col--clip" calculate>
+    <div ng-docker>
+      <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
+      <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
+    </div>
   </div>
 
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>

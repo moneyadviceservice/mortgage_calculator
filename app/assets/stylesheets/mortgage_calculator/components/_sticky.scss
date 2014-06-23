@@ -1,0 +1,10 @@
+.sticky {
+
+}
+
+.sticky--stuck {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
