@@ -40,7 +40,7 @@ module UI
       element :h2, "h2"
       element :results, "p[class='results']"
 
-      elements :nexts, "input[value='Find out how much I can borrow']"
+      elements :nexts, "input[value='Find out how much you can borrow']"
       element :recalculate, "input[value='Recalculate']"
 
       def step_1_next
