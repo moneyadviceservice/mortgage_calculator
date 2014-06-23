@@ -2,6 +2,7 @@
   @extend %paragraph-small;
   @extend %clearfix;
   margin-bottom: $baseline-unit*4;
+  overflow: hidden;
 }
 
 .borrowing-range__min {

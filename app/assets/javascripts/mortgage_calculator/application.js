@@ -14,6 +14,8 @@
 //= require angular
 //= require angular-mocks
 //= require jquery-ui-mod
+//= require mortgage_calculator/jquery-waypoints/waypoints
+//= require mortgage_calculator/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky
 //= require placeholder_polyfill.jquery
 //= require underscore
 //= require args

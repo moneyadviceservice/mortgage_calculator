@@ -1,4 +1,8 @@
 <% unless syndicated_tool_request? %>
-  <div class="affcalc__col"><%= zendesk_feedback_tab(zendesk_affordability_config) %></div>
+  <div class="affcalc__row">
+    <div class="affcalc__col">
+      <%= zendesk_feedback_tab(zendesk_affordability_config) %>
+    </div>
+  </div>
 <% end %>
 
