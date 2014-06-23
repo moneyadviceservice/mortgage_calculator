@@ -1,4 +1,4 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
+<div class="affcalc__col">
   <h2><%= I18n.t("affordability.title") %></h2>
   <h3><%= t "affordability.titles.what_you_might_be_offered" %></h3>
 </div>
@@ -14,18 +14,20 @@
     <%= hidden_field_tag "affordability[outgoings][#{k}]", v, 'ng-model' => "affordability.outgoings.#{k}", 'ng-initial' => '' %>
   <% end %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full" calculate>
+  <div class="affcalc__col--clip" calculate>
     <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
     <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
   </div>
 
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
-    <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
+  <div class="affcalc__row">
+    <div class="affcalc__col">
+      <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
+    </div>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
+  <div class="affcalc__col mortgagecalc__panel--border">
     <h3><%= t "affordability.titles.how_affect_budget" %></h3>
     <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
 
@@ -42,15 +44,19 @@
     <%= render "budget_scenarios" %>
   </div>
 
-  <div class="mortgagecalc__panel">
-    <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
+  <div class="affcalc__row">
+    <div class="affcalc__col--clip">
+      <div class="affcalc__col--50">
+        <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
+      </div>
+
+      <div class="affcalc__col--50">
+        <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
+      </div>
+    </div>
   </div>
 
-  <div class="mortgagecalc__panel">
-    <%= render 'mortgage_calculator/affordabilities/form/risk_information' %>
-  </div>
-
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--border">
+  <div class="affcalc__col mortgagecalc__panel--border">
     <h3><%= t "affordability.titles.can_afford" %></h3>
     <h4><%= t "affordability.titles.living_costs" %></h4>
 
@@ -62,7 +68,7 @@
     <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
   </div>
 
-  <div class="mortgagecalc__panel" calculate>
+    <div class="affcalc__col--33" calculate>
       <%= f.label :lifestyle_costs,
           "id" => "label_lifestyle" %>
       <%= f.text_field :lifestyle_costs,
@@ -79,22 +85,23 @@
                        "analytics-category" => 'Affordability Calculator',
                        "analytics-action" => 'Refinement',
                        "analytics-label" => 'Lifestyle' %>
-    <div class="slider"
-         id="slider-lifestyle"
-         ui-slider
-         dynamic-for='dynamic-slider-property'
-         percentage-for-minimum="20"
-         percentage-for-maximum="200"
-         custom-slider-max="250"
-         ng-model="affordability.lifestyleSpend"
-         aria-labelledby="label_lifestyle"
-         analytics-category="Affordability Calculator"
-         analytics-action="Refinement"
-         analytics-label="Lifestyle">
+      <div class="slider"
+           id="slider-lifestyle"
+           ui-slider
+           dynamic-for='dynamic-slider-property'
+           percentage-for-minimum="20"
+           percentage-for-maximum="200"
+           custom-slider-max="250"
+           ng-model="affordability.lifestyleSpend"
+           aria-labelledby="label_lifestyle"
+           analytics-category="Affordability Calculator"
+           analytics-action="Refinement"
+           analytics-label="Lifestyle">
+      </div>
     </div>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affcalc__col">
     <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
 
     <h3><%= t "affordability.interest_changer.title" %></h3>
@@ -105,7 +112,7 @@
     <p><br><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
   </div>
 
-  <div class="mortgagecalc__panel">
+  <div class="affcalc__col">
     <p>
       <%= link_to t("affordability.back"), step_2_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous rendered-from-js" %>
 
@@ -113,7 +120,7 @@
     </p>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div class="affcalc__col">
     <%= inset_block(t "affordability.caveat.estimate") %>
   </div>
 <% end %>

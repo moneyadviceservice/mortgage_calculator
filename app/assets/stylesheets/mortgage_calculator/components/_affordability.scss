@@ -10,6 +10,20 @@
     @include column(12);
   }
 
+  .affcalc__col--33 {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(4);
+    }
+  }
+
+  .affcalc__col--50 {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(6);
+    }
+  }
+
   .affcalc__col--clip {
     @extend .affcalc__col;
     @include respond-to($mq-m) {

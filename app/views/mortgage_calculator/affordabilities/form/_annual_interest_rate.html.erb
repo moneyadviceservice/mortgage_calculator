@@ -1,11 +1,11 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
+<div class="affcalc__col">
      <p>
        <%= f.label :interest_rate,
           "id" => "label_interest_rate" %>
      </p>
 </div>
 
-<div class="mortgagecalc__panel">
+<div class="affcalc__col--33">
      <%= f.text_field :interest_rate,
                        "autofocus" => "",
                        "ng-model" => "repayments.annualInterestRate",
