@@ -1,5 +1,5 @@
 source "http://gems.test.mas"
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gemspec
 
