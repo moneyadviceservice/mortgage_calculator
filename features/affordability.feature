@@ -21,7 +21,7 @@ Scenario: Affordability for one applicant
   And   I see "The money you have left over after living costs is £1,496.65"
   And   I see "Your estimated fixed and committed spend per month is: £1,500.00"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to £2,542.99"
-  And   I see "Your financial buffer will now be £1,057.01"
+  And   I see "Your remaining budget will be £1,057.01"
 
 Scenario: I recalculate
   Given I have entered all details for applicant "1"
@@ -62,7 +62,7 @@ Scenario Outline: There are two applicants with extra income and commited spend
   And   I see "The money you have left over after living costs is <remaining_per_month>"
   And   I see "Your estimated fixed and committed spend per month is: <spending_commitments>"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to <increased_monthly_repayment>"
-  And   I see "Your financial buffer will now be <financial_buffer>"
+  And   I see "Your remaining budget will be <financial_buffer>"
 
   Examples:
   | annual_income | extra_income | monthly_net_income | person_two_annual_income | person_two_extra_income | person_two_monthly_net_income | credit_repayments | utilities | childcare | child_maintenance | rent_and_mortgage | food | travel | entertainment | holiday | range_min   | range_max   | repayment_per_month | remaining_per_month | spending_commitments | increased_monthly_repayment | financial_buffer |
