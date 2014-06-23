@@ -1,11 +1,11 @@
 <%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: step_2_affordability_path, html: { name: 'affordability_form', role: 'form', novalidate: '' } do |f| %>
   <% f.validates @affordability, @affordability.people[0], @affordability.people[1] %>
 
-  <div class="affcalc__small-12 affcalc__medium-8">
+  <div class="affcalc__col--clip">
     <%= f.validation_summary %>
   </div>
 
-  <div class="affcalc__small-12">
+  <div class="affcalc__col">
     <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
   </div>
 
@@ -15,7 +15,7 @@
     <%# render the first applicant differently to the additional applicants %>
     <% if index == 0 %>
       <div class="affcalc__row">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
             <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0") %>
@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_0_html"),
                 html: {
                   id: 'tip_annual_income_0'
@@ -44,7 +44,7 @@
       </div>
 
       <div class="affcalc__row">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
             <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0") %>
@@ -61,7 +61,7 @@
                                   "pattern" => '\d*' %>
           </div>
         </div>
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_0_html"),
               html: {
                 id: 'tip_extra_income_0'
@@ -72,7 +72,7 @@
     <% else %>
 
       <div class="affcalc__row">
-        <div class="affcalc__small-12">
+        <div class="affcalc__col">
           <div class="rendered-from-js form__row">
             <%= f.label :two_applicants,
                         class: "label--inline" do %>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
             <%= person.label :annual_income do %>
@@ -114,7 +114,7 @@
           </div>
         </div>
 
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_1"),
               html: {
                 id: 'tip_annual_income_1'
@@ -124,7 +124,7 @@
       </div>
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
             <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1") %>
@@ -143,7 +143,7 @@
           </div>
         </div>
 
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_1"),
               html: {
                 id: 'tip_extra_income_1'
@@ -154,7 +154,7 @@
     <% end %>
   <% end %>
 
-  <div class="affcalc__small-12">
+  <div class="affcalc__col">
     <h3><%= I18n.t("affordability.titles.take_home") %></h3>
   </div>
 
@@ -165,7 +165,7 @@
     <%# render the first applicant differently to the additional applicants %>
     <% if index == 0 %>
       <div class="affcalc__row">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
             <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0") %>
@@ -182,7 +182,7 @@
           </div>
         </div>
 
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_0"),
               html: {
                 id: 'tip_monthly_net_income_0'
@@ -192,7 +192,7 @@
       </div>
     <% else %>
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
-        <div class="affcalc__small-12 affcalc__medium-5 affcalc__large-4">
+        <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
             <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1") %>
@@ -210,7 +210,7 @@
           </div>
         </div>
 
-        <div class="affcalc__small-12 affcalc__medium-6 affcalc__large-7 affcalc__medium-push-1">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_1"),
               html: {
                 id: 'tip_monthly_net_income_1'
@@ -221,8 +221,7 @@
     <% end %>
   <% end %>
 
-  <div class="affcalc__small-12 affcalc__medium-8 affcalc__medium-pull-4">
-
+  <div class="affcalc__col">
     <div class="form__row">
       <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
