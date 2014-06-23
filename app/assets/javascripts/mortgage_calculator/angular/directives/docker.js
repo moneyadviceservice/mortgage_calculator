@@ -6,7 +6,7 @@ App.directive('ngDocker', function() {
     controller: [
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         $element.waypoint('sticky', {
-          stuckClass: 'sticky--stuck'
+          stuckClass: 'l-stuck'
         });
       }
     ]

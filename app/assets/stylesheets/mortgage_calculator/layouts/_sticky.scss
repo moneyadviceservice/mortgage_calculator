@@ -1,0 +1,35 @@
+.l-stuck {
+  position: fixed;
+  top: 0;
+  padding: $baseline-unit*3;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1;
+
+  .slider--with-follower-top {
+    transition: margin 0.3s ease-out;
+    margin-top: $baseline-unit*7;
+
+    .ui-slider-handle {
+      &:after {
+        top: -$baseline-unit*1.5;
+        margin-left: -5px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+      }
+    }
+  }
+
+  .label-follower.label-follower--top {
+    transition: top 0.3s ease-out;
+    top: -$baseline-unit*7;
+    font-size: 16px;
+
+  }
+
+  .borrowing-range {
+    transition: all 0.3s ease-out;
+    height: 1px;
+  }
+}
