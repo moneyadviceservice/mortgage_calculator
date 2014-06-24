@@ -1,11 +1,11 @@
 .no-js {
   .rendered-from-js {
-    display: none;
+    display: none !important;
   }
 }
 
 .js {
   .hide-with-js {
-    display: none;
+    display: none !important;
   }
 }
