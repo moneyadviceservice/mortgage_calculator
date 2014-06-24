@@ -51,6 +51,8 @@ module MortgageCalculator
     private
 
     def validate_proportional_incomes
+      return unless valid_number?(annual_income)
+
       if total_income < (monthly_net_income || 0) * 12
         errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
       end
@@ -80,6 +82,14 @@ module MortgageCalculator
       BigDecimal.new(extra_income)
     rescue
       0
+    end
+
+    def valid_number?(number)
+      n = Float(number)
+
+      true
+    rescue
+      false
     end
 
   end

@@ -9,7 +9,7 @@ describe MortgageCalculator::Person do
   let(:extra_income) { 5000 }
   let(:monthly_net_income) { 3000 }
 
-  subject do
+  subject(:person) do
     described_class.new(
       annual_income: annual_income,
       extra_income: extra_income,
@@ -54,7 +54,21 @@ describe MortgageCalculator::Person do
 
         it { should be_valid }
       end
+
+      context 'when annual_income is invalid' do
+        let(:annual_income) { 'I am invalid!' }
+        before { person.valid? } # trigger validation
+
+        it { should_not be_valid }
+
+        it 'should not include a proportional income error' do
+          proportional_error_message = I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
+
+          expect(person.errors[:base]).not_to include(proportional_error_message)
+        end
+      end
     end
+
   end
 
   describe '#total_income' do
