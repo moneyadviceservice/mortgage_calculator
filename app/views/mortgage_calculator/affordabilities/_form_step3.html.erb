@@ -16,7 +16,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--clip" calculate>
-      <div ng-docker>
+      <div ng-docker ng-cloak>
         <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
         <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
       </div>
@@ -26,13 +26,13 @@
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--clip">
+    <div class="affcalc__col--clip" ng-cloak>
       <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
     </div>
   </div>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--clip">
+    <div class="affcalc__col--clip" ng-cloak>
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
       <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
 
@@ -51,7 +51,7 @@
   </div>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--clip">
+    <div class="affcalc__col--clip" ng-cloak>
       <div class="affcalc__col--50">
         <%= render 'mortgage_calculator/affordabilities/form/risk_chart' %>
       </div>
@@ -63,7 +63,7 @@
   </div>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--clip">
+    <div class="affcalc__col--clip" ng-cloak>
       <h3><%= t "affordability.titles.can_afford" %></h3>
       <h4><%= t "affordability.titles.living_costs" %></h4>
 
@@ -111,7 +111,7 @@
   </div>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--clip">
+    <div class="affcalc__col--clip" ng-cloak>
       <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
 
       <h3><%= t "affordability.interest_changer.title" %></h3>
