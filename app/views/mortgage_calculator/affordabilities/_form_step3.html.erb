@@ -1,6 +1,5 @@
 <div class="affcalc__col">
   <h2><%= I18n.t("affordability.title") %></h2>
-  <h3><%= t "affordability.titles.what_you_might_be_offered" %></h3>
 </div>
 
 <%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '' } do |f| %>
@@ -34,7 +33,6 @@
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
       <h3><%= t "affordability.titles.how_affect_budget" %></h3>
-      <h4><%= t("affordability.titles.fix_and_committed_costs") %></h4>
 
       <% if @affordability.only_rent_and_mortgage_warning? %>
         <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
@@ -65,7 +63,6 @@
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
       <h3><%= t "affordability.titles.can_afford" %></h3>
-      <h4><%= t "affordability.titles.living_costs" %></h4>
 
       <% if @affordability.missing_lifestyle_costs_warning? %>
         <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",

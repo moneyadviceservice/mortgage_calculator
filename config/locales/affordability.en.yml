@@ -93,9 +93,6 @@ en:
       how_affect_budget: "Can you afford these monthly payments?"
       can_afford: "What's left over?"
       second_applicant: "Is there a second applicant?"
-      what_you_might_be_offered: "What you might be offered"
-      fix_and_committed_costs: "Fixed & committed costs -"
-      living_costs: "Living costs -"
     input_page:
       submit: "Find out how much you can borrow"
       monthly_outgoings_descriptions_html: "Use this section to get a basic idea of how your monthly budget adds up, and how affordable your monthly mortgage payments will be."
@@ -134,9 +131,9 @@ en:
       negative:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. <a href='#'>Here’s what you can do now</a>."
     warnings:
-      missing_fixed_and_committed_costs_html: "You haven't entered any amounts for living expenses on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
-      only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all fixed and committed costs on the previous page or your results on this page will be incorrect. %{back} to do that now."
-      missing_lifestyle_costs_html: "You haven’t entered any amounts for living costs on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
+      missing_fixed_and_committed_costs_html: "You haven't entered any amounts for <strong>fixed and committed costs</strong> on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
+      only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all <strong>fixed and committed costs</strong> on the previous page or your results on this page will be incorrect. %{back} to do that now."
+      missing_lifestyle_costs_html: "You haven’t entered any amounts for <strong>living costs</strong> on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
     next_steps:
       title: "Three steps to finding an affordable mortgage"
       tip_1:
