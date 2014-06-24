@@ -12,34 +12,38 @@
     font-size: $font-large;
     font-weight: 500;
   }
+}
 
-  > li {
-      position:relative;
-      margin:0 0 30px 2.3em;
-      padding:4px 8px;
-      list-style:none;
-      min-height: 60px;
-  }
+.gt-ie8 {
+  .featured-list {
+    > li {
+        position:relative;
+        margin:0 0 30px 2.3em;
+        padding:4px 8px;
+        list-style:none;
+        min-height: 60px;
+    }
 
-  > li:before {
-      content:counter(li);
-      counter-increment:li;
+    > li:before {
+        content:counter(li);
+        counter-increment:li;
 
-      position:absolute;
-      top:-2px;
-      margin-left:-75px;
-      box-sizing:border-box;
-      width:1.8em;
-      height:1.8em;
-      border-radius: 1.8em;
-      padding:4px;
-      color:#333;
-      background:#ecd600;
-      font-weight:500;
-      font-family: 'museo_sans';
-      font-size:$font-xlarge;
-      text-align:center;
-      line-height: 1.65em;
+        position:absolute;
+        top:-2px;
+        margin-left:-75px;
+        box-sizing:border-box;
+        width:1.8em;
+        height:1.8em;
+        border-radius: 1.8em;
+        padding:4px;
+        color:#333;
+        background:#ecd600;
+        font-weight:500;
+        font-family: 'museo_sans';
+        font-size:$font-xlarge;
+        text-align:center;
+        line-height: 1.65em;
+    }
   }
 }
 

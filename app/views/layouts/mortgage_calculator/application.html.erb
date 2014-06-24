@@ -46,9 +46,9 @@
 
   <div class="ns-mortgage-calc">
     <!--[if IE 7 ]> <div class="frontend-assets ie ie7"> <![endif]-->
-    <!--[if IE 8 ]> <div class="frontend-assets ie ie8"> <![endif]-->
-    <!--[if IE 9 ]> <div class="frontend-assets ie ie9"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--><div class="frontend-assets"><!--<![endif]-->
+    <!--[if IE 8 ]> <div class="frontend-assets ie ie8 gt-ie7"> <![endif]-->
+    <!--[if IE 9 ]> <div class="frontend-assets ie ie9 gt-ie7 gt-ie8"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><div class="frontend-assets gt-ie7 gt-ie8 gt-ie9"><!--<![endif]-->
       <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
         <%= yield %>
       </div>
