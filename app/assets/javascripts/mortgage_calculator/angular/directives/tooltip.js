@@ -18,6 +18,10 @@ App.directive('ngTooltip', function() {
           }).
           on('focusout', handleBlur);
 
+        if ($inputTarget.is(':focus')) {
+          $element.removeClass(hiddenClass);
+        }
+
         $element.on('focusout', handleBlur);
 
         function handleBlur(e) {
