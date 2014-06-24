@@ -12,8 +12,10 @@
     font-size: $font-large;
     font-weight: 500;
   }
+}
 
-  @if ($responsive) {
+.gt-ie8 {
+  .featured-list {
     > li {
         position:relative;
         margin:0 0 30px 2.3em;
@@ -25,7 +27,7 @@
     > li:before {
         content:counter(li);
         counter-increment:li;
-       
+
         position:absolute;
         top:-2px;
         margin-left:-75px;
