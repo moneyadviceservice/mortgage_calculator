@@ -27,48 +27,48 @@
 
 .risk--high {
   .risk__accent {
-    color: $color-red-dark;
+    color: $colour-risk-high;
   }
 
   .risk-slice--incoming {
-    fill: $color-red-dark;
+    fill: $colour-risk-high;
   }
 
   .risk-key--incoming {
     &:after {
-      background: $color-red-dark;
+      background: $colour-risk-high;
     }
   }
 }
 
 .risk--medium {
   .risk__accent {
-    color: $color-yellow-dark;
+    color: $colour-risk-medium;
   }
 
   .risk-slice--incoming {
-    fill: $color-yellow-dark;
+    fill: $colour-risk-medium;
   }
 
   .risk-key--incoming {
     &:after {
-      background: $color-yellow-dark;
+      background: $colour-risk-medium;
     }
   }
 }
 
 .risk--low {
   .risk__accent {
-    color: $color-green-medium;
+    color: $colour-risk-low;
   }
 
   .risk-slice--incoming {
-    fill: $color-green-medium;
+    fill: $colour-risk-low;
   }
 
   .risk-key--incoming {
     &:after {
-      background: $color-green-medium;
+      background: $colour-risk-low;
     }
   }
 }
