@@ -367,7 +367,7 @@
   width:30px;
   height:30px;
   top:-12px;
-  margin-left:-15px;
+  margin-left:-1px;
   cursor:pointer;
   border:2px solid #ccc;
   background:#fff;
@@ -406,6 +406,8 @@
   margin-top: $baseline-unit*10;
 
   .ui-slider-handle {
+    margin-left:-15px;
+
     &:after {
       display: block;
       content: " ";
