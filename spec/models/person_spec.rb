@@ -5,10 +5,16 @@ require 'spec_helper'
 describe MortgageCalculator::Person do
   it_should_behave_like "currency inputs", [:annual_income, :extra_income, :monthly_net_income]
 
+  let(:annual_income) { 55000 }
+  let(:extra_income) { 5000 }
+  let(:monthly_net_income) { 3000 }
+
   subject do
-    described_class.new annual_income: 55000,
-                        extra_income: 5000,
-                        monthly_net_income: 3000
+    described_class.new(
+      annual_income: annual_income,
+      extra_income: extra_income,
+      monthly_net_income: monthly_net_income
+    )
   end
 
   describe 'validations' do
@@ -17,48 +23,41 @@ describe MortgageCalculator::Person do
     it { should validate_numericality_of(:monthly_net_income) }
 
     context 'when annual income is 0 and monthly net income is not' do
-      subject{ described_class.new(annual_income: 100, extra_income: 0, monthly_net_income: 0) }
+      let(:annual_income) { 100 }
+      let(:extra_income) { 0 }
+      let(:monthly_net_income) { 0 }
 
-      it "is not valid" do
-        expect(subject.valid?).to be_falsey
-      end
+      it { should_not be_valid }
     end
 
     context 'when net monthly income is 0 and annual income is not' do
-      subject{ described_class.new(annual_income: 0, extra_income: 0, monthly_net_income: 100) }
+      let(:annual_income) { 0 }
+      let(:extra_income) { 0 }
+      let(:monthly_net_income) { 100 }
 
-      it "is not valid" do
-        expect(subject.valid?).to be_falsey
-      end
+      it { should_not be_valid }
     end
 
     describe 'proportional incomes' do
       context 'when monthly net income is too big' do
-        subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 10000) }
+        let(:annual_income) { 100000 }
+        let(:extra_income) { 0 }
+        let(:monthly_net_income) { 10000 }
 
-        it 'is not valid' do
-          expect(subject.valid?).to be_falsey
-        end
+        it { should_not be_valid }
       end
 
       context 'when incomes are proportional' do
-        subject{ described_class.new(annual_income: 100000, extra_income: 0, monthly_net_income: 8333.33) }
+        let(:annual_income) { 100000 }
+        let(:extra_income) { 0 }
+        let(:monthly_net_income) { 8333.33 }
 
-        it 'is valid' do
-          expect(subject.valid?).to be_truthy
-        end
+        it { should be_valid }
       end
     end
   end
 
   describe '#total_income' do
-    subject do
-      described_class.new(
-        annual_income: annual_income,
-        extra_income: extra_income
-      )
-    end
-
     context 'with annual income of £12,000 and extra_income of £5,000' do
       let(:annual_income) { 12_000 }
       let(:extra_income) { 5_000 }
