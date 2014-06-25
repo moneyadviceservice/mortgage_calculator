@@ -60,7 +60,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       riskPercentage: function(increment) {
         var result = Math.round(( (this.monthlyRepayment(increment) + this.committedCosts() + this.fixedCosts()) / this.takeHomePay() ) * 100),
-            percentage = _.min([100, result]);
+            percentage  = _.min([100, result]);
 
         if (isFinite(result)) {
           return percentage;
@@ -74,8 +74,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       riskLevel: function() {
-        if (this.riskPercentage() <= 40) return 'low';
-        if (this.riskPercentage() >= 60) return 'high';
+        if (this.riskPercentage() < 40) return 'low';
+        if (this.riskPercentage() > 60) return 'high';
         return 'medium';
       },
 
