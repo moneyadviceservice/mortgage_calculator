@@ -25,6 +25,12 @@
   fill: $color-grey-normal;
 }
 
+.risk--show-on-high,
+.risk--show-on-medium,
+.risk--show-on-low {
+  display: none;
+}
+
 .risk--high {
   .risk__accent {
     color: $colour-risk-high;
@@ -38,6 +44,10 @@
     &:after {
       background: $colour-risk-high;
     }
+  }
+
+  .risk--show-on-high {
+    display: block;
   }
 }
 
@@ -55,6 +65,10 @@
       background: $colour-risk-medium;
     }
   }
+
+  .risk--show-on-medium {
+    display: block;
+  }
 }
 
 .risk--low {
@@ -70,5 +84,9 @@
     &:after {
       background: $colour-risk-low;
     }
+  }
+
+  .risk--show-on-low {
+    display: block;
   }
 }
