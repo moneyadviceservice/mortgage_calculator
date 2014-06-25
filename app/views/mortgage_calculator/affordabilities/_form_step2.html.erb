@@ -30,18 +30,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:credit_repayments) %>">
         <%= outgoings.errors_for outgoings.object, :credit_repayments %>
-        <%= outgoings.label :credit_repayments %>
-        <%= outgoings.text_field :credit_repayments,
-                              "class" => "form-control",
+        <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_credit_repayments_a">&pound;</span>
+            <%= outgoings.text_field :credit_repayments,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.credit_repayments",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_credit_repayments label_credit_repayments_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_credit_repayments",
                               "value" => outgoings.object.credit_repayments_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -57,18 +62,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
         <%= outgoings.errors_for outgoings.object, :child_maintenance %>
-        <%= outgoings.label :child_maintenance %>
-        <%= outgoings.text_field :child_maintenance,
-                              "class" => "form-control",
+        <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_child_maintenance_a">&pound;</span>
+            <%= outgoings.text_field :child_maintenance,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.child_maintenance",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_child_maintenance label_child_maintenance_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_child_maintenance",
                               "value" => outgoings.object.child_maintenance_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -88,18 +98,23 @@
   <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:childcare) %>">
         <%= outgoings.errors_for outgoings.object, :childcare %>
-        <%= outgoings.label :childcare %>
-        <%= outgoings.text_field :childcare,
-                              "class" => "form-control",
+        <%= outgoings.label :childcare, "id" => "label_childcare" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_childcare_a">&pound;</span>
+            <%= outgoings.text_field :childcare,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.childcare",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_childcare label_childcare_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_childcare",
                               "value" => outgoings.object.childcare_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -114,18 +129,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
         <%= outgoings.errors_for outgoings.object, :travel %>
-        <%= outgoings.label :travel %>
-        <%= outgoings.text_field :travel,
-                              "class" => "form-control",
+        <%= outgoings.label :travel, "id" => "label_travel" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_travel_a">&pound;</span>
+            <%= outgoings.text_field :travel,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.travel",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_travel label_travel_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_travel",
                               "value" => outgoings.object.travel_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -140,18 +160,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
         <%= outgoings.errors_for outgoings.object, :utilities %>
-        <%= outgoings.label :utilities %>
-        <%= outgoings.text_field :utilities,
-                              "class" => "form-control",
+        <%= outgoings.label :utilities, "id" => "label_utilities" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_utilities_a">&pound;</span>
+            <%= outgoings.text_field :utilities,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.utilities",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_utilities label_utilities_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_utilities",
                               "value" => outgoings.object.utilities_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -166,18 +191,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
         <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
-        <%= outgoings.label :rent_and_mortgage %>
-        <%= outgoings.text_field :rent_and_mortgage,
-                              "class" => "form-control",
+        <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_rent_and_mortgage_a">&pound;</span>
+            <%= outgoings.text_field :rent_and_mortgage,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.rent_and_mortgage",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_rent_and_mortgage label_rent_and_mortgage_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_rent_and_mortgage",
                               "value" => outgoings.object.rent_and_mortgage_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
           </div>
         </div>
         <div class="affcalc__col--tooltip">
@@ -198,18 +228,23 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:entertainment) %>">
         <%= outgoings.errors_for outgoings.object, :entertainment %>
-        <%= outgoings.label :entertainment %>
-        <%= outgoings.text_field :entertainment,
-                              "class" => "form-control",
+        <%= outgoings.label :entertainment, "id" => "label_entertainment" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_entertainment_a">&pound;</span>
+            <%= outgoings.text_field :entertainment,
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.entertainment",
                               "ng-initial" => "",
+                              "aria-labelledby" => "label_entertainment label_entertainment_a",
                               "currency" => '',
-                              "placeholder" => "£0",
-                              "data-a-sign" =>"£",
+                              "placeholder" => "0",
                               "data-m-dec" =>"0",
                               "aria-describedby" => "tip_entertainment",
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
+            <span class="form__input-outline"></span>
+          </span>
         </div>
       </div>
       <div class="affcalc__col--tooltip">
@@ -225,18 +260,23 @@
       <div class="affcalc__col--field">
         <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
           <%= outgoings.errors_for outgoings.object, :holidays %>
-          <%= outgoings.label :holidays %>
-          <%= outgoings.text_field :holidays,
-                                "class" => "form-control",
+          <%= outgoings.label :holidays, "id" => "label_holidays" %>
+
+          <span class="form__input-container">
+            <span class="form__input-label" id="label_holidays_a">&pound;</span>
+              <%= outgoings.text_field :holidays,
+                                "class" => "form-control form__input",
                                 "ng-model" => "affordability.outgoings.holidays",
                                 "ng-initial" => "",
+                                "aria-labelledby" => "label_holidays label_holidays_a",
                                 "currency" => '',
-                                "placeholder" => "£0",
-                                "data-a-sign" =>"£",
+                                "placeholder" => "0",
                                 "data-m-dec" =>"0",
                                 "aria-describedby" => "tip_holidays",
                                 "value" => outgoings.object.holidays_formatted,
                                 "pattern" => '\d*' %>
+              <span class="form__input-outline"></span>
+            </span>
           </div>
         </div>
         <div class="affcalc__col--tooltip">
@@ -253,18 +293,23 @@
       <div class="affcalc__col--field">
         <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
           <%= outgoings.errors_for outgoings.object, :food %>
-          <%= outgoings.label :food %>
-          <%= outgoings.text_field :food,
-                                "class" => "form-control",
+          <%= outgoings.label :food, "id" => "label_food" %>
+
+          <span class="form__input-container">
+            <span class="form__input-label" id="label_food_a">&pound;</span>
+              <%= outgoings.text_field :food,
+                                "class" => "form-control form__input",
                                 "ng-model" => "affordability.outgoings.food",
                                 "ng-initial" => "",
+                                "aria-labelledby" => "label_food label_food_a",
                                 "currency" => '',
-                                "placeholder" => "£0",
-                                "data-a-sign" =>"£",
+                                "placeholder" => "0",
                                 "data-m-dec" =>"0",
                                 "aria-describedby" => "tip_food",
                                 "value" => outgoings.object.food_formatted,
                                 "pattern" => '\d*' %>
+              <span class="form__input-outline"></span>
+            </span>
           </div>
         </div>
         <div class="affcalc__col--tooltip">
