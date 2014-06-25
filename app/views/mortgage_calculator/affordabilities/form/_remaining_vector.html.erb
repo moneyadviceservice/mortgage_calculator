@@ -1,21 +1,14 @@
-<div ng-hide="js">
-  <p><strong><%= t("affordability.budget.#{@affordability.risk_level}.remaining_html",
-                  link: link_to(t("affordability.budget.#{@affordability.risk_level}.link_text"), next_steps_affordability_path)) %></strong></p>
+<div class="risk--show-on-high">
+  <p><strong><%= t("affordability.budget.high.remaining_html",
+                    link: link_to(t("affordability.budget.high.link_text"), next_steps_affordability_path)) %></strong></p>
 </div>
 
-<div class="rendered-from-js results">
-  <div ng-show="affordability.riskPercentage() >= 60">
-    <p><strong><%= t("affordability.budget.high.remaining_html",
-                      link: link_to(t("affordability.budget.high.link_text"), next_steps_affordability_path)) %></strong></p>
-  </div>
+<div class="risk--show-on-medium">
+  <p><strong><%= t("affordability.budget.medium.remaining_html",
+                    link: link_to(t("affordability.budget.medium.link_text"), next_steps_affordability_path)) %></strong></p>
+</div>
 
-  <div ng-show="affordability.riskPercentage() > 40 && affordability.riskPercentage() < 60">
-    <p><strong><%= t("affordability.budget.medium.remaining_html",
-                      link: link_to(t("affordability.budget.medium.link_text"), next_steps_affordability_path)) %></strong></p>
-  </div>
-
-  <div ng-show="affordability.riskPercentage() <= 40">
-    <p><strong><%= t("affordability.budget.low.remaining_html",
-                      link: link_to(t("affordability.budget.low.link_text"), next_steps_affordability_path)) %></strong></p>
-  </div>
+<div class="risk--show-on-low">
+  <p><strong><%= t("affordability.budget.low.remaining_html",
+                    link: link_to(t("affordability.budget.low.link_text"), next_steps_affordability_path)) %></strong></p>
 </div>
