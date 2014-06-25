@@ -5,17 +5,17 @@
 <% end %>
 
 <label class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider">
-  {{ repayments.propertyPrice | customCurrency:"£"}}
+  {{ repayments.propertyPrice | customCurrency:"£":"whole"}}
 </label>
 
 <div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing"></div>
 
 <p class="rendered-from-js borrowing-range">
   <span class="borrowing-range__min">
-    {{ affordability.minimumBorrowing() | customCurrency:"£"}}
+    {{ affordability.minimumBorrowing() | customCurrency:"£":"whole"}}
   </span>
 
   <span class="borrowing-range__max">
-    {{ affordability.maximumBorrowing() | customCurrency:"£"}}
+    {{ affordability.maximumBorrowing() | customCurrency:"£":"whole"}}
   </span>
 </p>
