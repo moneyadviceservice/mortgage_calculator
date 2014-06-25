@@ -1,13 +1,18 @@
 
 
 App.filter('customCurrency', ["$filter", function($filter) {
-  return function(amount, currencySymbol) {
+  return function(amount, currencySymbol, numberType) {
     var currency = $filter('currency');
+    var output = currency(amount, currencySymbol);
 
     if (amount < 0) {
-      return currency(amount, currencySymbol).replace("(", "-").replace(")", "");
+      output = output.replace("(", "-").replace(")", "");
     }
 
-    return currency(amount, currencySymbol);
+    if (numberType === 'whole'){
+      output = output.split(".")[0];
+    }
+
+    return output;
   };
 }]);

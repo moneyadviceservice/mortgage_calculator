@@ -98,6 +98,20 @@ module MortgageCalculator
       its(:monthly_net_income){ should == 9000 }
     end
 
+    describe '#can_borrow_from' do
+      it 'is rounded to nearest pound' do
+        subject.stub(:total_income){ BigDecimal("123000.13") }
+        expect(subject.can_borrow_from.to_s).to eql('337680')
+      end
+    end
+
+    describe '#can_borrow_upto' do
+      it 'is rounded to nearest pound' do
+        subject.stub(:total_income){ BigDecimal("123000.13") }
+        expect(subject.can_borrow_upto.to_s).to eql('506521')
+      end
+    end
+
     describe '#borrowing' do
       context 'default amount' do
         it 'is half way between the range they can borrow' do

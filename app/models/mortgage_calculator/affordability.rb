@@ -73,11 +73,11 @@ module MortgageCalculator
     end
 
     def can_borrow_upto
-      (total_income - annual_committed_costs) * upper_profit_multiplier
+      ((total_income - annual_committed_costs) * upper_profit_multiplier).round
     end
 
     def can_borrow_from
-      (total_income - annual_committed_costs) * lower_profit_multiplier
+      ((total_income - annual_committed_costs) * lower_profit_multiplier).round
     end
 
     def monthly_net_income
@@ -204,6 +204,14 @@ module MortgageCalculator
 
     def budget_leftover_formatted
       number_to_currency budget_leftover
+    end
+
+    def can_borrow_from_formatted
+      number_to_currency can_borrow_from, precision: 0
+    end
+
+    def can_borrow_upto_formatted
+      number_to_currency can_borrow_upto, precision: 0
     end
 
   private

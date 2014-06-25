@@ -31,11 +31,11 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       lifestyleSpend: 0,
 
       minimumBorrowing: function() {
-        return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8;
+        return Math.round(( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 2.8);
       },
 
       maximumBorrowing: function() {
-        return ( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 4.2;
+        return Math.round(( _totalIncome(this.earnings) - (this.committedCosts() * 12) )  * 4.2);
       },
 
       borrowing: function() {
