@@ -1,31 +1,39 @@
 <div class="affcalc__col">
-     <p>
-       <%= f.label :interest_rate,
-          "id" => "label_interest_rate" %>
-     </p>
+  <p>
+    <%= f.label :interest_rate,
+    "id" => "label_interest_rate" %>
+  </p>
 </div>
 
 <div class="affcalc__col--33">
-     <%= f.text_field :interest_rate,
-                       "autofocus" => "",
-                       "ng-model" => "repayments.annualInterestRate",
-                       "percentage" => "",
-                       "placeholder" => "Eg. 5%",
-                       "data-a-sign" => "%",
-                       "data-p-sign" => "s",
-                       "analytics" => '',
-                       "analytics-on" => 'change',
-                       "analytics-category" => 'Affordability Calculator',
-                       "analytics-action" => 'Refinement',
-                       "analytics-label" => 'Interest Rate' %><span ng-hide="js">%</span>
-     <div class="slider"
-          id="slider-interest-rate"
-          ui-slider min="1"
-          max="15" step="1"
-          ng-model="repayments.annualInterestRate"
-          aria-labelledby="label_interest_rate"
-          analytics-category="Affordability Calculator"
-          analytics-action="Refinement"
-          analytics-label="Interest Rate">
-     </div>
+  <div class="form__row">
+    <span class="form__input-container">
+      <%= f.text_field :interest_rate,
+             "autofocus" => "",
+             "class" => "form__input",
+             "data-p-sign" => "s",
+             "ng-model" => "repayments.annualInterestRate",
+             "aria-labelledby" => "label_interest_rate label_interest_rate_a",
+             "percentage" => "",
+             "placeholder" => "Eg. 5",
+             "analytics" => '',
+             "analytics-on" => 'change',
+             "analytics-category" => 'Affordability Calculator',
+             "analytics-action" => 'Refinement',
+             "analytics-label" => 'Interest Rate' %>
+      <span class="form__input-label" id="label_interest_rate_a">%</span>
+      <span class="form__input-outline"></span>
+    </span>
+
+    <div class="slider"
+        id="slider-interest-rate"
+        ui-slider min="1"
+        max="15" step="1"
+        ng-model="repayments.annualInterestRate"
+        aria-labelledby="label_interest_rate label_interest_rate_a"
+        analytics-category="Affordability Calculator"
+        analytics-action="Refinement"
+        analytics-label="Interest Rate">
+    </div>
+  </div>
 </div>
