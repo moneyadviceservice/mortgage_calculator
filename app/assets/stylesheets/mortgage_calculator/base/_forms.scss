@@ -20,7 +20,8 @@ label {
   }
 }
 
-input[type="text"] {
+input[type="text"],
+.form__input-label {
   font-family: 'museo_sans';
   font-weight: 500;
   font-size: px(18);
