@@ -17,11 +17,11 @@
       <div class="affcalc__row">
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
+            <%= f.errors_for person.object, :annual_income %>
             <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0"), "id" => "label_annual_income0" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_annual_income0a">&pound;</span>
-                <%= f.errors_for person.object, :annual_income %>
                 <%= person.text_field :annual_income,
                                       "class" => "form-control form__input",
                                       "ng-model" => "affordability.earnings.person0.annual",
