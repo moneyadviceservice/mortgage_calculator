@@ -9,7 +9,12 @@ module MortgageCalculator
         def self.currency_inputs(*args)
           args.each do |arg|
             define_method "#{arg}=" do |value|
+              instance_variable_set(:"@raw_#{arg}", value.to_s.gsub("£", ""))
               instance_variable_set(:"@#{arg}", CurrencyInput::Parser.new(value).parse)
+            end
+
+            define_method "raw_#{arg}" do
+              instance_variable_get(:"@raw_#{arg}")
             end
           end
         end
