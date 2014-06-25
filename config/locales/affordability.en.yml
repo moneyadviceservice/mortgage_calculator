@@ -105,7 +105,7 @@ en:
         affordability_html: "You run a <span class=\"risk__accent\">very high</span> risk of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage."
       medium:
         percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">between 40% - 60%</span> of your total take-home pay."
-        affordability_html: "You run a <span class=\"risk__accent\">high risk</span> of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage."
+        affordability_html: "You are at <span class=\"risk__accent\">risk</span> of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage."
       low:
         percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">less than 40%</span> of your total take-home pay."
         affordability_html: "Your budget is <span class=\"risk__accent\">not overstretched</span> and you can meet these repayments. But think ahead - if interest rates rise, could you afford this mortgage?"
