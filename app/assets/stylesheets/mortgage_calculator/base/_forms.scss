@@ -25,5 +25,9 @@ input[type="text"],
   font-family: 'museo_sans';
   font-weight: 500;
   font-size: px(18);
+
+  &:focus {
+    background: white;
+  }
 }
 
