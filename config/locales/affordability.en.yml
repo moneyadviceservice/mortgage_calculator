@@ -125,11 +125,15 @@ en:
       commitments_html: "Your estimated fixed and committed spend per month is: <span class=\"accent\">%{commitment}</span>"
       outgoing_html: "Mortgage repayments and essential costs per month amount to roughly %{percent} of your total take-home pay: %{absolute}"
       leftover_html: "What you have left over is roughly %{percent} of your monthly take home: %{absolute}"
-      positive:
-        remaining_html: "You are at risk of overstretching your budget to meet these repayments, particularly if circumstances change"
+      high:
+        remaining_html: "TODO. %{link}."
         link_text: "Here’s what you can do now"
-      negative:
-        remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won’t be able to afford your mortgage payments, especially if circumstances change. <a href='#'>Here’s what you can do now</a>."
+      medium:
+        remaining_html: "You are at risk of overstretching your budget to meet these repayments, particularly if your circumstances change or interest rates rise. %{link}."
+        link_text: "Here's what you can do now"
+      low:
+        remaining_html: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? %{link}."
+        link_text: "Here's what you can do now"
     warnings:
       missing_fixed_and_committed_costs_html: "You haven't entered any amounts for <strong>fixed and committed costs</strong> on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all <strong>fixed and committed costs</strong> on the previous page or your results on this page will be incorrect. %{back} to do that now."
