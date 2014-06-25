@@ -75,34 +75,41 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--33" calculate>
-      <%= f.label :lifestyle_costs,
-          "id" => "label_lifestyle" %>
-      <%= f.text_field :lifestyle_costs,
-                       :value => @affordability.lifestyle_costs_formatted,
-                       class: 'dynamic-slider-property',
-                       "currency" => '',
-                       "placeholder" => "£0",
-                       "data-a-sign" =>"£",
-                       "data-m-dec" => "0",
-                       "ng-model" => "affordability.lifestyleSpend",
-                       "pattern" => '\d*',
-                       "analytics" => '',
-                       "analytics-on" => 'change',
-                       "analytics-category" => 'Affordability Calculator',
-                       "analytics-action" => 'Refinement',
-                       "analytics-label" => 'Lifestyle' %>
-      <div class="slider"
-           id="slider-lifestyle"
-           ui-slider
-           dynamic-for='dynamic-slider-property'
-           percentage-for-minimum="20"
-           percentage-for-maximum="200"
-           custom-slider-max="250"
-           ng-model="affordability.lifestyleSpend"
-           aria-labelledby="label_lifestyle"
-           analytics-category="Affordability Calculator"
-           analytics-action="Refinement"
-           analytics-label="Lifestyle">
+      <div class="form__row">
+        <%= f.label :lifestyle_costs,
+            "id" => "label_lifestyle" %>
+
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_lifestyle_a">&pound;</span>
+            <%= f.text_field :lifestyle_costs,
+                             :value => @affordability.lifestyle_costs_formatted,
+                             class: 'dynamic-slider-property form__input',
+                             "currency" => '',
+                             "placeholder" => "0",
+                             "data-m-dec" => "0",
+                             "ng-model" => "affordability.lifestyleSpend",
+                             "pattern" => '\d*',
+                             "aria-labelledby" => "label_lifestyle label_lifestyle_a",
+                             "analytics" => '',
+                             "analytics-on" => 'change',
+                             "analytics-category" => 'Affordability Calculator',
+                             "analytics-action" => 'Refinement',
+                             "analytics-label" => 'Lifestyle' %>
+          <span class="form__input-outline"></span>
+        </span>
+        <div class="slider"
+             id="slider-lifestyle"
+             ui-slider
+             dynamic-for='dynamic-slider-property'
+             percentage-for-minimum="20"
+             percentage-for-maximum="200"
+             custom-slider-max="250"
+             ng-model="affordability.lifestyleSpend"
+             aria-labelledby="label_lifestyle label_lifestyle_a"
+             analytics-category="Affordability Calculator"
+             analytics-action="Refinement"
+             analytics-label="Lifestyle">
+        </div>
       </div>
     </div>
   </div>
