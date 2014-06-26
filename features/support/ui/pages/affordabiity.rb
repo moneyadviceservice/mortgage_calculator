@@ -41,7 +41,7 @@ module UI
       element :results, "p[class='results']"
 
       elements :nexts, "input[type='submit']"
-      element :recalculate, "input[value='Recalculate']"
+      element :recalculate, "input.recalculate-button"
 
       def step_1_next
         nexts.first
