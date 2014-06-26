@@ -22,6 +22,19 @@ describe MortgageCalculator::Person do
     it { should validate_numericality_of(:extra_income) }
     it { should validate_numericality_of(:monthly_net_income) }
 
+    context 'when everything is blank' do
+      subject{ described_class.new }
+
+      before :each do
+        subject.valid?
+      end
+
+      it 'adds validation for required fields' do
+        expect(subject.errors.messages.values.flatten).to include("My annual income can't be blank")
+        expect(subject.errors.messages.values.flatten).to include("My monthly take-home pay can't be blank")
+      end
+    end
+
     context 'when annual income is 0 and monthly net income is not' do
       let(:annual_income) { 100 }
       let(:extra_income) { 0 }
@@ -57,7 +70,7 @@ describe MortgageCalculator::Person do
 
       context 'when annual_income is invalid' do
         let(:annual_income) { 'I am invalid!' }
-        before { person.valid? } # trigger validation
+        before { person.valid? }
 
         it { should_not be_valid }
 
