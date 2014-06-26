@@ -180,8 +180,9 @@ module MortgageCalculator
       borrowing = store[:borrowing] if store[:borrowing]
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
+      two_applicants = store[:two_applicants] if store[:two_applicants]
 
-      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs)
+      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
       model.empty = store.empty?
       model
     end

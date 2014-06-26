@@ -352,7 +352,7 @@ module MortgageCalculator
           '1' => {'annual_income'=>"50000.0",
                   'extra_income'=>"5000.0",
                   'monthly_net_income'=>"3000.0"}},
-         "two_applicants" => nil,
+         "two_applicants" => "1",
          "outgoings" => {
            "child_maintenance"=>"0.00",
            "childcare"=>"100.00",
@@ -376,6 +376,7 @@ module MortgageCalculator
 
       it 'loads from store' do
         expect(subject.total_income).to eql(165000)
+        expect(subject.two_applicants?).to eql(true)
       end
 
       context 'when store is empty' do
