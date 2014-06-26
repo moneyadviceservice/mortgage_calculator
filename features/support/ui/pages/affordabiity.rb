@@ -38,7 +38,6 @@ module UI
 
       element :h1, "h1"
       element :h2, "h2"
-      element :results, "p[class='results']"
 
       elements :nexts, "input[type='submit']"
       element :recalculate, "input.recalculate-button"
