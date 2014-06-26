@@ -18,7 +18,7 @@ Scenario: Affordability for one applicant
   When  I enter all details for "1" applicants
   Then  I see "between £287,840 and £431,760"
   And   I see "Your estimated mortgage repayments per month will be approximately: £2,103.35"
-  And   I see "The money you have left over after living costs is £1,496.65"
+  And   I see "The amount you have left over after living costs is £1,496.65"
   And   I see "Your estimated fixed and committed spend per month is: £1,500.00"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to £2,542.99"
   And   I see "Your remaining budget will be £1,057.01"
@@ -28,7 +28,7 @@ Scenario: I recalculate
   When  I update my affordability circumstances
   And   I recalculate
   Then  I see "79% of your total take-home pay"
-  And   I see "The money you have left over after living costs is £330.49"
+  And   I see "The amount you have left over after living costs is £330.49"
   And   I see "Your estimated fixed and committed spend per month is: £1,500.00"
 
 @with_and_without_javascript
@@ -59,7 +59,7 @@ Scenario Outline: There are two applicants with extra income and commited spend
 
   Then  I see "between <range_min> and <range_max>"
   And   I see "Your estimated mortgage repayments per month will be approximately: <repayment_per_month>"
-  And   I see "The money you have left over after living costs is <remaining_per_month>"
+  And   I see "The amount you have left over after living costs is <remaining_per_month>"
   And   I see "Your estimated fixed and committed spend per month is: <spending_commitments>"
   And   I see "If interest rates rise by 2%, your monthly repayment will rise to <increased_monthly_repayment>"
   And   I see "Your remaining budget will be <financial_buffer>"
