@@ -1,7 +1,16 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class=" results">
-    <%= f.label :borrowing %><%= f.text_field :borrowing, value: @affordability.borrowing_formatted %>
-  </p>
+  <div class="form__row hide-with-js">
+    <%= f.label :borrowing %>
+
+    <%= f.text_field :borrowing,
+      "class" => "form__input",
+      value: @affordability.borrowing_formatted
+    %>
+  </div>
+
+  <div class="form__row hide-with-js">
+    <%= f.submit I18n.t("affordability.recalculate"), class: "button" %>
+  </div>
 <% end %>
 
 <label class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider">

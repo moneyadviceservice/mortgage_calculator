@@ -24,6 +24,12 @@
 
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
 
+  <div class="hide-with-js affcalc__row">
+    <div class="affcalc__col--clip">
+      <p><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
+    </div>
+  </div>
+
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
       <%= render 'mortgage_calculator/affordabilities/form/monthly_mortgage_repayment' %>
@@ -114,6 +120,12 @@
     </div>
   </div>
 
+  <div class="hide-with-js affcalc__row">
+    <div class="affcalc__col--clip">
+      <p><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
+    </div>
+  </div>
+
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
       <%= render 'mortgage_calculator/affordabilities/form/estimated_remaining' %>
@@ -121,10 +133,6 @@
       <h3><%= t "affordability.interest_changer.title" %></h3>
       <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
     </div>
-  </div>
-
-  <div class="hide-with-js">
-    <p><br><%= f.submit I18n.t("affordability.recalculate"), class: "button" %></p>
   </div>
 
   <div class="affcalc__row">
