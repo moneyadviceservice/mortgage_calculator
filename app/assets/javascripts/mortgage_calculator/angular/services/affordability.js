@@ -100,6 +100,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
       },
 
       remainingBuffer: function() {
+        return this.takeHomePay() - this.monthlyRepayment() - this.committedCosts() - this.fixedCosts() - this.getLifestyleSpend();
+      },
+
+      remainingBufferAfterIncrease: function() {
         return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.getLifestyleSpend();
       },
 

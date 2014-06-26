@@ -20,9 +20,11 @@
 <!--<![endif]-->
 <% end %>
 
-<div ng-controller="CalculatorCtrl" class="affcalc risk--<%= @affordability.risk_level %> buffer--<%= @affordability.remaining_vector %>"
-   ng-class="[{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()], {'positive':'buffer--positive', 'negative':'buffer--negative'}[affordability.remainingVector()]]">
-  <%= render 'form_step3' %>
+<div ng-controller="CalculatorCtrl" class="affcalc risk--<%= @affordability.risk_level %>"
+   ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
+   <div class="buffer--<%= @affordability.remaining_vector %>" ng-class="{'positive':'buffer--positive', 'negative':'buffer--negative'}[affordability.remainingVector()]">
+    <%= render 'form_step3' %>
+  </div>
 
   <%= render 'feedback' %>
 </div>
