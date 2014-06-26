@@ -1,2 +1,3 @@
 <p><%= I18n.t("affordability.budget_affect.medium.percentage_html").html_safe %></p>
-<p><%= I18n.t("affordability.budget_affect.medium.affordability_html").html_safe %></p>
+<p><%= I18n.t("affordability.budget_affect.medium.affordability_html",
+              link: link_to(t("affordability.budget_affect.medium.link_text"), next_steps_affordability_path)).html_safe %></p>

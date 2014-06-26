@@ -1,0 +1,16 @@
+.buffer--show-on-positive,
+.buffer--show-on-negative {
+  display: none;
+}
+
+.buffer--positive {
+  .buffer--show-on-positive {
+    display: block;
+  }
+}
+
+.buffer--negative {
+  .buffer--show-on-negative {
+    display: block;
+  }
+}
