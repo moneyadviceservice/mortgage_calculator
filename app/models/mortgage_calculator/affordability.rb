@@ -162,9 +162,17 @@ module MortgageCalculator
     def self.load_from_store(store)
       store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability] || {}
 
+      two_applicants = store[:two_applicants] if store[:two_applicants]
+
       people = []
       if store[:people_attributes]
-        people = store[:people_attributes].values.each_with_index.map do |p,i|
+        if two_applicants == "1"
+          people_attributes = store[:people_attributes].values
+        else
+          people_attributes = store[:people_attributes].values.take(1)
+        end
+
+        people = people_attributes.each_with_index.map do |p,i|
           i == 0 ? Person.new(p) : PersonOther.new(p)
         end
       end
@@ -180,7 +188,6 @@ module MortgageCalculator
       borrowing = store[:borrowing] if store[:borrowing]
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
-      two_applicants = store[:two_applicants] if store[:two_applicants]
 
       model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
       model.empty = store.empty?

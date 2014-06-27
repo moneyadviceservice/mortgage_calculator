@@ -119,7 +119,7 @@ Given(/^I enter (\w+) (\d+\.?\d*)$/) do |field, input|
 end
 
 Given(/^I click on second applicant$/) do
-  check('affordability[two_applicants]') unless js_disabled?
+  check('affordability[two_applicants]')
 end
 
 When(/^I refine my affordability borrowing$/) do
