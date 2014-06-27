@@ -87,7 +87,7 @@ en:
         food_html: "<b>Include:</b> weekly shop, daily lunches, toiletries etc"
         travel_html: "<b>Include:</b> Fuel, public transport, regular rail and air fares.<br><b>Exclude:</b> Holidays and weekends away"
         entertainment_html: "<b>Include:</b> eating out, clothing, daily coffees/teas, theatre, museums, evenings out, family days out, personal grooming etc"
-        holidays_html: "Think about how much you typically spend on holidays or weekends away per year. <b>Exclude</b> travel insurance or travel for work"
+        holidays_html: "Think about how much you typically spend on holidays or weekends away per year, and <b>divide that by 12</b>.<br><b>Exclude</b> travel insurance or travel for work"
       mortgage_calculator/person:
         annual_income_0_html: "Your income before tax"
         extra_income_0_html: "Include: pension, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
