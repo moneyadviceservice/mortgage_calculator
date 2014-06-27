@@ -18,7 +18,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
-            <%= person.label :annual_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_0"), "id" => "label_annual_income0" %>
+            <%= person.label :annual_income, "id" => "label_annual_income0" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_annual_income0a">&pound;</span>
@@ -52,7 +52,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
-            <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_0"), "id" => "label_extra_income0" %>
+            <%= person.label :extra_income, "id" => "label_extra_income0" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_extra_income0a">&pound;</span>
@@ -105,9 +105,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
-            <%= person.label :annual_income, "id" => "label_annual_income1" do %>
-              <%= I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income_1") %>
-            <% end %>
+            <%= person.label :annual_income, "id" => "label_annual_income1" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_annual_income1a">&pound;</span>
@@ -141,7 +139,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
-            <%= person.label :extra_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income_1"), "id" => "label_extra_income_1" %>
+            <%= person.label :extra_income, "id" => "label_extra_income_1" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_extra_income_1a">&pound;</span>
@@ -187,7 +185,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
-            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_0"), "id" => "label_monthly_net_income_0" %>
+            <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_monthly_net_income_0a">&pound;</span>
@@ -219,7 +217,7 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
-            <%= person.label :monthly_net_income, I18n.t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income_1"), "id" => "label_monthly_net_income_1" %>
+            <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_1" %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_monthly_net_income_1a">&pound;</span>

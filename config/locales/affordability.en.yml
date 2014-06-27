@@ -31,12 +31,15 @@ en:
         mortgage_calculator/person:
           raw_annual_income: "My annual income"
           raw_monthly_net_income: "My monthly take-home pay"
-          annual_income_0: "My annual income"
-          extra_income_0: "My other annual income"
-          monthly_net_income_0: "My monthly take-home pay"
-          annual_income_1: " Second applicant's annual income"
-          extra_income_1: "Second applicant's other annual income"
-          monthly_net_income_1: "Second applicant's monthly take-home pay"
+          annual_income: "My annual income"
+          extra_income: "My other annual income"
+          monthly_net_income: "My monthly take-home pay"
+        mortgage_calculator/person_other:
+          raw_annual_income: "Second applicant's annual income"
+          raw_monthly_net_income: "Second applicant's monthly take-home pay"
+          annual_income: "Second applicant's annual income"
+          extra_income: "Second applicant's other annual income"
+          monthly_net_income: "Second applicant's monthly take-home pay"
       errors:
         title: "Please check the form and correct the following errors"
         messages:
@@ -67,6 +70,11 @@ en:
             proportional_incomes: "Your monthly take home pay is higher than your annual income."
             take_home_is_zero: "You need to type in an amount for your take home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
             annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments"
+        mortgage_calculator/person_other:
+          base:
+            proportional_incomes: "Second applicant's monthly take home pay is higher than their annual income."
+            take_home_is_zero: "You need to type in an amount for second applicant's take home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments"
+            annual_income_is_zero: "You need to type in an amount for second applicant's annual income because you’ve typed in an amount for second applicant's take-home pay. Second applicant's annual income will be made up of monthly payments"
     tooltips:
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day to day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"
