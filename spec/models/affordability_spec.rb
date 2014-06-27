@@ -3,13 +3,13 @@ require 'spec_helper'
 module MortgageCalculator
   describe Affordability do
     let(:person1) do
-      Person.new({ annual_income: "100000",
+      PersonOne.new({ annual_income: "100000",
                    extra_income: "10000",
                    monthly_net_income: "6000" })
     end
 
     let(:person2) do
-      Person.new({ annual_income: "50000",
+      PersonOne.new({ annual_income: "50000",
                    extra_income: "5000",
                    monthly_net_income: 3000 })
     end
@@ -31,8 +31,8 @@ module MortgageCalculator
 
     describe 'validations' do
       context 'when it is valid' do
-        let(:person1){ Person.new({ annual_income: "100000", extra_income: "", monthly_net_income: "6000" }) }
-        let(:person2){ Person.new({ annual_income: "", extra_income: "", monthly_net_income: "" }) }
+        let(:person1){ PersonOne.new({ annual_income: "100000", extra_income: "", monthly_net_income: "6000" }) }
+        let(:person2){ PersonOne.new({ annual_income: "", extra_income: "", monthly_net_income: "" }) }
 
         it 'is valid' do
           expect(subject).to be_valid
@@ -40,7 +40,7 @@ module MortgageCalculator
       end
 
       context 'when a person is not valid' do
-        let(:person1){ Person.new({ annual_income: "abc", extra_income: "10000" }) }
+        let(:person1){ PersonOne.new({ annual_income: "abc", extra_income: "10000" }) }
 
         it 'is not valid' do
           expect(subject).to_not be_valid
@@ -48,7 +48,7 @@ module MortgageCalculator
       end
 
       context 'when outgoings is not valid' do
-        let(:person1){ Person.new({ annual_income: "10000", extra_income: "10000" }) }
+        let(:person1){ PersonOne.new({ annual_income: "10000", extra_income: "10000" }) }
         let(:outgoings) do
           Outgoings.new(
             credit_repayments: "asd",
@@ -68,8 +68,8 @@ module MortgageCalculator
       end
 
       context 'when overall income is zero' do
-        let(:person1){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
-        let(:person2){ Person.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
+        let(:person1){ PersonOne.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
+        let(:person2){ PersonOne.new({ annual_income: "0", extra_income: "0", monthly_net_income: "0" }) }
 
         subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
@@ -166,7 +166,7 @@ module MortgageCalculator
         subject{ described_class.new(people: [person1], outgoings: Outgoings.new) }
 
         let(:person1) do
-          Person.new({ annual_income: "0",
+          PersonOne.new({ annual_income: "0",
                        extra_income: "0",
                        monthly_net_income: 0 })
         end

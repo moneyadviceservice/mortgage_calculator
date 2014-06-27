@@ -13,6 +13,7 @@ module MortgageCalculator
 
     validates :raw_annual_income, presence: true
     validates :raw_monthly_net_income, presence: true
+
     validates :annual_income, numericality: true
     validates :extra_income, numericality: true
     validates :monthly_net_income, numericality: true
@@ -22,7 +23,7 @@ module MortgageCalculator
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
     def initialize(options = {})
-      self.annual_income = options[:annual_income].presence
+      self.annual_income = options[:annual_income].presence || 0
       self.extra_income = options[:extra_income].presence || 0
       self.monthly_net_income = options[:monthly_net_income].presence
     end

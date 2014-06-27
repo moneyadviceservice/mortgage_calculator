@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe MortgageCalculator::Person do
+describe MortgageCalculator::PersonOne do
   it_should_behave_like "currency inputs", [:annual_income, :extra_income, :monthly_net_income]
 
   let(:annual_income) { 55000 }
@@ -30,8 +30,8 @@ describe MortgageCalculator::Person do
       end
 
       it 'adds validation for required fields' do
-        expect(subject.errors.messages.values.flatten).to include("My annual income can't be blank")
         expect(subject.errors.messages.values.flatten).to include("My monthly take-home pay can't be blank")
+        expect(subject.errors.messages.values.flatten).to include("Your annual income or your other annual income can't be blank")
       end
     end
 
@@ -75,7 +75,7 @@ describe MortgageCalculator::Person do
         it { should_not be_valid }
 
         it 'should not include a proportional income error' do
-          proportional_error_message = I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
+          proportional_error_message = I18n.t("affordability.activemodel.errors.mortgage_calculator/person_one.base.proportional_incomes")
 
           expect(person.errors[:base]).not_to include(proportional_error_message)
         end

@@ -52,7 +52,7 @@ When(/^I enter all details for "(.*?)" applicants$/) do |applicant|
   @affordability.monthly_net_income.set "6000"
 
   if applicant.to_i == 2
-    choose('affordability[two_applicants]') unless js_disabled?
+    choose('affordability[two_applicants]')
     @affordability.person_two_annual_income.set "50000"
     @affordability.person_two_extra_income.set "5000"
     @affordability.person_two_monthly_net_income.set "3000"

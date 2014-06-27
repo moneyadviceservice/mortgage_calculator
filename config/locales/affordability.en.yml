@@ -28,7 +28,7 @@ en:
           holidays: "Holidays"
           travel: "Travel costs"
           entertainment: "Entertainment & leisure"
-        mortgage_calculator/person:
+        mortgage_calculator/person_one:
           raw_annual_income: "My annual income"
           raw_monthly_net_income: "My monthly take-home pay"
           annual_income: "My annual income"
@@ -65,16 +65,18 @@ en:
         mortgage_calculator/affordability:
           base:
             income_greater_than_zero: "Your total income must be greater than zero"
-        mortgage_calculator/person:
+        mortgage_calculator/person_one:
           base:
             proportional_incomes: "Your monthly take home pay is higher than your annual income."
             take_home_is_zero: "You need to type in an amount for your take home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
             annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments"
+            positive_total_income: "Your annual income or your other annual income can't be blank"
         mortgage_calculator/person_other:
           base:
             proportional_incomes: "Second applicant's monthly take home pay is higher than their annual income."
             take_home_is_zero: "You need to type in an amount for second applicant's take home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments"
             annual_income_is_zero: "You need to type in an amount for second applicant's annual income because you’ve typed in an amount for second applicant's take-home pay. Second applicant's annual income will be made up of monthly payments"
+            positive_total_income: "Second applicant's annual income or second applicant's other annual income can't be blank"
     tooltips:
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day to day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"
