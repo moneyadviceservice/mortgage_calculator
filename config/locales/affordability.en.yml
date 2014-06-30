@@ -185,14 +185,20 @@ en:
           copy_html: "Budget Planner"
           url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
         tip_3:
-          copy_html: "Interest rates explained"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+          copy_html: "More about interest rates"
+          url: "https://www.moneyadviceservice.org.uk/en/news/how-will-interest-rate-rises-affect-you"
         tip_4:
+          copy_html: "Improve your credit rating"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating"
+        tip_5:
           copy_html: "Affordable housing schemes"
           url: "https://www.moneyadviceservice.org.uk/en/categories/affordable-housing-schemes"
-        tip_5:
-          copy_html: "Save more"
+        tip_6:
+          copy_html: "Saving for a deposit"
           url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+        tip_7:
+          copy_html: "Mortgage comparison table"
+          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage Calculator"
