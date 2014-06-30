@@ -29,11 +29,11 @@ en:
           travel: "Travel costs"
           entertainment: "Entertainment & leisure"
         mortgage_calculator/person_one:
-          raw_annual_income: "My annual income"
-          raw_monthly_net_income: "My monthly take-home pay"
-          annual_income: "My annual income"
-          extra_income: "My other annual income"
-          monthly_net_income: "My monthly take-home pay"
+          raw_annual_income: "Your annual income"
+          raw_monthly_net_income: "Your monthly take-home pay"
+          annual_income: "Your annual income"
+          extra_income: "Your other annual income"
+          monthly_net_income: "Your monthly take-home pay"
         mortgage_calculator/person_other:
           raw_annual_income: "Second applicant's annual income"
           raw_monthly_net_income: "Second applicant's monthly take-home pay"
