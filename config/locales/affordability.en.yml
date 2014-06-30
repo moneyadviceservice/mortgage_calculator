@@ -8,6 +8,7 @@ en:
     back: "Back"
     go_back: "Go back"
     recalculate: "Recalculate"
+    per_month: "per month"
     caveat:
       title: "Important"
       one: "This tool is designed to give you an approximate idea of how much a lender might offer for a mortgage, and if you could afford it. Actual amounts and affordability criteria will differ across lenders"
