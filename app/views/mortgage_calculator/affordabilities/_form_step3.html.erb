@@ -93,12 +93,13 @@
                              "data-m-dec" => "0",
                              "ng-model" => "affordability.lifestyleSpend",
                              "pattern" => '\d*',
-                             "aria-labelledby" => "label_lifestyle label_lifestyle_a",
+                             "aria-labelledby" => "label_lifestyle label_lifestyle_a label_lifestyle_b",
                              "analytics" => '',
                              "analytics-on" => 'change',
                              "analytics-category" => 'Affordability Calculator',
                              "analytics-action" => 'Refinement',
                              "analytics-label" => 'Lifestyle' %>
+          <span class="form__input-label" id="label_lifestyle_b"><%= t("affordability.per_month") %></span>
           <span class="form__input-outline"></span>
         </span>
         <div class="slider"
