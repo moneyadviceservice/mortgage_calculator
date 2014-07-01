@@ -3,9 +3,6 @@
     var _gaq = _gaq || [];
     _gaq.push(['_trackEvent','Affordability Calculator','Completion','Click']);
     _gaq.push(['_trackEvent','Affordability Calculator','Risk Level', '<%= @affordability.risk_level %>']);
-    <% if @affordability.remaining_negative? %>
-      _gaq.push(['_trackEvent','Affordability Calculator','Remaining', 'Non-positive']);
-    <% end %>
   </script>
 <% end %>
 

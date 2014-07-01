@@ -150,7 +150,10 @@ en:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won't be able to afford your mortgage payments, particularly if circumstances change. %{link}."
         link_text: "Here's what you can do now"
     over_committed:
-      body: "Your monthly committed costs are higher than your take-home pay. Based on the costs you’ve entered, you won't be offered a mortgage. Please check the numbers you have entered. If you are spending more than your take-home pay, this means that you are overstretching your budget and are at risk of getting into debt."
+      title: "It appears your budget is overstretched"
+      body_1_html: "Your monthly committed costs are higher than your take-home pay. Based on the costs you’ve entered, you won't be offered a mortgage."
+      body_2_html: "<strong>Please check the numbers you have entered</strong>."
+      body_3_html: "If you are spending more than your take-home pay, this means that you are overstretching your budget and are at risk of getting into debt."
     warnings:
       missing_fixed_and_committed_costs_html: "You haven't entered any amounts for <strong>fixed and committed costs</strong> on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all <strong>fixed and committed costs</strong> on the previous page or your results on this page will be incorrect. %{back} to do that now."
