@@ -72,14 +72,14 @@ en:
             income_greater_than_zero: "Your total income must be greater than zero"
         mortgage_calculator/person_one:
           base:
-            proportional_incomes: "Your monthly take home pay is higher than your annual income."
-            take_home_is_zero: "You need to type in an amount for your take home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
+            proportional_incomes: "Your monthly take-home pay is higher than your annual income."
+            take_home_is_zero: "You need to type in an amount for your take-home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
             annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments"
             positive_total_income: "Please enter an amount for your annual income or your other annual income"
         mortgage_calculator/person_other:
           base:
-            proportional_incomes: "Second applicant's monthly take home pay is higher than their annual income."
-            take_home_is_zero: "You need to type in an amount for second applicant's take home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments"
+            proportional_incomes: "Second applicant's monthly take-home pay is higher than their annual income."
+            take_home_is_zero: "You need to type in an amount for second applicant's take-home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments"
             annual_income_is_zero: "You need to type in an amount for second applicant's annual income because you’ve typed in an amount for second applicant's take-home pay. Second applicant's annual income will be made up of monthly payments"
             positive_total_income: "Second applicant's annual income or second applicant's other annual income can't be blank"
     tooltips:
@@ -142,7 +142,7 @@ en:
     budget:
       commitments_html: "Your estimated fixed and committed spend per month is: <span class=\"accent\">%{commitment}</span>"
       outgoing_html: "Mortgage repayments and essential costs per month amount to roughly %{percent} of your total take-home pay: %{absolute}"
-      leftover_html: "What you have left over is roughly %{percent} of your monthly take home: %{absolute}"
+      leftover_html: "What you have left over is roughly %{percent} of your monthly take-home: %{absolute}"
       positive:
         remaining_html: "You have money left over each month right now, but if interest rates rise how would that affect your budget? Would you be overstretching yourself? %{link}."
         link_text: "Here's what you can do now"
@@ -172,7 +172,7 @@ en:
       learn_more:
         title: "Affording your mortgage"
         tip_1: "Think about your household spend as well as your mortgage repayments."
-        tip_2 : "Spending more than 50% of your take home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
+        tip_2 : "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
         more:
           copy_html: "Read more"
           url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
