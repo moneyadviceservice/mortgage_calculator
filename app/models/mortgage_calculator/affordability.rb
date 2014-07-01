@@ -222,6 +222,10 @@ module MortgageCalculator
       number_to_currency can_borrow_upto, precision: 0
     end
 
+    def over_committed?
+      committed_costs + fixed_costs > monthly_net_income
+    end
+
   private
 
     def lower_profit_multiplier

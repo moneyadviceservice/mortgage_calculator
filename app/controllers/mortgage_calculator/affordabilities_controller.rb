@@ -23,7 +23,11 @@ module MortgageCalculator
       @affordability = affordability_model
 
       if @affordability.valid_for_step3?
-        adjust_interest_rate
+        if @affordability.over_committed?
+          render :over_committed
+        else
+          adjust_interest_rate
+        end
       else
         redirect_to step_2_affordability_path
       end

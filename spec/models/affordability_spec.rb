@@ -388,5 +388,20 @@ module MortgageCalculator
         end
       end
     end
+
+    describe 'over_committed?' do
+      context 'when committed + fixed costs > monthly_net_income' do
+        it 'returns true' do
+          subject.outgoings.stub(:credit_repayments){ 20000 }
+          expect(subject.over_committed?).to be_truthy
+        end
+      end
+
+      context 'when committed + fixed costs < monthly_net_income' do
+        it 'returns false' do
+          expect(subject.over_committed?).to be_falsey
+        end
+      end
+    end
   end
 end

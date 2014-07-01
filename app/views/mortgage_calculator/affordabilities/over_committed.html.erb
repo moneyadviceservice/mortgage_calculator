@@ -1,0 +1,15 @@
+<% content_for(:analytics) do %>
+  <script type='text/javascript'>
+    var _gaq = _gaq || [];
+    _gaq.push(['_trackEvent','Affordability Calculator','Completion','Click']);
+    _gaq.push(['_trackEvent','Affordability Calculator','Risk Level', '<%= @affordability.risk_level %>']);
+    _gaq.push(['_trackEvent','Affordability Calculator','Remaining', 'Non-positive']);
+  </script>
+<% end %>
+
+<div ng-controller="CalculatorCtrl" class="affcalc">
+  <%= render 'over_committed' %>
+  <%= render 'caveat' %>
+
+  <%= render 'feedback' %>
+</div>
