@@ -356,6 +356,7 @@
   width:100%;
   clear:both;
   margin:18px 0 35px;
+  -ms-touch-action: none;
 
   &.slider--squeeze {
     margin-bottom: 18px;
