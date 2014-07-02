@@ -1,4 +1,210 @@
 cy:
   affordability:
-    tool_name: "morgais-cyfrifiannell-fforddiadwyedd"
-    title: "welsh title"
+    tool_name: "cyfrifiannell-fforddiadwyedd-morgais"
+    title: "Faint allwch chi ei fenthyg?"
+    preamble: "Bydd yr offeryn hwn yn eich helpu i amcangyfrif faint y gallwch fforddio ei fenthyg i brynu cartref. Byddwn yn ei gyfrifo trwy edrych ar eich incwm a’ch gwariant. Bydd benthycwyr morgeisi yn edrych yn agos ar y ffigurau hyn i gyfrifo faint fyddant yn ei gynnig i chi."
+    description: "Ni ddylai gymryd mwy na pum munud i’w lenwi."
+    next: "Nesaf"
+    next_steps_btn: "Camau nesaf"
+    back: "Yn ôl"
+    go_back: "Mynd yn ôl"
+    recalculate: "Ailgyfrif"
+    per_month: "y mis"
+    per_year: "y flwyddyn"
+    required_copy: "Ceir * yn dilyn y meysydd gofynnol"
+    required: "gofynnol"
+    caveat:
+      title: "Pwysig"
+      one: "Mae’r offeryn hwn wedi ei gynllunio i roi amcangyfrif i chi o faint allai benthyciwr ei gynnig ar gyfer morgais, ac a allech ei fforddio. Bydd y gwir symiau a meini prawf fforddiadwyedd yn amrywio yn ôl y benthyciwr"
+      estimate: "Amcangyfrif yw hyn, wedi ei gynllunio i’ch helpu i ddeall beth allai benthyciwr gynnig i chi. Bydd gwir symiau'r benthyciad a meini prawf fforddiadwyedd yn amrywio yn ôl y benthyciwr"
+    activemodel:
+      attributes:
+        mortgage_calculator/affordability:
+          lifestyle_costs: "Fe amcangyfrifoch fod eich costau byw misol yn:"
+          borrowing: "Benthyca"
+          interest_rate: "Yn seiliedig ar forgais ad-dalu 25 mlynedd gyda chyfradd llog o:"
+        mortgage_calculator/outgoings:
+          credit_repayments: "Taliadau cerdyn credyd a benthyciadau"
+          utilities: "Biliau ac yswiriant"
+          childcare: "Ffioedd gofal plant ac ysgol"
+          child_maintenance: "Cynhaliaeth plant a phriodasol"
+          rent_and_mortgage: "Taliadau rhent neu forgais presennol"
+          food: "Bwyd, nwyddau a thaclau ymolchi"
+          holidays: "Gwyliau"
+          travel: "Costau teithio"
+          entertainment: "Adloniant a hamdden"
+        mortgage_calculator/person_one:
+          raw_annual_income: "Eich incwm blynyddol"
+          raw_monthly_net_income: "Eich cyflog clir misol"
+          annual_income: "Eich incwm blynyddol"
+          extra_income: "Unrhyw incwm blynyddol arall"
+          monthly_net_income: "Eich cyflog clir misol"
+        mortgage_calculator/person_other:
+          raw_annual_income: "Incwm blynyddol ail ymgeisydd"
+          raw_monthly_net_income: "Cyflog clir misol ail ymgeisydd"
+          annual_income: "Incwm blynyddol ail ymgeisydd"
+          extra_income: "Incwm blynyddol arall ail ymgeisydd"
+          monthly_net_income: "Cyflog clir misol ail ymgeisydd"
+      errors:
+        title: "Gwiriwch y ffurflen a chywiro’r gwallau canlynol"
+        messages:
+          inclusion: "%{attribute} heb ei gynnwys yn y rhestr"
+          exclusion: "%{attribute} ar gadw"
+          invalid: "%{attribute} yn annilys"
+          confirmation: "Nid yw %{attribute} yn cyd-fynd â’r cadarnhad"
+          accepted: "Rhaid derbyn %{attribute}"
+          empty: "Ni all %{attribute} fod yn wag"
+          blank: "Ni all %{attribute} fod yn wag"
+          too_long: "Mae %{attribute} yn rhy hir (uchafswm yw %{count} o nodau)"
+          too_short: "Mae %{attribute} yn rhy fyr (isafswm yw %{count} o nodau)"
+          wrong_length: "Mae hyd %{attribute} yn anghywir (dylai fod yn %{count} o nodau)"
+          not_a_number: "Rhaid i %{attribute} fod yn rhif"
+          not_an_integer: "Rhaid i %{attribute} fod yn gyfanrif"
+          greater_than: "Rhaid i %{attribute} fod yn fwy na %{count}"
+          greater_than_or_equal_to: "Rhaid i %{attribute} fod yn fwy na neu’n hafal i %{count}"
+          equal_to: "Rhaid i %{attribute} fod yn hafal i %{count}"
+          less_than: "Rhaid i %{attribute} fod yn llai na %{count}"
+          less_than_or_equal_to: "Rhaid i %{attribute} fod yn llai na neu’n hafal i %{count}"
+          odd: "Rhaid i %{attribute} fod yn odrif"
+          even: "Rhaid i %{attribute} fod yn eilrif"
+        mortgage_calculator/affordability:
+          base:
+            income_greater_than_zero: "Rhaid i gyfanswm eich incwm fod yn fwy na sero"
+        mortgage_calculator/person_one:
+          base:
+            proportional_incomes: "Mae eich cyflog clir misol yn uwch na’ch incwm blynyddol."
+            take_home_is_zero: "Mae angen i chi roi swm ar gyfer eich cyflog clir oherwydd eich bod wedi rhoi swm ar gyfer eich incwm blynyddol. Bydd eich incwm blynyddol yn gyfanswm taliadau misol"
+            annual_income_is_zero: "Mae angen i chi roi swm ar gyfer eich incwm blynyddol oherwydd eich bod wedi rhoi swm ar gyfer eich cyflog clir. Bydd eich incwm blynyddol yn gyfanswm taliadau misol"
+            positive_total_income: "Rhowch swm ar gyfer eich incwm blynyddol neu’ch incwm blynyddol arall"
+        mortgage_calculator/person_other:
+          base:
+            proportional_incomes: "Mae cyflog clir misol yr ail ymgeisydd yn uwch na’i incwm blynyddol."
+            take_home_is_zero: "Mae angen i chi roi swm ar gyfer cyflog clir yr ail ymgeisydd oherwydd eich bod wedi rhoi swm ar gyfer incwm blynyddol yr ail ymgeisydd. Bydd incwm blynyddol yr ail ymgeisydd yn gyfanswm taliadau misol"
+            annual_income_is_zero: "Mae angen i chi roi swm ar gyfer incwm blynyddol yr ail ymgeisydd oherwydd eich bod wedi rhoi swm ar gyfer cyflog clir yr ail ymgeisydd. Bydd incwm blynyddol yr ail ymgeisydd yn gyfanswm taliadau misol"
+            positive_total_income: "Ni all incwm blynyddol yr ail ymgeisydd neu incwm blynyddol arall yr ail ymgeisydd fod yn wag"
+    tooltips:
+      mortgage_calculator/outgoings:
+        credit_repayments_html: "<b>Dylid cynnwys:</b> dyledion cerdyn credyd, cerdyn siop a chatalog; benthyciadau car a phersonol, benthyciadau myfyrwyr; ac ymroddiadau hurbwrcasu<br /><b>Ni ddylid cynnwys</b>: Costau byw o ddydd i ddydd (e.e. bwyd, dillad, adloniant a gwyliau); gwariant sefydlog (e.e. tanysgrifiadau i gampfeydd neu daliadau aelodaeth eraill; biliau gwasanaethau; ffonau symudol; band eang; y dreth gyngor; ffioedd gofal plant neu ysgol)"
+        utilities_html: "<b>Dylid cynnwys:</b> Y Dreth Gyngor, aelodaeth o gampfa, biliau gwasanaethau; ffonau symudol; yswiriant blynyddol (megis cynnwys, car, anifeiliaid anwes, teithio), tanysgrifiadau cylchgronau, band eang, adferiad ochr y ffordd ac ati"
+        childcare_html: "<b>Dylid cynnwys:</b> Ffioedd meithrinfa a gofal plant, gwarchodwr, dosbarthiadau allgyrsiol ac ati"
+        child_maintenance_html: "Taliadau tuag at gefnogi a chynhaliaeth plant, neu gynhaliaeth cyn bartner"
+        rent_and_mortgage_html: "Ni fydd hyn wedi ei gynnwys yn y cyfrifiad, ond efallai yr hoffech ei gynnwys i weld y gwahaniaeth rhwng eich taliadau rhent neu forgais presennol a’r taliadau newydd y byddwch yn eu gwneud "
+        food_html: "<b>Dylid cynnwys:</b> siopa wythnosol, cinio dyddiol, taclau ymolch ac ati"
+        travel_html: "<b>Dylid cynnwys:</b> Tanwydd, cludiant cyhoeddus, tocynnau trên a hedfan rheolaidd.<br /><b>Ni ddylid cynnwys:</b> Gwyliau a phenwythnosau i ffwrdd"
+        entertainment_html: "<b>Dylid cynnwys:</b> bwyta allan, dillad, coffi/te dyddiol, theatr, amgueddfeydd, nosweithiau allan, dyddiau allan i’r teulu, torri gwallt ac ati"
+        holidays_html: "Meddyliwch am faint ydych chi fel arfer yn ei wario ar wyliau neu benwythnosau i ffwrdd y flwyddyn, a <b>rhannu hynny gyda 12</b>.<br /><b>Ni ddylid cynnwys</b> yswiriant teithio neu deithio ar gyfer y gwaith"
+      mortgage_calculator/person:
+        annual_income_0_html: "Eich incwm cyn treth"
+        extra_income_0_html: "Dylid cynnwys: incwm o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
+        monthly_net_income_0: "Eich incwm misol wedi treth, llai pensiwn, Yswiriant Gwladol, a didyniadau eraill"
+        annual_income_1: "Incwm blynyddol yr ail ymgeisydd cyn treth"
+        extra_income_1: "Dylid cynnwys: incwm yr ail ymgeisydd o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
+        monthly_net_income_1: "Incwm misol yr ail ymgeisydd wedi treth, llai pensiwn, Yswiriant Gwladol, a didyniadau eraill"
+    titles:
+      annual_income: "Incwm Blynyddol"
+      take_home: "Cyflog clir misol"
+      monthly_outgoings: "Costau misol y cartref"
+      estimated_committed: "Amcangyfrif o gostau misol ymroddedig"
+      estimated_fixed: "Amcangyfrif o gostau sefydlog misol"
+      estimated_lifestyle: "Amcangyfrif o gostau byw misol"
+      how_affect_budget: "Allwch chi fforddio'r taliadau misol?"
+      can_afford: "Beth sy’n weddill?"
+      second_applicant: "A oes ail ymgeisydd?"
+    input_page:
+      submit: "Gwiriwch faint allwch chi ei fenthyg"
+      monthly_outgoings_descriptions_html: "Defnyddiwch yr adran hon i gael syniad sylfaenol o sut mae’ch cyllideb fisol yn cael ei chyfrifo, a pa mor fforddiadwy fydd eich taliadau morgais misol."
+      monthly_outgoings_descriptions_2_html: "Os nad oes gennych unrhyw gostau yn yr adrannau hyn nawr, ystyriwch faint fydd hyn yn debygol o fod yn eich cartref newydd."
+      outgoings_second_person: "Os ydych chi’n gwneud cais gyda rhywun arall, ychwanegwch eu costau misol i’ch rhai chi ac yna’u rhoi yn y meysydd isod."
+      living_costs_description: "Ni ddylai’ch costau ffordd o fyw newid pan gewch forgais, ond bydd benthycwyr eisiau cyflawni 'prawf straen' i weld a allwch chi fforddio’ch taliadau os bydd cyfraddau llog yn codi neu os bydd eich amgylchiadau’n newid."
+    budget_affect:
+      high:
+        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">fwy na 60%</span> o gyfanswm eich cyflog clir."
+        affordability_html: "Rydych yn cyflwyno risg <span class=\"risk__accent\">uchel iawn</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn."
+      medium:
+        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">rhwng 40% - 60%</span> o gyfanswm eich cyflog clir."
+        affordability_html: "Rydych yn cyflwyno <span class=\"risk__accent\">risg</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn, yn arbennig os yw'ch amgylchiadau’n newid neu gyfraddau llog yn codi. %{link}."
+        link_text: " Dyma beth allech chi wneud nawr"
+      low:
+        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">llai na 40%</span> o gyfanswm eich cyflog clir."
+        affordability_html: "Nid yw’ch cyllideb <span class=\"risk__accent\">wedi ei hestyn yn ormodol</span> a gallwch wneud yr ad-daliadau hyn. Ond cynlluniwch ymlaen – os yw cyfraddau llog yn codi, a allech chi fforddio’r morgais hwn?"
+    interest_changer:
+      title: "Beth os bydd cyfraddau llog yn codi?"
+      changes_by_would_increase_html: "Os yw cyfraddau llog yn codi o %{percent}, bydd eich ad-daliad misol yn codi i %{repayment}."
+      remaining_html: "Bydd eich cyllideb sy’n weddill yn %{remaining} y mis."
+    monthly_repayment:
+      estimated_html: "Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class=\"accent\">%{repayment}</span>"
+    remaining:
+      estimate_html: "Y swm sydd gennych yn weddill wedi costau byw yw <span class=\"accent\">%{remaining}</span> y mis."
+    range:
+      offer_html: "Efallai y byddwch yn cael cynnig rhwng %{min} a %{max}"
+    take_home:
+      per_month_html: "Eich cyfanswm cyflog clir misol yw: <span class=\"accent\">%{take_home}</span>"
+    budget:
+      commitments_html: "Eich gwariant misol sefydlog ac ymroddedig amcangyfrifol yw: <span class=\"accent\">%{commitment}</span>"
+      outgoing_html: "Mae ad-daliadau morgais a chostau allweddol y mis yn dod i gyfanswm o tua %{percent} o gyfanswm eich cyflog clir: %{absolute}"
+      leftover_html: "Mae beth sydd gennych yn weddill yn tua %{percent} o’ch cyflog clir misol: %{absolute}"
+      positive:
+        remaining_html: "Mae gennych arian yn weddill pob mis ar hyn o bryd, ond os yw’r cyfraddau llog yn codi sut fyddai hynny’n effeithio ar eich cyllideb? A fyddech mewn perygl o fod yn brin o arian? %{link}."
+        link_text: "Dyma beth allech chi wneud nawr"
+      negative:
+        remaining_html: "Rydych yn gwario mwy na’ch cyflog clir, sy’n golygu eich bod yn gorymestyn eich cyllideb ac mewn perygl o fynd i ddyled. Ni fyddwch yn gallu fforddio eich taliadau morgais, yn arbennig os fydd amgylchiadau’n newid. %{link}."
+        link_text: "Dyma beth allech chi wneud nawr"
+    over_committed:
+      title: "Fe ymddengys fod eich cyllideb wedi ei gorymestyn"
+      body_1_html: "Mae eich costau ymroddedig misol yn uwch na’ch cyflog clir. Yn seiliedig ar y costau a roddoch, ni fyddwch yn cael cynnig morgais."
+      body_2_html: "<strong>Gwiriwch y rhifau a roddoch</strong>."
+      body_3_html: "Os ydych yn gwario mwy na’ch cyflog clir, mae hyn yn golygu eich bod yn gorymestyn eich cyllideb ac mewn perygl o fynd i ddyled."
+    warnings:
+      missing_fixed_and_committed_costs_html: "Nid ydych wedi rhoi unrhyw symiau ar gyfer <strong>costau sefydlog ac ymroddedig</strong> ar y dudalen flaenorol. Ydych chi’n siŵr bod hyn yn gywir? Os nad, efallai y bydd y canlyniadau ar y dudalen hon yn anghywir. %{back} ac unioni hyn nawr."
+      only_rent_and_mortgage_html: "Rydym angen mwy o wybodaeth gennych chi. Gwiriwch eich bod wedi rhoi’r holl symiau ar gyfer <strong>costau sefydlog ac ymroddedig</strong> ar y dudalen flaenorol neu ni fydd eich canlyniadau ar y dudalen hon yn gywir. %{back} i wneud hynny nawr."
+      missing_lifestyle_costs_html: "Nid ydych wedi rhoi unrhyw symiau ar gyfer <strong>costau byw</strong> ar y dudalen flaenorol. Ydych chi’n siŵr bod hyn yn gywir? Os nad, efallai y bydd y canlyniadau ar y dudalen hon yn anghywir. %{back} ac unioni hyn nawr."
+    next_steps:
+      title: "Tri cham i ganfod morgais fforddiadwy"
+      tip_1:
+        heading: "Am beth fydd benthycwyr yn chwilio wrth ymgeisio"
+        info_html: "Faint allwch chi fforddio ei fenthyca mewn gwirionedd?"
+        url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+      tip_2:
+        heading: "Gwneud newidiadau i’ch gwariant"
+        info_html: "Darllenwch ein %{budget_planner} i gael y darlun llawn"
+        url_text: "Cynllunydd Cyllideb"
+        url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+      tip_3:
+        heading: "Ystyriwch fenthyca llai"
+        info_html: "Ceisiwch %{saving}, neu chwilio am eiddo mewn ardal fwy fforddiadwy"
+        url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+        url_text: "cynilo ar gyfer blaendal mwy"
+      learn_more:
+        title: "Fforddio eich morgais"
+        tip_1: "Meddyliwch am wariant eich cartref yn ogystal â’ch taliadau morgais."
+        tip_2 : "Mae gwario mwy na 50% o’ch cyflog clir ar gostau ymroddedig a morgais yn creu risg uchel iawn o orymestyn eich cyllideb. Gwnewch yn siŵr bod gennych ddigon o arian dros ben ar ddiwedd y mis i’ch helpu i ymdopi, pe byddai cyfraddau llog yn codi neu’ch amgylchiadau’n newid."
+        more:
+          copy_html: "Darllen mwy"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+      find_out_more:
+        title: "Cewch fwy o wybodaeth yn"
+        tip_1:
+          copy_html: "Costau prynu"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+        tip_2:
+          copy_html: "Cynllunydd Cyllideb"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+        tip_3:
+          copy_html: "Mwy am gyfraddau llog"
+          url: "https://www.moneyadviceservice.org.uk/en/news/how-will-interest-rate-rises-affect-you"
+        tip_4:
+          copy_html: "Gwella eich statws credyd"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating"
+        tip_5:
+          copy_html: "Cynlluniau tai fforddiadwy"
+          url: "https://www.moneyadviceservice.org.uk/en/categories/affordable-housing-schemes"
+        tip_6:
+          copy_html: "Cynilo ar gyfer blaendal"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+        tip_7:
+          copy_html: "Tabl cymharu morgeisi"
+          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+      have_you_tried:
+        title: "Rhowch gynnig ar"
+        mortgage_calculator: "Cyfrifiannell Morgais"
+        stamp_duty: "Cyfrifiannell Treth Stamp"
