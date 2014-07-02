@@ -30,7 +30,7 @@ describe MortgageCalculator::PersonOne do
       end
 
       it 'adds validation for required fields' do
-        expect(subject.errors.messages.values.flatten).to include("Your monthly take-home pay can't be blank")
+        expect(subject.errors.messages.values.flatten).to include("Your monthly take-home pay can't be blank. Please enter Your monthly take-home pay.")
         expect(subject.errors.messages.values.flatten).to include(I18n.t("affordability.activemodel.errors.mortgage_calculator/person_one.base.positive_total_income"))
       end
     end
