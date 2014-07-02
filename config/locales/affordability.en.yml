@@ -73,7 +73,7 @@ en:
         mortgage_calculator/person_one:
           base:
             proportional_incomes: "Your monthly take-home pay is higher than your annual income."
-            take_home_is_zero: "Your monthly take-home pay is higher than your annual income"
+            take_home_is_zero: "Please enter your take-home pay"
             annual_income_is_zero: "Please enter your total annual income"
             positive_total_income: "Please enter your annual income or any other annual income"
         mortgage_calculator/person_other:
