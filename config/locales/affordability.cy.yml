@@ -67,21 +67,12 @@ cy:
           less_than_or_equal_to: "Rhaid i %{attribute} fod yn llai na neu’n hafal i %{count}"
           odd: "Rhaid i %{attribute} fod yn odrif"
           even: "Rhaid i %{attribute} fod yn eilrif"
-        mortgage_calculator/affordability:
-          base:
-            income_greater_than_zero: "Rhaid i gyfanswm eich incwm fod yn fwy na sero"
         mortgage_calculator/person_one:
           base:
             proportional_incomes: "Mae eich cyflog clir misol yn uwch na’ch incwm blynyddol."
-            take_home_is_zero: "Mae angen i chi roi swm ar gyfer eich cyflog clir oherwydd eich bod wedi rhoi swm ar gyfer eich incwm blynyddol. Bydd eich incwm blynyddol yn gyfanswm taliadau misol"
-            annual_income_is_zero: "Mae angen i chi roi swm ar gyfer eich incwm blynyddol oherwydd eich bod wedi rhoi swm ar gyfer eich cyflog clir. Bydd eich incwm blynyddol yn gyfanswm taliadau misol"
-            positive_total_income: "Rhowch swm ar gyfer eich incwm blynyddol neu’ch incwm blynyddol arall"
         mortgage_calculator/person_other:
           base:
             proportional_incomes: "Mae cyflog clir misol yr ail ymgeisydd yn uwch na’i incwm blynyddol."
-            take_home_is_zero: "Mae angen i chi roi swm ar gyfer cyflog clir yr ail ymgeisydd oherwydd eich bod wedi rhoi swm ar gyfer incwm blynyddol yr ail ymgeisydd. Bydd incwm blynyddol yr ail ymgeisydd yn gyfanswm taliadau misol"
-            annual_income_is_zero: "Mae angen i chi roi swm ar gyfer incwm blynyddol yr ail ymgeisydd oherwydd eich bod wedi rhoi swm ar gyfer cyflog clir yr ail ymgeisydd. Bydd incwm blynyddol yr ail ymgeisydd yn gyfanswm taliadau misol"
-            positive_total_income: "Ni all incwm blynyddol yr ail ymgeisydd neu incwm blynyddol arall yr ail ymgeisydd fod yn wag"
     tooltips:
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Dylid cynnwys:</b> dyledion cerdyn credyd, cerdyn siop a chatalog; benthyciadau car a phersonol, benthyciadau myfyrwyr; ac ymroddiadau hurbwrcasu<br /><b>Ni ddylid cynnwys</b>: Costau byw o ddydd i ddydd (e.e. bwyd, dillad, adloniant a gwyliau); gwariant sefydlog (e.e. tanysgrifiadau i gampfeydd neu daliadau aelodaeth eraill; biliau gwasanaethau; ffonau symudol; band eang; y dreth gyngor; ffioedd gofal plant neu ysgol)"
