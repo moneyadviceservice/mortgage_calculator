@@ -92,7 +92,7 @@
         <div class="affcalc__col">
           <div class="form__row">
             <%= f.label :two_applicants,
-                        class: "label--inline" do %>
+                        class: "label--inline label--accent" do %>
               <%= f.check_box :two_applicants,
                               "ng-model" => "affordability.selectedOption",
                               "ng-initial" => @affordability.two_applicants? ? "1" : "0",

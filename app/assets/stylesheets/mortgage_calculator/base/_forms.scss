@@ -12,6 +12,11 @@ label {
   &.label--inline {
     display: inline;
   }
+
+  &.label--accent {
+    padding: 6px;
+    background: $colour-label-accent;
+  }
 }
 
 .field_with_errors {
