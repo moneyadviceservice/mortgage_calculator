@@ -42,7 +42,7 @@ MortgageCalculator::Engine.routes.draw do
       end
     end
 
-    resource :affordability, path: "morgais-cyfrifiannell-fforddiadwyedd" do
+    resource :affordability, path: "cyfrifiannell-fforddiadwyedd-morgais" do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
