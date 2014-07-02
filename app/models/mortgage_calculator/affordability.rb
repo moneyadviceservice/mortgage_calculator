@@ -23,8 +23,6 @@ module MortgageCalculator
       empty
     end
 
-    validate :income_greater_than_zero
-
     delegate :committed_costs, to: :outgoings
     delegate :fixed_costs, to: :outgoings
 
@@ -238,10 +236,6 @@ module MortgageCalculator
 
     def annual_committed_costs
       committed_costs * 12
-    end
-
-    def income_greater_than_zero
-      errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/affordability.base.income_greater_than_zero") unless total_income + monthly_net_income > 0
     end
 
     def default_borrowing_amount

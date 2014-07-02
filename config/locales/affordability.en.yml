@@ -60,28 +60,19 @@ en:
           wrong_length: "%{attribute} is the wrong length (should be %{count} characters)"
           not_a_number: "%{attribute} must be a number"
           not_an_integer: "%{attribute} must be an integer"
-          greater_than: "%{attribute} must be greater than %{count}"
+          greater_than: "Please enter %{attribute}"
           greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}"
           equal_to: "%{attribute} must be equal to %{count}"
           less_than: "%{attribute} must be less than %{count}"
           less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}"
           odd: "%{attribute} must be odd"
           even: "%{attribute} must be even"
-        mortgage_calculator/affordability:
-          base:
-            income_greater_than_zero: "Please enter your total annual income"
         mortgage_calculator/person_one:
           base:
             proportional_incomes: "Your monthly take-home pay is higher than your annual income."
-            take_home_is_zero: "Please enter your take-home pay"
-            annual_income_is_zero: "Please enter your total annual income"
-            positive_total_income: "Please enter your annual income or any other annual income"
         mortgage_calculator/person_other:
           base:
             proportional_incomes: "Second applicant's monthly take-home pay is higher than their annual income."
-            take_home_is_zero: "Please enter the second applicant's take-home pay"
-            annual_income_is_zero: "Please enter the second applicant's annual income"
-            positive_total_income: "Please enter the second applicant's take-home pay and annual income"
     tooltips:
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day-to-day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"

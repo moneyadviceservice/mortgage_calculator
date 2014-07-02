@@ -31,16 +31,7 @@ describe MortgageCalculator::PersonOne do
 
       it 'adds validation for required fields' do
         expect(subject.errors.messages.values.flatten).to include("Please enter your monthly take-home pay")
-        expect(subject.errors.messages.values.flatten).to include(I18n.t("affordability.activemodel.errors.mortgage_calculator/person_one.base.positive_total_income"))
       end
-    end
-
-    context 'when annual income is 0 and monthly net income is not' do
-      let(:annual_income) { 100 }
-      let(:extra_income) { 0 }
-      let(:monthly_net_income) { 0 }
-
-      it { should_not be_valid }
     end
 
     context 'when net monthly income is 0 and annual income is not' do

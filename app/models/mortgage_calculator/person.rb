@@ -11,17 +11,16 @@ module MortgageCalculator
 
     attr_accessor :annual_income, :extra_income, :monthly_net_income
 
-    validates :raw_annual_income, presence: true
     validates :annual_income, numericality: true
     validates :extra_income, numericality: true
     validates :monthly_net_income, numericality: true
-    validate :validate_associated_incomes
+
     validate :validate_proportional_incomes
 
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
     def initialize(options = {})
-      self.annual_income = options[:annual_income].presence || 0
+      self.annual_income = options[:annual_income].presence
       self.extra_income = options[:extra_income].presence || 0
       self.monthly_net_income = options[:monthly_net_income].presence
     end
@@ -53,18 +52,6 @@ module MortgageCalculator
 
       if total_income < (monthly_net_income || 0) * 12
         errors[:base] << I18n.t("affordability.activemodel.errors.#{self.class.model_name.i18n_key}.base.proportional_incomes")
-      end
-    end
-
-    def validate_associated_incomes
-      return unless total_income && monthly_net_income
-
-      if !total_income.zero? && monthly_net_income.zero?
-        errors[:base] << I18n.t("affordability.activemodel.errors.#{self.class.model_name.i18n_key}.base.take_home_is_zero")
-      end
-
-      if total_income.zero? && !monthly_net_income.zero?
-        errors[:base] << I18n.t("affordability.activemodel.errors.#{self.class.model_name.i18n_key}.base.annual_income_is_zero")
       end
     end
 
