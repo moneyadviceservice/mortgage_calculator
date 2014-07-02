@@ -12,8 +12,6 @@ module MortgageCalculator
     attr_accessor :annual_income, :extra_income, :monthly_net_income
 
     validates :raw_annual_income, presence: true
-    validates :raw_monthly_net_income, presence: true
-
     validates :annual_income, numericality: true
     validates :extra_income, numericality: true
     validates :monthly_net_income, numericality: true

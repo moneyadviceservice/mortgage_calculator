@@ -1,6 +1,7 @@
 module MortgageCalculator
   class PersonOne < Person
     validate :validate_positive_total_income
+    validates :raw_monthly_net_income, presence: { message: I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:monthly_net_income).downcase) }
 
     private
 
