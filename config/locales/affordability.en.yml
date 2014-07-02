@@ -54,7 +54,7 @@ en:
           confirmation: "%{attribute} doesn't match confirmation"
           accepted: "%{attribute} must be accepted"
           empty: "%{attribute} can't be empty"
-          blank: "%{attribute} can't be blank"
+          blank: "%{attribute} can't be blank. Please enter %{attribute}."
           too_long: "%{attribute} is too long (maximum is %{count} characters)"
           too_short: "%{attribute} is too short (minimum is %{count} characters)"
           wrong_length: "%{attribute} is the wrong length (should be %{count} characters)"
@@ -69,19 +69,19 @@ en:
           even: "%{attribute} must be even"
         mortgage_calculator/affordability:
           base:
-            income_greater_than_zero: "Your total income must be greater than zero"
+            income_greater_than_zero: "Your total income must be greater than zero. Please enter your total annual income"
         mortgage_calculator/person_one:
           base:
             proportional_incomes: "Your monthly take-home pay is higher than your annual income."
-            take_home_is_zero: "You need to type in an amount for your take-home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments"
-            annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments"
-            positive_total_income: "Please enter an amount for your annual income or your other annual income"
+            take_home_is_zero: "You need to type in an amount for your take-home pay because you’ve typed in an amount for your annual income. Your annual income will be made up of monthly payments. Please enter your take-home pay"
+            annual_income_is_zero: "You need to type in an amount for your annual income because you’ve typed in an amount for your take-home pay. Your annual income will be made up of monthly payments. Please enter your total annual income"
+            positive_total_income: "Please enter an amount for your annual income or your other annual income. Please enter your annual income or any other annual income"
         mortgage_calculator/person_other:
           base:
             proportional_incomes: "Second applicant's monthly take-home pay is higher than their annual income."
-            take_home_is_zero: "You need to type in an amount for second applicant's take-home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments"
-            annual_income_is_zero: "You need to type in an amount for second applicant's annual income because you’ve typed in an amount for second applicant's take-home pay. Second applicant's annual income will be made up of monthly payments"
-            positive_total_income: "Second applicant's annual income or second applicant's other annual income can't be blank"
+            take_home_is_zero: "You need to type in an amount for second applicant's take-home pay because you’ve typed in an amount for second applicant's annual income. Second applicant's annual income will be made up of monthly payments. Please enter the second applicant's take-home pay"
+            annual_income_is_zero: "You need to type in an amount for second applicant's annual income because you’ve typed in an amount for second applicant's take-home pay. Second applicant's annual income will be made up of monthly payments. Please enter the second applicant's annual income"
+            positive_total_income: "Second applicant's annual income or second applicant's other annual income can't be blank. Please enter the second applicant's take home pay and annual income"
     tooltips:
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day to day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"
