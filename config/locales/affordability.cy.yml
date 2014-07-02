@@ -60,7 +60,7 @@ cy:
           wrong_length: "Mae hyd %{attribute} yn anghywir (dylai fod yn %{count} o nodau)"
           not_a_number: "Rhaid i %{attribute} fod yn rhif"
           not_an_integer: "Rhaid i %{attribute} fod yn gyfanrif"
-          greater_than: "Rhaid i %{attribute} fod yn fwy na %{count}"
+          greater_than: "Ni all %{attribute} fod yn wag"
           greater_than_or_equal_to: "Rhaid i %{attribute} fod yn fwy na neu’n hafal i %{count}"
           equal_to: "Rhaid i %{attribute} fod yn hafal i %{count}"
           less_than: "Rhaid i %{attribute} fod yn llai na %{count}"
