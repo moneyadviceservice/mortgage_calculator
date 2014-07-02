@@ -150,7 +150,7 @@ en:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won't be able to afford your mortgage payments, particularly if circumstances change. %{link}."
         link_text: "Here's what you can do now"
     over_committed:
-      title: "It appears that your budget is overstretched"
+      title: "It appears your budget is overstretched"
       body_1_html: "Your monthly committed costs are higher than your take-home pay. Based on the costs you’ve entered, you won't be offered a mortgage."
       body_2_html: "<strong>Please check the numbers you have entered</strong>."
       body_3_html: "If you are spending more than your take-home pay, this means that you are overstretching your budget and are at risk of getting into debt."
