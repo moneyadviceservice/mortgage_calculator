@@ -84,8 +84,8 @@ en:
             positive_total_income: "Second applicant's annual income or second applicant's other annual income can't be blank. Please enter the second applicant's take home pay and annual income"
     tooltips:
       mortgage_calculator/outgoings:
-        credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day to day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"
-        utilities_html: "<b>Include:</b> Council Tax, gym memberships, utility bills, mobile phones, annual insurance (such as contents, car , pet, travel),  magazine subscriptions, broadband, roadside recovery etc"
+        credit_repayments_html: "<b>Include:</b> credit card, store card and catalogue debts; car finance and personal loans; student loans; and hire purchase commitments<br><b>Exclude</b>: Day-to-day living costs (e.g. food, clothes, entertainment and holidays); fixed spending (e.g. subscriptions to gyms or other memberships; utility bills; mobile phones; broadband; council tax; childcare or school fees)"
+        utilities_html: "<b>Include:</b> Council Tax, gym memberships, utility bills, mobile phones, annual insurance (such as contents, car, pet, travel),  magazine subscriptions, broadband, roadside recovery etc"
         childcare_html: "<b>Include:</b> Nursery and childcare fees, childminder, extracurricular classes etc"
         child_maintenance_html: "Payment towards the support and maintenance of children, or maintenance of an ex-partner"
         rent_and_mortgage_html: "This won’t be included in the calculation, but you might want to include it to see the difference between your current rent or mortgage payments and the new payments you’ll be making"
@@ -150,7 +150,7 @@ en:
         remaining_html: "You are spending more than your take-home pay, which means that you are overstretching your budget and are at risk of getting into debt. You won't be able to afford your mortgage payments, particularly if circumstances change. %{link}."
         link_text: "Here's what you can do now"
     over_committed:
-      title: "It appears your budget is overstretched"
+      title: "It appears that your budget is overstretched"
       body_1_html: "Your monthly committed costs are higher than your take-home pay. Based on the costs you’ve entered, you won't be offered a mortgage."
       body_2_html: "<strong>Please check the numbers you have entered</strong>."
       body_3_html: "If you are spending more than your take-home pay, this means that you are overstretching your budget and are at risk of getting into debt."
