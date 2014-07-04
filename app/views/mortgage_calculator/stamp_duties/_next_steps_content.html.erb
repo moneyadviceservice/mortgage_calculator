@@ -40,6 +40,12 @@
                  full_mortgage_calculator_url,
                  class: "button button--primary mortgagecalc__spread",
                  target: "_blank",
+                 rel: no_follow? %>
+
+  <%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_affordability_calculator'),
+                 full_mortgage_affordability_calculator_url,
+                 class: "button button--primary mortgagecalc__spread",
+                 target: "_blank",
                  rel: no_follow? %></p>
 </div>
 

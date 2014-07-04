@@ -63,3 +63,4 @@ cy:
       have_you_tried:
         title: 'Rhowch gynnig ar?'
         mortgage_calculator: "Cyfrifiannell morgais"
+        mortgage_affordability_calculator: "Cyfrifiannell fforddiadwyedd"
