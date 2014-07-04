@@ -26,12 +26,12 @@ en:
         explain: "What does this mean?"
         repayment:
           title: Repayment
-          tip_1: You pay off what you borrowed, plus interest.
+          tip_1: "You pay off what you borrowed for the mortgage, plus the interest."
           tip_2: At the end of the mortgage term you will own the property.
         interest_only:
           title: Interest Only
-          tip_1: "You only pay off the interest."
-          tip_2: "To own the property you'll need to pay back the amount you borrowed as well, so you must save into a repayment plan."
+          tip_1: "You only pay off the interest on the mortgage."
+          tip_2: "You'll need to pay back the amount you borrowed as well, so you must have a repayment plan in place."
       tips:
         hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
       interest_changer:
