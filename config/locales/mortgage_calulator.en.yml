@@ -76,6 +76,7 @@ en:
         have_you_tried:
           title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"
+          affordability_calculator: "Affordability calculator"
       caveat:
         title: "Important:"
         one: These results are a guide to give you an idea of what you might pay each month – the exact cost will depend on the mortgage you choose and the lender.

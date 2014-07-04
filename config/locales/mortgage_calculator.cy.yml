@@ -76,6 +76,7 @@ cy:
         have_you_tried:
           title: 'Rhowch gynnig ar?'
           stamp_duty: "cyfrifiannell Treth Stamp"
+          affordability_calculator: "Cyfrifiannell fforddiadwyedd"
       caveat:
         title: Pwysig
         one: Canllaw yn unig yw’r ffigyrau hyn i roi syniad i chi o faint allech chi ei dalu bob mis - bydd yr union gost yn dibynnu ar y morgais penodol y byddwch yn ei ddewis a’r darparwr benthyciadau.
