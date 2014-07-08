@@ -44,7 +44,7 @@ MortgageCalculator::Engine.routes.draw do
   end
 
   if MortgageCalculator.affordability_enabled
-    resource :affordability, path: "mortgage-affordability-calculator", constraints: LocaleConstraint.new(:en) do
+    resource :affordability, path: "mortgage-affordability-calculator" do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
@@ -54,7 +54,7 @@ MortgageCalculator::Engine.routes.draw do
       end
     end
 
-    resource :affordability, path: "cyfrifiannell-fforddiadwyedd-morgais", as: 'affordability_cy', constraints: LocaleConstraint.new(:cy) do
+    resource :affordability, path: "cyfrifiannell-fforddiadwyedd-morgais", as: 'affordability_cy' do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
