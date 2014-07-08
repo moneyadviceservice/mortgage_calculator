@@ -11,8 +11,6 @@ module MortgageCalculator
 
     def call
       case locale
-      when :en
-        public_send(route)
       when :cy
         public_send("#{route}".gsub('path', 'cy_path'))
       else
