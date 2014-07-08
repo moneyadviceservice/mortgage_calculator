@@ -42,9 +42,5 @@ module MortgageCalculator
     def no_follow?
       syndicated_tool_request? ? "nofollow" : nil
     end
-
-    def localize_route(route)
-      LocalizeRoute.new(route, I18n.locale).call
-    end
   end
 end
