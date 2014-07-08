@@ -110,7 +110,7 @@ en:
     budget_affect:
       high:
         percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">more than 60%</span> of your total take-home pay."
-        affordability_html: "You run a <span class=\"risk__accent\">very high</span> risk of overstretching your budget to meet these repayments."
+        affordability_html: "You run a <span class=\"risk__accent\">very high</span> risk of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage. <a href='%{next_steps_affordability_path}'>Here’s what you can do now</a>."
       medium:
         percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">between 40% - 60%</span> of your total take-home pay."
         affordability_html: "You are at <span class=\"risk__accent\">risk</span> of overstretching your budget to meet these repayments, particularly if your circumstances change or interest rates rise. %{link}."
