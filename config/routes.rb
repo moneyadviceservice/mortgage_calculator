@@ -1,3 +1,15 @@
+class EnConstraint
+  def matches?(request)
+    request.params['locale'] == 'en'
+  end
+end
+
+class CyConstraint
+  def matches?(request)
+    request.params['locale'] == 'cy'
+  end
+end
+
 MortgageCalculator::Engine.routes.draw do
   root to: "repayments#show"
 
@@ -32,7 +44,7 @@ MortgageCalculator::Engine.routes.draw do
   end
 
   if MortgageCalculator.affordability_enabled
-    resource :affordability, path: "mortgage-affordability-calculator" do
+    resource :affordability, path: "mortgage-affordability-calculator", constraints: EnConstraint.new do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
@@ -42,7 +54,7 @@ MortgageCalculator::Engine.routes.draw do
       end
     end
 
-    resource :affordability, path: "cyfrifiannell-fforddiadwyedd-morgais" do
+    resource :affordability, path: "cyfrifiannell-fforddiadwyedd-morgais", as: 'affordability_cy', constraints: CyConstraint.new do
       get '/', to: "affordabilities#step_1"
       collection do
         get 'step_1', path: "step-1"
