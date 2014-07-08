@@ -1,0 +1,17 @@
+<h1>House Buying Suite</h1>
+
+<ul>
+  <li><%= link_to "Mortgage Calculator", mortgage_calculator.root_path %></li>
+  <li><%= link_to "Mortgage Calculator (Welsh)", mortgage_calculator.root_path(locale: :cy) %></li>
+</ul>
+
+<ul>
+  <li><%= link_to "Stamp Duty Calculator", '/en/mortgage_calculator/stamp-duty-calculator' %></li>
+  <li><%= link_to "Stamp Duty Calculator (Welsh)", '/cy/mortgage_calculator/cyfrifiannell-treth-stamp' %></li>
+</ul>
+
+<ul>
+  <li><%= link_to "Mortgage Affordability Calculator", mortgage_calculator.affordability_path %></li>
+  <li><%= link_to "Mortgage Affordability Calculator (Welsh)", mortgage_calculator.affordability_cy_path(locale: :cy) %></li>
+</ul>
+
