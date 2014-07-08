@@ -10,8 +10,14 @@ module MortgageCalculator
     end
 
     def call
-      return public_send(route) if locale == :en
-      return public_send("#{route}".gsub('path', 'cy_path')) if locale == :cy
+      case locale
+      when :en
+        public_send(route)
+      when :cy
+        public_send("#{route}".gsub('path', 'cy_path'))
+      else
+        public_send(route)
+      end
     end
   end
 end
