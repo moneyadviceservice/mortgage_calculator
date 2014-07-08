@@ -27,7 +27,6 @@ en:
         repayment:
           title: Repayment
           tip_1: "You pay off what you borrowed for the mortgage, plus the interest."
-          tip_2: At the end of the mortgage term you will own the property.
         interest_only:
           title: Interest Only
           tip_1: "You only pay off the interest on the mortgage."
