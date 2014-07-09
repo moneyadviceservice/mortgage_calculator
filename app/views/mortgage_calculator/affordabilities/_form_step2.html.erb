@@ -30,7 +30,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:credit_repayments) %>">
         <%= outgoings.errors_for outgoings.object, :credit_repayments %>
-        <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" %>
+        <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.credit_repayments")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_credit_repayments_a">&pound;</span>
@@ -63,7 +66,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
         <%= outgoings.errors_for outgoings.object, :child_maintenance %>
-        <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" %>
+        <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.child_maintenance")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_child_maintenance_a">&pound;</span>
@@ -100,7 +106,10 @@
   <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:childcare) %>">
         <%= outgoings.errors_for outgoings.object, :childcare %>
-        <%= outgoings.label :childcare, "id" => "label_childcare" %>
+        <%= outgoings.label :childcare, "id" => "label_childcare" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.childcare")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_childcare_a">&pound;</span>
@@ -132,7 +141,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
         <%= outgoings.errors_for outgoings.object, :travel %>
-        <%= outgoings.label :travel, "id" => "label_travel" %>
+        <%= outgoings.label :travel, "id" => "label_travel" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.travel")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_travel_a">&pound;</span>
@@ -164,7 +176,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
         <%= outgoings.errors_for outgoings.object, :utilities %>
-        <%= outgoings.label :utilities, "id" => "label_utilities" %>
+        <%= outgoings.label :utilities, "id" => "label_utilities" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.utilities")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_utilities_a">&pound;</span>
@@ -196,7 +211,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
         <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
-        <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" %>
+        <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.rent_and_mortgage")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_rent_and_mortgage_a">&pound;</span>
@@ -234,7 +252,10 @@
     <div class="affcalc__col--field">
       <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:entertainment) %>">
         <%= outgoings.errors_for outgoings.object, :entertainment %>
-        <%= outgoings.label :entertainment, "id" => "label_entertainment" %>
+        <%= outgoings.label :entertainment, "id" => "label_entertainment" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.entertainment")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_entertainment_a">&pound;</span>
@@ -267,7 +288,10 @@
       <div class="affcalc__col--field">
         <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
           <%= outgoings.errors_for outgoings.object, :holidays %>
-          <%= outgoings.label :holidays, "id" => "label_holidays" %>
+          <%= outgoings.label :holidays, "id" => "label_holidays" do %>
+            <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.holidays")%>
+            <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+          <% end %>
 
           <span class="form__input-container">
             <span class="form__input-label" id="label_holidays_a">&pound;</span>
@@ -301,7 +325,10 @@
       <div class="affcalc__col--field">
         <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
           <%= outgoings.errors_for outgoings.object, :food %>
-          <%= outgoings.label :food, "id" => "label_food" %>
+          <%= outgoings.label :food, "id" => "label_food" do %>
+            <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.food")%>
+            <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+          <% end %>
 
           <span class="form__input-container">
             <span class="form__input-label" id="label_food_a">&pound;</span>
