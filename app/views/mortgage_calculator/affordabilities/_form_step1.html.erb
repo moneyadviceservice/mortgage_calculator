@@ -20,7 +20,7 @@
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.annual_income")%> * <span class="visually-hidden"><%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -58,7 +58,10 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
-            <%= person.label :extra_income, "id" => "label_extra_income0" %>
+            <%= person.label :extra_income, "id" => "label_extra_income0" do %>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.extra_income") %>
+              <span class="visually-hidden"><%= t("affordability.per_year") %></span>
+            <% end %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_extra_income0a">&pound;</span>
@@ -113,7 +116,7 @@
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
             <%= f.errors_for person.object, :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income1" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income")%> * <span class="visually-hidden"><%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -151,7 +154,10 @@
         <div class="affcalc__col--field">
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
             <%= f.errors_for person.object, :extra_income %>
-            <%= person.label :extra_income, "id" => "label_extra_income_1" %>
+            <%= person.label :extra_income, "id" => "label_extra_income_1" do %>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.extra_income")%>
+              <span class="visually-hidden"><%= t("affordability.per_year") %></span>
+            <% end %>
 
             <span class="form__input-container">
               <span class="form__input-label" id="label_extra_income_1a">&pound;</span>
@@ -199,7 +205,7 @@
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -236,7 +242,7 @@
           <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
             <%= f.errors_for person.object, :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_1" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
