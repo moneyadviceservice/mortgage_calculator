@@ -1,5 +1,6 @@
 {
   "name": "mortgage-calculator",
+  "ignore": ["**/*"],
   "dependencies": {
     "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets#master",
     "jquery-waypoints": "2.0.*"
