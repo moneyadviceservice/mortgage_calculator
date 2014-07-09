@@ -80,8 +80,10 @@
   <div class="affcalc__row">
     <div class="affcalc__col--33" calculate>
       <div class="form__row">
-        <%= f.label :lifestyle_costs,
-            "id" => "label_lifestyle" %>
+        <%= f.label :lifestyle_costs, "id" => "label_lifestyle" do %>
+          <%= t("affordability.activemodel.attributes.mortgage_calculator/affordability.lifestyle_costs")%>
+          <span class="visually-hidden"><%= t("affordability.per_month") %></span>
+        <% end %>
 
         <span class="form__input-container">
           <span class="form__input-label" id="label_lifestyle_a">&pound;</span>
