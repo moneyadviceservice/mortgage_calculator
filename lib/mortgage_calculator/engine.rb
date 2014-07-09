@@ -10,6 +10,7 @@ require 'dough'
 module MortgageCalculator
   mattr_accessor :feedback_config
   mattr_accessor :parent_controller
+  mattr_accessor :bug_snag_key
 
   class Engine < ::Rails::Engine
     isolate_namespace MortgageCalculator
