@@ -1810,10 +1810,7 @@ $.widget( "ui.slider", $.ui.mouse, {
     self.element.bind({
       touchstart: $.proxy(self, '_touchStart'),
       touchmove: $.proxy(self, '_touchMove'),
-      touchend: $.proxy(self, '_touchEnd'),
-		  MSPointerDown: $.proxy(self, '_touchStart'),
-	    MSPointerMove: $.proxy(self, '_touchMove'),
-	    MSPointerUp: $.proxy(self, '_touchEnd')
+      touchend: $.proxy(self, '_touchEnd')
     });
 
     // Call the original $.ui.mouse init method
