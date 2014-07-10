@@ -2,7 +2,7 @@ module MortgageCalculator
   class LocalizeRoute
     attr_reader :route, :locale, :controller
 
-    def initialize(route, locale = :en, controller)
+    def initialize(route, locale, controller)
       @route = route
       @locale = locale
       @controller = controller
