@@ -1,19 +1,19 @@
 module MortgageCalculator
   class LocalizeRoute
-    attr_reader :route, :locale, :scope
+    attr_reader :route, :locale, :controller
 
-    def initialize(route, locale = :en, scope)
+    def initialize(route, locale = :en, controller)
       @route = route
       @locale = locale
-      @scope = scope
+      @controller = controller
     end
 
     def call
       case locale
       when :cy
-        scope.public_send("#{route}".gsub('path', 'cy_path'))
+        controller.public_send("#{route}".gsub('path', 'cy_path'))
       else
-        scope.public_send(route)
+        controller.public_send(route)
       end
     end
   end
