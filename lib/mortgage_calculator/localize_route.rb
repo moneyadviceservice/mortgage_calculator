@@ -1,7 +1,5 @@
 module MortgageCalculator
   class LocalizeRoute
-    include MortgageCalculator::Engine.routes.url_helpers
-
     attr_reader :route, :locale, :scope
 
     def initialize(route, locale = :en, scope)
