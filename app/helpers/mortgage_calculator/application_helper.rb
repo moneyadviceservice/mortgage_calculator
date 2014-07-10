@@ -44,7 +44,7 @@ module MortgageCalculator
     end
 
     def localize_route(route)
-      LocalizeRoute.new(route, I18n.locale, mortgage_calculator).call
+      LocalizeRoute.new(route, I18n.locale, controller).call
     end
   end
 end
