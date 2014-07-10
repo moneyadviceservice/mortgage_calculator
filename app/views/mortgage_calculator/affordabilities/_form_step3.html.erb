@@ -2,7 +2,7 @@
   <h2><%= I18n.t("affordability.title") %></h2>
 </div>
 
-<%= form_for @affordability, url: step_3_affordability_path, html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '' } do |f| %>
+<%= form_for @affordability, url: localize_route("step_3_affordability_path"), html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '' } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.annual", 'ng-initial' => '' %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.extra", 'ng-initial' => '' %>
@@ -42,10 +42,10 @@
 
       <% if @affordability.only_rent_and_mortgage_warning? %>
         <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
-                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+                          back: link_to(t("affordability.go_back"), localize_route("step_2_affordability_path")))) %>
       <% elsif @affordability.missing_fixed_and_committed_costs_warning? %>
         <%= inset_block(t("affordability.warnings.missing_fixed_and_committed_costs_html",
-                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+                          back: link_to(t("affordability.go_back"), localize_route("step_2_affordability_path")))) %>
       <% end %>
 
       <%= render 'mortgage_calculator/affordabilities/form/committed_costs' %>
@@ -72,7 +72,7 @@
 
       <% if @affordability.missing_lifestyle_costs_warning? %>
         <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
-                          back: link_to(t("affordability.go_back"), step_2_affordability_path))) %>
+                          back: link_to(t("affordability.go_back"), localize_route("step_2_affordability_path")))) %>
       <% end %>
     </div>
   </div>
@@ -141,9 +141,9 @@
   <div class="affcalc__row">
     <div class="affcalc__col--clip">
       <p>
-        <%= link_to t("affordability.back"), step_2_affordability_path, class: "button mortgagecalc__submit mortgagecalc__submit--flow previous" %>
+        <%= link_to t("affordability.back"), localize_route("step_2_affordability_path"), class: "button mortgagecalc__submit mortgagecalc__submit--flow previous" %>
 
-        <%= link_to t("affordability.next_steps_btn"), next_steps_affordability_path, class: "button" %>
+        <%= link_to t("affordability.next_steps_btn"), localize_route("next_steps_affordability_path"), class: "button" %>
       </p>
     </div>
   </div>
