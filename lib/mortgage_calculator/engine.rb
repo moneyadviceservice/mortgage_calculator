@@ -6,6 +6,7 @@ require 'underscore-rails'
 require 'mas/feedback'
 require 'mas/fonts'
 require 'dough'
+require 'bugsnag'
 
 module MortgageCalculator
   mattr_accessor :feedback_config
