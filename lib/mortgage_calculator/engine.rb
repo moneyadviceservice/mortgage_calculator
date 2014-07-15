@@ -26,7 +26,7 @@ module MortgageCalculator
 
     initializer :bugsnag do
       Bugsnag.configure do |config|
-        config.api_key = "#{MortgageCalculator.bug_snag_ruby_key}"
+        config.api_key = MortgageCalculator.bug_snag_ruby_key
       end
     end
 
