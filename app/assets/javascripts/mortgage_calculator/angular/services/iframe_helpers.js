@@ -6,8 +6,8 @@ App.factory('iframeHelpers', function() {
       setTimeout(function() {
         if (window.postMessage) {
           var minPageHeight = 250; // px
-          var height = document.documentElement.offsetHeight;
-          height = Math.max(height, minPageHeight);
+          var docElement = document.documentElement;
+          var height = Math.max(docElement.scrollHeight, docElement.offsetHeight, docElement.clientHeight)
           window.parent.postMessage('MASRESIZE-' + height, '*');
         }
       });
