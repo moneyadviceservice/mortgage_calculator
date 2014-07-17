@@ -7,7 +7,7 @@ App.factory('iframeHelpers', function() {
         if (window.postMessage) {
           var minPageHeight = 250; // px
           var docElement = document.documentElement;
-          var height = Math.max(docElement.scrollHeight, docElement.offsetHeight, docElement.clientHeight)
+          var height = Math.max(docElement.scrollHeight, docElement.offsetHeight, docElement.clientHeight);
           window.parent.postMessage('MASRESIZE-' + height, '*');
         }
       });
