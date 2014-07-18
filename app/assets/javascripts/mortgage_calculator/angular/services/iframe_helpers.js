@@ -5,9 +5,10 @@ App.factory('iframeHelpers', function() {
     resizeIframe: function() {
       setTimeout(function() {
         if (window.postMessage) {
-          var minPageHeight = 250; // px
-          var height = document.documentElement.offsetHeight;
-          height = Math.max(height, minPageHeight);
+          var minPageHeight = 250,
+              docElement = document.documentElement,
+              height = Math.max(docElement.scrollHeight, docElement.offsetHeight, docElement.clientHeight);
+
           window.parent.postMessage('MASRESIZE-' + height, '*');
         }
       });
