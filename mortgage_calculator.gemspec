@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.add_dependency "mas-feedback"
   s.add_dependency "dough-ruby", "~> 0.1.0.67"
   s.add_dependency "mas-fonts"
+  s.add_dependency "bugsnag"
 end

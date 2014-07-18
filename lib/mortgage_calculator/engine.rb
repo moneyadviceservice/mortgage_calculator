@@ -6,11 +6,13 @@ require 'underscore-rails'
 require 'mas/feedback'
 require 'mas/fonts'
 require 'dough'
+require 'bugsnag'
 
 module MortgageCalculator
   mattr_accessor :feedback_config
   mattr_accessor :parent_controller
   mattr_accessor :bug_snag_key
+  mattr_accessor :bug_snag_ruby_key
 
   class Engine < ::Rails::Engine
     isolate_namespace MortgageCalculator
@@ -20,6 +22,12 @@ module MortgageCalculator
 
     initializer :setup_defaults do
       MortgageCalculator.parent_controller ||= 'ApplicationController'
+    end
+
+    initializer :bugsnag do
+      Bugsnag.configure do |config|
+        config.api_key = MortgageCalculator.bug_snag_ruby_key
+      end
     end
 
     config.after_initialize do |app|
