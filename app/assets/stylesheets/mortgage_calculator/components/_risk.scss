@@ -2,6 +2,10 @@
   @extend %font-heading-heavy;
 }
 
+.risk__percentage {
+  font-size: px(40);
+}
+
 .risk-key {
   @include body(16, 24);
   margin: $baseline-unit*2 0 $baseline-unit*4;

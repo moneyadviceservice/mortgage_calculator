@@ -13,7 +13,7 @@
         <%= render 'monthly_repayments' %>
         <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.explain") %></a></p>
 
-        <div ng-show="expandedMortgageInformation">
+        <div ng-show="expandedMortgageInformation" class="mortgagecalc__tip">
           <%= render 'repayment_tip' %>
         </div>
 

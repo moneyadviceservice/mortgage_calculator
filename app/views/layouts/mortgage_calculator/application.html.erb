@@ -13,9 +13,10 @@
       <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_responsive', media: 'only all' %>
       <!--<![endif]-->
-
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% end %>
+
+    <%= stylesheet_link_tag 'mortgage_calculator_print', media: 'print' %>
 
   <%= javascript_include_tag "mortgage_calculator/application" %>
 
@@ -52,7 +53,6 @@
 <% end %>
 
 <% content_for(:tool_content) do %>
-
   <div class="ns-mortgage-calc">
     <!--[if IE 7 ]> <div class="frontend-assets ie ie7"> <![endif]-->
     <!--[if IE 8 ]> <div class="frontend-assets ie ie8 gt-ie7"> <![endif]-->

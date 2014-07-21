@@ -1,0 +1,34 @@
+.ns-mortgage-calc {
+  .mortgagecalc__container,
+  .affcalc {
+    max-width: 100% !important;
+  }
+
+  label {
+    color: black;
+  }
+
+  .slider,
+  .borrowing-range,
+  .expander,
+  .pie {
+    display: none !important;
+  }
+
+  .l-stuck {
+    position: relative;
+    top: auto;
+    max-width: 100%;
+    padding: 0;
+    border: 0;
+
+    .accent.accent--medium {
+      font-size: 20px;
+    }
+  }
+
+  .mortgagecalc__tip,
+  .risk__percentage {
+    display: block !important;
+  }
+}
