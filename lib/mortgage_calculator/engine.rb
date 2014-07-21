@@ -39,6 +39,7 @@ module MortgageCalculator
       app.config.assets.precompile += ['mortgage_calculator_enhanced_fixed.css']
       app.config.assets.precompile += ['mortgage_calculator_enhanced_responsive.css']
       app.config.assets.precompile += ['mortgage_calculator/frontend-assets/stylesheets/font_base64.css']
+      app.config.assets.precompile += ['mortgage_calculator_print.css']
 
       app.config.assets.precompile << 'd3.js'
       app.config.assets.precompile << 'r2d3.js'
