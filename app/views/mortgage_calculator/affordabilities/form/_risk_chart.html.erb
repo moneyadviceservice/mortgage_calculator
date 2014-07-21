@@ -1,5 +1,5 @@
-<p ng-hide="js" class="results accent">
-  <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>.
+<p ng-hide="js" class="results accent risk__accent risk__percentage">
+  <%= number_to_percentage @affordability.risk_percentage, precision: 0 %>
 </p>
 
 <div class="pie test" ng-pie risk-proportion="affordability.riskPercentage()">

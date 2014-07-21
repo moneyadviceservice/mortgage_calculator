@@ -10,7 +10,8 @@
 
   .slider,
   .borrowing-range,
-  .expander {
+  .expander,
+  .pie {
     display: none !important;
   }
 
@@ -26,7 +27,8 @@
     }
   }
 
-  .mortgagecalc__tip {
+  .mortgagecalc__tip,
+  .risk__percentage {
     display: block !important;
   }
 }
