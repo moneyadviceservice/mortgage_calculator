@@ -31,4 +31,9 @@
   .risk__percentage {
     display: block !important;
   }
+
+  // to override public website's !importants in their print stylesheet
+  .risk__percentage {
+    font-size: 40px !important;
+  }
 }
