@@ -19,7 +19,7 @@ App.directive('ngAutosize', function() {
           var initialWidth = $mirror.innerWidth(),
               paddedWidth = initialWidth + ($element.val().length * 4);
 
-          $element.width(paddedWidth);
+          $element.width(paddedWidth).val($element.val());
         }
 
         $scope.$watch('value', function (newVal, oldVal) {
