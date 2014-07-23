@@ -9,21 +9,40 @@ App.directive('ngAutosize', function() {
     },
     controller: [
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
-        var $mirror = $('<span/>').css({
-            visibility: 'hidden',
-            'white-space': 'pre',
-            'font-size': $element.css('font-size')
-          }).appendTo('body');
+        var $mirror = $('<span/>').
+            css(getStyleObject()).
+            css({
+                visibility: 'hidden',
+                'white-space': 'pre',
+                width: 'auto'
+              }).
+            appendTo('body');
+
+        function getStyleObject() {
+          var propsCaredAbout = ['padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+                                  'margin-top', 'margin-left', 'margin-right', 'margin-bottom',
+                                  'border-top', 'border-left', 'border-right', 'border-bottom',
+                                  'font-size', 'font-family', 'font-weight', 'font-style'],
+              styleObject = {};
+
+          $.each(propsCaredAbout, function(i, prop) {
+            styleObject[prop] = $element.css(prop);
+          });
+
+          return styleObject;
+        }
 
         function updateWidth() {
-          var initialWidth = $mirror.innerWidth(),
-              paddedWidth = initialWidth + ($element.val().length * 4);
+          var initialWidth = $mirror.width(),
+              paddedWidth = initialWidth;
 
           $element.width(paddedWidth).val($element.val());
         }
 
         $scope.$watch('value', function (newVal, oldVal) {
-          $mirror.html($element.val());
+          $mirror.css({
+            'font-size': $element.css('font-size')
+          }).html($element.val());
           updateWidth();
         });
       }
