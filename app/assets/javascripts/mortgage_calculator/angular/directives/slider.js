@@ -108,6 +108,10 @@ App.directive('uiSlider', function() {
       }
     });
 
+    scope.$watch('docked', function() {
+      moveFollower();
+    });
+
     //Initial declaration of slider
     angular.extend(options, expression);
     element.slider(options).on('slide', options.slide);
@@ -139,7 +143,8 @@ App.directive('uiSlider', function() {
       value: '=ngModel',
       min: '=min',
       max: '=max',
-      step: '=step'
+      step: '=step',
+      docked: '=ngDocked'
     }
   };
 });

@@ -15,7 +15,7 @@
 
 <input type="text" class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider" ng-model="repayments.propertyPrice" ng-docked="docked" currency ng-autosize data-m-dec="0" data-a-sign="£">
 
-<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing"></div>
+<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing" ng-docked="docked"></div>
 
 <p class="rendered-from-js borrowing-range">
   <span class="borrowing-range__min">
