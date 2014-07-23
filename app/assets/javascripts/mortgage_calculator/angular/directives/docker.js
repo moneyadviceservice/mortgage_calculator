@@ -11,7 +11,9 @@ App.directive('ngDocker', function() {
         stuckClass: 'l-stuck',
         handler: function(direction) {
           $scope.docked = !!(direction == 'down');
-          $scope.$apply();
+          setTimeout(function() {
+            $scope.$apply();
+          });
         }
       });
     }
