@@ -75,5 +75,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       });
     };
 
+    // Docker
+    $scope.docked = 'nigel';
+
     iframeHelpers.resizeIframe();
   }]);
