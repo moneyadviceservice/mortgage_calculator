@@ -19,11 +19,11 @@ App.directive('ngAutosize', function() {
             appendTo('body');
 
         function getStyleObject() {
-          var propsCaredAbout = ['padding-top', 'padding-left', 'padding-right', 'padding-bottom',
+          var styleObject = {},
+              propsCaredAbout = ['padding-top', 'padding-left', 'padding-right', 'padding-bottom',
                                   'margin-top', 'margin-left', 'margin-right', 'margin-bottom',
                                   'border-top', 'border-left', 'border-right', 'border-bottom',
-                                  'font-size', 'font-family', 'font-weight', 'font-style'],
-              styleObject = {};
+                                  'font-size', 'font-family', 'font-weight', 'font-style'];
 
           $.each(propsCaredAbout, function(i, prop) {
             styleObject[prop] = $element.css(prop);
