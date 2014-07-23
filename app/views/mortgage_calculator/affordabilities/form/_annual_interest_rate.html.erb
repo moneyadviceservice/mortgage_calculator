@@ -1,6 +1,6 @@
 <div class="affcalc__row">
   <div class="affcalc__col--33">
-    <div class="form__row">
+    <%= f.form_row do %>
       <%= f.label :interest_rate,
         "id" => "label_interest_rate" %>
 
@@ -31,6 +31,6 @@
           analytics-action="Refinement"
           analytics-label="Interest Rate">
       </div>
-    </div>
+    <% end %>
   </div>
 </div>

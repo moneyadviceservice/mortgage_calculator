@@ -28,7 +28,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:credit_repayments) %>">
+      <%= f.form_row(:credit_repayments, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :credit_repayments %>
         <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.credit_repayments")%>
@@ -52,7 +52,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.credit_repayments_html"),
             html: {
@@ -64,7 +64,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:child_maintenance) %>">
+      <%= f.form_row(:child_maintenance, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :child_maintenance %>
         <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.child_maintenance")%>
@@ -88,7 +88,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.child_maintenance_html"),
             html: {
@@ -104,7 +104,7 @@
 
 <div class="affcalc__row">
   <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:childcare) %>">
+      <%= f.form_row(:childcare, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :childcare %>
         <%= outgoings.label :childcare, "id" => "label_childcare" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.childcare")%>
@@ -128,7 +128,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.childcare_html"),
             html: {
@@ -139,7 +139,7 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:travel) %>">
+      <%= f.form_row(:travel, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :travel %>
         <%= outgoings.label :travel, "id" => "label_travel" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.travel")%>
@@ -163,7 +163,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.travel_html"),
             html: {
@@ -174,7 +174,7 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:utilities) %>">
+      <%= f.form_row(:utilities, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :utilities %>
         <%= outgoings.label :utilities, "id" => "label_utilities" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.utilities")%>
@@ -198,7 +198,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.utilities_html"),
             html: {
@@ -209,7 +209,7 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:rent_and_mortgage) %>">
+      <%= f.form_row(:rent_and_mortgage, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
         <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.rent_and_mortgage")%>
@@ -241,7 +241,7 @@
               }
           %>
         </div>
-      </div>
+      <% end %>
 
   <div class="affcalc__col">
     <h3><%= I18n.t("affordability.titles.estimated_lifestyle") %></h3>
@@ -250,7 +250,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:entertainment) %>">
+      <%= f.form_row(:entertainment, object: outgoings.object) do %>
         <%= outgoings.errors_for outgoings.object, :entertainment %>
         <%= outgoings.label :entertainment, "id" => "label_entertainment" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.entertainment")%>
@@ -274,7 +274,7 @@
             <span class="form__input-outline"></span>
           </span>
         </div>
-      </div>
+      <% end %>
       <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.entertainment_html"),
             html: {
@@ -286,7 +286,7 @@
 
     <div class="affcalc__row">
       <div class="affcalc__col--field">
-        <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:holidays) %>">
+        <%= f.form_row(:holidays, object: outgoings.object) do %>
           <%= outgoings.errors_for outgoings.object, :holidays %>
           <%= outgoings.label :holidays, "id" => "label_holidays" do %>
             <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.holidays")%>
@@ -310,7 +310,7 @@
               <span class="form__input-outline"></span>
             </span>
           </div>
-        </div>
+        <% end %>
         <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.holidays_html"),
               html: {
@@ -323,7 +323,7 @@
 
     <div class="affcalc__row">
       <div class="affcalc__col--field">
-        <div class="form__row <%= 'form__row--is-errored' if outgoings.object.errors.include?(:food) %>">
+        <%= f.form_row(:food, object: outgoings.object) do %>
           <%= outgoings.errors_for outgoings.object, :food %>
           <%= outgoings.label :food, "id" => "label_food" do %>
             <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.food")%>
@@ -347,7 +347,7 @@
               <span class="form__input-outline"></span>
             </span>
           </div>
-        </div>
+        <% end %>
         <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.food_html"),
               html: {
@@ -359,12 +359,12 @@
   <% end %>
 
   <div class="affcalc__col">
-    <div class="form__row">
+    <%= f.form_row do %>
       <p><%= link_to t("affordability.back"), localize_route("step_1_affordability_path"), class: "button mortgagecalc__submit mortgagecalc__submit--flow previous" %>
 
       <%= f.submit I18n.t("affordability.input_page.submit"),
              class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
       </p>
-    </div>
+    <% end %>
   </div>
 <% end %>
