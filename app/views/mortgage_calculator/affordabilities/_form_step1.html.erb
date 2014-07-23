@@ -17,8 +17,8 @@
     <% if index == 0 %>
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
-            <%= f.errors_for person.object, :annual_income %>
+          <%= person.form_row :annual_income do %>
+            <%= person.errors_for :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -42,7 +42,7 @@
               <span class="form__input-label" id="label_annual_income0b"><%= t("affordability.per_year") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
 
         <div class="affcalc__col--tooltip">
@@ -56,8 +56,8 @@
 
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
-            <%= f.errors_for person.object, :extra_income %>
+          <%= person.form_row :extra_income do %>
+            <%= person.errors_for :extra_income %>
             <%= person.label :extra_income, "id" => "label_extra_income0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.extra_income") %>
               <span class="visually-hidden"><%= t("affordability.per_year") %></span>
@@ -79,7 +79,7 @@
               <span class="form__input-label" id="label_extra_income0b"><%= t("affordability.per_year") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
         <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_0_html"),
@@ -93,7 +93,7 @@
 
       <div class="affcalc__row">
         <div class="affcalc__col">
-          <div class="form__row">
+          <%= f.form_row do %>
             <%= f.label :two_applicants,
                         class: "label--inline label--accent" do %>
               <%= f.check_box :two_applicants,
@@ -108,14 +108,14 @@
                               :checked => @affordability.two_applicants? %>
               <%= I18n.t("affordability.titles.second_applicant") %> <span class="visually-hidden">(displays new content below)</span>
             <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:annual_income) %>">
-            <%= f.errors_for person.object, :annual_income %>
+          <%= person.form_row :annual_income do %>
+            <%= person.errors_for :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -139,7 +139,7 @@
               <span class="form__input-label" id="label_annual_income1b"><%= t("affordability.per_year") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
 
         <div class="affcalc__col--tooltip">
@@ -153,8 +153,8 @@
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:extra_income) %>">
-            <%= f.errors_for person.object, :extra_income %>
+          <%= person.form_row :extra_income do %>
+            <%= person.errors_for :extra_income %>
             <%= person.label :extra_income, "id" => "label_extra_income_1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.extra_income")%>
               <span class="visually-hidden"><%= t("affordability.per_year") %></span>
@@ -177,7 +177,7 @@
               <span class="form__input-label" id="label_extra_income_1b"><%= t("affordability.per_year") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
 
         <div class="affcalc__col--tooltip">
@@ -203,8 +203,8 @@
     <% if index == 0 %>
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
-            <%= f.errors_for person.object, :monthly_net_income %>
+          <%= person.form_row :monthly_net_income do %>
+            <%= person.errors_for :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -226,7 +226,7 @@
               <span class="form__input-label" id="label_monthly_net_income_0b"><%= t("affordability.per_month") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
 
         <div class="affcalc__col--tooltip">
@@ -240,8 +240,8 @@
     <% else %>
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <div class="form__row <%= 'form__row--is-errored' if person.object.errors.include?(:monthly_net_income) %>">
-            <%= f.errors_for person.object, :monthly_net_income %>
+          <%= person.form_row :monthly_net_income do %>
+            <%= person.errors_for :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -264,7 +264,7 @@
               <span class="form__input-label" id="label_monthly_net_income_1b"><%= t("affordability.per_month") %></span>
               <span class="form__input-outline"></span>
             </span>
-          </div>
+          <% end %>
         </div>
 
         <div class="affcalc__col--tooltip">
@@ -279,9 +279,9 @@
   <% end %>
 
   <div class="affcalc__col">
-    <div class="form__row">
+    <%= f.form_row do %>
       <%= f.submit I18n.t("affordability.next"),
              class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
-   </div>
+    <% end %>
   </div>
 <% end %>

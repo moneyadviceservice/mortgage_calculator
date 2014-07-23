@@ -1,16 +1,16 @@
 <% if @affordability.valid? %>
-  <div class="form__row hide-with-js">
+  <%= f.form_row(:borrowing, html_options: {classes: "hide-with-js"}) do %>
     <%= f.label :borrowing %>
 
     <%= f.text_field :borrowing,
-      "class" => "form__input",
-      value: @affordability.borrowing_formatted
+                     "class" => "form__input",
+                     value: @affordability.borrowing_formatted
     %>
-  </div>
+  <% end %>
 
-  <div class="form__row hide-with-js">
+  <%= f.form_row(html_options: {classes: "hide-with-js"}) do %>
     <%= f.submit I18n.t("affordability.recalculate"), class: "button recalculate-button" %>
-  </div>
+  <% end %>
 <% end %>
 
 <label class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider">
