@@ -393,14 +393,17 @@
   left:0;
 }
 
-.label-follower {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+.js {
+  .label-follower {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 
-  &.label-follower--top {
-    top: -$baseline-unit*10;
+    &.label-follower--top {
+      top: -$baseline-unit*10;
+    }
   }
+
 }
 
 .slider--with-follower-top {

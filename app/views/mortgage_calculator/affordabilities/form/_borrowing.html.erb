@@ -1,28 +1,33 @@
 <% if @affordability.valid? %>
-  <%= f.form_row(:borrowing, html_options: {classes: "hide-with-js"}) do %>
-    <%= f.label :borrowing %>
+  <%= f.label :borrowing, "id" => "label_borrowing_amount", "class" => "visually-hidden" %>
 
-    <%= f.text_field :borrowing,
-                     "class" => "form__input",
-                     value: @affordability.borrowing_formatted
-    %>
-  <% end %>
+  <%= f.text_field :borrowing,
+    "class" => "form__input results dynamic-slider-property label-follower label-follower--top",
+    "id" => "borrowing-amount",
+    "for" => "borrowing-amount-slider",
+    "ng-model" => "repayments.propertyPrice",
+    "aria-labelledby" => "label_borrowing_amount",
+    "ng-docked" => "docked",
+    "currency" => "",
+    "ng-autosize" => "",
+    "data-m-dec" => "0",
+    "data-a-sign" => "£",
+    "value" => @affordability.borrowing_formatted
+  %>
 
-  <%= f.form_row(html_options: {classes: "hide-with-js"}) do %>
+  <div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing" ng-docked="docked"></div>
+
+  <p class="rendered-from-js borrowing-range">
+    <span class="borrowing-range__min">
+      {{ affordability.minimumBorrowing() | customCurrency:"£":"whole"}}
+    </span>
+
+    <span class="borrowing-range__max">
+      {{ affordability.maximumBorrowing() | customCurrency:"£":"whole"}}
+    </span>
+  </p>
+
+  <div class="form__row hide-with-js">
     <%= f.submit I18n.t("affordability.recalculate"), class: "button recalculate-button" %>
-  <% end %>
+  </div>
 <% end %>
-
-<input type="text" class="rendered-from-js results dynamic-slider-property label-follower label-follower--top" id="borrowing-amount" for="borrowing-amount-slider" ng-model="repayments.propertyPrice" ng-docked="docked" currency ng-autosize data-m-dec="0" data-a-sign="£">
-
-<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing" ng-docked="docked"></div>
-
-<p class="rendered-from-js borrowing-range">
-  <span class="borrowing-range__min">
-    {{ affordability.minimumBorrowing() | customCurrency:"£":"whole"}}
-  </span>
-
-  <span class="borrowing-range__max">
-    {{ affordability.maximumBorrowing() | customCurrency:"£":"whole"}}
-  </span>
-</p>

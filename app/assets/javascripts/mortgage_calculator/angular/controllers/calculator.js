@@ -4,6 +4,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     $scope.js = true;
 
+    $('.mortgagecalc').addClass('js');
+
     //Affordability Calculations
     $scope.affordability = Affordability;
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
