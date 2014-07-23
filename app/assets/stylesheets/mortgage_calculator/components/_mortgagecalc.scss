@@ -150,7 +150,12 @@
   margin-bottom: 78px;
 }
 
-.label-follower {
+.label-follower[type="text"] {
   @extend %font-heading-heavy;
   color: $color-green-secondary;
+  font-size: px(20);
+  border: 0;
+  display: inline-block;
+  width: auto;
+  width: min-content;
 }
