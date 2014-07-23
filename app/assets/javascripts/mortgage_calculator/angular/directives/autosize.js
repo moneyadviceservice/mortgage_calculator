@@ -44,9 +44,14 @@ App.directive('ngAutosize', function() {
           updateWidth();
         });
 
-        $scope.$watch('value', function () {
+        $scope.$watch('value', function() {
           updateWidth();
         });
+
+        // Autonumeric race condition woes
+        setTimeout(function() {
+          updateWidth();
+        }, 100);
       }
     ]
   };
