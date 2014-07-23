@@ -17,8 +17,8 @@
     <% if index == 0 %>
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <%= f.form_row(:annual_income, object: person.object) do %>
-            <%= f.errors_for person.object, :annual_income %>
+          <%= person.form_row(:annual_income) do %>
+            <%= person.errors_for(:annual_income) %>
             <%= person.label :annual_income, "id" => "label_annual_income0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -56,8 +56,8 @@
 
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <%= f.form_row :extra_income, object: person.object do %>
-            <%= f.errors_for person.object, :extra_income %>
+          <%= person.form_row :extra_income do %>
+            <%= person.errors_for(:extra_income) %>
             <%= person.label :extra_income, "id" => "label_extra_income0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.extra_income") %>
               <span class="visually-hidden"><%= t("affordability.per_year") %></span>
@@ -114,8 +114,8 @@
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <%= f.form_row :annual_income, object: person.object do %>
-            <%= f.errors_for person.object, :annual_income %>
+          <%= person.form_row :annual_income do %>
+            <%= person.errors_for(:annual_income) %>
             <%= person.label :annual_income, "id" => "label_annual_income1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -153,8 +153,8 @@
 
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <%= f.form_row(:extra_income, object: person.object) do %>
-            <%= f.errors_for person.object, :extra_income %>
+          <%= person.form_row(:extra_income) do %>
+            <%= person.errors_for(:extra_income) %>
             <%= person.label :extra_income, "id" => "label_extra_income_1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.extra_income")%>
               <span class="visually-hidden"><%= t("affordability.per_year") %></span>
@@ -203,8 +203,8 @@
     <% if index == 0 %>
       <div class="affcalc__row">
         <div class="affcalc__col--field">
-          <%= f.form_row(:monthly_net_income, object: person.object) do %>
-            <%= f.errors_for person.object, :monthly_net_income %>
+          <%= person.form_row(:monthly_net_income) do %>
+            <%= person.errors_for(:monthly_net_income) %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
@@ -240,8 +240,8 @@
     <% else %>
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
-          <%= f.form_row(:monthly_net_income, object: person.object) do %>
-            <%= f.errors_for person.object, :monthly_net_income %>
+          <%= person.form_row(:monthly_net_income) do %>
+            <%= person.errors_for(:monthly_net_income) %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_1" do %>
               <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>

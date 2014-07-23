@@ -28,8 +28,8 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:credit_repayments, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :credit_repayments %>
+      <%= outgoings.form_row :credit_repayments do %>
+        <%= outgoings.errors_for :credit_repayments %>
         <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.credit_repayments")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -64,8 +64,8 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:child_maintenance, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :child_maintenance %>
+      <%= outgoings.form_row :child_maintenance do %>
+        <%= outgoings.errors_for :child_maintenance %>
         <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.child_maintenance")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -104,8 +104,8 @@
 
 <div class="affcalc__row">
   <div class="affcalc__col--field">
-      <%= f.form_row(:childcare, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :childcare %>
+      <%= outgoings.form_row :childcare do %>
+        <%= outgoings.errors_for :childcare %>
         <%= outgoings.label :childcare, "id" => "label_childcare" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.childcare")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -139,8 +139,8 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:travel, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :travel %>
+      <%= outgoings.form_row :travel do %>
+        <%= outgoings.errors_for :travel %>
         <%= outgoings.label :travel, "id" => "label_travel" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.travel")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -174,8 +174,8 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:utilities, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :utilities %>
+      <%= outgoings.form_row :utilities do %>
+        <%= outgoings.errors_for :utilities %>
         <%= outgoings.label :utilities, "id" => "label_utilities" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.utilities")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -209,8 +209,8 @@
     </div>
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:rent_and_mortgage, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :rent_and_mortgage %>
+      <%= outgoings.form_row :rent_and_mortgage do %>
+        <%= outgoings.errors_for :rent_and_mortgage %>
         <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.rent_and_mortgage")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -250,8 +250,8 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--field">
-      <%= f.form_row(:entertainment, object: outgoings.object) do %>
-        <%= outgoings.errors_for outgoings.object, :entertainment %>
+      <%= outgoings.form_row :entertainment do %>
+        <%= outgoings.errors_for :entertainment %>
         <%= outgoings.label :entertainment, "id" => "label_entertainment" do %>
           <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.entertainment")%>
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -286,8 +286,8 @@
 
     <div class="affcalc__row">
       <div class="affcalc__col--field">
-        <%= f.form_row(:holidays, object: outgoings.object) do %>
-          <%= outgoings.errors_for outgoings.object, :holidays %>
+        <%= outgoings.form_row :holidays do %>
+          <%= outgoings.errors_for :holidays %>
           <%= outgoings.label :holidays, "id" => "label_holidays" do %>
             <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.holidays")%>
             <span class="visually-hidden"><%= t("affordability.per_month") %></span>
@@ -323,8 +323,8 @@
 
     <div class="affcalc__row">
       <div class="affcalc__col--field">
-        <%= f.form_row(:food, object: outgoings.object) do %>
-          <%= outgoings.errors_for outgoings.object, :food %>
+        <%= outgoings.form_row :food do %>
+          <%= outgoings.errors_for :food %>
           <%= outgoings.label :food, "id" => "label_food" do %>
             <%= t("affordability.activemodel.attributes.mortgage_calculator/outgoings.food")%>
             <span class="visually-hidden"><%= t("affordability.per_month") %></span>
