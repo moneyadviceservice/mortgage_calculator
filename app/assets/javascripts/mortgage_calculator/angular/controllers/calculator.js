@@ -4,6 +4,8 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     $scope.js = true;
 
+    $('.mortgagecalc').addClass('js');
+
     //Affordability Calculations
     $scope.affordability = Affordability;
     $scope.affordability.selectedOption = $scope.affordability.numberOfPeople[0];
@@ -74,6 +76,9 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
         $('input[name="affordability[people_attributes][0][annual_income]"]:visible').focus();
       });
     };
+
+    // Docker
+    $scope.docked = false;
 
     iframeHelpers.resizeIframe();
   }]);
