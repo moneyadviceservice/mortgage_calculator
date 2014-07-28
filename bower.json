@@ -5,7 +5,7 @@
     "!bower.json"
   ],
   "dependencies": {
-    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets#master",
+    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets",
     "jquery-waypoints": "2.0.*"
   }
 }
