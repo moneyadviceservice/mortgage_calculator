@@ -123,10 +123,8 @@
 .mortgagecalc__feedback {
   clear: both;
   max-width: $calc-width;
-  text-align: right;
   padding: 0;
-  margin-top: -20px;
-  margin-bottom: 10px;
+  margin: $baseline-unit*3 0 $baseline-unit*4;
 
   #feedback-tab {
     padding-top: 11px;
