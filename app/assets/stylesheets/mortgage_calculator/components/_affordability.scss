@@ -8,6 +8,11 @@
     position: relative;
   }
 
+  .affcalc__row--spaced {
+    @extend .affcalc__row;
+    margin-top: $baseline-unit*12;
+  }
+
   .affcalc__col {
     @include column(12);
   }
