@@ -17,25 +17,25 @@ module MortgageCalculator
 
     def full_mortgage_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais-newydd"
+        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais"
       else
-        "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator-new"
+        "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator"
       end
     end
 
     def full_stamp_duty_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-treth-stamp"
+        "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
       else
-        "https://www.moneyadviceservice.org.uk/en/tools/stamp-duty-calculator"
+        "https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator"
       end
     end
 
     def full_mortgage_affordability_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-fforddiadwyedd-morgais"
+        "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
       else
-        "https://www.moneyadviceservice.org.uk/en/tools/mortgage-affordability-calculator"
+        "https://www.moneyadviceservice.org.uk/en/tools/house-buying/mortgage-affordability-calculator"
       end
     end
 
