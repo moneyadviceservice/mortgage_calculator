@@ -24,4 +24,5 @@ end
 
 group :build, :test do
   gem 'mas-build', '~> 2.0'
+  gem 'bowndler'
 end

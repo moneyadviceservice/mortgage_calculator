@@ -1,11 +1,22 @@
 {
+  "__warning__": [
+    " ************************************************************************** ",
+    " *                                                                        * ",
+    " * WARNING!                                                               * ",
+    " * This file is generated. ANY CHANGES YOU MAKE MAY BE OVERWRITTEN.       * ",
+    " *                                                                        * ",
+    " * To add/edit bower dependencies, please edit bower.json.erb, and run    * ",
+    " * `bowndler bower_configure` to regenerate this file.                    * ",
+    " *                                                                        * ",
+    " ************************************************************************** "
+  ],
   "name": "mortgage_calculator",
   "ignore": [
     "**/*",
     "!bower.json"
   ],
   "dependencies": {
-    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets",
+    "dough": "/Users/gareth/.rvm/gems/ruby-1.9.3-p484@mortgage_calculator/gems/dough-ruby-2.0.1.106",
     "jquery-waypoints": "2.0.*"
   }
 }

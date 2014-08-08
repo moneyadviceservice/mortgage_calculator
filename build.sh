@@ -9,6 +9,6 @@ CI_PIPELINE_COUNTER=${GO_PIPELINE_COUNTER-0}
 CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
 bundle install
-bower install
+bowndler update
 
 rake app:gem:build
