@@ -5,7 +5,7 @@
     "!bower.json"
   ],
   "dependencies": {
-    "dough": "<%= gem_path('dough-ruby') %>",
+    "frontend-assets": "git://github.com/moneyadviceservice/frontend-assets",
     "jquery-waypoints": "2.0.*"
   }
 }
