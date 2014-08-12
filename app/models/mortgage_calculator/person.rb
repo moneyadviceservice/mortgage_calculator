@@ -17,6 +17,10 @@ module MortgageCalculator
 
     validate :validate_proportional_incomes
 
+    validates :annual_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:annual_income).downcase) } }
+
+    validates :monthly_net_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:monthly_net_income).downcase) } }
+
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
     def initialize(options = {})
