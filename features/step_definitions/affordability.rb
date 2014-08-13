@@ -1,6 +1,5 @@
 Given /^I visit the Affordability (?:page|calculator)$/i do
-  @affordability = UI::Pages::Affordability::StepOne.new
-  @affordability.load
+  step_one.load
 end
 
 Given(/^I visit the Welsh Affordability page$/) do
@@ -9,7 +8,7 @@ Given(/^I visit the Welsh Affordability page$/) do
 end
 
 Then(/^I see the Welsh Affordability calculator$/) do
-  @affordability.should have_content("welsh title")
+  expect(page).to have_content("welsh title")
 end
 
 Given(/^I visit the Syndicated Affordability page$/) do
@@ -18,7 +17,7 @@ Given(/^I visit the Syndicated Affordability page$/) do
 end
 
 Then /^I should see the Affordability title$/ do
-  expect(@affordability.h2).to have_content(I18n.t("affordability.title"))
+  expect(step_one.h2).to have_content(I18n.t("affordability.title"))
 end
 
 Then(/^I see "(.*?)"$/) do |content|
@@ -30,12 +29,12 @@ When(/^I submit the details$/) do
 end
 
 Given(/^I submit the first step$/) do
-  @affordability.step_1_next.click
+  step_one.next.click
 end
 
 When(/^I submit invalid details$/) do
-  @affordability.monthly_net_income.set "asd"
-  @affordability.step_1_next.click
+  step_one.monthly_net_income.set "asd"
+  step_one.next.click
 end
 
 Then(/^I see an error message$/) do
@@ -47,50 +46,50 @@ Then(/^I do not see the result output$/) do
 end
 
 When(/^I enter all details for "(.*?)" applicants$/) do |applicant|
-  @affordability.annual_income.set "100000"
-  @affordability.extra_income.set "10000"
-  @affordability.monthly_net_income.set "6000"
+  step_one.annual_income.set "100000"
+  step_one.extra_income.set "10000"
+  step_one.monthly_net_income.set "6000"
 
   if applicant.to_i == 2
     choose('affordability[two_applicants]')
-    @affordability.person_two_annual_income.set "50000"
-    @affordability.person_two_extra_income.set "5000"
-    @affordability.person_two_monthly_net_income.set "3000"
+    step_one.person_two_annual_income.set "50000"
+    step_one.person_two_extra_income.set "5000"
+    step_one.person_two_monthly_net_income.set "3000"
   end
 
-  @affordability.step_1_next.click
+  step_one.next.click
 
-  @affordability.credit_repayments.set "300"
-  @affordability.utilities.set "300"
-  @affordability.childcare.set "300"
-  @affordability.child_maintenance.set "300"
-  @affordability.rent_and_mortgage.set "300"
-  @affordability.food.set "300"
-  @affordability.travel.set "300"
-  @affordability.entertainment.set "300"
-  @affordability.holiday.set "300"
+  step_two.credit_repayments.set "300"
+  step_two.utilities.set "300"
+  step_two.childcare.set "300"
+  step_two.child_maintenance.set "300"
+  step_two.rent_and_mortgage.set "300"
+  step_two.food.set "300"
+  step_two.travel.set "300"
+  step_two.entertainment.set "300"
+  step_two.holiday.set "300"
 
-  @affordability.step_2_next.click
+  step_two.next.click
 end
 
 When(/^I enter details giving negative remaining amount$/) do
-  @affordability.annual_income.set "100000"
-  @affordability.extra_income.set "10000"
-  @affordability.monthly_net_income.set "6000"
+  step_one.annual_income.set "100000"
+  step_one.extra_income.set "10000"
+  step_one.monthly_net_income.set "6000"
 
-  @affordability.step_1_next.click
+  step_one.next.click
 
-  @affordability.credit_repayments.set "10000"
-  @affordability.utilities.set "300"
-  @affordability.childcare.set "300"
-  @affordability.child_maintenance.set "300"
-  @affordability.rent_and_mortgage.set "300"
-  @affordability.food.set "300"
-  @affordability.travel.set "300"
-  @affordability.entertainment.set "300"
-  @affordability.holiday.set "300"
+  step_two.credit_repayments.set "10000"
+  step_two.utilities.set "300"
+  step_two.childcare.set "300"
+  step_two.child_maintenance.set "300"
+  step_two.rent_and_mortgage.set "300"
+  step_two.food.set "300"
+  step_two.travel.set "300"
+  step_two.entertainment.set "300"
+  step_two.holiday.set "300"
 
-  @affordability.step_2_next.click
+  step_two.next.click
 end
 
 When(/^I enter some details for applicant "(.*?)"$/) do |applicant|
@@ -107,15 +106,16 @@ Given(/^I have entered all details for applicant "(.*?)"$/) do |applicants|
 end
 
 When(/^I update my affordability circumstances$/) do
-  @affordability.interest_rate.set "10"
+  step_three.interest_rate.set "10"
 end
 
 When(/^I recalculate$/) do
-  @affordability.recalculate.click
+  step_three.recalculate.click
 end
 
-Given(/^I enter (\w+) (\d+\.?\d*)$/) do |field, input|
-  @affordability.public_send(field).set input
+Given(/^I enter (\w+\.\w+) (\d+\.?\d*)$/) do |field, input|
+  # don't judge me, this is tempoary until the next PR
+  eval(" #{field}.set #{input}")
 end
 
 Given(/^I click on second applicant$/) do
@@ -123,21 +123,29 @@ Given(/^I click on second applicant$/) do
 end
 
 When(/^I refine my affordability borrowing$/) do
-  @affordability.borrowing_slider.set(300000)
+  step_three.borrowing_slider.set(300000)
 end
 
 When(/^I refine my affordability interest rate$/) do
-  @affordability.interest_rate.set(4)
+  step_three.interest_rate.set(4)
 end
 
 When(/^I refine my affordability interest rate slider$/) do
-  @affordability.interest_rate_slider.set(4)
+  step_three.interest_rate_slider.set(4)
 end
 
 When(/^I refine my affordability lifestyle$/) do
-  @affordability.lifestyle.set(4)
+  step_three.lifestyle.set(4)
 end
 
 When(/^I refine my affordability lifestyle slider$/) do
-  @affordability.lifestyle_slider.set(1000)
+  step_three.lifestyle_slider.set(1000)
+end
+
+Given(/^I submit step one$/) do
+  step_one.next.click
+end
+
+Given(/^I submit step two$/) do
+  step_two.next.click
 end

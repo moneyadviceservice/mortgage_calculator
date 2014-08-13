@@ -35,27 +35,27 @@ Scenario: I recalculate
 Scenario Outline: There are two applicants with extra income and commited spend
   Given I visit the Affordability page
 
-  And I enter annual_income <annual_income>
-  And I enter extra_income <extra_income>
-  And I enter monthly_net_income <monthly_net_income>
+  And I enter step_one.annual_income <annual_income>
+  And I enter step_one.extra_income <extra_income>
+  And I enter step_one.monthly_net_income <monthly_net_income>
   And I click on second applicant
-  And I enter person_two_annual_income <person_two_annual_income>
-  And I enter person_two_extra_income <person_two_extra_income>
-  And I enter person_two_monthly_net_income <person_two_monthly_net_income>
+  And I enter step_one.person_two_annual_income <person_two_annual_income>
+  And I enter step_one.person_two_extra_income <person_two_extra_income>
+  And I enter step_one.person_two_monthly_net_income <person_two_monthly_net_income>
 
-  And I submit the details
+  And I submit step one
 
-  And I enter credit_repayments <credit_repayments>
-  And I enter utilities <utilities>
-  And I enter childcare <childcare>
-  And I enter child_maintenance <child_maintenance>
-  And I enter rent_and_mortgage <rent_and_mortgage>
-  And I enter food <food>
-  And I enter travel <travel>
-  And I enter entertainment <entertainment>
-  And I enter holiday <holiday>
+  And I enter step_two.credit_repayments <credit_repayments>
+  And I enter step_two.utilities <utilities>
+  And I enter step_two.childcare <childcare>
+  And I enter step_two.child_maintenance <child_maintenance>
+  And I enter step_two.rent_and_mortgage <rent_and_mortgage>
+  And I enter step_two.food <food>
+  And I enter step_two.travel <travel>
+  And I enter step_two.entertainment <entertainment>
+  And I enter step_two.holiday <holiday>
 
-  And I submit the details
+  And I submit step two
 
   Then  I see "between <range_min> and <range_max>"
   And   I see "Your estimated mortgage repayments per month will be approximately: <repayment_per_month>"

@@ -2,18 +2,15 @@ require_relative '../sections/slider'
 
 module UI
   module Pages
-    module Affordability < SitePrism::Page
-      include DefaultLocale
+    class Affordability
 
-      element :h1, "h1"
-      element :h2, "h2"
-      elements :nexts, "input[type='submit']"
+      class StepOne < SitePrism::Page
+        include DefaultLocale
 
-      class StepOne
+        element :h1, "h1"
+        element :h2, "h2"
 
-        def next
-          nexts.first
-        end
+        element :next, "form.new_affordability input[name='commit'][type='submit']"
 
         set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-1"
 
@@ -27,14 +24,15 @@ module UI
 
       end
 
-      class StepTwo
+      class StepTwo < SitePrism::Page
+      include DefaultLocale
+
+        element :h1, "h1"
+        element :h2, "h2"
 
         set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-2"
 
-        def next
-          # javascript version renders both forms
-          nexts[1] || nexts[0]
-        end
+        element :next, "form.new_affordability input[name='commit'][type='submit']"
 
         element :credit_repayments, "form.new_affordability input[name='affordability[outgoings][credit_repayments]']"
         element :child_maintenance, "form.new_affordability input[name='affordability[outgoings][child_maintenance]']"
@@ -51,7 +49,12 @@ module UI
 
       end
 
-      class StepThree
+      class StepThree < SitePrism::Page
+
+        include DefaultLocale
+
+        element :h1, "h1"
+        element :h2, "h2"
 
         set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-3"
 
@@ -66,11 +69,11 @@ module UI
         section :lifestyle_slider, UI::Sections::Slider, "#slider-lifestyle"
       end
 
-      class SyndicatedAffordability
+      class SyndicatedAffordability < SitePrism::Page
         set_url "/en/mortgage_calculator/mortgage-affordability-calculator?syndicated"
       end
 
-      class WelshAffordability
+      class WelshAffordability < SitePrism::Page
         set_url "/cy/mortgage_calculator/morgais-cyfrifiannell-fforddiadwyedd"
       end
     end
