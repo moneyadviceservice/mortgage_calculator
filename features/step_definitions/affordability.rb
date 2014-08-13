@@ -1,10 +1,10 @@
 Given /^I visit the Affordability (?:page|calculator)$/i do
-  @affordability = UI::Pages::Affordability.new
+  @affordability = UI::Pages::Affordability::StepOne.new
   @affordability.load
 end
 
 Given(/^I visit the Welsh Affordability page$/) do
-  @affordability = UI::Pages::WelshAffordability.new
+  @affordability = UI::Pages::Affordability::WelshAffordability.new
   @affordability.load
 end
 
@@ -13,7 +13,7 @@ Then(/^I see the Welsh Affordability calculator$/) do
 end
 
 Given(/^I visit the Syndicated Affordability page$/) do
-  @affordability = UI::Pages::SyndicatedAffordability.new
+  @affordability = UI::Pages::Affordability::SyndicatedAffordability.new
   @affordability.load
 end
 
