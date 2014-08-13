@@ -5,7 +5,19 @@ module UI
     class Affordability < SitePrism::Page
       include DefaultLocale
 
-      set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator"
+      element :h1, "h1"
+      element :h2, "h2"
+      elements :nexts, "input[type='submit']"
+
+    end
+
+    class StepOne < Affordability
+
+      def next
+        nexts.first
+      end
+
+      set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-1"
 
       element :annual_income, "form.new_affordability input[name='affordability[people_attributes][0][annual_income]'][type='text']"
       element :extra_income, "form.new_affordability input[name='affordability[people_attributes][0][extra_income]'][type='text']"
@@ -14,6 +26,17 @@ module UI
       element :person_two_annual_income, "form.new_affordability input[name='affordability[people_attributes][1][annual_income]'][type='text']"
       element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]'][type='text']"
       element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]'][type='text']"
+
+    end
+
+    class StepTwo < Affordability
+
+      set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-2"
+
+      def next
+        # javascript version renders both forms
+        nexts[1] || nexts[0]
+      end
 
       element :credit_repayments, "form.new_affordability input[name='affordability[outgoings][credit_repayments]']"
       element :child_maintenance, "form.new_affordability input[name='affordability[outgoings][child_maintenance]']"
@@ -28,6 +51,14 @@ module UI
       element :holiday, "form.new_affordability input[name='affordability[outgoings][holidays]']"
       element :food, "form.new_affordability input[name='affordability[outgoings][food]']"
 
+    end
+
+    class StepThree < Affordability
+
+      set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-3"
+
+      element :recalculate, "input.recalculate-button"
+
       element :borrowing, "input[name='affordability[borrowing]']"
       element :interest_rate, "input[name='affordability[interest_rate]']"
       element :lifestyle, "input[name='affordability[lifestyle_costs]']"
@@ -35,21 +66,6 @@ module UI
       section :borrowing_slider, UI::Sections::Slider, "#slider-borrowing"
       section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"
       section :lifestyle_slider, UI::Sections::Slider, "#slider-lifestyle"
-
-      element :h1, "h1"
-      element :h2, "h2"
-
-      elements :nexts, "input[type='submit']"
-      element :recalculate, "input.recalculate-button"
-
-      def step_1_next
-        nexts.first
-      end
-
-      def step_2_next
-        # javascript version renders both forms
-        nexts[1] || nexts[0]
-      end
     end
 
     class SyndicatedAffordability < Affordability
