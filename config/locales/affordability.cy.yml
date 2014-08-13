@@ -33,7 +33,7 @@ cy:
           holidays: "Gwyliau"
           travel: "Costau teithio"
           entertainment: "Adloniant a hamdden"
-        mortgage_calculator/person_one:
+        mortgage_calculator/person:
           raw_annual_income: "Eich incwm blynyddol"
           raw_monthly_net_income: "Eich cyflog clir misol"
           annual_income: "Eich incwm blynyddol"
@@ -67,7 +67,7 @@ cy:
           less_than_or_equal_to: "Rhaid i %{attribute} fod yn llai na neu’n hafal i %{count}"
           odd: "Rhaid i %{attribute} fod yn odrif"
           even: "Rhaid i %{attribute} fod yn eilrif"
-        mortgage_calculator/person_one:
+        mortgage_calculator/person:
           base:
             proportional_incomes: "Mae eich cyflog clir misol yn uwch na’ch incwm blynyddol."
         mortgage_calculator/person_other:
