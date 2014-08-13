@@ -8,7 +8,8 @@ export BUNDLE_WITHOUT="development:test"
 CI_PIPELINE_COUNTER=${GO_PIPELINE_COUNTER-0}
 CI_EXECUTOR_NUMBER=${EXECUTOR_NUMBER-0}
 
+npm install
 bundle install
-bower install
+bundle exec bowndler install
 
 rake app:gem:build
