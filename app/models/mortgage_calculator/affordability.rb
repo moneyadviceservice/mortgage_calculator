@@ -171,11 +171,11 @@ module MortgageCalculator
         end
 
         people = people_attributes.each_with_index.map do |p,i|
-          i == 0 ? Person.new(p) : PersonOther.new(p)
+          i == 0 ? Person.new(p) : Person.new(p, allow_blanks: true)
         end
       end
       people << Person.new if people.size == 0
-      people << PersonOther.new if people.size == 1
+      people << Person.new({}, true) if people.size == 1
 
       if store[:outgoings]
         outgoings = Outgoings.new(store[:outgoings])

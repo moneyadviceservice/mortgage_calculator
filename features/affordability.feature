@@ -80,4 +80,3 @@ Scenario: I enter invalid details
   Given I visit the Affordability page
   When  I submit invalid details
   Then  I see an error message
-

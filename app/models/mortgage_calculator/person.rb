@@ -9,24 +9,25 @@ module MortgageCalculator
       "affordability.activemodel"
     end
 
-    attr_accessor :annual_income, :extra_income, :monthly_net_income
+    attr_accessor :annual_income, :extra_income, :monthly_net_income, :allow_blanks
 
-    validates :annual_income, numericality: true
-    validates :extra_income, numericality: true
-    validates :monthly_net_income, numericality: true
+    validates :annual_income, numericality: true, unless: :allow_blanks?
+    validates :extra_income, numericality: true, unless: :allow_blanks?
+    validates :monthly_net_income, numericality: true, unless: :allow_blanks?
 
     validate :validate_proportional_incomes
 
-    validates :annual_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:annual_income).downcase) } }
+    validates :annual_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:annual_income).downcase) } }, unless: :allow_blanks?
 
-    validates :monthly_net_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:monthly_net_income).downcase) } }
+    validates :monthly_net_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:monthly_net_income).downcase) } }, unless: :allow_blanks?
 
     currency_inputs :annual_income, :extra_income, :monthly_net_income
 
-    def initialize(options = {})
+    def initialize(options = {}, param_allow_blanks = false)
       self.annual_income = options[:annual_income].presence
       self.extra_income = options[:extra_income].presence || 0
       self.monthly_net_income = options[:monthly_net_income].presence
+      self.allow_blanks = param_allow_blanks
     end
 
     def persisted?
@@ -47,6 +48,10 @@ module MortgageCalculator
 
     def monthly_net_income_formatted
       number_to_currency monthly_net_income, unit: nil
+    end
+
+    def allow_blanks?
+      return self.allow_blanks
     end
 
     private
