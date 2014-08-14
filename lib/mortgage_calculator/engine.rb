@@ -33,13 +33,13 @@ module MortgageCalculator
 
     initializer :append_frontend_assets, :group => :all do |app|
       # Asset dependencies loaded in application.html.erb layout file
-      app.config.assets.precompile += ['mortgage_calculator/application_fixed.css']
-      app.config.assets.precompile += ['mortgage_calculator/application_responsive.css']
-      app.config.assets.precompile += ['mortgage_calculator_basic.css']
-      app.config.assets.precompile += ['mortgage_calculator_enhanced_fixed.css']
-      app.config.assets.precompile += ['mortgage_calculator_enhanced_responsive.css']
-      app.config.assets.precompile += ['mortgage_calculator/dough/assets/stylesheets/font_base64.css']
-      app.config.assets.precompile += ['mortgage_calculator_print.css']
+      app.config.assets.precompile << 'mortgage_calculator/application_fixed.css'
+      app.config.assets.precompile << 'mortgage_calculator/application_responsive.css'
+      app.config.assets.precompile << 'mortgage_calculator_basic.css'
+      app.config.assets.precompile << 'mortgage_calculator_enhanced_fixed.css'
+      app.config.assets.precompile << 'mortgage_calculator_enhanced_responsive.css'
+      app.config.assets.precompile << 'mortgage_calculator_print.css'
+      app.config.assets.precompile << 'dough/assets/stylesheets/font_base64.css'
 
       app.config.assets.precompile << 'd3.js'
       app.config.assets.precompile << 'r2d3.js'
