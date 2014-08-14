@@ -22,6 +22,8 @@ module UI
         element :person_two_extra_income, "form.new_affordability input[name='affordability[people_attributes][1][extra_income]'][type='text']"
         element :person_two_monthly_net_income, "form.new_affordability input[name='affordability[people_attributes][1][monthly_net_income]'][type='text']"
 
+        element :second_applicant, "form.new_affordability input[id='affordability_two_applicants'][type='checkbox']"
+
       end
 
       class StepTwo < SitePrism::Page

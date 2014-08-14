@@ -1,8 +1,10 @@
+# encoding: utf-8
+
 Given /^I visit the Affordability (?:page|calculator)$/i do
   step_one.load
 end
 
-When(/^I enter all details for one applicant$/) do
+When(/^I enter all details for single applicant$/) do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
   step_one.monthly_net_income.set "6000"
@@ -17,13 +19,20 @@ When(/^I enter all details for one applicant$/) do
   step_two.entertainment.set "300"
   step_two.holiday.set "300"
   step_two.next.click
+
+  @min_affordability_should_eq = "£287,840"
+  @max_affordability_should_eq = "£431,760"
 end
 
 Then(/^I should see how much I can borrow$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content(
+    I18n::t("affordability.range.offer_html",
+       min: @min_affordability_should_eq,
+       max: @max_affordability_should_eq)
+    )
 end
 
-When(/^I enter invalid details on step one for one applicant$/) do
+When(/^I enter invalid details on step one for single applicant$/) do
   step_one.annual_income.set "ABC"
   step_one.extra_income.set "-10000"
   step_one.monthly_net_income.set ""
@@ -31,10 +40,10 @@ When(/^I enter invalid details on step one for one applicant$/) do
 end
 
 Then(/^I should see a list of errors$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content(I18n::t("dough.forms.validation.summary.title"))
 end
 
-Given(/^I enter valid details on step one for one applicant$/) do
+Given(/^I enter valid details on step one for single applicant$/) do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
   step_one.monthly_net_income.set "6000"
@@ -68,13 +77,16 @@ Given(/^I enter valid details on step two$/) do
 end
 
 When(/^I recalculate with invalid details$/) do
-  pending # express the regexp above with the code you wish you had
+  step_three.borrowing.set "ABC"
+  step_three.interest_rate.set "-999999"
+  step_three.recalculate.click
 end
 
 When(/^I enter invalid details on step one for two applicants$/) do
   step_one.annual_income.set "ABC"
   step_one.extra_income.set "-10000"
   step_one.monthly_net_income.set ""
+  step_one.second_applicant.set "1"
   step_one.person_two_annual_income.set "DEF"
   step_one.person_two_extra_income.set "-9999"
   step_one.person_two_monthly_net_income.set "2000"
@@ -85,8 +97,9 @@ Given(/^I enter valid details on step one for two applicants$/) do
   step_one.annual_income.set "24000"
   step_one.extra_income.set "1000"
   step_one.monthly_net_income.set "1200"
+  step_one.second_applicant.set "1"
   step_one.person_two_annual_income.set "32000"
-  step_one.person_two_extra_income.set "0"
+  step_one.person_two_extra_income.set "1500"
   step_one.person_two_monthly_net_income.set "1500"
   step_one.next.click
 end
@@ -95,8 +108,9 @@ Given(/^I enter all details for two applicants$/) do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
   step_one.monthly_net_income.set "6000"
+  step_one.second_applicant.set "1"
   step_one.person_two_annual_income.set "32000"
-  step_one.person_two_extra_income.set "0"
+  step_one.person_two_extra_income.set "1500"
   step_one.person_two_monthly_net_income.set "1500"
   step_one.next.click
   step_two.credit_repayments.set "300"
@@ -109,6 +123,46 @@ Given(/^I enter all details for two applicants$/) do
   step_two.entertainment.set "300"
   step_two.holiday.set "300"
   step_two.next.click
+
+  @min_affordability_should_eq = "£381,640"
+  @max_affordability_should_eq = "£572,460"
+end
+
+When(/^I enter too much monthly income for single applicant$/) do
+  step_one.annual_income.set "24000"
+  step_one.monthly_net_income.set "2200"
+  step_one.next.click
+end
+
+When(/^I enter too much monthly income for two applicants$/) do
+  step_one.annual_income.set "24000"
+  step_one.extra_income.set "2200"
+  step_one.second_applicant.set "1"
+  step_one.person_two_annual_income.set "32000"
+  step_one.person_two_monthly_net_income.set "2800"
+  step_one.next.click
+end
+
+When(/^I enter too much monthly income for the second applicant$/) do
+  step_one.annual_income.set "24000"
+  step_one.extra_income.set "100"
+  step_one.second_applicant.set "1"
+  step_one.person_two_annual_income.set "32000"
+  step_one.person_two_monthly_net_income.set "2800"
+  step_one.next.click
+end
+
+Then(/^I should see different errors for the second applicant$/) do
+  expect(page).to have_content(
+    I18n::t("affordability.activemodel.errors.mortgage_calculator/person_other.base.proportional_incomes"))
+end
+
+Given(/^I enter various income and expense details$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see accurate calculations$/) do
+  pending # express the regexp above with the code you wish you had
 end
 
 # Given(/^I visit the Welsh Affordability page$/) do

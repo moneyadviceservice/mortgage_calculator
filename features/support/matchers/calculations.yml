@@ -1,0 +1,208 @@
+examples:
+  one:
+    annual_income: 100000
+    extra_income: 0
+    monthly_net_income: 5428.44
+    person_two_annual_income: 0
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 0
+    credit_repayments: 0
+    utilities: 0
+    childcare: 0
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min: "£280,000"
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  two:
+    annual_income: 50000
+    extra_income: 0
+    monthly_net_income: 2714.22
+    person_two_annual_income: 50000
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 2714.22
+    credit_repayments: 0
+    utilities: 0
+    childcare: 0
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min: "£280,000"
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  three:
+    annual_income: 100000
+    extra_income: 10000
+    monthly_net_income: 5745.10
+    person_two_annual_income: 0
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 0
+    credit_repayments: 300
+    utilities: 0
+    childcare: 0
+    child_maintenance: 300
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min: "£287,840"
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  four:
+    annual_income: 50000
+    extra_income: 5000
+    monthly_net_income: 3253.44
+    person_two_annual_income: 50000
+    person_two_extra_income: 5000
+    person_two_monthly_net_income: 3253.44
+    credit_repayments: 0
+    utilities: 0
+    childcare: 0
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min: "£308,000"
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  five:
+    annual_income: 50000
+    extra_income: 0
+    monthly_net_income: 2714.22
+    person_two_annual_income: 0
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 0
+    credit_repayments: 60
+    utilities: 250
+    childcare: 0
+    child_maintenance: 140
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min:
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  six:
+    annual_income: 25000
+    extra_income: 0
+    monthly_net_income: 1662.89
+    person_two_annual_income: 25000
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 1662.89
+    credit_repayments: 200
+    utilities: 300
+    childcare: 250
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 0
+    travel: 0
+    entertainment: 0
+    holiday: 0
+    range_min:
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  seven:
+    annual_income: 60000
+    extra_income: 0
+    monthly_net_income: 3495.10
+    person_two_annual_income: 0
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 0
+    credit_repayments: 0
+    utilities: 290
+    childcare: 0
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 300
+    travel: 180
+    entertainment: 400
+    holiday: 0
+    range_min:
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  eight:
+    annual_income: 40000
+    extra_income: 0
+    monthly_net_income: 2512.89
+    person_two_annual_income: 35000
+    person_two_extra_income: 0
+    person_two_monthly_net_income: 2229.56
+    credit_repayments: 300
+    utilities: 325
+    childcare: 0
+    child_maintenance: 0
+    rent_and_mortgage: 0
+    food: 300
+    travel: 600
+    entertainment: 400
+    holiday: 0
+    range_min:
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments:
+    increased_monthly_repayment:
+    financial_buffer:
+  nine:
+    annual_income: 100000
+    extra_income: 10000
+    monthly_net_income: 6000
+    person_two_annual_income: 50000
+    person_two_extra_income: 5000
+    person_two_monthly_net_income: 3000
+    credit_repayments: 300
+    utilities: 300
+    childcare: 300
+    child_maintenance: 300
+    rent_and_mortgage: 300
+    food: 300
+    travel: 300
+    entertainment: 300
+    holiday: 300
+    range_min:
+    range_max:
+    repayment_per_month:
+    remaining_per_month:
+    spending_commitments: "£1,5000.00"
+    increased_monthly_repayment:
+    financial_buffer:

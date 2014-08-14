@@ -1,30 +1,26 @@
-Feature: Affordability Calculator
-As a potential home buyer
+Feature: Mortgage Affordability Calculator
+As a potential mortgage customer
 I want to know much of a mortgage I can borrow
 So that I can determine my ability to buy a property
 
-Scenario: Can view the Affordability Calculator
-  Given I visit the Affordability page
-  Then  I should see the Affordability title
-
-Scenario: Enter valid details on all steps for one applicant
+Scenario: Enter valid details on all steps for single applicant
   Given I visit the affordability page
-  When  I enter all details for one applicant
+  When  I enter all details for single applicant
   Then  I should see how much I can borrow
 
 Scenario: Enter valid details on all steps for two applicants
   Given I visit the affordability page
-  When  I enter all details for one applicant
+  When  I enter all details for two applicants
   Then  I should see how much I can borrow
 
-Scenario: Enter invalid details on step one for one applicant
+Scenario: Enter invalid details on step one for single applicant
   Given I visit the affordability page
-  When  I enter invalid details on step one for one applicant
+  When  I enter invalid details on step one for single applicant
   Then  I should see a list of errors
 
-Scenario: Monthly income more than available income for one applicant
+Scenario: Monthly income more than available income for single applicant
   Given I visit the affordability page
-  When  I enter too much monthly income for one applicant
+  When  I enter too much monthly income for single applicant
   Then  I should see a list of errors
 
 Scenario: Monthly income more than available income for two applicants
@@ -36,16 +32,17 @@ Scenario: Monthly income more than available income for second applicant
   Given I visit the affordability page
   When  I enter too much monthly income for the second applicant
   Then  I should see a list of errors
+  And   I should see different errors for the second applicant
 
-Scenario: Enter invalid details on step two for one applicant
+Scenario: Enter invalid details on step two for single applicant
   Given I visit the affordability page
-  And   I enter valid details on step one for one applicant
+  And   I enter valid details on step one for single applicant
   When  I enter invalid details on step two
   Then  I should see a list of errors
 
-Scenario: Enter invalid details on step three for one applicant
+Scenario: Enter invalid details on step three for single applicant
   Given I visit the affordability page
-  And   I enter valid details on step one for one applicant
+  And   I enter valid details on step one for single applicant
   And   I enter valid details on step two
   When  I recalculate with invalid details
   Then  I should see a list of errors
@@ -54,6 +51,7 @@ Scenario: Enter invalid details on step one for two applicants
   Given I visit the affordability page
   When  I enter invalid details on step one for two applicants
   Then  I should see a list of errors
+  And   I should see different errors for the second applicant
 
 Scenario: Enter invalid details on step two for two applicants
   Given I visit the affordability page
@@ -68,17 +66,23 @@ Scenario: Enter invalid details on step three for two applicants
   When  I recalculate with invalid details
   Then  I should see a list of errors
 
-Scenario: Recalculate details for one applicant
+Scenario: Recalculate details for single applicant
   Given I visit the affordability page
-  And   I enter all details for one applicant
+  And   I enter all details for single applicant
   When  I recalculate with invalid details
-  Then  I should see how much I can borrow
+  Then  I should see a list of errors
 
 Scenario: Recalculate details for two applicants
   Given I visit the affordability page
   And   I enter all details for two applicants
   When  I recalculate with invalid details
-  Then  I should see how much I can borrow
+  Then  I should see a list of errors
+
+# See YAML file located 'http://github.com/.../...' for these calculations
+Scenario: Accurate calculations
+  Given I visit the affordability page
+  And   I enter various income and expense details
+  Then  I should see accurate calculations
 
 
 # @wip
@@ -87,9 +91,9 @@ Scenario: Recalculate details for two applicants
 #   Then  I should see the Welsh Affordability calculator
 
 # @with_and_without_javascript
-# Scenario: Affordability for one applicant
+# Scenario: Affordability for single applicant
 #   Given I visit the Affordability page
-#   When  I enter all details for one applicant
+#   When  I enter all details for single applicant
 
 
 #   Then  I should see "between £287,840 and £431,760"
@@ -100,7 +104,7 @@ Scenario: Recalculate details for two applicants
 #   And   I should see "Your remaining budget will be £1,057.01"
 
 # Scenario: I recalculate
-#   Given I have entered all details for one applicant
+#   Given I have entered all details for single applicant
 #   When  I update my affordability circumstances
 #   And   I recalculate
 #   Then  I should see "79% of your total take-home pay"
