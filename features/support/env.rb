@@ -19,3 +19,11 @@ def step_three
   UI::Pages::Affordability::StepThree.new
 end
 
+def calculations
+  require 'yaml'
+
+  examples = YAML.load_file(
+    Rails.root.join('../../spec/fixtures/calculations.yml').to_s
+    )
+
+end
