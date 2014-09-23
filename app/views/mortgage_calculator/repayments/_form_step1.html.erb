@@ -1,14 +1,14 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
+<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--full">
   <h3><%= I18n.t("mortgage_calculator.repayment.step_1.intro") %></h3>
 </div>
 
 <%= form_for @repayment, :html => {:class => "form step_one", novalidate: ''}, url: repayment_path do |f| %>
-  <div class="mortgagecalc__panel mortgagecalc__panel--with-form">
-    <div class="form__item">
+  <div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--with-form">
+    <div class="ns-mortgage-calc__form__item">
       <%= f.label :price,
         "id" => "label_initial_price" %>
       <%= f.text_field :price,
-                      "class" => "js-polyfill dynamic-slider-property",
+                      "class" => "js-polyfill ns-mortgage-calc__dynamic-slider-property",
                       "ng-model" => "repayments.propertyPrice",
                       "placeholder" => "£0.00",
                       "autofocus" => '',
@@ -19,7 +19,7 @@
                       "pattern" => '\d*' %>
     </div>
 
-    <div class="form__item">
+    <div class="ns-mortgage-calc__form__item">
       <%= f.label :deposit,
         "id" => "label_initial_deposit" %>
       <%= f.text_field :deposit,
@@ -34,13 +34,13 @@
     </div>
   </div>
 
-  <div class="mortgagecalc__panel">
-    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="callout">
+  <div class="ns-mortgage-calc__mortgagecalc__panel">
+    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="ns-mortgage-calc__callout">
       <%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %>
     </div>
 
     <%= f.submit I18n.t("mortgage_calculator.repayment.next"),
-                 class: "button button--primary mortgagecalc__submit",
+                 class: "button button--primary ns-mortgage-calc__mortgagecalc__submit",
                  'ng-click' => 'navigateAndFocus($event)',
                  'analytics' => '',
                  'analytics-on' => 'click',

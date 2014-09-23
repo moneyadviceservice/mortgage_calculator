@@ -1,4 +1,4 @@
-.form__item {
+.ns-mortgage-calc__form__item {
   margin: $baseline-unit*4 0 0;
 }
 
@@ -9,11 +9,11 @@ label {
   color: $color-grey-primary;
   margin-bottom: $baseline-unit;
 
-  &.label--inline {
+  &.ns-mortgage-calc__label--inline {
     display: inline;
   }
 
-  &.label--accent {
+  &.ns-mortgage-calc__label--accent {
     padding: 6px;
     background: $colour-label-accent;
   }
@@ -26,7 +26,7 @@ label {
 }
 
 input[type="text"],
-.form__input-label {
+.ns-mortgage-calc__form__input-label {
   font-family: 'museo_sans';
   font-weight: 500;
   font-size: px(18);
@@ -35,4 +35,3 @@ input[type="text"],
     background: white;
   }
 }
-

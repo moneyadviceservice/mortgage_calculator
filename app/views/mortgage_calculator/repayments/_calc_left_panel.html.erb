@@ -1,24 +1,24 @@
-<div class="mortgagecalc__panel">
+<div class="ns-mortgage-calc__mortgagecalc__panel">
 
-  <div class="tabs">
-    <dl class="tabs__list rendered-from-js">
-      <dt><a href="#" class="tabs__link" ng-click="showMonthly($event)" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></a></dt>
+  <div class="ns-mortgage-calc__tabs">
+    <dl class="ns-mortgage-calc__tabs__list rendered-from-js">
+      <dt><a href="#" class="ns-mortgage-calc__tabs__link" ng-click="showMonthly($event)" ng-class="{ 'ns-mortgage-calc__tabs__current' : viewMonthlyRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></a></dt>
 
-      <dt><a href="#" class="tabs__link" ng-click="showInterest($event)" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></a></dt>
+      <dt><a href="#" class="ns-mortgage-calc__tabs__link" ng-click="showInterest($event)" ng-class="{ 'ns-mortgage-calc__tabs__current' : viewInterestRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></a></dt>
     </dl>
 
-    <div class="tabs__content">
-      <div class="tabs__panel" ng-show="viewMonthlyRepayments">
+    <div class="ns-mortgage-calc__tabs__content">
+      <div class="ns-mortgage-calc__tabs__panel" ng-show="viewMonthlyRepayments">
         <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></h3>
         <%= render 'monthly_repayments' %>
-        <p><a href="#" class="rendered-from-js expander" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.explain") %></a></p>
+        <p><a href="#" class="rendered-from-js ns-mortgage-calc__expander" ng-class="{ 'ns-mortgage-calc__expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.explain") %></a></p>
 
-        <div ng-show="expandedMortgageInformation" class="mortgagecalc__tip">
+        <div ng-show="expandedMortgageInformation" class="ns-mortgage-calc__mortgagecalc__tip">
           <%= render 'repayment_tip' %>
         </div>
 
       </div>
-      <div class="tabs__panel" ng-show="viewInterestRepayments">
+      <div class="ns-mortgage-calc__tabs__panel" ng-show="viewInterestRepayments">
         <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></h3>
         <%= render 'interest_only_repayments' %>
 
@@ -27,8 +27,8 @@
   </div>
 </div>
 
-  <div class="callout">
-    <h5 class="callout__heading"><%= I18n.t("mortgage_calculator.repayment.interest_changer.title") %></h5>
+  <div class="ns-mortgage-calc__callout">
+    <h5 class="ns-mortgage-calc__callout__heading"><%= I18n.t("mortgage_calculator.repayment.interest_changer.title") %></h5>
     <p><%= raw I18n.t("mortgage_calculator.repayment.interest_changer.intro", change: 2) %></p>
 
      <div ng-show="viewMonthlyRepayments"><%= render 'monthly_increment' %></div>

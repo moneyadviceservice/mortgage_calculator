@@ -1,9 +1,9 @@
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
-  <div class="form__item">
+<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two ns-mortgage-calc__mortgagecalc__form ns-mortgage-calc__mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+  <div class="ns-mortgage-calc__form__item">
     <%= f.label :price %>
     <%= f.text_field :price,
                      :value => @stamp_duty.price_formatted,
-                     class: 'dynamic-slider-property',
+                     class: 'ns-mortgage-calc__dynamic-slider-property',
                      "ng-model" => "stampDuty.propertyPrice",
                      "placeholder" => "£0.00",
                      "currency" => '',
@@ -17,7 +17,7 @@
                      "pattern" => '\d*'
                      %>
 
-    <div class="slider" ui-slider dynamic-for='dynamic-slider-property' ng-model="stampDuty.propertyPrice" analytics-category="Stamp Duty" analytics-action="Refinement" analytics-label="Price"></div>
+    <div class="slider" ui-slider dynamic-for='ns-mortgage-calc__dynamic-slider-property' ng-model="stampDuty.propertyPrice" analytics-category="Stamp Duty" analytics-action="Refinement" analytics-label="Price"></div>
   </div>
 
   <div class="hide-with-js">

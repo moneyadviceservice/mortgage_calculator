@@ -1,14 +1,14 @@
-.expander {
+.ns-mortgage-calc__expander {
   display: inline-block;
   background: url(/assets/mortgage_calculator/expander.png) 0 0 no-repeat;
   padding-left: 30px;
   font-size:0.875em;
 
-  &.expander--expanded {
+  &.ns-mortgage-calc__expander--expanded {
     background-position: 0 -66px;
   }
 
-  &.expander--nudge {
+  &.ns-mortgage-calc__expander--nudge {
     margin-top: 15px;
   }
 }

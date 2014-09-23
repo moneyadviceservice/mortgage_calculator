@@ -1,12 +1,12 @@
-.risk__accent {
+.ns-mortgage-calc__risk__accent {
   @extend %font-heading-heavy;
 }
 
-.risk__percentage {
+.ns-mortgage-calc__risk__percentage {
   font-size: px(40);
 }
 
-.risk-key {
+.ns-mortgage-calc__risk-key {
   @include body(16, 24);
   margin: $baseline-unit*2 0 $baseline-unit*4;
   padding-left: 25px;
@@ -25,72 +25,72 @@
   }
 }
 
-.risk-slice--outgoings {
+.ns-mortgage-calc__risk-slice--outgoings {
   fill: $color-grey-normal;
 }
 
-.risk--show-on-high,
-.risk--show-on-medium,
-.risk--show-on-low {
+.ns-mortgage-calc__risk--show-on-high,
+.ns-mortgage-calc__risk--show-on-medium,
+.ns-mortgage-calc__risk--show-on-low {
   display: none;
 }
 
-.risk--high {
-  .risk__accent {
+.ns-mortgage-calc__risk--high {
+  .ns-mortgage-calc__risk__accent {
     color: $colour-risk-high;
   }
 
-  .risk-slice--incoming {
+  .ns-mortgage-calc__risk-slice--incoming {
     fill: $colour-risk-high;
   }
 
-  .risk-key--incoming {
+  .ns-mortgage-calc__risk-key--incoming {
     &:after {
       background: $colour-risk-high;
     }
   }
 
-  .risk--show-on-high {
+  .ns-mortgage-calc__risk--show-on-high {
     display: block;
   }
 }
 
-.risk--medium {
-  .risk__accent {
+.ns-mortgage-calc__risk--medium {
+  .ns-mortgage-calc__risk__accent {
     color: $colour-risk-medium;
   }
 
-  .risk-slice--incoming {
+  .ns-mortgage-calc__risk-slice--incoming {
     fill: $colour-risk-medium;
   }
 
-  .risk-key--incoming {
+  .ns-mortgage-calc__risk-key--incoming {
     &:after {
       background: $colour-risk-medium;
     }
   }
 
-  .risk--show-on-medium {
+  .ns-mortgage-calc__risk--show-on-medium {
     display: block;
   }
 }
 
-.risk--low {
-  .risk__accent {
+.ns-mortgage-calc__risk--low {
+  .ns-mortgage-calc__risk__accent {
     color: $colour-risk-low;
   }
 
-  .risk-slice--incoming {
+  .ns-mortgage-calc__risk-slice--incoming {
     fill: $colour-risk-low;
   }
 
-  .risk-key--incoming {
+  .ns-mortgage-calc__risk-key--incoming {
     &:after {
       background: $colour-risk-low;
     }
   }
 
-  .risk--show-on-low {
+  .ns-mortgage-calc__risk--show-on-low {
     display: block;
   }
 }

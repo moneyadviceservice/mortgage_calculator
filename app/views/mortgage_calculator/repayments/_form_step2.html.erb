@@ -1,10 +1,10 @@
-<%= form_for @repayment, url: repayment_path, html: { class: 'form step_two mortgagecalc__form', id: 'edit_repayment', novalidate: ''} do |f| %>
-  <div class="form__item">
+<%= form_for @repayment, url: repayment_path, html: { class: 'form step_two ns-mortgage-calc__mortgagecalc__form', id: 'edit_repayment', novalidate: ''} do |f| %>
+  <div class="ns-mortgage-calc__form__item">
     <%= f.label :price,
     	"id" => "label_price" %>
     <%= f.text_field :price,
                      id: 'edit_repayment_price',
-                     class: 'dynamic-slider-property',
+                     class: 'ns-mortgage-calc__dynamic-slider-property',
                      "ng-model" => "repayments.propertyPrice",
                      "placeholder" => "£0.00",
                      "currency" => '',
@@ -19,10 +19,10 @@
                      "pattern" => '\d*'
                      %>
 
-    <div class="slider price" ui-slider dynamic-for='dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
+    <div class="slider price" ui-slider dynamic-for='ns-mortgage-calc__dynamic-slider-property' ng-model="repayments.propertyPrice" aria-labelledby="label_price" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Price"></div>
   </div>
 
-  <div class="form__item">
+  <div class="ns-mortgage-calc__form__item">
     <%= f.label :deposit,
     	"id" => "label_deposit" %>
     <%= f.text_field :deposit,
@@ -45,7 +45,7 @@
     <div class="slider deposit" ui-slider percentage-for-minimum="50" percentage-for-maximum="200" dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-labelledby="label_deposit" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Deposit"></div>
   </div>
 
-  <div class="form__item">
+  <div class="ns-mortgage-calc__form__item">
     <%= f.label :term_years,
     	"id" => "label_term" %>
     <%= f.text_field :term_years,
@@ -64,7 +64,7 @@
     <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears" aria-labelledby="label_term" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Years"></div>
   </div>
 
-  <div class="form__item">
+  <div class="ns-mortgage-calc__form__item">
     <%= f.label :interest_rate,
     	"id" => "label_rate" %>
     <%= f.text_field :interest_rate,

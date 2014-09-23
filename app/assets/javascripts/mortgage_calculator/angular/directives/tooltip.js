@@ -7,7 +7,7 @@ App.directive('ngTooltip', function() {
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var tooltipID = $element.attr('id'),
             $inputTarget = $('input[aria-describedby="' + tooltipID + '"]'),
-            hiddenClass = 'tooltip--hidden',
+            hiddenClass = 'ns-mortgage-calc__tooltip--hidden',
             debounceTimer;
 
         $element.addClass(hiddenClass);

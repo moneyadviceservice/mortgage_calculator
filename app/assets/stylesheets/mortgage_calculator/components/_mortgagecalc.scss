@@ -4,21 +4,21 @@
   -ms-box-sizing: border-box;
 }
 
-.mortgagecalc {
+.ns-mortgage-calc__mortgagecalc {
   font-family: 'museo_sans';
   font-weight: 300;
   font-size: 16px;
 }
 
-.mortgagecalc__pageheading {
+.ns-mortgage-calc__mortgagecalc__pageheading {
   font-family: 'museo_sans';
   font-weight: 700;
   font-size: $font-xlarge;
   max-width: $calc-width;
 }
 
-.mortgagecalc__heading,
-.mortgagecalc__subheading {
+.ns-mortgage-calc__mortgagecalc__heading,
+.ns-mortgage-calc__mortgagecalc__subheading {
   font-family: 'museo_sans';
   font-weight: 500;
   font-size: $font-large;
@@ -29,25 +29,25 @@
   letter-spacing: -1px;
 }
 
-.mortgagecalc__heading--xlarge {
+.ns-mortgage-calc__mortgagecalc__heading--xlarge {
   font-size: $font-xlarge;
 }
 
-.mortgagecalc__heading--intro {
+.ns-mortgage-calc__mortgagecalc__heading--intro {
   color: #787a7a;
   line-height: 30px;
   margin-bottom: 17px;
 }
 
-.mortgagecalc__subheading {
+.ns-mortgage-calc__mortgagecalc__subheading {
   font-size: $font-medium;
 }
 
-.mortgagecalc__intro {
+.ns-mortgage-calc__mortgagecalc__intro {
   margin-bottom: 24px;
 }
 
-.mortgagecalc__container {
+.ns-mortgage-calc__mortgagecalc__container {
   @include column(12);
   position: relative;
   max-width: $calc-width;
@@ -55,72 +55,72 @@
   margin:10px 0 0;
 }
 
-.mortgagecalc__panel {
+.ns-mortgage-calc__mortgagecalc__panel {
   @include column(12);
   @include respond-to($mortgagecalc_mq-s) {
     @include column(6);
   }
 
-  &.mortgagecalc__panel--full {
+  &.ns-mortgage-calc__mortgagecalc__panel--full {
     @include respond-to($mortgagecalc_mq-s) {
       @include column(12);
     }
   }
 
-  &.mortgagecalc__panel--nudge {
+  &.ns-mortgage-calc__mortgagecalc__panel--nudge {
     padding: 1.125rem;
     margin: 1.5rem 0;
     margin-top: 10px;
   }
 
-  &.mortgagecalc__panel--border {
+  &.ns-mortgage-calc__mortgagecalc__panel--border {
     border-top: 1px solid #dae1df;
     margin-top: 5px;
     padding-top: 25px;
   }
 }
 
-.mortgagecalc__form {
+.ns-mortgage-calc__mortgagecalc__form {
   margin-top: -6px;
 
-  &.mortgagecalc__form--pull {
+  &.ns-mortgage-calc__mortgagecalc__form--pull {
     margin-top: -20px;
   }
 
 }
 
-.mortgagecalc__payment {
-  @extend .mortgagecalc__heading;
+.ns-mortgage-calc__mortgagecalc__payment {
+  @extend .ns-mortgage-calc__mortgagecalc__heading;
   font-weight: 700;
   font-size: px(40);
 }
 
-.mortgagecalc__submit {
+.ns-mortgage-calc__mortgagecalc__submit {
   float:right;
   margin-bottom: 24px;
 
-  &.mortgagecalc__submit--flow {
+  &.ns-mortgage-calc__mortgagecalc__submit--flow {
     float: none;
   }
 }
 
-.mortgagecalc__spread {
+.ns-mortgage-calc__mortgagecalc__spread {
   @include respond-to($mortgagecalc_mq-s) {
     width: 48%;
   }
 }
 
-.mortgagecalc__helper {
+.ns-mortgage-calc__mortgagecalc__helper {
   float:left;
   margin-right: 40px;
 }
 
-.mortgagecalc__caveat {
+.ns-mortgage-calc__mortgagecalc__caveat {
   clear: both;
   max-width: $calc-width;
 }
 
-.mortgagecalc__feedback {
+.ns-mortgage-calc__mortgagecalc__feedback {
   clear: both;
   max-width: $calc-width;
   padding: 0;
@@ -138,18 +138,18 @@
 }
 
 .previous {
-  @extend .mortgagecalc__submit;
+  @extend .ns-mortgage-calc__mortgagecalc__submit;
   margin-right: 15px;
 }
 
-.mortgagecalc__table {
+.ns-mortgage-calc__mortgagecalc__table {
   width: 100%;
   background: #fff;
   margin-bottom: 78px;
 }
 
 .js {
-  .label-follower[type="text"] {
+  .ns-mortgage-calc__label-follower[type="text"] {
     @extend %font-heading-heavy;
     color: $color-green-secondary;
     font-size: px(18);

@@ -1,24 +1,23 @@
 <p ng-hide="js" class="results">
   <%= t "affordability.budget.outgoing_html",
-         percent: "<strong class='number'>#{number_to_percentage(@affordability.risk_percentage, precision: 0)}</strong>".html_safe,
-         absolute: "<strong class='number'>#{@affordability.budget_outgoing_formatted}</strong>".html_safe %>
+         percent: "<strong class=ns-mortgage-calc__number>#{number_to_percentage(@affordability.risk_percentage, precision: 0)}</strong>".html_safe,
+         absolute: "<strong class=ns-mortgage-calc__number>#{@affordability.budget_outgoing_formatted}</strong>".html_safe %>
 </p>
 
 <p ng-hide="js" class="results">
   <%= t "affordability.budget.leftover_html",
-         percent: "<strong class='number'>#{number_to_percentage(@affordability.inverse_risk_percentage, precision: 0)}</strong>".html_safe,
-         absolute: "<strong class='number'>#{@affordability.budget_leftover_formatted}</strong>".html_safe %>
+         percent: "<strong class=ns-mortgage-calc__number>#{number_to_percentage(@affordability.inverse_risk_percentage, precision: 0)}</strong>".html_safe,
+         absolute: "<strong class=ns-mortgage-calc__number>#{@affordability.budget_leftover_formatted}</strong>".html_safe %>
 </p>
 
-<p class="rendered-from-js results risk-key risk-key--incoming">
+<p class="rendered-from-js results ns-mortgage-calc__risk-key ns-mortgage-calc__risk-key--incoming">
   <%= t "affordability.budget.outgoing_html",
-         percent: "<strong class='number'>{{ affordability.riskPercentage() }}%</strong>".html_safe,
-         absolute: "<strong class='number'>{{ affordability.riskAmount() | customCurrency:'£' }}</strong>".html_safe %>
+         percent: "<strong class=ns-mortgage-calc__number>{{ affordability.riskPercentage() }}%</strong>".html_safe,
+         absolute: "<strong class=ns-mortgage-calc__number>{{ affordability.riskAmount() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 
-<p class="rendered-from-js results risk-key risk-key--outgoings">
+<p class="rendered-from-js results ns-mortgage-calc__risk-key ns-mortgage-calc__risk-key--outgoings">
   <%= t "affordability.budget.leftover_html",
-         percent: "<strong class='number'>{{ affordability.percentageAfterRisk() }}% </strong>".html_safe,
-         absolute: "<strong class='number'>{{ affordability.amountAfterRisk() | customCurrency:'£' }} </strong>".html_safe %>
+         percent: "<strong class=ns-mortgage-calc__number>{{ affordability.percentageAfterRisk() }}% </strong>".html_safe,
+         absolute: "<strong class=ns-mortgage-calc__number>{{ affordability.amountAfterRisk() | customCurrency:'£' }} </strong>".html_safe %>
 </p>
-

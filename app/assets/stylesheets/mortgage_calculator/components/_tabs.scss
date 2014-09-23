@@ -1,8 +1,8 @@
-.tabs {
+.ns-mortgage-calc__tabs {
 
 }
 
-.tabs__list {
+.ns-mortgage-calc__tabs__list {
   position: relative;
   margin:0;
 
@@ -11,7 +11,7 @@
   }
 }
 
-.tabs__link {
+.ns-mortgage-calc__tabs__link {
   display:inline-block;
   font-size: $font-medium;
   font-weight: 700;
@@ -22,7 +22,7 @@
 
   cursor: pointer;
 
-  &.tabs__current,
+  &.ns-mortgage-calc__tabs__current,
   &:focus,
   &:active {
     color: #66a600;
@@ -32,7 +32,7 @@
   }
 }
 
-.tabs__content {
+.ns-mortgage-calc__tabs__content {
   background: #fff;
   border:1px solid #ccc;
   padding: 2em 1em 1em;
