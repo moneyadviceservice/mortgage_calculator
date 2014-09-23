@@ -108,7 +108,7 @@ module MortgageCalculator
                             outgoings: {}
                           }
 
-            expect(response).to render_template('high_budget_affect')
+            expect(response).to render_template('_high_budget_affect')
           end
         end
 
@@ -121,7 +121,7 @@ module MortgageCalculator
                             outgoings: {}
                           }
 
-            expect(response).to render_template('medium_budget_affect')
+            expect(response).to render_template('_medium_budget_affect')
           end
         end
 
@@ -134,7 +134,7 @@ module MortgageCalculator
                             outgoings: {}
                           }
 
-            expect(response).to render_template('low_budget_affect')
+            expect(response).to render_template('_low_budget_affect')
           end
         end
       end
