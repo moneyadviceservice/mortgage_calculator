@@ -12,7 +12,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', "2.7.0"
   gem 'coffee-rails'
-  gem 'sass-rails'
   gem 'rspec_junit_formatter'
   gem 'simplecov', :require => false
   gem 'sqlite3'
