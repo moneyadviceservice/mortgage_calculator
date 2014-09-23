@@ -31,10 +31,3 @@ end
 group :build, :test, :development do
   gem 'bowndler'
 end
-
-# If you commit this you've messed up.
-group :development, :test do
-  gem 'pry-byebug'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
