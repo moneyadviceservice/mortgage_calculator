@@ -201,7 +201,7 @@ module MortgageCalculator
     end
 
     def monthly_debt_formatted
-      number_to_currency monthly_debt, unit: nil
+      number_to_currency monthly_debt, unit: ""
     end
 
     def budget_outgoing_formatted
