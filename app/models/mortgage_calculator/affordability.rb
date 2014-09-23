@@ -158,7 +158,7 @@ module MortgageCalculator
     end
 
     def self.load_from_store(store)
-      store = ActiveSupport::HashWithIndifferentAccess.new(store)[:affordability] || {}
+      store = ActiveSupport::HashWithIndifferentAccess[store][:affordability] || {}
 
       two_applicants = store[:two_applicants] if store[:two_applicants]
 
