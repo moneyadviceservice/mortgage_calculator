@@ -16,6 +16,11 @@ group :test do
   gem 'simplecov', :require => false
   gem 'sqlite3'
 
+  # Capybara workaround currently breaking everything, try removing and run `rake routes`
+  # @todo: investigate and unpin
+  # https://github.com/jnicklas/capybara/commit/385a7507f6525d9b2d1e23bef0bb2e6fe5ad0c97
+  gem "capybara", "2.4.1"
+
   gem 'mas-templating'
 end
 
@@ -25,4 +30,11 @@ end
 
 group :build, :test, :development do
   gem 'bowndler'
+end
+
+# If you commit this you've messed up.
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end

@@ -25,9 +25,4 @@ Gem::Specification.new do |s|
   s.add_dependency "mas-feedback"
   s.add_dependency "dough-ruby", "~> 3.0"
   s.add_dependency "mas-fonts"
-
-  # Capybara workaround currently breaking everything, try removing and run `rake routes`
-  # @todo: investigate and unpin
-  # https://github.com/jnicklas/capybara/commit/385a7507f6525d9b2d1e23bef0bb2e6fe5ad0c97
-  s.add_dependency "capybara", "2.4.1"
 end
