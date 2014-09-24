@@ -15,7 +15,7 @@
   border-bottom: 1px solid #ccc;
   z-index: 3;
 
-  .ns-mortgage-calc__slider--with-follower-top {
+  .slider--with-follower-top {
     transition: margin 0.3s ease-out;
     margin-top: $baseline-unit*7;
 
@@ -30,7 +30,7 @@
     }
   }
 
-  .ns-mortgage-calc__label-follower.ns-mortgage-calc__label-follower--top {
+  .label-follower.label-follower--top {
     transition: top 0.3s ease-out;
     top: -$baseline-unit*7;
     font-size: 16px;
@@ -41,7 +41,7 @@
     font-size: 16px;
   }
 
-  .ns-mortgage-calc__borrowing-range {
+  .borrowing-range {
     display: none;
   }
 }

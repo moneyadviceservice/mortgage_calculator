@@ -1,10 +1,10 @@
 <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one', novalidate: '' } do |f| %>
-  <div class="ns-mortgage-calc__mortgagecalc__panel">
-    <div class="ns-mortgage-calc__form__item">
+  <div class="mortgagecalc__panel">
+    <div class="form__item">
       <%= f.label :price %>
       <%= f.text_field :price,
                        :value => @stamp_duty.price_formatted,
-                       class: 'ns-mortgage-calc__dynamic-slider-property',
+                       class: 'dynamic-slider-property',
                        "autofocus" => '',
                        "ng-model" => "stampDuty.propertyPrice",
                        "placeholder" => "£0.00",
@@ -16,9 +16,9 @@
     </div>
   </div>
 
-  <div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--full ns-mortgage-calc__mortgagecalc__panel--with-form">
+  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form">
     <%= f.submit I18n.t("stamp_duty.next"),
-                 class: "button button--primary ns-mortgage-calc__mortgagecalc__submit",
+                 class: "button button--primary mortgagecalc__submit",
                  'ng-click' => 'navigateAndFocus($event)',
                  'ng-disabled' => '!stampDuty.propertyPrice',
                  'analytics-category' => 'Stamp Duty Calculator',

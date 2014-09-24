@@ -1,17 +1,17 @@
-.ns-mortgage-calc__borrowing-range {
+.borrowing-range {
   @extend %paragraph-small;
   @extend %clearfix;
   margin-bottom: $baseline-unit*4;
   overflow: hidden;
 }
 
-.ns-mortgage-calc__borrowing-range__min {
+.borrowing-range__min {
   display:block;
   float: left;
   width:50%;
 }
 
-.ns-mortgage-calc__borrowing-range__max {
-  @extend .ns-mortgage-calc__borrowing-range__min;
+.borrowing-range__max {
+  @extend .borrowing-range__min;
   text-align: right;
 }

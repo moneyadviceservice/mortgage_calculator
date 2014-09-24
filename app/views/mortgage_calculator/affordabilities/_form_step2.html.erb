@@ -7,7 +7,7 @@
 
   <% f.validates @affordability, @affordability.outgoings %>
 
-  <div class="ns-mortgage-calc__affcalc__col--clip">
+  <div class="affcalc__col--clip">
     <h2><%= t("affordability.title") %></h2>
 
     <%= f.validation_summary %>
@@ -20,14 +20,14 @@
     <p><%= t("affordability.input_page.outgoings_second_person") %></p>
   </div>
 
-  <div class="ns-mortgage-calc__affcalc__col">
+  <div class="affcalc__col">
     <h4><%= I18n.t("affordability.titles.estimated_committed") %></h4>
   </div>
 
   <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
 
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :credit_repayments do %>
         <%= outgoings.errors_for :credit_repayments %>
         <%= outgoings.label :credit_repayments, "id" => "label_credit_repayments" do %>
@@ -35,10 +35,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_credit_repayments_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_credit_repayments_a">&pound;</span>
             <%= outgoings.text_field :credit_repayments,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.credit_repayments",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_credit_repayments label_credit_repayments_a label_credit_repayments_b",
@@ -48,12 +48,12 @@
                               "aria-describedby" => "tip_credit_repayments",
                               "value" => outgoings.object.credit_repayments_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_credit_repayments_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_credit_repayments_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.credit_repayments_html"),
             html: {
               id: 'tip_credit_repayments'
@@ -62,8 +62,8 @@
       </div>
     </div>
 
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :child_maintenance do %>
         <%= outgoings.errors_for :child_maintenance %>
         <%= outgoings.label :child_maintenance, "id" => "label_child_maintenance" do %>
@@ -71,10 +71,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_child_maintenance_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_child_maintenance_a">&pound;</span>
             <%= outgoings.text_field :child_maintenance,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.child_maintenance",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_child_maintenance label_child_maintenance_a label_child_maintenance_b",
@@ -84,12 +84,12 @@
                               "aria-describedby" => "tip_child_maintenance",
                               "value" => outgoings.object.child_maintenance_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_child_maintenance_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_child_maintenance_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.child_maintenance_html"),
             html: {
               id: 'tip_child_maintenance'
@@ -98,12 +98,12 @@
       </div>
     </div>
 
-<div class="ns-mortgage-calc__affcalc__col">
+<div class="affcalc__col">
   <h4><%= I18n.t("affordability.titles.estimated_fixed") %></h4>
 </div>
 
-<div class="ns-mortgage-calc__affcalc__row">
-  <div class="ns-mortgage-calc__affcalc__col--field">
+<div class="affcalc__row">
+  <div class="affcalc__col--field">
       <%= outgoings.form_row :childcare do %>
         <%= outgoings.errors_for :childcare %>
         <%= outgoings.label :childcare, "id" => "label_childcare" do %>
@@ -111,10 +111,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_childcare_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_childcare_a">&pound;</span>
             <%= outgoings.text_field :childcare,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.childcare",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_childcare label_childcare_a label_childcare_b",
@@ -124,12 +124,12 @@
                               "aria-describedby" => "tip_childcare",
                               "value" => outgoings.object.childcare_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_childcare_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_childcare_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.childcare_html"),
             html: {
               id: 'tip_childcare'
@@ -137,8 +137,8 @@
         %>
       </div>
     </div>
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :travel do %>
         <%= outgoings.errors_for :travel %>
         <%= outgoings.label :travel, "id" => "label_travel" do %>
@@ -146,10 +146,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_travel_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_travel_a">&pound;</span>
             <%= outgoings.text_field :travel,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.travel",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_travel label_travel_a label_travel_b",
@@ -159,12 +159,12 @@
                               "aria-describedby" => "tip_travel",
                               "value" => outgoings.object.travel_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_travel_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_travel_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.travel_html"),
             html: {
               id: 'tip_travel'
@@ -172,8 +172,8 @@
         %>
       </div>
     </div>
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :utilities do %>
         <%= outgoings.errors_for :utilities %>
         <%= outgoings.label :utilities, "id" => "label_utilities" do %>
@@ -181,10 +181,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_utilities_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_utilities_a">&pound;</span>
             <%= outgoings.text_field :utilities,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.utilities",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_utilities label_utilities_a label_utilities_b",
@@ -194,12 +194,12 @@
                               "aria-describedby" => "tip_utilities",
                               "value" => outgoings.object.utilities_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_utilities_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_utilities_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.utilities_html"),
             html: {
               id: 'tip_utilities'
@@ -207,8 +207,8 @@
         %>
       </div>
     </div>
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :rent_and_mortgage do %>
         <%= outgoings.errors_for :rent_and_mortgage %>
         <%= outgoings.label :rent_and_mortgage, "id" => "label_rent_and_mortgage" do %>
@@ -216,10 +216,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_rent_and_mortgage_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_rent_and_mortgage_a">&pound;</span>
             <%= outgoings.text_field :rent_and_mortgage,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.rent_and_mortgage",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_rent_and_mortgage label_rent_and_mortgage_a label_rent_and_mortgage_b",
@@ -229,12 +229,12 @@
                               "aria-describedby" => "tip_rent_and_mortgage",
                               "value" => outgoings.object.rent_and_mortgage_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_rent_and_mortgage_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_rent_and_mortgage_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
           </div>
         </div>
-        <div class="ns-mortgage-calc__affcalc__col--tooltip">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.rent_and_mortgage_html"),
               html: {
                 id: 'tip_rent_and_mortgage'
@@ -243,13 +243,13 @@
         </div>
       <% end %>
 
-  <div class="ns-mortgage-calc__affcalc__col">
+  <div class="affcalc__col">
     <h3><%= I18n.t("affordability.titles.estimated_lifestyle") %></h3>
     <p><%= t "affordability.input_page.living_costs_description" %></p>
   </div>
 
-  <div class="ns-mortgage-calc__affcalc__row">
-    <div class="ns-mortgage-calc__affcalc__col--field">
+  <div class="affcalc__row">
+    <div class="affcalc__col--field">
       <%= outgoings.form_row :entertainment do %>
         <%= outgoings.errors_for :entertainment %>
         <%= outgoings.label :entertainment, "id" => "label_entertainment" do %>
@@ -257,10 +257,10 @@
           <span class="visually-hidden"><%= t("affordability.per_month") %></span>
         <% end %>
 
-        <span class="ns-mortgage-calc__form__input-container">
-          <span class="ns-mortgage-calc__form__input-label" id="label_entertainment_a">&pound;</span>
+        <span class="form__input-container">
+          <span class="form__input-label" id="label_entertainment_a">&pound;</span>
             <%= outgoings.text_field :entertainment,
-                              "class" => "form-control ns-mortgage-calc__form__input",
+                              "class" => "form-control form__input",
                               "ng-model" => "affordability.outgoings.entertainment",
                               "ng-initial" => "",
                               "aria-labelledby" => "label_entertainment label_entertainment_a label_entertainment_b",
@@ -270,12 +270,12 @@
                               "aria-describedby" => "tip_entertainment",
                               "value" => outgoings.object.entertainment_formatted,
                               "pattern" => '\d*' %>
-            <span class="ns-mortgage-calc__form__input-label" id="label_entertainment_b"><%= t("affordability.per_month") %></span>
-            <span class="ns-mortgage-calc__form__input-outline"></span>
+            <span class="form__input-label" id="label_entertainment_b"><%= t("affordability.per_month") %></span>
+            <span class="form__input-outline"></span>
           </span>
         </div>
       <% end %>
-      <div class="ns-mortgage-calc__affcalc__col--tooltip">
+      <div class="affcalc__col--tooltip">
         <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.entertainment_html"),
             html: {
               id: 'tip_entertainment'
@@ -284,8 +284,8 @@
       </div>
     </div>
 
-    <div class="ns-mortgage-calc__affcalc__row">
-      <div class="ns-mortgage-calc__affcalc__col--field">
+    <div class="affcalc__row">
+      <div class="affcalc__col--field">
         <%= outgoings.form_row :holidays do %>
           <%= outgoings.errors_for :holidays %>
           <%= outgoings.label :holidays, "id" => "label_holidays" do %>
@@ -293,10 +293,10 @@
             <span class="visually-hidden"><%= t("affordability.per_month") %></span>
           <% end %>
 
-          <span class="ns-mortgage-calc__form__input-container">
-            <span class="ns-mortgage-calc__form__input-label" id="label_holidays_a">&pound;</span>
+          <span class="form__input-container">
+            <span class="form__input-label" id="label_holidays_a">&pound;</span>
               <%= outgoings.text_field :holidays,
-                                "class" => "form-control ns-mortgage-calc__form__input",
+                                "class" => "form-control form__input",
                                 "ng-model" => "affordability.outgoings.holidays",
                                 "ng-initial" => "",
                                 "aria-labelledby" => "label_holidays label_holidays_a label_holidays_b",
@@ -306,12 +306,12 @@
                                 "aria-describedby" => "tip_holidays",
                                 "value" => outgoings.object.holidays_formatted,
                                 "pattern" => '\d*' %>
-              <span class="ns-mortgage-calc__form__input-label" id="label_holidays_b"><%= t("affordability.per_month") %></span>
-              <span class="ns-mortgage-calc__form__input-outline"></span>
+              <span class="form__input-label" id="label_holidays_b"><%= t("affordability.per_month") %></span>
+              <span class="form__input-outline"></span>
             </span>
           </div>
         <% end %>
-        <div class="ns-mortgage-calc__affcalc__col--tooltip">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.holidays_html"),
               html: {
                 id: 'tip_holidays'
@@ -321,8 +321,8 @@
       </div>
 
 
-    <div class="ns-mortgage-calc__affcalc__row">
-      <div class="ns-mortgage-calc__affcalc__col--field">
+    <div class="affcalc__row">
+      <div class="affcalc__col--field">
         <%= outgoings.form_row :food do %>
           <%= outgoings.errors_for :food %>
           <%= outgoings.label :food, "id" => "label_food" do %>
@@ -330,10 +330,10 @@
             <span class="visually-hidden"><%= t("affordability.per_month") %></span>
           <% end %>
 
-          <span class="ns-mortgage-calc__form__input-container">
-            <span class="ns-mortgage-calc__form__input-label" id="label_food_a">&pound;</span>
+          <span class="form__input-container">
+            <span class="form__input-label" id="label_food_a">&pound;</span>
               <%= outgoings.text_field :food,
-                                "class" => "form-control ns-mortgage-calc__form__input",
+                                "class" => "form-control form__input",
                                 "ng-model" => "affordability.outgoings.food",
                                 "ng-initial" => "",
                                 "aria-labelledby" => "label_food label_food_a label_food_b",
@@ -343,12 +343,12 @@
                                 "aria-describedby" => "tip_food",
                                 "value" => outgoings.object.food_formatted,
                                 "pattern" => '\d*' %>
-              <span class="ns-mortgage-calc__form__input-label" id="label_food_b"><%= t("affordability.per_month") %></span>
-              <span class="ns-mortgage-calc__form__input-outline"></span>
+              <span class="form__input-label" id="label_food_b"><%= t("affordability.per_month") %></span>
+              <span class="form__input-outline"></span>
             </span>
           </div>
         <% end %>
-        <div class="ns-mortgage-calc__affcalc__col--tooltip">
+        <div class="affcalc__col--tooltip">
           <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/outgoings.food_html"),
               html: {
                 id: 'tip_food'
@@ -358,12 +358,12 @@
       </div>
   <% end %>
 
-  <div class="ns-mortgage-calc__affcalc__col">
+  <div class="affcalc__col">
     <%= f.form_row do %>
-      <p><%= link_to t("affordability.back"), localize_route("step_1_affordability_path"), class: "button ns-mortgage-calc__mortgagecalc__submit ns-mortgage-calc__mortgagecalc__submit--flow previous" %>
+      <p><%= link_to t("affordability.back"), localize_route("step_1_affordability_path"), class: "button mortgagecalc__submit mortgagecalc__submit--flow previous" %>
 
       <%= f.submit I18n.t("affordability.input_page.submit"),
-             class: "button button--primary ns-mortgage-calc__mortgagecalc__submit ns-mortgage-calc__mortgagecalc__submit--flow" %>
+             class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
       </p>
     <% end %>
   </div>

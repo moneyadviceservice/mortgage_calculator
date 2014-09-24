@@ -1,4 +1,4 @@
-.ns-mortgage-calc__tooltip {
+.tooltip {
   margin-top: -20px;
   margin-bottom: $baseline-unit*6;
 
@@ -7,7 +7,7 @@
       position: absolute;
       margin-top: $baseline-unit*4;
 
-      &.ns-mortgage-calc__tooltip--hidden {
+      &.tooltip--hidden {
         @include visually-hidden;
       }
     }

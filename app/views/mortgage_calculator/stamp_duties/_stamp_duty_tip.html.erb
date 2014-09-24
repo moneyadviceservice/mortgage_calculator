@@ -1,11 +1,11 @@
-<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--full">
-  <div ng-show="expandedMortgageInformation" class="ns-mortgage-calc__mortgagecalc__tip">
+<div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <div ng-show="expandedMortgageInformation" class="mortgagecalc__tip">
     <%= render 'bands_table' %>
   </div>
 </div>
 
 <p><%= link_to I18n.t('stamp_duty.next'), next_steps_stamp_duty_path,
-               class: "button button--primary ns-mortgage-calc__mortgagecalc__submit",
+               class: "button button--primary mortgagecalc__submit",
                'affects-height' => 'click',
                'wz-next' => '',
                'analytics' => '',
@@ -15,4 +15,4 @@
                'analytics-label' => 'Click'
                %></p>
 
-<p><a href="#" class='button ns-mortgage-calc__mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
+<p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>

@@ -1,17 +1,17 @@
-<div class="ns-mortgage-calc__affcalc__col--clip">
-  <h4 class="ns-mortgage-calc__mortgagecalc__heading"><%= t("affordability.next_steps.title") %></h4>
+<div class="affcalc__col--clip">
+  <h4 class="mortgagecalc__heading"><%= t("affordability.next_steps.title") %></h4>
 
-  <ol class="ns-mortgage-calc__featured-list">
+  <ol class="featured-list">
     <li><strong><%= t("affordability.next_steps.tip_1.heading") %></strong> <%= link_to t("affordability.next_steps.tip_1.info_html"), t("affordability.next_steps.tip_1.url"), target: "_blank", rel: no_follow? %></li>
     <li><strong><%= t("affordability.next_steps.tip_2.heading") %></strong> <%= t("affordability.next_steps.tip_2.info_html", budget_planner: link_to(t("affordability.next_steps.tip_2.url_text"), t("affordability.next_steps.tip_2.url"), target: "_blank", rel: no_follow?)) %></li>
     <li><strong><%= t("affordability.next_steps.tip_3.heading") %></strong> <%= t("affordability.next_steps.tip_3.info_html", saving: link_to(t("affordability.next_steps.tip_3.url_text"), t("affordability.next_steps.tip_3.url"), target: "_blank", rel: no_follow?)) %></li>
   </ol>
 </div>
 
-<div class="ns-mortgage-calc__affcalc__row">
-  <div class="ns-mortgage-calc__affcalc__col--33">
-    <div class="ns-mortgage-calc__callout">
-      <h5 class="ns-mortgage-calc__mortgagecalc__subheading"><%= t("affordability.next_steps.learn_more.title") %>:</h5>
+<div class="affcalc__row">
+  <div class="affcalc__col--33">
+    <div class="callout">
+      <h5 class="mortgagecalc__subheading"><%= t("affordability.next_steps.learn_more.title") %>:</h5>
 
       <% (1..2).each do |i| %>
         <p><%= t("affordability.next_steps.learn_more.tip_#{i}") %></p>
@@ -21,8 +21,8 @@
     </div>
   </div>
 
-  <div class="ns-mortgage-calc__affcalc__col--33 ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--nudge">
-    <h5 class="ns-mortgage-calc__mortgagecalc__subheading"><%= t("affordability.next_steps.find_out_more.title") %>:</h5>
+  <div class="affcalc__col--33 mortgagecalc__panel mortgagecalc__panel--nudge">
+    <h5 class="mortgagecalc__subheading"><%= t("affordability.next_steps.find_out_more.title") %>:</h5>
     <ul>
       <% (1..7).each do |n| %>
         <li><%= link_to t("affordability.next_steps.find_out_more.tip_#{n}.copy_html"), t("affordability.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
@@ -31,25 +31,25 @@
   </div>
 </div>
 
-<div class="ns-mortgage-calc__affcalc__row">
-  <div class="ns-mortgage-calc__affcalc__col--clip ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--border">
-    <h4 class="ns-mortgage-calc__mortgagecalc__heading"><%= t("affordability.next_steps.have_you_tried.title") %></h4>
+<div class="affcalc__row">
+  <div class="affcalc__col--clip mortgagecalc__panel mortgagecalc__panel--border">
+    <h4 class="mortgagecalc__heading"><%= t("affordability.next_steps.have_you_tried.title") %></h4>
     <p><%= link_to t('affordability.next_steps.have_you_tried.mortgage_calculator'),
                    full_mortgage_calculator_url,
-                   class: "button button--primary ns-mortgage-calc__mortgagecalc__spread",
+                   class: "button button--primary mortgagecalc__spread",
                    target: "_blank",
                    rel: no_follow? %>
 
       <%= link_to t('affordability.next_steps.have_you_tried.stamp_duty'),
                    full_stamp_duty_calculator_url,
-                   class: "button button--primary ns-mortgage-calc__mortgagecalc__spread",
+                   class: "button button--primary mortgagecalc__spread",
                    target: "_blank",
                    rel: no_follow? %></p>
   </div>
 </div>
 
-<div class="ns-mortgage-calc__affcalc__col--clip  ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--border">
+<div class="affcalc__col--clip  mortgagecalc__panel mortgagecalc__panel--border">
   <p>
-    <%= link_to t("affordability.back"), localize_route("step_3_affordability_path"), class: "button ns-mortgage-calc__mortgagecalc__submit ns-mortgage-calc__mortgagecalc__submit--flow previous" %>
+    <%= link_to t("affordability.back"), localize_route("step_3_affordability_path"), class: "button mortgagecalc__submit mortgagecalc__submit--flow previous" %>
   </p>
 </div>

@@ -3,4 +3,6 @@ $responsive: true;
 @import 'mas/fonts/font_base64.scss';
 @import 'mortgage_calculator/global';
 
-@import 'mortgage_calculator/enhanced';
+.ns-mortgage-calc {
+  @import 'mortgage_calculator/enhanced';
+}

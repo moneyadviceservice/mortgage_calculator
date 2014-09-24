@@ -91,7 +91,7 @@ App.directive('ngPie', ['$window', function($window) {
         slice.enter()
             .insert('path')
             .attr('class', function (d) {
-              return 'ns-mortgage-calc__risk-slice ns-mortgage-calc__risk-slice--' + d.data.label.toLowerCase();
+              return 'risk-slice risk-slice--' + d.data.label.toLowerCase();
             });
 
         slice

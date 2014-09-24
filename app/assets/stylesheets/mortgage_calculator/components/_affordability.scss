@@ -1,62 +1,62 @@
-.ns-mortgage-calc__affcalc {
+.affcalc {
   float: left;
   max-width: $affordability-width;
   margin-bottom: $baseline-unit*4;
-}
 
-.ns-mortgage-calc__affcalc__row {
-  clear:both;
-  position: relative;
-}
-
-.ns-mortgage-calc__affcalc__row--spaced {
-  @extend .ns-mortgage-calc__affcalc__row;
-  margin-top: $baseline-unit*12;
-}
-
-.ns-mortgage-calc__affcalc__col {
-  @include column(12);
-}
-
-.ns-mortgage-calc__affcalc__col--33 {
-  @extend .ns-mortgage-calc__affcalc__col;
-  @include respond-to($mq-m) {
-    @include column(4);
+  .affcalc__row {
+    clear:both;
+    position: relative;
   }
-}
 
-.ns-mortgage-calc__affcalc__col--50 {
-  @extend .ns-mortgage-calc__affcalc__col;
-  @include respond-to($mq-m) {
-    @include column(6);
+  .affcalc__row--spaced {
+    @extend .affcalc__row;
+    margin-top: $baseline-unit*12;
   }
-}
 
-.ns-mortgage-calc__affcalc__col--clip {
-  @extend .ns-mortgage-calc__affcalc__col;
-  @include respond-to($mq-m) {
-    @include column(8);
+  .affcalc__col {
+    @include column(12);
   }
-}
 
-.ns-mortgage-calc__affcalc__col--field {
-  @extend .ns-mortgage-calc__affcalc__col;
-  @include respond-to($mq-m) {
-    @include column(5);
+  .affcalc__col--33 {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(4);
+    }
   }
-  @include respond-to($mq-l) {
-    @include column(4);
-  }
-}
 
-.ns-mortgage-calc__affcalc__col--tooltip {
-  @extend .ns-mortgage-calc__affcalc__col;
-  @include respond-to($mq-m) {
-    @include column(6);
-    @include push(1);
+  .affcalc__col--50 {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(6);
+    }
   }
-  @include respond-to($mq-l) {
-    @include column(7);
-    @include push(1);
+
+  .affcalc__col--clip {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(8);
+    }
+  }
+
+  .affcalc__col--field {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(5);
+    }
+    @include respond-to($mq-l) {
+      @include column(4);
+    }
+  }
+
+  .affcalc__col--tooltip {
+    @extend .affcalc__col;
+    @include respond-to($mq-m) {
+      @include column(6);
+      @include push(1);
+    }
+    @include respond-to($mq-l) {
+      @include column(7);
+      @include push(1);
+    }
   }
 }

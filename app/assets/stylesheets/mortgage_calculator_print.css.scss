@@ -1,6 +1,6 @@
 .ns-mortgage-calc {
-  .ns-mortgage-calc__mortgagecalc__container,
-  .ns-mortgage-calc__affcalc {
+  .mortgagecalc__container,
+  .affcalc {
     max-width: 100% !important;
   }
 
@@ -9,8 +9,8 @@
   }
 
   .slider,
-  .ns-mortgage-calc__borrowing-range,
-  .ns-mortgage-calc__expander,
+  .borrowing-range,
+  .expander,
   .pie,
   .button,
   #feedback-tab {
@@ -29,7 +29,7 @@
     }
   }
 
-  .ns-mortgage-calc__mortgagecalc__tip,
+  .mortgagecalc__tip,
   .risk__percentage {
     display: block !important;
   }

@@ -1,16 +1,16 @@
-.ns-mortgage-calc__buffer--show-on-positive,
-.ns-mortgage-calc__buffer--show-on-negative {
+.buffer--show-on-positive,
+.buffer--show-on-negative {
   display: none;
 }
 
-.ns-mortgage-calc__buffer--positive {
-  .ns-mortgage-calc__buffer--show-on-positive {
+.buffer--positive {
+  .buffer--show-on-positive {
     display: block;
   }
 }
 
-.ns-mortgage-calc__buffer--negative {
-  .ns-mortgage-calc__buffer--show-on-negative {
+.buffer--negative {
+  .buffer--show-on-negative {
     display: block;
   }
 }

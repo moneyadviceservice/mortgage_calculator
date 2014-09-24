@@ -17,9 +17,9 @@
 <!--<![endif]-->
 <% end %>
 
-<div ng-controller="CalculatorCtrl" class="ns-mortgage-calc__affcalc ns-mortgage-calc__risk--<%= @affordability.risk_level %>"
-   ng-class="{'high':'ns-mortgage-calc__risk--high', 'medium':'ns-mortgage-calc__risk--medium', 'low':'ns-mortgage-calc__risk--low'}[affordability.riskLevel()]">
-   <div class="ns-mortgage-calc__buffer--<%= @affordability.remaining_vector %>" ng-class="{'positive':'ns-mortgage-calc__buffer--positive', 'negative':'ns-mortgage-calc__buffer--negative'}[affordability.remainingVector()]">
+<div ng-controller="CalculatorCtrl" class="affcalc risk--<%= @affordability.risk_level %>"
+   ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
+   <div class="buffer--<%= @affordability.remaining_vector %>" ng-class="{'positive':'buffer--positive', 'negative':'buffer--negative'}[affordability.remainingVector()]">
     <%= render 'form_step3' %>
   </div>
 

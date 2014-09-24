@@ -1,4 +1,4 @@
-.ns-mortgage-calc__featured-list {
+.featured-list {
   font-family: 'museo_sans';
   font-size:$font-medium;
   color: #333;
@@ -15,7 +15,7 @@
 }
 
 .gt-ie8 {
-  .ns-mortgage-calc__featured-list {
+  .featured-list {
     > li {
         position:relative;
         margin:0 0 30px 2.3em;
@@ -48,6 +48,6 @@
 }
 
 
-.ns-mortgage-calc__featured-list--left {
+.featured-list--left {
   float: left;
 }

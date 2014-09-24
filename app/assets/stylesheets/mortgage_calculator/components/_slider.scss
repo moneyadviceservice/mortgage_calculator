@@ -358,7 +358,7 @@
   margin:18px 0 35px;
   -ms-touch-action: none;
 
-  &.ns-mortgage-calc__slider--squeeze {
+  &.slider--squeeze {
     margin-bottom: 18px;
   }
 }
@@ -394,18 +394,18 @@
 }
 
 .js {
-  .ns-mortgage-calc__label-follower {
+  .label-follower {
     position: relative;
     display: inline-block;
     cursor: pointer;
 
-    &.ns-mortgage-calc__label-follower--top {
+    &.label-follower--top {
       top: -$baseline-unit*10;
     }
   }
 }
 
-.ns-mortgage-calc__slider--with-follower-top {
+.slider--with-follower-top {
   margin-top: $baseline-unit*10;
 
   .ui-slider-handle {

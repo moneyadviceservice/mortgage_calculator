@@ -1,7 +1,7 @@
-<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--full">
-  <h4 class="ns-mortgage-calc__mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.title") %>:</h4>
+<div class="mortgagecalc__panel mortgagecalc__panel--full">
+  <h4 class="mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.title") %>:</h4>
 
-  <ol class="ns-mortgage-calc__featured-list">
+  <ol class="featured-list">
     <li><strong><%= link_to t("stamp_duty.next_steps.tip_1.heading_html"),
                             I18n.t("stamp_duty.next_steps.tip_1.url"),
                             target: "_blank",
@@ -17,15 +17,15 @@
   </ol>
 </div>
 
-<div class="ns-mortgage-calc__mortgagecalc__panel">
-  <div class="ns-mortgage-calc__callout">
-    <h5 class="ns-mortgage-calc__mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h5>
+<div class="mortgagecalc__panel">
+  <div class="callout">
+    <h5 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h5>
     <p><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1", link: link_to(I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_text"), (I18n.t("stamp_duty.next_steps.learn_more.tip_1_link_url")), target: "_blank", rel: no_follow?)).html_safe %></p>
   </div>
 </div>
 
-<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--nudge">
-  <h5 class="ns-mortgage-calc__mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h5>
+<div class="mortgagecalc__panel mortgagecalc__panel--nudge">
+  <h5 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h5>
   <ul>
   <% (1..5).each do |n| %>
     <li><%= link_to t("stamp_duty.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("stamp_duty.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
@@ -33,21 +33,21 @@
   </ul>
 </div>
 
-<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--full ns-mortgage-calc__mortgagecalc__panel--with-form ns-mortgage-calc__mortgagecalc__panel--border">
-  <h4 class="ns-mortgage-calc__mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.have_you_tried.title") %></h4>
+<div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
+  <h4 class="mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.have_you_tried.title") %></h4>
 
   <p><%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
                  full_mortgage_calculator_url,
-                 class: "button button--primary ns-mortgage-calc__mortgagecalc__spread",
+                 class: "button button--primary mortgagecalc__spread",
                  target: "_blank",
                  rel: no_follow? %>
 
   <%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_affordability_calculator'),
                  full_mortgage_affordability_calculator_url,
-                 class: "button button--primary ns-mortgage-calc__mortgagecalc__spread",
+                 class: "button button--primary mortgagecalc__spread",
                  target: "_blank",
                  rel: no_follow? %></p>
 </div>
 
-<p><a href="#" class='button ns-mortgage-calc__mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
+<p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
 

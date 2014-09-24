@@ -1,8 +1,8 @@
-<div class="ns-mortgage-calc__mortgagecalc__panel ns-mortgage-calc__mortgagecalc__panel--with-form">
+<div class="mortgagecalc__panel mortgagecalc__panel--with-form">
   <%= render 'form_step2' %>
 
   <p><%= link_to I18n.t('mortgage_calculator.repayment.next'), next_steps_repayment_path,
-                 class: "button button--primary ns-mortgage-calc__mortgagecalc__submit",
+                 class: "button button--primary mortgagecalc__submit",
                  'analytics' => '',
                  'analytics-on' => 'click',
                  'analytics-category' => 'Mortgage Calculator',
@@ -10,5 +10,5 @@
                  'analytics-label' => 'Click',
                  'wz-next' => '' %></p>
 
-  <p><a href="#" class='button ns-mortgage-calc__mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
+  <p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
 </div>
