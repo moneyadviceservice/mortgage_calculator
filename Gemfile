@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem 'mas-development_dependencies', '~> 2.2'
+gem 'mas-development_dependencies'
 
 group :test do
   gem 'rspec', '~> 3.0'
