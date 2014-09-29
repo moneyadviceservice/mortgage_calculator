@@ -1,3 +1,5 @@
+<% set_meta_tags %>
+
 <% content_for(:head) do %>
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
     <%= stylesheet_link_tag 'mortgage_calculator_basic' %>
@@ -52,7 +54,7 @@
   <% end %>
 <% end %>
 
-<% content_for(:tool_content) do %>
+<% content_for(:engine_content) do %>
   <div class="ns-mortgage-calc">
     <!--[if IE 7 ]> <div class="dough ie ie7"> <![endif]-->
     <!--[if IE 8 ]> <div class="dough ie ie8 gt-ie7"> <![endif]-->
