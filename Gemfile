@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gemspec
 
 gem 'mas-development_dependencies'
+gem 'meta-tags'
 
 group :test do
   gem 'rspec', '~> 3.0'
