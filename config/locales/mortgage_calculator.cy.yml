@@ -73,6 +73,9 @@ cy:
           tip_5:
             copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
             url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          tip_6:
+            copy_html: "Codiadau mewn cyfraddau llog: Dyma beth allwch chi wneud nawr <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+            url: "https://www.moneyadviceservice.org.uk/cy/news/cyfraddau-llog-beth-all-perchnogion-cartrefi-ei-wneud-nawr-i-drechuar-codiad"
         have_you_tried:
           title: 'Rhowch gynnig ar?'
           stamp_duty: "cyfrifiannell Treth Stamp"

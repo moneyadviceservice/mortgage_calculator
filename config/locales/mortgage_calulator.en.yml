@@ -72,6 +72,9 @@ en:
           tip_5:
             copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
             url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          tip_6:
+            copy_html: "Interest rate rises: What you can do now <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/news/interest-rates-what-home-owners-can-do-now-to-beat-the-rise"
         have_you_tried:
           title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"
