@@ -12,7 +12,6 @@ cy:
           price: Cyfanswm pris yr eiddo yw
     repayment:
       title: Cyfrifwch eich taliad morgais misol
-      subtitle: "Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau."
       next: Nesaf
       back: Yn ôl
       a_month: bob mis
