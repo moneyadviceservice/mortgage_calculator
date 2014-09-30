@@ -20,7 +20,13 @@ en:
       repayment: Repayment
       years: years
       step_1:
-        intro: "Plan ahead and estimate your monthly payment now."
+        intro_html: |
+          <p>This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender.</p>
+          <p>If you already have a mortgage and want to work out how much an interest rate rise will impact your payments, then , in ‘price of property’ enter how much you have left to pay on your mortgage, put nothing in deposit.</p>
+        title: Plan ahead and estimate your monthly payment now.
+      step_2:
+        intro_html: |
+          <p>This is a guide to how much you'd pay each month. Adjust the sliders to change the term to the number of years you have left to pay, and increase the interest rate. The exact amount will depend on the type of mortgage and the lender.</p>
       tabs:
         explain: "What does this mean?"
         repayment:

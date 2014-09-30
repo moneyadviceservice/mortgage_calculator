@@ -20,7 +20,13 @@ cy:
       repayment: Ad-daliad
       years: mlynedd
       step_1:
-        intro: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
+        intro_html: |
+          <p>Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau.</p>
+          <p>Os oes gennych chi forgais yn barod ac yn dymuno cyfrifo faint fyddai codiad yn y gyfradd llog yn effeithio ar eich taliadau, yna, yn ‘pris yr eiddo’ rhowch y swm sy’n weddill i’w dalu ar eich morgais, a rhowch sero yn y blwch blaendal.</p>
+        title: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
+      step_2:
+        intro_html: |
+          <p>Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Yna symudwch y llithrwyr i newid y cyfnod i gydfynd â’r nifer o flynyddoedd sydd gennych yn weddill i dalu, a chynyddwch y gyfradd llog. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau.</p>
       tabs:
         explain: Beth mae hyn yn ei gynnwys?
         repayment:
