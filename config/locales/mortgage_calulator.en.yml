@@ -12,7 +12,6 @@ en:
           price: Price of the property is
     repayment:
       title: Calculate your monthly mortgage payment
-      subtitle: "This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender."
       next: Next
       back: Back
       a_month: a month
@@ -21,7 +20,13 @@ en:
       repayment: Repayment
       years: years
       step_1:
-        intro: "Plan ahead and estimate your monthly payment now."
+        intro_html: |
+          <p>This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender.</p>
+          <p>If you already have a mortgage and want to work out how much an interest rate rise will impact your payments, then , in ‘price of property’ enter how much you have left to pay on your mortgage, put nothing in deposit.</p>
+        title: Plan ahead and estimate your monthly payment now.
+      step_2:
+        intro_html: |
+          <p>This is a guide to how much you'd pay each month. Adjust the sliders to change the term to the number of years you have left to pay, and increase the interest rate. The exact amount will depend on the type of mortgage and the lender.</p>
       tabs:
         explain: "What does this mean?"
         repayment:
@@ -72,6 +77,9 @@ en:
           tip_5:
             copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
             url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          tip_6:
+            copy_html: "Interest rate rises: What you can do now <span class='visually-hidden'>(opens in a new window)</span>"
+            url: "https://www.moneyadviceservice.org.uk/en/news/interest-rates-what-home-owners-can-do-now-to-beat-the-rise"
         have_you_tried:
           title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"
