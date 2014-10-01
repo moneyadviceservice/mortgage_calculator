@@ -1,9 +1,24 @@
 <% content_for(:analytics) do %>
   <script type='text/javascript'>
-    var _gaq = _gaq || [];
-    _gaq.push(['_trackEvent','Affordability Calculator','Completion','Click']);
-    _gaq.push(['_trackEvent','Affordability Calculator','Risk Level', '<%= @affordability.risk_level %>']);
-    _gaq.push(['_trackEvent','Affordability Calculator','Remaining', 'Non-positive']);
+    var dataLayer = dataLayer || [];
+    dataLayer.push({
+      'event': 'GAEvent',
+      'eventCategory': 'Affordability Calculator',
+      'eventAction'  : 'Completion',
+      'eventLabel'   : 'Click'
+    });
+    dataLayer.push({
+      'event': 'GAEvent',
+      'eventCategory': 'Affordability Calculator',
+      'eventAction'  : 'Risk Level',
+      'eventLabel'   : '<%= @affordability.risk_level %>'
+    });
+    dataLayer.push({
+      'event': 'GAEvent',
+      'eventCategory': 'Affordability Calculator',
+      'eventAction'  : 'Remaining',
+      'eventLabel'   : 'Non-positive'
+    });
   </script>
 <% end %>
 
