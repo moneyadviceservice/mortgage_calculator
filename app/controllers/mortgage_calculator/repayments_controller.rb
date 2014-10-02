@@ -21,6 +21,9 @@ module MortgageCalculator
 
 
     private
+      def category_id
+        "help-with-mortgages"
+      end
 
       def repayment_params
         params[:repayment] || {price: 0, deposit: 0}

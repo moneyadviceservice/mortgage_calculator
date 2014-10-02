@@ -13,11 +13,6 @@ module MortgageCalculator
 
       false
     end
-
-    private
-    def category_id
-      "homes-and-mortgages"
-    end
   end
 
 end
