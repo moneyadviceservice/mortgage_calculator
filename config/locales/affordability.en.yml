@@ -1,5 +1,8 @@
 en:
   affordability:
+    meta:
+      title: Mortgage affordability calculator – How much mortgage can you afford to borrow?
+      description: Use the Money Advice Service mortgage affordability calculator to find out how much mortgage you can afford to borrow for your new house
     tool_name: "mortgage-affordability-calculator"
     title: "How much can you borrow?"
     preamble: "This tool will help you estimate how much you can afford to borrow to buy a home. We’ll work it out by looking at your income and your outgoings. Mortgage lenders will look at these figures very closely to work out how much they’ll offer you."

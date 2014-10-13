@@ -1,5 +1,8 @@
 en:
   mortgage_calculator:
+    meta:
+      title: "Mortgage calculator"
+      description: "Use our mortgage calculator to find out your monthly mortgage payments and to work out how much you can afford to borrow"
     tool_name: "mortgage-calculator-new"
     activemodel:
       attributes:

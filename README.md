@@ -17,7 +17,7 @@ Ensure you have bundler, node, npm and bower installed and execute:
 ```sh
 $ bundle
 $ npm install
-$ bower install
+$ bowndler install
 ```
 
 ### Dependencies

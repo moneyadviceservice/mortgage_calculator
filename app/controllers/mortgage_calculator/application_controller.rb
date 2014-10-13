@@ -7,13 +7,12 @@ module MortgageCalculator
     helper 'mortgage_calculator/ui_components'
     helper_method :disable_responsiveness?
 
-  protected
-
+    protected
     def disable_responsiveness?
       return super if defined?(super)
 
       false
     end
-
   end
+
 end

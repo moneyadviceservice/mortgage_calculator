@@ -16,7 +16,7 @@ App.directive('uiSlider', function() {
 
     //Fire GA Events
     var gaRefinement = function(){
-      window._gaq = window._gaq || [];
+      window.dataLayer = window.dataLayer || [];
 
       var category = attrs.analyticsCategory,
           action = attrs.analyticsAction,
@@ -25,7 +25,13 @@ App.directive('uiSlider', function() {
 
       if (action == 'Refinement') {
         if (!(typeof refined !== 'undefined' && refined !== false)) {
-          window._gaq.push(['_trackEvent',category,action,label]);
+          dataLayer.push({
+            'event': 'GAEvent',
+            'eventCategory': category,
+            'eventAction'  : action,
+            'eventLabel'   : label
+          });
+
           element.attr('refined', '');
         }
       }

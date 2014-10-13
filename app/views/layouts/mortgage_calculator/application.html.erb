@@ -1,3 +1,5 @@
+<% set_meta_tags title: t("#{calculator_name}.meta.title"), description: t("#{calculator_name}.meta.description") %>
+
 <% content_for(:head) do %>
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
     <%= stylesheet_link_tag 'mortgage_calculator_basic' %>
@@ -19,8 +21,6 @@
     <%= stylesheet_link_tag 'mortgage_calculator_print', media: 'print' %>
 
   <%= javascript_include_tag "mortgage_calculator/application" %>
-
-  <%= csrf_meta_tags %>
 <% end %>
 
 <% content_for(:javascripts) do %>
@@ -34,33 +34,14 @@
 
 <% content_for(:analytics) do %>
   <script type='text/javascript'>
-    var _gaq = _gaq || [];
+    var dataLayer = dataLayer || [];
   </script>
-
-  <% if Rails.env.production? || Rails.env.qa? %>
-    <script type='text/javascript'>
-      _gaq.push(['_setAccount','<%= GA.tracker %>']);
-      _gaq.push(['_setDomainName','moneyadviceservice.org.uk']);
-      _gaq.push(['_setAllowLinker',true]);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  <% end %>
 <% end %>
 
-<% content_for(:tool_content) do %>
-  <div class="ns-mortgage-calc">
-    <!--[if IE 7 ]> <div class="dough ie ie7"> <![endif]-->
-    <!--[if IE 8 ]> <div class="dough ie ie8 gt-ie7"> <![endif]-->
-    <!--[if IE 9 ]> <div class="dough ie ie9 gt-ie7 gt-ie8"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--><div class="dough gt-ie7 gt-ie8 gt-ie9"><!--<![endif]-->
-      <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
-        <%= yield %>
-      </div>
+<% content_for(:engine_content) do %>
+  <div>
+    <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
+      <%= yield %>
     </div>
   </div>
 <% end %>
