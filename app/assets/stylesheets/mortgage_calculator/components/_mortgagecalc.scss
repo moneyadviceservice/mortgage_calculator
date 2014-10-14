@@ -118,23 +118,6 @@
   max-width: $calc-width;
 }
 
-.mortgagecalc__feedback {
-  clear: both;
-  max-width: $calc-width;
-  padding: 0;
-  margin: $baseline-unit*3 0 $baseline-unit*4;
-
-  #feedback-tab {
-    padding-top: 11px;
-    padding-bottom: 11px;
-
-    a {
-      font-family: 'museo_sans';
-      font-size: $font-medium;
-    }
-  }
-}
-
 .previous {
   @extend .mortgagecalc__submit;
   margin-right: 15px;
