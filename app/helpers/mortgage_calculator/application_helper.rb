@@ -1,26 +1,11 @@
 module MortgageCalculator
   module ApplicationHelper
-    # Feedback does not appear to inject itself
-    include Mas::Feedback::ApplicationHelper
-
     def calculator_name
       {
         'affordabilities' => 'affordability',
         'stamp_duties'    => 'stamp_duty',
         'repayments'      => 'mortgage_calculator'
       }[controller_name]
-    end
-
-    def zendesk_stamp_duty_config
-      @zendesk_stamp_duty_config ||= MortgageCalculator.feedback_config[:stamp_duty]
-    end
-
-    def zendesk_affordability_config
-      @zendesk_affordability_config ||= MortgageCalculator.feedback_config[:affordability]
-    end
-
-    def zendesk_repayment_config
-      @zendesk_repayment_config ||= MortgageCalculator.feedback_config[:repayment]
     end
 
     def full_mortgage_calculator_url
