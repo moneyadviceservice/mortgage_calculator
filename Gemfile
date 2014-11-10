@@ -23,4 +23,9 @@ group :test do
   gem 'shoulda-matchers', "2.7.0"
   gem 'simplecov', :require => false
   gem 'sqlite3'
+  gem 'timecop'
+  gem 'cucumber-rails', :require => false
+  gem 'capybara-screenshot'
+  gem 'poltergeist'
+  gem 'site_prism'
 end
