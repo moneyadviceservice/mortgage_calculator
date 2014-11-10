@@ -71,7 +71,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       setTimeout(function() {
         iframeHelpers.resizeIframe();
         $('input[name="repayment[price]"]:visible').focus();
-        $('input[name="stamp_duty[price]"]:visible').focus();
+        $('input[name="stamp_duty[price]"]:visible').focus().select();
         $('input[name="affordability[interest_rate]"]:visible').focus();
         $('input[name="affordability[people_attributes][0][annual_income]"]:visible').focus();
       });
