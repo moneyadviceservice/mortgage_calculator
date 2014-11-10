@@ -14,7 +14,6 @@ spec/dummy/db/*.sqlite3
 
 .jhw-cache
 vendor/cache/**
-vendor/assets/components/**
 vendor/assets/bower_components/**
 tmp
 

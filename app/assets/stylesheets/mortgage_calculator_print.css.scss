@@ -1,41 +1,37 @@
-.ns-mortgage-calc {
-  .mortgagecalc__container,
-  .affcalc {
-    max-width: 100% !important;
-  }
+.mortgagecalc__container, .affcalc {
+  max-width: 100% !important;
+}
 
-  label {
-    color: black;
-  }
+label {
+  color: black;
+}
 
-  .slider,
-  .borrowing-range,
-  .expander,
-  .pie,
-  .button,
-  #feedback-tab {
-    display: none !important;
-  }
+.slider,
+.borrowing-range,
+.expander,
+.pie,
+.button{
+  display: none !important;
+}
 
-  .l-stuck {
-    position: relative;
-    top: auto;
-    max-width: 100%;
-    padding: 0;
-    border: 0;
+.l-stuck {
+  position: relative;
+  top: auto;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
 
-    .accent.accent--medium {
-      font-size: 20px;
-    }
+  .accent.accent--medium {
+    font-size: 20px;
   }
+}
 
-  .mortgagecalc__tip,
-  .risk__percentage {
-    display: block !important;
-  }
+.mortgagecalc__tip,
+.risk__percentage {
+  display: block !important;
+}
 
-  // to override public website's !importants in their print stylesheet
-  .risk__percentage {
-    font-size: 40px !important;
-  }
+// to override public website's !importants in their print stylesheet
+.risk__percentage {
+  font-size: 40px !important;
 }

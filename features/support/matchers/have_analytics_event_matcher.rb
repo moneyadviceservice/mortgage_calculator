@@ -13,7 +13,7 @@ RSpec::Matchers.define :have_analytics_event do |expected|
   match do |page|
     begin
       wait_until do
-        @gaq = Array(page.evaluate_script('window._gaq'))
+        @gaq = Array(page.evaluate_script('window.dataLayer'))
         @gaq.include?(expected)
       end
     rescue Timeout::Error

@@ -9,7 +9,12 @@ App.directive('analytics', function () {
 
     element.on('click', function(){
       if (type == 'click'){
-        _gaq.push(['_trackEvent',category,action,label]);
+        dataLayer.push({
+          'event': 'GAEvent',
+          'eventCategory': category,
+          'eventAction'  : action,
+          'eventLabel'   : label
+        });
       }
     });
 
@@ -18,11 +23,23 @@ App.directive('analytics', function () {
         if (action == 'Refinement') {
           var refined = element.attr('refined');
           if (!(typeof refined !== 'undefined' && refined !== false)) {
-            _gaq.push(['_trackEvent',category,action,label]);
+            dataLayer.push({
+              'event': 'GAEvent',
+              'eventCategory': category,
+              'eventAction'  : action,
+              'eventLabel'   : label
+            });
+
             element.attr('refined', '');
           }
         } else {
-          _gaq.push(['_trackEvent',category,action,label]);
+          dataLayer.push({
+            'event': 'GAEvent',
+            'eventCategory': category,
+            'eventAction'  : action,
+            'eventLabel'   : label
+          });
+
         }
       }
     });

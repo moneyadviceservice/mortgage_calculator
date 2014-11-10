@@ -4,6 +4,10 @@ class << default_url_options_lambda
   def to_hash
     call
   end
+
+  def merge(hash)
+    to_hash.merge(hash)
+  end
 end
 
 # this provides default url options to the main_app route across requests running

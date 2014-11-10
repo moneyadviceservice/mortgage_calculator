@@ -16,6 +16,9 @@ module MortgageCalculator
     end
 
   private
+    def category_id
+      "buying-a-home"
+    end
 
     def tool_name
       I18n.translate('stamp_duty.tool_name')

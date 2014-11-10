@@ -2,12 +2,21 @@ require 'spec_helper'
 
 module MortgageCalculator
   describe ApplicationHelper do
-    describe 'zendesk_stamp_duty_config' do
-      it 'loads correct config' do
-        config = helper.zendesk_stamp_duty_config
 
-        expect(config[:en]).to eql({"id"=>"20289328", "url"=>"https://mastest.zendesk.com", "name" => "Feedback"})
-        expect(config[:cy]).to eql({"id"=>"20281613", "url"=>"https://mastest.zendesk.com", "name" => "Adborth"})
+    describe "#calculator_name" do
+      it "sets the calculator name to 'mortgage_calculator' when repayments controller" do
+        allow(helper).to receive(:controller_name).and_return('repayments')
+        expect(helper.calculator_name).to eq('mortgage_calculator')
+      end
+
+      it "sets the calculator name to 'stamp_duty' when stamp_duties controller" do
+        allow(helper).to receive(:controller_name).and_return('stamp_duties')
+        expect(helper.calculator_name).to eq('stamp_duty')
+      end
+
+      it "sets the calculator name to 'affordability' when affordabilities controller" do
+        allow(helper).to receive(:controller_name).and_return('affordabilities')
+        expect(helper.calculator_name).to eq('affordability')
       end
     end
 

@@ -106,7 +106,9 @@ describe MortgageCalculator::StampDuty do
 
       its(:percentage_rate) { should == 7 }
       its(:tax_due) { should == 140000 }
-      its(:total_due) { should == 2140000.01 }
+      # On upgrading to Ruby 2.1.2 the expected value needs to be specified
+      # as a BigDecimal or this lone test fails.
+      its(:total_due) { should == BigDecimal('2140000.01') }
     end
 
     context 'when house price is 3000000' do
