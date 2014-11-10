@@ -1,5 +1,8 @@
 cy:
   stamp_duty:
+    meta:
+      title: "Cyfrifiannell treth stamp"
+      description: "Defnyddiwch ein cyfrifiannell treth stamp i gael amcangyfrif o faint o dreth stamp y bydd angen ichi ei thalu ar eich cartref newydd"
     tool_name: "cyfrifiannell-treth-stamp"
     pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
     h1: "Cyfrifiannell treth stamp"

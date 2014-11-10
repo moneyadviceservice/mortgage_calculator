@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe MortgageCalculator::RepaymentsController do
+  routes { MortgageCalculator::Engine.routes }
+
   describe '#show' do
     it 'responds with 200' do
       get :show, :locale => :en

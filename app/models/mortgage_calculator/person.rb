@@ -39,15 +39,15 @@ module MortgageCalculator
     end
 
     def annual_income_formatted
-      number_to_currency annual_income, unit: nil
+      number_to_currency annual_income, unit: ""
     end
 
     def extra_income_formatted
-      number_to_currency extra_income, unit: nil
+      number_to_currency extra_income, unit: ""
     end
 
     def monthly_net_income_formatted
-      number_to_currency monthly_net_income, unit: nil
+      number_to_currency monthly_net_income, unit: ""
     end
 
     def allow_blanks?

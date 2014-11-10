@@ -1,8 +1,19 @@
 <% content_for(:analytics) do %>
   <script type='text/javascript'>
-    var _gaq = _gaq || [];
-    _gaq.push(['_trackEvent','Affordability Calculator','Completion','Click']);
-    _gaq.push(['_trackEvent','Affordability Calculator','Risk Level', '<%= @affordability.risk_level %>']);
+    var dataLayer = dataLayer || [];
+    dataLayer.push({
+      'event': 'GAEvent',
+      'eventCategory': 'Affordability Calculator',
+      'eventAction'  : 'Completion',
+      'eventLabel'   : 'Click'
+    });
+
+    dataLayer.push({
+      'event': 'GAEvent',
+      'eventCategory': 'Affordability Calculator',
+      'eventAction'  : 'Risk Level',
+      'eventLabel'   : '<%= @affordability.risk_level %>'
+    });
   </script>
 <% end %>
 
@@ -23,6 +34,5 @@
     <%= render 'form_step3' %>
   </div>
 
-  <%= render 'feedback' %>
   <%= render 'seo_links' %>
 </div>

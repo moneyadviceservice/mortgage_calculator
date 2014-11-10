@@ -41,6 +41,9 @@ module MortgageCalculator
     end
 
     private
+      def category_id
+        "help-with-mortgages"
+      end
 
       def no_cache
         response.headers["Cache-Control"] = "no-store"

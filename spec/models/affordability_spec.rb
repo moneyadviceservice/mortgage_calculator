@@ -88,14 +88,14 @@ module MortgageCalculator
 
     describe '#can_borrow_from' do
       it 'is rounded to nearest pound' do
-        subject.stub(:total_income){ BigDecimal("123000.13") }
+        allow(subject).to receive(:total_income).and_return(BigDecimal("123000.13"))
         expect(subject.can_borrow_from.to_s).to eql('337680')
       end
     end
 
     describe '#can_borrow_upto' do
       it 'is rounded to nearest pound' do
-        subject.stub(:total_income){ BigDecimal("123000.13") }
+        allow(subject).to receive(:total_income).and_return(BigDecimal("123000.13"))
         expect(subject.can_borrow_upto.to_s).to eql('506521')
       end
     end
@@ -380,7 +380,7 @@ module MortgageCalculator
     describe 'over_committed?' do
       context 'when committed + fixed costs > monthly_net_income' do
         it 'returns true' do
-          subject.outgoings.stub(:credit_repayments){ 20000 }
+          allow(subject.outgoings).to receive(:credit_repayments).and_return(20000)
           expect(subject.over_committed?).to be_truthy
         end
       end

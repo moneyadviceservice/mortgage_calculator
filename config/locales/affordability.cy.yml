@@ -1,5 +1,8 @@
 cy:
   affordability:
+    meta:
+      title: "Cyfrifiannell fforddiadwyedd morgais - Gwasanaeth Cynghori Ariannol"
+      description: "Cyfrifiannell fforddiadwyedd morgais"
     tool_name: "cyfrifiannell-fforddiadwyedd-morgais"
     title: "Faint allwch chi ei fenthyg?"
     preamble: "Bydd yr offeryn hwn yn eich helpu i amcangyfrif faint y gallwch fforddio ei fenthyg i brynu cartref. Byddwn yn ei gyfrifo trwy edrych ar eich incwm a’ch gwariant. Bydd benthycwyr morgeisi yn edrych yn agos ar y ffigurau hyn i gyfrifo faint fyddant yn ei gynnig i chi."
