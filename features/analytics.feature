@@ -34,42 +34,42 @@ Scenario: When a user uses the stamp duty calculator
 
 Scenario: When a user uses completes the affordability calculator
   Given I visit the Affordability calculator
-  When  I enter all details for "1" applicants
+  When  I enter all details for single applicant
   Then  My affordability completion interaction is tracked
 
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  When  I refine my affordability borrowing
+  When  I enter all details for single applicant
+  And  I refine my affordability borrowing
   Then  My affordability borrowing refinement interaction is tracked
 
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  When  I refine my affordability interest rate
+  When  I enter all details for single applicant
+  And  I refine my affordability interest rate
   Then  My affordability interest rate refinement interaction is tracked
 
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  When  I refine my affordability interest rate slider
+  When  I enter all details for single applicant
+  And  I refine my affordability interest rate slider
   Then  My affordability interest rate refinement interaction is tracked
 
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  When  I refine my affordability lifestyle
+  When  I enter all details for single applicant
+  And  I refine my affordability lifestyle
   Then  My affordability lifestyle refinement interaction is tracked
 
 Scenario: When a user refines affordability calculator
   Given I visit the Affordability calculator
-  And   I enter all details for "1" applicants
-  When  I refine my affordability lifestyle slider
+  When  I enter all details for single applicant
+  And   I refine my affordability lifestyle slider
   Then  My affordability lifestyle refinement interaction is tracked
 
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
-  When  I enter all details for "1" applicants
+  When  I enter all details for single applicant
   Then  My risk level is tracked
 
 Scenario: When a user uses affordability calculator
@@ -79,6 +79,5 @@ Scenario: When a user uses affordability calculator
 
 Scenario: When a user uses affordability calculator
   Given I visit the Affordability calculator
-  When  I enter all details for "1" applicants
+  When  I enter all details for single applicant
   Then  My negative remainging is not tracked
-
