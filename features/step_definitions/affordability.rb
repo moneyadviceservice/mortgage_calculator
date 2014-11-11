@@ -221,7 +221,6 @@ When(/^I enter details giving negative remaining amount$/) do
   step_two.next.click
 end
 
-
 When(/^I refine my affordability interest rate$/) do
   step_three.interest_rate.set(4)
 end
