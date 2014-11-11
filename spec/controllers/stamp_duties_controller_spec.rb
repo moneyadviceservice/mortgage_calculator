@@ -4,19 +4,6 @@ module MortgageCalculator
   describe StampDutiesController do
     routes { MortgageCalculator::Engine.routes }
 
-    describe 'when feature is toggled off' do
-      around :each do
-        Rails.application.reload_routes!
-      end
-
-      it 'the stamp duty calculator is not available' do
-        allow(Settings.feature_toggles).to receive(:enable_stamp_duty_calculator?){ false }
-
-        get :show
-        expect(response).not_to be_success
-      end
-    end
-
     describe '#show' do
       it 'responds with 200' do
         get :show
