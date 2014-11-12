@@ -39,6 +39,7 @@ module MortgageCalculator
 
     def initialize(options = {})
       @people = options[:people]
+      @people.each {|person| person.affordability = self } if @people # Set up parent relation
       @outgoings = options[:outgoings]
       @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
@@ -174,6 +175,7 @@ module MortgageCalculator
           i == 0 ? Person.new(p) : Person.new(p, allow_blanks: true)
         end
       end
+      
       people << Person.new if people.size == 0
       people << Person.new({}, true) if people.size == 1
 

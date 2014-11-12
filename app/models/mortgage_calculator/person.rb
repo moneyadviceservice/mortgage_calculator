@@ -9,7 +9,7 @@ module MortgageCalculator
       "affordability.activemodel"
     end
 
-    attr_accessor :annual_income, :extra_income, :monthly_net_income, :allow_blanks
+    attr_accessor :annual_income, :extra_income, :monthly_net_income, :allow_blanks, :affordability
 
     validates :annual_income, numericality: true, unless: :allow_blanks?
     validates :extra_income, numericality: true, unless: :allow_blanks?
@@ -60,8 +60,16 @@ module MortgageCalculator
       return unless valid_number?(annual_income)
 
       if total_income < (monthly_net_income || 0) * 12
-        errors[:base] << I18n.t("affordability.activemodel.errors.#{self.class.model_name.i18n_key}.base.proportional_incomes")
+        if index_in_affordability == 0
+          errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
+        else
+          errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person_other.base.proportional_incomes")
+        end
       end
+    end
+
+    def index_in_affordability
+      affordability.try(:people).try(:index, self)
     end
 
   protected
