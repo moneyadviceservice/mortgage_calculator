@@ -11,17 +11,17 @@ module MortgageCalculator
 
     attr_accessor :annual_income, :extra_income, :monthly_net_income, :allow_blanks, :affordability
 
-    validates :annual_income, numericality: true, unless: :allow_blanks?
     validates :extra_income, numericality: true, unless: :allow_blanks?
-    validates :monthly_net_income, numericality: true, unless: :allow_blanks?
 
-    validate :validate_proportional_incomes
-
+    validates :annual_income, numericality: true, unless: :allow_blanks?
     validates :annual_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:annual_income).downcase) } }, unless: :allow_blanks?
 
+    validates :monthly_net_income, numericality: true, unless: :allow_blanks?
     validates :monthly_net_income, numericality: { greater_than: 0, message: Proc.new { I18n.t("affordability.activemodel.errors.messages.blank", attribute: self.human_attribute_name(:monthly_net_income).downcase) } }, unless: :allow_blanks?
 
     currency_inputs :annual_income, :extra_income, :monthly_net_income
+
+    validate :validate_proportional_incomes
 
     def initialize(options = {}, param_allow_blanks = false)
       self.annual_income = options[:annual_income].presence
@@ -51,14 +51,13 @@ module MortgageCalculator
     end
 
     def allow_blanks?
+      return false if affordability.try(:two_applicants?)
       return self.allow_blanks
     end
 
     private
 
     def validate_proportional_incomes
-      return unless valid_number?(annual_income)
-
       if total_income < (monthly_net_income || 0) * 12
         if index_in_affordability == 0
           errors[:base] << I18n.t("affordability.activemodel.errors.mortgage_calculator/person.base.proportional_incomes")
