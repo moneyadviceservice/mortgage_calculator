@@ -15,7 +15,7 @@ Given(/^I visit the Syndicated Stamp Duty page$/) do
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(@stamp_duty.h2).to have_content(I18n.t('stamp_duty.title'))
+  expect(@stamp_duty.find('.intro')).to have_content(I18n.t('stamp_duty.title'))
 end
 
 Then(/^they do not see the result output$/) do
@@ -59,4 +59,3 @@ end
 Then(/^I see the Welsh stamp duty calculator$/) do
   expect(@stamp_duty.h1).to have_content('Cyfrifiannell treth stamp')
 end
-
