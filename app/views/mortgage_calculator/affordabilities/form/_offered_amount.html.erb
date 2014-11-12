@@ -1,10 +1,8 @@
-<% if @affordability.valid? %>
-  <p ng-hide="js" class="mortgagecalc__heading results mortgagecalc__heading">
-    <%= t "affordability.range.offer_html",
-           min: @affordability.can_borrow_from_formatted,
-           max: @affordability.can_borrow_upto_formatted %>
-  </p>
-<% end %>
+<p ng-hide="js" class="mortgagecalc__heading results mortgagecalc__heading">
+  <%= t "affordability.range.offer_html",
+         min: @affordability.can_borrow_from_formatted,
+         max: @affordability.can_borrow_upto_formatted %>
+</p>
 
 <p class="rendered-from-js results accent accent--medium">
   <%= t "affordability.range.offer_html",

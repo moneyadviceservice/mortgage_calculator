@@ -2,7 +2,7 @@
   <h2><%= I18n.t("affordability.title") %></h2>
 </div>
 
-<%= form_for @affordability, url: localize_route("step_3_affordability_path"), html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '', "ng-no-submit" => "" } do |f| %>
+<%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: localize_route("step_3_affordability_path"), html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '', "ng-no-submit" => "" } do |f| %>
   <% @affordability.people.each_with_index do |person, index| %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][annual_income]", person.annual_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.annual", 'ng-initial' => '' %>
     <%= hidden_field_tag "affordability[people_attributes][#{index}][extra_income]", person.extra_income.to_s, 'ng-model' => "affordability.earnings.person#{index}.extra", 'ng-initial' => '' %>
@@ -15,6 +15,9 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--clip" calculate>
+
+      <%= f.validation_summary %>
+
       <div ng-docker ng-docked="docked" ng-cloak>
         <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
         <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
@@ -154,4 +157,3 @@
     </div>
   </div>
 <% end %>
-
