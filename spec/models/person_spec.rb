@@ -27,6 +27,15 @@ describe MortgageCalculator::Person do
     end
   end
 
+  describe '#affordablity' do
+    let(:affordability) { MortgageCalculator::Affordability.new }
+
+    it 'sets & gets Affordability' do
+      subject.affordability = affordability
+      expect(subject.affordability).to be affordability
+    end
+  end
+
   describe 'validations' do
 
     context 'when allow_blanks is true' do

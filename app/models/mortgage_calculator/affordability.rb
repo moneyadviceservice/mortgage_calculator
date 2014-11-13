@@ -28,7 +28,8 @@ module MortgageCalculator
 
     currency_inputs :lifestyle_costs
 
-    validates :interest_rate, numericality: true
+    validates :borrowing, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
+    validates :interest_rate, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
 
     def people_attributes=(attributes)
     end
@@ -39,6 +40,7 @@ module MortgageCalculator
 
     def initialize(options = {})
       @people = options[:people]
+      @people.each {|person| person.affordability = self } if @people # Set up parent relation
       @outgoings = options[:outgoings]
       @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
@@ -123,18 +125,25 @@ module MortgageCalculator
       remaining_positive? ? :positive : :negative
     end
 
+    def people_valid?
+      # To get a full set of validation errors, we need to run valid? on all
+      # objects. people.all?(&:valid) won't run the method on all objects, as it
+      # stops as soon as it finds a false.
+      people.map(&:valid?).all?
+    end
+
     def valid_for_step2?
       valid?
-      errors[:base].empty? & !(people.map(&:valid?).include?(false))
+      errors[:base].empty? && people_valid?
     end
 
     def valid_for_step3?
       valid?
-      errors[:base].empty? & outgoings.valid?
+      errors[:base].empty? && outgoings.valid?
     end
 
     def valid?
-      super & outgoings.valid? & !(people.map(&:valid?).include?(false))
+      outgoings.valid? && people_valid? && super
     end
 
     def budget_outgoing
@@ -174,6 +183,7 @@ module MortgageCalculator
           i == 0 ? Person.new(p) : Person.new(p, allow_blanks: true)
         end
       end
+
       people << Person.new if people.size == 0
       people << Person.new({}, true) if people.size == 1
 
