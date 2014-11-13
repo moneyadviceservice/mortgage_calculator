@@ -13,6 +13,7 @@ en:
     back: Back
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "You'll pay a percentage of tax from 1% to 7%, depending on the price"
+    describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:

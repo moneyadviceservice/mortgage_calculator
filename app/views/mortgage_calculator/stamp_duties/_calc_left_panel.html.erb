@@ -1,12 +1,4 @@
-<div class="mortgagecalc__panel">
-  <div class="tabs">
-    <div class="tabs__content">
-      <div class="tabs__panel">
-        <h3 class="callout__heading"><%= I18n.t("stamp_duty.results.title") %>:</h3>
-        <%= render 'stamp_duty_payment' %>
-      </div>
-    </div>
-  </div>
-
-  <p><a href="#" class="rendered-from-js expander expander--nudge" ng-class="{ 'expander--expanded' : expandedMortgageInformation }" ng-click="toggleExpanded($event)" affects-height="click"><%= I18n.t("stamp_duty.how_calculated_toggle") %></a></p>
+<div class="mortgagecalc__panel mortgagecalc__panel--with-form">
+  <%= render 'form_step2' %>
 </div>
+

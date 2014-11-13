@@ -13,6 +13,7 @@ cy:
     back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Cyfrifir treth stamp fel canran o bris eich eiddo"
+    describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
