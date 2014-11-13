@@ -84,6 +84,12 @@ module MortgageCalculator
       its(:can_borrow_upto){ should == 682_920}
       its(:number_of_applicants){ should == 2 }
       its(:monthly_net_income){ should == 9000 }
+
+      it 'sets up relationship with persons' do
+        subject.people.each do |person|
+          expect(person.affordability).to be subject
+        end
+      end
     end
 
     describe '#can_borrow_from' do
