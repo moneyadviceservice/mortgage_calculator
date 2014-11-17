@@ -3,8 +3,17 @@ module MortgageCalculator
     before_filter :no_cache, only: [:step_1, :step_2]
 
     def step_1
+      persist_affordability_params_to_session
+
       @affordability = affordability_model
-      @affordability.valid? unless @affordability.empty?
+
+      if request.post?
+        unless @affordability.empty?
+          if @affordability.valid_for_step2?
+            redirect_to step_2_affordability_path
+          end
+        end
+      end
     end
 
     def step_2
