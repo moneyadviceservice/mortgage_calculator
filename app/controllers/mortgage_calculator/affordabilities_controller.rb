@@ -18,11 +18,12 @@ module MortgageCalculator
 
     def step_2
       persist_affordability_params_to_session
-
       @affordability = affordability_model
 
-      unless @affordability.valid_for_step2?
-        redirect_to step_1_affordability_path
+      if request.post?
+        if @affordability.valid_for_step3?
+          redirect_to step_3_affordability_path
+        end
       end
     end
 
