@@ -1,4 +1,4 @@
-<%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: localize_route("step_2_affordability_path"), html: { name: 'affordability_form', role: 'form', novalidate: '' } do |f| %>
+<%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: localize_route("step_1_affordability_path"), html: { name: 'affordability_form', role: 'form', novalidate: '' } do |f| %>
   <% f.validates @affordability, @affordability.people[0], @affordability.people[1] %>
 
   <div class="affcalc__col--clip">

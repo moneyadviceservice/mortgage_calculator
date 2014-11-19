@@ -1,35 +1,37 @@
 module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
-    before_filter :no_cache, only: [:step_1, :step_2]
-
+    before_action :no_cache, only: [:step_1, :step_2]
+    before_action :persist_affordability_params_to_session,
+      only: [:step_1, :step_2, :step_3]
     def step_1
       @affordability = affordability_model
-      @affordability.valid? unless @affordability.empty?
+
+      if request.post?
+        unless @affordability.empty?
+          if @affordability.valid_for_step2?
+            redirect_to step_2_affordability_path
+          end
+        end
+      end
     end
 
     def step_2
-      persist_affordability_params_to_session
-
       @affordability = affordability_model
 
-      unless @affordability.valid_for_step2?
-        redirect_to step_1_affordability_path
+      if request.post?
+        if @affordability.valid_for_step3?
+          redirect_to step_3_affordability_path
+        end
       end
     end
 
     def step_3
-      persist_affordability_params_to_session
-
       @affordability = affordability_model
 
-      if @affordability.valid_for_step3?
-        if @affordability.over_committed?
-          render :over_committed
-        else
-          adjust_interest_rate
-        end
+      if @affordability.over_committed?
+        render :over_committed
       else
-        redirect_to step_2_affordability_path
+        adjust_interest_rate
       end
     end
 
