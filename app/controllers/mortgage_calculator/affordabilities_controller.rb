@@ -1,10 +1,9 @@
 module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
-    before_filter :no_cache, only: [:step_1, :step_2]
-
+    before_action :no_cache, only: [:step_1, :step_2]
+    before_action :persist_affordability_params_to_session,
+      only: [:step_1, :step_2, :step_3]
     def step_1
-      persist_affordability_params_to_session
-
       @affordability = affordability_model
 
       if request.post?
@@ -17,7 +16,6 @@ module MortgageCalculator
     end
 
     def step_2
-      persist_affordability_params_to_session
       @affordability = affordability_model
 
       if request.post?
@@ -28,8 +26,6 @@ module MortgageCalculator
     end
 
     def step_3
-      persist_affordability_params_to_session
-
       @affordability = affordability_model
 
       if @affordability.valid_for_step3?
