@@ -26,29 +26,24 @@ module MortgageCalculator
         get :step_1
         expect(response.headers["Cache-Control"]).to eql("no-store")
       end
+
+      it "persists and loads persisted data from the session" do
+        post :step_1, affordability: { cat: 'meow' }
+        get :step_1
+        expect(session[:affordability]['cat']).to eq('meow')
+      end
     end
 
     describe '#step_2' do
-      context "when there is a validation error" do
-        render_views
+      it 'uses no-store header for caching' do
+        get :step_2
+        expect(response.headers["Cache-Control"]).to eql("no-store")
+      end
 
-        before :each do
-          post :step_2, affordability: {
-                          people_attributes: {
-                            "0"=>{annual_income: "1", extra_income: "0", monthly_net_income: "1000"}
-                          },
-                          outgoings: {},
-                          lifestyle_costs: "3000"
-                        }
-        end
-
-        it "redirect to step_1" do
-          expect(response.body).to redirect_to(step_1_affordability_path)
-        end
-
-        it 'uses no-store header for caching' do
-          expect(response.headers["Cache-Control"]).to eql("no-store")
-        end
+      it "persists and loads persisted data from the session" do
+        post :step_2, affordability: { cat: 'meow' }
+        get :step_2
+        expect(session[:affordability]['cat']).to eq('meow')
       end
     end
 
