@@ -3,16 +3,20 @@
     <div class="form__item">
       <%= f.label :price %>
       <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
-      <%= f.text_field :price,
-                       :value => @stamp_duty.price_formatted,
-                       class: 'dynamic-slider-property',
-                       "autofocus" => '',
-                       "ng-model" => "stampDuty.propertyPrice",
-                       "placeholder" => "£0.00",
-                       "currency" => '',
-                       "data-a-sign" =>"£",
-                       "data-m-dec" =>"0",
-                       "pattern" => '\d*' %>
+
+      <span class="form__input-container">
+        <span class="form__input-label">£</span>
+        <%= f.text_field :price,
+                         :value => @stamp_duty.price_formatted,
+                         class: 'form__input dynamic-slider-property',
+                         "autofocus" => '',
+                         "ng-model" => "stampDuty.propertyPrice",
+                         "placeholder" => "0.00",
+                         "currency" => '',
+                         "data-m-dec" =>"0",
+                         "pattern" => '\d*' %>
+        <span class="form__input-outline"></span>
+      </span>
 
     </div>
   </div>

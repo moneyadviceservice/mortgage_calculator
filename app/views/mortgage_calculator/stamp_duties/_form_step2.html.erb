@@ -2,23 +2,26 @@
   <div class="form__item">
     <%= f.label :price %>
     <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
-    <%= f.text_field :price,
-                     :value => @stamp_duty.price_formatted,
-                     class: 'dynamic-slider-property',
-                     "ng-model" => "stampDuty.propertyPrice",
-                     "placeholder" => "£0.00",
-                     "currency" => '',
-                     "data-a-sign" => "£",
-                     "data-m-dec" => "0",
-                     "analytics" => "",
-                     "analytics-on" => "change",
-                     "analytics-category" => "Stamp Duty Calculator",
-                     "analytics-action" => "Refinement",
-                     "analytics-label" => "Price",
-                     "pattern" => '\d*',
-                     "aria-describedby" => 'mc_accessibility_describe_price'
-                     %>
 
+    <span class="form__input-container">
+      <span class="form__input-label">£</span>
+      <%= f.text_field :price,
+                       :value => @stamp_duty.price_formatted,
+                       class: 'form__input dynamic-slider-property',
+                       "ng-model" => "stampDuty.propertyPrice",
+                       "placeholder" => "0.00",
+                       "currency" => '',
+                       "data-m-dec" => "0",
+                       "analytics" => "",
+                       "analytics-on" => "change",
+                       "analytics-category" => "Stamp Duty Calculator",
+                       "analytics-action" => "Refinement",
+                       "analytics-label" => "Price",
+                       "pattern" => '\d*',
+                       "aria-describedby" => 'mc_accessibility_describe_price'
+                       %>
+      <span class="form__input-outline"></span>
+    </span>
 
     <div class="slider" ui-slider dynamic-for='dynamic-slider-property' ng-model="stampDuty.propertyPrice" analytics-category="Stamp Duty" analytics-action="Refinement" analytics-label="Price" aria-hidden="true"></div>
   </div>
