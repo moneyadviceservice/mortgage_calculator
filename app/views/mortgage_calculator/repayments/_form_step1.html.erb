@@ -8,30 +8,36 @@
     <div class="form__item">
       <%= f.label :price,
         "id" => "label_initial_price" %>
-      <%= f.text_field :price,
-                      "class" => "js-polyfill dynamic-slider-property",
-                      "ng-model" => "repayments.propertyPrice",
-                      "placeholder" => "£0.00",
-                      "autofocus" => '',
-                      "currency" => '',
-                      "data-a-sign" =>"£",
-                      "data-m-dec" =>"0",
-                      "aria-labelledby" => "label_initial_price",
-                      "pattern" => '\d*' %>
+      <span class="form__input-container">
+        <span class="form__input-label">£</span>
+        <%= f.text_field :price,
+                         "class" => "form__input js-polyfill dynamic-slider-property",
+                         "ng-model" => "repayments.propertyPrice",
+                         "placeholder" => "0.00",
+                         "autofocus" => '',
+                         "currency" => '',
+                         "data-m-dec" =>"0",
+                         "aria-labelledby" => "label_initial_price",
+                         "pattern" => '\d*' %>
+        <span class="form__input-outline"></span>
+      </span>
     </div>
 
     <div class="form__item">
       <%= f.label :deposit,
         "id" => "label_initial_deposit" %>
-      <%= f.text_field :deposit,
-                      "class" => "js-polyfill dynamic-slider-deposit",
-                       "ng-model" => "repayments.deposit",
-                       "placeholder" => "£0.00",
-                       "currency" => '',
-                       "data-a-sign" =>"£",
-                       "data-m-dec" =>"0",
-                       "aria-labelledby" => "label_initial_deposit",
-                       "pattern" => '\d*' %>
+      <span class="form__input-container">
+        <span class="form__input-label">£</span>
+        <%= f.text_field :deposit,
+                         "class" => "form__input js-polyfill dynamic-slider-deposit",
+                         "ng-model" => "repayments.deposit",
+                         "placeholder" => "0.00",
+                         "currency" => '',
+                         "data-m-dec" =>"0",
+                         "aria-labelledby" => "label_initial_deposit",
+                         "pattern" => '\d*' %>
+        <span class="form__input-outline"></span>
+      </span>
     </div>
   </div>
 
