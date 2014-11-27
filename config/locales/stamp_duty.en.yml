@@ -3,6 +3,7 @@ en:
     meta:
       title: "Stamp Duty calculator"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty you’ll need to pay on your new home"
+      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator"
     tool_name: "stamp-duty-calculator"
     pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
     h1: Stamp Duty calculator

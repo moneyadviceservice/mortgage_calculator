@@ -3,6 +3,7 @@ en:
     meta:
       title: "Mortgage Calculator - Work out your mortgage repayments and interest payments"
       description: "Use our Mortgage Calculator to find out your monthly mortgage payments including the repayment and interest payment."
+      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator"
     tool_name: "mortgage-calculator-new"
     activemodel:
       attributes:
