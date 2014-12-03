@@ -1,4 +1,6 @@
-<% set_meta_tags title: t("#{calculator_name}.meta.title"), description: t("#{calculator_name}.meta.description") %>
+<% set_meta_tags title: t("#{calculator_name}.meta.title"),
+                 description: t("#{calculator_name}.meta.description"),
+                 canonical: t("#{calculator_name}.meta.canonical_url") %>
 
 <% content_for(:head) do %>
   <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>

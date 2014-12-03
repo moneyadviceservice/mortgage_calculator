@@ -3,6 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell morgais"
       description: "Defnyddiwch y gyfrifiannell i ganfod faint y gallai’ch taliadau misol fod. Gall hyn eich helpu i weithio allan faint allwch chi fforddio’i fenthyca"
+      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais"
     tool_name: "cyfrifiannell-morgais-newydd"
     activemodel:
       attributes:
