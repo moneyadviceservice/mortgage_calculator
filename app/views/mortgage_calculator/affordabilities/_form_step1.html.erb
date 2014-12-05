@@ -20,7 +20,7 @@
           <%= person.form_row :annual_income do %>
             <%= person.errors_for :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -59,7 +59,7 @@
           <%= person.form_row :extra_income do %>
             <%= person.errors_for :extra_income %>
             <%= person.label :extra_income, "id" => "label_extra_income0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.extra_income") %>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income") %>
               <span class="visually-hidden"><%= t("affordability.per_year") %></span>
             <% end %>
 
@@ -206,7 +206,7 @@
           <%= person.form_row :monthly_net_income do %>
             <%= person.errors_for :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_one.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
+              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
             <% end %>
 
             <span class="form__input-container">
