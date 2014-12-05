@@ -22,38 +22,31 @@ Scenario: House price which is less than £125,000
   Given I visit the Stamp Duty page
   When I enter my house price with "120000"
   Then I see the stamp duty I will have to pay is "£0"
-  And  I see that the stamp duty cost falls into a band of "0%"
 
 Scenario: House price which is over £125,000
   Given I visit the Stamp Duty page
   When I enter my house price with "126000"
-  Then I see the stamp duty I will have to pay is "£1,260"
-  And  I see that the stamp duty cost falls into a band of "1%"
-
+  Then I see the stamp duty I will have to pay is "£20"
 
 Scenario: House price which is over £250,000
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"
-  Then I see the stamp duty I will have to pay is "£7,800"
-  And  I see that the stamp duty cost falls into a band of "3%"
+  Then I see the stamp duty I will have to pay is "£3,000"
 
 Scenario: House price which is over £500,000
   Given I visit the Stamp Duty page
   When I enter my house price with "510000"
-  Then I see the stamp duty I will have to pay is "£20,400"
-  And  I see that the stamp duty cost falls into a band of "4%"
+  Then I see the stamp duty I will have to pay is "£15,500"
 
 Scenario: House price which is over £1 million
   Given I visit the Stamp Duty page
   When I enter my house price with "1100000"
-  Then I see the stamp duty I will have to pay is "£55,000"
-  And  I see that the stamp duty cost falls into a band of "5%"
+  Then I see the stamp duty I will have to pay is "£53,750"
 
 Scenario: House price which is over £2 million
   Given I visit the Stamp Duty page
   When I enter my house price with "2100000"
-  Then I see the stamp duty I will have to pay is "£147,000"
-  And  I see that the stamp duty cost falls into a band of "7%"
+  Then I see the stamp duty I will have to pay is "£165,750"
 
 @wip
 Scenario: User enters invalid property price
