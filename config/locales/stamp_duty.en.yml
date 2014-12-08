@@ -28,6 +28,7 @@ en:
       sentence: "This is %{percentage} of your property price"
       sentence_prefix: This is
       sentence_suffix: "% of your property price"
+      click_to_expand: Click to expand.
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Stamp Duty"
