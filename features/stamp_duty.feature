@@ -1,3 +1,4 @@
+@with_and_without_javascript
 Feature: Stamp Duty Calculator
 So that I know how much stamp duty to pay
 As a user
@@ -25,6 +26,13 @@ Scenario: House price which is over £250,000
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"
   Then I see the stamp duty I will have to pay is "£3,000"
+
+Scenario: I recalculate
+  Given I visit the Stamp Duty page
+  When I enter my house price with "260000"
+  And I see the stamp duty I will have to pay is "£3,000"
+  Then I reenter my house price with "126000"
+  And I see the stamp duty I will have to pay is "£20"
 
 Scenario: House price which is over £500,000
   Given I visit the Stamp Duty page

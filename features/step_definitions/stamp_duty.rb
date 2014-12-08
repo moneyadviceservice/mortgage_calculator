@@ -24,7 +24,12 @@ end
 
 When(/^I enter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
-  @stamp_duty.next.click if js_disabled?
+  @stamp_duty.next.click
+end
+
+Then(/^I reenter my house price with "(.*?)"$/) do |amount|
+  @stamp_duty.property_price_step_two.set amount
+  @stamp_duty.recalculate.click if js_disabled?
 end
 
 Then(/^they see "(.*?)"$/) do |content|
