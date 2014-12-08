@@ -57,6 +57,11 @@ module MortgageCalculator
     def persisted?
       false
     end
+
+    def percentage_tax
+      result = (tax_due / price) * 100
+      result.nan? ? 0 : result
+    end
   end
 end
 

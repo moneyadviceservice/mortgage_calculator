@@ -1,2 +1,4 @@
 <p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze results"><%= number_to_currency @stamp_duty.tax_due_formatted %></p>
 <p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze results">{{ stampDuty.cost() | customCurrency:"£" }}</p>
+
+<p ng-hide="js" class="squeeze results-text"><%= I18n.t("stamp_duty.results.sentence", percentage: number_to_percentage(@stamp_duty.percentage_tax, precision: 1)) %></p>

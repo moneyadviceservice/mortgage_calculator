@@ -25,6 +25,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 0 }
 
       its(:tax_due) { should be_zero }
+      its(:percentage_tax) { should be_zero }
       its(:total_due) { should be_zero }
     end
 
@@ -32,6 +33,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 125000 }
 
       its(:tax_due) { should be_zero }
+      its(:percentage_tax) { should be_zero }
       its(:total_due) { should == 125000 }
     end
 
@@ -39,6 +41,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { BigDecimal('185000.00') }
 
       its(:tax_due) { should == BigDecimal('1200.00') }
+      its(:percentage_tax) { should be_within(0.1).of(0.7) }
       its(:total_due) { should == 186200.00 }
     end
 
@@ -46,6 +49,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 275000 }
 
       its(:tax_due) { should == 3750.00 }
+      its(:percentage_tax) { should be_within(0.1).of(1.4) }
       its(:total_due) { should == 278750 }
     end
 
@@ -53,6 +57,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 510000.00 }
 
       its(:tax_due) { should == 15500.00 }
+      its(:percentage_tax) { should be_within(0.1).of(3) }
       its(:total_due) { should == 525500.00 }
     end
 
@@ -60,6 +65,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 937500 }
 
       its(:tax_due) { should == 37500 }
+      its(:percentage_tax) { should be_within(0.1).of(4) }
       its(:total_due) { should == 975000 }
     end
 
@@ -67,6 +73,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 2100000.00 }
 
       its(:tax_due) { should == 165750 }
+      its(:percentage_tax) { should be_within(0.1).of(7.9) }
       its(:total_due) { should == 2265750.00 }
     end
   end
