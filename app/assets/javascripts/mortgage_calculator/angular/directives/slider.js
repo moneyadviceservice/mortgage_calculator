@@ -138,12 +138,9 @@ App.directive('uiSlider', function() {
     });
   };
 
-  var controller = function($scope) {};
-
   return {
     restrict: 'A',
     require: 'ngModel',
-    controller: controller,
     link: linker,
     scope: {
       value: '=ngModel',

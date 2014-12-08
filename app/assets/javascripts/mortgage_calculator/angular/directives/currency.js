@@ -24,13 +24,9 @@ App.directive('currency', function() {
 
   };
 
-  var controller = function($scope) {
-  };
-
   return {
     restrict: 'A',
     require: '?ngModel',
-    controller: controller,
     link: linker
   };
 });

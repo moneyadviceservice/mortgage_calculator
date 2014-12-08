@@ -16,13 +16,9 @@ App.directive('percentage', function () {
     });
   };
 
-  var controller = function ($scope) {
-  };
-
   return {
       restrict: 'A',
       require: 'ngModel',
-      controller: controller,
       link: linker
   };
 });
