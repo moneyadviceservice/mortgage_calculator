@@ -33,10 +33,6 @@ module MortgageCalculator
       end
     end
 
-    def percentage_rate
-      BigDecimal(RATES.detect{|value,_| price > value}.last)
-    end
-
     def tax_due
       total_tax = BigDecimal('0')
       remaining = price
@@ -60,12 +56,6 @@ module MortgageCalculator
 
     def persisted?
       false
-    end
-
-    private
-
-    def rate
-      percentage_rate / 100
     end
   end
 end
