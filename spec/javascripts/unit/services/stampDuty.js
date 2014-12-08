@@ -17,85 +17,54 @@ describe('Service: StampDuty', function () {
     expect(!!stampDuty).toBe(true);
   });
 
-  describe('#rate', function() {
-    it('calculates the stamp duty percentage rate of a property price', function () {
-      expect(stampDuty.rate()).toBe(0.03);
-    });
-  });
-
-  describe('#percentRate', function() {
-    it('returns the percentage rate of a stamp duty rate', function () {
-      expect(stampDuty.percentRate()).toBe(3);
-    });
-  });
-
-  describe('#cost', function() {
-    it('calculates the stamp duty cost of a property price', function () {
-      expect(stampDuty.cost()).toBe(7800);
-    });
-  });
-
-  describe('#totalPurchase', function() {
-    it('calculates the total purchase price of a property including the stamp duty cost', function () {
-      expect(stampDuty.totalPurchase()).toBe(267800);
-    });
-  });
-
   describe('Stamp Duty Bands', function() {
-    it('applies no stamp duty rate for properties less than £125000', function () {
-      setPrice(120000);
-      expect(stampDuty.rate()).toBe(0);
-      expect(stampDuty.percentRate()).toBe(0);
+    it('when house price is 0', function() {
+      setPrice(0);
+
       expect(stampDuty.cost()).toBe(0);
-      expect(stampDuty.totalPurchase()).toBe(120000);
+      expect(stampDuty.totalPurchase()).toBe(0);
     });
 
-    it('applies a 1% rate for properties over £125000', function () {
-      setPrice(126000);
-      expect(stampDuty.rate()).toBe(0.01);
-      expect(stampDuty.percentRate()).toBe(1);
-      expect(stampDuty.cost()).toBe(1260);
-      expect(stampDuty.totalPurchase()).toBe(127260);
+    it('when house price is 125000', function() {
+      setPrice(125000);
+
+      expect(stampDuty.cost()).toBe(0);
+      expect(stampDuty.totalPurchase()).toBe(125000);
     });
 
-    it('applies a 1% rate for properties exactly £250000', function () {
-      setPrice(250000);
-      expect(stampDuty.rate()).toBe(0.01);
-      expect(stampDuty.percentRate()).toBe(1);
-      expect(stampDuty.cost()).toBe(2500);
-      expect(stampDuty.totalPurchase()).toBe(252500);
+    it('when house price is 185000.00', function() {
+      setPrice(185000);
+
+      expect(stampDuty.cost()).toBe(1200.00);
+      expect(stampDuty.totalPurchase()).toBe(186200.00);
     });
 
-    it('applies a 3% rate for properties over £250000', function () {
-      setPrice(260000);
-      expect(stampDuty.rate()).toBe(0.03);
-      expect(stampDuty.percentRate()).toBe(3);
-      expect(stampDuty.cost()).toBe(7800);
-      expect(stampDuty.totalPurchase()).toBe(267800);
+    it('when house price is 275000', function() {
+      setPrice(275000);
+
+      expect(stampDuty.cost()).toBe(3750.00);
+      expect(stampDuty.totalPurchase()).toBe(278750);
     });
 
-    it('applies a 4% rate for properties over £500000', function () {
-      setPrice(510000);
-      expect(stampDuty.rate()).toBe(0.04);
-      expect(stampDuty.percentRate()).toBe(4);
-      expect(stampDuty.cost()).toBe(20400);
-      expect(stampDuty.totalPurchase()).toBe(530400);
+    it('when house price is 510000.00', function() {
+      setPrice(510000.00);
+
+      expect(stampDuty.cost()).toBe(15500.00);
+      expect(stampDuty.totalPurchase()).toBe(525500.00);
     });
 
-    it('applies a 5% rate for properties over £1 million', function () {
-      setPrice(1100000);
-      expect(stampDuty.rate()).toBe(0.05);
-      expect(stampDuty.percentRate()).toBe(5);
-      expect(stampDuty.cost()).toBe(55000);
-      expect(stampDuty.totalPurchase()).toBe(1155000);
+    it('when house price is 937500', function() {
+      setPrice(937500);
+
+      expect(stampDuty.cost()).toBe(37500);
+      expect(stampDuty.totalPurchase()).toBe(975000);
     });
 
-    it('applies a 7% rate for properties over £2 million', function () {
-      setPrice(2100000);
-      expect(stampDuty.rate()).toBe(0.07);
-      expect(stampDuty.percentRate()).toBe(7);
-      expect(stampDuty.cost()).toBe(147000);
-      expect(stampDuty.totalPurchase()).toBe(2247000);
+    it('when house price is 2100000.00', function() {
+      setPrice(2100000.00);
+
+      expect(stampDuty.cost()).toBe(165750);
+      expect(stampDuty.totalPurchase()).toBe(2265750.00);
     });
   });
 });
