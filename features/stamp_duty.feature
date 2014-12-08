@@ -11,13 +11,6 @@ Scenario: Welsh users
   Given I visit the Welsh Stamp Duty page
   Then  I see the Welsh stamp duty calculator
 
-@javascript
-Scenario: When javascript is enabled
-  Given I visit the Stamp Duty page
-  When  I enter my house price
-  Then  I see how much stamp duty I will have to pay
-  And  I see which band the stamp duty cost falls into
-
 Scenario: House price which is less than £125,000
   Given I visit the Stamp Duty page
   When I enter my house price with "120000"
