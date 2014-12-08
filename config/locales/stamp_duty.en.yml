@@ -8,17 +8,19 @@ en:
     pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
     h1: Stamp Duty calculator
     title: Calculate the Stamp Duty on your residential property
-    subtitle: "Stamp Duty is a tax on the cost of properties over £125,000, with different rates depending on the part of the property that falls within each rate band. Use this calculator to work out how much Stamp Duty you'll need to pay on a new home."
+    subtitle: "You have to pay Stamp Duty (or Stamp Duty Land Tax, to give it its full name) if you buy a property in the UK costing more than £125,000. Use this calculator to work out how much Stamp Duty you'll need to pay if you're buying a new home."
+    legislation_change: "Before 4 December 2014, you paid Stamp Duty at a single rate on the whole purchase price. If you exchanged contracts by midnight on 3 December and the transaction completes on 4 December or later, you can choose whether you pay Stamp Duty at the old or new rates."
+    page_2_description: "Stamp Duty is a tax on the cost of properties over £125,000. The rate you pay depends on the purchase price of the property. The rates were changed on December 4. "
     next: Next
     recalculate: Recalculate
     back: Back
     how_calculated_toggle: "How is this calculated?"
-    how_calculated: "Stamp Duty rates apply only to that part of the property price that falls within each of the following bands:"
+    how_calculated: "Under the new rules from 4 December, you may pay Stamp Duty at several different rates, depending on the purchase price. Under the old rules, there were several different Stamp Duty rates, but you, as a homebuyer, paid the same rate on the whole purchase price."
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
-          price: Price of the property is
+          price: The price of the property is
     caveat:
       title: Important
       one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
@@ -34,21 +36,19 @@ en:
       over: Over
       million: million
     next_steps:
-      title: "Three steps to help budget for costs"
+      title: "Find out more about Stamp Duty and other house buying costs"
       tip_1:
+        heading_html: "Find out when and how to pay Stamp Duty <span class='visually-hidden'>(opens in a new window)</span>"
+        url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
+      tip_2:
         heading_html: "Understand the true costs of buying a home <span class='visually-hidden'>(opens in a new window)</span>"
         url: https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs
-      tip_2:
+      tip_3:
         heading_html: "Work out your home buying budget <span class='visually-hidden'>(opens in a new window)</span>"
         url: https://www.moneyadviceservice.org.uk/en/tools/budget-planner/short-form/edit/money-in
-      tip_3:
-        heading_html: "Build an emergency savings fund <span class='visually-hidden'>(opens in a new window)</span>"
-        url: https://www.moneyadviceservice.org.uk/en/action_plans/build-an-emergency-savings-fund
       learn_more:
         title: "Did you know?"
-        tip_1: "There are some situations in which Stamp Duty doesn't apply. To learn more about them or how you can minimise Stamp Duty on a property purchase, %{link}."
-        tip_1_link_text: read more about Stamp Duty
-        tip_1_link_url: https://www.moneyadviceservice.org.uk/en/articles/everything-you-need-to-know-about-stamp-duty
+        tip_1: "You have to pay Stamp Duty within 30 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
       find_out_more:
         title: Find out more
         tip_1:
