@@ -45,12 +45,16 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $event.preventDefault();
       $scope.viewMonthlyRepayments = true;
       $scope.viewInterestRepayments = false;
+
+      window.focusElementForScreenReaders($('#panel__monthly_repayments').first());
     };
 
     $scope.showInterest = function($event) {
       $event.preventDefault();
       $scope.viewMonthlyRepayments = false;
       $scope.viewInterestRepayments = true;
+
+      window.focusElementForScreenReaders($('#panel__interest_repayments').first());
     };
 
     // Helpers
