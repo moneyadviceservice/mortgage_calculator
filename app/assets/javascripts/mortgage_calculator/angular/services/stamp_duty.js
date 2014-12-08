@@ -54,6 +54,10 @@ App.factory('StampDuty', function() {
 
       totalPurchase : function() {
         return (this.propertyPrice + this.cost());
+      },
+
+      percentageTax : function() {
+        return ((this.cost() / this.propertyPrice) * 100) || 0;
       }
     };
 
