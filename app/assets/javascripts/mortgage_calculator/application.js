@@ -20,6 +20,7 @@
 //= require underscore
 //= require args
 //= require autonumeric
+//= require ./accessibility_helpers
 //= require angular-wizard
 //= require require_config
 //= require mortgage_calculator/mortgage_calculator_app

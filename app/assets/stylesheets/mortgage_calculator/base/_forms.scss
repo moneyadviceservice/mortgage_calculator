@@ -20,12 +20,14 @@ label {
 }
 
 .field_with_errors {
-  input[type="text"] {
+  input[type="text"],
+  input[type="number"] {
     border-top-color: $color-error;
   }
 }
 
 input[type="text"],
+input[type="number"],
 .form__input-label {
   font-family: 'museo_sans';
   font-weight: 500;
@@ -36,3 +38,13 @@ input[type="text"],
   }
 }
 
+/* Hide the increment/decrement buttons on number type inputs */
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

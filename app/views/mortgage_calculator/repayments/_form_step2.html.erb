@@ -17,7 +17,8 @@
                        "analytics-category" => 'Mortgage Calculator',
                        "analytics-action" => 'Refinement',
                        "analytics-label" => 'Price',
-                       "pattern" => '\d*'
+                       "pattern" => '\d*',
+                       "autoselect" => ""
                    %>
       <span class="form__input-outline"></span>
     </span>
@@ -43,7 +44,8 @@
                        "analytics-category" => 'Mortgage Calculator',
                        "analytics-action" => 'Refinement',
                        "analytics-label" => 'Deposit',
-                       "pattern" => '\d*'
+                       "pattern" => '\d*',
+                       "autoselect" => ""
                        %>
       <span class="form__input-outline"></span>
     </span>
@@ -66,7 +68,8 @@
                        "analytics-category" => 'Mortgage Calculator',
                        "analytics-action" => 'Refinement',
                        "analytics-label" => 'Years',
-                       "pattern" => '\d*'
+                       "pattern" => '\d*',
+                       "autoselect" => ""
                        %>
       <span class="form__input-label">years</span>
       <span class="form__input-outline"></span>
@@ -79,7 +82,7 @@
     <%= f.label :interest_rate,
     	"id" => "label_rate" %>
     <span class="form__input-container">
-      <%= f.text_field :interest_rate,
+      <%= f.number_field :interest_rate,
                        "class" => "form__input",
                        "ng-model" => "repayments.annualInterestRate",
                        "placeholder" => "eg 5",
@@ -91,7 +94,8 @@
                        "analytics-category" => 'Mortgage Calculator',
                        "analytics-action" => 'Refinement',
                        "analytics-label" => 'Interest Rate',
-                       "pattern" => '\d*'
+                       "step" => "0.01",
+                       "autoselect" => ""
                        %>
       <span class="form__input-label">%</span>
       <span class="form__input-outline"></span>

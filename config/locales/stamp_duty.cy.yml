@@ -28,6 +28,7 @@ cy:
       sentence: "Dyma %{percentage} o bris eich eiddo"
       sentence_prefix: "Dyma"
       sentence_suffix: "% o bris eich eiddo"
+      click_to_expand: Cliciwch i ehangu
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
