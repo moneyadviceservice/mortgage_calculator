@@ -8,18 +8,19 @@ cy:
     pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
     h1: "Cyfrifiannell treth stamp"
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
-    subtitle: "Mae treth stamp yn dreth ar gost eiddo dros £125,000, gyda gwahanol gyfraddau yn ddibynnol ar y pris prynu. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp fydd angen i chi dalu ar gartref newydd."
-    legislation_change: Mae'r gyfrifiannell hon yn cael ei hadolygu ar hyn o bryd. Caiff ei diweddaru'n fuan i adlewyrchu cyfraddau newydd y Dreth Stamp sy'n weithredol o 4 Rhagfyr 2014.
+    subtitle: "Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw'n llawn) os prynwch eiddo yn y Deyrnas Unedig sy'n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd angen i chi ei thalu os ydych yn prynu cartref newydd."
+    legislation_change: "Cyn 4 Rhagfyr 2014, roeddech yn talu Treth Stamp ar un gyfradd ar y pris prynu cyfan. Os bu i chi gyfnewid cytundebau erbyn hanner nos ar 3 Rhagfyr a chwblhau'r trafodion ar 4 Rhagfyr neu'n hwyrach, gallwch ddewis talu Treth Stamp ar yr hen gyfraddau neu'r rhai newydd."
+    page_2_description: "Treth stamp yw treth ar gost eiddo dros £125,000. Bydd y gyfradd a dalwch yn dibynnu ar bris prynu’ch cartref. Newidiwyd y cyfraddau ar 4 Rhagfyr."
     next: "Nesaf"
     recalculate: Ailgyfrifo
     back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Cyfrifir treth stamp fel canran o bris eich eiddo"
+    how_calculated: "Dan y rheolau newydd o 4 Rhagfyr, cewch dalu Treth Stamp ar amryw o wahanol gyfraddau, yn ddibynnol ar y pris prynu. Dan yr hen reolau, roedd amryw o wahanol gyfraddau o Dreth Stamp, ond roeddech chi, fel prynwr cartref, yn talu'r un gyfradd ar y pris prynu cyfan."
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
-          price: Cyfanswm pris yr eiddo yw
+          price: Pris yr eiddo yw
     caveat:
       title: "Pwysig"
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
@@ -35,21 +36,19 @@ cy:
       over: Dros
       million: miliwn
     next_steps:
-      title: "Tri cham i helpu i gyllidebu am gostau"
+      title: "Dysgwch ragor am Dreth Stamp a chostau eraill ynghlwm â phrynu cartref"
       tip_1:
-        heading_html: "Deall costau gwirioneddol prynu cartref"
-        url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+        heading_html: "Dysgwch pa bryd a sut i dalu Treth Stamp <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
+        url: "https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
       tip_2:
-        heading_html: "Cyfrifwch eich cyllideb ar gyfer prynu cartref"
-        url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
+        heading_html: "Deall costau gwirioneddol prynu cartref <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
+        url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
       tip_3:
-        heading_html: "Adeiladwch gronfa cynilion argyfwng"
-        url: "https://www.moneyadviceservice.org.uk/cy/action_plans/adeiladu-cronfa-cynilion-argyfwng"
+        heading_html: "Cyfrifwch eich cyllideb ar gyfer prynu cartref <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
+        url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
       learn_more:
         title: "A wyddech chi?"
-        tip_1: "Mae rhai sefyllfaoedd lle nad yw treth stamp yn gymwys. I ddysgu rhagor amdanynt neu sut y gallwch leihau treth stamp ar brynu eiddo, %{link}."
-        tip_1_link_text: darllenwch fwy am dreth stamp
-        tip_1_link_url: "https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
+        tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 30 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
       find_out_more:
         title: "Darganfyddwch fwy"
         tip_1:

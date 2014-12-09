@@ -24,7 +24,12 @@ end
 
 When(/^I enter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
-  @stamp_duty.next.click if js_disabled?
+  @stamp_duty.next.click
+end
+
+Then(/^I reenter my house price with "(.*?)"$/) do |amount|
+  @stamp_duty.property_price_step_two.set amount
+  @stamp_duty.recalculate.click if js_disabled?
 end
 
 Then(/^they see "(.*?)"$/) do |content|
@@ -34,14 +39,6 @@ end
 When(/^I enter my house price$/) do
   @stamp_duty.property_price.set "300000"
   @stamp_duty.next.click
-end
-
-Then(/^I see how much stamp duty I will have to pay$/) do
-  expect(@stamp_duty).to have_content("£9,000.00")
-end
-
-And(/^I see which band the stamp duty cost falls into$/) do
-  expect(@stamp_duty).to have_content("3% of your property price")
 end
 
 Then(/^I see the stamp duty I will have to pay is "(.*?)"$/) do |content|

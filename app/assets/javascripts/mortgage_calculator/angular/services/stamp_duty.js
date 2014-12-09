@@ -3,35 +3,61 @@
 App.factory('StampDuty', function() {
     var stampDuty = {
       propertyPrice : 0,
-      rates         : [
-        {'2000001' : 0.07},
-        {'1000001' : 0.05},
-        {'500001'  : 0.04},
-        {'250001'  : 0.03},
-        {'125001'  : 0.01},
-        {'0'       : 0}
+      rates: [
+        {
+          threshold: 125000,
+          rate: 0
+        }, {
+          threshold: 250000,
+          rate: 2
+        }, {
+          threshold: 925000,
+          rate: 5
+        }, {
+          threshold: 1500000,
+          rate: 10
+        }, {
+          threshold: 100000000,
+          rate: 12
+        }
       ],
 
-      rate : function() {
-        var value = _.find(this.rates, function(el) {
-          var thresh = Number(_.keys(el));
-          return this.propertyPrice >= thresh;
-        }, this);
+      cost: function() {
+        var totalTax = 0,
+            remaining = this.propertyPrice;
 
-        var appliedRate = Number(_.values(value));
-        return appliedRate;
-      },
+        for (var i = 0; i < this.rates.length; i++) {
+          var rateObj = this.rates[i],
+              previousRateObj = i > 0 ? this.rates[i - 1] : null,
+              bandwidth = 0,
+              remainingTaxable = 0,
+              bandTaxable = 0;
 
-      percentRate : function() {
-        return Math.round(this.rate() * 100);
-      },
+          if (!previousRateObj) {
+            bandwidth = rateObj.threshold;
+          } else {
+            bandwidth = rateObj.threshold - previousRateObj.threshold;
+          }
 
-      cost : function() {
-        return this.rate() * this.propertyPrice;
+          remainingTaxable = Math.min(rateObj.threshold, remaining);
+          bandTaxable = Math.min(bandwidth, remainingTaxable);
+          totalTax += (bandTaxable * rateObj.rate / 100);
+          remaining -= bandwidth;
+
+          if (remaining < 0) {
+            break;
+          }
+        }
+
+        return totalTax;
       },
 
       totalPurchase : function() {
         return (this.propertyPrice + this.cost());
+      },
+
+      percentageTax : function() {
+        return ((this.cost() / this.propertyPrice) * 100) || 0;
       }
     };
 
