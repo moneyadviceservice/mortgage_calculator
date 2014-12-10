@@ -3,8 +3,6 @@
                  canonical: t("#{calculator_name}.meta.canonical_url") %>
 
 <% content_for(:head) do %>
-  <%# Basic styles for all devices, doesnt contain anything that could cause rendering issues such as positional info %>
-    <%= stylesheet_link_tag 'mortgage_calculator_basic' %>
 
     <% if disable_responsiveness? %>
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
