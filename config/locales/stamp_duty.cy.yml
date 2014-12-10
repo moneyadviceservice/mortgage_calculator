@@ -26,9 +26,9 @@ cy:
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
     results:
       title: "Y dreth stamp i'w thalu yw"
-      sentence: "Dyma %{percentage} o bris eich eiddo"
-      sentence_prefix: "Dyma"
-      sentence_suffix: "% o bris eich eiddo"
+      sentence: "%{percentage}"
+      sentence_prefix: ""
+      sentence_suffix: "%"
       click_to_expand: Cliciwch i ehangu
     table:
       property_price_header: "Pris Prynu"
