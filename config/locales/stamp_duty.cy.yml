@@ -51,21 +51,15 @@ cy:
         tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 30 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
       find_out_more:
         title: "Darganfyddwch fwy"
-        tip_1:
-          copy_html: "Cyfrifiannell Morgais"
-          url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais-newydd"
-        tip_2:
-          copy_html: "Costau ymlaen llaw prynu cartref"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
-        tip_3:
-          copy_html: "Ffioedd a chostau morgais"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-        tip_4:
-          copy_html: "Costau argyfwng"
-          url: "https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng"
-        tip_5:
-          copy_html: "Costau diwrnod symud"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+        tips:
+          - copy_html: "Costau ymlaen llaw prynu cartref"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          - copy_html: "Ffioedd a chostau morgais"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
+          - copy_html: "Costau argyfwng"
+            url: "https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng"
+          - copy_html: "Costau diwrnod symud"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
       have_you_tried:
         title: 'Rhowch gynnig ar?'
         mortgage_calculator: "Cyfrifiannell morgais"
