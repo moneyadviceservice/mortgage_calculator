@@ -51,21 +51,15 @@ en:
         tip_1: "You have to pay Stamp Duty within 30 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
       find_out_more:
         title: Find out more
-        tip_1:
-          copy_html: Mortgage calculator
-          url: "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator-new"
-        tip_2:
-          copy_html: Upfront home buying costs
-          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
-        tip_3:
-          copy_html: Mortgage fees and costs
-          url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
-        tip_4:
-          copy_html: Emergency costs
-          url: "https://www.moneyadviceservice.org.uk/en/news/too-many-first-time-buyers-unprepared-for-emergency-costs-14022014"
-        tip_5:
-          copy_html: Costs of moving day
-          url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+        tips:
+          - copy_html: Upfront home buying costs
+            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          - copy_html: Mortgage fees and costs
+            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Emergency costs
+            url: "https://www.moneyadviceservice.org.uk/en/news/too-many-first-time-buyers-unprepared-for-emergency-costs-14022014"
+          - copy_html: Costs of moving day
+            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
         title: 'Have you tried?'
         mortgage_calculator: "Mortgage calculator"

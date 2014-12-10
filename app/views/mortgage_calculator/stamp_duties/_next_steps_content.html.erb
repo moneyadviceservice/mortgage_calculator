@@ -27,9 +27,9 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge">
   <h3 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h3>
   <ul>
-  <% (1..5).each do |n| %>
-    <li><%= link_to t("stamp_duty.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("stamp_duty.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
-  <% end %>
+    <% I18n.t("stamp_duty.next_steps.find_out_more.tips").each do |tip| %>
+      <li><%= link_to tip[:copy_html], tip[:url], target: "_blank", rel: no_follow? %></li>
+    <% end %>
   </ul>
 </div>
 
