@@ -1,8 +1,8 @@
 cy:
   affordability:
     meta:
-      title: "Cyfrifiannell fforddiadwyedd morgais - Gwasanaeth Cynghori Ariannol"
-      description: "Cyfrifiannell fforddiadwyedd morgais"
+      title: "Cyfrifiannell fforddiadwyedd morgais – Faint o forgais allwch chi fforddio ei fenthyca?"
+      description: "Defnyddiwch gyfrifiannell fforddiadwyedd morgais y Gwasanaeth Cynghori Ariannol i ganfod faint o forgais allwch chi fforddio ei fenthyca ar gyfer eich tŷ newydd"
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
     tool_name: "cyfrifiannell-fforddiadwyedd-morgais"
     title: "Faint allwch chi ei fenthyg?"

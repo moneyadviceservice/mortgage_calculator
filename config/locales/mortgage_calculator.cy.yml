@@ -1,8 +1,8 @@
 cy:
   mortgage_calculator:
     meta:
-      title: "Cyfrifiannell morgais"
-      description: "Defnyddiwch y gyfrifiannell i ganfod faint y gallai’ch taliadau misol fod. Gall hyn eich helpu i weithio allan faint allwch chi fforddio’i fenthyca"
+      title: "Cyfrifiannell Morgais - Cyfrifwch eich ad-daliadau morgais a'ch taliadau llog"
+      description: "Defnyddiwch ein Cyfrifiannell Morgais i ganfod faint fydd eich taliadau morgais misol yn cynnwys yr ad-daliad a'r taliad llog."
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais"
     tool_name: "cyfrifiannell-morgais-newydd"
     activemodel:
