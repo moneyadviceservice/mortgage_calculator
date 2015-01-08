@@ -4,18 +4,6 @@ module MortgageCalculator
   describe AffordabilitiesController do
     routes { MortgageCalculator::Engine.routes }
 
-    describe 'when feature is toggled off' do
-      it 'the stamp duty calculator is not available' do
-        MortgageCalculator.affordability_enabled = false
-        Rails.application.reload_routes!
-
-        expect{get :show}.to raise_error(ActionController::RoutingError)
-
-        MortgageCalculator.affordability_enabled = true
-        Rails.application.reload_routes!
-      end
-    end
-
     describe '#step_1' do
       it 'responds with 200' do
         get :step_1
