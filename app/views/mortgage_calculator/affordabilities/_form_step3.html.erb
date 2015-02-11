@@ -1,5 +1,5 @@
 <div class="affcalc__col">
-  <h2><%= I18n.t("affordability.title") %></h2>
+  <h1><%= I18n.t("affordability.title") %></h1>
 </div>
 
 <%= form_for @affordability, builder: Dough::Forms::Builders::Validation, url: localize_route("step_3_affordability_path"), html: { name: 'affordability_form', role: 'form', class: 'step_two', novalidate: '', "ng-no-submit" => "" } do |f| %>
@@ -41,7 +41,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
-      <h3><%= t "affordability.titles.how_affect_budget" %></h3>
+      <h2><%= t "affordability.titles.how_affect_budget" %></h2>
 
       <% if @affordability.only_rent_and_mortgage_warning? %>
         <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",
@@ -71,7 +71,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
-      <h3><%= t "affordability.titles.can_afford" %></h3>
+      <h2><%= t "affordability.titles.can_afford" %></h2>
 
       <% if @affordability.missing_lifestyle_costs_warning? %>
         <%= inset_block(t("affordability.warnings.missing_lifestyle_costs_html",
@@ -136,7 +136,7 @@
 
       <%= render "mortgage_calculator/affordabilities/form/remaining_vector" %>
 
-      <h3><%= t "affordability.interest_changer.title" %></h3>
+      <h2><%= t "affordability.interest_changer.title" %></h2>
       <%= render 'mortgage_calculator/affordabilities/form/interest_changes' %>
     </div>
   </div>
