@@ -8,11 +8,11 @@
   <% f.validates @affordability, @affordability.outgoings %>
 
   <div class="affcalc__col--clip">
-    <h2><%= t("affordability.title") %></h2>
+    <h1><%= t("affordability.title") %></h1>
 
     <%= f.validation_summary %>
 
-    <h3><%= t("affordability.titles.monthly_outgoings") %></h3>
+    <h2><%= t("affordability.titles.monthly_outgoings") %></h2>
 
     <p><%= t("affordability.input_page.monthly_outgoings_descriptions_html") %></p>
     <p><strong><%= t("affordability.input_page.monthly_outgoings_descriptions_2_html") %></strong></p>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="affcalc__col">
-    <h4><%= I18n.t("affordability.titles.estimated_committed") %></h4>
+    <h3><%= I18n.t("affordability.titles.estimated_committed") %></h3>
   </div>
 
   <%= f.fields_for :outgoings, @affordability.outgoings do |outgoings| %>
@@ -99,7 +99,7 @@
     </div>
 
 <div class="affcalc__col">
-  <h4><%= I18n.t("affordability.titles.estimated_fixed") %></h4>
+  <h3><%= I18n.t("affordability.titles.estimated_fixed") %></h3>
 </div>
 
 <div class="affcalc__row">
@@ -244,7 +244,7 @@
       <% end %>
 
   <div class="affcalc__col">
-    <h3><%= I18n.t("affordability.titles.estimated_lifestyle") %></h3>
+    <h2><%= I18n.t("affordability.titles.estimated_lifestyle") %></h2>
     <p><%= t "affordability.input_page.living_costs_description" %></p>
   </div>
 
