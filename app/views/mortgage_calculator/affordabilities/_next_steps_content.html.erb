@@ -1,5 +1,5 @@
 <div class="affcalc__col--clip">
-  <h2 class="mortgagecalc__heading"><%= t("affordability.next_steps.title") %></h2>
+  <h4 class="mortgagecalc__heading"><%= t("affordability.next_steps.title") %></h4>
 
   <ol class="featured-list">
     <li><strong><%= t("affordability.next_steps.tip_1.heading") %></strong> <%= link_to t("affordability.next_steps.tip_1.info_html"), t("affordability.next_steps.tip_1.url"), target: "_blank", rel: no_follow? %></li>
@@ -11,7 +11,7 @@
 <div class="affcalc__row">
   <div class="affcalc__col--33">
     <div class="callout">
-      <h3 class="mortgagecalc__subheading"><%= t("affordability.next_steps.learn_more.title") %>:</h3>
+      <h5 class="mortgagecalc__subheading"><%= t("affordability.next_steps.learn_more.title") %>:</h5>
 
       <% (1..2).each do |i| %>
         <p><%= t("affordability.next_steps.learn_more.tip_#{i}") %></p>
@@ -22,7 +22,7 @@
   </div>
 
   <div class="affcalc__col--33 mortgagecalc__panel mortgagecalc__panel--nudge">
-    <h3 class="mortgagecalc__subheading"><%= t("affordability.next_steps.find_out_more.title") %>:</h3>
+    <h5 class="mortgagecalc__subheading"><%= t("affordability.next_steps.find_out_more.title") %>:</h5>
     <ul>
       <% (1..7).each do |n| %>
         <li><%= link_to t("affordability.next_steps.find_out_more.tip_#{n}.copy_html"), t("affordability.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
