@@ -5,7 +5,8 @@ cy:
       description: "Defnyddiwch gyfrifiannell fforddiadwyedd morgais y Gwasanaeth Cynghori Ariannol i ganfod faint o forgais allwch chi fforddio ei fenthyca ar gyfer eich tŷ newydd"
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
     tool_name: "cyfrifiannell-fforddiadwyedd-morgais"
-    title: "Faint allwch chi ei fenthyg?"
+    title: Cyfrifiannell fforddiadwyedd morgais
+    sub_title: "Faint allwch chi ei fenthyg?"
     preamble: "Bydd yr offeryn hwn yn eich helpu i amcangyfrif faint y gallwch fforddio ei fenthyg i brynu cartref. Byddwn yn ei gyfrifo trwy edrych ar eich incwm a’ch gwariant. Bydd benthycwyr morgeisi yn edrych yn agos ar y ffigurau hyn i gyfrifo faint fyddant yn ei gynnig i chi."
     description: "Ni ddylai gymryd mwy na pum munud i’w lenwi."
     next: "Nesaf"
