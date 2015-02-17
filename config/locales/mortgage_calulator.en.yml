@@ -15,7 +15,8 @@ en:
         mortgage_calculator/stamp_duty:
           price: Price of the property is
     repayment:
-      title: Calculate your monthly mortgage payment
+      title: Mortgage Calculator
+      sub_title: Calculate your monthly mortgage payment
       next: Next
       back: Back
       a_month: a month
