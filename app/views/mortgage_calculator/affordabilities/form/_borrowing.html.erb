@@ -14,7 +14,7 @@
   "value" => @affordability.borrowing_formatted
 %>
 
-<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="1000" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing" ng-docked="docked"></div>
+<div class="slider slider--with-follower-top slider--squeeze" ui-slider min="affordability.minimumBorrowing()" max="affordability.maximumBorrowing()" step="10" ng-model="repayments.propertyPrice" label-follower="#borrowing-amount" aria-labelledby="borrowing-amount" analytics-category="Affordability Calculator" analytics-action="Refinement" analytics-label="Borrowing" id="slider-borrowing" ng-docked="docked"></div>
 
 <p class="rendered-from-js borrowing-range">
   <span class="borrowing-range__min">
