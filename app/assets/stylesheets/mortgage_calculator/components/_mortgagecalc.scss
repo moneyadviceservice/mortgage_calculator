@@ -93,12 +93,11 @@
   font-size: px(40);
 }
 
-@media (max-width: 425px){
-  .mortgagecalc__submit{
+@media (max-width: $mq-s) {
+  .mortgagecalc__submit {
     max-width: 250px;
-    white-space: normal
+    white-space: normal;
   }
-
 }
 
 .mortgagecalc__submit {
