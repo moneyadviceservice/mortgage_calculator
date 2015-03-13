@@ -29,7 +29,8 @@ App.directive('uiSlider', function() {
             'event': 'GAEvent',
             'eventCategory': category,
             'eventAction'  : action,
-            'eventLabel'   : label
+            'eventLabel'   : label,
+            'tool_name'    : 'mortg_calc'
           });
 
           element.attr('refined', '');

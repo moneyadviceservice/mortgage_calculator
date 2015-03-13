@@ -13,7 +13,8 @@ App.directive('analytics', function () {
           'event': 'GAEvent',
           'eventCategory': category,
           'eventAction'  : action,
-          'eventLabel'   : label
+          'eventLabel'   : label,
+          'tool_name'    : 'mortg_calc'
         });
       }
     });
@@ -27,7 +28,8 @@ App.directive('analytics', function () {
               'event': 'GAEvent',
               'eventCategory': category,
               'eventAction'  : action,
-              'eventLabel'   : label
+              'eventLabel'   : label,
+              'tool_name'    : 'mortg_calc'
             });
 
             element.attr('refined', '');
@@ -37,7 +39,8 @@ App.directive('analytics', function () {
             'event': 'GAEvent',
             'eventCategory': category,
             'eventAction'  : action,
-            'eventLabel'   : label
+            'eventLabel'   : label,
+            'tool_name'    : 'mortg_calc'
           });
 
         }
