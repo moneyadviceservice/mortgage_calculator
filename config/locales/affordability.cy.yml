@@ -179,27 +179,19 @@ cy:
           url: "https://www.moneyadviceservice.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
       find_out_more:
         title: "Cewch fwy o wybodaeth yn"
-        tip_1:
-          copy_html: "Costau prynu"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
-        tip_2:
-          copy_html: "Cynllunydd Cyllideb"
-          url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
-        tip_3:
-          copy_html: "Mwy am gyfraddau llog"
-          url: "https://www.moneyadviceservice.org.uk/en/news/how-will-interest-rate-rises-affect-you"
-        tip_4:
-          copy_html: "Gwella eich statws credyd"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd"
-        tip_5:
-          copy_html: "Cynlluniau tai fforddiadwy"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
-        tip_6:
-          copy_html: "Cynilo ar gyfer blaendal"
-          url: "https://www.moneyadviceservice.org.uk/cy/tools/cynilo-ar-gyfer-blaendal"
-        tip_7:
-          copy_html: "Tabl cymharu morgeisi"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+        tips:
+          - copy_html: "Costau prynu"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          - copy_html: "Cynllunydd Cyllideb"
+            url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
+          - copy_html: "Gwella eich statws credyd"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd"
+          - copy_html: "Cynlluniau tai fforddiadwy"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          - copy_html: "Cynilo ar gyfer blaendal"
+            url: "https://www.moneyadviceservice.org.uk/cy/tools/cynilo-ar-gyfer-blaendal"
+          - copy_html: "Tabl cymharu morgeisi"
+            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
       have_you_tried:
         title: "Rhowch gynnig ar"
         mortgage_calculator: "Cyfrifiannell Morgais"

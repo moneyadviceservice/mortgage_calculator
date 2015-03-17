@@ -179,27 +179,19 @@ en:
           url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
       find_out_more:
         title: "Find out more"
-        tip_1:
-          copy_html: "Costs of buying"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
-        tip_2:
-          copy_html: "Budget Planner"
-          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
-        tip_3:
-          copy_html: "More about interest rates"
-          url: "https://www.moneyadviceservice.org.uk/en/news/how-will-interest-rate-rises-affect-you"
-        tip_4:
-          copy_html: "Improve your credit rating"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating"
-        tip_5:
-          copy_html: "Affordable housing schemes"
-          url: "https://www.moneyadviceservice.org.uk/en/categories/affordable-housing-schemes"
-        tip_6:
-          copy_html: "Saving for a deposit"
-          url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
-        tip_7:
-          copy_html: "Mortgage comparison table"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+        tips:
+          - copy_html: "Costs of buying"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          - copy_html: "Budget Planner"
+            url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+          - copy_html: "Improve your credit rating"
+            url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-improve-your-credit-rating"
+          - copy_html: "Affordable housing schemes"
+            url: "https://www.moneyadviceservice.org.uk/en/categories/affordable-housing-schemes"
+          - copy_html: "Saving for a deposit"
+            url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+          - copy_html: "Mortgage comparison table"
+            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage Calculator"
