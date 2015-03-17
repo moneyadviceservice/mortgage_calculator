@@ -21,6 +21,7 @@ App.directive('uiSlider', function() {
       var category = attrs.analyticsCategory,
           action = attrs.analyticsAction,
           label = attrs.analyticsLabel,
+          toolName = attrs.analyticsToolName,
           refined = element.attr('refined');
 
       if (action == 'Refinement') {
@@ -30,7 +31,7 @@ App.directive('uiSlider', function() {
             'eventCategory': category,
             'eventAction'  : action,
             'eventLabel'   : label,
-            'tool_name'    : 'mortg_calc'
+            'tool_name'    : toolName
           });
 
           element.attr('refined', '');
