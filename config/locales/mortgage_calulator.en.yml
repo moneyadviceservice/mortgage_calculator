@@ -67,24 +67,17 @@ en:
             url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
         find_out_more:
           title: Find out more
-          tip_1:
-            copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
-          tip_2:
-            copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
-          tip_3:
-            copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
-          tip_4:
-            copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
-          tip_5:
-            copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
-          tip_6:
-            copy_html: "Interest rate rises: What you can do now <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/news/interest-rates-what-home-owners-can-do-now-to-beat-the-rise"
+          tips:
+            - copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+            - copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+            - copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+            - copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+            - copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
         have_you_tried:
           title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"

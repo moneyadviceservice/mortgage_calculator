@@ -68,24 +68,17 @@ cy:
             url: "https://www.moneyadviceservice.org.uk/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
         find_out_more:
           title: Dewch o hyd i ragor
-          tip_1:
-            copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
-          tip_2:
-            copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
-          tip_3:
-            copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
-          tip_4:
-            copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
-          tip_5:
-            copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
-          tip_6:
-            copy_html: "Codiadau mewn cyfraddau llog: Dyma beth allwch chi wneud nawr <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/news/cyfraddau-llog-beth-all-perchnogion-cartrefi-ei-wneud-nawr-i-drechuar-codiad"
+          tips:
+            - copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+            - copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
+            - copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+            - copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
+            - copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
         have_you_tried:
           title: 'Rhowch gynnig ar?'
           stamp_duty: "cyfrifiannell Treth Stamp"

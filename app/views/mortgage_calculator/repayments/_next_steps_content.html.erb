@@ -18,8 +18,8 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--nudge">
   <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.title") %>:</h5>
   <ul>
-  <% (1..6).each do |n| %>
-    <li><%= link_to t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.tip_#{n}.url"), target: "_blank", rel: no_follow? %></li>
+  <% I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.tips").each do |tip| %>
+    <li><%= link_to tip[:copy_html].html_safe, tip[:url], target: "_blank", rel: no_follow? %></li>
   <% end %>
   </ul>
 
@@ -42,4 +42,3 @@
 </div>
 
 <p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a></p>
-

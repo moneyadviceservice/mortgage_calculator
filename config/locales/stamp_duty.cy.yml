@@ -56,8 +56,6 @@ cy:
             url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
           - copy_html: "Ffioedd a chostau morgais"
             url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-          - copy_html: "Costau argyfwng"
-            url: "https://www.moneyadviceservice.org.uk/cy/news/prynwyr-tro-cyntaf-yn-amharod-am-gostau-argyfwng"
           - copy_html: "Costau diwrnod symud"
             url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
       have_you_tried:
