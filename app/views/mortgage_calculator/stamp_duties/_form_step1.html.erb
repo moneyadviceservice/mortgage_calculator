@@ -2,7 +2,8 @@
   <div class="intro"><%= I18n.t('stamp_duty.title') %></div>
   <p class="mortgagecalc__intro"><%= I18n.t('stamp_duty.subtitle') %></p>
   <p class="mortgagecalc__intro">
-     <%= I18n.t('stamp_duty.second_subtitle', :href=>link_to( t('stamp_duty.href_second_subtitle'), t('stamp_duty.url_second_subtitle') ) ).html_safe %>
+     <%= I18n.t('stamp_duty.second_subtitle') %>
+     <%= link_to t('stamp_duty.href_second_subtitle'), t('stamp_duty.url_second_subtitle') %>
   </p>
 </div>
 
