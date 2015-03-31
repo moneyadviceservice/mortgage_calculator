@@ -66,4 +66,3 @@ module Dummy
     config.i18n.fallbacks = true
   end
 end
-
