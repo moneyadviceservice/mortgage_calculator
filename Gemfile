@@ -24,5 +24,3 @@ group :test do
   gem 'simplecov', :require => false
   gem 'sqlite3'
 end
-
-gem 'pry'
