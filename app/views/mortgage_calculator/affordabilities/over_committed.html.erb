@@ -5,19 +5,22 @@
       'event': 'GAEvent',
       'eventCategory': 'Affordability Calculator',
       'eventAction'  : 'Completion',
-      'eventLabel'   : 'Click'
+      'eventLabel'   : 'Click',
+      'tool_name'    : 'afford_calc'
     });
     dataLayer.push({
       'event': 'GAEvent',
       'eventCategory': 'Affordability Calculator',
       'eventAction'  : 'Risk Level',
-      'eventLabel'   : '<%= @affordability.risk_level %>'
+      'eventLabel'   : '<%= @affordability.risk_level %>',
+      'tool_name'    : 'afford_calc'
     });
     dataLayer.push({
       'event': 'GAEvent',
       'eventCategory': 'Affordability Calculator',
       'eventAction'  : 'Remaining',
-      'eventLabel'   : 'Non-positive'
+      'eventLabel'   : 'Non-positive',
+      'tool_name'    : 'afford_calc'
     });
   </script>
 <% end %>

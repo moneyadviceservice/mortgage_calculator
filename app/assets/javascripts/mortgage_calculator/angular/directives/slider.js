@@ -21,6 +21,7 @@ App.directive('uiSlider', function() {
       var category = attrs.analyticsCategory,
           action = attrs.analyticsAction,
           label = attrs.analyticsLabel,
+          toolName = attrs.analyticsToolName,
           refined = element.attr('refined');
 
       if (action == 'Refinement') {
@@ -29,7 +30,8 @@ App.directive('uiSlider', function() {
             'event': 'GAEvent',
             'eventCategory': category,
             'eventAction'  : action,
-            'eventLabel'   : label
+            'eventLabel'   : label,
+            'tool_name'    : toolName
           });
 
           element.attr('refined', '');

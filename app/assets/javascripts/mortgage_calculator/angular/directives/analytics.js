@@ -5,7 +5,8 @@ App.directive('analytics', function () {
     var type = attrs.analyticsOn,
         category = attrs.analyticsCategory,
         action = attrs.analyticsAction,
-        label = attrs.analyticsLabel;
+        label = attrs.analyticsLabel,
+        toolName = attrs.analyticsToolName;
 
     element.on('click', function(){
       if (type == 'click'){
@@ -13,7 +14,8 @@ App.directive('analytics', function () {
           'event': 'GAEvent',
           'eventCategory': category,
           'eventAction'  : action,
-          'eventLabel'   : label
+          'eventLabel'   : label,
+          'tool_name'    : toolName
         });
       }
     });
@@ -27,7 +29,8 @@ App.directive('analytics', function () {
               'event': 'GAEvent',
               'eventCategory': category,
               'eventAction'  : action,
-              'eventLabel'   : label
+              'eventLabel'   : label,
+              'tool_name'    : toolName
             });
 
             element.attr('refined', '');
@@ -37,7 +40,8 @@ App.directive('analytics', function () {
             'event': 'GAEvent',
             'eventCategory': category,
             'eventAction'  : action,
-            'eventLabel'   : label
+            'eventLabel'   : label,
+            'tool_name'    : toolName
           });
 
         }
