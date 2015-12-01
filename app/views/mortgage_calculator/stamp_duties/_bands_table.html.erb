@@ -6,6 +6,7 @@
       <tr>
         <th><%= I18n.t("stamp_duty.table.property_price_header") %></th>
         <th><%= I18n.t("stamp_duty.table.rate_header") %></th>
+        <th><%= I18n.t("stamp_duty.table.extra_rate_header") %></th>
       </tr>
     </thead>
 
@@ -13,27 +14,34 @@
       <tr>
         <td>&pound;0 - &pound;125,000</td>
         <td>0%</td>
+        <td>3%</td>
       </tr>
 
       <tr>
         <td>&pound;125,001 - &pound;250,000</td>
         <td>2%</td>
+        <td>5%</td>
       </tr>
 
       <tr>
         <td>&pound;250,001 - &pound;925,000</td>
         <td>5%</td>
+        <td>8%</td>
       </tr>
 
       <tr>
         <td>&pound;925,001 - &pound;1.5 <%= I18n.t("stamp_duty.table.million") %></td>
         <td>10%</td>
+        <td>13%</td>
       </tr>
 
       <tr>
         <td><%= I18n.t("stamp_duty.table.over") %> &pound;1.5 <%= I18n.t("stamp_duty.table.million") %></td>
         <td>12%</td>
+        <td>15%</td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<p><%= I18n.t("stamp_duty.how_calculated_extra") %></p>
