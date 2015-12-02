@@ -136,6 +136,23 @@
   margin-bottom: 78px;
 }
 
+.mortgagecalc__table__price {
+  width: 50%;
+
+  @include respond-to($mq-xs-max) {
+    width: 40%;
+  }
+}
+
+.mortgagecalc__table__rate,
+.mortgagecalc__table__extra {
+  width: 25%;
+
+  @include respond-to($mq-xs-max) {
+    width: 30%;
+  }
+}
+
 .js {
   .label-follower[type="text"] {
     @extend %font-heading-heavy;
