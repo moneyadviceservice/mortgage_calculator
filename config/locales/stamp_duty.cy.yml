@@ -10,16 +10,18 @@ cy:
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
     second_subtitle: "Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy. Os ydych yn byw yn yr Alban, mae Treth Stamp wedi ei ddileu ond efallai y bydd angen i chi dalu Treth Trafodion Tir ac Adeiladau (LBTT)."
     subtitle: "Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy."
+    subtitle_legislation_change: "O 1 Ebrill 2016 bydd unrhyw un sy’n prynu cartref ychwanegol neu eiddo prynu i osod yn gorfod talu  3% yn rhagor ar ben pob band treth stamp."
     second_subtitle: "Os ydych yn byw yn yr Alban, mae Treth Stamp wedi ei ddileu ond efallai y bydd angen i chi dalu Treth Trafodion Tir ac Adeiladau (LBTT)."
     href_second_subtitle: "Cyfrifwch yr LBTT sy’n daladwy"
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
     legislation_change: "Cyn 4 Rhagfyr 2014, roeddech yn talu Treth Stamp ar un gyfradd ar y pris prynu cyfan. Os bu i chi gyfnewid cytundebau erbyn hanner nos ar 3 Rhagfyr a chwblhau'r trafodion ar 4 Rhagfyr neu'n hwyrach, gallwch ddewis talu Treth Stamp ar yr hen gyfraddau neu'r rhai newydd."
-    page_2_description: "Treth stamp yw treth ar gost eiddo dros £125,000. Bydd y gyfradd a dalwch yn dibynnu ar bris prynu’ch cartref. Newidiwyd y cyfraddau ar 4 Rhagfyr."
+    page_2_description: "Treth stamp yw treth ar gost eiddo dros £125,000. Bydd y gyfradd a dalwch yn dibynnu ar bris prynu’ch cartref."
     next: "Nesaf"
     recalculate: Ailgyfrifo
     back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Dan y rheolau newydd o 4 Rhagfyr, cewch dalu Treth Stamp ar amryw o wahanol gyfraddau, yn ddibynnol ar y pris prynu. Dan yr hen reolau, roedd amryw o wahanol gyfraddau o Dreth Stamp, ond roeddech chi, fel prynwr cartref, yn talu'r un gyfradd ar y pris prynu cyfan."
+    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp. Yn ogystal, o fis Ebrill 2016 bydd landlordiaid ac unrhyw un sy’n prynu cartref ychwanegol yn talu ffi o 3% ychwanegol, sef £6,000 yn yr achos hwn."
+    how_calculated_extra: "* Nid yw’r gyfrifiannell treth stamp yn ystyried y ffi ychwanegol o 3% ar gyfer pryniant Prynu i Werthu neu ail gartrefi."
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
@@ -37,6 +39,7 @@ cy:
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
+      extra_rate_header: "Cyfradd Prynu i Werthu neu Gartref Ychwanegol (o Ebrill 2016) *"
       over: Dros
       million: miliwn
     next_steps:
