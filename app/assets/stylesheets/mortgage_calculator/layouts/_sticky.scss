@@ -1,7 +1,9 @@
 .l-stuck {
   @include column(12);
+
   @include respond-to($mq-m) {
     @include column(8);
+
     margin: 0;
   }
 
@@ -9,7 +11,7 @@
   position: fixed;
   margin: 0;
   top: 0;
-  padding: $baseline-unit*3;
+  padding: $baseline-unit;
   background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #ccc;
@@ -34,11 +36,11 @@
     transition: top 0.3s ease-out;
     top: -$baseline-unit*7;
     font-size: 16px;
-
   }
 
   .accent.accent--medium {
     font-size: 16px;
+    margin-top: $baseline-unit/2;
   }
 
   .borrowing-range {
