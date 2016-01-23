@@ -1,5 +1,15 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full">
+
   <%= t("mortgage_calculator.repayment.step_1.intro_html") %>
+
+  <div class="expander">
+    <p>
+      <%= t("mortgage_calculator.repayment.step_1.intro_text") %>
+      <a href="#" class="rendered-from-js expander__link--intro" ng-class="{ 'expander__link--intro-expanded' : expandedIntroText }" ng-click="toggleIntroExpanded($event)"><%= t("mortgage_calculator.repayment.step_1.intro_expand_html") %></a>
+      <span ng-show="expandedIntroText"><%= t("mortgage_calculator.repayment.step_1.intro_hidden_html") %></span>
+    </p>
+  </div>
+
   <h3><%= t("mortgage_calculator.repayment.step_1.title") %></h3>
 </div>
 
@@ -48,7 +58,7 @@
 
     <%= f.submit I18n.t("mortgage_calculator.repayment.next"),
                  class: "button button--primary mortgagecalc__submit",
-                 'ng-click' => 'navigateAndFocus($event)',
+                 'ng-click' => 'navigateAndFocus($event); dockerControl.showDocker()',
                  'analytics' => '',
                  'analytics-on' => 'click',
                  'analytics-category' => 'Mortgage Calculator',

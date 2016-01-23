@@ -25,23 +25,27 @@ cy:
       repayment: Ad-daliad
       years: mlynedd
       step_1:
+        intro_text: Os oes gennych chi forgais yn barod
+        intro_expand_html: darllenwch fwy
         intro_html: |
           <p>Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau.</p>
-          <p>Os oes gennych chi forgais yn barod ac yn dymuno cyfrifo faint fyddai codiad yn y gyfradd llog yn effeithio ar eich taliadau, yna, yn ‘pris yr eiddo’ rhowch y swm sy’n weddill i’w dalu ar eich morgais, a rhowch sero yn y blwch blaendal.</p>
+        intro_hidden_html: |
+          ac yn dymuno cyfrifo faint fyddai codiad yn y gyfradd llog yn effeithio ar eich taliadau, yna, yn ‘pris yr eiddo’ rhowch y swm sy’n weddill i’w dalu ar eich morgais, a rhowch sero yn y blwch blaendal.
         title: Cynlluniwch ymlaen ac amcangyfrifwch eich taliad morgais misol.
       step_2:
         intro_html: |
           <p>Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Yna symudwch y llithrwyr i newid y cyfnod i gydfynd â’r nifer o flynyddoedd sydd gennych yn weddill i dalu, a chynyddwch y gyfradd llog. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau.</p>
       tabs:
-        explain: Beth mae hyn yn ei gynnwys?
         repayment:
+          explain: Beth mae hyn yn ei gynnwys?
           title: Ad-daliad
           tip_1: "Rydych yn ad-dalu'r swm yr ydych wedi ei fenthyca, a'r llog"
-          tip_2: "Ar ddiwedd cyfnod y morgais chi fydd berchen yr eiddo."
         interest_only:
+          explain: Gwybodaeth bwysig
           title: Llog yn unig
-          tip_1: "Byddwch yn talu'r llog ar y morgais yn unig."
-          tip_2: "Er mwyn bod yn berchen ar yr eiddo rhaid i chi hefyd gynilo i mewn i gynllun ad-dalu i dalu'r swm gwreiddiol a fenthycwyd yn ôl."
+          tip_1: Golyga’r rheoliadau diweddaraf y bydd angen i chi a’ch darparwr benthyciadau gytuno ar gynllun ad-dalu ar gyfer eich morgais.
+          tip_1_linktext: Darllenwch fwy
+          tip_1_url: /cy/articles/dulliau-ad-dalu-morgais-llog-yn-unig
       tips:
         hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
       interest_changer:

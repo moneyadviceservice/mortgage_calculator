@@ -18,7 +18,7 @@
 
       <%= f.validation_summary %>
 
-      <div ng-docker ng-docked="docked" ng-cloak>
+      <div ng-docker ng-docked="docked" ng-cloak control="dockerControl">
         <%= render 'mortgage_calculator/affordabilities/form/offered_amount' %>
         <%= render 'mortgage_calculator/affordabilities/form/borrowing', f: f %>
       </div>
