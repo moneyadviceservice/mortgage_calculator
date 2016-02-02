@@ -3,6 +3,7 @@
 
   <p><%= link_to I18n.t('mortgage_calculator.repayment.next'), next_steps_repayment_path,
                  class: "button button--primary mortgagecalc__submit",
+                 'ng-click' => 'navigateAndFocus($event, "next")',
                  'analytics' => '',
                  'analytics-on' => 'click',
                  'analytics-category' => 'Mortgage Calculator',

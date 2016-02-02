@@ -25,22 +25,27 @@ en:
       repayment: Repayment
       years: years
       step_1:
+        intro_text: If you already have a mortgage,
+        intro_expand_html: read more
         intro_html: |
           <p>This is a guide to how much you'd pay each month. The exact amount will depend on the type of mortgage and the lender.</p>
-          <p>If you already have a mortgage and want to work out how much an interest rate rise will impact your payments, then , in ‘price of property’ enter how much you have left to pay on your mortgage, put nothing in deposit.</p>
+        intro_hidden_html: |
+          and want to work out how much an interest rate rise will impact your payments, then , in ‘price of property’ enter how much you have left to pay on your mortgage, put nothing in deposit.
         title: Plan ahead and estimate your monthly payment now.
       step_2:
         intro_html: |
           <p>This is a guide to how much you'd pay each month. Adjust the sliders to change the term to the number of years you have left to pay, and increase the interest rate. The exact amount will depend on the type of mortgage and the lender.</p>
       tabs:
-        explain: "What does this mean?"
         repayment:
+          explain: "What does this mean?"
           title: Repayment
           tip_1: "You pay off what you borrowed for the mortgage, plus the interest."
         interest_only:
+          explain: "Important information"
           title: Interest Only
-          tip_1: "You only pay off the interest on the mortgage."
-          tip_2: "You'll need to pay back the amount you borrowed as well, so you must have a repayment plan in place."
+          tip_1: The latest regulations mean you and your lender will need to agree a repayment plan for your mortgage.
+          tip_1_linktext: Read more
+          tip_1_url: /en/articles/ways-of-repaying-an-interest-only-mortgage
       tips:
         hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
       interest_changer:

@@ -61,26 +61,53 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.preventFormSubmission = function($event) {
       $event.preventDefault();
     };
-    $scope.expandedMortgageInformation = false;
-    $scope.toggleExpanded = function($event) {
+    $scope.expandedRepaymentMortgageInformation = false;
+    $scope.toggleRepaymentExpanded = function($event) {
       $event.preventDefault();
-      $scope.expandedMortgageInformation = !$scope.expandedMortgageInformation;
+      $scope.expandedRepaymentMortgageInformation = !$scope.expandedRepaymentMortgageInformation;
     };
+    $scope.expandedInterestMortgageInformation = false;
+    $scope.toggleInterestExpanded = function($event) {
+      $event.preventDefault();
+      $scope.expandedInterestMortgageInformation = !$scope.expandedInterestMortgageInformation;
+    }
+
+    $scope.expandedIntroText = false;
+    $scope.toggleIntroExpanded = function($event) {
+      $event.preventDefault();
+      $scope.expandedIntroText = !$scope.expandedIntroText;
+      $('.expander__link--intro').hide();
+    }
 
     $scope.navigateAndFocus = function($event, direction) {
       $event.preventDefault();
       WizardHandler.wizard()[direction || 'next']();
 
-      // we have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
+      // We have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {
         iframeHelpers.resizeIframe();
         $('input[name="stamp_duty[price]"]:visible').focus().select();
         $('input[name="affordability[interest_rate]"]:visible').focus();
         $('input[name="affordability[people_attributes][0][annual_income]"]:visible').focus();
       });
+      $scope.scrollToTop();
+    };
+
+    // Scroll to the top of the page, on navigation
+    $scope.scrollToTop = function($event) {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 100);
+    };
+
+    // Apply the docker on page navigation
+    $scope.showDocker = function(){
+      $scope.dockerReady = true;
     };
 
     // Docker
+    $scope.dockerControl = {};
+    $scope.dockerReady = false;
     $scope.docked = false;
 
     iframeHelpers.resizeIframe();
