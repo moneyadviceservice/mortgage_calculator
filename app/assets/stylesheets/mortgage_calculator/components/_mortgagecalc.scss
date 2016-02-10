@@ -78,6 +78,12 @@
   }
 }
 
+.mortgagecalc__panel--space {
+  @extend %clearfix;
+  clear: both;
+  padding-top: 1rem;
+}
+
 .mortgagecalc__form {
   margin-top: -6px;
 
@@ -110,6 +116,7 @@
 }
 
 .mortgagecalc__spread {
+  margin-bottom: 0.5rem;
   @include respond-to($mortgagecalc_mq-s) {
     width: 48%;
   }

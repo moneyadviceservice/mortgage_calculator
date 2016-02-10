@@ -36,7 +36,7 @@
 <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
   <h2 class="mortgagecalc__heading"><%= I18n.t("stamp_duty.next_steps.have_you_tried.title") %></h2>
 
-  <p><%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
+  <%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
                  full_mortgage_calculator_url,
                  class: "button button--primary mortgagecalc__spread",
                  target: "_blank",
@@ -46,7 +46,9 @@
                  full_mortgage_affordability_calculator_url,
                  class: "button button--primary mortgagecalc__spread",
                  target: "_blank",
-                 rel: no_follow? %></p>
+                 rel: no_follow? %>
 </div>
 
-<p><a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
+<div class="mortgagecalc__panel--space">
+  <a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a>
+</div>

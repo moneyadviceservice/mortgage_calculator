@@ -21,6 +21,7 @@ App.directive('ngPie', ['$window', function($window) {
 
       var svg = d3.select(element[0])
           .append('svg')
+          .attr('class', 'pie__svg')
           .append('g');
 
       var $inner = $(element),
