@@ -81,7 +81,7 @@
 .mortgagecalc__panel--space {
   @extend %clearfix;
   clear: both;
-  padding-top: 1rem;
+  padding-top: $baseline-unit*2;
 }
 
 .mortgagecalc__form {
@@ -117,6 +117,7 @@
 
 .mortgagecalc__spread {
   margin-bottom: 0.5rem;
+  margin-bottom: $baseline-unit;
   @include respond-to($mortgagecalc_mq-s) {
     width: 48%;
   }
