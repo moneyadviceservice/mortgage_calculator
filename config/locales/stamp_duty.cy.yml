@@ -20,7 +20,8 @@ cy:
     recalculate: Ailgyfrifo
     back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp. Yn ogystal, o fis Ebrill 2016 bydd landlordiaid ac unrhyw un sy’n prynu cartref ychwanegol yn talu ffi o 3% ychwanegol, sef £6,000 yn yr achos hwn."
+    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp."
+    how_calculated_additional: "O fis Ebrill 2016, bydd unrhyw un sy’n prynu ail gartref yn talu 3% ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny’n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750."
     how_calculated_extra: "* Nid yw’r gyfrifiannell treth stamp yn ystyried y ffi ychwanegol o 3% ar gyfer pryniant Prynu i Werthu neu ail gartrefi."
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
