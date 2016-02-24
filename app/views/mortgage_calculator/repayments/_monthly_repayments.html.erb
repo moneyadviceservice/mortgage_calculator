@@ -1,3 +1,8 @@
-  <p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze"><%= number_to_currency @repayment.monthly_payment %></p>
-  <p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze">{{ repayments.monthlyRepayment() | customCurrency:"£" }}</p>
-  <p class="squeeze"><strong><%= I18n.t("mortgage_calculator.repayment.a_month") %></strong></p>
+<p ng-hide="js" class="mortgagecalc__heading mortgagecalc__payment squeeze"><%= number_to_currency @repayment.monthly_payment %></p>
+<div aria-live="polite" aria-atomic="true">
+  <p class="visually-hidden"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.hidden_title") %></p>
+  <p class="rendered-from-js mortgagecalc__heading mortgagecalc__payment squeeze">
+    {{ repayments.monthlyRepayment() | customCurrency:"£" }}
+  </p>
+  <span class="squeeze" aria-live="polite"><strong><%= I18n.t("mortgage_calculator.repayment.a_month") %></strong></span>
+</div>

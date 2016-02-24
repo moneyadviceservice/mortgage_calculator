@@ -35,17 +35,20 @@ en:
       step_2:
         intro_html: |
           <p>This is a guide to how much you'd pay each month. Adjust the sliders to change the term to the number of years you have left to pay, and increase the interest rate. The exact amount will depend on the type of mortgage and the lender.</p>
+        hidden_title: Adjust details
       tabs:
         repayment:
           explain: "What does this mean?"
           title: Repayment
           tip_1: "You pay off what you borrowed for the mortgage, plus the interest."
+          hidden_title: Your repayments will be
         interest_only:
           explain: "Important information"
           title: Interest Only
           tip_1: The latest regulations mean you and your lender will need to agree a repayment plan for your mortgage.
           tip_1_linktext: Read more
           tip_1_url: /en/articles/ways-of-repaying-an-interest-only-mortgage
+          hidden_title: Your interest only repayments will be
       tips:
         hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
       interest_changer:

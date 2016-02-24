@@ -35,17 +35,20 @@ cy:
       step_2:
         intro_html: |
           <p>Mae hyn yn ganllaw i faint fyddech yn talu pob mis. Yna symudwch y llithrwyr i newid y cyfnod i gydfynd â’r nifer o flynyddoedd sydd gennych yn weddill i dalu, a chynyddwch y gyfradd llog. Bydd yr union swm yn dibynnu ar y math o forgais a’r darparwr benthyciadau.</p>
+        hidden_title: Addaswch y manylion
       tabs:
         repayment:
           explain: Beth mae hyn yn ei gynnwys?
           title: Ad-daliad
           tip_1: "Rydych yn ad-dalu'r swm yr ydych wedi ei fenthyca, a'r llog"
+          hidden_title: Bydd eich ad-daliadau yn
         interest_only:
           explain: Gwybodaeth bwysig
           title: Llog yn unig
           tip_1: Golyga’r rheoliadau diweddaraf y bydd angen i chi a’ch darparwr benthyciadau gytuno ar gynllun ad-dalu ar gyfer eich morgais.
           tip_1_linktext: Darllenwch fwy
           tip_1_url: /cy/articles/dulliau-ad-dalu-morgais-llog-yn-unig
+          hidden_title: Eich diddordeb yn unig ad-daliadau
       tips:
         hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
       interest_changer:
