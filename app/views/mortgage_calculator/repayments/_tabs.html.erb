@@ -1,28 +1,28 @@
 <div class="tabs">
-      <dl class="tabs__list rendered-from-js">
-        <dt><a href="#" class="tabs__link" ng-click="showMonthly($event)" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></a></dt>
-        <dt><a href="#" class="tabs__link" ng-click="showInterest($event)" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></a></dt>
-      </dl>
-      <div class="tabs__content">
-        <div class="tabs__panel" ng-show="viewMonthlyRepayments" id="panel__monthly_repayments">
-          <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></h3>
-          <%= render 'monthly_repayments' %>
-          <div class="expander">
-            <a href="#" class="rendered-from-js expander__link" ng-class="{ 'expander__link--expanded' : expandedRepaymentMortgageInformation }" ng-click="toggleRepaymentExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.explain") %></a>
-          </div>
-          <div ng-show="expandedRepaymentMortgageInformation" class="mortgagecalc__tip">
-            <%= render 'repayment_tip' %>
-          </div>
-        </div>
-        <div class="tabs__panel" ng-show="viewInterestRepayments" id="panel__interest_repayments">
-          <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></h3>
-          <%= render 'interest_only_repayments' %>
-          <div class="expander">
-            <a href="#" class="rendered-from-js expander__link" ng-class="{ 'expander__link--expanded' : expandedInterestMortgageInformation }" ng-click="toggleInterestExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.explain") %></a>
-          </div>
-          <div ng-show="expandedInterestMortgageInformation" class="mortgagecalc__tip">
-            <%= render 'interest_only_repayment_tip' %>
-          </div>
-        </div>
+  <dl class="tabs__list rendered-from-js" role="tablist">
+    <dt role="tab" class="payment_tab" aria-selected="true" selected="selected" ng-click="showMonthly($event)"><a href="#" class="tabs__link" ng-class="{ 'tabs__current' : viewMonthlyRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></a></dt>
+    <dt role="tab" class="payment_tab" ng-click="showInterest($event)"><a href="#" class="tabs__link" ng-class="{ 'tabs__current' : viewInterestRepayments }"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></a></dt>
+  </dl>
+  <div class="tabs__content">
+    <div class="tabs__panel" ng-show="viewMonthlyRepayments" id="panel__monthly_repayments">
+      <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.title") %></h3>
+      <%= render 'monthly_repayments' %>
+      <div class="expander">
+        <a href="#" class="rendered-from-js expander__link" ng-class="{ 'expander__link--expanded' : expandedRepaymentMortgageInformation }" ng-click="toggleRepaymentExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.repayment.explain") %></a>
+      </div>
+      <div ng-show="expandedRepaymentMortgageInformation" class="mortgagecalc__tip">
+        <%= render 'repayment_tip' %>
       </div>
     </div>
+    <div class="tabs__panel" ng-show="viewInterestRepayments" id="panel__interest_repayments">
+      <h3 class="subheading hide-with-js"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.title") %></h3>
+      <%= render 'interest_only_repayments' %>
+      <div class="expander">
+        <a href="#" class="rendered-from-js expander__link" ng-class="{ 'expander__link--expanded' : expandedInterestMortgageInformation }" ng-click="toggleInterestExpanded($event)"><%= I18n.t("mortgage_calculator.repayment.tabs.interest_only.explain") %></a>
+      </div>
+      <div ng-show="expandedInterestMortgageInformation" class="mortgagecalc__tip">
+        <%= render 'interest_only_repayment_tip' %>
+      </div>
+    </div>
+  </div>
+</div>

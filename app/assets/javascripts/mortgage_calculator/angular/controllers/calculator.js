@@ -45,6 +45,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $event.preventDefault();
       $scope.viewMonthlyRepayments = true;
       $scope.viewInterestRepayments = false;
+      $scope.tabSelector();
 
       window.focusElementForScreenReaders($('#panel__monthly_repayments').first());
     };
@@ -53,6 +54,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
       $event.preventDefault();
       $scope.viewMonthlyRepayments = false;
       $scope.viewInterestRepayments = true;
+      $scope.tabSelector();
 
       window.focusElementForScreenReaders($('#panel__interest_repayments').first());
     };
@@ -117,6 +119,23 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     $scope.dockerControl = {};
     $scope.dockerReady = false;
     $scope.docked = false;
+
+    // Apply selected attributes to repayment tabs
+    $scope.tabSelector = function($event) {
+      if($scope.viewMonthlyRepayments) {
+        $('.payment_tab').attr('aria-selected', 'false').removeAttr('selected');
+        $('.payment_tab:first-child').attr({
+          'aria-selected' : 'true',
+          'selected' : 'selected'
+        });
+      } else {
+        $('.payment_tab').attr({
+          'aria-selected' : 'true',
+          'selected' : 'selected'
+        });
+        $('.payment_tab:first-child').attr('aria-selected', 'false').removeAttr('selected');
+      };
+    };
 
     iframeHelpers.resizeIframe();
   }]);
