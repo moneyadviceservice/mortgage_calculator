@@ -1,4 +1,4 @@
-source "http://gems.test.mas"
+source "http://gems.dev.mas.local"
 source "https://rubygems.org"
 
 gemspec
