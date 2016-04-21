@@ -9,8 +9,8 @@ en:
     h1: Stamp Duty calculator
     title: Calculate the Stamp Duty on your residential property
     subtitle: "Calculate the Stamp Duty on your residential property in England, Wales or Northern Ireland. You have to pay Stamp Duty (SDLT) if you buy a property costing more than £125,000. Use this calculator to work out how much Stamp Duty is payable."
-    subtitle_legislation_change: "From the 1st April 2016 anyone purchasing an additional home or a buy to let property will have to pay an extra 3% on top of each stamp duty band."
-    second_subtitle: "If you live in Scotland, Stamp Duty has now been abolished but you may need to pay a Land and Buildings Transaction Tax (LBTT)."
+    subtitle_legislation_change: "From the 1st April 2016 anyone purchasing an additional home including buy to let properties will have to pay an extra 3% surcharge on top of each stamp duty band."
+    second_subtitle: "Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland. LBTT rates will also attract a 3% surcharge for second homes from 1st April 2016."
     href_second_subtitle: "Calculate the LBTT payable."
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
     legislation_change: "Before 4 December 2014, you paid Stamp Duty at a single rate on the whole purchase price. If you exchanged contracts by midnight on 3 December and the transaction completes on 4 December or later, you can choose whether you pay Stamp Duty at the old or new rates."
