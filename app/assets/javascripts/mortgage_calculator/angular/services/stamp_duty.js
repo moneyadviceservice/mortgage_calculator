@@ -1,8 +1,12 @@
 'use strict';
 
 App.factory('StampDuty', function() {
+    var SECOND_HOME_TAX_THRESHOLD = 40000
+      , SECOND_HOME_TAX_RATE = 3;
+
     var stampDuty = {
       propertyPrice : 0,
+      isSecondHome: false,
       rates: [
         {
           threshold: 125000,
@@ -47,6 +51,10 @@ App.factory('StampDuty', function() {
           if (remaining < 0) {
             break;
           }
+        }
+
+        if (this.isSecondHome && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
+          totalTax += this.propertyPrice * (SECOND_HOME_TAX_RATE / 100);
         }
 
         return totalTax;

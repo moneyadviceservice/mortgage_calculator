@@ -36,6 +36,8 @@ en:
       sentence_prefix: "The effective tax rate is"
       sentence_suffix: "%"
       click_to_expand: Click to expand.
+    second_home:
+      label: Calculate the Stamp Duty on additional and buy to let property.
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Stamp Duty"

@@ -37,6 +37,8 @@ cy:
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"
       click_to_expand: Cliciwch i ehangu
+    second_home:
+      label: Cyfrifwch y Dreth Stamp ar unrhyw eiddo prynu i osod ychwanegol.
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
