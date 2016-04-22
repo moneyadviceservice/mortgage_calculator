@@ -32,6 +32,7 @@ en:
       one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
     results:
       title: "Stamp Duty to pay is"
+      second_title: "Stamp Duty on your additional property"
       sentence: "The effective tax rate is %{percentage}"
       sentence_prefix: "The effective tax rate is"
       sentence_suffix: "%"

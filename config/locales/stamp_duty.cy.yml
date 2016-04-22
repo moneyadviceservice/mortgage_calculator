@@ -33,6 +33,7 @@ cy:
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
     results:
       title: "Y dreth stamp i'w thalu yw"
+      second_title: "Treth Stamp ar eich eiddo ychwanegol"
       sentence: "Y gyfradd dreth effeithiol yw %{percentage}"
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"

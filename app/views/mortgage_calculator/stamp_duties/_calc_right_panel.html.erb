@@ -2,7 +2,16 @@
   <div class="tabs">
     <div class="tabs__content">
       <div class="tabs__panel">
-        <h2 class="callout__heading"><%= I18n.t("stamp_duty.results.title") %>:</h2>
+        <h2 class="callout__heading">
+          <div ng-hide="js">
+            <% key = @stamp_duty.second_home ? 'second_title' : 'title' %>
+            <%= I18n.t("stamp_duty.results.#{key}") %>
+          </div>
+          <div class="hidden-unless-js">
+            <span ng-if="stampDuty.isSecondHome"><%= I18n.t("stamp_duty.results.second_title") %></span>
+            <span ng-if="!stampDuty.isSecondHome"><%= I18n.t("stamp_duty.results.title") %></span>
+          </div>
+        </h2>
         <%= render 'stamp_duty_payment' %>
       </div>
     </div>

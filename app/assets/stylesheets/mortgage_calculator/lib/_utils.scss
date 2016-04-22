@@ -3,3 +3,11 @@ $responsive: true !default;
 .is-hidden {
   display:none;
 }
+
+.hidden-unless-js {
+  display: none;
+
+  .js & {
+    display: inherit;
+  }
+}
