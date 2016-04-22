@@ -31,7 +31,7 @@ When(/^I click next$/) do
 end
 
 When(/^I select to calculate for a second home$/) do
-  @stamp_duty.second_home.click
+  @stamp_duty.second_home.set true
 end
 
 Then(/^I reenter my house price with "(.*?)"$/) do |amount|

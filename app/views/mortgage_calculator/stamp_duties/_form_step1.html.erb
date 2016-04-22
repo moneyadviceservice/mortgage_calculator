@@ -29,10 +29,7 @@
       </span>
 
     </div>
-    <div class="form__item">
-      <input type="checkbox" ng-model="stampDuty.isSecondHome" />
-      <span><%= I18n.t('stamp_duty.second_home.label') %></span>
-    </div>
+    <%= render 'second_home', f: f %>
   </div>
 
   <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--space">
