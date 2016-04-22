@@ -17,7 +17,11 @@ module MortgageCalculator
       1000000000 => 12
     }
 
+    SECOND_HOME_THRESHOLD = 40000
+    SECOND_HOME_RATE = 3.0
+
     attr_reader :price
+    attr_accessor :second_home
 
     currency_inputs :price
 
@@ -25,6 +29,7 @@ module MortgageCalculator
 
     def initialize(options = {})
       self.price = options.fetch(:price){ 0 }
+      self.second_home = options.key?(:second_home) && options[:second_home] == "true"
     end
 
     [:price, :tax_due, :total_due].each do |field|
@@ -45,6 +50,10 @@ module MortgageCalculator
         total_tax = total_tax + (band_taxable * rate/100)
         remaining -= bandwidth
         break if remaining < 0
+      end
+
+      if self.second_home && price >= SECOND_HOME_THRESHOLD
+        total_tax += price * (SECOND_HOME_RATE / 100)
       end
 
       total_tax
