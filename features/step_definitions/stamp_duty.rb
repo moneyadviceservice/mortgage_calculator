@@ -24,11 +24,21 @@ end
 
 When(/^I enter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
+end
+
+When(/^I click next$/) do
   @stamp_duty.next.click
+end
+
+When(/^I select to calculate for a second home$/) do
+  @stamp_duty.second_home.click
 end
 
 Then(/^I reenter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price_step_two.set amount
+end
+
+When(/^I click next again$/) do
   @stamp_duty.recalculate.click if js_disabled?
 end
 
