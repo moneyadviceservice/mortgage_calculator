@@ -34,14 +34,6 @@ When(/^I select to calculate for a second home$/) do
   @stamp_duty.second_home.set true
 end
 
-When(/^I select this time to calculate for a second home$/) do
-  @stamp_duty.second_home_step_two.set true
-end
-
-When(/^I unselect to calculate for a second home$/) do
-  @stamp_duty.second_home_step_two.set false
-end
-
 Then(/^I reenter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price_step_two.set amount
 end
