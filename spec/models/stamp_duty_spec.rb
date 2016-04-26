@@ -11,13 +11,23 @@ describe MortgageCalculator::StampDuty do
     end
   end
 
-  describe 'setting second home' do
-    it 'is false if "false" is given' do
-      expect(described_class.new(second_home: "false").second_home).to be_falsy
+  describe '#second_home' do
+    subject { described_class.new(second_home: checkbox_value) }
+
+    context 'when "false" is given' do
+      let(:checkbox_value) { "false" }
+
+      it 'is false' do
+        expect(subject.second_home).to be_falsy
+      end
     end
 
-    it 'is true if "true" is given' do
-      expect(described_class.new(second_home: "true").second_home).to be_truthy
+    context 'when "true" is given' do
+      let(:checkbox_value) { "true" }
+
+      it 'is true' do
+        expect(subject.second_home).to be_truthy
+      end
     end
   end
 
