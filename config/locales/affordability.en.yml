@@ -27,7 +27,7 @@ en:
         mortgage_calculator/affordability:
           lifestyle_costs: "You estimated your monthly living costs to be:"
           borrowing: "Borrowing"
-          interest_rate: "Based on a 25 year repayment mortgage with an interest rate at:"
+          interest_rate: "with an interest rate at:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card & loan payments"
           utilities: "Bills & insurance"

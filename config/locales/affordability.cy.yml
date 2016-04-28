@@ -27,7 +27,7 @@ cy:
         mortgage_calculator/affordability:
           lifestyle_costs: "Fe amcangyfrifoch fod eich costau byw misol yn:"
           borrowing: "Benthyca"
-          interest_rate: "Yn seiliedig ar forgais ad-dalu 25 mlynedd gyda chyfradd llog o:"
+          interest_rate: "gyda chyfradd llog ar:"
         mortgage_calculator/outgoings:
           credit_repayments: "Taliadau cerdyn credyd a benthyciadau"
           utilities: "Biliau ac yswiriant"
