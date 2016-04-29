@@ -55,8 +55,15 @@
 
 .mortgagecalc__panel {
   @include column(12);
+
   @include respond-to($mortgagecalc_mq-s) {
     @include column(6);
+  }
+
+  .step_one & {
+    @include respond-to($mortgagecalc_mq-s) {
+      @include column(12);
+    }
   }
 
   &.mortgagecalc__panel--full {
@@ -170,5 +177,11 @@
     display: inline-block;
     width: auto;
     width: min-content;
+  }
+}
+
+.form__input-container--pulled {
+  @include respond-to($mortgagecalc_mq-s) {
+    width: 50%;
   }
 }

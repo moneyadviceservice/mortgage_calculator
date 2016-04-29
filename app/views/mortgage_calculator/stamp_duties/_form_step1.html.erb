@@ -14,7 +14,7 @@
       <%= f.label :price %>
       <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
 
-      <span class="form__input-container">
+      <span class="form__input-container form__input-container--pulled">
         <span class="form__input-label">£</span>
         <%= f.text_field :price,
                          :value => @stamp_duty.price_formatted,
@@ -28,6 +28,12 @@
         <span class="form__input-outline"></span>
       </span>
 
+    </div>
+    <div class="form__item">
+      <label class="label--accent">
+        <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
+        <%= I18n.t('stamp_duty.second_home.label') %>
+      </label>
     </div>
   </div>
 
