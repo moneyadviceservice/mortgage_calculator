@@ -56,30 +56,7 @@
     <div class="slider deposit" ui-slider percentage-for-minimum="50" percentage-for-maximum="200" dynamic-for='dynamic-slider-deposit' ng-model="repayments.deposit" aria-hidden="true" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Deposit"></div>
   </div>
 
-  <div class="form__item">
-    <%= f.label :term_years,
-    	"id" => "label_term" %>
-    <span class="form__input-container">
-      <%= f.text_field :term_years,
-                       "class" => "form__input",
-                       "ng-model" => "repayments.termYears",
-                       "placeholder" => "eg 25",
-                       "integer" => "",
-                       "aria-labelledby" => "label_term",
-                       "analytics" => '',
-                       "analytics-on" => 'change',
-                       "analytics-category" => 'Mortgage Calculator',
-                       "analytics-action" => 'Refinement',
-                       "analytics-label" => 'Years',
-                       "pattern" => '\d*',
-                       "autoselect" => ""
-                       %>
-      <span class="form__input-label">years</span>
-      <span class="form__input-outline"></span>
-    </span>
-
-    <div class="slider" ui-slider min="5" max="40" ng-model="repayments.termYears" aria-hidden="true" analytics-category="Mortgage Calculator" analytics-action="Refinement" analytics-label="Years"></div>
-  </div>
+  <%= render 'mortgage_calculator/shared/term_years_input', f: f %>
 
   <div class="form__item">
     <%= f.label :interest_rate,

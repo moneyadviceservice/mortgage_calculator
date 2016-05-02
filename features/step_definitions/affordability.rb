@@ -248,3 +248,8 @@ Then(/^I should be able to adjust the interest rate$/) do
   expect(step_three).to have_interest_rate
   expect(step_three).to have_interest_rate_slider
 end
+
+Then(/^I should be able to adjust the mortgage term$/) do
+  expect(step_three).to have_term_years
+  expect(step_three).to have_term_years_slider
+end

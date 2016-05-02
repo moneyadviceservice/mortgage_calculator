@@ -87,4 +87,5 @@ Scenario: Accurate calculations
 Scenario: Adjusting the calculations
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then I should be able to adjust the interest rate
+  Then  I should be able to adjust the mortgage term
+  And   I should be able to adjust the interest rate

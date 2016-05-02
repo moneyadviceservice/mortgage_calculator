@@ -25,6 +25,14 @@
     </div>
   </div>
 
+  <div class="affcalc__row">
+    <div class="affcalc__col--33">
+      <%= f.form_row do %>
+        <%= render 'mortgage_calculator/shared/term_years_input', f: f %>
+      <% end %>
+    </div>
+  </div>
+
   <%= render 'mortgage_calculator/affordabilities/form/annual_interest_rate', f: f %>
 
   <div class="hide-with-js affcalc__row">

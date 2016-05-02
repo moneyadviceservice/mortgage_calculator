@@ -13,7 +13,7 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
-    attr_accessor :two_applicants, :empty
+    attr_accessor :two_applicants, :empty, :term_years
 
     def two_applicants?
       two_applicants == "1"

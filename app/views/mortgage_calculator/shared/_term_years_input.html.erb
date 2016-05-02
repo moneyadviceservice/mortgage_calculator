@@ -1,0 +1,33 @@
+<div class="form__item">
+  <%= f.label :term_years,
+    "id" => "label_term" %>
+  <span class="form__input-container">
+    <%= f.text_field :term_years,
+                     "class" => "form__input",
+                     "ng-model" => "repayments.termYears",
+                     "placeholder" => "eg 25",
+                     "integer" => "",
+                     "aria-labelledby" => "label_term",
+                     "analytics" => '',
+                     "analytics-on" => 'change',
+                     "analytics-category" => 'Mortgage Calculator',
+                     "analytics-action" => 'Refinement',
+                     "analytics-label" => 'Years',
+                     "pattern" => '\d*',
+                     "autoselect" => ""
+                     %>
+    <span class="form__input-label">years</span>
+    <span class="form__input-outline"></span>
+  </span>
+
+  <div class="slider"
+     id="slider-term-years"
+     ui-slider min="5"
+     max="40" step="1"
+     ng-model="repayments.termYears"
+     aria-hidden="true"
+     analytics-category="Mortgage Calculator"
+     analytics-action="Refinement"
+     analytics-label="Years">
+  </div>
+</div>
