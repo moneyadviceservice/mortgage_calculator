@@ -1,12 +1,13 @@
 'use strict';
 
 App.factory('Repayments', function() {
-  var DEFAULT_ANNUAL_INTEREST_RATE = 3;
+  var DEFAULT_ANNUAL_INTEREST_RATE = 3
+    , DEFAULT_ANNUAL_TERM_YEARS    = 25;
 
   var repayments = {
     propertyPrice           : 0,
     deposit                 : 0,
-    termYears               : 25,
+    termYears               : DEFAULT_ANNUAL_TERM_YEARS,
     annualInterestRate      : DEFAULT_ANNUAL_INTEREST_RATE,
 
     mortgage                : function() {

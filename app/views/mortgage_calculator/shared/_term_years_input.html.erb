@@ -5,7 +5,7 @@
     <%= f.text_field :term_years,
                      "class" => "form__input",
                      "ng-model" => "repayments.termYears",
-                     "placeholder" => "eg 25",
+                     "placeholder" => "eg #{MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS}",
                      "integer" => "",
                      "aria-labelledby" => "label_term",
                      "analytics" => '',

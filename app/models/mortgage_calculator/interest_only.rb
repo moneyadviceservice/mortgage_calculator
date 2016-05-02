@@ -10,7 +10,7 @@ module MortgageCalculator
     def initialize(options = {})
       self.price = options[:price].presence || 0
       self.deposit = options[:deposit].presence || 0
-      self.term_years = options[:term_years].presence || 25
+      self.term_years = options[:term_years].presence || DEFAULT_ANNUAL_TERM_YEARS
       self.interest_rate = options[:interest_rate].presence || DEFAULT_ANNUAL_INTEREST_RATE
     end
 
