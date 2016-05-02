@@ -82,7 +82,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the monthly repayments of the borrowing', function() {
       calculateRepayments();
-      expect(affordability.monthlyRepayment()).toBe(1460.89);
+      expect(affordability.monthlyRepayment()).toBe(1185.05);
     });
 
   });
@@ -117,7 +117,7 @@ describe('Service: Affordability', function() {
 
     it('calculates the risk percentage of the applicant(s) borrowing', function() {
       calculateRepayments();
-      expect(affordability.riskPercentage()).toBe(57);
+      expect(affordability.riskPercentage()).toBe(51);
     });
 
     it('returns 0 when divided by 0', function() {
@@ -139,7 +139,7 @@ describe('Service: Affordability', function() {
 
     it('returns the remaining percentage after the risk percentage', function() {
       calculateRepayments();
-      expect(affordability.percentageAfterRisk()).toBe(43);
+      expect(affordability.percentageAfterRisk()).toBe(49);
     });
 
   });
@@ -172,7 +172,7 @@ describe('Service: Affordability', function() {
 
     it('returns an amount of the take home pay taken by the risk percentage', function() {
       calculateRepayments();
-      expect(affordability.riskAmount()).toBe(2685.89);
+      expect(affordability.riskAmount()).toBe(2410.05);
     });
 
   });
@@ -181,7 +181,7 @@ describe('Service: Affordability', function() {
 
     it('returns the remaining percentage after the risk percentage', function() {
       calculateRepayments();
-      expect(affordability.amountAfterRisk()).toBe(2056.56);
+      expect(affordability.amountAfterRisk()).toBe(2332.4);
     });
 
   });
@@ -222,13 +222,13 @@ describe('Service: Affordability', function() {
     it('calculates the remaining spend per month minus all the key costs of the applicant(s)', function() {
       calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
-      expect(affordability.remainingPerMonth()).toBe(1356.56);
+      expect(affordability.remainingPerMonth()).toBe(1632.40);
     });
 
     it('calculates the remaining spend per month, even when lifestyleSpend is null', function() {
       calculateRepayments();
       affordability.lifestyleSpend = null;
-      expect(affordability.remainingPerMonth()).toBe(2056.56);
+      expect(affordability.remainingPerMonth()).toBe(2332.40);
     });
 
   });

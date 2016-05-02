@@ -243,3 +243,8 @@ Given(/^I visit the Syndicated Affordability page$/) do
   @affordability = UI::Pages::Affordability::SyndicatedAffordability.new
   @affordability.load
 end
+
+Then(/^I should be able to adjust the interest rate$/) do
+  expect(step_three).to have_interest_rate
+  expect(step_three).to have_interest_rate_slider
+end

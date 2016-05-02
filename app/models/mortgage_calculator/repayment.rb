@@ -6,6 +6,7 @@ module MortgageCalculator
     include ActiveModel::Validations
     include ActionView::Helpers::NumberHelper
     extend ActiveModel::Translation
+    include MortgageCalculator::Defaults
 
     def self.i18n_scope
       "mortgage_calculator.activemodel"
@@ -23,7 +24,7 @@ module MortgageCalculator
       self.price = options[:price].presence || 0
       self.deposit = options[:deposit].presence || 0
       self.term_years = options[:term_years].presence || 25
-      self.interest_rate = options[:interest_rate].presence || 5
+      self.interest_rate = options[:interest_rate].presence || DEFAULT_ANNUAL_INTEREST_RATE
     end
 
     [:debt, :price, :deposit, :monthly_payment, :total_interest,

@@ -20,7 +20,7 @@ describe MortgageCalculator::Repayment do
     its(:deposit){ should be_zero }
     its(:debt){ should be_zero }
     its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:interest_rate){ should == 3 }
   end
 
   describe 'defaults with empty strings' do
@@ -30,7 +30,7 @@ describe MortgageCalculator::Repayment do
     its(:deposit){ should be_zero }
     its(:debt){ should be_zero }
     its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:interest_rate){ should == 3 }
   end
 
   describe '#change_interest_rate_by' do

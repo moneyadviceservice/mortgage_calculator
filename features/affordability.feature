@@ -83,3 +83,8 @@ Scenario: Accurate calculations
   Given I visit the affordability page
   And   I enter various income and expense details
   Then  I should see accurate calculations
+
+Scenario: Adjusting the calculations
+  Given I visit the affordability page
+  When  I enter all details for single applicant
+  Then I should be able to adjust the interest rate

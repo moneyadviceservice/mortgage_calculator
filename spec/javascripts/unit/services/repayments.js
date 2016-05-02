@@ -31,11 +31,11 @@ describe('Service: Repayments', function () {
   describe('#monthlyRepayment', function() {
 
     it('calculates the monthly repayment for a mortgage', function () {
-      expect(repayments.monthlyRepayment()).toBe(2630.66);
+      expect(repayments.monthlyRepayment()).toBe(2133.95);
     });
 
     it('calculates the monthly repayment for a mortgage when interest incremented by one', function () {
-      expect(repayments.monthlyRepayment(1)).toBe(2899.36);
+      expect(repayments.monthlyRepayment(1)).toBe(2375.27);
     });
 
     it('returns 0 for negative results', function () {
@@ -50,11 +50,11 @@ describe('Service: Repayments', function () {
   describe('#monthlyInterestRepayment', function() {
 
     it('calculates the monthly interest only repayment for a mortgage', function () {
-      expect(repayments.monthlyInterestRepayment()).toBe(1875.00);
+      expect(repayments.monthlyInterestRepayment()).toBe(1125.00);
     });
 
     it('calculates the monthly interest only repayment for a mortgage when interest is incremented by one', function () {
-      expect(repayments.monthlyInterestRepayment(1)).toBe(2250.00);
+      expect(repayments.monthlyInterestRepayment(1)).toBe(1500.00);
     });
 
     it('returns 0 for negative results', function () {
