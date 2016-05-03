@@ -1,11 +1,11 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class="results">
+  <p ng-hide="js" class="results t-repayments">
     <%= t "affordability.monthly_repayment.estimated_html",
            repayment: "<strong>#{number_to_currency @affordability.repayment.monthly_payment}</strong>".html_safe %>
   </p>
 <% end %>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results t-repayments-js">
   <%= t "affordability.monthly_repayment.estimated_html",
          repayment: "<strong>{{ affordability.monthlyRepayment() | customCurrency:'£' }}</strong>".html_safe %>
 </p>

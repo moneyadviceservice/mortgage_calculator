@@ -67,6 +67,22 @@ module UI
         element :interest_rate, "input[name='affordability[interest_rate]']"
         element :lifestyle, "input[name='affordability[lifestyle_costs]']"
 
+        element :repayments_js,        ".t-repayments-js"
+        element :risk_chart_js,        ".t-risk-chart-js"
+        element :essentials_js,        ".t-essentials-js"
+        element :total_leftover_js,    ".t-total-leftover-js"
+        element :remaining_js,         ".t-remaining-js"
+        element :what_if_changes_js,   ".t-what-if-changes-js"
+        element :what_if_remaining_js, ".t-what-if-remaining-js"
+
+        element :repayments,        ".t-repayments"
+        element :risk_chart,        ".t-risk-chart"
+        element :essentials,        ".t-essentials"
+        element :total_leftover,    ".t-total-leftover"
+        element :remaining,         ".t-remaining"
+        element :what_if_changes,   ".t-what-if-changes"
+        element :what_if_remaining, ".t-what-if-remaining"
+
         section :borrowing_slider, UI::Sections::Slider, "#slider-borrowing"
         section :term_years_slider, UI::Sections::Slider, "#slider-term-years"
         section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"

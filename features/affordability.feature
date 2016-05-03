@@ -84,8 +84,30 @@ Scenario: Accurate calculations
   And   I enter various income and expense details
   Then  I should see accurate calculations
 
-Scenario: Adjusting the calculations
+@javascript
+Scenario: Adjusting the interest rate in JavaScript
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then  I should be able to adjust the mortgage term
-  And   I should be able to adjust the interest rate
+  Then  I should see the correct results for a single applicant for JavaScript
+  And   I should be able to tweak the results by adjusting the interest rate text for JavaScript
+
+@javascript
+Scenario: Adjusting the interest rate slider
+  Given I visit the affordability page
+  When  I enter all details for single applicant
+  Then  I should see the correct results for a single applicant for JavaScript
+  And   I should be able to tweak the results by adjusting the interest rate slider
+
+@javascript
+Scenario: Adjusting the mortgage term in JavaScript
+  Given I visit the affordability page
+  When  I enter all details for single applicant
+  Then  I should see the correct results for a single applicant for JavaScript
+  And   I should be able to tweak the results by adjusting the mortgage term text for JavaScript
+
+@javascript
+Scenario: Adjusting the mortgage term slider
+  Given I visit the affordability page
+  When  I enter all details for single applicant
+  Then  I should see the correct results for a single applicant for JavaScript
+  And   I should be able to tweak the results by adjusting the mortgage term slider
