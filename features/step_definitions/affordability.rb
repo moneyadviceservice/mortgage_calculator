@@ -185,12 +185,16 @@ Given(/^I enter various income and expense details$/) do
     step_two.holiday.set calculation['holiday']
     step_two.next.click
 
-    expect(page).to have_content("between #{calculation['range_min']} and #{calculation['range_max']}")
-    expect(page).to have_content("Your estimated mortgage repayments per month will be approximately: #{calculations['repayment_per_month']}")
-    expect(page).to have_content("The amount you have left over after living costs is #{calculation['remaining_per_month']}")
-    expect(page).to have_content("Your estimated fixed and committed spend per month is: #{calculation['spending_commitments']}")
-    expect(page).to have_content("If interest rates rise by 2%, your monthly repayment will rise to #{calculation['increased_monthly_repayment']}")
-    expect(page).to have_content("Your remaining budget will be #{calculation['financial_buffer']}")
+    expect(step_three.offered_amount).to have_content("between #{calculation['range_min']} and #{calculation['range_max']}")
+    expect(step_three.borrowing.value).to eq(calculation['borrowing'])
+    expect(step_three.repayments).to have_content("Your estimated mortgage repayments per month will be approximately: #{calculations['repayment_per_month']}")
+    expect(step_three.committed).to have_content("Your estimated fixed and committed spend per month is: #{calculation['spending_commitments']}")
+    expect(step_three.risk_chart).to have_content("#{calculation['risk_pct']}")
+    expect(step_three.essentials).to have_content("Mortgage repayments and essential costs per month amount to roughly #{calculation['essentials_pct']} of your total take-home pay: #{calculation['essentials_amount']}")
+    expect(step_three.total_leftover).to have_content("What you have left over is roughly #{calculation['leftover_pct']} of your monthly take-home: #{calculation['leftover_amount']}")
+    expect(step_three.remaining).to have_content("The amount you have left over after living costs is #{calculation['remaining_per_month']}")
+    expect(step_three.what_if_changes).to have_content("If interest rates rise by 2%, your monthly repayment will rise to #{calculation['increased_monthly_repayment']}")
+    expect(step_three.what_if_remaining).to have_content("Your remaining budget will be #{calculation['financial_buffer']}")
 
     Capybara.reset_sessions!
   end

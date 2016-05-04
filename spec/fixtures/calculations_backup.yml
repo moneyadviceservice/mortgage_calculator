@@ -19,12 +19,7 @@ one:
   borrowing: "350,000"
   repayment_per_month: "£1,659.74"
   remaining_per_month: "£3,768.70"
-  spending_commitments: "£0.00"
-  risk_pct: "31%"
-  essentials_pct: "31%"
-  essentials_amount: "£1,659.74"
-  leftover_pct: "69%"
-  leftover_amount: "£3,768.70"
+  spending_commitments:
   increased_monthly_repayment: "£2,046.07"
   financial_buffer: "£3,382.37"
 two:
@@ -46,16 +41,11 @@ two:
   range_min: "£280,000"
   range_max: "£420,000"
   borrowing: "350,000"
-  repayment_per_month: "£1,659.74"
-  remaining_per_month: "£3,768.70"
-  spending_commitments: "£0.00"
-  risk_pct: "31%"
-  essentials_pct: "31%"
-  essentials_amount: "£1,659.74"
-  leftover_pct: "69%"
-  leftover_amount: "£3,768.70"
-  increased_monthly_repayment: "£2,046.07"
-  financial_buffer: "£3,382.37"
+  repayment_per_month: "£2,046.07"
+  remaining_per_month: "£3,382.37"
+  spending_commitments:
+  increased_monthly_repayment: "£2,473.73"
+  financial_buffer: "£2,954.71"
 three:
   annual_income: 100000
   extra_income: 10000
@@ -74,17 +64,12 @@ three:
   holiday: 0
   range_min: "£287,840"
   range_max: "£431,760"
-  borrowing: "359,800"
-  repayment_per_month: "£1,706.21"
-  remaining_per_month: "£3,438.89"
-  spending_commitments: "£600.00"
-  risk_pct: "40%"
-  essentials_pct: "40%"
-  essentials_amount: "£2,306.21"
-  leftover_pct: "60%"
-  leftover_amount: "£3,438.89"
-  increased_monthly_repayment: "£2,103.35"
-  financial_buffer: "£3,041.75"
+  borrowing: "350,000"
+  repayment_per_month: "£2,103.35"
+  remaining_per_month: "£3,041.75"
+  spending_commitments:
+  increased_monthly_repayment: "£2,542.99"
+  financial_buffer: "£2,602.11"
 four:
   annual_income: 50000
   extra_income: 5000
@@ -103,17 +88,12 @@ four:
   holiday: 0
   range_min: "£308,000"
   range_max: "£462,000"
-  borrowing: "385,000"
-  repayment_per_month: "£1,825.71"
-  remaining_per_month: "£4,681.17"
-  spending_commitments: "£0.00"
-  risk_pct: "28%"
-  essentials_pct: "28%"
-  essentials_amount: "£1,825.71"
-  leftover_pct: "72%"
-  leftover_amount: "£4,681.17"
-  increased_monthly_repayment: "£2,250.67"
-  financial_buffer: "£4,256.21"
+  borrowing: "350,000"
+  repayment_per_month: "£2,250.67"
+  remaining_per_month: "£4,256.21"
+  spending_commitments:
+  increased_monthly_repayment: "£2,721.10"
+  financial_buffer: "£3,785.78"
 five:
   annual_income: 50000
   extra_income: 0
@@ -132,17 +112,12 @@ five:
   holiday: 0
   range_min: "£133,280"
   range_max: "£199,920"
-  borrowing: "166,600"
-  repayment_per_month: "£790.04"
-  remaining_per_month: "£1,474.18"
-  spending_commitments: "£450.00"
-  risk_pct: "46%"
-  essentials_pct: "46%"
-  essentials_amount: "£1,240.04"
-  leftover_pct: "54%"
-  leftover_amount: "£1,474.18"
-  increased_monthly_repayment: "£973.93"
-  financial_buffer: "£1,290.29"
+  borrowing: "350,000"
+  repayment_per_month: "£973.93"
+  remaining_per_month: "£1,290.29"
+  spending_commitments:
+  increased_monthly_repayment: "£1,177.49"
+  financial_buffer: "£1,086.73"
 six:
   annual_income: 25000
   extra_income: 0
@@ -161,17 +136,12 @@ six:
   holiday: 0
   range_min: "£133,280"
   range_max: "£199,920"
-  borrowing: "166,600"
-  repayment_per_month: "£790.04"
-  remaining_per_month: "£1,785.74"
-  spending_commitments: "£750.00"
-  risk_pct: "46%"
-  essentials_pct: "46%"
-  essentials_amount: "£1,540.04"
-  leftover_pct: "54%"
-  leftover_amount: "£1,785.74"
-  increased_monthly_repayment: "£973.93"
-  financial_buffer: "£1,601.85"
+  borrowing: "350,000"
+  repayment_per_month: "£973.93"
+  remaining_per_month: "£1,601.85"
+  spending_commitments:
+  increased_monthly_repayment: "£1,177.49"
+  financial_buffer: "£1,398.29"
 seven:
   annual_income: 60000
   extra_income: 0
@@ -190,17 +160,12 @@ seven:
   holiday: 0
   range_min: "£168,000"
   range_max: "£252,000"
-  borrowing: "210,000"
-  repayment_per_month: "£995.84"
-  remaining_per_month: "£1,329.26"
-  spending_commitments: "£470.00"
-  risk_pct: "42%"
-  essentials_pct: "42%"
-  essentials_amount: "£1,465.84"
-  leftover_pct: "58%"
-  leftover_amount: "£2,029.26"
-  increased_monthly_repayment: "£1,227.64"
-  financial_buffer: "£1,097.46"
+  borrowing: "350,000"
+  repayment_per_month: "£1,227.64"
+  remaining_per_month: "£1,097.46"
+  spending_commitments:
+  increased_monthly_repayment: "£1,484.24"
+  financial_buffer: "£840.86"
 eight:
   annual_income: 40000
   extra_income: 0
@@ -219,17 +184,12 @@ eight:
   holiday: 0
   range_min: "£199,920"
   range_max: "£299,880"
-  borrowing: "249,900"
-  repayment_per_month: "£1,185.05"
-  remaining_per_month: "£1,632.40"
-  spending_commitments: "£1,225.00"
-  risk_pct: "51%"
-  essentials_pct: "51%"
-  essentials_amount: "£2,410.05"
-  leftover_pct: "49%"
-  leftover_amount: "£2,332.40"
-  increased_monthly_repayment: "£1,460.89"
-  financial_buffer: "£1,356.56"
+  borrowing: "350,000"
+  repayment_per_month: "£1,460.89"
+  remaining_per_month: "£1,356.56"
+  spending_commitments:
+  increased_monthly_repayment: "£1,766.24"
+  financial_buffer: "£1,051.21"
 nine:
   annual_income: 100000
   extra_income: 10000
@@ -248,14 +208,9 @@ nine:
   holiday: 300
   range_min: "£441,840"
   range_max: "£662,760"
-  borrowing: "552,300"
-  repayment_per_month: "£2,619.07"
-  remaining_per_month: "£3,980.93"
+  borrowing: "350,000"
+  repayment_per_month: "£3,228.69"
+  remaining_per_month: "£3,371.31"
   spending_commitments: "£1,500.00"
-  risk_pct: "46%"
-  essentials_pct: "46%"
-  essentials_amount: "£4,119.07"
-  leftover_pct: "54%"
-  leftover_amount: "£4,880.93"
-  increased_monthly_repayment: "£3,228.69"
-  financial_buffer: "£3,371.31"
+  increased_monthly_repayment: "£3,903.54"
+  financial_buffer: "£2,696.46"

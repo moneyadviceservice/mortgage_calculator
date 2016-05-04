@@ -165,6 +165,13 @@ module MortgageCalculator
     end
 
     describe '#interest_rate' do
+      context 'when not overridden' do
+        it 'uses the application default' do
+          expected = MortgageCalculator::Defaults::DEFAULT_ANNUAL_INTEREST_RATE
+          expect(subject.repayment.interest_rate.to_i).to eql(expected)
+        end
+      end
+
       context 'when overridden' do
         subject{ described_class.new(people: [person1], outgoings: outgoings, interest_rate: 13) }
 
@@ -176,7 +183,7 @@ module MortgageCalculator
 
     describe '#risk_percentage' do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(48)
+        expect(subject.risk_percentage.to_i).to eql(41)
       end
 
       context 'when over 100%' do
@@ -246,7 +253,7 @@ module MortgageCalculator
 
     describe '#remaining' do
       it 'returns remaining amount per month' do
-        expect(subject.remaining.to_i).to eql(2498)
+        expect(subject.remaining.to_i).to eql(2914)
       end
     end
 
@@ -296,13 +303,13 @@ module MortgageCalculator
 
     describe '#budget_outgoing' do
       it 'returns mortgage repayment + fix + committed costs' do
-        expect(subject.budget_outgoing.to_i).to eql(2901)
+        expect(subject.budget_outgoing.to_i).to eql(2485)
       end
     end
 
     describe '#budget_leftover' do
       it 'returns net monthly - budget_outgoing' do
-        expect(subject.budget_leftover.to_i).to eql(3098)
+        expect(subject.budget_leftover.to_i).to eql(3514)
       end
     end
 

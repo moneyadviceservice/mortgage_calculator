@@ -49,7 +49,7 @@ module MortgageCalculator
     end
 
     def interest_rate
-      @interest_rate || 5
+      @interest_rate || MortgageCalculator::Defaults::DEFAULT_ANNUAL_INTEREST_RATE
     end
 
     def repayment
