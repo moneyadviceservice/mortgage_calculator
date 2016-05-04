@@ -42,8 +42,8 @@ module MortgageCalculator
       @people = options[:people]
       @people.each {|person| person.affordability = self } if @people # Set up parent relation
       @outgoings = options[:outgoings]
-      @borrowing = options[:borrowing]
       @interest_rate = options[:interest_rate]
+      self.borrowing = options[:borrowing]
       self.two_applicants = options[:two_applicants]
       self.lifestyle_costs = options[:lifestyle_costs] if options[:lifestyle_costs].present?
     end
@@ -234,8 +234,6 @@ module MortgageCalculator
       committed_costs + fixed_costs > monthly_net_income
     end
 
-  private
-
     def lower_profit_multiplier
       2.8
     end
@@ -250,6 +248,17 @@ module MortgageCalculator
 
     def default_borrowing_amount
       (can_borrow_from + can_borrow_upto) / 2
+    end
+
+    private
+
+    def borrowing=(value)
+      @borrowing = unformat(value)
+    end
+
+    def unformat(value)
+      return value unless value.is_a?(String)
+      value.gsub(/,/, '')
     end
   end
 end

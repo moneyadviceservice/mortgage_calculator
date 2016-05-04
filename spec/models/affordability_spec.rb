@@ -107,18 +107,49 @@ module MortgageCalculator
     end
 
     describe '#borrowing' do
-      context 'default amount' do
-        it 'is half way between the range they can borrow' do
-          half = (subject.can_borrow_from + subject.can_borrow_upto) / 2
-          expect(subject.borrowing).to eql(half)
-        end
+      context 'when borrowing is not given' do
+        subject { described_class.new(people: [person1], outgoings: outgoings) }
+
+        its(:borrowing) { is_expected.to eq(subject.default_borrowing_amount) }
       end
 
-      context 'when overriden' do
-        subject{ described_class.new(people: [person1], outgoings: outgoings, borrowing: 123000) }
+      context 'when borrowing is given' do
+        subject { described_class.new(people: [person1], outgoings: outgoings, borrowing: borrowing) }
 
-        it 'uses overriden value' do
-          expect(subject.borrowing).to eql(123000)
+        context 'and is nil' do
+          let(:borrowing) { nil }
+
+          its(:borrowing) { is_expected.to eq(subject.default_borrowing_amount) }
+        end
+
+        context 'and is a number' do
+          let(:borrowing) { 123 }
+
+          its(:borrowing) { is_expected.to eq(123) }
+        end
+
+        context 'and is "0"' do
+          let(:borrowing) { '0' }
+
+          its(:borrowing) { is_expected.to eq('0') }
+        end
+
+        context 'and is "999"' do
+          let(:borrowing) { '999' }
+
+          its(:borrowing) { is_expected.to eq('999') }
+        end
+
+        context 'and is "1,000"' do
+          let(:borrowing) { '1,000' }
+
+          its(:borrowing) { is_expected.to eq('1000') }
+        end
+
+        context 'and is "1.99"' do
+          let(:borrowing) { '1.99' }
+
+          its(:borrowing) { is_expected.to eq('1.99') }
         end
       end
     end
