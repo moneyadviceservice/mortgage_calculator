@@ -185,6 +185,12 @@ Given(/^I enter various income and expense details$/) do
     step_two.holiday.set calculation['holiday']
     step_two.next.click
 
+    if calculation.key?('repayment_term') || calculation.key?('interest_rate')
+      step_three.term_years.set(calculation['repayment_term'])
+      step_three.interest_rate.set(calculation['interest_rate'])
+      step_three.recalculate.click
+    end
+
     expect(step_three.offered_amount).to have_content("between #{calculation['range_min']} and #{calculation['range_max']}")
     expect(step_three.borrowing.value).to eq(calculation['borrowing'])
     expect(step_three.repayments).to have_content("Your estimated mortgage repayments per month will be approximately: #{calculations['repayment_per_month']}")

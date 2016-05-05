@@ -61,12 +61,13 @@ module MortgageCalculator
       end
 
       def adjust_interest_rate
-        @changer = Repayment.new(price: @affordability.repayment.price, interest_rate: @affordability.repayment.interest_rate)
-        @changer.change_interest_rate_by(interest_rate_change_amount)
+        @changer = @affordability.repayment
+                                 .dup
+                                 .change_interest_rate_by(interest_rate_change_amount)
       end
 
       def interest_rate_change_amount
-        2
+        MortgageCalculator::Defaults::INTEREST_RATE_CHANGE_AMOUNT
       end
       helper_method :interest_rate_change_amount
   end

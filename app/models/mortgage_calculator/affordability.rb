@@ -42,6 +42,7 @@ module MortgageCalculator
       @people = options[:people]
       @people.each {|person| person.affordability = self } if @people # Set up parent relation
       @outgoings = options[:outgoings]
+      @term_years = options[:term_years]
       @interest_rate = options[:interest_rate]
       self.borrowing = options[:borrowing]
       self.two_applicants = options[:two_applicants]
@@ -53,7 +54,7 @@ module MortgageCalculator
     end
 
     def repayment
-      @repayment ||= Repayment.new(price: borrowing, interest_rate: interest_rate)
+      @repayment ||= Repayment.new(price: borrowing, interest_rate: interest_rate, term_years: term_years)
     end
 
     def total_income
@@ -194,10 +195,11 @@ module MortgageCalculator
       end
 
       borrowing = store[:borrowing] if store[:borrowing]
+      term_years = store[:term_years] if store[:term_years]
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
 
-      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
+      model = new(people: people, outgoings: outgoings, borrowing: borrowing, term_years: term_years, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
       model.empty = store.empty?
       model
     end
