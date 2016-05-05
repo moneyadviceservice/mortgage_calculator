@@ -39,7 +39,7 @@ cy:
       sentence_suffix: "%"
       click_to_expand: Cliciwch i ehangu
     second_home:
-      label: Cyfrifwch y Dreth Stamp ar unrhyw eiddo prynu i osod ychwanegol.
+      label: Cyfrifwch y Dreth Stamp ar eiddo ychwanegol ac eiddo prynu i osod.
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
