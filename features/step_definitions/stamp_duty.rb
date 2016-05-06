@@ -26,6 +26,10 @@ When(/^I enter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price.set amount
 end
 
+When(/^I enter a house price of (\d+)$/) do |amount|
+  @stamp_duty.property_price.set amount
+end
+
 When(/^I click next$/) do
   @stamp_duty.next.click
 end

@@ -12,70 +12,40 @@ Scenario: Welsh users
   Given I visit the Welsh Stamp Duty page
   Then  I see the Welsh stamp duty calculator
 
-Scenario: House price which is less than £40,000 for first home
+Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
-  When I enter my house price with "39000"
+  When I enter a house price of <price>
   And I click next
-  Then I see the stamp duty I will have to pay is "£0"
+  Then I see the stamp duty I will have to pay is "£<duty>"
 
-Scenario: House price which is less than £40,000 for second home
+Examples:
+  | price   | duty    |
+  | 39000   | 0       |
+  | 40000   | 0       |
+  | 120000  | 0       |
+  | 126000  | 20      |
+  | 260000  | 3,000   |
+  | 510000  | 15,500  |
+  | 1100000 | 53,750  |
+  | 2100000 | 165,750 |
+
+Scenario Outline: stamp duty for second home
   Given I visit the Stamp Duty page
-  When I enter my house price with "39000"
+  When I enter a house price of <price>
   And I select to calculate for a second home
   And I click next
-  Then I see the stamp duty I will have to pay is "£0"
+  Then I see the stamp duty I will have to pay is "£<duty>"
 
-Scenario: House price which is equal to £40,000 for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "40000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£0"
-
-Scenario: House price which is equal to £40,000 for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "40000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£1,200"
-
-Scenario: House price which is less than £125,000 for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "120000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£0"
-
-Scenario: House price which is less than £125,000 for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "120000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£3,600"
-
-Scenario: House price which is over £125,000 for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "126000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£20"
-
-Scenario: House price which is over £125,000 for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "126000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "3,800"
-
-Scenario: House price which is over £250,000 for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "260000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£3,000"
-
-Scenario: House price which is over £250,000 for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "260000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£10,800"
+Examples:
+  | price   | duty    |
+  | 39000   | 0       |
+  | 40000   | 1,200   |
+  | 120000  | 3,600   |
+  | 126000  | 3,800   |
+  | 260000  | 10,800  |
+  | 510000  | 30,800  |
+  | 1100000 | 86,750  |
+  | 2100000 | 228,750 |
 
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
@@ -95,45 +65,6 @@ Scenario: I recalculate for second home
   Then I reenter my house price with "126000"
   And I click next again
   And I see the stamp duty I will have to pay is "£3,800"
-
-Scenario: House price which is over £500,000 for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "510000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£15,500"
-
-Scenario: House price which is over £500,000 for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "510000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£30,800"
-
-Scenario: House price which is over £1 million for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "1100000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£53,750"
-
-Scenario: House price which is over £1 million for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "1100000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£86,750"
-
-Scenario: House price which is over £2 million for first home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "2100000"
-  And I click next
-  Then I see the stamp duty I will have to pay is "£165,750"
-
-Scenario: House price which is over £2 million for second home
-  Given I visit the Stamp Duty page
-  When I enter my house price with "2100000"
-  And I select to calculate for a second home
-  And I click next
-  Then I see the stamp duty I will have to pay is "£228,750"
 
 @wip
 Scenario: User enters invalid property price
