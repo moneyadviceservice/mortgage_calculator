@@ -1,4 +1,5 @@
 # encoding: utf-8
+include MortgageCalculator::Defaults
 
 Given /^I visit the Affordability (?:page|calculator)$/i do
   step_one.load
@@ -157,56 +158,6 @@ Then(/^I should see different errors for the second applicant$/) do
     I18n::t("affordability.activemodel.errors.mortgage_calculator/person_other.base.proportional_incomes"))
 end
 
-Given(/^I enter various income and expense details$/) do
-
-  calculations.each do |key, calculation|
-    step_one.load
-    step_one.annual_income.set calculation['annual_income']
-    step_one.extra_income.set calculation['extra_income']
-    step_one.monthly_net_income.set calculation['monthly_net_income']
-
-    if calculation['person_two_annual_income'] > 0
-      step_one.second_applicant.set "1"
-      step_one.person_two_annual_income.set calculation['person_two_annual_income']
-      step_one.person_two_extra_income.set calculation['person_two_extra_income']
-      step_one.person_two_monthly_net_income.set calculation['person_two_monthly_net_income']
-    end
-    # save_and_open_screenshot
-
-    step_one.next.click
-    step_two.credit_repayments.set calculation['credit_repayments']
-    step_two.utilities.set calculation['utilities']
-    step_two.childcare.set calculation['childcare']
-    step_two.child_maintenance.set calculation['child_maintenance']
-    step_two.rent_and_mortgage.set calculation['rent_and_mortgage']
-    step_two.food.set calculation['food']
-    step_two.travel.set calculation['travel']
-    step_two.entertainment.set calculation['entertainment']
-    step_two.holiday.set calculation['holiday']
-    step_two.next.click
-
-    if calculation.key?('repayment_term') || calculation.key?('interest_rate')
-      step_three.term_years.set(calculation['repayment_term'])
-      step_three.interest_rate.set(calculation['interest_rate'])
-      step_three.recalculate.click
-    end
-
-    expect(step_three.offered_amount).to have_content("between #{calculation['range_min']} and #{calculation['range_max']}")
-    expect(step_three.borrowing.value).to eq(calculation['borrowing'])
-    expect(step_three.repayments).to have_content("Your estimated mortgage repayments per month will be approximately: #{calculations['repayment_per_month']}")
-    expect(step_three.committed).to have_content("Your estimated fixed and committed spend per month is: #{calculation['spending_commitments']}")
-    expect(step_three.risk_chart).to have_content("#{calculation['risk_pct']}")
-    expect(step_three.essentials).to have_content("Mortgage repayments and essential costs per month amount to roughly #{calculation['essentials_pct']} of your total take-home pay: #{calculation['essentials_amount']}")
-    expect(step_three.total_leftover).to have_content("What you have left over is roughly #{calculation['leftover_pct']} of your monthly take-home: #{calculation['leftover_amount']}")
-    expect(step_three.remaining).to have_content("The amount you have left over after living costs is #{calculation['remaining_per_month']}")
-    expect(step_three.what_if_changes).to have_content("If interest rates rise by 2%, your monthly repayment will rise to #{calculation['increased_monthly_repayment']}")
-    expect(step_three.what_if_remaining).to have_content("Your remaining budget will be #{calculation['financial_buffer']}")
-
-    Capybara.reset_sessions!
-  end
-
-end
-
 
 Given(/^I add an income of (\d+), extras of (\d+) and monthly net of (\d+\.?\d*)$/) do |income, extras, monthly|
   step_one.annual_income.set income
@@ -238,8 +189,12 @@ Given(/^living costs of (\d+), (\d+) and (\d+)$/) do |ents, hols, food|
   step_two.next.click
 end
 
-When(/^using the default term and interest rate$/) do
-  # deliberately do nothing
+When(/^I set the term to (\d+) and interest to (\d+)$/) do |term, rate|
+  return if term == DEFAULT_ANNUAL_TERM_YEARS && rate == DEFAULT_ANNUAL_INTEREST_RATE
+
+  step_three.term_years.set term
+  step_three.interest_rate.set rate
+  step_three.recalculate.click
 end
 
 Then(/^the offered range is expected to be between "([^"]*)" and "([^"]*)"$/) do |min, max|
@@ -280,14 +235,6 @@ end
 
 Then(/^the buffer on interest increase is expected to be "([^"]*)"$/) do |buffer|
   expect(step_three.what_if_remaining).to have_content("Your remaining budget will be #{buffer}")
-end
-
-
-
-
-Then(/^I should see accurate calculations$/) do
-  # blank because expectations made in
-  # Given(/^I enter various income and expense details$/) do
 end
 
 When(/^I enter details giving negative remaining amount$/) do
