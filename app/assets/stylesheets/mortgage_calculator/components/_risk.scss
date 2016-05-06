@@ -36,6 +36,7 @@
 }
 
 .risk--high {
+  .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-high;
   }
@@ -56,6 +57,7 @@
 }
 
 .risk--medium {
+  .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-medium;
   }
@@ -76,6 +78,7 @@
 }
 
 .risk--low {
+  .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-low;
   }

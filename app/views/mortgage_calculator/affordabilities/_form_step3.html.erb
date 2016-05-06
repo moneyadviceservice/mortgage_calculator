@@ -31,7 +31,7 @@
         <%= render 'mortgage_calculator/shared/term_years_input', f: f %>
       <% end %>
     </div>
-    <div class="affcalc__col--tooltip">
+    <div class="affcalc__col--tooltip tooltip--push" ng-class="{'high':'risk--high', 'medium':'risk--medium', 'low':'risk--low'}[affordability.riskLevel()]">
       <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/results.term_years"),
         html: {
           id: 'term_years_tip'
