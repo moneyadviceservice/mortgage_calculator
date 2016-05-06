@@ -64,6 +64,7 @@ module UI
 
         element :borrowing, "input[name='affordability[borrowing]']"
         element :term_years, "input[name='affordability[term_years]']"
+        element :term_years_tip, "#term_years_tip"
         element :interest_rate, "input[name='affordability[interest_rate]']"
         element :lifestyle, "input[name='affordability[lifestyle_costs]']"
 

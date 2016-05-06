@@ -374,3 +374,7 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term slid
 
   step_three.term_years.set(25)
 end
+
+Then(/^I should see the repayment term tooltip$/) do
+  expect(step_three).to have_term_years_tip
+end

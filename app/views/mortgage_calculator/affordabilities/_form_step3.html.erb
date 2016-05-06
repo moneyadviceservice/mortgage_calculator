@@ -26,10 +26,17 @@
   </div>
 
   <div class="affcalc__row">
-    <div class="affcalc__col--33">
+    <div class="affcalc__col--field">
       <%= f.form_row do %>
         <%= render 'mortgage_calculator/shared/term_years_input', f: f %>
       <% end %>
+    </div>
+    <div class="affcalc__col--tooltip">
+      <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/results.term_years"),
+        html: {
+          id: 'term_years_tip'
+        }
+      %>
     </div>
   </div>
 

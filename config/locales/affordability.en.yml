@@ -97,6 +97,8 @@ en:
         annual_income_1: "Second applicant’s income before tax"
         extra_income_1: "Include: second applicant's income from other jobs, pension income, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
         monthly_net_income_1: "Second applicant’s income after tax, minus pension, NI, and other deductions"
+      mortgage_calculator/results:
+        term_years: "Reducing the amount of time it takes to pay off your mortgage could affect the affordability of your monthly repayments. It may also affect the amount the lender is prepared to offer you."
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"

@@ -8,6 +8,7 @@
                      "placeholder" => "eg #{MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS}",
                      "integer" => "",
                      "aria-labelledby" => "label_term",
+                     "aria-describedby" => "term_years_tip",
                      "analytics" => '',
                      "analytics-on" => 'change',
                      "analytics-category" => 'Mortgage Calculator',
@@ -26,6 +27,7 @@
      max="40" step="1"
      ng-model="repayments.termYears"
      aria-hidden="true"
+     aria-describedby="term_years_tip"
      analytics-category="Mortgage Calculator"
      analytics-action="Refinement"
      analytics-label="Years">

@@ -97,6 +97,8 @@ cy:
         annual_income_1: "Incwm blynyddol yr ail ymgeisydd cyn treth"
         extra_income_1: "Dylid cynnwys: incwm yr ail ymgeisydd o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
         monthly_net_income_1: "Incwm misol yr ail ymgeisydd wedi treth, llai pensiwn, Yswiriant Gwladol, a didyniadau eraill"
+      mortgage_calculator/results:
+        term_years: "Gallai lleihau'r cyfnod o amser a gymerir i glirio'ch morgais effeithio ar ba mor fforddiadwy fydd eich ad-daliadau misol. Gallai effeithio hefyd ar y swm y bydd y darparwr benthyciadau yn fodlon ei gynnig i chi."
     titles:
       annual_income: "Incwm Blynyddol"
       take_home: "Cyflog clir misol"

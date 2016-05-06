@@ -84,6 +84,11 @@ Scenario: Accurate calculations
   And   I enter various income and expense details
   Then  I should see accurate calculations
 
+Scenario: Repayment term tooltip
+  Given I visit the affordability page
+  When  I enter all details for single applicant
+  Then  I should see the repayment term tooltip
+
 @javascript
 Scenario: Adjusting the interest rate in JavaScript
   Given I visit the affordability page
