@@ -207,6 +207,84 @@ Given(/^I enter various income and expense details$/) do
 
 end
 
+
+Given(/^I add an income of (\d+), extras of (\d+) and monthly net of (\d+\.?\d*)$/) do |income, extras, monthly|
+  step_one.annual_income.set income
+  step_one.extra_income.set extras
+  step_one.monthly_net_income.set monthly
+end
+
+Given(/^a second person with an income of (\d+), extras of (\d+) and monthly net of (\d+\.?\d*)$/) do |income, extras, monthly|
+  step_one.second_applicant.set "1"
+  step_one.person_two_annual_income.set income
+  step_one.person_two_extra_income.set extras
+  step_one.person_two_monthly_net_income.set monthly
+end
+
+Given(/^household costs of (\d+), (\d+), (\d+), (\d+), (\d+) and (\d+)$/) do |credit, maint, childcare, travel, bills, rent|
+  step_one.next.click
+  step_two.credit_repayments.set credit
+  step_two.child_maintenance.set maint
+  step_two.childcare.set childcare
+  step_two.travel.set travel
+  step_two.utilities.set bills
+  step_two.rent_and_mortgage.set rent
+end
+
+Given(/^living costs of (\d+), (\d+) and (\d+)$/) do |ents, hols, food|
+  step_two.entertainment.set ents
+  step_two.holiday.set hols
+  step_two.food.set food
+  step_two.next.click
+end
+
+When(/^using the default term and interest rate$/) do
+  # deliberately do nothing
+end
+
+Then(/^the offered range is expected to be between "([^"]*)" and "([^"]*)"$/) do |min, max|
+  expect(step_three.offered_amount).to have_content("between #{min} and #{max}")
+end
+
+Then(/^the borrowing amount is expected to be "([^"]*)"$/) do |borrowing|
+  expect(step_three.borrowing.value).to eq(borrowing)
+end
+
+Then(/^the monthly repayments are expected to be "([^"]*)"$/) do |repayments|
+  expect(step_three.repayments).to have_content("Your estimated mortgage repayments per month will be approximately: #{repayments}")
+end
+
+Then(/^the spending commitment is expected to be "([^"]*)"$/) do |commitment|
+  expect(step_three.committed).to have_content("Your estimated fixed and committed spend per month is: #{commitment}")
+end
+
+Then(/^the risk percentage is expected to be "([^"]*)"$/) do |risk_pct|
+  expect(step_three.risk_chart).to have_content("#{risk_pct}")
+end
+
+Then(/^the essentials are expected to have a percent of "([^"]*)" and an amount of "([^"]*)"$/) do |percent, amount|
+  expect(step_three.essentials).to have_content("Mortgage repayments and essential costs per month amount to roughly #{percent} of your total take-home pay: #{amount}")
+end
+
+Then(/^the leftovers are expected to have a percent of "([^"]*)" and an amount of "([^"]*)"$/) do |percent, amount|
+  expect(step_three.total_leftover).to have_content("What you have left over is roughly #{percent} of your monthly take-home: #{amount}")
+end
+
+Then(/^the remaining per month is expected to be "([^"]*)"$/) do |remaining|
+  expect(step_three.remaining).to have_content("The amount you have left over after living costs is #{remaining}")
+end
+
+Then(/^the amount on interest increase is expected to be "([^"]*)"$/) do |amount|
+  expect(step_three.what_if_changes).to have_content("If interest rates rise by 2%, your monthly repayment will rise to #{amount}")
+end
+
+Then(/^the buffer on interest increase is expected to be "([^"]*)"$/) do |buffer|
+  expect(step_three.what_if_remaining).to have_content("Your remaining budget will be #{buffer}")
+end
+
+
+
+
 Then(/^I should see accurate calculations$/) do
   # blank because expectations made in
   # Given(/^I enter various income and expense details$/) do
