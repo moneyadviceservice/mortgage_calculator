@@ -46,6 +46,10 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return Repayments.monthlyRepayment(increment);
       },
 
+      rentAndMortgage: function() {
+        return this.outgoings.rent_and_mortgage;
+      },
+
       takeHomePay: function() {
         return this.earnings.person0.net_pay + this.earnings.person1.net_pay;
       },

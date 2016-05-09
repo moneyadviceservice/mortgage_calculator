@@ -87,6 +87,14 @@ describe('Service: Affordability', function() {
 
   });
 
+  describe('#currentRepayment', function() {
+
+    it('returns the current outgoing rent and mortgage payments', function() {
+      expect(affordability.rentAndMortgage()).toBe(900);
+    });
+
+  });
+
   describe('#takeHomePay', function() {
 
     it('calculates the total take home pay of the applicant(s)', function() {
