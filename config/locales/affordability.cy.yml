@@ -132,6 +132,7 @@ cy:
       remaining_html: "Bydd eich cyllideb sy’n weddill yn %{remaining} y mis."
     monthly_repayment:
       estimated_html: "Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class=\"accent\">%{repayment}</span>"
+      current_html: "O’i chymharu â’ch rhent neu daliad morgais presennol o: <span class=\"accent\">%{rent_and_mortgage}</span>"
     remaining:
       estimate_html: "Y swm sydd gennych yn weddill wedi costau byw yw <span class=\"accent\">%{remaining}</span> y mis."
     range:

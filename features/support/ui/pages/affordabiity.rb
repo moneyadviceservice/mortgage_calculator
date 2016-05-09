@@ -70,6 +70,7 @@ module UI
 
         element :offered_amount_js,    ".t-offered-amount-js"
         element :repayments_js,        ".t-repayments-js"
+        element :rent_and_mortgage_js, ".t-rent-and-mortgage-js"
         element :risk_chart_js,        ".t-risk-chart-js"
         element :essentials_js,        ".t-essentials-js"
         element :total_leftover_js,    ".t-total-leftover-js"
@@ -80,6 +81,7 @@ module UI
 
         element :offered_amount,    ".t-offered-amount"
         element :repayments,        ".t-repayments"
+        element :rent_and_mortgage, ".t-rent-and-mortgage"
         element :risk_chart,        ".t-risk-chart"
         element :essentials,        ".t-essentials"
         element :total_leftover,    ".t-total-leftover"
@@ -104,4 +106,3 @@ module UI
     end
   end
 end
-

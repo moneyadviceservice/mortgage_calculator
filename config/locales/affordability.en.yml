@@ -132,6 +132,7 @@ en:
       remaining_html: "Your remaining budget will be %{remaining} per month."
     monthly_repayment:
       estimated_html: "Your estimated mortgage repayments per month will be approximately: <span class=\"accent\">%{repayment}</span>"
+      current_html: "Compared with your current rent or mortgage payment of: <span class=\"accent\">%{rent_and_mortgage}</span>"
     remaining:
       estimate_html: "The amount you have left over after living costs is <span class=\"accent\">%{remaining}</span> per month."
     range:

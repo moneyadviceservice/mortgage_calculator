@@ -209,6 +209,10 @@ Then(/^the monthly repayments are expected to be "([^"]*)"$/) do |repayments|
   expect(step_three.repayments).to have_content("Your estimated mortgage repayments per month will be approximately: #{repayments}")
 end
 
+Then(/^the current monthly repayments are expected to be "([^"]*)"$/) do |rent_now|
+  expect(step_three.rent_and_mortgage).to have_content("Compared with your current rent or mortgage payment of: #{rent_now}")
+end
+
 Then(/^the spending commitment is expected to be "([^"]*)"$/) do |commitment|
   expect(step_three.committed).to have_content("Your estimated fixed and committed spend per month is: #{commitment}")
 end
