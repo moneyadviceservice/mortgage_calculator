@@ -87,6 +87,15 @@ describe('Service: Affordability', function() {
 
   });
 
+  describe('#monthlyRepaymentAfterDefaultInterestRateChange', function() {
+
+    it('calculates the monthly repayments after a default interest rate change', function() {
+      calculateRepayments();
+      expect(affordability.monthlyRepaymentAfterDefaultInterestRateChange()).toBe(1610.11);
+    });
+
+  });
+
   describe('#currentRepayment', function() {
 
     it('returns the current outgoing rent and mortgage payments', function() {
@@ -120,7 +129,6 @@ describe('Service: Affordability', function() {
 
   });
 
-
   describe('#riskPercentage', function() {
 
     it('calculates the risk percentage of the applicant(s) borrowing', function() {
@@ -152,9 +160,7 @@ describe('Service: Affordability', function() {
 
   });
 
-
   describe('#riskLevel', function() {
-
 
     it('returns low when risk is under 40%', function() {
       affordability.outgoings.credit_repayments = 0;
@@ -241,22 +247,35 @@ describe('Service: Affordability', function() {
 
   });
 
-  describe('#remainingBuffer', function() {
+  describe('#remainingPerMonthAfterDefaultInterestRateChange', function() {
 
-    it('calculates the applicant(s) remaining buffer after a 2% increase', function() {
-      repayments.annualInterestRate = 7;
+    it('calculates the remaining spend per month after a default interest rate change', function() {
       calculateRepayments();
       affordability.lifestyleSpend = affordability.calculateLifestyleSpend();
-      expect(affordability.remainingPerMonth()).toBe(1051.21);
+      expect(affordability.remainingPerMonthAfterDefaultInterestRateChange()).toBe(1207.34);
     });
 
-    it('calculates the applicant(s) remaining buffer after a 2% increase, even when lifestyleSpend is null', function() {
-      repayments.annualInterestRate = 7;
+    it('calculates the remaining spend per month after a default interest rate change, even when lifestyleSpend is null', function() {
       calculateRepayments();
       affordability.lifestyleSpend = null;
-      expect(affordability.remainingPerMonth()).toBe(1751.21);
+      expect(affordability.remainingPerMonthAfterDefaultInterestRateChange()).toBe(1907.34);
     });
 
+  });
+
+  describe('#remainingVector', function() {
+    it('is positive when the remaining per month is not a deficit (>= 0)', function() {
+      calculateRepayments();
+      affordability.lifestyleSpend = affordability.remainingPerMonth();
+      expect(affordability.remainingVector()).toBe('positive');
+    });
+
+    it('is negative when the remaining per month is a deficit (< 0)', function() {
+      var extraExpense = 42;
+      calculateRepayments();
+      affordability.lifestyleSpend = affordability.remainingPerMonth() + extraExpense;
+      expect(affordability.remainingVector()).toBe('negative');
+    });
   });
 
 });
