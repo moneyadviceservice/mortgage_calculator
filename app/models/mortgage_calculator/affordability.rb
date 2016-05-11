@@ -197,7 +197,7 @@ module MortgageCalculator
       end
 
       borrowing = store[:borrowing] if store[:borrowing]
-      term_years = store[:term_years] if store[:term_years]
+      term_years = store[:term_years] || MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
 

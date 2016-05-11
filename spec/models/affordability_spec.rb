@@ -395,7 +395,8 @@ module MortgageCalculator
            "rent_and_mortgage"=>"600.00",
            "travel"=>"200.00",
            "utilities"=>"200.00"
-        }
+        },
+        "term_years"=>42
       }
     end
 
@@ -411,12 +412,20 @@ module MortgageCalculator
         expect(subject.two_applicants?).to eql(true)
       end
 
+      it 'gets the term years from the store if they are set' do
+        expect(subject.term_years).to eql(42)
+      end
+
       context 'when store is empty' do
         let(:store){ Hash.new }
 
         it 'loads nothing' do
           expect(subject.total_income).to eql(0)
           expect(subject.lifestyle_costs).to eql(0)
+        end
+
+        it 'sets the default term years' do
+          expect(subject.term_years).to eql(MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS)
         end
       end
     end
