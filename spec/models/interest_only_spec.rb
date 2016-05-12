@@ -9,14 +9,14 @@ describe MortgageCalculator::InterestOnly do
     its(:price){ should be_zero }
     its(:deposit){ should be_zero }
     its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:interest_rate){ should == 3 }
   end
 
   describe 'mortgage attributes' do
     its(:price){ should == 120000 }
     its(:deposit){ should == 20000 }
     its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:interest_rate){ should == 3 }
   end
 
   describe 'change_interest_rate_by' do
@@ -24,22 +24,22 @@ describe MortgageCalculator::InterestOnly do
       subject.change_interest_rate_by(1)
     end
 
-    its(:interest_rate){ should == 6 }
+    its(:interest_rate){ should == 4 }
   end
 
   describe 'methods' do
     its(:debt){ should == 100000 }
 
     it 'has an accurate monthly_payment' do
-      expect(subject.monthly_payment.to_f).to eq(416.6666666666667)
+      expect(subject.monthly_payment.to_f).to eq(250)
     end
 
     it 'has an accurate total_interest' do
-      expect(subject.total_interest.to_f).to eq(125000)
+      expect(subject.total_interest.to_f).to eq(75000)
     end
 
     it 'has an accurate total_payable' do
-      expect(subject.total_payable.to_f).to eq(225000.0)
+      expect(subject.total_payable.to_f).to eq(175000.0)
     end
   end
 

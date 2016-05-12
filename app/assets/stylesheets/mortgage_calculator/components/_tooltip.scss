@@ -1,15 +1,24 @@
 .tooltip {
-  margin-top: -20px;
+  margin-top: -40px;
   margin-bottom: $baseline-unit*6;
 
-  .js & {
-    @include respond-to($mq-m) {
-      position: absolute;
-      margin-top: $baseline-unit*4;
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*4;
+  }
 
-      &.tooltip--hidden {
-        @include visually-hidden;
-      }
-    }
+  &.tooltip--hidden {
+    @include visually-hidden;
+  }
+}
+
+.tooltip--push {
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*8;
+  }
+}
+
+.tooltip--push-small {
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*4;
   }
 }

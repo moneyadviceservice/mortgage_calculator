@@ -5,6 +5,7 @@
   margin-left: -0.8%;
 
   .affcalc__row {
+    @extend %clearfix;
     clear:both;
     position: relative;
   }

@@ -1,24 +1,23 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class="results">
+  <p ng-hide="js" class="results t-what-if-changes">
     <%= t "affordability.interest_changer.changes_by_would_increase_html",
            percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
            repayment: "<strong>#{number_to_currency @changer.monthly_payment}</strong>".html_safe %>
   </p>
 
-  <p ng-hide="js" class="results">
+  <p ng-hide="js" class="results t-what-if-remaining">
     <%= t "affordability.interest_changer.remaining_html",
            remaining: "<strong>#{number_to_currency(@affordability.monthly_net_income - @changer.monthly_payment - @affordability.committed_costs - @affordability.fixed_costs - @affordability.lifestyle_costs)}</strong>".html_safe %>
   </p>
 <% end %>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results t-what-if-changes-js">
   <%= t "affordability.interest_changer.changes_by_would_increase_html",
          percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
-         repayment: "<strong>{{ repayments.monthlyRepayment(2) | customCurrency:'£' }}</strong>".html_safe %>
+         repayment: "<strong>{{ affordability.monthlyRepaymentAfterDefaultInterestRateChange() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results t-what-if-remaining-js">
   <%= t "affordability.interest_changer.remaining_html",
-         remaining: "<strong>{{ affordability.remainingBufferAfterIncrease() | customCurrency:'£' }}</strong>".html_safe %>
+         remaining: "<strong>{{ affordability.remainingPerMonthAfterDefaultInterestRateChange() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
-

@@ -107,18 +107,49 @@ module MortgageCalculator
     end
 
     describe '#borrowing' do
-      context 'default amount' do
-        it 'is half way between the range they can borrow' do
-          half = (subject.can_borrow_from + subject.can_borrow_upto) / 2
-          expect(subject.borrowing).to eql(half)
-        end
+      context 'when borrowing is not given' do
+        subject { described_class.new(people: [person1], outgoings: outgoings) }
+
+        its(:borrowing) { is_expected.to eq(subject.default_borrowing_amount) }
       end
 
-      context 'when overriden' do
-        subject{ described_class.new(people: [person1], outgoings: outgoings, borrowing: 123000) }
+      context 'when borrowing is given' do
+        subject { described_class.new(people: [person1], outgoings: outgoings, borrowing: borrowing) }
 
-        it 'uses overriden value' do
-          expect(subject.borrowing).to eql(123000)
+        context 'and is nil' do
+          let(:borrowing) { nil }
+
+          its(:borrowing) { is_expected.to eq(subject.default_borrowing_amount) }
+        end
+
+        context 'and is a number' do
+          let(:borrowing) { 123 }
+
+          its(:borrowing) { is_expected.to eq(123) }
+        end
+
+        context 'and is "0"' do
+          let(:borrowing) { '0' }
+
+          its(:borrowing) { is_expected.to eq('0') }
+        end
+
+        context 'and is "999"' do
+          let(:borrowing) { '999' }
+
+          its(:borrowing) { is_expected.to eq('999') }
+        end
+
+        context 'and is "1,000"' do
+          let(:borrowing) { '1,000' }
+
+          its(:borrowing) { is_expected.to eq('1000') }
+        end
+
+        context 'and is "1.99"' do
+          let(:borrowing) { '1.99' }
+
+          its(:borrowing) { is_expected.to eq('1.99') }
         end
       end
     end
@@ -134,6 +165,13 @@ module MortgageCalculator
     end
 
     describe '#interest_rate' do
+      context 'when not overridden' do
+        it 'uses the application default' do
+          expected = MortgageCalculator::Defaults::DEFAULT_ANNUAL_INTEREST_RATE
+          expect(subject.repayment.interest_rate.to_i).to eql(expected)
+        end
+      end
+
       context 'when overridden' do
         subject{ described_class.new(people: [person1], outgoings: outgoings, interest_rate: 13) }
 
@@ -145,7 +183,7 @@ module MortgageCalculator
 
     describe '#risk_percentage' do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(48)
+        expect(subject.risk_percentage.to_i).to eql(41)
       end
 
       context 'when over 100%' do
@@ -215,7 +253,7 @@ module MortgageCalculator
 
     describe '#remaining' do
       it 'returns remaining amount per month' do
-        expect(subject.remaining.to_i).to eql(2498)
+        expect(subject.remaining.to_i).to eql(2914)
       end
     end
 
@@ -265,13 +303,13 @@ module MortgageCalculator
 
     describe '#budget_outgoing' do
       it 'returns mortgage repayment + fix + committed costs' do
-        expect(subject.budget_outgoing.to_i).to eql(2901)
+        expect(subject.budget_outgoing.to_i).to eql(2485)
       end
     end
 
     describe '#budget_leftover' do
       it 'returns net monthly - budget_outgoing' do
-        expect(subject.budget_leftover.to_i).to eql(3098)
+        expect(subject.budget_leftover.to_i).to eql(3514)
       end
     end
 
@@ -357,7 +395,8 @@ module MortgageCalculator
            "rent_and_mortgage"=>"600.00",
            "travel"=>"200.00",
            "utilities"=>"200.00"
-        }
+        },
+        "term_years"=>42
       }
     end
 
@@ -373,12 +412,20 @@ module MortgageCalculator
         expect(subject.two_applicants?).to eql(true)
       end
 
+      it 'gets the term years from the store if they are set' do
+        expect(subject.term_years).to eql(42)
+      end
+
       context 'when store is empty' do
         let(:store){ Hash.new }
 
         it 'loads nothing' do
           expect(subject.total_income).to eql(0)
           expect(subject.lifestyle_costs).to eql(0)
+        end
+
+        it 'sets the default term years' do
+          expect(subject.term_years).to eql(MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS)
         end
       end
     end

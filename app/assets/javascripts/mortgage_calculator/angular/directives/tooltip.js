@@ -6,7 +6,7 @@ App.directive('ngTooltip', function() {
     controller: [
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var tooltipID = $element.attr('id'),
-            $inputTarget = $('input[aria-describedby="' + tooltipID + '"]'),
+            $inputTarget = $('[aria-describedby="' + tooltipID + '"]'),
             hiddenClass = 'tooltip--hidden',
             debounceTimer;
 

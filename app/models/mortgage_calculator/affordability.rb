@@ -13,7 +13,7 @@ module MortgageCalculator
 
     attr_reader :people, :outgoings
 
-    attr_accessor :two_applicants, :empty
+    attr_accessor :two_applicants, :empty, :term_years
 
     def two_applicants?
       two_applicants == "1"
@@ -23,8 +23,10 @@ module MortgageCalculator
       empty
     end
 
-    delegate :committed_costs, to: :outgoings
-    delegate :fixed_costs, to: :outgoings
+    delegate :committed_costs,   to: :outgoings
+    delegate :fixed_costs,       to: :outgoings
+    delegate :rent_and_mortgage, to: :outgoings
+    delegate :monthly_payment,   to: :repayment
 
     currency_inputs :lifestyle_costs
 
@@ -42,18 +44,19 @@ module MortgageCalculator
       @people = options[:people]
       @people.each {|person| person.affordability = self } if @people # Set up parent relation
       @outgoings = options[:outgoings]
-      @borrowing = options[:borrowing]
+      @term_years = options[:term_years]
       @interest_rate = options[:interest_rate]
+      self.borrowing = options[:borrowing]
       self.two_applicants = options[:two_applicants]
       self.lifestyle_costs = options[:lifestyle_costs] if options[:lifestyle_costs].present?
     end
 
     def interest_rate
-      @interest_rate || 5
+      @interest_rate || MortgageCalculator::Defaults::DEFAULT_ANNUAL_INTEREST_RATE
     end
 
     def repayment
-      @repayment ||= Repayment.new(price: borrowing, interest_rate: interest_rate)
+      @repayment ||= Repayment.new(price: borrowing, interest_rate: interest_rate, term_years: term_years)
     end
 
     def total_income
@@ -194,10 +197,11 @@ module MortgageCalculator
       end
 
       borrowing = store[:borrowing] if store[:borrowing]
+      term_years = store[:term_years] || MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS
       interest_rate = store[:interest_rate] if store[:interest_rate]
       lifestyle_costs = store[:lifestyle_costs] if store[:lifestyle_costs]
 
-      model = new(people: people, outgoings: outgoings, borrowing: borrowing, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
+      model = new(people: people, outgoings: outgoings, borrowing: borrowing, term_years: term_years, interest_rate: interest_rate, lifestyle_costs: lifestyle_costs, two_applicants: two_applicants)
       model.empty = store.empty?
       model
     end
@@ -234,8 +238,6 @@ module MortgageCalculator
       committed_costs + fixed_costs > monthly_net_income
     end
 
-  private
-
     def lower_profit_multiplier
       2.8
     end
@@ -250,6 +252,17 @@ module MortgageCalculator
 
     def default_borrowing_amount
       (can_borrow_from + can_borrow_upto) / 2
+    end
+
+    private
+
+    def borrowing=(value)
+      @borrowing = unformat(value)
+    end
+
+    def unformat(value)
+      return value unless value.is_a?(String)
+      value.gsub(/,/, '')
     end
   end
 end
