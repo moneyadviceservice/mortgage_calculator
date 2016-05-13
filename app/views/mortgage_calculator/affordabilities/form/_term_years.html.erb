@@ -1,0 +1,54 @@
+<div class="form__item">
+  <%= f.label :term_years,
+    "id" => "label_term_years" %>
+</div>
+
+<%= f.label :term_years, "id" => "label_term_years", "class" => "visually-hidden" %>
+
+<%= f.number_field :term_years,
+  "class" => "form__input results label-follower label-follower--top risk__accent--color-only",
+  "id" => "term-years",
+  "for" => "term-years-slider",
+  "ng-model" => "repayments.termYears",
+  "placeholder" => "eg #{MortgageCalculator::Defaults::DEFAULT_ANNUAL_TERM_YEARS}",
+  "integer" => "",
+  "aria-labelledby" => "label_term",
+  "aria-describedby" => "term_years_tip",
+  "analytics" => '',
+  "analytics-on" => 'change',
+  "analytics-category" => 'Affordability Calculator',
+  "analytics-action" => 'Refinement',
+  "analytics-label" => 'Years',
+  "pattern" => '\d*',
+  "autoselect" => "",
+  "ng-docked" => "docked",
+  "ng-autosize" => "",
+  "data-m-dec" => "0",
+  "value" => @affordability.term_years
+%>
+
+<div class="slider slider--with-follower-top slider--squeeze risk__accent--color-only"
+     ui-slider
+     min="5"
+     max="40"
+     step="1"
+     ng-model="repayments.termYears"
+     label-follower="#term-years"
+     aria-labelledby="term-years"
+     aria-describedby="term_years_tip"
+     analytics-category="Affordability Calculator"
+     analytics-action="Refinement"
+     analytics-label="Years"
+     id="slider-term-years"
+     ng-docked="docked">
+</div>
+
+<p class="rendered-from-js affordability-range">
+  <span class="affordability-range__min">
+    {{ repayments.minTermYears }} years
+  </span>
+
+  <span class="affordability-range__max">
+    {{ repayments.maxTermYears }} years
+  </span>
+</p>

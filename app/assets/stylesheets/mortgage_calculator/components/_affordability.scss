@@ -55,10 +55,34 @@
     @include respond-to($mq-m) {
       @include column(6);
       @include push(1);
+      position: absolute;
     }
     @include respond-to($mq-l) {
       @include column(7);
       @include push(1);
+    }
+  }
+
+  .affcalc__row--slider {
+    .sticky-wrapper > .l-stuck {
+      padding-left: 0;
+      padding-right: 0.4em;
+    }
+
+    @include respond-to($mq-l) {
+      padding-left: 0;
+      padding-right: 0.8em;
+
+      .sticky-wrapper > .l-stuck {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .affcalc__row--term-years-tooltip {
+    margin-top: 4em;
+    @include respond-to($mq-m) {
+      margin-top: 0;
     }
   }
 }

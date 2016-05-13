@@ -2,13 +2,25 @@
 
 App.factory('Repayments', function() {
   var DEFAULT_ANNUAL_INTEREST_RATE = 3
-    , DEFAULT_ANNUAL_TERM_YEARS    = 25;
+    , INTEREST_RATE_STEP           = 0.25
+    , MIN_ANNUAL_INTEREST_RATE     = 1
+    , MAX_ANNUAL_INTEREST_RATE     = 15
+    , DEFAULT_ANNUAL_TERM_YEARS    = 25
+    , TERM_YEARS_STEP              = 1
+    , MIN_ANNUAL_TERM_YEARS        = 5
+    , MAX_ANNUAL_TERM_YEARS        = 40;
 
   var repayments = {
     propertyPrice           : 0,
     deposit                 : 0,
     termYears               : DEFAULT_ANNUAL_TERM_YEARS,
+    termYearsStep           : TERM_YEARS_STEP,
+    maxTermYears            : MAX_ANNUAL_TERM_YEARS,
+    minTermYears            : MIN_ANNUAL_TERM_YEARS,
     annualInterestRate      : DEFAULT_ANNUAL_INTEREST_RATE,
+    interestRateStep        : INTEREST_RATE_STEP,
+    maxInterestRate         : MAX_ANNUAL_INTEREST_RATE,
+    minInterestRate         : MIN_ANNUAL_INTEREST_RATE,
 
     mortgage                : function() {
       return _debt();

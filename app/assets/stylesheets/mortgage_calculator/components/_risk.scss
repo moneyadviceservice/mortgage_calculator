@@ -39,6 +39,19 @@
   .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-high;
+
+    .ui-slider-handle {
+      &:focus,
+      &:active {
+        border-color: $colour-risk-high;
+      }
+    }
+
+    .ui-slider-handle {
+      &:after {
+        border-bottom-color: $colour-risk-high;
+      }
+    }
   }
 
   .risk-slice--incoming {
@@ -60,6 +73,19 @@
   .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-medium;
+
+    .ui-slider-handle {
+      &:focus,
+      &:active {
+        border-color: $colour-risk-medium;
+      }
+    }
+
+    .ui-slider-handle {
+      &:after {
+        border-bottom-color: $colour-risk-medium;
+      }
+    }
   }
 
   .risk-slice--incoming {
@@ -81,6 +107,19 @@
   .risk__accent--color-only,
   .risk__accent {
     color: $colour-risk-low;
+
+    .ui-slider-handle {
+      &:focus,
+      &:active {
+        border-color: $colour-risk-low;
+      }
+    }
+
+    .ui-slider-handle {
+      &:after {
+        border-bottom-color: $colour-risk-low;
+      }
+    }
   }
 
   .risk-slice--incoming {

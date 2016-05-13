@@ -28,7 +28,7 @@ cy:
           lifestyle_costs: "Fe amcangyfrifoch fod eich costau byw misol yn:"
           borrowing: "Benthyca"
           term_years: "Yn seiliedig ar forgais ad-dalu dros gyfnod o:"
-          interest_rate: "gyda chyfradd llog ar:"
+          interest_rate: "Gyda chyfradd llog ar:"
         mortgage_calculator/outgoings:
           credit_repayments: "Taliadau cerdyn credyd a benthyciadau"
           utilities: "Biliau ac yswiriant"
@@ -98,7 +98,7 @@ cy:
         extra_income_1: "Dylid cynnwys: incwm yr ail ymgeisydd o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
         monthly_net_income_1: "Incwm misol yr ail ymgeisydd wedi treth, llai pensiwn, Yswiriant Gwladol, a didyniadau eraill"
       mortgage_calculator/results:
-        term_years: "Gallai lleihau'r cyfnod o amser a gymerir i glirio'ch morgais effeithio ar ba mor fforddiadwy fydd eich ad-daliadau misol. Gallai effeithio hefyd ar y swm y bydd y darparwr benthyciadau yn fodlon ei gynnig i chi."
+        term_years: "Gall newid cyfnod y morgais effeithio ar y swm o arian y cewch ei fenthyca yn ogystal â chost eich ad-daliadau misol. Er enghraifft, bydd cyfnod byrrach yn debygol o olygu taliadau misol uwch, tra bydd cyfnod hirach yn golygu taliadau is, wedi eu rhannu dros gyfnod hirach o amser."
     titles:
       annual_income: "Incwm Blynyddol"
       take_home: "Cyflog clir misol"

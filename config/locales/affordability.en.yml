@@ -28,7 +28,7 @@ en:
           lifestyle_costs: "You estimated your monthly living costs to be:"
           borrowing: "Borrowing"
           term_years: "Based on a repayment mortgage term of:"
-          interest_rate: "with an interest rate at:"
+          interest_rate: "With an interest rate at:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card & loan payments"
           utilities: "Bills & insurance"
@@ -98,7 +98,7 @@ en:
         extra_income_1: "Include: second applicant's income from other jobs, pension income, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
         monthly_net_income_1: "Second applicant’s income after tax, minus pension, NI, and other deductions"
       mortgage_calculator/results:
-        term_years: "Reducing the amount of time it takes to pay off your mortgage could affect the affordability of your monthly repayments. It may also affect the amount the lender is prepared to offer you."
+        term_years: "Changing the term of the mortgage can affect the total amount of money you are able to borrow as well as the cost of your monthly repayments. For example, a shorter term will probably result in higher monthly payments, whereas a longer term means lower payments, spread out over a longer period of time."
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
