@@ -99,6 +99,10 @@ en:
         monthly_net_income_1: "Second applicant’s income after tax, minus pension, NI, and other deductions"
       mortgage_calculator/results:
         term_years: "Changing the term of the mortgage can affect the total amount of money you are able to borrow as well as the cost of your monthly repayments. For example, a shorter term will probably result in higher monthly payments, whereas a longer term means lower payments, spread out over a longer period of time."
+        title: "Please read"
+        link_text_low: "See summary"
+        link_text_medium: "You are at risk of overstretching your budget"
+        link_text_high: "You run a very high risk of stretching your budget"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
