@@ -28,13 +28,24 @@
   <div class="affcalc__row affcalc__row--slider">
     <div class="affcalc__col--clip">
       <%= render 'mortgage_calculator/affordabilities/form/term_years', f: f %>
-      <div class="affcalc__row--term-years-tooltip">
-        <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/results.term_years"),
-          html: {
-            id: 'term_years_tip'
-          }
-        %>
-      </div>
+      
+        <div class="tooltip tooltip--onfocus tooltip--boxout tooltip--push-top" ng-tooltip ng-cloak data-tooltip-persist="true" role="tooltip" id="term_years_tip">
+          <div class="tooltip__content-container">
+            <h4 class="tooltip__title"><%= t("affordability.tooltips.mortgage_calculator/results.title") %></h4>
+            <p class="tooltip__text"><%= t("affordability.tooltips.mortgage_calculator/results.term_years") %></p>
+            <a class="tooltip__link" href="#affcalc-summary">
+              <span class="risk--show-on-low">
+                <%= t("affordability.tooltips.mortgage_calculator/results.link_text_low") %>
+              </span>
+              <span class="risk--show-on-medium">
+                <%= t("affordability.tooltips.mortgage_calculator/results.link_text_medium") %>
+              </span>
+              <span class="risk--show-on-high">
+                <%= t("affordability.tooltips.mortgage_calculator/results.link_text_high") %>
+              </span>
+            </a>
+          </div>
+        </div>
     </div>
   </div>
 
@@ -58,7 +69,7 @@
 
   <div class="affcalc__row">
     <div class="affcalc__col--clip" ng-cloak>
-      <h3><%= t "affordability.titles.how_affect_budget" %></h3>
+      <h3 class="affcalc__anchor-header-offset" id="affcalc-summary"><%= t "affordability.titles.how_affect_budget" %></h3>
 
       <% if @affordability.only_rent_and_mortgage_warning? %>
         <%= inset_block(t("affordability.warnings.only_rent_and_mortgage_html",

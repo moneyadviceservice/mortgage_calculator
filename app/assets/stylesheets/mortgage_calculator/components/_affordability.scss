@@ -78,11 +78,19 @@
       }
     }
   }
+}
 
-  .affcalc__row--term-years-tooltip {
-    margin-top: 4em;
+.affcalc__anchor-header-offset {
+  &:before {
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0;
+    height: 200px; 
+    margin-top: -200px; 
     @include respond-to($mq-m) {
-      margin-top: 0;
+      height: 165px; 
+      margin-top: -165px;
     }
   }
 }
