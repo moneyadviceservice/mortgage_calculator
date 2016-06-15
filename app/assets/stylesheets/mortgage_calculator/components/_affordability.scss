@@ -55,7 +55,9 @@
     @include respond-to($mq-m) {
       @include column(6);
       @include push(1);
-      position: absolute;
+      .js & {
+        position: absolute;
+      }
     }
     @include respond-to($mq-l) {
       @include column(7);
