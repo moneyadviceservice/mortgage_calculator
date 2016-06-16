@@ -100,9 +100,9 @@ cy:
       mortgage_calculator/results:
         term_years: "Gall newid cyfnod y morgais effeithio ar y swm o arian y cewch ei fenthyca yn ogystal â chost eich ad-daliadau misol. Er enghraifft, bydd cyfnod byrrach yn debygol o olygu taliadau misol uwch, tra bydd cyfnod hirach yn golygu taliadau is, wedi eu rhannu dros gyfnod hirach o amser."
         title: "Darllenwch"
-        link_text_low: "Gweler y crynodeb"
-        link_text_medium: "Rydych mewn perygl o wario mwy na’ch cyllideb"
-        link_text_high: "Rydych mewn perygl mawr iawn o wario mwy na’ch cyllideb"
+        link_text_low_html: "Gweler y crynodeb"
+        link_text_medium_html: "Rydych mewn perygl o wario mwy na’ch cyllideb"
+        link_text_high_html: "Rydych mewn perygl mawr iawn o wario mwy na’ch cyllideb"
     titles:
       annual_income: "Incwm Blynyddol"
       take_home: "Cyflog clir misol"
