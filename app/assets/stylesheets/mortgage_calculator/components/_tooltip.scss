@@ -37,4 +37,24 @@
 
 .tooltip__link {
   float: right;
+  padding-right: $baseline-unit * 7;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: $color-green-dark transparent transparent transparent;
+  }
+
+  .no-js & {
+    .risk--show-on-low {
+      display: block;
+    }
+  }
 }
