@@ -69,21 +69,21 @@ module MortgageCalculator
     end
 
     context 'when the user is a sole buyer' do
-      its(:total_income){ should == 110_000 }
-      its(:can_borrow_from){ should == 301_280 }
-      its(:can_borrow_upto){ should == 451_920 }
-      its(:number_of_applicants){ should == 1 }
-      its(:monthly_net_income){ should == 6000 }
+      its(:total_income){ is_expected.to eq 110_000 }
+      its(:can_borrow_from){ is_expected.to eq 301_280 }
+      its(:can_borrow_upto){ is_expected.to eq 451_920 }
+      its(:number_of_applicants){ is_expected.to eq 1 }
+      its(:monthly_net_income){ is_expected.to eq 6000 }
     end
 
     context 'when there are multiple applicants' do
       subject{ described_class.new(people: [person1, person2], outgoings: outgoings) }
 
-      its(:total_income){ should == 165_000 }
-      its(:can_borrow_from){ should == 455_280 }
-      its(:can_borrow_upto){ should == 682_920}
-      its(:number_of_applicants){ should == 2 }
-      its(:monthly_net_income){ should == 9000 }
+      its(:total_income){ is_expected.to eq 165_000 }
+      its(:can_borrow_from){ is_expected.to eq 455_280 }
+      its(:can_borrow_upto){ is_expected.to eq 682_920}
+      its(:number_of_applicants){ is_expected.to eq 2 }
+      its(:monthly_net_income){ is_expected.to eq 9000 }
 
       it 'sets up relationship with persons' do
         subject.people.each do |person|
