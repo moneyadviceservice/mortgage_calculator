@@ -377,33 +377,37 @@ module MortgageCalculator
     end
 
     let(:serialized_hash) do
-      { "people_attributes" => {
-          '0' => {'annual_income'=>"100000.0",
-                  'extra_income'=>"10000.0",
-                  'monthly_net_income'=>"6000.0"},
-          '1' => {'annual_income'=>"50000.0",
-                  'extra_income'=>"5000.0",
-                  'monthly_net_income'=>"3000.0"}},
-         "two_applicants" => "1",
-         "outgoings" => {
-           "child_maintenance"=>"0.00",
-           "childcare"=>"100.00",
-           "credit_repayments"=>"200.00",
-           "entertainment"=>"400.00",
-           "food"=>"200.00",
-           "holidays"=>"0.00",
-           "rent_and_mortgage"=>"600.00",
-           "travel"=>"200.00",
-           "utilities"=>"200.00"
+      {
+        'people_attributes' => {
+          '0' => {
+            'annual_income' => '100000.0',
+            'extra_income' => '10000.0',
+            'monthly_net_income' => '6000.0'
+          },
+          '1' => {
+            'annual_income' => '50000.0',
+            'extra_income' => '5000.0',
+            'monthly_net_income' => '3000.0'
+          }
         },
-        "term_years"=>42
+        'two_applicants' => '1',
+        'outgoings' => {
+          'child_maintenance' => '0.00',
+          'childcare' => '100.00',
+          'credit_repayments' => '200.00',
+          'entertainment' => '400.00',
+          'food' => '200.00',
+          'holidays' => '0.00',
+          'rent_and_mortgage' => '600.00',
+          'travel' => '200.00',
+          'utilities' => '200.00'
+        },
+        'term_years' => 42
       }
     end
 
     describe '#load_from_store' do
-      let(:store) do
-        { affordability: serialized_hash }
-      end
+      let(:store) { { affordability: serialized_hash } }
 
       subject{ described_class.load_from_store(store) }
 
