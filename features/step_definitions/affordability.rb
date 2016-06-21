@@ -284,51 +284,20 @@ Given(/^I visit the Syndicated Affordability page$/) do
 end
 
 Then(/^I should see the correct results for a single applicant$/) do
-  expect(step_three.repayments).to have_text('£1,706.21')
-  expect(step_three.risk_chart).to have_text('53%')
-  expect(step_three.essentials).to have_text('53%')
-  expect(step_three.essentials).to have_text('£3,206.21')
-  expect(step_three.total_leftover).to have_text('47%')
-  expect(step_three.total_leftover).to have_text('£2,793.79')
-  expect(step_three.remaining).to have_text('£1,893.79')
-  expect(step_three.what_if_changes).to have_text('2%')
-  expect(step_three.what_if_changes).to have_text('£2,103.35')
-  expect(step_three.what_if_remaining).to have_text('£1,496.65')
+  expect(js_test? ? step_three.repayments_js : step_three.repayments).to have_text('£1,706.21')
+  expect(js_test? ? step_three.risk_chart_js : step_three.risk_chart).to have_text('53%')
+  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('53%')
+  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('£3,206.21')
+  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('47%')
+  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('£2,793.79')
+  expect(js_test? ? step_three.remaining_js : step_three.remaining).to have_text('£1,893.79')
+  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '3%' : '2%')
+  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '£2,318.20' : '£2,103.35')
+  expect(js_test? ? step_three.what_if_remaining_js : step_three.what_if_remaining).to have_text(js_test? ? '£1,281.80' : '£1,496.65')
 end
 
-Then(/^I should see the correct results for a single applicant for JavaScript$/) do
-  expect(step_three.repayments_js).to have_text('£1,706.21')
-  expect(step_three.risk_chart_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('£3,206.21')
-  expect(step_three.total_leftover_js).to have_text('47%')
-  expect(step_three.total_leftover_js).to have_text('£2,793.79')
-  expect(step_three.remaining_js).to have_text('£1,893.79')
-  expect(step_three.what_if_changes_js).to have_text('3%')
-  expect(step_three.what_if_changes_js).to have_text('£2,318.20')
-  expect(step_three.what_if_remaining_js).to have_text('£1,281.80')
-end
-
+# Only runs as a javascript test
 Then(/^I should be able to tweak the results by adjusting the interest rate text$/) do
-  expect(step_three).to have_interest_rate
-
-  step_three.interest_rate.set(4)
-
-  expect(step_three.repayments).to have_text('£1,899.16')
-  expect(step_three.risk_chart).to have_text('57%')
-  expect(step_three.essentials).to have_text('57%')
-  expect(step_three.essentials).to have_text('£3,399.16')
-  expect(step_three.total_leftover).to have_text('43%')
-  expect(step_three.total_leftover).to have_text('£2,600.84')
-  expect(step_three.remaining).to have_text('£1,700.84')
-  expect(step_three.what_if_changes).to have_text('2%')
-  expect(step_three.what_if_changes).to have_text('£2,318.20')
-  expect(step_three.what_if_remaining).to have_text('£1,281.80')
-
-  step_three.interest_rate_slider.set(3)
-end
-
-Then(/^I should be able to tweak the results by adjusting the interest rate text for JavaScript$/) do
   expect(step_three).to have_interest_rate
 
   step_three.interest_rate.set(4)
@@ -347,6 +316,7 @@ Then(/^I should be able to tweak the results by adjusting the interest rate text
   step_three.interest_rate_slider.set(3)
 end
 
+# Only runs as a javascript test
 Then(/^I should be able to tweak the results by adjusting the interest rate slider$/) do
   expect(step_three).to have_interest_rate_slider
 
@@ -366,7 +336,8 @@ Then(/^I should be able to tweak the results by adjusting the interest rate slid
   step_three.interest_rate_slider.set(3)
 end
 
-Then(/^I should be able to tweak the results by adjusting the mortgage term text for JavaScript$/) do
+# Only runs as a javascript test
+Then(/^I should be able to tweak the results by adjusting the mortgage term text$/) do
   expect(step_three).to have_term_years
 
   step_three.term_years.set(26)
@@ -385,6 +356,7 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term text
   step_three.term_years.set(25)
 end
 
+# Only runs as a javascript test
 Then(/^I should be able to tweak the results by adjusting the mortgage term slider$/) do
   expect(step_three).to have_term_years_slider
 
