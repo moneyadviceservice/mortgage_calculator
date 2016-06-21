@@ -20,9 +20,7 @@ describe MortgageCalculator::InterestOnly do
   end
 
   describe 'change_interest_rate_by' do
-    before :each do
-      subject.change_interest_rate_by(1)
-    end
+    before{ subject.change_interest_rate_by(1) }
 
     its(:interest_rate){ is_expected.to eq 4 }
   end
