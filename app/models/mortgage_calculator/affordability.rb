@@ -255,12 +255,7 @@ module MortgageCalculator
     private
 
     def borrowing=(value)
-      @borrowing = unformat(value)
-    end
-
-    def unformat(value)
-      return value unless value.is_a?(String)
-      value.gsub(/,/, '')
+      @borrowing = value.is_a?(String) ? value.gsub(/,/, '') : value
     end
   end
 end
