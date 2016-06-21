@@ -27,27 +27,17 @@ describe MortgageCalculator::InterestOnly do
     its(:interest_rate){ should == 4 }
   end
 
-  describe 'methods' do
-    its(:debt){ should == 100000 }
-
-    it 'has an accurate monthly_payment' do
-      expect(subject.monthly_payment.to_f).to eq(250)
-    end
-
-    it 'has an accurate total_interest' do
-      expect(subject.total_interest.to_f).to eq(75000)
-    end
-
-    it 'has an accurate total_payable' do
-      expect(subject.total_payable.to_f).to eq(175000.0)
-    end
-  end
-
   describe 'with custom inputs' do
     subject{ described_class.new price: "120000", deposit: "20000", term_years: "20", interest_rate: "4" }
 
     its(:term_years){ should == 20 }
     its(:interest_rate){ should == 4 }
   end
-end
 
+  context 'methods' do
+    its(:debt){ should == 100000 }
+    its(:monthly_payment){ should == 250 }
+    its(:total_interest){ should == 75000 }
+    its(:total_payable){ should == 175000 }
+  end
+end
