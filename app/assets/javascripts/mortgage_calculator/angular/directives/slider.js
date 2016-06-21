@@ -59,6 +59,7 @@ App.directive('uiSlider', function() {
       if ($labelFollower) {
         var labelWidth = $labelFollower.width(),
             sliderWidth = element.width(),
+            handleOffset = 6,
             handleLeft = parseFloat(element.find('.ui-slider-handle').css('left'));
 
         if (handleLeft < (labelWidth / 2)) {
@@ -70,7 +71,7 @@ App.directive('uiSlider', function() {
         }
 
         $labelFollower.css({
-          left: handleLeft,
+          left: handleLeft - handleOffset + 'px',
           marginLeft: '-' + (labelWidth / 2) + 'px'
         });
       }

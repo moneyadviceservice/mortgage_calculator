@@ -5,6 +5,7 @@
   margin-left: -0.8%;
 
   .affcalc__row {
+    @extend %clearfix;
     clear:both;
     position: relative;
   }
@@ -54,10 +55,44 @@
     @include respond-to($mq-m) {
       @include column(6);
       @include push(1);
+      .js & {
+        position: absolute;
+      }
     }
     @include respond-to($mq-l) {
       @include column(7);
       @include push(1);
+    }
+  }
+
+  .affcalc__row--slider {
+    .sticky-wrapper > .l-stuck {
+      padding-left: 0;
+      padding-right: 0.4em;
+    }
+
+    @include respond-to($mq-l) {
+      padding-left: 0;
+      padding-right: 0.8em;
+
+      .sticky-wrapper > .l-stuck {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.affcalc__anchor-header-offset {
+  &:before {
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0;
+    height: 200px; 
+    margin-top: -200px; 
+    @include respond-to($mq-m) {
+      height: 165px; 
+      margin-top: -165px;
     }
   }
 }

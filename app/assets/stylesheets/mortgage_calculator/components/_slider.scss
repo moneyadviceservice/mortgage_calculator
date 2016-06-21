@@ -363,6 +363,7 @@
   }
 }
 
+.ui-slider .ui-slider-handle--risk,
 .ui-slider .ui-slider-handle {
   position:absolute;
   width:30px;
@@ -408,6 +409,7 @@
 .slider--with-follower-top {
   margin-top: $baseline-unit*10;
 
+  .ui-slider-handle--risk,
   .ui-slider-handle {
     margin-left:-15px;
 

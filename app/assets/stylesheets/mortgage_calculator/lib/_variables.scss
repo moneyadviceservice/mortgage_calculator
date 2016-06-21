@@ -11,8 +11,8 @@ $color-error: #ff0000;
 
 $mortgagecalc_mq-s: px(570);
 
-$colour-risk-low: #77bf24;
-$colour-risk-medium: #f08d00;
-$colour-risk-high: #e80000;
+$colour-risk-low: lighten($color-green-one, 10) ;
+$colour-risk-medium: lighten($color-yellow-light, 10);
+$colour-risk-high: lighten($color-red-medium, 20);
 
 $colour-label-accent: #f7eea6;

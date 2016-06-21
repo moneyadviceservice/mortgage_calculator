@@ -1,6 +1,7 @@
 module MortgageCalculator
   class InterestOnly
     include CurrencyInput::Macro
+    include MortgageCalculator::Defaults
 
     attr_reader :price, :deposit, :term_years, :interest_rate
 
@@ -9,8 +10,8 @@ module MortgageCalculator
     def initialize(options = {})
       self.price = options[:price].presence || 0
       self.deposit = options[:deposit].presence || 0
-      self.term_years = options[:term_years].presence || 25
-      self.interest_rate = options[:interest_rate].presence || 5
+      self.term_years = options[:term_years].presence || DEFAULT_ANNUAL_TERM_YEARS
+      self.interest_rate = options[:interest_rate].presence || DEFAULT_ANNUAL_INTEREST_RATE
     end
 
     def term_years=(value)

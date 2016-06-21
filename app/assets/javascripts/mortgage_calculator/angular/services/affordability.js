@@ -1,6 +1,7 @@
 'use strict';
 
 App.factory('Affordability', ['Repayments', function(Repayments) {
+    var DEFAULT_INTEREST_RATE_CHANGE_AMOUNT = 3;
 
     var affordability = {
       earnings: {
@@ -26,7 +27,7 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         holidays: 0,
         food: 0
       },
-      numberOfPeople        : [0, 1],
+      numberOfPeople: [0, 1],
 
       lifestyleSpend: 0,
 
@@ -44,6 +45,14 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
 
       monthlyRepayment: function(increment) {
         return Repayments.monthlyRepayment(increment);
+      },
+
+      monthlyRepaymentAfterDefaultInterestRateChange : function() {
+        return this.monthlyRepayment(DEFAULT_INTEREST_RATE_CHANGE_AMOUNT);
+      },
+
+      rentAndMortgage: function() {
+        return this.outgoings.rent_and_mortgage;
       },
 
       takeHomePay: function() {
@@ -79,8 +88,8 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return 'medium';
       },
 
-      riskAmount: function() {
-        return Math.round((this.monthlyRepayment() + this.committedCosts() + this.fixedCosts()) * 100 ) / 100;
+      riskAmount: function(increment) {
+        return Math.round((this.monthlyRepayment(increment) + this.committedCosts() + this.fixedCosts()) * 100 ) / 100;
       },
 
       amountAfterRisk: function() {
@@ -95,20 +104,16 @@ App.factory('Affordability', ['Repayments', function(Repayments) {
         return this.lifestyleSpend || 0;
       },
 
-      remainingPerMonth: function() {
-        return Math.round(( (this.takeHomePay() - this.riskAmount())  - this.getLifestyleSpend()) * 100 ) / 100;
+      remainingPerMonth: function(increment) {
+        return Math.round(((this.takeHomePay() - this.riskAmount(increment)) - this.getLifestyleSpend()) * 100 ) / 100;
       },
 
-      remainingBuffer: function() {
-        return this.takeHomePay() - this.monthlyRepayment() - this.committedCosts() - this.fixedCosts() - this.getLifestyleSpend();
-      },
-
-      remainingBufferAfterIncrease: function() {
-        return this.takeHomePay() - this.monthlyRepayment(2) - this.committedCosts() - this.fixedCosts() - this.getLifestyleSpend();
+      remainingPerMonthAfterDefaultInterestRateChange: function() {
+        return this.remainingPerMonth(DEFAULT_INTEREST_RATE_CHANGE_AMOUNT);
       },
 
       remainingVector: function() {
-        return this.remainingBuffer() >= 0 ? 'positive' : 'negative';
+        return this.remainingPerMonth() >= 0 ? 'positive' : 'negative';
       }
     };
 

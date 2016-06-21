@@ -35,62 +35,44 @@
   display: none;
 }
 
-.risk--high {
-  .risk__accent {
-    color: $colour-risk-high;
-  }
+$risk-levels: (high, $colour-risk-high) (medium, $colour-risk-medium) (low, $colour-risk-low);
 
-  .risk-slice--incoming {
-    fill: $colour-risk-high;
-  }
+@each $level in $risk-levels {
 
-  .risk-key--incoming {
-    &:after {
-      background: $colour-risk-high;
+  $level-name: nth($level, 1);
+  $level-color: nth($level, 2);
+
+  .risk--#{$level-name} {
+    .risk__accent--color-only {
+      background-color: $level-color;
     }
-  }
 
-  .risk--show-on-high {
-    display: block;
+    .ui-slider .ui-slider-handle {
+      &:focus,
+      &:active {
+        border-color: $level-color;
+      }
+    }
+
+    .ui-slider .ui-slider-handle {
+      &:after {
+        border-bottom-color: $level-color;
+      }
+    }
+
+    .risk-slice--incoming {
+      fill: $level-color;
+    }
+
+    .risk-key--incoming {
+      &:after {
+        background: $level-color;
+      }
+    }
+
+    .risk--show-on-#{$level-name} {
+      display: block;
+    }
   }
 }
 
-.risk--medium {
-  .risk__accent {
-    color: $colour-risk-medium;
-  }
-
-  .risk-slice--incoming {
-    fill: $colour-risk-medium;
-  }
-
-  .risk-key--incoming {
-    &:after {
-      background: $colour-risk-medium;
-    }
-  }
-
-  .risk--show-on-medium {
-    display: block;
-  }
-}
-
-.risk--low {
-  .risk__accent {
-    color: $colour-risk-low;
-  }
-
-  .risk-slice--incoming {
-    fill: $colour-risk-low;
-  }
-
-  .risk-key--incoming {
-    &:after {
-      background: $colour-risk-low;
-    }
-  }
-
-  .risk--show-on-low {
-    display: block;
-  }
-}

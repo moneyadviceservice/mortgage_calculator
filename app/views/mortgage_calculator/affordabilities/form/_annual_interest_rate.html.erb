@@ -1,36 +1,52 @@
-<div class="affcalc__row">
-  <div class="affcalc__col--33">
-    <%= f.form_row do %>
-      <%= f.label :interest_rate,
-        "id" => "label_interest_rate" %>
-
-      <span class="form__input-container">
-        <%= f.text_field :interest_rate,
-               "autofocus" => "",
-               "class" => "form__input",
-               "ng-model" => "repayments.annualInterestRate",
-               "aria-labelledby" => "label_interest_rate label_interest_rate_a",
-               "percentage" => "",
-               "placeholder" => "Eg. 5",
-               "analytics" => '',
-               "analytics-on" => 'change',
-               "analytics-category" => 'Affordability Calculator',
-               "analytics-action" => 'Refinement',
-               "analytics-label" => 'Interest Rate' %>
-        <span class="form__input-label" id="label_interest_rate_a">%</span>
-        <span class="form__input-outline"></span>
-      </span>
-
-      <div class="slider"
-          id="slider-interest-rate"
-          ui-slider min="1"
-          max="15" step="1"
-          ng-model="repayments.annualInterestRate"
-          aria-labelledby="label_interest_rate label_interest_rate_a"
-          analytics-category="Affordability Calculator"
-          analytics-action="Refinement"
-          analytics-label="Interest Rate">
-      </div>
-    <% end %>
-  </div>
+<div class="form__item">
+  <%= f.label :interest_rate,
+    "id" => "label_interest_rate" %>
 </div>
+
+<%= f.label :interest_rate, "id" => "label_interest_rate", "class" => "visually-hidden" %>
+
+<%= f.number_field :interest_rate,
+  "class" => "form__input results label-follower label-follower--top risk__accent--color-only",
+  "id" => "interest-rate",
+  "for" => "interest-rate-slider",
+  "ng-model" => "repayments.annualInterestRate",
+  "placeholder" => "eg #{MortgageCalculator::Defaults::DEFAULT_ANNUAL_INTEREST_RATE}",
+  "integer" => "",
+  "aria-labelledby" => "label_interest_rate label_interest_rate_a",
+  "analytics" => '',
+  "analytics-on" => 'change',
+  "analytics-category" => 'Affordability Calculator',
+  "analytics-action" => 'Refinement',
+  "analytics-label" => 'Interest Rate',
+  "pattern" => '\d*',
+  "autoselect" => "",
+  "ng-docked" => "docked",
+  "ng-autosize" => "",
+  "data-m-dec" => "0",
+  "value" => @affordability.interest_rate
+%>
+
+<div class="slider slider--with-follower-top slider--squeeze"
+     ui-slider
+     min="repayments.minInterestRate"
+     max="repayments.maxInterestRate"
+     step="repayments.interestRateStep"
+     ng-model="repayments.annualInterestRate"
+     label-follower="#interest-rate"
+     aria-labelledby="interest-rate"
+     analytics-category="Affordability Calculator"
+     analytics-action="Refinement"
+     analytics-label="Interest Rate"
+     id="slider-interest-rate"
+     ng-docked="docked">
+</div>
+
+<p class="rendered-from-js affordability-range">
+  <span class="affordability-range__min">
+    {{ repayments.minInterestRate }}%
+  </span>
+
+  <span class="affordability-range__max">
+    {{ repayments.maxInterestRate }}%
+  </span>
+</p>

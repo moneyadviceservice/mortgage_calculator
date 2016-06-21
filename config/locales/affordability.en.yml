@@ -27,7 +27,8 @@ en:
         mortgage_calculator/affordability:
           lifestyle_costs: "You estimated your monthly living costs to be:"
           borrowing: "Borrowing"
-          interest_rate: "Based on a 25 year repayment mortgage with an interest rate at:"
+          term_years: "Based on a repayment mortgage term of:"
+          interest_rate: "With an interest rate at:"
         mortgage_calculator/outgoings:
           credit_repayments: "Credit card & loan payments"
           utilities: "Bills & insurance"
@@ -96,6 +97,12 @@ en:
         annual_income_1: "Second applicant’s income before tax"
         extra_income_1: "Include: second applicant's income from other jobs, pension income, guaranteed bonus, regular overtime, other employment, rental income, maintenance payments, pension, car allowance etc"
         monthly_net_income_1: "Second applicant’s income after tax, minus pension, NI, and other deductions"
+      mortgage_calculator/results:
+        term_years: "Changing the term of the mortgage can affect the total amount of money you are able to borrow as well as the cost of your monthly repayments. For example, a shorter term will probably result in higher monthly payments, whereas a longer term means lower payments, spread out over a longer period of time."
+        title: "Please read"
+        link_text_low_html: "See summary"
+        link_text_medium_html: "You are at <b>risk</b> of overstretching your budget"
+        link_text_high_html: "You run a <b>very high risk</b> of stretching your budget"
     titles:
       annual_income: "Annual Income"
       take_home: "Monthly take-home pay"
@@ -129,6 +136,7 @@ en:
       remaining_html: "Your remaining budget will be %{remaining} per month."
     monthly_repayment:
       estimated_html: "Your estimated mortgage repayments per month will be approximately: <span class=\"accent\">%{repayment}</span>"
+      current_html: "Compared with your current rent or mortgage payment of: <span class=\"accent\">%{rent_and_mortgage}</span>"
     remaining:
       estimate_html: "The amount you have left over after living costs is <span class=\"accent\">%{remaining}</span> per month."
     range:
