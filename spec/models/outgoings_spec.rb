@@ -56,15 +56,15 @@ describe MortgageCalculator::Outgoings do
   end
 
   describe 'validations' do
-    it { should validate_numericality_of(:credit_repayments) }
-    it { should validate_numericality_of(:utilities) }
-    it { should validate_numericality_of(:childcare) }
-    it { should validate_numericality_of(:child_maintenance) }
-    it { should validate_numericality_of(:rent_and_mortgage) }
-    it { should validate_numericality_of(:food) }
-    it { should validate_numericality_of(:travel) }
-    it { should validate_numericality_of(:entertainment) }
-    it { should validate_numericality_of(:holidays) }
+    it { is_expected.to validate_numericality_of(:credit_repayments) }
+    it { is_expected.to validate_numericality_of(:utilities) }
+    it { is_expected.to validate_numericality_of(:childcare) }
+    it { is_expected.to validate_numericality_of(:child_maintenance) }
+    it { is_expected.to validate_numericality_of(:rent_and_mortgage) }
+    it { is_expected.to validate_numericality_of(:food) }
+    it { is_expected.to validate_numericality_of(:travel) }
+    it { is_expected.to validate_numericality_of(:entertainment) }
+    it { is_expected.to validate_numericality_of(:holidays) }
   end
 
   describe 'commited_costs' do

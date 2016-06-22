@@ -146,29 +146,29 @@ Scenario: Repayment term tooltip
   Then  I should see the repayment term tooltip
 
 @javascript
-Scenario: Adjusting the interest rate in JavaScript
+Scenario: Adjusting the interest rate via text with JavaScript present
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then  I should see the correct results for a single applicant for JavaScript
-  And   I should be able to tweak the results by adjusting the interest rate text for JavaScript
+  Then  I should see the correct results for a single applicant
+  And   I should be able to tweak the results by adjusting the interest rate text
 
 @javascript
-Scenario: Adjusting the interest rate slider
+Scenario: Adjusting the interest rate via the slider
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then  I should see the correct results for a single applicant for JavaScript
+  Then  I should see the correct results for a single applicant
   And   I should be able to tweak the results by adjusting the interest rate slider
 
 @javascript
-Scenario: Adjusting the mortgage term in JavaScript
+Scenario: Adjusting the mortgage term via text with JavaScript present
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then  I should see the correct results for a single applicant for JavaScript
-  And   I should be able to tweak the results by adjusting the mortgage term text for JavaScript
+  Then  I should see the correct results for a single applicant
+  And   I should be able to tweak the results by adjusting the mortgage term text
 
 @javascript
-Scenario: Adjusting the mortgage term slider
+Scenario: Adjusting the mortgage term via the slider
   Given I visit the affordability page
   When  I enter all details for single applicant
-  Then  I should see the correct results for a single applicant for JavaScript
+  Then  I should see the correct results for a single applicant
   And   I should be able to tweak the results by adjusting the mortgage term slider

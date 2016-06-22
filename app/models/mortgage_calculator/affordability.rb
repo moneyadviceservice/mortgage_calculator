@@ -23,10 +23,8 @@ module MortgageCalculator
       empty
     end
 
-    delegate :committed_costs,   to: :outgoings
-    delegate :fixed_costs,       to: :outgoings
-    delegate :rent_and_mortgage, to: :outgoings
-    delegate :monthly_payment,   to: :repayment
+    delegate :committed_costs, :fixed_costs, :rent_and_mortgage, to: :outgoings
+    delegate :monthly_payment, to: :repayment
 
     currency_inputs :lifestyle_costs
 
@@ -257,12 +255,7 @@ module MortgageCalculator
     private
 
     def borrowing=(value)
-      @borrowing = unformat(value)
-    end
-
-    def unformat(value)
-      return value unless value.is_a?(String)
-      value.gsub(/,/, '')
+      @borrowing = value.is_a?(String) ? value.gsub(/,/, '') : value
     end
   end
 end
