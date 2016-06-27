@@ -1,10 +1,10 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class="results">
+  <p ng-hide="js" class="results t-committed">
     <%= t "affordability.budget.commitments_html", commitment: "<strong>#{number_to_currency @affordability.committed_costs + @affordability.fixed_costs}</strong>".html_safe %>
   </p>
 <% end %>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results t-committed-js">
   <%= t "affordability.budget.commitments_html", commitment: "<strong>{{ affordability.committedCosts() + affordability.fixedCosts() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 

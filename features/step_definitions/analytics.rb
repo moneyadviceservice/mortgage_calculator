@@ -13,7 +13,7 @@ When(/^I refine my details$/) do
   @repayment.step_two_deposit.set "20000"
 
   @repayment.term_years.set "30"
-  @repayment.interest_rate.set "3"
+  @repayment.interest_rate.set "4"
 end
 
 Then(/^My repayment refinement interaction is tracked$/) do
@@ -47,7 +47,7 @@ Then(/^My affordability lifestyle refinement interaction is tracked$/) do
 end
 
 Then(/^My risk level is tracked$/) do
-  expected = {"event"=>"GAEvent", "eventCategory"=>"Affordability Calculator", "eventAction"=>"Risk Level", "eventLabel"=>"high"}
+  expected = {"event"=>"GAEvent", "eventCategory"=>"Affordability Calculator", "eventAction"=>"Risk Level", "eventLabel"=>"medium"}
   expect(page).to have_analytics_event(expected)
 end
 

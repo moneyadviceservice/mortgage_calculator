@@ -6,31 +6,31 @@ describe MortgageCalculator::Repayment do
   it_should_behave_like "currency inputs", [:price, :deposit]
 
   describe 'mortgage attributes' do
-    its(:price){ should == 120000 }
-    its(:deposit){ should == 20000 }
-    its(:debt){ should == 100000 }
-    its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 7.5 }
+    its(:price){ is_expected.to eq 120000 }
+    its(:deposit){ is_expected.to eq 20000 }
+    its(:debt){ is_expected.to eq 100000 }
+    its(:term_years){ is_expected.to eq 25 }
+    its(:interest_rate){ is_expected.to eq 7.5 }
   end
 
   describe 'defaults' do
     subject{ described_class.new }
 
-    its(:price){ should be_zero }
-    its(:deposit){ should be_zero }
-    its(:debt){ should be_zero }
-    its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:price){ is_expected.to be_zero }
+    its(:deposit){ is_expected.to be_zero }
+    its(:debt){ is_expected.to be_zero }
+    its(:term_years){ is_expected.to eq 25 }
+    its(:interest_rate){ is_expected.to eq 3 }
   end
 
   describe 'defaults with empty strings' do
     subject{ described_class.new price: "", deposit: "", term_years: "", interest_rate: "" }
 
-    its(:price){ should be_zero }
-    its(:deposit){ should be_zero }
-    its(:debt){ should be_zero }
-    its(:term_years){ should == 25 }
-    its(:interest_rate){ should == 5 }
+    its(:price){ is_expected.to be_zero }
+    its(:deposit){ is_expected.to be_zero }
+    its(:debt){ is_expected.to be_zero }
+    its(:term_years){ is_expected.to eq 25 }
+    its(:interest_rate){ is_expected.to eq 3 }
   end
 
   describe '#change_interest_rate_by' do
@@ -68,15 +68,15 @@ describe MortgageCalculator::Repayment do
   end
 
   describe '#monthly_payment' do
-    its(:monthly_payment){ should be_within(0.01).of(738.99) }
+    its(:monthly_payment){ is_expected.to be_within(0.01).of(738.99) }
   end
 
   describe '#total_interest' do
-    its(:total_interest){ should be_within(1).of(121697) }
+    its(:total_interest){ is_expected.to be_within(1).of(121697) }
   end
 
   describe '#total_payable' do
-    its(:total_payable){ should be_within(1).of(221697) }
+    its(:total_payable){ is_expected.to be_within(1).of(221697) }
   end
 
   describe '#remaining_balances' do

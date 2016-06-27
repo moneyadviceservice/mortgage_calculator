@@ -1,15 +1,60 @@
 .tooltip {
-  margin-top: -20px;
+  margin-top: -40px;
   margin-bottom: $baseline-unit*6;
 
-  .js & {
-    @include respond-to($mq-m) {
-      position: absolute;
-      margin-top: $baseline-unit*4;
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*4;
+  }
 
-      &.tooltip--hidden {
-        @include visually-hidden;
-      }
+  &.tooltip--hidden {
+    @include visually-hidden;
+  }
+}
+
+.tooltip--boxout {
+  @extend %clearfix;
+  margin-top: $baseline-unit*4;
+  border: 1px solid $color-grey-medium-dark;
+  padding: $baseline-unit;
+}
+
+.tooltip--push {
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*8;
+  }
+}
+
+.tooltip--push-small {
+  @include respond-to($mq-m) {
+    margin-top: $baseline-unit*2;
+  }
+}
+
+.tooltip__title {
+  margin-top: $baseline-unit;
+  color: $color-link-list-text;
+}
+
+.tooltip__link {
+  float: right;
+  padding-right: $baseline-unit * 7;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: $color-green-dark transparent transparent transparent;
+  }
+
+  .no-js & {
+    .risk--show-on-low {
+      display: block;
     }
   }
 }

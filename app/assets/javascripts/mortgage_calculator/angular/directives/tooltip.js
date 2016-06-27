@@ -6,8 +6,9 @@ App.directive('ngTooltip', function() {
     controller: [
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var tooltipID = $element.attr('id'),
-            $inputTarget = $('input[aria-describedby="' + tooltipID + '"]'),
+            $inputTarget = $('[aria-describedby="' + tooltipID + '"]'),
             hiddenClass = 'tooltip--hidden',
+            persistOnScreen = $element.attr('data-tooltip-persist'),
             debounceTimer;
 
         $element.addClass(hiddenClass);
@@ -25,6 +26,11 @@ App.directive('ngTooltip', function() {
         $element.on('focusout', handleBlur);
 
         function handleBlur(e) {
+          if (persistOnScreen) {
+            // If we do not want the tooltip to hide onBlur
+            return true;
+          }
+
           clearTimeout(debounceTimer);
           debounceTimer = setTimeout(function() {
             var $activeElement = $(document.activeElement),

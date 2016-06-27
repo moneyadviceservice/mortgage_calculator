@@ -1,12 +1,20 @@
 <% if @affordability.valid? %>
-  <p ng-hide="js" class="results">
+  <p ng-hide="js" class="results t-repayments">
     <%= t "affordability.monthly_repayment.estimated_html",
-           repayment: "<strong>#{number_to_currency @affordability.repayment.monthly_payment}</strong>".html_safe %>
+           repayment: "<strong>#{number_to_currency @affordability.monthly_payment}</strong>".html_safe %>
+  </p>
+  <p ng-hide="js" class="results t-rent-and-mortgage">
+    <%= t "affordability.monthly_repayment.current_html",
+           rent_and_mortgage: "<strong>#{number_to_currency @affordability.rent_and_mortgage}</strong>".html_safe %>
   </p>
 <% end %>
 
-<p class="rendered-from-js results">
+<p class="rendered-from-js results t-repayments-js">
   <%= t "affordability.monthly_repayment.estimated_html",
          repayment: "<strong>{{ affordability.monthlyRepayment() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 
+<p class="rendered-from-js results t-rent-and-mortgage-js">
+  <%= t "affordability.monthly_repayment.current_html",
+         rent_and_mortgage: "<strong>{{ affordability.rentAndMortgage() | customCurrency:'£' }}</strong>".html_safe %>
+</p>

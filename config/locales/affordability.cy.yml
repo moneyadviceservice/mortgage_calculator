@@ -27,7 +27,8 @@ cy:
         mortgage_calculator/affordability:
           lifestyle_costs: "Fe amcangyfrifoch fod eich costau byw misol yn:"
           borrowing: "Benthyca"
-          interest_rate: "Yn seiliedig ar forgais ad-dalu 25 mlynedd gyda chyfradd llog o:"
+          term_years: "Yn seiliedig ar forgais ad-dalu dros gyfnod o:"
+          interest_rate: "Gyda chyfradd llog ar:"
         mortgage_calculator/outgoings:
           credit_repayments: "Taliadau cerdyn credyd a benthyciadau"
           utilities: "Biliau ac yswiriant"
@@ -96,6 +97,12 @@ cy:
         annual_income_1: "Incwm blynyddol yr ail ymgeisydd cyn treth"
         extra_income_1: "Dylid cynnwys: incwm yr ail ymgeisydd o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
         monthly_net_income_1: "Incwm misol yr ail ymgeisydd wedi treth, llai pensiwn, Yswiriant Gwladol, a didyniadau eraill"
+      mortgage_calculator/results:
+        term_years: "Gall newid cyfnod y morgais effeithio ar y swm o arian y cewch ei fenthyca yn ogystal â chost eich ad-daliadau misol. Er enghraifft, bydd cyfnod byrrach yn debygol o olygu taliadau misol uwch, tra bydd cyfnod hirach yn golygu taliadau is, wedi eu rhannu dros gyfnod hirach o amser."
+        title: "Darllenwch"
+        link_text_low_html: "Gweler y crynodeb"
+        link_text_medium_html: "Rydych mewn perygl o wario mwy na’ch cyllideb"
+        link_text_high_html: "Rydych mewn perygl mawr iawn o wario mwy na’ch cyllideb"
     titles:
       annual_income: "Incwm Blynyddol"
       take_home: "Cyflog clir misol"
@@ -129,6 +136,7 @@ cy:
       remaining_html: "Bydd eich cyllideb sy’n weddill yn %{remaining} y mis."
     monthly_repayment:
       estimated_html: "Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class=\"accent\">%{repayment}</span>"
+      current_html: "O’i chymharu â’ch rhent neu daliad morgais presennol o: <span class=\"accent\">%{rent_and_mortgage}</span>"
     remaining:
       estimate_html: "Y swm sydd gennych yn weddill wedi costau byw yw <span class=\"accent\">%{remaining}</span> y mis."
     range:
