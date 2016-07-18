@@ -120,7 +120,7 @@
           <span class="form__input-label" id="label_lifestyle_a">&pound;</span>
             <%= f.text_field :lifestyle_costs,
                              :value => @affordability.lifestyle_costs_formatted,
-                             class: 'dynamic-slider-property form__input',
+                             class: 'dynamic-slider-property-two form__input',
                              "currency" => '',
                              "placeholder" => "0",
                              "data-m-dec" => "0",
@@ -138,7 +138,7 @@
         <div class="slider"
              id="slider-lifestyle"
              ui-slider
-             dynamic-for='dynamic-slider-property'
+             dynamic-for='dynamic-slider-property-two'
              percentage-for-minimum="20"
              percentage-for-maximum="200"
              custom-slider-max="250"
