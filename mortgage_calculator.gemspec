@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["LICENSE", "Rakefile", "README.md", "bower.json.erb"] - Dir["vendor/assets/bower_components/**/*"]
   s.test_files = Dir["spec/**/*", "features/**/*"]
 
-  s.add_dependency "rails", "~> 4.1"
+  s.add_dependency "rails", ">= 4", "< 5"
   s.add_dependency "sass-rails", "~> 4.0.3"
   s.add_dependency "modernizr-rails"
   s.add_dependency "jquery-rails"

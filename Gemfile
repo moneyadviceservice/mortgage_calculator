@@ -3,6 +3,8 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'rails', '~> 4.2.0'
+
 gem 'bowndler'
 gem 'mas-build', '~> 2.0'  if ENV['MAS_BUILD']
 gem 'mas-development_dependencies', '2.3.0.35'
