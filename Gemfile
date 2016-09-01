@@ -18,7 +18,7 @@ group :test do
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 3.0'
-  gem 'shoulda-matchers', "2.7.0"
+  gem 'shoulda-matchers'
   gem 'simplecov', :require => false
   gem 'sqlite3'
 end
