@@ -12,10 +12,8 @@ module MortgageCalculator
       end
     end
 
-    def next_steps
-    end
+    private
 
-  private
     def category_id
       "buying-a-home"
     end

@@ -18,7 +18,6 @@ cy:
     page_2_description: "Treth stamp yw treth ar gost eiddo dros £125,000. Bydd y gyfradd a dalwch yn dibynnu ar bris prynu’ch cartref."
     next: "Nesaf"
     recalculate: Ailgyfrifo
-    back: "Yn ôl"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
     how_calculated_additional: "O fis Ebrill 2016, bydd unrhyw un sy'n prynu ail gartref, gan gynnwys eiddo prynu i osod, yn talu 3% ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny'n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750, gan roi cyfradd dreth effeithiol o 4%."
@@ -47,16 +46,6 @@ cy:
       over: Dros
       million: miliwn
     next_steps:
-      title: "Dysgwch ragor am Dreth Stamp a chostau eraill ynghlwm â phrynu cartref"
-      tip_1:
-        heading_html: "Dysgwch pa bryd a sut i dalu Treth Stamp <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
-        url: "https://www.moneyadviceservice.org.uk/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
-      tip_2:
-        heading_html: "Deall costau gwirioneddol prynu cartref <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
-        url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
-      tip_3:
-        heading_html: "Cyfrifwch eich cyllideb ar gyfer prynu cartref <span class='visually-hidden'>(yn agor mewn ffenestr newydd)</span>"
-        url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
       learn_more:
         title: "A wyddech chi?"
         tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 30 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"

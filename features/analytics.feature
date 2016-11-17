@@ -26,12 +26,6 @@ Scenario: When a user uses the mortgage calculator
   And   I refine my details
   Then  My repayment refinement interaction is tracked
 
-Scenario: When a user uses the stamp duty calculator
-  Given I visit the stamp duty calculator
-  When  I enter my house price
-  And   I go to next steps
-  Then  My stamp duty next steps interaction is tracked
-
 Scenario: When a user uses completes the affordability calculator
   Given I visit the Affordability calculator
   When  I enter all details for single applicant
