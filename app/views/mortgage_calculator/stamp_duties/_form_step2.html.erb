@@ -54,4 +54,20 @@
   <% end %>
 
   <%= render 'stamp_duty_to_pay_panel' if @stamp_duty.valid? %>
+
+  <div class="">
+    <h4 class="mortgagecalc__heading"><%= t("affordability.next_steps.have_you_tried.title") %></h4>
+    <p><%= link_to t('affordability.next_steps.have_you_tried.mortgage_calculator'),
+                   full_mortgage_calculator_url,
+                   class: "button button--primary mortgagecalc__spread",
+                   target: "_blank",
+                   rel: no_follow? %>
+
+      <%= link_to t('affordability.next_steps.have_you_tried.stamp_duty'),
+                   full_stamp_duty_calculator_url,
+                   class: "button button--primary mortgagecalc__spread",
+                   target: "_blank",
+                   rel: no_follow? %></p>
+  </div>
 </div>
+
