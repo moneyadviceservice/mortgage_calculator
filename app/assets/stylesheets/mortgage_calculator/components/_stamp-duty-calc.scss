@@ -1,0 +1,134 @@
+.stamp-duty__step-one {
+  margin-top: 0;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-top: $baseline-unit*5;
+  }
+}
+
+.stamp-duty {
+  border: solid $color-grey-light 1px;
+  overflow: hidden;
+  padding: 0 $baseline-unit*4;
+  max-width: none;
+  margin-top: $baseline-unit;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-top: $baseline-unit*8;
+  }
+}
+
+.stamp-duty__heading {
+  @include body(24,36);
+  margin-top: $baseline-unit*4;
+  margin-bottom: $baseline-unit;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(40,45);
+  }
+}
+
+.stamp-duty__subheading {
+  @include body(16,24);
+  font-weight: 300;
+  margin-bottom: 0;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(21,24);
+  }
+}
+
+.stamp-duty__form {
+  margin-top: 0;
+  overflow: hidden;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin: 0 0 $baseline-unit*3;
+  }
+}
+
+.stamp-duty__input-description {
+  display: block;
+  @include body(14,24);
+  color: $color-true-black;
+  font-weight: 600;
+  padding: $baseline-unit*2 0;
+  margin: 0;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    float: left;
+    display: inline-block;
+    @include body(21,24);
+  }
+}
+
+input.stamp-duty__input {
+  @include body(21,24);
+  border: 1px solid $color-grey-light;
+  border-radius: 0.2rem;
+  display: inline-block;
+  height: 3.2rem;
+  padding-left: 2rem;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(24,24);
+    float: left;
+  }
+}
+
+.stamp-duty__input--unit {
+  @include body(21,24);
+  font-weight: 400;
+  color: $color-true-black;
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(24,24);
+  }
+}
+
+.stamp-duty__input--wrapper {
+  width: 100%;
+  position: relative;
+  float: left;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-left: $baseline-unit*2;
+    width: 40%;
+  }
+}
+
+.stamp-duty__submit {
+  width: 100%;
+  margin-top: $baseline-unit;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    width: $baseline-unit*14;
+    margin: 0 $baseline-unit*2;
+  }
+}
+
+.stamp-duty__additional-property-check {
+  overflow: hidden;
+  @include body(13,24);
+  margin: $baseline-unit*3 0;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(18,24);
+  }
+}
+
+.stamp-duty__description {
+  overflow: hidden;
+  margin-bottom: $baseline-unit*6;
+}
+
+.stamp-duty__description-item {
+  @include column(12);
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include column(6);
+  }
+}

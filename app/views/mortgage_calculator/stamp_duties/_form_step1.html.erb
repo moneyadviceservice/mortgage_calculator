@@ -1,53 +1,51 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <div class="intro"><%= I18n.t('stamp_duty.title') %></div>
-  <p class="mortgagecalc__intro"><%= I18n.t('stamp_duty.subtitle') %></p>
-  <p class="mortgagecalc__intro"><%= I18n.t('stamp_duty.subtitle_legislation_change') %></p>
-  <p class="mortgagecalc__intro">
-     <%= I18n.t('stamp_duty.second_subtitle') %>
-     <%= link_to t('stamp_duty.href_second_subtitle'), t('stamp_duty.url_second_subtitle') %>
-  </p>
-</div>
+<h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
 
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one', novalidate: '' } do |f| %>
-  <div class="mortgagecalc__panel">
-    <div class="form__item">
-      <%= f.label :price %>
-      <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
+<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one stamp-duty__step-one', novalidate: '' } do |f| %>
+  <div class="stamp-duty__form form__item">
+    <%= f.label :price, class: "stamp-duty__input-description" %>
+    <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
 
-      <span class="form__input-container form__input-container--pulled">
-        <span class="form__input-label">£</span>
-        <%= f.text_field :price,
-                         :value => @stamp_duty.price_formatted,
-                         class: 'form__input dynamic-slider-property',
-                         "autofocus" => '',
-                         "ng-model" => "stampDuty.propertyPrice",
-                         "placeholder" => "0.00",
-                         "currency" => '',
-                         "data-m-dec" =>"0",
-                         "pattern" => '\d*' %>
-        <span class="form__input-outline"></span>
-      </span>
+    <span class="stamp-duty__input--wrapper">
+      <span class="stamp-duty__input--unit">£</span>
+      <%= f.text_field :price,
+                       :value => @stamp_duty.price_formatted,
+                       "autofocus" => '',
+                       "ng-model" => "stampDuty.propertyPrice",
+                       "placeholder" => "0.00",
+                       "currency" => '',
+                       "data-m-dec" =>"0",
+                       "pattern" => '\d*',
+                       "class" => 'stamp-duty__input' %>
+    </span>
 
-    </div>
-    <div class="form__item">
-      <label class="label--accent">
-        <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
-        <%= I18n.t('stamp_duty.second_home.label') %>
-      </label>
-    </div>
+      <%= f.submit I18n.t("stamp_duty.next"),
+      class: "button button--primary stamp-duty__submit",
+        'ng-click' => 'navigateAndFocus($event)',
+        'ng-disabled' => '!stampDuty.propertyPrice',
+        'analytics-category' => 'Stamp Duty Calculator',
+        'analytics-action' => 'Completion',
+        'analytics-label' => 'Click',
+        'analytics' => '',
+        'analytics-on' => 'click'
+        %>
   </div>
 
-  <div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--space">
-    <%= f.submit I18n.t("stamp_duty.next"),
-                 class: "button button--primary mortgagecalc__submit",
-                 'ng-click' => 'navigateAndFocus($event)',
-                 'ng-disabled' => '!stampDuty.propertyPrice',
-                 'analytics-category' => 'Stamp Duty Calculator',
-                 'analytics-action' => 'Completion',
-                 'analytics-label' => 'Click',
-                 'analytics' => '',
-                 'analytics-on' => 'click'
-                 %>
+  <label class="stamp-duty__additional-property-check">
+    <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
+    <%= I18n.t('stamp_duty.second_home.label') %>
+  </label>
 
-  </div>
 <% end %>
+<hr />
+<div class="stamp-duty__description">
+  <div class="stamp-duty__description-item">
+    <p><%= I18n.t('stamp_duty.subtitle') %></p>
+  </div>
+  <div class="stamp-duty__description-item">
+    <p><%= I18n.t('stamp_duty.subtitle_legislation_change') %></p>
+    <p>
+      <%= I18n.t('stamp_duty.second_subtitle') %>
+      <%= link_to t('stamp_duty.href_second_subtitle'), t('stamp_duty.url_second_subtitle') %>
+    </p>
+  </div>
+</div>
