@@ -1,7 +1,7 @@
-<div class="stamp-duty__step-two--column">
-  <h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
 
-  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+<h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
+<div class="stamp-duty__calculator-column">
+  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
     <div class="stamp-duty__form form_item">
       <%= f.label :price, class: "stamp-duty__input-description" %>
       <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
@@ -64,14 +64,12 @@
   </div>
 </div>
 
-<div class="stamp-duty__step-two--column">
+<div class="stamp-duty__info-column">
   <div class="callout">
     <h3 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h3>
     <p><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1") %></p>
   </div>
-</div>
 
-<div class="mortgagecalc__panel mortgagecalc__panel--nudge">
   <h3 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h3>
   <ul>
     <% I18n.t("stamp_duty.next_steps.find_out_more.tips").each do |tip| %>
