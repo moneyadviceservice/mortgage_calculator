@@ -180,7 +180,6 @@ input.stamp-duty__input {
 
   @include respond-to($mortgagecalc_mq-s) {
     @include body(24,36);
-
   }
 }
 
@@ -213,4 +212,13 @@ p.stamp-duty__info--tip {
   @include respond-to($mortgagecalc_mq-m) {
     width: 100%;
   }
+}
+
+.js.stamp-duty__container {
+  position: relative;
+  max-width: $calc-width;
+}
+
+.stamp-duty__container {
+  max-width: none;
 }
