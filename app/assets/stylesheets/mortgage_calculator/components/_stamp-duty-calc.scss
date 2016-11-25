@@ -173,10 +173,16 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__results--heading {
-  @include body(24,36);
+  @include body(16,30);
   color: $color-true-black;
   font-weight: 500;
   display: inline;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(24,36);
+
+  }
+
 }
 
 .stamp-duty__results--tax-rate {
