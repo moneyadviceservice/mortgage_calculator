@@ -26,7 +26,7 @@ en:
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
-          price: The price of the property is
+          price: "Property Price:"
     caveat:
       title: Important
       one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."
