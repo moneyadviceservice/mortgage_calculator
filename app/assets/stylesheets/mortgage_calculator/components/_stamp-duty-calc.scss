@@ -3,7 +3,7 @@
   float: left;
   width: 100%;
 
-  @include respond-to($stampdutycalc_mq-m) {
+  @include respond-to($mortgagecalc_mq-m) {
     width: 50%;
   }
 }
@@ -152,7 +152,7 @@ input.stamp-duty__input {
     margin-top: $baseline-unit*2;
   }
 
-  @include respond-to($stampdutycalc_mq-m) {
+  @include respond-to($mortgagecalc_mq-m) {
     border-right: 1px solid $color-grey-pale;
     padding-right: $baseline-unit*4;
     margin-bottom: $baseline-unit*4;
@@ -161,7 +161,7 @@ input.stamp-duty__input {
 
 .stamp-duty__info-column {
   @include stamp-duty__col;
-  @include respond-to($stampdutycalc_mq-m) {
+  @include respond-to($mortgagecalc_mq-m) {
     padding-left: $baseline-unit*4;
     margin-top: $baseline-unit*2;
   }
@@ -206,7 +206,11 @@ p.stamp-duty__info--tip {
 }
 
 .stamp-duty__button {
-  @media (max-width: $mortgagecalc_mq-s) {
+  width: 100%;
+  @include respond-to($mortgagecalc_mq-s) {
+    width: 48%;
+  }
+  @include respond-to($mortgagecalc_mq-m) {
     width: 100%;
   }
 }
