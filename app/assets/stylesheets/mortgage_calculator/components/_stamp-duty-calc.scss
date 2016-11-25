@@ -191,3 +191,7 @@ p.stamp-duty__info--tip {
 .stamp-duty__info--tip-link {
   @include body(16,24)
 }
+
+.stamp-duty__have-you-tried {
+  @include body(20, 24);
+}
