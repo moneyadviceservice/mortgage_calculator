@@ -182,7 +182,6 @@ input.stamp-duty__input {
     @include body(24,36);
 
   }
-
 }
 
 .stamp-duty__results--tax-rate {
@@ -204,4 +203,10 @@ p.stamp-duty__info--tip {
 
 .stamp-duty__have-you-tried {
   @include body(20, 24);
+}
+
+.stamp-duty__button {
+  @media (max-width: $mortgagecalc_mq-s) {
+    width: 100%;
+  }
 }
