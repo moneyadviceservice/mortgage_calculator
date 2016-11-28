@@ -169,7 +169,7 @@ input.stamp-duty__input {
 
 .stamp-duty__results {
   background: $color-grey-pale;
-  padding: 1rem;
+  padding: $baseline-unit*3;
 }
 
 .stamp-duty__results--heading {
