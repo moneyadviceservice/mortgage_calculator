@@ -20,27 +20,15 @@ MortgageCalculator::Engine.routes.draw do
   end
 
   resource :stamp_duty, path: 'stamp-duty-calculator' do
-    collection do
-      get 'next_steps'
-    end
   end
 
   resource :stamp_duty, path: 'cyfrifiannell-treth-stamp' do
-    collection do
-      get 'next_steps'
-    end
   end
 
   resource :stamp_duty do
-    collection do
-      get 'next_steps'
-    end
   end
 
   resource :stamp_duty, path: 'treth_stamp' do
-    collection do
-      get 'next_steps'
-    end
   end
 
   resource :affordability, path: "mortgage-affordability-calculator" do

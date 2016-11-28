@@ -1,53 +1,79 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
-  <div class="intro"><%= I18n.t('stamp_duty.title') %></div>
-  <p class="mortgagecalc__intro"><%= I18n.t('stamp_duty.page_2_description') %></p>
-</div>
 
-<%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
-  <div class="form__item">
-    <%= f.label :price %>
-    <div class="visually-hidden"
-          id="mc_accessibility_describe_price">
-      <%= t 'stamp_duty.describe_price_field' %>
+<h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
+<div class="stamp-duty__calculator-column">
+  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+    <div class="stamp-duty__form form_item">
+      <%= f.label :price, class: "stamp-duty__input-description" %>
+      <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
+
+      <span class="stamp-duty__input--wrapper">
+        <span class="stamp-duty__input--unit">£</span>
+        <%= f.text_field :price,
+                         :value => @stamp_duty.price_formatted,
+                         class: 'stamp-duty__input dynamic-slider-property',
+                         "ng-model" => "stampDuty.propertyPrice",
+                         "placeholder" => "0.00",
+                         "currency" => '',
+                         "data-m-dec" => "0",
+                         "analytics" => "",
+                         "analytics-on" => "change",
+                         "analytics-category" => "Stamp Duty Calculator",
+                         "analytics-action" => "Refinement",
+                         "analytics-label" => "Price",
+                         "pattern" => '\d*',
+                         "aria-describedby" => 'mc_accessibility_describe_price',
+                         "autoselect" => ""
+                         %>
+      </span>
+    </div>
+    <%= f.hidden_field :second_home %>
+
+    <div class="slider"
+          ui-slider
+          dynamic-for='dynamic-slider-property'
+          ng-model="stampDuty.propertyPrice"
+          analytics-category="Stamp Duty"
+          analytics-action="Refinement"
+          analytics-label="Price"
+          aria-hidden="true">
     </div>
 
-    <span class="form__input-container">
-      <span class="form__input-label">£</span>
-      <%= f.text_field :price,
-                       :value => @stamp_duty.price_formatted,
-                       class: 'form__input dynamic-slider-property',
-                       "ng-model" => "stampDuty.propertyPrice",
-                       "placeholder" => "0.00",
-                       "currency" => '',
-                       "data-m-dec" => "0",
-                       "analytics" => "",
-                       "analytics-on" => "change",
-                       "analytics-category" => "Stamp Duty Calculator",
-                       "analytics-action" => "Refinement",
-                       "analytics-label" => "Price",
-                       "pattern" => '\d*',
-                       "aria-describedby" => 'mc_accessibility_describe_price',
-                       "autoselect" => ""
-                       %>
-      <span class="form__input-outline"></span>
-    </span>
-  </div>
-  <%= f.hidden_field :second_home %>
+    <div class="hide-with-js">
+      <p><br><%= f.submit I18n.t("stamp_duty.recalculate"),
+                          'class' => 'button',
+                          'wz-next' => '' %></p>
+    </div>
 
-  <div class="slider"
-        ui-slider
-        dynamic-for='dynamic-slider-property'
-        ng-model="stampDuty.propertyPrice"
-        analytics-category="Stamp Duty"
-        analytics-action="Refinement"
-        analytics-label="Price"
-        aria-hidden="true">
-  </div>
+  <% end %>
 
-  <div class="hide-with-js">
-    <p><br><%= f.submit I18n.t("stamp_duty.recalculate"),
-                        'class' => 'button',
-                        'wz-next' => '' %></p>
+  <%= render 'stamp_duty_to_pay_panel' if @stamp_duty.valid? %>
+
+  <div class="">
+    <h4 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h4>
+    <p><%= link_to t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
+                   full_mortgage_calculator_url,
+                   class: "button button--primary mortgagecalc__spread stamp-duty__button",
+                   target: "_blank",
+                   rel: no_follow? %>
+
+      <%= link_to t('stamp_duty.next_steps.have_you_tried.mortgage_affordability_calculator'),
+                   full_mortgage_affordability_calculator_url,
+                   class: "button button--primary mortgagecalc__spread stamp-duty__button",
+                   target: "_blank",
+                   rel: no_follow? %></p>
+  </div>
+</div>
+
+<div class="stamp-duty__info-column">
+  <div class="callout">
+    <h3 class="stamp-duty__info--subheading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h3>
+    <p class="stamp-duty__info--tip"><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1") %></p>
   </div>
 
-<% end %>
+  <h3 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h3>
+  <ul>
+    <% I18n.t("stamp_duty.next_steps.find_out_more.tips").each do |tip| %>
+      <li class="stamp-duty__info--tip-link"><%= link_to tip[:copy_html], tip[:url], target: "_blank", rel: no_follow? %></li>
+    <% end %>
+  </ul>
+</div>

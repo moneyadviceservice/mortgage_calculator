@@ -1,4 +1,4 @@
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
+<div ng-controller="CalculatorCtrl" class="stamp-duty__container stamp-duty">
   <%= render 'header' %>
 
   <% @stamp_duty.errors.full_messages.each do |m| %>
@@ -12,18 +12,7 @@
 
     <div wz-step class="ng-hide">
       <div class="rendered-from-js">
-        <%= render 'calc_left_panel' %>
-        <%= render 'calc_right_panel' if @stamp_duty.valid? %>
-
-
-        <%= render 'stamp_duty_tip' %>
-
-      </div>
-    </div>
-
-    <div wz-step class="ng-hide">
-      <div class="rendered-from-js">
-        <%= render 'next_steps_content' %>
+        <%= render 'form_step2' %>
       </div>
     </div>
   </div>

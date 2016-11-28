@@ -5,7 +5,7 @@
     <%= f.label :price, class: "stamp-duty__input-description" %>
     <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
 
-    <span class="stamp-duty__input--wrapper">
+    <span class="stamp-duty__input--wrapper stamp-duty__input--wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
       <%= f.text_field :price,
                        :value => @stamp_duty.price_formatted,

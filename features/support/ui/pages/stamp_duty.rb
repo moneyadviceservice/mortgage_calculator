@@ -12,7 +12,6 @@ module UI
       element :second_home, "form.step_one input[name='stamp_duty[second_home]'][type='checkbox']"
 
       element :next, "form.step_one input[type=submit]"
-      element :next_steps, "a[href^='/en/mortgage_calculator/stamp-duty-calculator/next_steps']"
 
       element :results, "p[class='results']"
       element :results_text, "p[class='results-text']"

@@ -1,3 +1,13 @@
+@mixin stamp-duty__col {
+  display: inline;
+  float: left;
+  width: 100%;
+
+  @include respond-to($mortgagecalc_mq-m) {
+    width: 50%;
+  }
+}
+
 .stamp-duty__step-one {
   margin-top: 0;
 
@@ -93,7 +103,9 @@ input.stamp-duty__input {
   width: 100%;
   position: relative;
   float: left;
+}
 
+.stamp-duty__input--wrapper--inline {
   @include respond-to($mortgagecalc_mq-s) {
     margin-left: $baseline-unit*2;
     width: 40%;
@@ -131,4 +143,82 @@ input.stamp-duty__input {
   @include respond-to($mortgagecalc_mq-s) {
     @include column(6);
   }
+}
+
+.stamp-duty__calculator-column {
+  @include stamp-duty__col;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-top: $baseline-unit*2;
+  }
+
+  @include respond-to($mortgagecalc_mq-m) {
+    border-right: 1px solid $color-grey-pale;
+    padding-right: $baseline-unit*4;
+    margin-bottom: $baseline-unit*4;
+  }
+}
+
+.stamp-duty__info-column {
+  @include stamp-duty__col;
+  @include respond-to($mortgagecalc_mq-m) {
+    padding-left: $baseline-unit*4;
+    margin-top: $baseline-unit*2;
+  }
+}
+
+.stamp-duty__results {
+  background: $color-grey-pale;
+  padding: $baseline-unit*3;
+}
+
+.stamp-duty__results--heading {
+  @include body(16,30);
+  color: $color-true-black;
+  font-weight: 500;
+  display: inline;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(24,36);
+  }
+}
+
+.stamp-duty__results--tax-rate {
+  margin: $baseline-unit 0;
+}
+
+h3.stamp-duty__info--subheading {
+  @include body(24,24);
+  color: $color-green-secondary;
+}
+
+p.stamp-duty__info--tip {
+  @include body(16,24)
+}
+
+.stamp-duty__info--tip-link {
+  @include body(16,24)
+}
+
+.stamp-duty__have-you-tried {
+  @include body(20, 24);
+}
+
+.stamp-duty__button {
+  width: 100%;
+  @include respond-to($mortgagecalc_mq-s) {
+    width: 48%;
+  }
+  @include respond-to($mortgagecalc_mq-m) {
+    width: 100%;
+  }
+}
+
+.js.stamp-duty__container {
+  position: relative;
+  max-width: $calc-width;
+}
+
+.stamp-duty__container {
+  max-width: none;
 }

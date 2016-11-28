@@ -26,12 +26,6 @@ module MortgageCalculator
         end
       end
     end
-
-    describe '#next_steps' do
-      it 'works' do
-        get :next_steps
-      end
-    end
   end
 end
 

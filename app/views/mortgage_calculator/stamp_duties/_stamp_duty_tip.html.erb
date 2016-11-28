@@ -3,16 +3,3 @@
     <%= render 'bands_table' %>
   </div>
 </div>
-
-<p><%= link_to I18n.t('stamp_duty.next'), next_steps_stamp_duty_path,
-               class: "button button--primary mortgagecalc__submit",
-               'affects-height' => 'click',
-               'wz-next' => '',
-               'analytics' => '',
-               'analytics-on' => 'click',
-               'analytics-category' => 'Stamp Duty Calculator',
-               'analytics-action' => 'Next Steps',
-               'analytics-label' => 'Click'
-               %></p>
-
-<p><a href="#" class='button mortgagecalc__submit previous rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('stamp_duty.back') %></a></p>
