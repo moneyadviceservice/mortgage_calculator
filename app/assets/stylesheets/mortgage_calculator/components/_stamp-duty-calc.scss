@@ -136,3 +136,24 @@ input.stamp-duty__input {
 .stamp-duty__have-you-tried {
   @include body(20, 24);
 }
+
+.stamp-duty__calculator-column {
+  display: inline;
+  float: left;
+  width: 50%;
+
+  margin-top: $baseline-unit*2;
+
+  border-right: 1px solid $color-grey-pale;
+  padding-right: $baseline-unit*4;
+  margin-bottom: $baseline-unit*4;
+}
+
+.stamp-duty__info-column {
+  display: inline;
+  float: left;
+  width: 50%;
+
+  padding-left: $baseline-unit*4;
+  margin-top: $baseline-unit*2;
+}
