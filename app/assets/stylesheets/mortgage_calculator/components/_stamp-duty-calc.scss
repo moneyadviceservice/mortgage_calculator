@@ -1,3 +1,13 @@
+@mixin stamp-duty__col {
+  display: inline;
+  float: left;
+  width: 100%;
+
+  @include respond-to($mortgagecalc_mq-m) {
+    width: 50%;
+  }
+}
+
 .stamp-duty__step-one {
   margin-top: 0;
 
@@ -140,13 +150,10 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__calculator-column {
-  display: inline;
-  float: left;
-  width: 100%;
+  @include stamp-duty__col;
   margin-top: $baseline-unit*2;
 
   @include respond-to($mortgagecalc_mq-m) {
-    width: 50%;
     border-right: 1px solid $color-grey-pale;
     padding-right: $baseline-unit*4;
     margin-bottom: $baseline-unit*4;
@@ -154,12 +161,9 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__info-column {
-  display: inline;
-  float: left;
-  width: 100%;
+  @include stamp-duty__col;
 
   @include respond-to($mortgagecalc_mq-m) {
-    width: 50%;
     padding-left: $baseline-unit*4;
     margin-top: $baseline-unit*2;
   }
