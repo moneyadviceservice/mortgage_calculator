@@ -187,7 +187,11 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__button {
-  width: 100%;
+  width: 48%;
+
+  @include respond-to($mortgagecalc_mq-m) {
+    width: 100%;
+  }
 }
 
 .stamp-duty__info-subheading {
