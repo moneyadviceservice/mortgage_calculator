@@ -8,11 +8,11 @@
         <%= t 'stamp_duty.describe_price_field' %>
       </div>
 
-      <span class="form__input-container">
-        <span class="form__input-label">£</span>
+      <span class="stamp-duty__input-wrapper">
+        <span class="stamp-duty__input--unit">£</span>
         <%= f.text_field :price,
                          :value => @stamp_duty.price_formatted,
-                         class: 'form__input dynamic-slider-property',
+                         class: 'stamp-duty__input dynamic-slider-property',
                          "ng-model" => "stampDuty.propertyPrice",
                          "placeholder" => "0.00",
                          "currency" => '',
@@ -26,8 +26,8 @@
                          "aria-describedby" => 'mc_accessibility_describe_price',
                          "autoselect" => ""
                          %>
-        <span class="form__input-outline"></span>
       </span>
+
     </div>
     <%= f.hidden_field :second_home %>
 

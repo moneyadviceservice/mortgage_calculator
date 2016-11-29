@@ -89,11 +89,13 @@ input.stamp-duty__input {
   }
 }
 
-.stamp-duty__input--wrapper {
+.stamp-duty__input-wrapper {
   width: 100%;
   position: relative;
   float: left;
+}
 
+.stamp-duty__input-wrapper--inline {
   @include respond-to($mortgagecalc_mq-s) {
     margin-left: $baseline-unit*2;
     width: 40%;
