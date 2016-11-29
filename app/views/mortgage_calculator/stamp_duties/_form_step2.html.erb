@@ -1,8 +1,8 @@
 <h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
 <div class="stamp-duty__calculator-column">
-  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_two mortgagecalc__form mortgagecalc__form--pull', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
-    <div class="form__item">
-      <%= f.label :price %>
+  <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+    <div class="form__item stamp-duty__form">
+      <%= f.label :price, class: 'stamp-duty__input-description' %>
       <div class="visually-hidden"
             id="mc_accessibility_describe_price">
         <%= t 'stamp_duty.describe_price_field' %>
