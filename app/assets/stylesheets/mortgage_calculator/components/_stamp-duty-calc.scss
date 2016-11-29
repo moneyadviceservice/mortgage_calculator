@@ -180,3 +180,17 @@ input.stamp-duty__input {
 .stamp-duty__button {
   width: 100%;
 }
+
+.stamp-duty__info-subheading {
+  @include body(24,24);
+  font-weight: 700;
+  color: $color-green-secondary;
+}
+
+p.stamp-duty__info-tip {
+  @include body(16,24)
+}
+
+.stamp-duty__info-tip-link {
+  @include body(16,24)
+}
