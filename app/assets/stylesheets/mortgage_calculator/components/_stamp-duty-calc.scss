@@ -194,7 +194,11 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__button {
-  width: 48%;
+  width: 100%;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    width: 48%;
+  }
 
   @include respond-to($mortgagecalc_mq-m) {
     width: 100%;
