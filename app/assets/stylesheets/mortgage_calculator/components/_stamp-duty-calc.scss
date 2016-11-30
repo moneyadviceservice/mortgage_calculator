@@ -132,3 +132,7 @@ input.stamp-duty__input {
     @include column(6);
   }
 }
+
+.stamp-duty__have-you-tried {
+  @include body(20, 24);
+}
