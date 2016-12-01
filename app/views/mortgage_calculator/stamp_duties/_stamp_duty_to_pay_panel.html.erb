@@ -16,13 +16,10 @@
   <p class="rendered-from-js stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence_prefix") %> {{ stampDuty.percentageTax() | number: 1 }}<%= I18n.t("stamp_duty.results.sentence_suffix") %></p>
 
   <div>
-
-    <p>
-      <a href="#" class="rendered-from-js expander expander--nudge" ng-class="{ 'expander--expanded' : expandedStampDutyInformation }" ng-click="toggleStampDutyExpanded($event)" affects-height="click">
-        <%= I18n.t("stamp_duty.how_calculated_toggle") %>
-        <span class="visually-hidden"><%= I18n.t("stamp_duty.results.click_to_expand") %></span>
-      </a>
-    </p>
+    <a href="#" class="rendered-from-js expander expander--nudge" ng-class="{ 'expander--expanded' : expandedStampDutyInformation }" ng-click="toggleStampDutyExpanded($event)" affects-height="click">
+      <%= I18n.t("stamp_duty.how_calculated_toggle") %>
+      <span class="visually-hidden"><%= I18n.t("stamp_duty.results.click_to_expand") %></span>
+    </a>
     <%= render 'stamp_duty_tip' %>
   </div>
 </div>
