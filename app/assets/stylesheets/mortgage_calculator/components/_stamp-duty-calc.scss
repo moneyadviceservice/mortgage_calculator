@@ -28,6 +28,10 @@
   }
 }
 
+.stamp-duty--white {
+  background-color: white;
+}
+
 .stamp-duty__heading {
   @include body(24,36);
   margin-top: $baseline-unit*4;
@@ -217,4 +221,8 @@ p.stamp-duty__info-tip {
 
 .stamp-duty__info-tip-link {
   @include body(16,24)
+}
+
+.stamp-duty__table {
+  margin-bottom: 0;
 }
