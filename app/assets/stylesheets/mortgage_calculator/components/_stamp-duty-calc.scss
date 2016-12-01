@@ -89,11 +89,13 @@ input.stamp-duty__input {
   }
 }
 
-.stamp-duty__input--wrapper {
+.stamp-duty__input-wrapper {
   width: 100%;
   position: relative;
   float: left;
+}
 
+.stamp-duty__input-wrapper--inline {
   @include respond-to($mortgagecalc_mq-s) {
     margin-left: $baseline-unit*2;
     width: 40%;
@@ -135,4 +137,60 @@ input.stamp-duty__input {
 
 .stamp-duty__have-you-tried {
   @include body(20, 24);
+}
+
+.stamp-duty__calculator-column {
+  display: inline;
+  float: left;
+  width: 50%;
+
+  margin-top: $baseline-unit*2;
+
+  border-right: 1px solid $color-grey-pale;
+  padding-right: $baseline-unit*4;
+  margin-bottom: $baseline-unit*4;
+}
+
+.stamp-duty__info-column {
+  display: inline;
+  float: left;
+  width: 50%;
+
+  padding-left: $baseline-unit*4;
+  margin-top: $baseline-unit*2;
+}
+
+.stamp-duty__results {
+  background: $color-grey-pale;
+  padding: $baseline-unit*3;
+}
+
+.stamp-duty__results-heading {
+  color: $color-true-black;
+  font-weight: 500;
+  display: inline;
+
+  @include body(24,36);
+}
+
+.stamp-duty__results-tax-rate {
+  margin: $baseline-unit 0;
+}
+
+.stamp-duty__button {
+  width: 100%;
+}
+
+.stamp-duty__info-subheading {
+  @include body(24,24);
+  font-weight: 700;
+  color: $color-green-secondary;
+}
+
+p.stamp-duty__info-tip {
+  @include body(16,24)
+}
+
+.stamp-duty__info-tip-link {
+  @include body(16,24)
 }
