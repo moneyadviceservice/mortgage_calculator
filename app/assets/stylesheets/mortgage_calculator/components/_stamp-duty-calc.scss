@@ -151,7 +151,10 @@ input.stamp-duty__input {
 
 .stamp-duty__calculator-column {
   @include stamp-duty__col;
-  margin-top: $baseline-unit*2;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    margin-top: $baseline-unit*2;
+  }
 
   @include respond-to($mortgagecalc_mq-m) {
     border-right: 1px solid $color-grey-pale;
@@ -175,11 +178,15 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__results-heading {
+  @include body(16,30);
+
   color: $color-true-black;
   font-weight: 500;
   display: inline;
 
-  @include body(24,36);
+  @include respond-to($mortgagecalc_mq-s) {
+    @include body(24,36);
+  }
 }
 
 .stamp-duty__results-tax-rate {
@@ -187,7 +194,11 @@ input.stamp-duty__input {
 }
 
 .stamp-duty__button {
-  width: 48%;
+  width: 100%;
+
+  @include respond-to($mortgagecalc_mq-s) {
+    width: 48%;
+  }
 
   @include respond-to($mortgagecalc_mq-m) {
     width: 100%;
