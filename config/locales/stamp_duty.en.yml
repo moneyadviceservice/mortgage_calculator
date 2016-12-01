@@ -47,6 +47,9 @@ en:
       learn_more:
         title: "Did you know?"
         tip_1: "You have to pay Stamp Duty within 30 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
+        link_1:
+          title: Stamp Duty - Everything you need to know
+          url: "/en/articles/everything-you-need-to-know-about-stamp-duty"
       find_out_more:
         title: Find out more
         tips:

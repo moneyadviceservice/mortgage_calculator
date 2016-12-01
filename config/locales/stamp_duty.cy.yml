@@ -48,6 +48,9 @@ cy:
       learn_more:
         title: "A wyddech chi?"
         tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 30 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
+        link_1:
+          title: Treth Stamp - Popeth sydd angen i chi wybod
+          url: "/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
