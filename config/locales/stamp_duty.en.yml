@@ -19,7 +19,7 @@ en:
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price. For example, someone buying a property for £245,000 would pay no tax on the value of the property up to £125,000 and 2% tax on the property value between £125,001 and £245,000. In this case, total liability for Stamp Duty would be £2,400 giving an effective tax rate of 1%."
     how_calculated_additional: "As of April 2016, anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £7,350, meaning the total stamp duty would be £9,750 giving an effective tax rate of 4%."
-    how_calculated_extra: "*Properties under £40,000 are not subject to second home SDLT"
+    how_calculated_extra: "* Properties under £40,000 are not subject to second home SDLT"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
@@ -47,6 +47,9 @@ en:
       learn_more:
         title: "Did you know?"
         tip_1: "You have to pay Stamp Duty within 30 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
+        link_1:
+          title: Stamp Duty - Everything you need to know
+          url: "/en/articles/everything-you-need-to-know-about-stamp-duty"
       find_out_more:
         title: Find out more
         tips:
