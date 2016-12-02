@@ -55,6 +55,7 @@
 .stamp-duty__form {
   margin-top: 0;
   overflow: hidden;
+  padding: $baseline-unit;
 
   @include respond-to($mortgagecalc_mq-s) {
     margin: 0 0 $baseline-unit*3;
