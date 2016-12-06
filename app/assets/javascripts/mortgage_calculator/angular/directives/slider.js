@@ -123,16 +123,23 @@ App.directive('uiSlider', function() {
     angular.extend(options, expression);
     element.slider(options).on('slide', options.slide);
 
-    //Reconfigre slider when input blurs
+    angular.element('.stamp-duty__submit').on('click', function() {
+      reconfigureSlider();
+    });
+
     input.on('blur keyup', function() {
-      value = parseInt($(this).val().replace(/[^\d|\-+|\.+]/g, '')) || 0;
+      reconfigureSlider();
+    });
+
+    function reconfigureSlider() {
+      value = parseInt($(input).val().replace(/[^\d|\-+|\.+]/g, '')) || 0;
       element.slider({
         min: (percentageForMin / 100) * value,
         max: ((percentageForMax / 100) * value) || sliderDefaultMax,
         value: value,
         step: (value / 100) * 1
       });
-    });
+    }
 
     setTimeout(function() {
       element.trigger('slide');
