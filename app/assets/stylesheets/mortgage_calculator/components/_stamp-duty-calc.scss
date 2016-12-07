@@ -28,8 +28,9 @@
   }
 }
 
-.stamp-duty--white {
+.stamp-duty__calculation-explanation {
   background-color: white;
+  margin-top: $baseline-unit*2;
 }
 
 .stamp-duty__heading {
