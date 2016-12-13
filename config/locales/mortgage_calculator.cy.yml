@@ -64,9 +64,9 @@ cy:
           heading: Gostwng pris yr eiddo
           info: Ystyriwch chwilio am gartrefi mewn ardaloedd eraill
         tip_3:
-          heading: Cynyddu hyd eich morgais
-          info_html: "Byddwch yn ymwybodol bod hyn yn golygu y byddwch yn ad-dalu mwy mewn llog ar y cyfan <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+          heading: Dewiswch y morgais gorau i chi
+          info_html: "Cyngor ar forgeisi – A ddylech chi gael cynghorydd morgeisi? <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
         learn_more:
           title: Dysgu mwy
           tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
@@ -76,8 +76,8 @@ cy:
         find_out_more:
           title: Dewch o hyd i ragor
           tips:
-            - copy_html: "Cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+            - copy_html: "Gwefannau cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+              url: "https://www.moneyadviceservice.org.uk/cy/articles/dod-o-hyd-ir-bargeinion-gorau-gyda-gwefannau-cymharu-prisiau#choosing-a-price-comparison-website"
             - copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
               url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
             - copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
