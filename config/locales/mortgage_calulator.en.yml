@@ -64,9 +64,9 @@ en:
           heading: Find a cheaper property
           info: Consider looking in other areas
         tip_3:
-          heading: "Shop around for a better mortgage deal"
-          info_html: "Use APR and total amount payable to compare the true cost of deals <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+          heading: "Choose the best mortgage for you"
+          info_html: "Mortgage advice – Should you get a mortgage adviser? <span class='visually-hidden'>(opens in a new window)</span>"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
         learn_more:
           title: Learn about LTV
           tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
@@ -76,8 +76,8 @@ en:
         find_out_more:
           title: Find out more
           tips:
-            - copy_html: "Mortgage comparison table <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://compare.moneyadviceservice.org.uk/mortgages/step1"
+            - copy_html: "Mortgage comparison websites <span class='visually-hidden'>(opens in a new window)</span>"
+              url: "https://www.moneyadviceservice.org.uk/en/articles/price-comparison-sites-guide#choosing-a-price-comparison-website"
             - copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
               url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
             - copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
