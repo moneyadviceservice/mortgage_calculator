@@ -2,8 +2,7 @@
   font-family: 'museo_sans';
   font-weight: 500;
   margin: 10px 0 30px;
-  padding: $baseline-unit*3;
-  background-color: $color-callout-background;
+  padding: 0 $baseline-unit*3 $baseline-unit*3;
 
   p {
     font-family: 'museo_sans';
@@ -23,11 +22,13 @@
   }
 }
 
-.callout__heading {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: 'museo_sans';
-  font-weight: 700;
-  color: #333;
-  font-size: $font-large;
+.mortgagecalc__panel {
+  .callout__heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'museo_sans';
+    font-weight: 700;
+    color: #333;
+    font-size: $font-large;
+  }
 }
