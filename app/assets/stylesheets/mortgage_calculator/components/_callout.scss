@@ -2,14 +2,12 @@
   font-family: 'museo_sans';
   font-weight: 500;
   margin: 10px 0 30px;
-  padding: 0 $baseline-unit*3 $baseline-unit*3;
 
   p {
     font-family: 'museo_sans';
     font-weight: 300;
     font-size: $font-medium;
     color: #333;
-    margin: 10px 0 0;
 
     strong {
       font-size:px(24);
@@ -19,17 +17,5 @@
 
   h3 {
     margin-left: 0;
-  }
-}
-
-.mortgagecalc__panel,
-.affcalc__col--33 .callout {
-  .callout__heading {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-family: 'museo_sans';
-    font-weight: 700;
-    color: #333;
-    font-size: $font-large;
   }
 }
