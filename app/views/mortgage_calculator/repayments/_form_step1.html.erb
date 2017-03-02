@@ -52,8 +52,9 @@
   </div>
 
   <div class="mortgagecalc__panel">
-    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="callout">
-      <%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %>
+    <div ng-class="{ 'visibly-hidden' : !repayments.deposit }" class="callout callout--tip">
+      <span class="callout__icon" aria-hidden="true">?</span>
+      <p><%= I18n.t("mortgage_calculator.repayment.tips.hidden_costs") %></p>
     </div>
 
     <%= f.submit I18n.t("mortgage_calculator.repayment.next"),
