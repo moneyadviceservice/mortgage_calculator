@@ -33,8 +33,18 @@
 }
 
 .tabs__content {
+  @extend %clearfix;
   background: #fff;
   border:1px solid #ccc;
-  padding: 2em 1em 1em;
+  padding: 1em 1em 0;
   margin-top: -1px;
+  margin-bottom: $baseline-unit*2;
+}
+
+.tabs__content-column {
+  @include column(12);
+
+  @include respond-to($mq-m) {
+    @include column(6);
+  }
 }

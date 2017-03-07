@@ -9,7 +9,7 @@
 
   strong {
     display: block;
-    font-size: $font-large;
+    font-size: $font-medium;
     font-weight: 500;
   }
 
@@ -17,7 +17,7 @@
 
     > li {
         position: relative;
-        margin: 0 0 30px 2.3em;
+        margin: 0 0 30px 1em;
         padding: 4px 8px;
         list-style: none;
         min-height: 60px;
@@ -29,22 +29,25 @@
 
         position: absolute;
         top: -2px;
-        margin-left: -75px;
+        margin-left: -45px;
         box-sizing: border-box;
-        width: 1.8em;
-        height: 1.8em;
-        border-radius: 1.8em;
-        padding: 4px;
+        width: 1.6em;
+        height: 1.6em;
+        border-radius: 1.6em;
         color: #333;
         background: #ecd600;
         font-weight: 500;
         font-family: 'museo_sans';
-        font-size: $font-xlarge;
+        font-size: $font-medium;
         text-align: center;
         line-height: 1.65em;
     }
 
   }
+}
+
+.featured-list--no-border {
+  border-bottom: 0;
 }
 
 .featured-list--left {

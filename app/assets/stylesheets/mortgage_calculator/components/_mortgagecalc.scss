@@ -79,9 +79,15 @@
   }
 
   &.mortgagecalc__panel--border {
+    clear: both;
     border-top: 1px solid #dae1df;
     margin-top: 5px;
     padding-top: 25px;
+  }
+
+  &.mortgagecalc__panel--border-left {
+    border-left: 1px solid #dae1df;
+    padding-left: $baseline-unit*2;
   }
 }
 
@@ -128,6 +134,11 @@
   @include respond-to($mortgagecalc_mq-s) {
     width: 48%;
   }
+}
+
+.mortgagecalc__stacked {
+  @include column(12);
+  margin-bottom: $baseline-unit;
 }
 
 .mortgagecalc__helper {

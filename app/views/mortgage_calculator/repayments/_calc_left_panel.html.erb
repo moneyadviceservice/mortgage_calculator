@@ -1,4 +1,4 @@
-<div class="mortgagecalc__panel">
+<div>
 
   <div ng-docker
        ng-docked="docked"
@@ -8,13 +8,5 @@
        ng-cloak>
     <%= render 'tabs' %>
   </div>
-
-  <div class="callout callout--tip">
-    <span class="callout__icon" aria-hidden="true">?</span>
-    <h5 class="callout__heading"><%= I18n.t("mortgage_calculator.repayment.interest_changer.title") %></h5>
-    <p><%= raw I18n.t("mortgage_calculator.repayment.interest_changer.intro", change: 3) %></p>
-
-     <div ng-show="viewMonthlyRepayments"><%= render 'monthly_increment' %></div>
-     <div ng-show="viewInterestRepayments"><%= render 'interest_monthly_increment' %></div>
-  </div>
+  
 </div>
