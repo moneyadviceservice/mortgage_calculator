@@ -1,47 +1,10 @@
-<div class="mortgagecalc__panel mortgagecalc__panel--full">
+<div class="mortgagecalc__panel mortgagecalc__panel--border-left">
   <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.title") %></h4>
 
-  <ol class="featured-list">
+  <ol class="featured-list featured-list--no-border">
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_1.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_1.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_1.url"), target: "_blank", rel: no_follow? %></li>
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.heading") %></strong> <%= I18n.t("mortgage_calculator.repayment.next_steps.tip_2.info") %></li>
     <li><strong><%= I18n.t("mortgage_calculator.repayment.next_steps.tip_3.heading") %></strong> <%= link_to t("mortgage_calculator.repayment.next_steps.tip_3.info_html"), I18n.t("mortgage_calculator.repayment.next_steps.tip_3.url"), target: "_blank", rel: no_follow? %></li>
   </ol>
 </div>
 
-<div class="mortgagecalc__panel">
-  <div class="callout callout--tip">
-    <span class="callout__icon" aria-hidden="true">?</span>
-    <h5 class="callout__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.title") %></h5>
-    <p><%= I18n.t("mortgage_calculator.repayment.next_steps.learn_more.tip_1").html_safe %> <%= link_to t("mortgage_calculator.repayment.next_steps.learn_more.more.copy_html"), I18n.t("mortgage_calculator.repayment.next_steps.learn_more.more.url"), target: "_blank", rel: no_follow? %></p>
-  </div>
-</div>
-
-<div class="mortgagecalc__panel mortgagecalc__panel--nudge">
-  <h5 class="mortgagecalc__subheading"><%= I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.title") %>:</h5>
-  <ul>
-  <% I18n.t("mortgage_calculator.repayment.next_steps.find_out_more.tips").each do |tip| %>
-    <li><%= link_to tip[:copy_html].html_safe, tip[:url], target: "_blank", rel: no_follow? %></li>
-  <% end %>
-  </ul>
-
-</div>
-
-<div class="mortgagecalc__panel mortgagecalc__panel--full mortgagecalc__panel--with-form mortgagecalc__panel--border">
-  <h4 class="mortgagecalc__heading"><%= I18n.t("mortgage_calculator.repayment.next_steps.have_you_tried.title") %></h4>
-
-  <%= link_to I18n.t('mortgage_calculator.repayment.next_steps.have_you_tried.stamp_duty'),
-                 full_stamp_duty_calculator_url,
-                 class: "button button--primary mortgagecalc__spread",
-                 target: "_blank",
-                 rel: no_follow? %>
-
-     <%= link_to I18n.t('mortgage_calculator.repayment.next_steps.have_you_tried.affordability_calculator'),
-                 full_mortgage_affordability_calculator_url,
-                 class: "button button--primary mortgagecalc__spread",
-                 target: "_blank",
-                 rel: no_follow? %>
-</div>
-
-<div class="mortgagecalc__panel--space">
-  <a href="#" class='button mortgagecalc__submit rendered-from-js' ng-click="navigateAndFocus($event, 'previous')"><%= I18n.t('mortgage_calculator.repayment.back') %></a>
-</div>
