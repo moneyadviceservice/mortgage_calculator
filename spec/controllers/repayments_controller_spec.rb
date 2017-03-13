@@ -30,11 +30,4 @@ describe MortgageCalculator::RepaymentsController do
       end
     end
   end
-
-  describe 'next_s#teps' do
-    it 'works' do
-      get :next_steps, locale: :en
-      expect(response).to be_success
-    end
-  end
 end
