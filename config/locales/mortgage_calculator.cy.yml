@@ -55,18 +55,19 @@ cy:
         title: Gwnewch yn siŵr eich bod yn medru ei fforddio!
         intro: Os bydd eich cyfradd llog yn cynyddu <strong>%{change}%</strong> bydd eich taliad misol yn
       next_steps:
-        title: "3 cham i leihau eich ad-daliadau misol:"
+        title: "Tri cham i leihau eich ad-daliadau misol:"
         tip_1:
-          heading: Cynyddu eich blaendal
-          info_html: "Syniadau i’ch helpu i gynilo arian <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/search?utf8=%E2%9C%93&query=arbed+arian&commit=Mynd"
+          heading: Dewiswch y math gorau o forgais ac ystyriwch cael cynghorydd
+          info_html: "Cyngor ar forgeisi - a ddylech chi gael cynghorydd morgeisi? <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          url: "https://www.moneyadviceservice.org.uk/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
         tip_2:
-          heading: Gostwng pris yr eiddo
-          info: Ystyriwch chwilio am gartrefi mewn ardaloedd eraill
+          heading: Cynyddu'ch blaendal
+          info_html: Sut i osod targed cynilo
+          url: "https://www.moneyadviceservice.org.uk/cy/articles/sut-i-bennu-nod-cynilo"
         tip_3:
-          heading: Dewiswch y morgais gorau i chi
-          info_html: "Cyngor ar forgeisi – A ddylech chi gael cynghorydd morgeisi? <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
+          heading: A ydych chi'n gymwys ar gyfer cynllun tai fforddiadwy?
+          info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai presennol <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
+          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
         learn_more:
           title: Dysgu mwy
           tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."

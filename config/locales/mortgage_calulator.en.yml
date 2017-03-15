@@ -57,16 +57,17 @@ en:
       next_steps:
         title: "Three steps to lower your monthly payments:"
         tip_1:
-          heading: Increase your deposit
-          info_html: "Ideas to help you save money <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/tools/how-to-set-a-savings-goal"
-        tip_2:
-          heading: Find a cheaper property
-          info: Consider looking in other areas
-        tip_3:
-          heading: "Choose the best mortgage for you"
-          info_html: "Mortgage advice – Should you get a mortgage adviser? <span class='visually-hidden'>(opens in a new window)</span>"
+          heading: Choose the right type of mortgage and consider getting an adviser
+          info_html: "Mortgage advice-should you get a mortgage advisor? <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
+        tip_2:
+          heading: Increase your deposit
+          info_html: How to set a saving goal
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-set-a-savings-goal"
+        tip_3:
+          heading: "Are you eligible for an affordable housing scheme?"
+          info_html: "Government scheme for first time home buyers and existing home owners <span class='visually-hidden'>(opens in a new window)</span>"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Learn about LTV
           tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
