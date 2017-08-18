@@ -1,4 +1,3 @@
-<h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
 <div class="stamp-duty__calculator-column">
   <%= form_for @stamp_duty, url: stamp_duty_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
     <div class="form__item stamp-duty__form">
@@ -52,7 +51,7 @@
   <%= render 'stamp_duty_to_pay_panel' if @stamp_duty.valid? %>
 
   <div class="">
-    <h4 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h4>
+    <h2 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h2>
     <p><%= link_to t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
                    full_mortgage_calculator_url,
                    class: "button button--primary mortgagecalc__spread stamp-duty__button",
@@ -70,12 +69,12 @@
 <div class="stamp-duty__info-column">
   <div class="callout callout--tip">
     <span class="callout__icon" aria-hidden="true">?</span>
-    <h5 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h5>
+    <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h2>
     <p class="stamp-duty__info-tip"><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1") %></p>
     <p><a class="stamp-duty__info-tip-link" href="<%= I18n.t("stamp_duty.next_steps.learn_more.link_1.url") %>"><%= I18n.t("stamp_duty.next_steps.learn_more.link_1.title") %></a>
   </div>
 
-  <h3 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h3>
+  <h2 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h2>
   <ul>
     <% I18n.t("stamp_duty.next_steps.find_out_more.tips").each do |tip| %>
       <li class="stamp-duty__info-tip-link"><%= link_to tip[:copy_html], tip[:url], target: "_blank", rel: no_follow? %></li>
