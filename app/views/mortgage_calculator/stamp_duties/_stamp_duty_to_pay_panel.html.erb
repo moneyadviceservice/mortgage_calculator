@@ -1,5 +1,5 @@
 <div class="stamp-duty__results">
-  <h2 class="stamp-duty__results-heading">
+  <h2 class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
     <div ng-hide="js">
       <% key = @stamp_duty.second_home ? 'second_title' : 'title' %>
       <%= I18n.t("stamp_duty.results.#{key}") %>
