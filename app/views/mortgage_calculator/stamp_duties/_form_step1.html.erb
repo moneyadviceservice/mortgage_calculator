@@ -30,10 +30,10 @@
         %>
   </div>
 
-  <label class="stamp-duty__additional-property-check">
+  <%= f.label :second_home, class: "stamp-duty__additional-property-check" do %>
     <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
     <%= I18n.t('stamp_duty.second_home.label') %>
-  </label>
+  <% end %>
 
 <% end %>
 <hr />
