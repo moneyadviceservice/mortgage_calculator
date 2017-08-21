@@ -3,8 +3,8 @@
 
   <% @stamp_duty.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
-  <% end %>
-
+  <% end %> 
+  <h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">
       <%= render 'form_step1' %>
