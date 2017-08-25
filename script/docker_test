@@ -1,0 +1,17 @@
+#!/bin/bash
+
+docker build -t mortgage_calculator .
+docker run \
+    --interactive \
+    --tty \
+    --rm \
+    -v "$PWD:/var/tmp/repo" \
+    -w /var/tmp/repo \
+    mortgage_calculator \
+        ./script/test
+
+if [ $? = 0 ]; then
+    echo "All tests passed."
+else
+    echo "Test(s) failed."
+fi

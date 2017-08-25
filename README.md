@@ -38,10 +38,17 @@ $ rails s
 
 ## Tests
 
+### Running tests on your Mac
+
 ```sh
 bundle exec rake
 ```
 This will run cucumber tests through poltergeist with and without javascript. It will then run rspec and karma.
+
+### Running tests in Docker
+
+If you have Docker setup and want to run the tests in a more isolated
+environment, run `./script/docker_test`.
 
 ## Contributing
 

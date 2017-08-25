@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export RAILS_ENV=test
+exit_code=0
+
+# (re)install node packages to local dir before tests run
+npm install
+bundle exec bowndler install
+
+
+bundle exec rspec
+[ "$?" != 0 ] && exit_code=1
+
+bundle exec cucumber
+[ "$?" != 0 ] && exit_code=1
+
+bundle exec rake app:karma:run_once
+[ "$?" != 0 ] && exit_code=1
+
+exit "$exit_code"

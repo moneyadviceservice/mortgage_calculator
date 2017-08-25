@@ -1,6 +1,8 @@
 source "http://gems.dev.mas.local"
 source "https://rubygems.org"
 
+ruby '2.3.3'
+
 gemspec
 
 gem 'rails', '~> 4.2.0'
@@ -21,4 +23,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false
   gem 'sqlite3'
+  gem 'tzinfo-data'
 end
