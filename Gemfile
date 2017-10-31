@@ -12,6 +12,7 @@ gem 'meta-tags'
 
 group :test do
   gem 'capybara'
+  gem 'cucumber', '~> 2.3.3'
   gem 'coffee-rails'
   gem 'factory_girl_rails'
   gem 'mas-templating'
