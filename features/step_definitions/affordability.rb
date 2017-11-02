@@ -190,8 +190,6 @@ Given(/^living costs of (\d+), (\d+) and (\d+)$/) do |ents, hols, food|
 end
 
 When(/^I set the term to (\d+) and interest to (\d+)$/) do |term, rate|
-  return if term == DEFAULT_ANNUAL_TERM_YEARS && rate == DEFAULT_ANNUAL_INTEREST_RATE
-
   step_three.term_years.set term
   step_three.interest_rate.set rate
   step_three.recalculate.click
