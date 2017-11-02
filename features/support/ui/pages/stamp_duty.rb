@@ -15,7 +15,6 @@ module UI
 
       element :results, "p[class='results']"
       element :results_text, "p[class='results-text']"
-
       element :recalculate, "form.step_two input[type=submit]"
     end
 
