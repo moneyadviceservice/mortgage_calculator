@@ -6,7 +6,8 @@ en:
       canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator"
     tool_name: "stamp-duty-calculator"
     pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
-    h1: Stamp Duty calculator
+    heading: "Stamp Duty calculator"
+    heading_results: "Stamp Duty Calculator - Your Results"
     title: Calculate the Stamp Duty on your residential property
     subtitle: "Calculate the Stamp Duty on your residential property in England, Wales or Northern Ireland. You have to pay Stamp Duty (SDLT) if you buy a property costing more than £125,000 (£40,000 for additional homes). Use this calculator to work out how much Stamp Duty is payable."
     subtitle_legislation_change: "Anyone purchasing an additional home including buy to let properties will have to pay an extra 3% surcharge on top of each stamp duty band."

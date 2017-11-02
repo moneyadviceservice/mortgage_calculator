@@ -1,17 +1,18 @@
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
-  <%= render 'header' %>
 
   <% @stamp_duty.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
   <% end %> 
-  <h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">
+      <h1 class="stamp-duty__heading"><%= I18n.t('stamp_duty.heading') %></h1>
+      <h2 class="intro stamp-duty__subheading"><%= I18n.t('stamp_duty.title') %></h2>
       <%= render 'form_step1' %>
     </div>
 
     <div wz-step class="ng-hide">
       <div class="rendered-from-js">
+        <h1 class="stamp-duty__heading"><%= I18n.t('stamp_duty.heading_results') %></h1>
         <%= render 'form_step2' %>
       </div>
     </div>

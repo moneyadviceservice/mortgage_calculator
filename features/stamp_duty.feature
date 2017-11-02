@@ -12,10 +12,12 @@ Scenario: Welsh users
   Given I visit the Welsh Stamp Duty page
   Then  I see the Welsh stamp duty calculator
 
+@javascript
 Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
   When I enter a house price of <price>
   And I click next
+  Then I see the title for the results page
   Then I see the stamp duty I will have to pay is "£<duty>"
 
 Examples:

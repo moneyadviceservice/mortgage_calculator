@@ -15,7 +15,7 @@ Given(/^I visit the Syndicated Stamp Duty page$/) do
 end
 
 Then /^they should see the Stamp Duty calculator$/ do
-  expect(@stamp_duty).to have_content(I18n.t('stamp_duty.h1'))
+  expect(@stamp_duty).to have_content(I18n.t('stamp_duty.heading'))
 end
 
 Then(/^they do not see the result output$/) do
@@ -32,6 +32,10 @@ end
 
 When(/^I click next$/) do
   @stamp_duty.next.click
+end
+
+Then(/^I see the title for the results page$/) do
+  expect(@stamp_duty.h1.first).to have_content('Stamp Duty Calculator - Your Results')
 end
 
 When(/^I select to calculate for a second home$/) do
@@ -64,5 +68,5 @@ And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content
 end
 
 Then(/^I see the Welsh stamp duty calculator$/) do
-  expect(@stamp_duty.h1).to have_content('Cyfrifiannell treth stamp')
+  expect(@stamp_duty.h1.first).to have_content('Cyfrifiannell treth stamp')
 end
