@@ -96,3 +96,15 @@
     }
   }
 }
+
+.affcalc__label {
+  @extend label
+}
+
+.affcalc__sub-label {
+  font-size: 1rem;
+}
+
+.js .popup-tip__container {
+  z-index: 3;
+}
