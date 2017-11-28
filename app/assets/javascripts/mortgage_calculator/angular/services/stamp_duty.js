@@ -1,13 +1,14 @@
 'use strict';
 
 App.factory('StampDuty', function() {
-    var SECOND_HOME_TAX_THRESHOLD = 40000
-      , SECOND_HOME_TAX_RATE = 3;
+    var SECOND_HOME_TAX_THRESHOLD = 40000,
+        SECOND_HOME_TAX_RATE = 3;
 
     var stampDuty = {
       propertyPrice : 0,
       isSecondHome: false,
-      rates: [
+      isFTB: true,
+      rates_no_FTB: [
         {
           threshold: 125000,
           rate: 0
@@ -25,14 +26,40 @@ App.factory('StampDuty', function() {
           rate: 12
         }
       ],
+      rates_FTB: [
+        {
+          threshold: 300000,
+          rate: 0
+        }, {
+          threshold: 500000,
+          rate: 5 * 0.2
+        }, {
+          threshold: 925000,
+          rate: 5
+        }, {
+          threshold: 1500000,
+          rate: 10
+        }, {
+          threshold: 100000000,
+          rate: 12
+        }
+      ],
 
       cost: function() {
+        var rates;
+
+        if (this.isFTB) {
+          rates = this.rates_FTB;
+        } else {
+          rates = this.rates_no_FTB;
+        }
+
         var totalTax = 0,
             remaining = this.propertyPrice;
 
-        for (var i = 0; i < this.rates.length; i++) {
-          var rateObj = this.rates[i],
-              previousRateObj = i > 0 ? this.rates[i - 1] : null,
+        for (var i = 0; i < rates.length; i++) {
+          var rateObj = rates[i],
+              previousRateObj = i > 0 ? rates[i - 1] : null,
               bandwidth = 0,
               remainingTaxable = 0,
               bandTaxable = 0;
@@ -71,4 +98,3 @@ App.factory('StampDuty', function() {
 
     return stampDuty;
   });
-
