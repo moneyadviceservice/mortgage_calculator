@@ -1,5 +1,17 @@
 
 <%= form_for @stamp_duty, url: stamp_duty_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one stamp-duty__step-one', novalidate: '' } do |f| %>
+
+  <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
+    <%= t('stamp_duty.select.label') %>
+    <%= select_tag(:buyerType, options_for_select([
+      [t('stamp_duty.select.option_prompt'), ''],
+      [t('stamp_duty.select.option_isNextHome'), 'isNextHome'],
+      [t('stamp_duty.select.option_isFTB'), 'isFTB'],
+      [t('stamp_duty.select.option_isSecondHome'), 'isSecondHome']
+      ]), {'ng-model' => 'stampDuty.buyerType'}
+    )%>
+  <% end %>
+
   <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
     <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
@@ -20,7 +32,7 @@
       <%= f.submit I18n.t("stamp_duty.next"),
       class: "button button--primary stamp-duty__submit",
         'ng-click' => 'navigateAndFocus($event)',
-        'ng-disabled' => '!stampDuty.propertyPrice',
+        'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
         'analytics-category' => 'Stamp Duty Calculator',
         'analytics-action' => 'Completion',
         'analytics-label' => 'Click',
@@ -28,12 +40,6 @@
         'analytics-on' => 'click'
         %>
   </div>
-
-  <%= f.label :second_home, class: "stamp-duty__additional-property-check" do %>
-    <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
-    <%= I18n.t('stamp_duty.second_home.label') %>
-  <% end %>
-
 <% end %>
 <hr />
 <div class="stamp-duty__description">
