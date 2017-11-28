@@ -6,8 +6,7 @@ App.factory('StampDuty', function() {
 
     var stampDuty = {
       propertyPrice : 0,
-      isSecondHome: false,
-      isFTB: true,
+      buyerType: '',
       rates_no_FTB: [
         {
           threshold: 125000,
@@ -48,7 +47,7 @@ App.factory('StampDuty', function() {
       cost: function() {
         var rates;
 
-        if (this.isFTB) {
+        if (this.buyerType === 'isFTB') {
           rates = this.rates_FTB;
         } else {
           rates = this.rates_no_FTB;
@@ -80,7 +79,7 @@ App.factory('StampDuty', function() {
           }
         }
 
-        if (this.isSecondHome && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
+        if (this.buyerType === 'isSecondHome' && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
           totalTax += this.propertyPrice * (SECOND_HOME_TAX_RATE / 100);
         }
 
