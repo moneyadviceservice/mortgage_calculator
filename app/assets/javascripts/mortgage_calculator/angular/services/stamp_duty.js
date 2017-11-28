@@ -39,8 +39,13 @@ App.factory('StampDuty', function() {
         var rates;
 
         if (this.buyerType === 'isFTB' && this.propertyPrice <= 500000) {
+          $('.conditionalMessage').css('display', 'none');
           rates = this.rates_FTB;
+        } else if (this.buyerType === 'isFTB' && this.propertyPrice > 500000) {
+          $('.conditionalMessage').css('display', 'block');
+          rates = this.rates_no_FTB;
         } else {
+          $('.conditionalMessage').css('display', 'none');
           rates = this.rates_no_FTB;
         }
 
