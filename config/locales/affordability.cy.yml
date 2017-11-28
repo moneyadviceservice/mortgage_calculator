@@ -42,15 +42,17 @@ cy:
         mortgage_calculator/person:
           raw_annual_income: "Eich incwm blynyddol"
           raw_monthly_net_income: "Eich cyflog clir misol"
-          annual_income: "Eich incwm blynyddol"
-          extra_income: "Unrhyw incwm blynyddol arall"
-          monthly_net_income: "Eich cyflog clir misol"
+          annual_income: "Beth yw eich incwm neu gyflog blynyddol cyn talu treth?"
+          extra_income: "A oes gennych chi unrhyw incwm arall? (Dewisol)"
+          monthly_net_income: "Beth yw eich cyflog clir misol?"
+          monthly_net_sub: "(dyma yw eich incwm misol ar ôl treth, meinws pensiwn, Yswiriant Gwladol, a didyniadau eraill)"
         mortgage_calculator/person_other:
           raw_annual_income: "Incwm blynyddol ail ymgeisydd"
           raw_monthly_net_income: "Cyflog clir misol ail ymgeisydd"
-          annual_income: "Incwm blynyddol ail ymgeisydd"
-          extra_income: "Incwm blynyddol arall ail ymgeisydd"
-          monthly_net_income: "Cyflog clir misol ail ymgeisydd"
+          annual_income: "Beth yw incwm neu gyflog blynyddol yr ail ymgeisydd cyn tynnu treth?"
+          extra_income: "A oes gan yr ail ymgeisydd unrhyw incwm arall? (Dewisol)"
+          monthly_net_income: "Beth yw cyflog yr ail ymgeisydd ar ôl tynnu treth?"
+          monthly_net_sub_other: "(dyma yw ei incwm misol ar ôl treth, meinws pensiwn, Yswiriant Gwladol, a didyniadau eraill)"
       errors:
         title: "Gwiriwch y ffurflen a chywiro’r gwallau canlynol"
         messages:
@@ -80,6 +82,9 @@ cy:
           base:
             proportional_incomes: "Mae cyflog clir misol yr ail ymgeisydd yn uwch na’i incwm blynyddol."
     tooltips:
+      tooltip_show: sioe help
+      tooltip_hide: cuddio cymorth
+      annual: "ylid cynnwys incwm o swyddi eraill, incwm pensiwn, bonws wedi ei warantu, goramser rheolaidd, cyflogaeth arall, incwm rhent, taliadau cynhaliaeth, pensiwn, lwfans car ac ati"
       mortgage_calculator/outgoings:
         credit_repayments_html: "<b>Dylid cynnwys:</b> dyledion cerdyn credyd, cerdyn siop a chatalog; benthyciadau car a phersonol, benthyciadau myfyrwyr; ac ymroddiadau hurbwrcasu<br /><b>Ni ddylid cynnwys</b>: Costau byw o ddydd i ddydd (e.e. bwyd, dillad, adloniant a gwyliau); gwariant sefydlog (e.e. tanysgrifiadau i gampfeydd neu daliadau aelodaeth eraill; biliau gwasanaethau; ffonau symudol; band eang; y dreth gyngor; ffioedd gofal plant neu ysgol)"
         utilities_html: "<b>Dylid cynnwys:</b> Y Dreth Gyngor, aelodaeth o gampfa, biliau gwasanaethau; ffonau symudol; yswiriant blynyddol (megis cynnwys, car, anifeiliaid anwes, teithio), tanysgrifiadau cylchgronau, band eang, adferiad ochr y ffordd ac ati"
@@ -113,6 +118,7 @@ cy:
       how_affect_budget: "Allwch chi fforddio'r taliadau misol?"
       can_afford: "Beth sy’n weddill?"
       second_applicant: "A oes ail ymgeisydd?"
+      checkbox_label: ie
     input_page:
       submit: "Gwiriwch faint allwch chi ei fenthyg"
       monthly_outgoings_descriptions_html: "Defnyddiwch yr adran hon i gael syniad sylfaenol o sut mae’ch cyllideb fisol yn cael ei chyfrifo, a pa mor fforddiadwy fydd eich taliadau morgais misol."

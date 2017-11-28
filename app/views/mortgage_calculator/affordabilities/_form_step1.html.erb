@@ -2,12 +2,12 @@
   <% f.validates @affordability, @affordability.people[0], @affordability.people[1] %>
 
   <div class="affcalc__col--clip">
-    <p><strong><%= t("affordability.required_copy") %></strong></p>
+    <p><strong><%= t('affordability.required_copy') %></strong></p>
     <%= f.validation_summary %>
   </div>
 
   <div class="affcalc__col">
-    <h3><%= I18n.t("affordability.titles.annual_income") %></h3>
+    <h3><%= I18n.t('affordability.titles.annual_income') %></h3>
   </div>
 
   <%= f.fields_for :people do |person| %>
@@ -20,7 +20,7 @@
           <%= person.form_row :annual_income do %>
             <%= person.errors_for :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person.annual_income')%> * <span class="visually-hidden"><%= t('affordability.per_year') %>, <%= t('affordability.required') %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -39,28 +39,58 @@
                                       "aria-required" => "true",
                                       "value" => person.object.annual_income_formatted,
                                       "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_annual_income0b"><%= t("affordability.per_year") %></span>
+              <span class="form__input-label" id="label_annual_income0b"><%= t('affordability.per_year') %></span>
               <span class="form__input-outline"></span>
             </span>
           <% end %>
-        </div>
-
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_0_html"),
-                html: {
-                  id: 'tip_annual_income_0'
-                }
-            %>
         </div>
       </div>
 
       <div class="affcalc__row">
         <div class="affcalc__col--field">
+          <%= person.form_row :monthly_net_income do %>
+            <%= person.errors_for :monthly_net_income %>
+            <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income')%> * 
+              <span class="affcalc__row affcalc__sub-label"><%= t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_sub")%></span>
+              <span class="visually-hidden"><%= t('affordability.per_month') %>, <%= t('affordability.required') %></span>
+            <% end %>
+
+            <span class="form__input-container">
+              <span class="form__input-label" id="label_monthly_net_income_0a">&pound;</span>
+              <%= person.text_field :monthly_net_income,
+                                    "class" => "form-control form__input",
+                                    "ng-model" => "affordability.earnings.person0.net_pay",
+                                    "ng-initial" => "",
+                                    "currency" => '',
+                                    "placeholder" => "0",
+                                    "aria-describedby" => "tip_monthly_net_income_0",
+                                    "aria-labelledby" => "label_monthly_net_income_0 label_monthly_net_income_0a label_monthly_net_income_0b",
+                                    "required" => "required",
+                                    "aria-required" => "true",
+                                    "value" => person.object.monthly_net_income_formatted,
+                                    "pattern" => '\d*' %>
+              <span class="form__input-label" id="label_monthly_net_income_0b"><%= t('affordability.per_month') %></span>
+              <span class="form__input-outline"></span>
+            </span>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="affcalc__row" data-dough-component="PopupTip">
+        <div class="affcalc__col--field">
           <%= person.form_row :extra_income do %>
             <%= person.errors_for :extra_income %>
             <%= person.label :extra_income, "id" => "label_extra_income0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.extra_income") %>
-              <span class="visually-hidden"><%= t("affordability.per_year") %></span>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person.extra_income') %>
+              <%= render 'mortgage_calculator/affordabilities/tooltips/trigger' %>
+              <div data-dough-popup-container class="popup-tip__container details__helper">
+                <p data-dough-popup-content class="popup-tip__content">
+                  <%= t('affordability.tooltips.annual') %>
+                </p>
+                <%= render 'mortgage_calculator/affordabilities/tooltips/close' %>
+              </div>
+              <span class="visually-hidden"><%= t('affordability.per_year') %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -76,26 +106,22 @@
                                     "aria-labelledby" => "label_extra_income0 label_extra_income0a label_extra_income0b",
                                     "value" => person.object.extra_income_formatted,
                                     "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_extra_income0b"><%= t("affordability.per_year") %></span>
+              <span class="form__input-label" id="label_extra_income0b"><%= t('affordability.per_year') %></span>
               <span class="form__input-outline"></span>
             </span>
           <% end %>
-        </div>
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_0_html"),
-              html: {
-                id: 'tip_extra_income_0'
-              }
-          %>
         </div>
       </div>
     <% else %>
 
       <div class="affcalc__row">
         <div class="affcalc__col">
+          <span class="affcalc__label"><%= I18n.t('affordability.titles.second_applicant') %></span>
+          <span class="visually-hidden">(displays new content below)</span>
+
           <%= f.form_row do %>
             <%= f.label :two_applicants,
-                        class: "label--inline label--accent" do %>
+                        class: "label--inline" do %>
               <%= f.check_box :two_applicants,
                               "ng-model" => "affordability.selectedOption",
                               "ng-initial" => @affordability.two_applicants? ? "1" : "0",
@@ -106,7 +132,7 @@
                               "name" => "affordability[two_applicants]",
                               "affects-height" => "change",
                               :checked => @affordability.two_applicants? %>
-              <%= I18n.t("affordability.titles.second_applicant") %> <span class="visually-hidden">(displays new content below)</span>
+              <span class="label--inline"><%= I18n.t('affordability.titles.checkbox_label') %></span>
             <% end %>
           <% end %>
         </div>
@@ -117,7 +143,7 @@
           <%= person.form_row :annual_income do %>
             <%= person.errors_for :annual_income %>
             <%= person.label :annual_income, "id" => "label_annual_income1" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income")%> * <span class="visually-hidden"><%= t("affordability.per_year") %>, <%= t("affordability.required") %></span>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person_other.annual_income')%> * <span class="visually-hidden"><%= t('affordability.per_year') %>, <%= t('affordability.required') %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -136,114 +162,21 @@
                                     "aria-required" => "true",
                                     "value" => person.object.annual_income_formatted,
                                     "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_annual_income1b"><%= t("affordability.per_year") %></span>
+              <span class="form__input-label" id="label_annual_income1b"><%= t('affordability.per_year') %></span>
               <span class="form__input-outline"></span>
             </span>
           <% end %>
         </div>
-
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.annual_income_1"),
-              html: {
-                id: 'tip_annual_income_1'
-              }
-          %>
-        </div>
       </div>
 
-      <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
-        <div class="affcalc__col--field">
-          <%= person.form_row :extra_income do %>
-            <%= person.errors_for :extra_income %>
-            <%= person.label :extra_income, "id" => "label_extra_income_1" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.extra_income")%>
-              <span class="visually-hidden"><%= t("affordability.per_year") %></span>
-            <% end %>
-
-            <span class="form__input-container">
-              <span class="form__input-label" id="label_extra_income_1a">&pound;</span>
-              <%= person.text_field :extra_income,
-                                    "class" => "form-control form__input",
-                                    "ng-model" => "affordability.earnings.person1.extra",
-                                    "ng-initial" => "",
-                                    'ng-disabled' => "!isCheckboxSelected('1')",
-                                    "currency" => '',
-                                    "placeholder" => "0",
-                                    "data-m-dec" =>"0",
-                                    "aria-describedby" => "tip_extra_income_1",
-                                    "aria-labelledby" => "label_extra_income_1 label_extra_income_1a label_extra_income_1b",
-                                    "value" => person.object.extra_income_formatted,
-                                    "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_extra_income_1b"><%= t("affordability.per_year") %></span>
-              <span class="form__input-outline"></span>
-            </span>
-          <% end %>
-        </div>
-
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.extra_income_1"),
-              html: {
-                id: 'tip_extra_income_1'
-              }
-          %>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-
-  <div class="affcalc__col">
-    <h3><%= I18n.t("affordability.titles.take_home") %></h3>
-  </div>
-
-  <%= f.fields_for :people do |person| %>
-    <% index = @affordability.people.find_index(person.object) %>
-    <% person.object_name = "affordability[people_attributes][#{index}]" %>
-
-    <%# render the first applicant differently to the additional applicants %>
-    <% if index == 0 %>
-      <div class="affcalc__row">
-        <div class="affcalc__col--field">
-          <%= person.form_row :monthly_net_income do %>
-            <%= person.errors_for :monthly_net_income %>
-            <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
-            <% end %>
-
-            <span class="form__input-container">
-              <span class="form__input-label" id="label_monthly_net_income_0a">&pound;</span>
-              <%= person.text_field :monthly_net_income,
-                                    "class" => "form-control form__input",
-                                    "ng-model" => "affordability.earnings.person0.net_pay",
-                                    "ng-initial" => "",
-                                    "currency" => '',
-                                    "placeholder" => "0",
-                                    "aria-describedby" => "tip_monthly_net_income_0",
-                                    "aria-labelledby" => "label_monthly_net_income_0 label_monthly_net_income_0a label_monthly_net_income_0b",
-                                    "required" => "required",
-                                    "aria-required" => "true",
-                                    "value" => person.object.monthly_net_income_formatted,
-                                    "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_monthly_net_income_0b"><%= t("affordability.per_month") %></span>
-              <span class="form__input-outline"></span>
-            </span>
-          <% end %>
-        </div>
-
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_0"),
-              html: {
-                id: 'tip_monthly_net_income_0'
-              }
-          %>
-        </div>
-      </div>
-    <% else %>
       <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }">
         <div class="affcalc__col--field">
           <%= person.form_row :monthly_net_income do %>
             <%= person.errors_for :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_1" do %>
-              <%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income")%> * <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t("affordability.required") %></span>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_income')%> *
+              <span class="affcalc__row affcalc__sub-label"><%= t("affordability.activemodel.attributes.mortgage_calculator/person_other.monthly_net_sub_other")%></span>
+              <span class="visually-hidden"><%= t("affordability.per_month") %>, <%= t('affordability.required') %></span>
             <% end %>
 
             <span class="form__input-container">
@@ -261,18 +194,47 @@
                                     "aria-required" => "true",
                                     "value" => person.object.monthly_net_income_formatted,
                                     "pattern" => '\d*' %>
-              <span class="form__input-label" id="label_monthly_net_income_1b"><%= t("affordability.per_month") %></span>
+              <span class="form__input-label" id="label_monthly_net_income_1b"><%= t('affordability.per_month') %></span>
               <span class="form__input-outline"></span>
             </span>
           <% end %>
         </div>
+      </div>
 
-        <div class="affcalc__col--tooltip">
-          <%= field_tooltip text: t("affordability.tooltips.mortgage_calculator/person.monthly_net_income_1"),
-              html: {
-                id: 'tip_monthly_net_income_1'
-              }
-          %>
+      <div class="affcalc__row" ng-class="{ 'is-hidden' : !isCheckboxSelected('1') }" data-dough-component="PopupTip">
+        <div class="affcalc__col--field">
+          <%= person.form_row :extra_income do %>
+            <%= person.errors_for :extra_income %>
+            <%= person.label :extra_income, "id" => "label_extra_income_1" do %>
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person_other.extra_income')%>
+              <%= render 'mortgage_calculator/affordabilities/tooltips/trigger' %>
+              <div data-dough-popup-container class="popup-tip__container details__helper">
+                <p data-dough-popup-content class="popup-tip__content">
+                  <%= t('affordability.tooltips.annual') %>
+                </p>
+                <%= render 'mortgage_calculator/affordabilities/tooltips/close' %>
+              </div>
+              <span class="visually-hidden"><%= t('affordability.per_year') %></span>
+            <% end %>
+
+            <span class="form__input-container">
+              <span class="form__input-label" id="label_extra_income_1a">&pound;</span>
+              <%= person.text_field :extra_income,
+                                    "class" => "form-control form__input",
+                                    "ng-model" => "affordability.earnings.person1.extra",
+                                    "ng-initial" => "",
+                                    'ng-disabled' => "!isCheckboxSelected('1')",
+                                    "currency" => '',
+                                    "placeholder" => "0",
+                                    "data-m-dec" =>"0",
+                                    "aria-describedby" => "tip_extra_income_1",
+                                    "aria-labelledby" => "label_extra_income_1 label_extra_income_1a label_extra_income_1b",
+                                    "value" => person.object.extra_income_formatted,
+                                    "pattern" => '\d*' %>
+              <span class="form__input-label" id="label_extra_income_1b"><%= t('affordability.per_year') %></span>
+              <span class="form__input-outline"></span>
+            </span>
+          <% end %>
         </div>
       </div>
     <% end %>
@@ -280,7 +242,7 @@
 
   <div class="affcalc__col">
     <%= f.form_row do %>
-      <%= f.submit I18n.t("affordability.next"),
+      <%= f.submit I18n.t('affordability.next'),
              class: "button button--primary mortgagecalc__submit mortgagecalc__submit--flow" %>
     <% end %>
   </div>
