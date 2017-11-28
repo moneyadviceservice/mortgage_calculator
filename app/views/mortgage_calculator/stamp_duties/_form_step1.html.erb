@@ -29,10 +29,23 @@
         %>
   </div>
 
-  <%= f.label :second_home, class: "stamp-duty__additional-property-check" do %>
-    <%= f.check_box :second_home, {'ng-model' => 'stampDuty.isSecondHome'}, 'true', 'false' %>
-    <%= I18n.t('stamp_duty.second_home.label') %>
-  <% end %>
+  <label
+    class="stamp-duty__buyer-type"
+    for="stamp_duty_buyer_type">
+    <select
+      ng-model="stampDuty.buyerType"
+      type="select"
+      value=""
+      name="buyerType"
+      id="stamp_duty_buyer_type"
+      class="ng-pristine ng-valid">
+      <option value="">Please select</option>
+      <option value="isNextHome">Next Home</option>
+      <option value="isFTB">First Time Buyer</option>
+      <option value="isSecondHome">Second Home</option>
+    </select>
+    Select buyer type
+  </label>
 
 <% end %>
 <hr />
