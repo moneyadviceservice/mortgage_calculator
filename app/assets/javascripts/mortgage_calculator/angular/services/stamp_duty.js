@@ -31,23 +31,14 @@ App.factory('StampDuty', function() {
           rate: 0
         }, {
           threshold: 500000,
-          rate: 5 * 0.2
-        }, {
-          threshold: 925000,
           rate: 5
-        }, {
-          threshold: 1500000,
-          rate: 10
-        }, {
-          threshold: 100000000,
-          rate: 12
         }
       ],
 
       cost: function() {
         var rates;
 
-        if (this.buyerType === 'isFTB') {
+        if (this.buyerType === 'isFTB' && this.propertyPrice <= 500000) {
           rates = this.rates_FTB;
         } else {
           rates = this.rates_no_FTB;
