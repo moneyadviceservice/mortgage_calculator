@@ -17,6 +17,12 @@ cy:
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
     legislation_change: "Cyn 4 Rhagfyr 2014, roeddech yn talu Treth Stamp ar un gyfradd ar y pris prynu cyfan. Os bu i chi gyfnewid cytundebau erbyn hanner nos ar 3 Rhagfyr a chwblhau'r trafodion ar 4 Rhagfyr neu'n hwyrach, gallwch ddewis talu Treth Stamp ar yr hen gyfraddau neu'r rhai newydd."
     next: "Nesaf"
+    select:
+      label: Rwy'n
+      option_prompt: dewiswch opsiwn
+      option_isNextHome: prynu fy nghartref nesaf
+      option_isFTB: prynu am y tro cyntaf
+      option_isSecondHome: prynu eiddo atodol neu eiddo prynu-i-osod
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
@@ -37,8 +43,6 @@ cy:
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"
       click_to_expand: Cliciwch i ehangu
-    second_home:
-      label: Cyfrifwch y Dreth Stamp ar eiddo ychwanegol ac eiddo prynu i osod.
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"

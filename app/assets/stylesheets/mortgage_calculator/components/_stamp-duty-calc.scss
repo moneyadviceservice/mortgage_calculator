@@ -128,8 +128,7 @@ input.stamp-duty__input {
   }
 }
 
-.stamp-duty__additional-property-check {
-  overflow: hidden;
+.stamp-duty__buyer-type {
   @include body(13,24);
   margin: $baseline-unit*3 0;
 
