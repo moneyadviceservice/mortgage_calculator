@@ -78,7 +78,7 @@ describe MortgageCalculator::Person do
         end
 
         it 'adds validation for required fields' do
-          expect(subject.errors.messages.values.flatten).to include("Please enter your monthly take-home pay")
+          expect(subject.errors.messages.values.flatten).to include("You have not entered any details for \"what is your monthly take-home pay?\"")
         end
       end
 
