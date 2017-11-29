@@ -62,7 +62,7 @@ cy:
           confirmation: "Nid yw %{attribute} yn cyd-fynd â’r cadarnhad"
           accepted: "Rhaid derbyn %{attribute}"
           empty: "Ni all %{attribute} fod yn wag"
-          blank: "Ni all %{attribute} fod yn wag"
+          blank: 'Nid ydych wedi nodi unrhyw fanylion ar gyfer "%{attribute}"'
           too_long: "Mae %{attribute} yn rhy hir (uchafswm yw %{count} o nodau)"
           too_short: "Mae %{attribute} yn rhy fyr (isafswm yw %{count} o nodau)"
           wrong_length: "Mae hyd %{attribute} yn anghywir (dylai fod yn %{count} o nodau)"

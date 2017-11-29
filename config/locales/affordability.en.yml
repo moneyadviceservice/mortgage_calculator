@@ -62,7 +62,7 @@ en:
           confirmation: "%{attribute} doesn't match confirmation"
           accepted: "%{attribute} must be accepted"
           empty: "%{attribute} can't be empty"
-          blank: "Please enter %{attribute}"
+          blank: 'You have not entered any details for "%{attribute}"'
           too_long: "%{attribute} is too long (maximum is %{count} characters)"
           too_short: "%{attribute} is too short (minimum is %{count} characters)"
           wrong_length: "%{attribute} is the wrong length (should be %{count} characters)"
