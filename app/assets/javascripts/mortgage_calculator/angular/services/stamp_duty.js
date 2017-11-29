@@ -6,8 +6,8 @@ App.factory('StampDuty', function() {
 
     var stampDuty = {
       propertyPrice : 0,
-      isSecondHome: false,
-      rates: [
+      buyerType: '',
+      rates_no_FTB: [
         {
           threshold: 125000,
           rate: 0
@@ -25,14 +25,30 @@ App.factory('StampDuty', function() {
           rate: 12
         }
       ],
+      rates_FTB: [
+        {
+          threshold: 300000,
+          rate: 0
+        }, {
+          threshold: 500000,
+          rate: 5
+        }
+      ],
 
       cost: function() {
         var totalTax = 0,
-            remaining = this.propertyPrice;
+            remaining = this.propertyPrice,
+            rates;
 
-        for (var i = 0; i < this.rates.length; i++) {
-          var rateObj = this.rates[i],
-              previousRateObj = i > 0 ? this.rates[i - 1] : null,
+        if (this.buyerType === 'isFTB' && this.propertyPrice <= 500000) {
+          rates = this.rates_FTB;
+        } else {
+          rates = this.rates_no_FTB;
+        }
+
+        for (var i = 0; i < rates.length; i++) {
+          var rateObj = rates[i],
+              previousRateObj = i > 0 ? rates[i - 1] : null,
               bandwidth = 0,
               remainingTaxable = 0,
               bandTaxable = 0;
@@ -53,7 +69,7 @@ App.factory('StampDuty', function() {
           }
         }
 
-        if (this.isSecondHome && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
+        if (this.buyerType === 'isSecondHome' && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
           totalTax += this.propertyPrice * (SECOND_HOME_TAX_RATE / 100);
         }
 
@@ -71,4 +87,3 @@ App.factory('StampDuty', function() {
 
     return stampDuty;
   });
-
