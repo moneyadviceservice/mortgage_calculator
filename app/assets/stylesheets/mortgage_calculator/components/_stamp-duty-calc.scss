@@ -199,6 +199,14 @@ input.stamp-duty__input {
   margin: $baseline-unit 0;
 }
 
+.stamp-duty__FTB_conditional {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
 .stamp-duty__button {
   width: 100%;
 

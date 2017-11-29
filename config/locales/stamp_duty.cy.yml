@@ -43,6 +43,7 @@ cy:
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"
       click_to_expand: Cliciwch i ehangu
+      FTB_conditional: "Nid ydych yn gymwys i gael gostyngiad ar Dreth Stamp oherwydd mae gwerth yr eiddo yn fwy na £500,000."
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"

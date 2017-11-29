@@ -1,8 +1,8 @@
 'use strict';
 
 App.factory('StampDuty', function() {
-    var SECOND_HOME_TAX_THRESHOLD = 40000
-      , SECOND_HOME_TAX_RATE = 3;
+    var SECOND_HOME_TAX_THRESHOLD = 40000,
+        SECOND_HOME_TAX_RATE = 3;
 
     var stampDuty = {
       propertyPrice : 0,
@@ -38,12 +38,20 @@ App.factory('StampDuty', function() {
       cost: function() {
         var totalTax = 0,
             remaining = this.propertyPrice,
-            rates;
+            rates,
+            $conditionalMessage = $('.stamp-duty__FTB_conditional');
 
-        if (this.buyerType === 'isFTB' && this.propertyPrice <= 500000) {
-          rates = this.rates_FTB;
+        if (this.buyerType === 'isFTB') {
+          if (this.propertyPrice <= 500000) {
+            rates = this.rates_FTB;
+            $conditionalMessage.removeClass('is-active');
+          } else {
+            rates = this.rates_no_FTB;
+            $conditionalMessage.addClass('is-active');
+          }
         } else {
           rates = this.rates_no_FTB;
+          $conditionalMessage.removeClass('is-active');
         }
 
         for (var i = 0; i < rates.length; i++) {

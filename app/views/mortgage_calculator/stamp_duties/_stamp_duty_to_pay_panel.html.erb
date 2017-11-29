@@ -13,7 +13,10 @@
   </div>
 
   <p ng-hide="js" class="stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence", percentage: number_to_percentage(@stamp_duty.percentage_tax, precision: 1)) %></p>
+
   <p class="rendered-from-js stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence_prefix") %> {{ stampDuty.percentageTax() | number: 1 }}<%= I18n.t("stamp_duty.results.sentence_suffix") %></p>
+
+  <p class="stamp-duty__FTB_conditional"><%= I18n.t("stamp_duty.results.FTB_conditional") %></p>
 
   <div>
     <a href="#" class="rendered-from-js expander expander--nudge" ng-class="{ 'expander--expanded' : expandedStampDutyInformation }" ng-click="toggleStampDutyExpanded($event)" affects-height="click">

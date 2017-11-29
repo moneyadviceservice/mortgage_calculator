@@ -42,6 +42,7 @@ en:
       sentence_prefix: "The effective tax rate is"
       sentence_suffix: "%"
       click_to_expand: Click to expand.
+      FTB_conditional: "You are not eligible for relief on Stamp Duty because the property value is greater than £500,000."
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Stamp Duty"
