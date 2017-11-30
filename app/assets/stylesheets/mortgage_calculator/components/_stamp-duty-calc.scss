@@ -33,6 +33,10 @@
   margin-top: $baseline-unit*2;
 }
 
+.stamp-duty__calculation-explanation-list {
+  @include body(16, 24);
+}
+
 .stamp-duty__heading {
   @include body(24,36);
   margin-top: $baseline-unit*4;

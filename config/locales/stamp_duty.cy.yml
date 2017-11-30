@@ -25,8 +25,20 @@ cy:
       option_isSecondHome: prynu eiddo atodol neu eiddo prynu-i-osod
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
-    how_calculated_additional: "Bydd unrhyw un sy'n prynu ail gartref, gan gynnwys eiddo prynu i osod, yn talu 3% ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny'n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750, gan roi cyfradd dreth effeithiol o 4%."
+    how_calculated: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at £500,000."
+    how_calculated_2: "Er enghraifft, os ydych chi'n prynu eich eiddo cyntaf am £350,000 byddech yn talu:"
+    how_calculated_ftb_list:
+      - "dim Treth Stamp ar werth yr eiddo hyd at £300,000"
+      - "5% o dreth ar y gwerth rhwng £300,001 a £350,000."
+    how_calculated_3: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £2,500, gan roi cyfradd effeithiol o 0.7%."
+    how_calculated_4: "Ar gyfer eiddo wedi eu prisio dros £500,000, nid oes gostyngiad ar gael a byddech yn talu Treth Stamp ar y pris prynu llawn."
+    how_calculated_5: "Os ydych chi'n prynu eich cartref nesaf neu'n prynu eiddo wedi ei brisio dros £500,000, byddech yn talu:"
+    how_calculated_default_list:
+      - "dim treth ar werth yr eiddo hyd at £125,000"
+      - "2% o dreth ar werth yr eiddo rhwng £125,001 a £250,000"
+      - "5% o dreth ar werth yr eiddo rhwng £250,001 a £550,000."
+    how_calculated_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
+    how_calculated_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
     how_calculated_extra: "*Nid yw eiddo dan £40,000 yn destun SDLT ail gartref"
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
@@ -48,6 +60,7 @@ cy:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
       extra_rate_header: "Cyfradd Prynu i Werthu neu Gartref Ychwanegol *"
+      standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
       over: Dros
       million: miliwn
     next_steps:
