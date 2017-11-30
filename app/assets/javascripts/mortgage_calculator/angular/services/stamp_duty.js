@@ -2,7 +2,8 @@
 
 App.factory('StampDuty', function() {
     var SECOND_HOME_TAX_THRESHOLD = 40000,
-        SECOND_HOME_TAX_RATE = 3;
+        SECOND_HOME_TAX_RATE = 3,
+        FIRST_TIME_BUYER_THRESHOLD = 500000;
 
     var stampDuty = {
       propertyPrice : 0,
@@ -42,7 +43,7 @@ App.factory('StampDuty', function() {
             $conditionalMessage = $('.stamp-duty__FTB_conditional');
 
         if (this.buyerType === 'isFTB') {
-          if (this.propertyPrice <= 500000) {
+          if (this.propertyPrice <= FIRST_TIME_BUYER_THRESHOLD) {
             rates = this.rates_FTB;
             $conditionalMessage.removeClass('is-active');
           } else {
