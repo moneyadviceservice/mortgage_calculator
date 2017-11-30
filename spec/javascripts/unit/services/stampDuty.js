@@ -9,6 +9,9 @@ describe('Service: StampDuty', function () {
       },
       setSecondHome = function(isSecondHome) {
         stampDuty.isSecondHome = isSecondHome;
+      },
+      setBuyerType = function(buyerType) {
+        stampDuty.buyerType = buyerType;
       };
 
   beforeEach(inject(function (StampDuty) {
@@ -20,9 +23,63 @@ describe('Service: StampDuty', function () {
     expect(!!stampDuty).toBe(true);
   });
 
-  describe('Stamp Duty Bands - first/only home', function() {
+  describe('Stamp Duty Bands - First time buyer', function() {
     beforeEach(function () {
-      setSecondHome(false);
+      setBuyerType('isFTB');
+    });
+
+    it('when house price is 0', function() {
+      setPrice(0);
+
+      expect(stampDuty.cost()).toBe(0);
+      expect(stampDuty.percentageTax()).toBe(0);
+      expect(stampDuty.totalPurchase()).toBe(0);
+    });
+
+    it('when house price is 40000', function() {
+      setPrice(40000);
+
+      expect(stampDuty.cost()).toBe(0);
+      expect(stampDuty.percentageTax()).toBe(0);
+      expect(stampDuty.totalPurchase()).toBe(40000);
+    });
+
+    it('when house price is 260000', function() {
+      setPrice(250000);
+
+      expect(stampDuty.cost()).toBe(0);
+      expect(stampDuty.percentageTax()).toBe(0);
+      expect(stampDuty.totalPurchase()).toBe(250000);
+    });
+
+    it('when house price is 350000', function() {
+      setPrice(350000);
+
+      expect(stampDuty.cost()).toBe(2500);
+      expect(stampDuty.percentageTax()).toBeCloseTo(0.7, 1);
+      expect(stampDuty.totalPurchase()).toBe(352500);
+    });
+
+    it('when house price is 450000', function() {
+      setPrice(450000);
+
+      expect(stampDuty.cost()).toBe(7500);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.67, 2);
+      expect(stampDuty.totalPurchase()).toBe(457500);
+    });
+
+    it('when house price is 550000', function() {
+      setPrice(550000);
+
+      expect(stampDuty.cost()).toBe(17500);
+      expect(stampDuty.percentageTax()).toBeCloseTo(3.2, 1);
+      expect(stampDuty.totalPurchase()).toBe(567500);
+    });
+  });
+
+  describe('Stamp Duty Bands - Only home', function() {
+    beforeEach(function () {
+      setBuyerType('isNextHome');
     });
 
     it('when house price is 0', function() {
@@ -92,7 +149,7 @@ describe('Service: StampDuty', function () {
 
   describe('Stamp Duty Bands - second home', function() {
     beforeEach(function () {
-      setSecondHome(true);
+      setBuyerType('isSecondHome');
     });
 
     it('when house price is 0', function() {
