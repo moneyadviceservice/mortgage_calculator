@@ -1,13 +1,14 @@
 'use strict';
 
 App.factory('StampDuty', function() {
-    var SECOND_HOME_TAX_THRESHOLD = 40000
-      , SECOND_HOME_TAX_RATE = 3;
+    var SECOND_HOME_TAX_THRESHOLD = 40000,
+        SECOND_HOME_TAX_RATE = 3,
+        FIRST_TIME_BUYER_THRESHOLD = 500000;
 
     var stampDuty = {
       propertyPrice : 0,
-      isSecondHome: false,
-      rates: [
+      buyerType: '',
+      rates_no_FTB: [
         {
           threshold: 125000,
           rate: 0
@@ -25,14 +26,38 @@ App.factory('StampDuty', function() {
           rate: 12
         }
       ],
+      rates_FTB: [
+        {
+          threshold: 300000,
+          rate: 0
+        }, {
+          threshold: 500000,
+          rate: 5
+        }
+      ],
 
       cost: function() {
         var totalTax = 0,
-            remaining = this.propertyPrice;
+            remaining = this.propertyPrice,
+            rates,
+            $conditionalMessage = $('.stamp-duty__FTB_conditional');
 
-        for (var i = 0; i < this.rates.length; i++) {
-          var rateObj = this.rates[i],
-              previousRateObj = i > 0 ? this.rates[i - 1] : null,
+        if (this.buyerType === 'isFTB') {
+          if (this.propertyPrice <= FIRST_TIME_BUYER_THRESHOLD) {
+            rates = this.rates_FTB;
+            $conditionalMessage.removeClass('is-active');
+          } else {
+            rates = this.rates_no_FTB;
+            $conditionalMessage.addClass('is-active');
+          }
+        } else {
+          rates = this.rates_no_FTB;
+          $conditionalMessage.removeClass('is-active');
+        }
+
+        for (var i = 0; i < rates.length; i++) {
+          var rateObj = rates[i],
+              previousRateObj = i > 0 ? rates[i - 1] : null,
               bandwidth = 0,
               remainingTaxable = 0,
               bandTaxable = 0;
@@ -53,7 +78,7 @@ App.factory('StampDuty', function() {
           }
         }
 
-        if (this.isSecondHome && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
+        if (this.buyerType === 'isSecondHome' && this.propertyPrice >= SECOND_HOME_TAX_THRESHOLD) {
           totalTax += this.propertyPrice * (SECOND_HOME_TAX_RATE / 100);
         }
 
@@ -71,4 +96,3 @@ App.factory('StampDuty', function() {
 
     return stampDuty;
   });
-

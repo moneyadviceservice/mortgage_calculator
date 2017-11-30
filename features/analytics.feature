@@ -11,6 +11,7 @@ Scenario: When a user uses the mortgage calculator
 
 Scenario: When a user uses the stamp duty calculator
   Given I visit the stamp duty calculator
+  And I select to calculate for a second home
   When  I enter my house price
   Then  My stamp duty completion interaction is tracked
 

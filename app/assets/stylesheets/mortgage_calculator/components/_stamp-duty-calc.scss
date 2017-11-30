@@ -33,6 +33,10 @@
   margin-top: $baseline-unit*2;
 }
 
+.stamp-duty__calculation-explanation-list {
+  @include body(16, 24);
+}
+
 .stamp-duty__heading {
   @include body(24,36);
   margin-top: $baseline-unit*4;
@@ -128,8 +132,7 @@ input.stamp-duty__input {
   }
 }
 
-.stamp-duty__additional-property-check {
-  overflow: hidden;
+.stamp-duty__buyer-type {
   @include body(13,24);
   margin: $baseline-unit*3 0;
 
@@ -198,6 +201,14 @@ input.stamp-duty__input {
 
 .stamp-duty__results-tax-rate {
   margin: $baseline-unit 0;
+}
+
+.stamp-duty__FTB_conditional {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 }
 
 .stamp-duty__button {

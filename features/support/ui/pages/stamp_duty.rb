@@ -7,9 +7,9 @@ module UI
 
       elements :h1, "h1"
       element :h2, "h2"
+      element :buyer_type, "form.step_one select[name='buyerType']"
       element :property_price, "form.step_one input[name='stamp_duty[price]']"
       element :property_price_step_two, "form.step_two input[name='stamp_duty[price]']"
-      element :second_home, "form.step_one input[name='stamp_duty[second_home]'][type='checkbox']"
 
       element :next, "form.step_one input[type=submit]"
 

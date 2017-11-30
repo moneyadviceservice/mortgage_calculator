@@ -16,10 +16,28 @@ en:
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
     legislation_change: "Before 4 December 2014, you paid Stamp Duty at a single rate on the whole purchase price. If you exchanged contracts by midnight on 3 December and the transaction completes on 4 December or later, you can choose whether you pay Stamp Duty at the old or new rates."
     next: Next
+    select:
+      label: I am
+      option_prompt: please select an option
+      option_isNextHome: buying my next home
+      option_isFTB: a first-time buyer
+      option_isSecondHome: buying an additional or buy-to-let property
     recalculate: Recalculate
     how_calculated_toggle: "How is this calculated?"
-    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price. For example, someone buying a property for £245,000 would pay no tax on the value of the property up to £125,000 and 2% tax on the property value between £125,001 and £245,000. In this case, total liability for Stamp Duty would be £2,400 giving an effective tax rate of 1%."
-    how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £7,350, meaning the total stamp duty would be £9,750 giving an effective tax rate of 4%."
+    how_calculated: "First-time buyers are entitled to relief for the first £300,000 of Stamp Duty on properties up to a value of £500,000."
+    how_calculated_2: "For example, if you’re buying your first property for £350,000 you would pay:"
+    how_calculated_ftb_list:
+      - "no Stamp Duty on the value of the property up to £300,000"
+      - "5% tax on the value between £300,001 and £350,000."
+    how_calculated_3: "In this case, the total amount of Stamp Duty would be £2,500, giving an effective rate of 0.7%."
+    how_calculated_4: "For properties priced over £500,000, no relief is available and you would pay Stamp Duty on the full purchase price."
+    how_calculated_5: "If you're buying your next home or buying a property valued at over £500,000 you would pay:"
+    how_calculated_default_list:
+      - "no tax on the value of the property up to £125,000"
+      - "2% tax on the property value between £125,001 and £250,000"
+      - "5% tax on the property value between £250,001 and £550,000."
+    how_calculated_6: "In this case, the total amount of Stamp Duty would be £17,500, giving an effective tax rate of 3.2%."
+    how_calculated_7: "These rates currently apply to England, Wales and Northern Ireland"
     how_calculated_extra: "* Properties under £40,000 are not subject to second home SDLT"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
@@ -36,12 +54,12 @@ en:
       sentence_prefix: "The effective tax rate is"
       sentence_suffix: "%"
       click_to_expand: Click to expand.
-    second_home:
-      label: Calculate the Stamp Duty on additional and buy to let property.
+      FTB_conditional: "You are not eligible for relief on Stamp Duty because the property value is greater than £500,000."
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Stamp Duty"
       extra_rate_header: "Buy to Let/ Additional Home Rate*"
+      standard_rates_apply: "Standard rates apply (see below)"
       over: Over
       million: million
     next_steps:
