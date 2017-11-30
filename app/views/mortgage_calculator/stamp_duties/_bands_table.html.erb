@@ -2,8 +2,9 @@
 <p><%= I18n.t("stamp_duty.how_calculated_2") %></p>
 
 <ul class="list stamp-duty__calculation-explanation-list">
-  <li><%= I18n.t("stamp_duty.how_calculated_list_1") %></li>
-  <li><%= I18n.t("stamp_duty.how_calculated_list_2") %></li>
+  <% I18n.t("stamp_duty.how_calculated_ftb_list").each do |ftb_list| %>
+    <li><%= ftb_list %></li>
+  <% end %>
 </ul>
 
 <p><%= I18n.t("stamp_duty.how_calculated_3") %></p>
@@ -35,9 +36,9 @@
 <p><%= I18n.t("stamp_duty.how_calculated_5") %></p>
 
 <ul class="list stamp-duty__calculation-explanation-list">
-  <li><%= I18n.t("stamp_duty.how_calculated_list_3") %></li>
-  <li><%= I18n.t("stamp_duty.how_calculated_list_4") %></li>
-  <li><%= I18n.t("stamp_duty.how_calculated_list_5") %></li>
+  <% I18n.t("stamp_duty.how_calculated_default_list").each do |default_list| %>
+    <li><%= default_list %></li>
+  <% end %>
 </ul>
 
 <p><%= I18n.t("stamp_duty.how_calculated_6") %></p>
