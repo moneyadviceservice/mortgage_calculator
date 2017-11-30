@@ -16,6 +16,7 @@ Scenario: Welsh users
 Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
   When I enter a house price of <price>
+  And I am a first time buyer
   And I click next
   Then I see the title for the results page
   Then I see the stamp duty I will have to pay is "£<duty>"
@@ -25,17 +26,19 @@ Examples:
   | 39000   | 0       |
   | 40000   | 0       |
   | 120000  | 0       |
-  | 126000  | 20      |
-  | 260000  | 3,000   |
-  | 510000  | 15,500  |
-  | 1100000 | 53,750  |
-  | 2100000 | 165,750 |
+  | 126000  | 0       |
+  | 260000  | 0       |
+  | 350000  | 2,500   |
+  | 450000  | 7,500   |
+  | 550000  | 17,500  |
 
+@javascript
 Scenario Outline: stamp duty for second home
   Given I visit the Stamp Duty page
   When I enter a house price of <price>
   And I select to calculate for a second home
   And I click next
+  Then I see the title for the results page
   Then I see the stamp duty I will have to pay is "£<duty>"
 
 Examples:
@@ -58,6 +61,7 @@ Scenario: I recalculate for first home
   And I click next again
   And I see the stamp duty I will have to pay is "£20"
 
+@javascript
 Scenario: I recalculate for second home
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"
