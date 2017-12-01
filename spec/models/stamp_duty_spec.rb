@@ -12,7 +12,7 @@ describe MortgageCalculator::StampDuty do
   end
 
   describe '#second_home' do
-    subject { described_class.new(second_home: checkbox_value) }
+    subject { described_class.new(buyer_type: checkbox_value) }
 
     context 'when "false" is given' do
       let(:checkbox_value) { "false" }
@@ -23,7 +23,7 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when "true" is given' do
-      let(:checkbox_value) { "true" }
+      let(:checkbox_value) { 'isSecondHome' }
 
       it 'is true' do
         expect(subject.second_home).to be_truthy
@@ -34,9 +34,9 @@ describe MortgageCalculator::StampDuty do
   it_should_behave_like "currency inputs", [:price]
 
   describe 'calculations' do
-    let(:second_home) { 'false' }
+    let(:buyer_type) { 'false' }
 
-    subject { described_class.new(price: price, second_home: second_home)}
+    subject { described_class.new(price: price, buyer_type: buyer_type)}
 
     context 'when house price is text' do
       let(:price) { "asd" }
@@ -51,7 +51,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 0 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
@@ -59,7 +59,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
@@ -71,7 +71,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 40000 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
@@ -79,7 +79,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(1200) }
         its(:percentage_tax) { is_expected.to eq(3) }
@@ -91,7 +91,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 125000 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
@@ -99,7 +99,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(3750) }
         its(:percentage_tax) { is_expected.to eq(3) }
@@ -111,7 +111,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 185000 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to eql(1200.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.7) }
@@ -119,7 +119,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(6750) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(3.65) }
@@ -131,7 +131,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 275000 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to eql(3750.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(1.4) }
@@ -139,7 +139,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(12000) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(4.36) }
@@ -151,7 +151,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 510000.00 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to eql(15500.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
@@ -159,7 +159,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(30800) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(6.04) }
@@ -171,7 +171,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 937500 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to eql(37500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(4) }
@@ -179,7 +179,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(65625) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(7.00) }
@@ -191,7 +191,7 @@ describe MortgageCalculator::StampDuty do
       let(:price) { 2100000.00 }
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'false' }
 
         its(:tax_due) { is_expected.to eql(165750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(7.9) }
@@ -199,7 +199,7 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(228750) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(10.89) }

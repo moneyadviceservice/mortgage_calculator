@@ -30,6 +30,7 @@ module MortgageCalculator
 
     attr_reader :price
     attr_accessor :second_home
+    attr_accessor :buyer_type
 
     currency_inputs :price
 
@@ -37,7 +38,8 @@ module MortgageCalculator
 
     def initialize(options = {})
       self.price = options.fetch(:price){ 0 }
-      self.second_home = options.key?(:second_home) && options[:second_home] == "true"
+      self.second_home = options.key?(:buyer_type) && options[:buyer_type] == 'isSecondHome'
+      self.buyer_type = options[:buyer_type]
     end
 
     [:price, :tax_due, :total_due].each do |field|
@@ -47,15 +49,19 @@ module MortgageCalculator
     end
 
     def tax_due
-      total_tax = BigDecimal('0')
-      remaining = price
+      total_tax = BigDecimal('0') # 0.000000
+      remaining = price # 120,000 (the input)
 
       RATES.each_with_index do |array, index|
-        threshold, rate = array
+        threshold, rate = array # [125000, 0]
+
+        # RATES.keys.unshift(0) = [0, 125000, 250000, 925000, 1500000, 1000000000]
+        # bandwidth = 125000 - 0
         bandwidth = RATES.keys.unshift(0)[index + 1] - RATES.keys.unshift(0)[index]
-        remaining_taxable = [threshold, remaining].min
-        band_taxable = [bandwidth, remaining_taxable].min
-        total_tax = total_tax + (band_taxable * rate/100)
+
+        remaining_taxable = [threshold, remaining].min #[125000, 120000].min
+        band_taxable = [bandwidth, remaining_taxable].min #[125000, 120000].min
+        total_tax = total_tax + (band_taxable * rate/100) # 0 + (120000 * 0/100) = 0
         remaining -= bandwidth
         break if remaining < 0
       end

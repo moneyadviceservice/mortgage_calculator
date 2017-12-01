@@ -54,6 +54,10 @@ And(/^I am a first time buyer$/) do
   @stamp_duty.select('a first-time buyer', from: @buyer_type)
 end
 
+When("I am a next time buyer") do
+  @stamp_duty.select('buying my next home', from: @buyer_type)
+end
+
 And(/^I select to calculate for a second home$/) do
   @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
 end

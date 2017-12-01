@@ -46,6 +46,7 @@ Examples:
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
   When I enter my house price with "350000"
+  And I am a first time buyer
   And I click next
   And I see the stamp duty I will have to pay is "£2,500"
   Then I reenter my house price with "126000"
@@ -56,6 +57,7 @@ Scenario: I recalculate for first home
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
   When I enter my house price with "350000"
+  And I am a first time buyer
   And I click next
   And I see the stamp duty I will have to pay is "£2,500"
   Then I reenter my house price with "126000"
