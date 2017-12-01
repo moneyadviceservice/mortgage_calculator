@@ -40,9 +40,14 @@ App.factory('StampDuty', function() {
         var totalTax = 0,
             remaining = this.propertyPrice,
             rates,
-            $conditionalMessage = $('.stamp-duty__FTB_conditional');
+            $conditionalMessage = $('.stamp-duty__FTB_conditional'),
+            $howcalculatedFTB = $('.stamp-duty__explanation-firsttimebuyer'),
+            $howcalculatedNextHome = $('.stamp-duty__explanation-nexthome');
 
         if (this.buyerType === 'isFTB') {
+          $howcalculatedNextHome.removeClass('is-active');
+          $howcalculatedFTB.addClass('is-active');
+
           if (this.propertyPrice <= FIRST_TIME_BUYER_THRESHOLD) {
             rates = this.rates_FTB;
             $conditionalMessage.removeClass('is-active');
@@ -53,6 +58,8 @@ App.factory('StampDuty', function() {
         } else {
           rates = this.rates_no_FTB;
           $conditionalMessage.removeClass('is-active');
+          $howcalculatedFTB.removeClass('is-active');
+          $howcalculatedNextHome.addClass('is-active');
         }
 
         for (var i = 0; i < rates.length; i++) {

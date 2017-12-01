@@ -28,6 +28,15 @@
   }
 }
 
+.stamp-duty__explanation-firsttimebuyer,
+.stamp-duty__explanation-nexthome {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
 .stamp-duty__calculation-explanation {
   background-color: white;
   margin-top: $baseline-unit*2;
