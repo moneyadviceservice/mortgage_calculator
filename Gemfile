@@ -11,6 +11,7 @@ gem 'mas-development_dependencies', '2.3.0.35'
 gem 'meta-tags'
 
 group :test do
+  gem 'byebug'
   gem 'capybara'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'

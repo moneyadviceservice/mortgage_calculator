@@ -11,6 +11,9 @@ spec/dummy/public/decision-trees/assets/**
 spec/dummy/public/assets/**
 spec/dummy/public/version
 spec/dummy/db/*.sqlite3
+spec/dummy/screenshot*
+
+.byebug_history
 
 .jhw-cache
 vendor/cache/**
@@ -22,6 +25,7 @@ tmp
 .idea/
 node_modules
 coverage/
+package-lock.json
 
 npm-debug.log
 
