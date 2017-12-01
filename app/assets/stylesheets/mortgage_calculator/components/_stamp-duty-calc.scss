@@ -28,6 +28,12 @@
   }
 }
 
+.stamp-duty__budget-warning {
+  .js & {
+    display: none;
+  }
+}
+
 .stamp-duty__explanation-firsttimebuyer,
 .stamp-duty__explanation-nexthome {
   display: none;
