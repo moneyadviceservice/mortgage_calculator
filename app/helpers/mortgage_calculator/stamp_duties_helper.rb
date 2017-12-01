@@ -18,7 +18,20 @@ module MortgageCalculator
       )
     end
 
+    def ftb_bands
+      MortgageCalculator::StampDuty::FIRST_TIME_BUYER_BANDS
+    end
+
+    def first_time_buyer?
+      @stamp_duty.first_time_buy?
+    end
+
+    def outside_first_time_rate?
+      @stamp_duty.first_time_ineligible?
+    end
+
     private
+
     def maximum_band(num)
       I18n.t('stamp_duty.table.over_million', number: num/1_000_000.to_f)
     end

@@ -50,12 +50,16 @@ Then(/^they see "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
 end
 
-And(/^I am a first time buyer$/) do
+Given(/^I am a first time buyer$/) do
   @stamp_duty.select('a first-time buyer', from: @buyer_type)
 end
 
-When("I am a next time buyer") do
+Given(/^I am a next home buyer$/) do
   @stamp_duty.select('buying my next home', from: @buyer_type)
+end
+
+Given("I am an additional or buy-to-let property buyer") do
+  @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
 end
 
 And(/^I select to calculate for a second home$/) do
@@ -84,16 +88,35 @@ When("I reach the results page") do
   step('I click next')
 end
 
-Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |table|
-  pending
+Then("I should see the additional home buyer message") do
+  expect(@stamp_duty).to have_next_home_explanation
+end
+
+Then(/^I should( NOT)? see the first time buyer message$/) do |should_not|
+  if should_not
+    expect(@stamp_duty).to_not have_ftb_explanation
+  else
+    expect(@stamp_duty).to have_ftb_explanation
+  end
+end
+
+Then("I should see the stamp duty percentages table:") do |table|
   data = table.raw
   headings = data[0]
-  expect(@stamp_duty.info_table).to have_content(headings)
-  expect(@stamp_duty.info_table).to have_content(data[1])
-  expect(@stamp_duty.info_table).to have_content(data[2])
-  expect(@stamp_duty.info_table).to have_content(data[3])
-  expect(@stamp_duty.info_table).to have_content(data[4])
-  expect(@stamp_duty.info_table).to have_content(data[5])
+  expect(@stamp_duty.info_table).to have_content(headings.join(' '))
+  expect(@stamp_duty.info_table).to have_content(data[1].join(' '))
+  expect(@stamp_duty.info_table).to have_content(data[2].join(' '))
+  expect(@stamp_duty.info_table).to have_content(data[3].join(' '))
+  expect(@stamp_duty.info_table).to have_content(data[4].join(' '))
+  expect(@stamp_duty.info_table).to have_content(data[5].join(' '))
+end
+
+Then(/^I should( NOT)? see the first time eligibility message$/) do |should_not|
+    if should_not
+      expect(@stamp_duty).to_not have_ftb_conditional
+    else
+      expect(@stamp_duty).to have_ftb_conditional
+    end
 end
 
 Then("I see the effective tax rate is {string}") do |string|
