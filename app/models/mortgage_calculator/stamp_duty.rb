@@ -17,6 +17,13 @@ module MortgageCalculator
       1000000000 => 12
     }
 
+    SDLT_RATES = [
+      {lower: 0,         upper: 125_000,   first_home: 0,  additional_or_buy_to_let: 3},
+      {lower: 125_001,   upper: 250_000,   first_home: 2,  additional_or_buy_to_let: 5},
+      {lower: 250_001,   upper: 925_000,   first_home: 5,  additional_or_buy_to_let: 8},
+      {lower: 925_001,   upper: 1_500_000, first_home: 10, additional_or_buy_to_let: 13},
+      {lower: 1_500_001, upper: nil,       first_home: 12, additional_or_buy_to_let: 15}
+    ]
     SECOND_HOME_THRESHOLD = 40000
     SECOND_HOME_RATE = 3.0
 
@@ -43,6 +50,7 @@ module MortgageCalculator
       remaining = price
 
       RATES.each_with_index do |array, index|
+        puts "\n\narray: #{array.inspect}, index: #{index}\n\n"
         threshold, rate = array
         bandwidth = RATES.keys.unshift(0)[index + 1] - RATES.keys.unshift(0)[index]
         remaining_taxable = [threshold, remaining].min
