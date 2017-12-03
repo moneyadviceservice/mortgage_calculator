@@ -14,6 +14,12 @@ Given(/^I visit the Syndicated Stamp Duty page$/) do
   @stamp_duty.load
 end
 
+Given("I select {string} as my buyer type") do |buyer_type|
+  @stamp_duty.buyer_type_options.select do |option|
+    option['value'] == buyer_type
+  end.first.click
+end
+
 Then /^they should see the Stamp Duty calculator$/ do
   expect(@stamp_duty).to have_content(I18n.t('stamp_duty.heading'))
 end
@@ -73,4 +79,12 @@ end
 
 Then(/^I see the Welsh stamp duty calculator$/) do
   expect(@stamp_duty.h1.first).to have_content('Cyfrifiannell treth stamp')
+end
+
+Then(/^I should( not)? see the stamp duty percentages for first time buyers$/) do |should_not|
+  if should_not
+    expect(@stamp_duty).to_not have_content(message)
+  else
+    expect(@stamp_duty).to have_content(message)
+  end
 end

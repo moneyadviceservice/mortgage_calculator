@@ -50,7 +50,6 @@ module MortgageCalculator
       remaining = price
 
       RATES.each_with_index do |array, index|
-        puts "\n\narray: #{array.inspect}, index: #{index}\n\n"
         threshold, rate = array
         bandwidth = RATES.keys.unshift(0)[index + 1] - RATES.keys.unshift(0)[index]
         remaining_taxable = [threshold, remaining].min
@@ -81,4 +80,3 @@ module MortgageCalculator
     end
   end
 end
-

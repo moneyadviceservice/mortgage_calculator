@@ -208,4 +208,3 @@ describe MortgageCalculator::StampDuty do
     end
   end
 end
-

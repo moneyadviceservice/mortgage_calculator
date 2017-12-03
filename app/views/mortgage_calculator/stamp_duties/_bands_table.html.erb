@@ -9,7 +9,7 @@
   <tbody>number_to_currency
     <% @rates.each do |rate| %>
       <tr>
-        <td class="mortgagecalc__table__price"><%= number_to_currency(rate[:lower], precision: 0) %> - <%= number_to_currency(rate[:upper], precision: 0) %></td>
+        <td class="mortgagecalc__table__price"><%= band(rate[:lower], rate[:upper]) %></td>
         <td class="mortgagecalc__table__rate"><%= rate[:first_home] %>%</td>
         <td class="mortgagecalc__table__extra"><%= rate[:additional_or_buy_to_let] %>%</td>
       </tr>
