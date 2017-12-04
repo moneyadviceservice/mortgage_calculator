@@ -64,8 +64,7 @@ cy:
       rate_header: "Cyfradd treth stamp"
       extra_rate_header: "Cyfradd Prynu i Werthu neu Gartref Ychwanegol *"
       standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
-      over: Dros
-      million: miliwn
+      over_a_million: Dros £%{number} miliwn
     next_steps:
       learn_more:
         title: "A wyddech chi?"

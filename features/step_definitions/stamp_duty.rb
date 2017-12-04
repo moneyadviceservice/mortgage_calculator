@@ -74,3 +74,14 @@ end
 Then(/^I see the Welsh stamp duty calculator$/) do
   expect(@stamp_duty.h1.first).to have_content('Cyfrifiannell treth stamp')
 end
+
+Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |table|
+  data = table.raw
+  headings = data[0]
+  expect(headings).to eq ["Purchase Price of property", "Rate of Stamp Duty", "Buy to Let/Additional Home Rate*"]
+  expect(data[1]).to eq ["£0 - £125,000", "0%", "3%"]
+  expect(data[2]).to eq ["£125,001 - £250,000", "2%", "5%"]
+  expect(data[3]).to eq ["£250,001 - £925,000", "3%", "8%"]
+  expect(data[4]).to eq ["£925,001 - £1,500,000", "10%", "13%"]
+  expect(data[5]).to eq ["over £1.5 million", "12%", "15%"]
+end
