@@ -7,7 +7,7 @@ module UI
 
       elements :h1, "h1"
       element :h2, "h2"
-      elements :buyer_type_options, "form.step_one select[name='buyerType'] option"
+      element :buyer_type, "form.step_one select[name='buyerType']"
       element :property_price, "form.step_one input[name='stamp_duty[price]']"
       element :property_price_step_two, "form.step_two input[name='stamp_duty[price]']"
 

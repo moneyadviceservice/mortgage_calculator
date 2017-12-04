@@ -63,8 +63,7 @@ en:
       rate_header: "Rate of Stamp Duty"
       extra_rate_header: "Buy to Let/ Additional Home Rate*"
       standard_rates_apply: "Standard rates apply (see below)"
-      over: Over
-      million: million
+      over_million: Over £%{number} million
     next_steps:
       learn_more:
         title: "Did you know?"

@@ -14,12 +14,6 @@ Given(/^I visit the Syndicated Stamp Duty page$/) do
   @stamp_duty.load
 end
 
-Given("I select {string} as my buyer type") do |buyer_type|
-  @stamp_duty.buyer_type_options.select do |option|
-    option['value'] == buyer_type
-  end.first.click
-end
-
 Then /^they should see the Stamp Duty calculator$/ do
   expect(@stamp_duty).to have_content(I18n.t('stamp_duty.heading'))
 end
@@ -81,10 +75,13 @@ Then(/^I see the Welsh stamp duty calculator$/) do
   expect(@stamp_duty.h1.first).to have_content('Cyfrifiannell treth stamp')
 end
 
-Then(/^I should( not)? see the stamp duty percentages for first time buyers$/) do |should_not|
-  if should_not
-    expect(@stamp_duty).to_not have_content(message)
-  else
-    expect(@stamp_duty).to have_content(message)
-  end
+Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |table|
+  data = table.raw
+  headings = data[0]
+  expect(headings).to eq ["Purchase Price of property", "Rate of Stamp Duty", "Buy to Let/Additional Home Rate*"]
+  expect(data[1]).to eq ["£0 - £125,000", "0%", "3%"]
+  expect(data[2]).to eq ["£125,001 - £250,000", "2%", "5%"]
+  expect(data[3]).to eq ["£250,001 - £925,000", "3%", "8%"]
+  expect(data[4]).to eq ["£925,001 - £1,500,000", "10%", "13%"]
+  expect(data[5]).to eq ["over £1.5 million", "12%", "15%"]
 end
