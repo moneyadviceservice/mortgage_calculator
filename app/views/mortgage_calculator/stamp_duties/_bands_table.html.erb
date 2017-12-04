@@ -6,7 +6,7 @@
       <th class="mortgagecalc__table__extra"><%= I18n.t("stamp_duty.table.extra_rate_header") %></th>
     </tr>
   </thead>
-  <tbody>number_to_currency
+  <tbody>
     <% @rates.each do |rate| %>
       <tr>
         <td class="mortgagecalc__table__price"><%= band(rate[:lower], rate[:upper]) %></td>

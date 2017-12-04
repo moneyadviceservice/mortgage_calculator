@@ -41,7 +41,7 @@
   
   <%= render 'bands_table', rates: @rates %>
       
-  <p><%= I18n.t("stamp_duty.how_calculated_ftb_extra") %></p>
+  <p><%= I18n.t('stamp_duty.how_calculated_extra', amount: second_home_threshold) %></p>
 </div>
 
 <div class="stamp-duty__explanation-nexthome">
@@ -50,5 +50,5 @@
 
   <%= render 'bands_table', rates: @rates %>
 
-  <p><%= I18n.t("stamp_duty.how_calculated_extra") %></p>
+  <p><%= I18n.t('stamp_duty.how_calculated_extra', amount: second_home_threshold) %></p>
 </div>
