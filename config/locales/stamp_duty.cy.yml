@@ -10,7 +10,7 @@ cy:
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
     second_subtitle: "Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy. Os ydych yn byw yn yr Alban, mae Treth Stamp wedi ei ddileu ond efallai y bydd angen i chi dalu Treth Trafodion Tir ac Adeiladau (LBTT)."
-    subtitle: "Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000 (£40,000 ar gyfer cartrefi ychwanegol). Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy."
+    subtitle: Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000 (%{amount} ar gyfer cartrefi ychwanegol). Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy.
     subtitle_legislation_change: "Bydd unrhyw un sy'n prynu cartref ychwanegol gan gynnwys eiddo prynu i osod yn gorfod talu ffi ychwanegol o 3% ar ben pob band treth stamp."
     second_subtitle: "Mae Treth Trafodion Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Bydd trethi LBTT yn destun ffi ychwanegol o 3% hefyd ar gyfer ail gartrefi."
     href_second_subtitle: "Cyfrifwch yr LBTT sy'n daladwy"
@@ -39,10 +39,9 @@ cy:
       - "5% o dreth ar werth yr eiddo rhwng £250,001 a £550,000."
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
-    how_calculated_ftb_extra: "*Nid yw eiddo dan £40,000 yn destun SDLT ail gartref"
     how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
     how_calculated_additional: "Bydd unrhyw un sy'n prynu ail gartref, gan gynnwys eiddo prynu i osod, yn talu 3% ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny'n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750, gan roi cyfradd dreth effeithiol o 4%."
-    how_calculated_extra: "*Nid yw eiddo dan £40,000 yn destun SDLT ail gartref"
+    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun SDLT ail gartref"
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
