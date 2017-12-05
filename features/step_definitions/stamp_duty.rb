@@ -85,7 +85,7 @@ When("I reach the results page") do
 end
 
 Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |table|
-  fail
+  pending
   data = table.raw
   headings = data[0]
   expect(@stamp_duty.info_table).to have_content(headings)

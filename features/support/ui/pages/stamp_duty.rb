@@ -16,7 +16,6 @@ module UI
       element :results, "p[class='results']"
       element :results_text, "p[class='results-text']"
       element :recalculate, "form.step_two input[type=submit]"
-      element :info_table, "stamp-duty__table"
     end
 
     class WelshStampDuty < StampDuty
