@@ -5,7 +5,8 @@ I want to see what percentages apply to the purchase price
 
 Scenario: As a home buyer
   Given I visit the Stamp Duty page
-  And I am a first time buyer
+  When I am a first time buyer
+  And I reach the results page
   Then I should see the stamp duty percentages for first time buyers as:
     | Purchase Price of property | Rate of Stamp Duty | Buy to Let/Additional Home Rate* |
     | £0 - £125,000              | 0%                 | 3%           |

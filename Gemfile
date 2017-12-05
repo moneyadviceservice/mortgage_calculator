@@ -10,8 +10,12 @@ gem 'mas-build', '~> 2.0'  if ENV['MAS_BUILD']
 gem 'mas-development_dependencies', '2.3.0.35'
 gem 'meta-tags'
 
-group :test do
+group :test, :development do
   gem 'byebug'
+  gem 'rubocop', require: false
+end
+
+group :test do
   gem 'capybara'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
@@ -21,6 +25,6 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
   gem 'sqlite3'
 end
