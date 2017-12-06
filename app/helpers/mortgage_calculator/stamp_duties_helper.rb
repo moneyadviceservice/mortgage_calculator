@@ -11,6 +11,12 @@ module MortgageCalculator
       )
     end
 
+    def ftb_threshold
+      formatted_currency(
+        MortgageCalculator::StampDuty::FIRST_TIME_BUYER_THRESHOLD
+      )
+    end
+
     private
     def maximum_band(num)
       I18n.t('stamp_duty.table.over_million', number: num/1_000_000.to_f)
