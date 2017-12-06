@@ -21,5 +21,11 @@ module MortgageCalculator
         expect(second_home_threshold).to eq('£40,000')
       end
     end
+
+    describe '#ftb_threshold' do
+      it 'returns the first time buyer threshold formatted with a currency sign' do
+        expect(ftb_threshold).to eq('£500,000')
+      end
+    end
   end
 end

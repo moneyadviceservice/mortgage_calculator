@@ -1,5 +1,5 @@
 <div class="stamp-duty__explanation-firsttimebuyer">
-  <p><%= I18n.t("stamp_duty.how_calculated_ftb") %></p>
+  <p><%= I18n.t("stamp_duty.how_calculated_ftb", amount: ftb_threshold) %></p>
   <p><%= I18n.t("stamp_duty.how_calculated_ftb_2") %></p>
   <ul class="list stamp-duty__calculation-explanation-list">
     <% I18n.t("stamp_duty.how_calculated_ftb_list").each do |ftb_list| %>
@@ -7,7 +7,7 @@
     <% end %>
   </ul>
   <p><%= I18n.t("stamp_duty.how_calculated_ftb_3") %></p>
-  <p><%= I18n.t("stamp_duty.how_calculated_ftb_4") %></p>
+  <p><%= I18n.t("stamp_duty.how_calculated_ftb_4", amount: ftb_threshold) %></p>
   <table class="mortgagecalc__table stamp-duty__table">
     <thead>
       <tr>
@@ -30,7 +30,7 @@
       </tr>
     </tbody>
   </table>
-  <p><%= I18n.t("stamp_duty.how_calculated_ftb_5") %></p>
+  <p><%= I18n.t("stamp_duty.how_calculated_ftb_5", amount: ftb_threshold) %></p>
   <ul class="list stamp-duty__calculation-explanation-list">
     <% I18n.t("stamp_duty.how_calculated_ftb_default_list").each do |default_list| %>
       <li><%= default_list %></li>
