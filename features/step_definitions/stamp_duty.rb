@@ -54,13 +54,17 @@ And(/^I am a first time buyer$/) do
   @stamp_duty.select('a first-time buyer', from: @buyer_type)
 end
 
+When("I am a next time buyer") do
+  @stamp_duty.select('buying my next home', from: @buyer_type)
+end
+
 And(/^I select to calculate for a second home$/) do
   @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
 end
 
 When(/^I enter my house price$/) do
-  @stamp_duty.property_price.set "300000"
-  @stamp_duty.next.trigger('click')
+  step('I enter my house price with "300000"')
+  step('I click next')
 end
 
 Then(/^I see the stamp duty I will have to pay is "(.*?)"$/) do |content|
@@ -75,13 +79,19 @@ Then(/^I see the Welsh stamp duty calculator$/) do
   expect(@stamp_duty.h1.first).to have_content('Cyfrifiannell treth stamp')
 end
 
+When("I reach the results page") do
+  step('I enter my house price with "300000"')
+  step('I click next')
+end
+
 Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |table|
+  pending
   data = table.raw
   headings = data[0]
-  expect(headings).to eq ["Purchase Price of property", "Rate of Stamp Duty", "Buy to Let/Additional Home Rate*"]
-  expect(data[1]).to eq ["£0 - £125,000", "0%", "3%"]
-  expect(data[2]).to eq ["£125,001 - £250,000", "2%", "5%"]
-  expect(data[3]).to eq ["£250,001 - £925,000", "3%", "8%"]
-  expect(data[4]).to eq ["£925,001 - £1,500,000", "10%", "13%"]
-  expect(data[5]).to eq ["over £1.5 million", "12%", "15%"]
+  expect(@stamp_duty.info_table).to have_content(headings)
+  expect(@stamp_duty.info_table).to have_content(data[1])
+  expect(@stamp_duty.info_table).to have_content(data[2])
+  expect(@stamp_duty.info_table).to have_content(data[3])
+  expect(@stamp_duty.info_table).to have_content(data[4])
+  expect(@stamp_duty.info_table).to have_content(data[5])
 end

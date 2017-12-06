@@ -1,4 +1,5 @@
 module MortgageCalculator
+  # Calculate the stamp duty land tax
   class StampDuty
     include ActiveModel::Validations
     include ActiveModel::Conversion
@@ -6,65 +7,55 @@ module MortgageCalculator
     include ActionView::Helpers::NumberHelper
 
     def self.i18n_scope
-      "stamp_duty.activemodel"
+      'stamp_duty.activemodel'
     end
 
-    RATES = {
-      125000 => 0,
-      250000 => 2,
-      925000 => 5,
-      1500000 => 10,
-      1000000000 => 12
-    }
-
-    SDLT_RATES = [
-      {lower: 0,         upper: 125_000,   first_home: 0,  additional_or_buy_to_let: 3},
-      {lower: 125_001,   upper: 250_000,   first_home: 2,  additional_or_buy_to_let: 5},
-      {lower: 250_001,   upper: 925_000,   first_home: 5,  additional_or_buy_to_let: 8},
-      {lower: 925_001,   upper: 1_500_000, first_home: 10, additional_or_buy_to_let: 13},
-      {lower: 1_500_001, upper: nil,       first_home: 12, additional_or_buy_to_let: 15}
+    FIRST_TIME_BUYER_BANDS = [
+      { lower: 0, upper: 300_000, single_home: 0 },
+      { lower: 300_000.01, upper: 500_000, single_home: 5 }
     ].freeze
-    
-    SECOND_HOME_THRESHOLD = 40000
-    SECOND_HOME_RATE = 3.0
+
+    STANDARD_BANDS = [
+      { lower: 0, upper: 125_000, single_home: 0, second_home: 3 },
+      { lower: 125_000.01, upper: 250_000, single_home: 2, second_home: 5 },
+      { lower: 250_000.01, upper: 925_000, single_home: 5, second_home: 8 },
+      { lower: 925_000.01, upper: 1_500_000, single_home: 10, second_home: 13 },
+      { lower: 1_500_000.01, upper: nil, single_home: 12, second_home: 15 }
+    ].freeze
+
+    SECOND_HOME_THRESHOLD = 40_000
+    FIRST_TIME_BUYER_THRESHOLD = 500_000
 
     attr_reader :price
-    attr_accessor :second_home
+    attr_accessor :buyer_type
 
     currency_inputs :price
-
     validates :price, presence: true, numericality: true
 
     def initialize(options = {})
-      self.price = options.fetch(:price){ 0 }
-      self.second_home = options.key?(:second_home) && options[:second_home] == "true"
+      self.price = options.fetch(:price) { 0 }
+      self.buyer_type = options[:buyer_type] || 'isNextHome'.freeze
     end
 
-    [:price, :tax_due, :total_due].each do |field|
+    %i[price tax_due total_due].each do |field|
       define_method "#{field}_formatted" do
-        number_to_currency(public_send(field).presence || 0, unit: '', precision: 0)
+        number_to_currency(
+          public_send(field).presence || 0, unit: '', precision: 0
+        )
       end
     end
 
     def tax_due
       total_tax = BigDecimal('0')
-      remaining = price
+      bands = first_time_rate? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS
 
-      RATES.each_with_index do |array, index|
-        threshold, rate = array
-        bandwidth = RATES.keys.unshift(0)[index + 1] - RATES.keys.unshift(0)[index]
-        remaining_taxable = [threshold, remaining].min
-        band_taxable = [bandwidth, remaining_taxable].min
-        total_tax = total_tax + (band_taxable * rate/100)
-        remaining -= bandwidth
-        break if remaining < 0
+      bands.each do |band|
+        rate = band[tax_rate]
+        total_tax += tax_for_band(band, rate)
+        break if price_in_band?(band)
       end
 
-      if self.second_home && price >= SECOND_HOME_THRESHOLD
-        total_tax += price * (SECOND_HOME_RATE / 100)
-      end
-
-      total_tax
+      total_tax.round(1)
     end
 
     def total_due
@@ -78,6 +69,39 @@ module MortgageCalculator
     def percentage_tax
       result = (tax_due / price) * 100
       result.nan? ? 0 : result
+    end
+
+    def second_home?
+      buyer_type == 'isSecondHome'
+    end
+
+    private
+
+    def tax_for_band(band, rate)
+      upper_limit = price_in_band?(band) ? price : band[:upper]
+      amount_to_tax = upper_limit - band[:lower]
+
+      amount_to_tax * rate / 100
+    end
+
+    def price_in_band?(band)
+      band[:upper].nil? || price < band[:upper]
+    end
+
+    def tax_rate
+      second_home_taxable? ? :second_home : :single_home
+    end
+
+    def first_time_buy?
+      buyer_type == 'isFTB'
+    end
+
+    def first_time_rate?
+      first_time_buy? && price <= FIRST_TIME_BUYER_THRESHOLD
+    end
+
+    def second_home_taxable?
+      second_home? && price >= SECOND_HOME_THRESHOLD
     end
   end
 end

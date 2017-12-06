@@ -3,12 +3,12 @@
 
   <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
     <%= t('stamp_duty.select.label') %>
-    <%= select_tag(:buyerType, options_for_select([
+    <%= f.select(:buyer_type, [
       [t('stamp_duty.select.option_prompt'), ''],
       [t('stamp_duty.select.option_isNextHome'), 'isNextHome'],
       [t('stamp_duty.select.option_isFTB'), 'isFTB'],
       [t('stamp_duty.select.option_isSecondHome'), 'isSecondHome']
-      ]), {'ng-model' => 'stampDuty.buyerType'}
+      ], {}, {'ng-model' => 'stampDuty.buyerType'}
     )%>
   <% end %>
 

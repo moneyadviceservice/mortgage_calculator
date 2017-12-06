@@ -6,40 +6,40 @@ describe MortgageCalculator::StampDuty do
       expect(subject.price).to be_zero
     end
 
-    it 'sets second_home to false' do
-      expect(subject.second_home).to be_falsy
+    it 'sets buyer_type to standard by default' do
+      expect(subject.buyer_type).to eq('isNextHome')
     end
   end
 
-  describe '#second_home' do
-    subject { described_class.new(second_home: checkbox_value) }
+  describe '#second_home?' do
+    subject { described_class.new(buyer_type: buyer_type) }
 
     context 'when "false" is given' do
-      let(:checkbox_value) { "false" }
+      let(:buyer_type) { 'isFTB' }
 
       it 'is false' do
-        expect(subject.second_home).to be_falsy
+        expect(subject.send(:second_home?)).to be_falsy
       end
     end
 
     context 'when "true" is given' do
-      let(:checkbox_value) { "true" }
+      let(:buyer_type) { 'isSecondHome' }
 
       it 'is true' do
-        expect(subject.second_home).to be_truthy
+        expect(subject.send(:second_home?)).to be_truthy
       end
     end
   end
 
-  it_should_behave_like "currency inputs", [:price]
+  it_should_behave_like 'currency inputs', [:price]
 
   describe 'calculations' do
-    let(:second_home) { 'false' }
+    let(:buyer_type) { 'isNextHome' }
 
-    subject { described_class.new(price: price, second_home: second_home)}
+    subject { described_class.new(price: price, buyer_type: buyer_type) }
 
     context 'when house price is text' do
-      let(:price) { "asd" }
+      let(:price) { 'asd' }
 
       it 'has errors' do
         subject.valid?
@@ -50,8 +50,16 @@ describe MortgageCalculator::StampDuty do
     context 'when house price is 0' do
       let(:price) { 0 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to be_zero }
+      end
+
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
@@ -59,151 +67,291 @@ describe MortgageCalculator::StampDuty do
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
         its(:total_due) { is_expected.to be_zero }
+      end
+    end
+
+    context 'when house price is 39000' do
+      let(:price) { 39_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(39_000) }
+      end
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(39_000) }
+      end
+
+      context 'and is a second home' do
+        let(:buyer_type) { 'isSecondHome' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(39_000) }
       end
     end
 
     context 'when house price is 40000' do
-      let(:price) { 40000 }
+      let(:price) { 40_000 }
 
-      context 'and is not a second home' do
-        let(:second_home) { 'false' }
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(40000) }
+        its(:total_due) { is_expected.to eq(40_000) }
+      end
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(40_000) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(1200) }
         its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(41200) }
+        its(:total_due) { is_expected.to eq(41_200) }
       end
     end
 
     context 'when house price is 125000' do
-      let(:price) { 125000 }
+      let(:price) { 125_000 }
 
-      context 'and is not a second home' do
-        let(:second_home) { 'false' }
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(125000) }
+        its(:total_due) { is_expected.to eq(125_000) }
+      end
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(125_000) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(3750) }
         its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(128750) }
+        its(:total_due) { is_expected.to eq(128_750) }
       end
     end
 
     context 'when house price is 185000.00' do
-      let(:price) { 185000 }
+      let(:price) { 185_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(185_000) }
+      end
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
         its(:tax_due) { is_expected.to eql(1200.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.7) }
-        its(:total_due) { is_expected.to eql(186200.00) }
+        its(:total_due) { is_expected.to eql(186_200.00) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
         its(:tax_due) { is_expected.to eq(6750) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(3.65) }
-        its(:total_due) { is_expected.to eq(191750) }
+        its(:total_due) { is_expected.to eq(191_750) }
       end
     end
 
     context 'when house price is 275000' do
-      let(:price) { 275000 }
+      let(:price) { 275_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(275_000) }
+      end
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
         its(:tax_due) { is_expected.to eql(3750.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(1.4) }
-        its(:total_due) { is_expected.to eql(278750) }
+        its(:total_due) { is_expected.to eql(278_750) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(12000) }
+        its(:tax_due) { is_expected.to eq(12_000) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(4.36) }
-        its(:total_due) { is_expected.to eq(287000) }
+        its(:total_due) { is_expected.to eq(287_000) }
+      end
+    end
+
+    context 'when house price is 310,000' do
+      let(:price) { 310_000.00 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(500.00) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.2) }
+        its(:total_due) { is_expected.to eql(310_500.00) }
+      end
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to eql(5500.00) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(1.8) }
+        its(:total_due) { is_expected.to eql(315_500.00) }
+      end
+
+      context 'and is a second home' do
+        let(:buyer_type) { 'isSecondHome' }
+
+        its(:tax_due) { is_expected.to eq(14_800) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.8) }
+        its(:total_due) { is_expected.to eq(324_800) }
+      end
+    end
+
+    context 'when house price is 490,000' do
+      let(:price) { 490_000.00 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(9500.00) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(1.9) }
+        its(:total_due) { is_expected.to eql(499_500.00) }
+      end
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to eql(14_500.00) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
+        its(:total_due) { is_expected.to eql(504_500.00) }
+      end
+
+      context 'and is a second home' do
+        let(:buyer_type) { 'isSecondHome' }
+
+        its(:tax_due) { is_expected.to eq(29_200) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(6.0) }
+        its(:total_due) { is_expected.to eq(519_200) }
       end
     end
 
     context 'when house price is 510000.00' do
-      let(:price) { 510000.00 }
+      let(:price) { 510_000.00 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(15_500.00) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
+        its(:total_due) { is_expected.to eql(525_500.00) }
+      end
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(15500.00) }
+        its(:tax_due) { is_expected.to eql(15_500.00) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
-        its(:total_due) { is_expected.to eql(525500.00) }
+        its(:total_due) { is_expected.to eql(525_500.00) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(30800) }
+        its(:tax_due) { is_expected.to eq(30_800) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(6.04) }
-        its(:total_due) { is_expected.to eq(540800) }
+        its(:total_due) { is_expected.to eq(540_800) }
       end
     end
 
     context 'when house price is 937500' do
-      let(:price) { 937500 }
+      let(:price) { 937_500 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(37_500) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(4) }
+        its(:total_due) { is_expected.to eql(975_000) }
+      end
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(37500) }
+        its(:tax_due) { is_expected.to eql(37_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(4) }
-        its(:total_due) { is_expected.to eql(975000) }
+        its(:total_due) { is_expected.to eql(975_000) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(65625) }
+        its(:tax_due) { is_expected.to eq(65_625) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(7.00) }
-        its(:total_due) { is_expected.to eq(1003125) }
+        its(:total_due) { is_expected.to eq(1_003_125) }
       end
     end
 
     context 'when house price is 2100000.00' do
-      let(:price) { 2100000.00 }
+      let(:price) { 2_100_000.00 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(165_750) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.9) }
+        its(:total_due) { is_expected.to eql(2_265_750.00) }
+      end
 
       context 'and is not a second home' do
-        let(:second_home) { 'false' }
+        let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(165750) }
+        its(:tax_due) { is_expected.to eql(165_750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(7.9) }
-        its(:total_due) { is_expected.to eql(2265750.00) }
+        its(:total_due) { is_expected.to eql(2_265_750.00) }
       end
 
       context 'and is a second home' do
-        let(:second_home) { 'true' }
+        let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(228750) }
+        its(:tax_due) { is_expected.to eq(228_750) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(10.89) }
-        its(:total_due) { is_expected.to eq(2328750) }
+        its(:total_due) { is_expected.to eq(2_328_750) }
       end
     end
   end
