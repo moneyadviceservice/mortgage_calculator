@@ -10,8 +10,8 @@
     <% @rates.each do |rate| %>
       <tr>
         <td class="mortgagecalc__table__price"><%= band(rate[:lower], rate[:upper]) %></td>
-        <td class="mortgagecalc__table__rate"><%= rate[:first_home] %>%</td>
-        <td class="mortgagecalc__table__extra"><%= rate[:additional_or_buy_to_let] %>%</td>
+        <td class="mortgagecalc__table__rate"><%= rate[:single_home] %>%</td>
+        <td class="mortgagecalc__table__extra"><%= rate[:second_home] %>%</td>
       </tr>
     <% end %>
   </tbody>
