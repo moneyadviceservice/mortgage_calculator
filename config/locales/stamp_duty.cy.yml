@@ -4,8 +4,8 @@ cy:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
-      tooltip_show: sioe help
-      tooltip_hide: cuddio cymorth
+    tooltip_show: sioe help
+    tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-stamp"
     pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
     heading: "Cyfrifiannell treth stamp"
