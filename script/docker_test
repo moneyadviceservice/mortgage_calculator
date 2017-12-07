@@ -1,0 +1,17 @@
+#!/bin/bash
+# Useful for testing in docker locally
+docker build -t mortgage-calculator .
+docker run \
+    --interactive \
+    --tty \
+    --rm \
+    -v "$PWD:/var/tmp/app" \
+    -w /var/tmp/app \
+    mortgage-calculator \
+        ./script/test
+
+if [ $? = 0 ]; then
+    echo "All tests passed."
+else
+    echo "Test(s) failed."
+fi

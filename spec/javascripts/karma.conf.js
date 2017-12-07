@@ -21,7 +21,7 @@ module.exports = function(config) {
      'spec/javascripts/unit/**/*.js',
      { pattern: 'app/assets/javascripts/mortgage_calculator/angular/**/*.js',
         watched: true,
-        included: false,
+        included: true,
         served: false },
     { pattern: 'app/assets/javascripts/mortgage_calculator/*.js.erb',
         watched: true,

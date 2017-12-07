@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem 'rails', '~> 4.2.0'
+gem 'rails', '4.2.10'
 
 gem 'bowndler'
 gem 'mas-build', '~> 2.0'  if ENV['MAS_BUILD']
@@ -16,6 +16,7 @@ group :test, :development do
 end
 
 group :test do
+  gem 'brakeman', require: false
   gem 'capybara'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
@@ -27,4 +28,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'sqlite3'
+  gem 'tzinfo-data'
 end
