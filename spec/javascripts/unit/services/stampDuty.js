@@ -56,7 +56,7 @@ describe('Service: StampDuty', function () {
       setPrice(350000);
 
       expect(stampDuty.cost()).toBe(2500);
-      expect(stampDuty.percentageTax()).toBeCloseTo(0.7, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(0.71, 2);
       expect(stampDuty.totalPurchase()).toBe(352500);
     });
 
@@ -64,7 +64,7 @@ describe('Service: StampDuty', function () {
       setPrice(400012);
 
       expect(stampDuty.cost()).toBe(5000);
-      expect(stampDuty.percentageTax()).toBeCloseTo(1.2, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.25, 2);
       expect(stampDuty.totalPurchase()).toBe(405012);
     });
 
@@ -80,7 +80,7 @@ describe('Service: StampDuty', function () {
       setPrice(550000);
 
       expect(stampDuty.cost()).toBe(17500);
-      expect(stampDuty.percentageTax()).toBeCloseTo(3.2, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(3.18, 2);
       expect(stampDuty.totalPurchase()).toBe(567500);
     });
   });
@@ -118,7 +118,7 @@ describe('Service: StampDuty', function () {
       setPrice(185000);
 
       expect(stampDuty.cost()).toBe(1200.00);
-      expect(stampDuty.percentageTax()).toBeCloseTo(0.6, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(0.65, 2);
       expect(stampDuty.totalPurchase()).toBe(186200.00);
     });
 
@@ -126,7 +126,7 @@ describe('Service: StampDuty', function () {
       setPrice(275000);
 
       expect(stampDuty.cost()).toBe(3750.00);
-      expect(stampDuty.percentageTax()).toBeCloseTo(1.4, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.36, 2);
       expect(stampDuty.totalPurchase()).toBe(278750);
     });
 
@@ -134,7 +134,7 @@ describe('Service: StampDuty', function () {
       setPrice(300019);
 
       expect(stampDuty.cost()).toBe(5000.00);
-      expect(stampDuty.percentageTax()).toBeCloseTo(1.7, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.67, 2);
       expect(stampDuty.totalPurchase()).toBe(305019);
     });
 
@@ -142,7 +142,7 @@ describe('Service: StampDuty', function () {
       setPrice(510000.00);
 
       expect(stampDuty.cost()).toBe(15500.00);
-      expect(stampDuty.percentageTax()).toBeCloseTo(3, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(3.04, 2);
       expect(stampDuty.totalPurchase()).toBe(525500.00);
     });
 
@@ -150,7 +150,7 @@ describe('Service: StampDuty', function () {
       setPrice(937500);
 
       expect(stampDuty.cost()).toBe(37500);
-      expect(stampDuty.percentageTax()).toBeCloseTo(4, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(4.00, 2);
       expect(stampDuty.totalPurchase()).toBe(975000);
     });
 
@@ -158,7 +158,7 @@ describe('Service: StampDuty', function () {
       setPrice(2100000.00);
 
       expect(stampDuty.cost()).toBe(165750);
-      expect(stampDuty.percentageTax()).toBeCloseTo(7.9, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(7.89, 2);
       expect(stampDuty.totalPurchase()).toBe(2265750.00);
     });
   });
@@ -180,7 +180,7 @@ describe('Service: StampDuty', function () {
       setPrice(40000);
 
       expect(stampDuty.cost()).toBe(1200);
-      expect(stampDuty.percentageTax()).toBeCloseTo(3, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(3.00, 2);
       expect(stampDuty.totalPurchase()).toBe(41200);
     });
 
@@ -188,7 +188,7 @@ describe('Service: StampDuty', function () {
       setPrice(125000);
 
       expect(stampDuty.cost()).toBe(3750);
-      expect(stampDuty.percentageTax()).toBeCloseTo(3, 1);
+      expect(stampDuty.percentageTax()).toBeCloseTo(3.00, 2);
       expect(stampDuty.totalPurchase()).toBe(128750);
     });
 
@@ -241,4 +241,3 @@ describe('Service: StampDuty', function () {
     });
   });
 });
-
