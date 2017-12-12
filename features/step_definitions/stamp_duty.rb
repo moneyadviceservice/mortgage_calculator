@@ -95,3 +95,7 @@ Then(/^I should see the stamp duty percentages for first time buyers as:$/) do |
   expect(@stamp_duty.info_table).to have_content(data[4])
   expect(@stamp_duty.info_table).to have_content(data[5])
 end
+
+Then("I see the effective tax rate is {string}") do |string|
+  expect(@stamp_duty.effective_tax).to have_content(string)
+end
