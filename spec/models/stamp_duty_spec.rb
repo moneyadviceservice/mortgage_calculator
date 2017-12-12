@@ -173,9 +173,9 @@ describe MortgageCalculator::StampDuty do
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(1200.00) }
+        its(:tax_due) { is_expected.to eql(1200) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.7) }
-        its(:total_due) { is_expected.to eql(186_200.00) }
+        its(:total_due) { is_expected.to eql(186_200) }
       end
 
       context 'and is a second home' do
@@ -201,7 +201,7 @@ describe MortgageCalculator::StampDuty do
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(3750.00) }
+        its(:tax_due) { is_expected.to eql(3750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(1.4) }
         its(:total_due) { is_expected.to eql(278_750) }
       end
@@ -215,23 +215,35 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
+    context 'when house price is 300,019' do
+      let(:price) { 300_019 }
+
+      context 'and is not a second home' do
+        let(:buyer_type) { 'isNextHome' }
+
+        its(:tax_due) { is_expected.to eql(5000) }
+        its(:total_due) { is_expected.to eql(305_019) }
+      end
+
+    end
+
     context 'when house price is 310,000' do
-      let(:price) { 310_000.00 }
+      let(:price) { 310_000 }
 
       context 'and is first time buy' do
         let(:buyer_type) { 'isFTB' }
 
-        its(:tax_due) { is_expected.to eql(500.00) }
+        its(:tax_due) { is_expected.to eql(500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.2) }
-        its(:total_due) { is_expected.to eql(310_500.00) }
+        its(:total_due) { is_expected.to eql(310_500) }
       end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(5500.00) }
+        its(:tax_due) { is_expected.to eql(5500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(1.8) }
-        its(:total_due) { is_expected.to eql(315_500.00) }
+        its(:total_due) { is_expected.to eql(315_500) }
       end
 
       context 'and is a second home' do
@@ -243,23 +255,34 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
-    context 'when house price is 490,000' do
-      let(:price) { 490_000.00 }
+    context 'when house price is 400,012' do
+      let(:price) { 400_012 }
 
       context 'and is first time buy' do
         let(:buyer_type) { 'isFTB' }
 
-        its(:tax_due) { is_expected.to eql(9500.00) }
+        its(:tax_due) { is_expected.to eql(5000) }
+        its(:total_due) { is_expected.to eql(405_012) }
+      end
+    end
+
+    context 'when house price is 490,000' do
+      let(:price) { 490_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(9500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(1.9) }
-        its(:total_due) { is_expected.to eql(499_500.00) }
+        its(:total_due) { is_expected.to eql(499_500) }
       end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(14_500.00) }
+        its(:tax_due) { is_expected.to eql(14_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
-        its(:total_due) { is_expected.to eql(504_500.00) }
+        its(:total_due) { is_expected.to eql(504_500) }
       end
 
       context 'and is a second home' do
@@ -272,22 +295,22 @@ describe MortgageCalculator::StampDuty do
     end
 
     context 'when house price is 510000.00' do
-      let(:price) { 510_000.00 }
+      let(:price) { 510_000 }
 
       context 'and is first time buy' do
         let(:buyer_type) { 'isFTB' }
 
-        its(:tax_due) { is_expected.to eql(15_500.00) }
+        its(:tax_due) { is_expected.to eql(15_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
-        its(:total_due) { is_expected.to eql(525_500.00) }
+        its(:total_due) { is_expected.to eql(525_500) }
       end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(15_500.00) }
+        its(:tax_due) { is_expected.to eql(15_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3) }
-        its(:total_due) { is_expected.to eql(525_500.00) }
+        its(:total_due) { is_expected.to eql(525_500) }
       end
 
       context 'and is a second home' do
@@ -327,15 +350,26 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
-    context 'when house price is 2100000.00' do
-      let(:price) { 2_100_000.00 }
+    context 'when house price is 988882' do
+      let(:price) { 988_882 }
+
+      context 'and is a second home' do
+        let(:buyer_type) { 'isSecondHome' }
+
+        its(:tax_due) { is_expected.to eq(72_304) }
+        its(:total_due) { is_expected.to eq(1_061_186) }
+      end
+    end
+
+    context 'when house price is 2100000' do
+      let(:price) { 2_100_000 }
 
       context 'and is first time buy' do
         let(:buyer_type) { 'isFTB' }
 
         its(:tax_due) { is_expected.to eql(165_750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(7.9) }
-        its(:total_due) { is_expected.to eql(2_265_750.00) }
+        its(:total_due) { is_expected.to eql(2_265_750) }
       end
 
       context 'and is not a second home' do
@@ -343,7 +377,7 @@ describe MortgageCalculator::StampDuty do
 
         its(:tax_due) { is_expected.to eql(165_750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(7.9) }
-        its(:total_due) { is_expected.to eql(2_265_750.00) }
+        its(:total_due) { is_expected.to eql(2_265_750) }
       end
 
       context 'and is a second home' do
