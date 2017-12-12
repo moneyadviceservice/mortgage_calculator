@@ -46,7 +46,7 @@ module MortgageCalculator
     end
 
     def tax_due
-      total_tax = BigDecimal('0')
+      total_tax = 0
       bands = first_time_rate? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS
 
       bands.each do |band|
@@ -54,8 +54,7 @@ module MortgageCalculator
         total_tax += tax_for_band(band, rate)
         break if price_in_band?(band)
       end
-
-      total_tax.round(1)
+      total_tax
     end
 
     def total_due
@@ -79,13 +78,12 @@ module MortgageCalculator
 
     def tax_for_band(band, rate)
       upper_limit = price_in_band?(band) ? price : band[:upper]
-      amount_to_tax = upper_limit - band[:lower]
-
-      amount_to_tax * rate / 100
+      amount_to_tax = upper_limit - band[:lower].floor
+      (amount_to_tax * rate / 100).floor
     end
 
     def price_in_band?(band)
-      band[:upper].nil? || price < band[:upper]
+      band[:upper].nil? || price <= band[:upper]
     end
 
     def tax_rate
