@@ -60,6 +60,14 @@ describe('Service: StampDuty', function () {
       expect(stampDuty.totalPurchase()).toBe(352500);
     });
 
+    it('when house price is 400012', function() {
+      setPrice(400012);
+
+      expect(stampDuty.cost()).toBe(5000);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.2, 1);
+      expect(stampDuty.totalPurchase()).toBe(405012);
+    });
+
     it('when house price is 450000', function() {
       setPrice(450000);
 
@@ -120,6 +128,14 @@ describe('Service: StampDuty', function () {
       expect(stampDuty.cost()).toBe(3750.00);
       expect(stampDuty.percentageTax()).toBeCloseTo(1.4, 1);
       expect(stampDuty.totalPurchase()).toBe(278750);
+    });
+
+    it('when house price is 300019', function() {
+      setPrice(300019);
+
+      expect(stampDuty.cost()).toBe(5000.00);
+      expect(stampDuty.percentageTax()).toBeCloseTo(1.7, 1);
+      expect(stampDuty.totalPurchase()).toBe(305019);
     });
 
     it('when house price is 510000.00', function() {
@@ -206,6 +222,14 @@ describe('Service: StampDuty', function () {
       expect(stampDuty.cost()).toBe(65625);
       expect(stampDuty.percentageTax()).toBeCloseTo(7.00, 2);
       expect(stampDuty.totalPurchase()).toBe(1003125.00);
+    });
+
+    it('when house price is 988882', function() {
+      setPrice(988882);
+
+      expect(stampDuty.cost()).toBe(72304);
+      expect(stampDuty.percentageTax()).toBeCloseTo(7.31, 2);
+      expect(stampDuty.totalPurchase()).toBe(1061186);
     });
 
     it('when house price is 2100000.00', function() {

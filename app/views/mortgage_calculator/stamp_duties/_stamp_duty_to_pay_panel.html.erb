@@ -9,7 +9,7 @@
       <span ng-if="!stampDuty.isSecondHome"><%= I18n.t("stamp_duty.results.title") %></span>
     </div>
     <span ng-hide="js"><%= number_to_currency @stamp_duty.tax_due_formatted %></span>
-    <span class="rendered-from-js">{{ stampDuty.cost() | customCurrency:"£" }}</span>
+    <span class="rendered-from-js">{{ stampDuty.cost() | customCurrency:"£":"whole" }}</span>
   </div>
 
   <p ng-hide="js" class="stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence", percentage: number_to_percentage(@stamp_duty.percentage_tax, precision: 1)) %></p>
