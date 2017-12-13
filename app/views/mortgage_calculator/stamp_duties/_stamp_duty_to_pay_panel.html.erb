@@ -12,7 +12,7 @@
     <span class="rendered-from-js">{{ stampDuty.cost() | customCurrency:"£":"whole" }}</span>
   </div>
 
-  <p ng-hide="js" class="stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence", percentage: number_to_percentage(@stamp_duty.percentage_tax, precision: 1)) %></p>
+  <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide"><%= I18n.t("stamp_duty.results.sentence", percentage: number_to_percentage(@stamp_duty.percentage_tax, precision: 2)) %></p>
 
   <p class="rendered-from-js stamp-duty__results-tax-rate"><%= I18n.t("stamp_duty.results.sentence_prefix") %> {{ stampDuty.percentageTax() | number: 2 }}<%= I18n.t("stamp_duty.results.sentence_suffix") %></p>
 
