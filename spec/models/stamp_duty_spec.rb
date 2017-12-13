@@ -355,7 +355,7 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
-    context 'when house price is not easily divisible' do
+    context 'when house price has result with decimal values' do
       context 'and is not a second home' do
         let(:price) { 300_019 }
         let(:buyer_type) { 'isNextHome' }
