@@ -1,6 +1,7 @@
 module MortgageCalculator
   module StampDutiesHelper
     def band(num1, num2)
+      num1 = num1.ceil
       return maximum_band(num1 - 1) if num2.nil?
       "#{formatted_currency(num1)} - #{formatted_currency(num2)}"
     end
