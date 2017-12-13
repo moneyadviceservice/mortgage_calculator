@@ -215,18 +215,6 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
-    context 'when house price is 300,019' do
-      let(:price) { 300_019 }
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(5000) }
-        its(:total_due) { is_expected.to eql(305_019) }
-      end
-
-    end
-
     context 'when house price is 310,000' do
       let(:price) { 310_000 }
 
@@ -252,17 +240,6 @@ describe MortgageCalculator::StampDuty do
         its(:tax_due) { is_expected.to eq(14_800) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(4.8) }
         its(:total_due) { is_expected.to eq(324_800) }
-      end
-    end
-
-    context 'when house price is 400,012' do
-      let(:price) { 400_012 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(5000) }
-        its(:total_due) { is_expected.to eql(405_012) }
       end
     end
 
@@ -350,17 +327,6 @@ describe MortgageCalculator::StampDuty do
       end
     end
 
-    context 'when house price is 988882' do
-      let(:price) { 988_882 }
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(72_304) }
-        its(:total_due) { is_expected.to eq(1_061_186) }
-      end
-    end
-
     context 'when house price is 2100000' do
       let(:price) { 2_100_000 }
 
@@ -386,6 +352,38 @@ describe MortgageCalculator::StampDuty do
         its(:tax_due) { is_expected.to eq(228_750) }
         its(:percentage_tax) { is_expected.to be_within(0.01).of(10.89) }
         its(:total_due) { is_expected.to eq(2_328_750) }
+      end
+    end
+
+    context 'when house price is not easily divisible' do
+      context 'and is not a second home' do
+        let(:price) { 300_019 }
+        let(:buyer_type) { 'isNextHome' }
+
+        it 'should round down to the nearest GBP' do
+          expect(subject.tax_due).to eql(5000)
+        end
+        its(:total_due) { is_expected.to eql(305_019) }
+      end
+
+      context 'and is first time buy' do
+        let(:price) { 400_012 }
+        let(:buyer_type) { 'isFTB' }
+
+        it 'should round down to the nearest GBP' do
+          expect(subject.tax_due).to eql(5000)
+        end
+        its(:total_due) { is_expected.to eql(405_012) }
+      end
+
+      context 'and is a second home' do
+        let(:price) { 988_882 }
+        let(:buyer_type) { 'isSecondHome' }
+
+        it 'should round down to the nearest GBP' do
+          expect(subject.tax_due).to eql(72304)
+        end
+        its(:total_due) { is_expected.to eq(1_061_186) }
       end
     end
   end
