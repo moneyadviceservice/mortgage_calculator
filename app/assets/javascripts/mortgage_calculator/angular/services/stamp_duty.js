@@ -89,7 +89,7 @@ App.factory('StampDuty', function() {
           totalTax += this.propertyPrice * (SECOND_HOME_TAX_RATE / 100);
         }
 
-        return totalTax;
+        return Math.floor(totalTax);
       },
 
       totalPurchase : function() {
