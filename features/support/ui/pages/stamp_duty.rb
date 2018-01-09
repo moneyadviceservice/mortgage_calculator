@@ -17,6 +17,11 @@ module UI
       element :results_text, "p[class='results-text']"
       element :recalculate, "form.step_two input[type=submit]"
       element :effective_tax, "p.stamp-duty__results-tax-rate.ng-hide"
+      element :info_table, ".stamp-duty__explanation-nexthome.ng-hide .stamp-duty__table"
+      element :how_calculated, ".stamp-duty__how-calculated-toggle"
+      element :ftb_explanation, ".stamp-duty__explanation-firsttimebuyer.ng-hide"
+      element :next_home_explanation, ".stamp-duty__explanation-nexthome.ng-hide"
+      element :ftb_conditional, ".stamp-duty__FTB_conditional.ng-hide"
     end
 
     class WelshStampDuty < StampDuty
@@ -28,4 +33,3 @@ module UI
     end
   end
 end
-

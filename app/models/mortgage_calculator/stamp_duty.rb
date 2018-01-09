@@ -74,6 +74,14 @@ module MortgageCalculator
       buyer_type == 'isSecondHome'
     end
 
+    def first_time_ineligible?
+      first_time_buy? && price > FIRST_TIME_BUYER_THRESHOLD
+    end
+
+    def first_time_buy?
+      buyer_type == 'isFTB'
+    end
+
     private
 
     def tax_for_band(band, rate)
@@ -88,10 +96,6 @@ module MortgageCalculator
 
     def tax_rate
       second_home_taxable? ? :second_home : :single_home
-    end
-
-    def first_time_buy?
-      buyer_type == 'isFTB'
     end
 
     def first_time_rate?

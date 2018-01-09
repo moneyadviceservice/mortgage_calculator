@@ -251,6 +251,7 @@ p.stamp-duty__info-tip {
   @include body(16,24)
 }
 
-.stamp-duty__table {
+.stamp-duty__table,
+.stamp-duty__ftb-table {
   margin-bottom: 0;
 }
