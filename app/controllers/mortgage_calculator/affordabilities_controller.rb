@@ -36,6 +36,7 @@ module MortgageCalculator
     end
 
     def next_steps
+      @risk_level = affordability_model.risk_level
     end
 
     def tool_name
@@ -72,4 +73,3 @@ module MortgageCalculator
       helper_method :interest_rate_change_amount
   end
 end
-

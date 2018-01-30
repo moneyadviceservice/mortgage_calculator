@@ -128,7 +128,61 @@ module MortgageCalculator
         get :next_steps
         expect(response).to be_success
       end
+
+      describe 'shows different content dependent on risk level' do
+        render_views
+
+        context 'when at high risk' do
+          before do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "100"}
+                            },
+                            outgoings: {}
+                          }
+          end
+
+          it 'renders high risk next steps partial' do
+            get :next_steps
+
+            expect(response).to render_template('_high_risk_next_steps')
+          end
+        end
+
+        context 'when at medium risk' do
+          before do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "4000"}
+                            },
+                            outgoings: {}
+                          }
+          end
+
+          it 'renders medium risk next steps partial' do
+            get :next_steps
+
+            expect(response).to render_template('_medium_risk_next_steps')
+          end
+        end
+
+        context 'when at low risk' do
+          before do
+            post :step_3, affordability: {
+                            people_attributes: {
+                              "0"=>{annual_income: "100000", extra_income: "10000", monthly_net_income: "8000"}
+                            },
+                            outgoings: {}
+                          }
+          end
+
+          it 'renders low risk next steps partial' do
+            get :next_steps
+
+            expect(response).to render_template('_low_risk_next_steps')
+          end
+        end
+      end
     end
   end
 end
-
