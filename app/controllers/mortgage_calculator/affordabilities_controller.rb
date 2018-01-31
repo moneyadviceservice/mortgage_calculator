@@ -36,7 +36,14 @@ module MortgageCalculator
     end
 
     def next_steps
-      @risk_level = affordability_model.risk_level
+      affordability = affordability_model
+
+      @risk_level =
+        if affordability.empty?
+          :default
+        else
+          affordability.risk_level
+        end
     end
 
     def tool_name

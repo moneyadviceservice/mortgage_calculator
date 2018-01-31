@@ -217,6 +217,22 @@ en:
           info_html: "Use our %{budget_planner} to get the full picture"
           url_text: "Budger Planner"
           url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+      default:
+        title: "Three steps to finding an affordable mortgage"
+        tip_1:
+          heading: "What lenders look for when you apply"
+          info_html: "How much can you really afford to borrow?"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+        tip_2:
+          heading: "Make changes to your spending"
+          info_html: "Use our %{budget_planner} to get the full picture"
+          url_text: "Budget Planner"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+        tip_3:
+          heading: "Think about borrowing less"
+          info_html: "Try %{saving}, or look for property in a more affordable area"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+          url_text: "saving for a larger deposit"
       learn_more:
         title: "Affording your mortgage"
         tip_1: "Think about your household spend as well as your mortgage repayments."

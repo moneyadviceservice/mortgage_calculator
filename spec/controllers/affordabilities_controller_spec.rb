@@ -182,6 +182,14 @@ module MortgageCalculator
             expect(response).to render_template('_low_risk_next_steps')
           end
         end
+
+        context 'when tool is not completed and no risk level has been determined' do
+          it 'renders default next steps partial' do
+            get :next_steps
+
+            expect(response).to render_template('_default_risk_next_steps')
+          end
+        end
       end
     end
   end
