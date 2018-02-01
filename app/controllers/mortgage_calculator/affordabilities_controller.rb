@@ -1,28 +1,20 @@
 module MortgageCalculator
   class AffordabilitiesController < ::MortgageCalculator::ApplicationController
-    before_action :no_cache, only: [:step_1, :step_2]
+    before_action :no_cache, only: %i[step_1 step_2]
     before_action :persist_affordability_params_to_session,
-      only: [:step_1, :step_2, :step_3]
+                  only: %i[step_1 step_2 step_3]
     def step_1
       @affordability = affordability_model
+      return if !request.post? || @affordability.empty?
 
-      if request.post?
-        unless @affordability.empty?
-          if @affordability.valid_for_step2?
-            redirect_to step_2_affordability_path
-          end
-        end
-      end
+      redirect_to step_2_affordability_path if @affordability.valid_for_step2?
     end
 
     def step_2
       @affordability = affordability_model
+      return unless request.post?
 
-      if request.post?
-        if @affordability.valid_for_step3?
-          redirect_to step_3_affordability_path
-        end
-      end
+      redirect_to step_3_affordability_path if @affordability.valid_for_step3?
     end
 
     def step_3
@@ -31,7 +23,7 @@ module MortgageCalculator
       if @affordability.over_committed?
         render :over_committed
       else
-        adjust_interest_rate
+        @changer = adjust_interest_rate
       end
     end
 
@@ -51,32 +43,37 @@ module MortgageCalculator
     end
 
     private
-      def category_id
-        "help-with-mortgages"
-      end
 
-      def no_cache
-        response.headers["Cache-Control"] = "no-store"
-      end
+    def category_id
+      'help-with-mortgages'
+    end
 
-      def persist_affordability_params_to_session
-        session[:affordability] ||= {}
-        session[:affordability] = session[:affordability].deep_merge(params[:affordability] || {})
-      end
+    def no_cache
+      response.headers['Cache-Control'] = 'no-store'
+    end
 
-      def affordability_model
-        Affordability.load_from_store(session)
-      end
+    def persist_affordability_params_to_session
+      session[:affordability] ||= {}
+      session[:affordability].deep_merge!(affordability_params)
+    end
 
-      def adjust_interest_rate
-        @changer = @affordability.repayment
-                                 .dup
-                                 .change_interest_rate_by(interest_rate_change_amount)
-      end
+    def affordability_params
+      params[:affordability] || {}
+    end
 
-      def interest_rate_change_amount
-        MortgageCalculator::Defaults::INTEREST_RATE_CHANGE_AMOUNT
-      end
-      helper_method :interest_rate_change_amount
+    def affordability_model
+      Affordability.load_from_store(session)
+    end
+
+    def adjust_interest_rate
+      @affordability.repayment
+                    .dup
+                    .change_interest_rate_by(interest_rate_change_amount)
+    end
+
+    def interest_rate_change_amount
+      MortgageCalculator::Defaults::INTEREST_RATE_CHANGE_AMOUNT
+    end
+    helper_method :interest_rate_change_amount
   end
 end
