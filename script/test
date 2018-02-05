@@ -1,9 +1,13 @@
-#!/bin/bash
+#!/bin/bash -l
 
 set -e
 
+if [ -f /.dockerenv ]; then
+    source ~/.bashrc
+    rvm use default
+fi
+
 export RAILS_ENV=test
-export BUNDLE_WITHOUT=development:build
 
 mkdir -p spec/dummy/tmp/capybara
 
@@ -11,7 +15,6 @@ exit_code=0
 
 function run {
     declare -a tests_command=("$@")
-
     echo ''
     echo "=== Running \`${tests_command[*]}\`"
     if ! ${tests_command[*]}; then
@@ -20,12 +23,21 @@ function run {
     fi
 }
 
+function info {
+    declare -a info_command=("$@")
+    echo ''
+    echo "=== Running for informational purposes \`${info_command[*]}\`"
+    if ! ${info_command[*]}; then
+        echo "== This test has errors and/or warnings. Please review results"
+    fi
+}
+
 run npm install
 run bundle install
 run bundle exec bowndler update --allow-root
-#run brakeman -q --no-pager --ensure-latest
 run bundle exec rspec
 run bundle exec cucumber
 run bundle exec rake app:karma:run_once
+info brakeman -q --no-pager --ensure-latest
 
 exit "$exit_code"
