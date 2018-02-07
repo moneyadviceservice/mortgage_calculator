@@ -172,3 +172,25 @@ Scenario: Adjusting the mortgage term via the slider
   When  I enter all details for single applicant
   Then  I should see the correct results for a single applicant
   And   I should be able to tweak the results by adjusting the mortgage term slider
+
+Scenario: Viewing next steps for medium risk
+  Given I visit the affordability page
+  When  I enter all details for single applicant at medium risk
+  And   I visit the next steps page
+  Then  I should see the medium risk next steps
+
+Scenario: Viewing next steps for low risk
+  Given I visit the affordability page
+  When  I enter all details for single applicant at low risk
+  And   I visit the next steps page
+  Then  I should see the low risk next steps
+
+Scenario: Viewing next steps for high risk
+  Given I visit the affordability page
+  When  I enter all details for single applicant at high risk
+  And   I visit the next steps page
+  Then  I should see the high risk next steps
+
+Scenario: Viewing next steps without completing the tool
+  When  I visit the next steps page without completing the tool
+  Then  I should see the default next steps
