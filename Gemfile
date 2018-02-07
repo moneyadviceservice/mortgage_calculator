@@ -20,7 +20,6 @@ group :test do
   gem 'capybara'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
-  gem 'factory_girl_rails'
   gem 'mas-templating'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
