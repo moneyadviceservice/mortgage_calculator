@@ -121,7 +121,9 @@ module MortgageCalculator
               outgoings: {}
             }
 
-            expect(response).to render_template('_high_budget_affect')
+            expect(response.body).to include(
+              I18n.t('affordability.budget_affect.high.percentage_html')
+            )
           end
         end
 
@@ -138,7 +140,9 @@ module MortgageCalculator
               outgoings: {}
             }
 
-            expect(response).to render_template('_medium_budget_affect')
+            expect(response.body).to include(
+              I18n.t('affordability.budget_affect.medium.percentage_html')
+            )
           end
         end
 
@@ -155,7 +159,9 @@ module MortgageCalculator
               outgoings: {}
             }
 
-            expect(response).to render_template('_low_budget_affect')
+            expect(response.body).to include(
+              I18n.t('affordability.budget_affect.low.percentage_html')
+            )
           end
         end
       end
@@ -184,10 +190,12 @@ module MortgageCalculator
             }
           end
 
-          it 'renders high risk next steps partial' do
+          it 'displays high risk next steps content' do
             get :next_steps
 
-            expect(response).to render_template('_high_risk_next_steps')
+            expect(response.body).to include(
+              I18n.t('affordability.next_steps.high.title')
+            )
           end
         end
 
@@ -205,10 +213,12 @@ module MortgageCalculator
             }
           end
 
-          it 'renders medium risk next steps partial' do
+          it 'displays medium risk next steps content' do
             get :next_steps
 
-            expect(response).to render_template('_medium_risk_next_steps')
+            expect(response.body).to include(
+              I18n.t('affordability.next_steps.medium.title')
+            )
           end
         end
 
@@ -226,18 +236,22 @@ module MortgageCalculator
             }
           end
 
-          it 'renders low risk next steps partial' do
+          it 'displays low risk next steps content' do
             get :next_steps
 
-            expect(response).to render_template('_low_risk_next_steps')
+            expect(response.body).to include(
+              I18n.t('affordability.next_steps.low.title')
+            )
           end
         end
 
         context 'when tool has not been completed' do
-          it 'renders default next steps partial' do
+          it 'displays default next steps content' do
             get :next_steps
 
-            expect(response).to render_template('_default_risk_next_steps')
+            expect(response.body).to include(
+              I18n.t('affordability.next_steps.default.title')
+            )
           end
         end
       end
