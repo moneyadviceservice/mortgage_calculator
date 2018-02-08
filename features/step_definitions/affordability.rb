@@ -377,3 +377,62 @@ end
 Then(/^I should see the repayment term tooltip$/) do
   expect(step_three).to have_term_years_tip
 end
+
+When("I enter all details for single applicant at medium risk") do
+  step_one.annual_income.set "100000"
+  step_one.extra_income.set "10000"
+  step_one.monthly_net_income.set "6000"
+  step_one.next.click
+  step_two.credit_repayments.set "300"
+  step_two.utilities.set "300"
+  step_two.childcare.set "300"
+  step_two.child_maintenance.set "300"
+  step_two.rent_and_mortgage.set "300"
+  step_two.food.set "300"
+  step_two.travel.set "300"
+  step_two.entertainment.set "300"
+  step_two.holiday.set "300"
+  step_two.next.click
+end
+
+When("I enter all details for single applicant at low risk") do
+  step_one.annual_income.set "100000"
+  step_one.extra_income.set "10000"
+  step_one.monthly_net_income.set "6000"
+  step_one.next.click
+  step_two.next.click
+end
+
+When("I enter all details for single applicant at high risk") do
+  step_one.annual_income.set "15000"
+  step_one.monthly_net_income.set "1000"
+  step_one.next.click
+  step_two.credit_repayments.set "200"
+  step_two.utilities.set "200"
+  step_two.childcare.set "200"
+  step_two.next.click
+end
+
+When("I visit the next steps page") do
+  step_three.next_steps.click
+end
+
+When("I visit the next steps page without completing the tool") do
+  next_steps.load
+end
+
+Then("I should see the medium risk next steps") do
+  expect(page).to have_content(I18n::t("affordability.next_steps.medium.title"))
+end
+
+Then("I should see the low risk next steps") do
+  expect(page).to have_content(I18n::t("affordability.next_steps.low.title"))
+end
+
+Then("I should see the high risk next steps") do
+  expect(page).to have_content(I18n::t("affordability.next_steps.high.title"))
+end
+
+Then("I should see the default next steps") do
+  expect(page).to have_content(I18n::t("affordability.next_steps.default.title"))
+end

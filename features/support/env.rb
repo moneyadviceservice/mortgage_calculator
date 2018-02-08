@@ -19,6 +19,10 @@ def step_three
   UI::Pages::Affordability::StepThree.new
 end
 
+def next_steps
+  UI::Pages::Affordability::NextSteps.new
+end
+
 def calculations
   require 'yaml'
 

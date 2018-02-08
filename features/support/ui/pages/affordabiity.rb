@@ -61,6 +61,7 @@ module UI
         set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/step-3"
 
         element :recalculate, "input.recalculate-button"
+        element :next_steps, "a.button--primary"
 
         element :borrowing, "input[name='affordability[borrowing]']"
         element :term_years, "input[name='affordability[term_years]']"
@@ -94,6 +95,12 @@ module UI
         section :term_years_slider, UI::Sections::Slider, "#slider-term-years"
         section :interest_rate_slider, UI::Sections::Slider, "#slider-interest-rate"
         section :lifestyle_slider, UI::Sections::Slider, "#slider-lifestyle"
+      end
+
+      class NextSteps < SitePrism::Page
+        include DefaultLocale
+
+        set_url "/{locale}/mortgage_calculator/mortgage-affordability-calculator/next_steps"
       end
 
       class SyndicatedAffordability < SitePrism::Page

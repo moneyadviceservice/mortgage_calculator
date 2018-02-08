@@ -169,21 +169,70 @@ en:
       only_rent_and_mortgage_html: "We need more information from you. Please check that you have input all <strong>fixed and committed costs</strong> on the previous page or your results on this page will be incorrect. %{back} to do that now."
       missing_lifestyle_costs_html: "You haven’t entered any amounts for <strong>living costs</strong> on the previous page. Are you sure this is right? If not, the results on this page may be incorrect. %{back} and fix this now."
     next_steps:
-      title: "Three steps to finding an affordable mortgage"
-      tip_1:
-        heading: "What lenders look for when you apply"
-        info_html: "How much can you really afford to borrow?"
-        url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
-      tip_2:
-        heading: "Make changes to your spending"
-        info_html: "Use our %{budget_planner} to get the full picture"
-        url_text: "Budget Planner"
-        url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
-      tip_3:
-        heading: "Think about borrowing less"
-        info_html: "Try %{saving}, or look for property in a more affordable area"
-        url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
-        url_text: "saving for a larger deposit"
+      low:
+        title: "Three steps to finding an affordable mortgage"
+        tip_1:
+          heading: "Make sure you get the best mortgage for you"
+          info_html: "Understanding different types of mortgages"
+          url: "https://www.moneyadviceservice.org.uk/en/categories/types-of-mortgage"
+        tip_2:
+          heading: "Don’t make these mistakes"
+          info_html: "Buying a home: how to avoid the most common mistakes"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/buying-a-home-how-to-avoid-the-most-common-mistakes"
+        tip_3:
+          heading: "Get started with your application"
+          info_html: "Home-buying process – %{steps}"
+          url_text: "steps to buying a new house or flat"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/money-timeline-when-buying-property-england-wales--n-ireland"
+      medium:
+        title: "What you should do next"
+        tip_1:
+          heading: "Explore different schemes to help you buy a home"
+          info_html: "Government schemes for first-time home buyers and existing homeowners"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+        tip_2:
+          heading: "Take control of your money"
+          info_html: "Use our %{budget_planner} to get the full picture"
+          url_text: "Budger Planner"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+        tip_3:
+          heading: "Understand all the costs"
+          info_html: "Make sure you understand all the up front costs of buying a home"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+      high:
+        title: "Three steps to making your mortgage more affordable"
+        tip_1:
+          heading: "Think about borrowing less"
+          info_html: "Learn about %{deposit} and %{ratios}"
+          url_text_1: "saving for a deposit"
+          url_1: "https://www.moneyadviceservice.org.uk/en/articles/saving-money-for-a-deposit"
+          url_text_2: "loan to value ratios"
+          url_2: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+        tip_2:
+          heading: "Explore different schemes to help you buy a home"
+          info_html: "Government schemes for first-time home buyers and existing homeowners"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+        tip_3:
+          heading: "Take control of your money"
+          info_html: "Use our %{budget_planner} to get the full picture"
+          url_text: "Budger Planner"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+      default:
+        title: "Three steps to finding an affordable mortgage"
+        tip_1:
+          heading: "What lenders look for when you apply"
+          info_html: "How much can you really afford to borrow?"
+          url: "https://www.moneyadviceservice.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+        tip_2:
+          heading: "Make changes to your spending"
+          info_html: "Use our %{budget_planner} to get the full picture"
+          url_text: "Budget Planner"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/budget-planner"
+        tip_3:
+          heading: "Think about borrowing less"
+          info_html: "Try %{saving}, or look for property in a more affordable area"
+          url: "https://www.moneyadviceservice.org.uk/en/tools/saving-for-a-deposit"
+          url_text: "saving for a larger deposit"
       learn_more:
         title: "Affording your mortgage"
         tip_1: "Think about your household spend as well as your mortgage repayments."
