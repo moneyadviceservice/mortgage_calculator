@@ -1,0 +1,72 @@
+en:
+  land_and_buildings_transaction_tax:
+    meta:
+      title: "Land and Buildings Transaction Tax calculator"
+      description: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
+      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-and-buildings-transaction-tax-calculator"
+    tooltip_show: show help
+    tooltip_hide: hide help
+    tool_name: "land-and-buildings-transaction-tax-calculator"
+    heading: "Land and Buildings Transaction Tax (LBTT) calculator"
+    heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
+    title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
+    next: Next
+    select:
+      label: I am
+      option_prompt: please select an option
+      option_isNextHome: buying my next home
+      option_isSecondHome: buying an additional or buy-to-let property
+      tooltip_html: "Anyone purchasing an additional home including buy to let properties over the value of £40,000 will have to pay an extra 3% surcharge on top of each Land and Buildings Transaction Tax band"
+    recalculate: Recalculate
+    elsewhere:
+      title: "Buying in England, Northern Ireland or Wales?"
+      body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
+      england_ni:
+        title: Calculate Stamp Duty in England or Northern Ireland
+        body: Properties in England and Northen Ireland are still subject to Stamp Duty.
+        link: "/en/tools/house-buying/stamp-duty-calculator"
+      wales:
+        title: Calculate Land Transaction Tax for Wales
+        body: "Land Transaction Tax (LTT) will replace Stamp Duty in Wales. We will have a calculator for this in April but for now use the Stamp Duty Calculator."
+        link: "/en/tools/house-buying/stamp-duty-calculator"
+    how_calculated_toggle: "How is this calculated?"
+    how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid)."
+    how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £8,400, meaning the total stamp duty would be £12,000 giving an effective tax rate of 4.29%."
+    how_calculated_extra: "* Properties under %{amount} are not subject to second home Additional Dwelling Supplement"
+    describe_price_field: Make sure to clear the existing number before entering the new number.
+    activemodel:
+      attributes:
+        mortgage_calculator/land_and_buildings_transaction_tax:
+          price: "Property Price:"
+    results:
+      title: "Land and Buildings Transaction Tax to pay is"
+      second_title: "Land and Buildings Transaction Tax on your additional property"
+      sentence: "The effective tax rate is %{percentage}"
+      sentence_prefix: "The effective tax rate is"
+      sentence_suffix: "%"
+      click_to_expand: Click to expand.
+    table:
+      property_price_header: "Purchase price of property"
+      rate_header: "Rate of Land and Buildings Transaction Tax (LBTT)"
+      extra_rate_header: "Buy to Let/ Additional Dwelling Supplement (ADS)*"
+      max: "%{value}+"
+    next_steps:
+      learn_more:
+        title: "Did you know?"
+        tip_1: "You have to pay Land and Buildings Transaction Tax (LBTT) within 30 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
+        link_1:
+          title: "Land and Buildings Transaction Tax (LBTT) - Everything you need to know"
+          url: "/en/articles/land-and-buildings-transaction-tax-everything-you-need-to-know"
+      find_out_more:
+        title: Find out more
+        tips:
+          - copy_html: Upfront home buying costs
+            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          - copy_html: Mortgage fees and costs
+            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Costs of moving day
+            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+      have_you_tried:
+        title: 'Have you tried?'
+        mortgage_calculator: "Mortgage calculator"
+        mortgage_affordability_calculator: "Affordability calculator"
