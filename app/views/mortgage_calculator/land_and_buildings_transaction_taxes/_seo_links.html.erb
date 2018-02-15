@@ -1,0 +1,11 @@
+<div class="mortgagecalc__panel">
+  <h2 class="mortgagecalc__heading"><%= t("affordability.next_steps.have_you_tried.title") %></h2>
+
+  <p><%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
+                   full_mortgage_calculator_url,
+                   target: "_blank" %></p>
+
+  <p><%= link_to I18n.t('stamp_duty.next_steps.have_you_tried.mortgage_affordability_calculator'),
+                   full_mortgage_affordability_calculator_url,
+                   target: "_blank" %></p>
+</div>
