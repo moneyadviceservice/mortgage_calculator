@@ -15,7 +15,10 @@ module MortgageCalculator
     private
 
     def maximum_band(num)
-      I18n.t('stamp_duty.table.over_million', number: num/1_000_000.to_f)
+      I18n.t(
+        'land_and_buildings_transaction_tax.table.max',
+        value: formatted_currency(num)
+      )
     end
 
     def formatted_currency(num)

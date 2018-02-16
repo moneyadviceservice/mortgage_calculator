@@ -2,14 +2,14 @@
   <div class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
     <div ng-hide="js">
       <% key = @lbtt.second_home? ? 'second_title' : 'title' %>
-      <%= I18n.t("stamp_duty.results.#{key}") %>
+      <%= I18n.t("land_and_buildings_transaction_tax.results.#{key}") %>
     </div>
     <div class="hidden-unless-js">
       <span ng-if="stampDuty.isSecondHome">
-        <%= I18n.t('stamp_duty.results.second_title') %>
+        <%= I18n.t('land_and_buildings_transaction_tax.results.second_title') %>
       </span>
       <span ng-if="!stampDuty.isSecondHome">
-        <%= I18n.t('stamp_duty.results.title') %>
+        <%= I18n.t('land_and_buildings_transaction_tax.results.title') %>
       </span>
     </div>
 
@@ -22,7 +22,7 @@
   </div>
 
   <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide">
-    <%= I18n.t('stamp_duty.results.sentence',
+    <%= I18n.t('land_and_buildings_transaction_tax.results.sentence',
               percentage: number_to_percentage(
                 @lbtt.percentage_tax, precision: 2
               )
@@ -31,13 +31,13 @@
   </p>
 
   <p class="rendered-from-js stamp-duty__results-tax-rate">
-    <%= I18n.t('stamp_duty.results.sentence_prefix') %>
+    <%= I18n.t('land_and_buildings_transaction_tax.results.sentence_prefix') %>
     {{ stampDuty.percentageTax() | number: 2 }}
-    <%= I18n.t('stamp_duty.results.sentence_suffix') %>
+    <%= I18n.t('land_and_buildings_transaction_tax.results.sentence_suffix') %>
   </p>
 
   <p class="rendered-from-js stamp-duty__FTB_conditional">
-    <%= I18n.t('stamp_duty.results.FTB_conditional', amount: 0) %>
+    <%= I18n.t('land_and_buildings_transaction_tax.results.FTB_conditional', amount: 0) %>
   </p>
 
   <div>
@@ -48,9 +48,9 @@
                 ng-class="{ 'expander--expanded' : expandedStampDutyInformation }"
                 ng-click="toggleStampDutyExpanded($event)"
                 affects-height="click">
-      <%= I18n.t('stamp_duty.how_calculated_toggle') %>
+      <%= I18n.t('land_and_buildings_transaction_tax.how_calculated_toggle') %>
       <span class="visually-hidden">
-        <%= I18n.t('stamp_duty.results.click_to_expand') %>
+        <%= I18n.t('land_and_buildings_transaction_tax.results.click_to_expand') %>
       </span>
     </a>
     <%= render 'stamp_duty_tip' %>

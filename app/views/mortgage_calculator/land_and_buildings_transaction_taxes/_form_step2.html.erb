@@ -4,7 +4,7 @@
       <%= f.label :price, class: 'stamp-duty__input-description' %>
       <div class="visually-hidden"
             id="mc_accessibility_describe_price">
-        <%= t 'stamp_duty.describe_price_field' %>
+        <%= t 'land_and_buildings_transaction_tax.describe_price_field' %>
       </div>
 
       <span class="stamp-duty__input-wrapper">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="hide-with-js">
-      <p><br><%= f.submit I18n.t("stamp_duty.recalculate"),
+      <p><br><%= f.submit I18n.t("land_and_buildings_transaction_tax.recalculate"),
                           'class' => 'button',
                           'wz-next' => '' %></p>
     </div>
@@ -52,13 +52,13 @@
 
   <div class="">
     <h2 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h2>
-    <p><%= link_to t('stamp_duty.next_steps.have_you_tried.mortgage_calculator'),
+    <p><%= link_to t('land_and_buildings_transaction_tax.next_steps.have_you_tried.mortgage_calculator'),
                    full_mortgage_calculator_url,
                    class: "button button--primary mortgagecalc__spread stamp-duty__button",
                    target: "_blank",
                    rel: no_follow? %>
 
-      <%= link_to t('stamp_duty.next_steps.have_you_tried.mortgage_affordability_calculator'),
+      <%= link_to t('land_and_buildings_transaction_tax.next_steps.have_you_tried.mortgage_affordability_calculator'),
                    full_mortgage_affordability_calculator_url,
                    class: "button button--primary mortgagecalc__spread stamp-duty__button",
                    target: "_blank",
@@ -69,14 +69,14 @@
 <div class="stamp-duty__info-column">
   <div class="callout callout--tip">
     <span class="callout__icon" aria-hidden="true">?</span>
-    <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("stamp_duty.next_steps.learn_more.title") %></h2>
-    <p class="stamp-duty__info-tip"><%= I18n.t("stamp_duty.next_steps.learn_more.tip_1") %></p>
-    <p><a class="stamp-duty__info-tip-link" href="<%= I18n.t("stamp_duty.next_steps.learn_more.link_1.url") %>"><%= I18n.t("stamp_duty.next_steps.learn_more.link_1.title") %></a>
+    <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("land_and_buildings_transaction_tax.next_steps.learn_more.title") %></h2>
+    <p class="stamp-duty__info-tip"><%= I18n.t("land_and_buildings_transaction_tax.next_steps.learn_more.tip_1") %></p>
+    <p><a class="stamp-duty__info-tip-link" href="<%= I18n.t("land_and_buildings_transaction_tax.next_steps.learn_more.link_1.url") %>"><%= I18n.t("land_and_buildings_transaction_tax.next_steps.learn_more.link_1.title") %></a>
   </div>
 
-  <h2 class="mortgagecalc__subheading"><%= I18n.t("stamp_duty.next_steps.find_out_more.title") %>:</h2>
+  <h2 class="mortgagecalc__subheading"><%= I18n.t("land_and_buildings_transaction_tax.next_steps.find_out_more.title") %>:</h2>
   <ul>
-    <% I18n.t("stamp_duty.next_steps.find_out_more.tips").each do |tip| %>
+    <% I18n.t("land_and_buildings_transaction_tax.next_steps.find_out_more.tips").each do |tip| %>
       <li class="stamp-duty__info-tip-link"><%= link_to tip[:copy_html], tip[:url], target: "_blank", rel: no_follow? %></li>
     <% end %>
   </ul>
