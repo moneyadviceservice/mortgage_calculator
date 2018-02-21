@@ -18,8 +18,8 @@ module MortgageCalculator
       )
     end
 
-    def ftb_bands
-      MortgageCalculator::StampDuty::FIRST_TIME_BUYER_BANDS
+    def second_home_rate(rate)
+      rate + MortgageCalculator::StampDuty::SECOND_HOME_ADDITIONAL_TAX
     end
 
     def first_time_buyer?

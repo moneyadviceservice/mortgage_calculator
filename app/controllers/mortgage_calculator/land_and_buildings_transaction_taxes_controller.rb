@@ -1,13 +1,16 @@
 module MortgageCalculator
   class LandAndBuildingsTransactionTaxesController < ::MortgageCalculator::ApplicationController
+    before_action :set_rates
     def show
       @lbtt = LandAndBuildingsTransactionTax.new
-      @rates = MortgageCalculator::LandAndBuildingsTransactionTax::STANDARD_BANDS
+      respond_to do |format|
+        format.html
+        format.json { render json: @rates }
+      end
     end
 
     def create
-      @lbtt = LandAndBuildingsTransactionTax.new(params[:stamp_duty])
-      @rates = MortgageCalculator::LandAndBuildingsTransactionTax::STANDARD_BANDS
+      @lbtt = LandAndBuildingsTransactionTax.new(params[:land_and_buildings_transaction_tax])
       unless @lbtt.valid?
         render :show
       end
@@ -15,8 +18,14 @@ module MortgageCalculator
 
     private
 
+    def set_rates
+      @rates = MortgageCalculator::LandAndBuildingsTransactionTax.banding_for(
+        MortgageCalculator::LandAndBuildingsTransactionTax::STANDARD_BANDS
+      )
+    end
+
     def category_id
-      "buying-a-home"
+      'buying-a-home'
     end
 
     def tool_name

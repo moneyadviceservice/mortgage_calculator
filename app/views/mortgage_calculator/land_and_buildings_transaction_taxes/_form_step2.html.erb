@@ -1,5 +1,5 @@
 <div class="stamp-duty__calculator-column">
-  <%= form_for @lbtt, url: stamp_duty_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+  <%= form_for @lbtt, url: land_and_buildings_transaction_tax_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
     <div class="form__item stamp-duty__form">
       <%= f.label :price, class: 'stamp-duty__input-description' %>
       <div class="visually-hidden"

@@ -10,13 +10,13 @@
     </tr>
   </thead>
   <tbody>
-    <% ftb_bands.each do |b| %>
+    <% @ftb_rates.each do |b| %>
       <tr>
         <td class="mortgagecalc__table__price">
-          <%= band(b[:lower], b[:upper]) %>
+          <%= band(b[:start], b[:end]) %>
         </td>
         <td class="mortgagecalc__table__rate">
-          <%= b[:single_home] %>
+          <%= b[:rate] %>
           <%= I18n.t('stamp_duty.results.sentence_suffix') %>
         </td>
       </tr>
@@ -24,7 +24,7 @@
 
     <tr>
       <td class="mortgagecalc__table__price">
-        <%= formatted_currency(ftb_bands[1][:upper]) %>+
+        <%= formatted_currency(@ftb_rates.last[:end]) %>+
       </td>
       <td class="mortgagecalc__table__rate">
         <%= I18n.t('stamp_duty.table.standard_rates_apply') %>

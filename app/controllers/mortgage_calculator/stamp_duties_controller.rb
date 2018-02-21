@@ -1,13 +1,13 @@
 module MortgageCalculator
   class StampDutiesController < ::MortgageCalculator::ApplicationController
+    before_action :set_rates
+
     def show
       @stamp_duty = StampDuty.new
-      @rates = MortgageCalculator::StampDuty::STANDARD_BANDS
     end
 
     def create
       @stamp_duty = StampDuty.new(params[:stamp_duty])
-      @rates = MortgageCalculator::StampDuty::STANDARD_BANDS
       unless @stamp_duty.valid?
         render :show
       end
@@ -15,8 +15,13 @@ module MortgageCalculator
 
     private
 
+    def set_rates
+      @rates = MortgageCalculator::StampDuty.banding_for(MortgageCalculator::StampDuty::STANDARD_BANDS)
+      @ftb_rates = MortgageCalculator::StampDuty.banding_for(MortgageCalculator::StampDuty::FIRST_TIME_BUYER_BANDS)
+    end
+
     def category_id
-      "buying-a-home"
+      'buying-a-home'
     end
 
     def tool_name
