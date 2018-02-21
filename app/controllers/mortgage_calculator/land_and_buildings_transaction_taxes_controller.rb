@@ -1,16 +1,20 @@
 module MortgageCalculator
   class LandAndBuildingsTransactionTaxesController < ::MortgageCalculator::ApplicationController
+    CALCULATOR = MortgageCalculator::LandAndBuildingsTransactionTax
     before_action :set_rates
     def show
-      @lbtt = LandAndBuildingsTransactionTax.new
-      respond_to do |format|
-        format.html
-        format.json { render json: @rates }
-      end
+      @lbtt = CALCULATOR.new
+      @javascript_config = {
+        standard: CALCULATOR::STANDARD_BANDS,
+        second_home_tax_rate: CALCULATOR::SECOND_HOME_THRESHOLD,
+        second_home_threshold: CALCULATOR::SECOND_HOME_ADDITIONAL_TAX,
+      }
     end
 
     def create
-      @lbtt = LandAndBuildingsTransactionTax.new(params[:land_and_buildings_transaction_tax])
+      @lbtt = CALCULATOR.new(
+        params[:land_and_buildings_transaction_tax]
+      )
       unless @lbtt.valid?
         render :show
       end
@@ -19,8 +23,8 @@ module MortgageCalculator
     private
 
     def set_rates
-      @rates = MortgageCalculator::LandAndBuildingsTransactionTax.banding_for(
-        MortgageCalculator::LandAndBuildingsTransactionTax::STANDARD_BANDS
+      @rates = CALCULATOR.banding_for(
+        CALCULATOR::STANDARD_BANDS
       )
     end
 

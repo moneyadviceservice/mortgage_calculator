@@ -1,3 +1,8 @@
+<% content_for(:head) do %>
+  <script>
+   window.calculator_config = <%= raw @javascript_config.to_json %>;
+  </script>
+<% end %>
 <%= render 'budget_warning' %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
@@ -18,5 +23,4 @@
       </div>
     </div>
   </div>
-
 </div>

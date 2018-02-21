@@ -1,4 +1,8 @@
-<%= render 'budget_warning' %>
+<% content_for(:head) do %>
+  <script>
+   window.calculator_config = <%= raw @javascript_config.to_json %>;
+  </script>
+<% end %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
   <% @lbtt.errors.full_messages.each do |m| %>

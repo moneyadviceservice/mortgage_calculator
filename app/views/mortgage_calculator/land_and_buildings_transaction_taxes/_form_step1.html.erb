@@ -28,38 +28,40 @@
     <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
       <%= f.text_field :price,
-                       :value => @lbtt.price_formatted,
-                       "autofocus" => '',
-                       "ng-model" => "stampDuty.propertyPrice",
-                       "placeholder" => "0",
-                       "currency" => '',
-                       "data-m-dec" =>"0",
-                       "pattern" => '\d*',
-                       "class" => 'stamp-duty__input' %>
+      :value => @lbtt.price_formatted,
+      "autofocus" => '',
+      "ng-model" => "stampDuty.propertyPrice",
+      "placeholder" => "0",
+      "currency" => '',
+      "data-m-dec" =>"0",
+      "pattern" => '\d*',
+      "class" => 'stamp-duty__input' %>
     </span>
 
-      <%= f.submit I18n.t("land_and_buildings_transaction_tax.next"),
-      class: "button button--primary stamp-duty__submit",
-        'ng-click' => 'navigateAndFocus($event)',
-        'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
-        'analytics-category' => 'Stamp Duty Calculator',
-        'analytics-action' => 'Completion',
-        'analytics-label' => 'Click',
-        'analytics' => '',
-        'analytics-on' => 'click'
-        %>
+    <%= f.submit I18n.t("land_and_buildings_transaction_tax.next"),
+    class: "button button--primary stamp-duty__submit",
+      'ng-click' => 'navigateAndFocus($event)',
+      'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
+      'analytics-category' => 'Stamp Duty Calculator',
+      'analytics-action' => 'Completion',
+      'analytics-label' => 'Click',
+      'analytics' => '',
+      'analytics-on' => 'click'
+    %>
   </div>
 <% end %>
 <hr />
-<div class="stamp-duty__description">
+<section class="l-tool-promos__inner">
+  <div class="l-constrained l-tool-promos__inner">
   <h2><%= t('land_and_buildings_transaction_tax.elsewhere.title') %></h2>
   <p><%= t('land_and_buildings_transaction_tax.elsewhere.body') %></p>
-  <div class="stamp-duty__description-item">
-    <h3><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.title') %></h3>
-    <p><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.body') %></p>
-  </div>
-  <div class="stamp-duty__description-item">
-    <h3><%= t('land_and_buildings_transaction_tax.elsewhere.wales.title') %></h3>
-    <p><%= t('land_and_buildings_transaction_tax.elsewhere.wales.body') %></p>
-  </div>
+  <a class="l-tool-promos__item promo__link" href="#">
+    <h3 class="promo__heading"><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.title') %></h3>
+    <p class="promo__content"><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.body') %></p>
+  </a>
+  <a class="l-tool-promos__item promo__link" href="#">
+    <h3 class="promo__heading"><%= t('land_and_buildings_transaction_tax.elsewhere.wales.title') %></h3>
+    <p class="promo__content"><%= t('land_and_buildings_transaction_tax.elsewhere.wales.body') %></p>
+  </a>
 </div>
+</section>
