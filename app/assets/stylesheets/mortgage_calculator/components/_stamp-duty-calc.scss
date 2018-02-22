@@ -19,10 +19,8 @@
 .stamp-duty {
   border: solid $color-grey-light 1px;
   overflow: hidden;
-  padding: 0 $baseline-unit*4;
   max-width: none;
   margin-top: $baseline-unit;
-
   @include respond-to($mortgagecalc_mq-s) {
     margin-top: $baseline-unit*8;
   }
@@ -32,6 +30,10 @@
   .js & {
     display: none;
   }
+}
+
+.stamp-duty__container {
+  padding: 0 $baseline-unit*4;
 }
 
 .stamp-duty__explanation-firsttimebuyer,
@@ -45,6 +47,7 @@
 
 .stamp-duty__calculation-explanation {
   background-color: white;
+  padding: 0 $baseline-unit*4;
   margin-top: $baseline-unit*2;
 }
 

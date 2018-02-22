@@ -5,7 +5,7 @@
 <% end %>
 <%= render 'budget_warning' %>
 
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty stamp-duty__container">
   <% @stamp_duty.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
   <% end %> 

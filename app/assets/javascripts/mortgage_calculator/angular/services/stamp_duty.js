@@ -46,12 +46,15 @@ App.factory('StampDuty', function() {
               remainingTaxable = 0,
               bandTaxable = 0;
 
+          if(rateObj.threshold === null) {
+              rateObj.threshold = Infinity;
+          }
+
           if (!previousRateObj) {
             bandwidth = rateObj.threshold;
           } else {
             bandwidth = rateObj.threshold - previousRateObj.threshold;
           }
-
           remainingTaxable = Math.min(rateObj.threshold, remaining);
           bandTaxable = Math.min(bandwidth, remainingTaxable);
           totalTax += (bandTaxable * rateObj.rate / 100);

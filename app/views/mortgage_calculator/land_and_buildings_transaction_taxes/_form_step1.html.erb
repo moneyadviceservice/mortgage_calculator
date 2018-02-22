@@ -1,4 +1,3 @@
-
 <%= form_for @lbtt, url: land_and_buildings_transaction_tax_path, html: { name: 'stamp_duty_form', role: 'form', class: 'form step_one stamp-duty__step-one', novalidate: '' } do |f| %>
 
   <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
@@ -51,17 +50,6 @@
   </div>
 <% end %>
 <hr />
-<section class="l-tool-promos__inner">
-  <div class="l-constrained l-tool-promos__inner">
-  <h2><%= t('land_and_buildings_transaction_tax.elsewhere.title') %></h2>
-  <p><%= t('land_and_buildings_transaction_tax.elsewhere.body') %></p>
-  <a class="l-tool-promos__item promo__link" href="#">
-    <h3 class="promo__heading"><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.title') %></h3>
-    <p class="promo__content"><%= t('land_and_buildings_transaction_tax.elsewhere.england_ni.body') %></p>
-  </a>
-  <a class="l-tool-promos__item promo__link" href="#">
-    <h3 class="promo__heading"><%= t('land_and_buildings_transaction_tax.elsewhere.wales.title') %></h3>
-    <p class="promo__content"><%= t('land_and_buildings_transaction_tax.elsewhere.wales.body') %></p>
-  </a>
-</div>
-</section>
+
+<h2><%= t('land_and_buildings_transaction_tax.elsewhere.title') %></h2>
+<p><%= t('land_and_buildings_transaction_tax.elsewhere.body') %></p>
