@@ -8,8 +8,8 @@ module MortgageCalculator
       @javascript_config = {
         standard: CALCULATOR::STANDARD_BANDS,
         ftb: CALCULATOR::FIRST_TIME_BUYER_BANDS,
-        second_home_tax_rate: CALCULATOR::SECOND_HOME_THRESHOLD,
-        second_home_threshold: CALCULATOR::SECOND_HOME_ADDITIONAL_TAX,
+        second_home_tax_rate: CALCULATOR::SECOND_HOME_ADDITIONAL_TAX,
+        second_home_threshold: CALCULATOR::SECOND_HOME_THRESHOLD,
         first_time_buyer_threshold: CALCULATOR::FIRST_TIME_BUYER_THRESHOLD
       }
     end

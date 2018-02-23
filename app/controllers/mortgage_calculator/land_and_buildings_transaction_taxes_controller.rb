@@ -6,8 +6,8 @@ module MortgageCalculator
       @lbtt = CALCULATOR.new
       @javascript_config = {
         standard: CALCULATOR::STANDARD_BANDS,
-        second_home_tax_rate: CALCULATOR::SECOND_HOME_THRESHOLD,
-        second_home_threshold: CALCULATOR::SECOND_HOME_ADDITIONAL_TAX,
+        second_home_tax_rate: CALCULATOR::SECOND_HOME_ADDITIONAL_TAX,
+        second_home_threshold: CALCULATOR::SECOND_HOME_THRESHOLD
       }
     end
 
