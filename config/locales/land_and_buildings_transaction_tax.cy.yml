@@ -1,0 +1,73 @@
+cy:
+  land_and_buildings_transaction_tax:
+    meta:
+      title: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
+      description: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
+      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
+    tooltip_show: sioe help
+    tooltip_hide: cuddio cymorth
+    tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
+    heading: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
+    heading_results: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau - Eich canlyniadau"
+    title: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
+    next: "Nesaf"
+    select:
+      label: "Rwy'n"
+      option_prompt: "dewiswch opsiwn"
+      option_isNextHome: "prynu fy nghartref nesaf"
+      option_isSecondHome: "prynu eiddo atodol neu eiddo prynu-i-osod"
+      tooltip_html: "Bydd unrhyw un sy’n prynu cartref ychwanegol gan gynnwys eiddo prynu i osod dros £40,000 mewn gwerth yn gorfod talu ffi ychwanegol o 3% ar ben pob band Treth Trafodiadau Tir ac Adeiladau."
+    recalculate: Ailgyfrifo
+    how_calculated_toggle: "Sut y cyfrifir hyn?"
+    elsewhere:
+      title: "Prynu yng Nghymru, Lloegr neu Ogledd Iwerddon?"
+      body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
+      england_ni:
+        title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
+        body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
+        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      wales:
+        title: "Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru"
+        body: "Ym mis Ebrill 2018 bydd Treth Trafodiadau Tir (LTT) yn disodli Treth Stamp yng Nghymru. Bydd gennym gyfrifiannell ar gyfer hyn ym mis Ebrill ond am y tro defnyddiwch y Gyfrifiannell Treth Stamp."
+        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+    how_calculated_toggle: "Sut y cyfrifir hyn?"
+    how_calculated: "Telir Treth Trafodion Tir ac Adeiladau (LBTT) ar gyfraddau gwahanol, yn ddibynnol ar y band mae’r pris prynu ynddo. Er enghraifft, ni fyddai rhywun yn prynu eiddo am £280,000 yn talu treth ar werth yr eiddo hyd at £145,000, 2% o dreth ar werth yr eiddo rhwng £145,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, byddai cyfanswm yr atebolrwydd treth ar gyfer Treth Trafodion Tir ac Adeiladau (LBTT) yn £3,600 gan roi cyfradd dreth effeithiol o 1.29% (cyfartaledd cyfradd canrannol y dreth a dalwyd)."
+    how_calculated_additional: "Bydd unrhyw un sy’n prynu ail gartref, gan gynnwys eiddo prynu-i-osod, yn talu 3% ychwanegol ar ben y band cyfradd safonol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu y byddai cyfanswm y dreth stamp yn £12,000 gan roi cyfradd treth effeithiol o 4.29%."
+    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun yr Atodiad Annedd Atodol ar gyfer ail gartref"
+    describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
+    activemodel:
+      attributes:
+        mortgage_calculator/land_and_buildings_transaction_tax:
+          price: "Pris eiddo:"
+    results:
+      title: "Land and Buildings Transaction Tax to pay is"
+      second_title: "Land and Buildings Transaction Tax on your additional property"
+      sentence: "Y gyfradd dreth effeithiol yw %{percentage}"
+      sentence_prefix: "Y gyfradd dreth effeithiol yw"
+      sentence_suffix: "%"
+      click_to_expand: Cliciwch i ehangu
+    table:
+      property_price_header: "Pris prynu’r eiddo"
+      rate_header: "Cyfradd Treth Trafodion Tir ac Adeiladau (LBTT)"
+      extra_rate_header: "Atodiad Prynu-i-osod / Annedd Atodol (ADS)*"
+      max: "%{value}+"
+    next_steps:
+      learn_more:
+        title: "A wyddech chi?"
+        tip_1: "Rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) cyn pen 30 diwrnod ar ôl prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau’r trawsgludo, bydd fel arfer yn trefnu’r taliad ar eich rhan."
+        link_1:
+          title: "Treth Trafodiadau Tir ac Adeiladau (LBTT) - popeth sydd angen i chi ei wybod"
+          url: "/en/articles/everything-you-need-to-know-about-stamp-duty"
+      find_out_more:
+        title: "Darganfyddwch fwy"
+        tips:
+          - copy_html: "Costau ymlaen llaw prynu cartref"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          - copy_html: "Ffioedd a chostau morgais"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
+          - copy_html: "Costau diwrnod symud"
+            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+      have_you_tried:
+        title: 'Rhowch gynnig ar?'
+        mortgage_calculator: "Cyfrifiannell morgais"
+        mortgage_affordability_calculator: "Cyfrifiannell fforddiadwyedd"

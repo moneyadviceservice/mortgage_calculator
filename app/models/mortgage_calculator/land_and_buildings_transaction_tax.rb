@@ -1,7 +1,7 @@
 module MortgageCalculator
   class LandAndBuildingsTransactionTax < TaxCalculator
     def self.i18n_scope
-      'stamp_duty.activemodel'
+      'land_and_buildings_transaction_tax.activemodel'
     end
 
     STANDARD_BANDS = [

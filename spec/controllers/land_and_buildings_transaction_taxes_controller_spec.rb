@@ -13,7 +13,7 @@ module MortgageCalculator
 
     describe '#create' do
       it 'responds with 200' do
-        post :create, stamp_duty: { price: "200000" }
+        post :create, land_and_buildings_transaction_tax: { price: '200000' }
         expect(response).to be_success
       end
 
@@ -21,7 +21,7 @@ module MortgageCalculator
         render_views
 
         it 'renders show template' do
-          post :create, stamp_duty: { price: "asd" }
+          post :create, land_and_buildings_transaction_tax: { price: 'asd' }
           expect(response).to render_template('show')
         end
       end
