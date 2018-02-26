@@ -33,7 +33,7 @@ module MortgageCalculator
     end
 
     def tool_name
-      I18n.translate('stamp_duty.tool_name')
+      I18n.translate('land_and_buildings_transaction_tax.tool_name')
     end
   end
 end

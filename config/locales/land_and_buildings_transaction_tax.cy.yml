@@ -40,8 +40,8 @@ cy:
         mortgage_calculator/land_and_buildings_transaction_tax:
           price: "Pris eiddo:"
     results:
-      title: "Land and Buildings Transaction Tax to pay is"
-      second_title: "Land and Buildings Transaction Tax on your additional property"
+      title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
+      second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
       sentence: "Y gyfradd dreth effeithiol yw %{percentage}"
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"
@@ -57,7 +57,7 @@ cy:
         tip_1: "Rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) cyn pen 30 diwrnod ar ôl prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau’r trawsgludo, bydd fel arfer yn trefnu’r taliad ar eich rhan."
         link_1:
           title: "Treth Trafodiadau Tir ac Adeiladau (LBTT) - popeth sydd angen i chi ei wybod"
-          url: "/en/articles/everything-you-need-to-know-about-stamp-duty"
+          url: "/cy/articles/treth-trafodiadau-tir-ac-adeiladau-popeth-y-mae-angen-i-chi-ei-wybod/"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
