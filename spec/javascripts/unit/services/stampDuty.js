@@ -13,6 +13,22 @@ describe('Service: StampDuty', function () {
       setBuyerType = function(buyerType) {
         stampDuty.buyerType = buyerType;
       };
+  window.calculator_config = {
+    "standard":[
+      {"threshold":125000,"rate":0},
+      {"threshold":250000,"rate":2},
+      {"threshold":925000,"rate":5},
+      {"threshold":1500000,"rate":10},
+      {"threshold":null,"rate":12}
+    ],
+    "ftb":[
+      {"threshold":300000,"rate":0},
+      {"threshold":500000,"rate":5}
+    ],
+    "second_home_tax_rate":3,
+    "second_home_threshold":40000,
+    "first_time_buyer_threshold":500000
+  }
 
   beforeEach(inject(function (StampDuty) {
     stampDuty = StampDuty;
