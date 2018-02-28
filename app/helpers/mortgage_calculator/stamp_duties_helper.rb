@@ -18,8 +18,8 @@ module MortgageCalculator
       )
     end
 
-    def ftb_bands
-      MortgageCalculator::StampDuty::FIRST_TIME_BUYER_BANDS
+    def second_home_rate(rate)
+      rate + MortgageCalculator::StampDuty::SECOND_HOME_ADDITIONAL_TAX
     end
 
     def first_time_buyer?
@@ -28,6 +28,17 @@ module MortgageCalculator
 
     def outside_first_time_rate?
       @stamp_duty.first_time_ineligible?
+    end
+
+    def calculator_config_json
+      calculator = MortgageCalculator::StampDuty
+      {
+        standard: calculator::STANDARD_BANDS,
+        ftb: calculator::FIRST_TIME_BUYER_BANDS,
+        second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
+        second_home_threshold: calculator::SECOND_HOME_THRESHOLD,
+        first_time_buyer_threshold: calculator::FIRST_TIME_BUYER_THRESHOLD
+      }.to_json
     end
 
     private

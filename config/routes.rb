@@ -27,6 +27,10 @@ MortgageCalculator::Engine.routes.draw do
 
   resource :stamp_duty, path: 'treth_stamp'
 
+  resource :land_and_buildings_transaction_tax, path: 'land-and-buildings-transaction-tax-calculator'
+  resource :land_and_buildings_transaction_tax, path: 'cyfrifiannell-treth-trafodion-tir-ac-adeiladau'
+  resource :land_and_buildings_transaction_tax
+
   resource :affordability, path: "mortgage-affordability-calculator" do
     get '/', to: "affordabilities#step_1"
     collection do

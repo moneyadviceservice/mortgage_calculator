@@ -1,9 +1,14 @@
+<% content_for(:head) do %>
+  <script>
+   window.calculator_config = <%= raw calculator_config_json %>;
+  </script>
+<% end %>
 <%= render 'budget_warning' %>
 
-<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty stamp-duty__container">
   <% @stamp_duty.errors.full_messages.each do |m| %>
     <span style="color:red;"><%= m %></span>
-  <% end %> 
+  <% end %>
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>
     <div wz-step class="ng-hide">
       <h1 class="stamp-duty__heading"><%= I18n.t('stamp_duty.heading') %></h1>
@@ -18,5 +23,4 @@
       </div>
     </div>
   </div>
-
 </div>
