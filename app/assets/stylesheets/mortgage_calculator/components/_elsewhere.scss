@@ -1,0 +1,51 @@
+.elsewhere__container {
+  background: $color-grey-pale;
+}
+.elsewhere__item {
+  @include column(12);
+  margin-bottom: $baseline-unit*1;
+  position: relative;
+  padding-top: $baseline-unit*3;
+  padding-bottom: $baseline-unit*2;
+  &:hover &,
+  &:focus & {
+    text-decoration: none;
+  }
+  @include respond-to($mq-s) {
+    &:nth-child(2) {
+      @include push(0)
+    }
+  }
+
+  @include respond-to($mq-m) {
+    @include column(6);
+    &:nth-child(2) {
+      @include push(0)
+    }
+  }
+
+  @include respond-to($mq-l) {
+    @include column(5);
+    border-top: 0;
+    margin-bottom: 0;
+    &:nth-child(2) {
+      @include push
+    }
+    margin: $baseline-unit*4;
+  }
+}
+.elsewhere__item-content {
+  margin-right: 60px;
+}
+
+.elsewhere__arrow {
+  position: absolute;
+  top:0;
+  right:0;
+  background-color: $color-button-primary;
+  border-radius: 50px;
+  height: 50px;
+  top: 30%;
+  width: 50px;
+  padding: 10px;
+}
