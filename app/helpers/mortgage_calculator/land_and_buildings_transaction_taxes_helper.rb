@@ -17,7 +17,7 @@ module MortgageCalculator
     end
 
     def calculator_config_json
-      calculator = MortgageCalculator::StampDuty
+      calculator = MortgageCalculator::LandAndBuildingsTransactionTax
       {
         standard: calculator::STANDARD_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
