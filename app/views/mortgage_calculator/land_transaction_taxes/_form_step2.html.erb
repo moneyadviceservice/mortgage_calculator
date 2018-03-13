@@ -1,0 +1,83 @@
+<div class="stamp-duty__calculator-column">
+  <%= form_for @ltt, url: land_transaction_tax_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+    <div class="form__item stamp-duty__form">
+      <%= f.label :price, class: 'stamp-duty__input-description' %>
+      <div class="visually-hidden"
+            id="mc_accessibility_describe_price">
+        <%= t 'land_transaction_tax.describe_price_field' %>
+      </div>
+
+      <span class="stamp-duty__input-wrapper">
+        <span class="stamp-duty__input--unit">£</span>
+        <%= f.text_field :price,
+                         :value => @ltt.price_formatted,
+                         class: 'stamp-duty__input dynamic-slider-property',
+                         "ng-model" => "stampDuty.propertyPrice",
+                         "placeholder" => "0.00",
+                         "currency" => '',
+                         "data-m-dec" => "0",
+                         "analytics" => "",
+                         "analytics-on" => "change",
+                         "analytics-category" => "Stamp Duty Calculator",
+                         "analytics-action" => "Refinement",
+                         "analytics-label" => "Price",
+                         "pattern" => '\d*',
+                         "aria-describedby" => 'mc_accessibility_describe_price',
+                         "autoselect" => ""
+                         %>
+      </span>
+
+    </div>
+    <%= f.hidden_field :buyer_type %>
+
+    <div class="slider"
+          ui-slider
+          dynamic-for='dynamic-slider-property'
+          ng-model="stampDuty.propertyPrice"
+          analytics-category="Stamp Duty"
+          analytics-action="Refinement"
+          analytics-label="Price"
+          aria-hidden="true">
+    </div>
+
+    <div class="hide-with-js">
+      <p><br><%= f.submit I18n.t("land_transaction_tax.recalculate"),
+                          'class' => 'button',
+                          'wz-next' => '' %></p>
+    </div>
+
+  <% end %>
+
+  <%= render 'stamp_duty_to_pay_panel' if @ltt.valid? %>
+
+  <div class="">
+    <h2 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h2>
+    <p><%= link_to t('land_transaction_tax.next_steps.have_you_tried.mortgage_calculator'),
+                   full_mortgage_calculator_url,
+                   class: "button button--primary mortgagecalc__spread stamp-duty__button",
+                   target: "_blank",
+                   rel: no_follow? %>
+
+      <%= link_to t('land_transaction_tax.next_steps.have_you_tried.mortgage_affordability_calculator'),
+                   full_mortgage_affordability_calculator_url,
+                   class: "button button--primary mortgagecalc__spread stamp-duty__button",
+                   target: "_blank",
+                   rel: no_follow? %></p>
+  </div>
+</div>
+
+<div class="stamp-duty__info-column">
+  <div class="callout callout--tip">
+    <span class="callout__icon" aria-hidden="true">?</span>
+    <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("land_transaction_tax.next_steps.learn_more.title") %></h2>
+    <p class="stamp-duty__info-tip"><%= I18n.t("land_transaction_tax.next_steps.learn_more.tip_1") %></p>
+    <p><a class="stamp-duty__info-tip-link" href="<%= I18n.t("land_transaction_tax.next_steps.learn_more.link_1.url") %>"><%= I18n.t("land_transaction_tax.next_steps.learn_more.link_1.title") %></a>
+  </div>
+
+  <h2 class="mortgagecalc__subheading"><%= I18n.t("land_transaction_tax.next_steps.find_out_more.title") %>:</h2>
+  <ul>
+    <% I18n.t("land_transaction_tax.next_steps.find_out_more.tips").each do |tip| %>
+      <li class="stamp-duty__info-tip-link"><%= link_to tip[:copy_html], tip[:url], target: "_blank", rel: no_follow? %></li>
+    <% end %>
+  </ul>
+</div>
