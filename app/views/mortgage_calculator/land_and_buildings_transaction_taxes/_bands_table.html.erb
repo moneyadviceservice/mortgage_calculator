@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @rates.each do |rate| %>
+    <% standard_rates.each do |rate| %>
       <tr>
         <td class="mortgagecalc__table__price"><%= band(rate[:start], rate[:end]) %></td>
         <td class="mortgagecalc__table__rate"><%= rate[:rate] %>%</td>

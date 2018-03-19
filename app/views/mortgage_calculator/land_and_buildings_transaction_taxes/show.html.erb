@@ -5,7 +5,7 @@
 <% end %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
-  <% @lbtt.errors.full_messages.each do |message| %>
+  <% resource.errors.full_messages.each do |message| %>
     <span style="color:red;"><%= message %></span>
   <% end %>
   <div wizard on-finish="finishedWizard()" hide-indicators='true'>

@@ -4,6 +4,48 @@ module MortgageCalculator
   describe LandAndBuildingsTransactionTaxesController do
     routes { MortgageCalculator::Engine.routes }
 
+    describe '#calculator' do
+      it 'returns land and buildings transaction tax' do
+        expect(controller.calculator).to be(
+          MortgageCalculator::LandAndBuildingsTransactionTax
+        )
+      end
+    end
+
+    describe '#standard_rates' do
+      it 'returns the rates for each band' do
+        expect(controller.standard_rates).to eq(
+          [
+            {
+              start: 0,
+              end: 145_000,
+              rate: 0
+            },
+            {
+              start: 145_000.01,
+              end: 250_000,
+              rate: 2
+            },
+            {
+              start: 250_000.01,
+              end: 325_000,
+              rate: 5
+            },
+            {
+              start: 325_000.01,
+              end: 750_000,
+              rate: 10
+            },
+            {
+              start: 750_000.01,
+              end: nil,
+              rate: 12
+            }
+          ]
+        )
+      end
+    end
+
     describe '#show' do
       it 'responds with 200' do
         get :show
@@ -28,4 +70,3 @@ module MortgageCalculator
     end
   end
 end
-

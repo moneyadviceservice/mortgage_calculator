@@ -1,7 +1,7 @@
 <div class="stamp-duty__results">
   <div class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
     <div ng-hide="js">
-      <% key = @lbtt.second_home? ? 'second_title' : 'title' %>
+      <% key = resource.second_home? ? 'second_title' : 'title' %>
       <%= I18n.t("land_and_buildings_transaction_tax.results.#{key}") %>
     </div>
     <div class="hidden-unless-js">
@@ -14,7 +14,7 @@
     </div>
 
     <span ng-hide="js">
-      <%= number_to_currency @lbtt.tax_due_formatted %>
+      <%= number_to_currency resource.tax_due_formatted %>
     </span>
     <span class="rendered-from-js">
       {{ stampDuty.cost() | customCurrency:"£" }}
@@ -24,7 +24,7 @@
   <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide">
     <%= I18n.t('land_and_buildings_transaction_tax.results.sentence',
               percentage: number_to_percentage(
-                @lbtt.percentage_tax, precision: 2
+                resource.percentage_tax, precision: 2
               )
         )
     %>
