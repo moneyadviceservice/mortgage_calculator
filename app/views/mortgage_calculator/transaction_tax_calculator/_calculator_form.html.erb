@@ -1,0 +1,70 @@
+<%= form_for resource,
+  url: calculator_form_path,
+  html: {
+    name: 'stamp_duty_form',
+    role: 'form',
+    class: 'form step_one stamp-duty__step-one',
+    novalidate: ''
+  } do |f| %>
+
+  <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
+    <%= t("#{i18n_locale_namespace}.select.label") %>
+    <%= f.select(
+          :buyer_type,
+          [
+            [t("#{i18n_locale_namespace}.select.option_prompt"), ''],
+            [t("#{i18n_locale_namespace}.select.option_isNextHome"), 'isNextHome'],
+            [t("#{i18n_locale_namespace}.select.option_isSecondHome"), 'isSecondHome']
+          ],
+          {},
+          {
+            'ng-model' => 'stampDuty.buyerType'
+          }
+    ) %>
+    <span data-dough-component="PopupTip">
+      <%= popup_tip_trigger options: {
+        text: t("#{i18n_locale_namespace}.tooltip_show")
+      } %>
+      <%= popup_tip_content options: {
+        text: t("#{i18n_locale_namespace}.select.tooltip_html"),
+        classname: 'details__helper',
+        tooltip_hide: t("#{i18n_locale_namespace}.tooltip_hide")
+      } %>
+    </span>
+  <% end %>
+
+  <div class="stamp-duty__form form__item">
+    <%= f.label :price, class: "stamp-duty__input-description" %>
+    <div class="visually-hidden" id="mc_accessibility_describe_price">
+      <%= t "#{i18n_locale_namespace}.describe_price_field" %>
+    </div>
+
+    <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
+      <span class="stamp-duty__input--unit">£</span>
+      <%= f.text_field :price,
+                       value: resource.price_formatted,
+                       "autofocus" => '',
+                       "ng-model" => "stampDuty.propertyPrice",
+                       "placeholder" => "0",
+                       "currency" => '',
+                       "data-m-dec" =>"0",
+                       "pattern" => '\d*',
+                       "class" => 'stamp-duty__input' %>
+    </span>
+
+    <%= f.submit I18n.t("#{i18n_locale_namespace}.next"),
+                 class: "button button--primary stamp-duty__submit",
+                 'ng-click' => 'navigateAndFocus($event)',
+                 'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
+                 'analytics-category' => 'Stamp Duty Calculator',
+                 'analytics-action' => 'Completion',
+                 'analytics-label' => 'Click',
+                 'analytics' => '',
+                 'analytics-on' => 'click'
+    %>
+  </div>
+<% end %>
+<hr />
+
+<h2><%= t("#{i18n_locale_namespace}.elsewhere.title") %></h2>
+<p><%= t("#{i18n_locale_namespace}.elsewhere.body") %></p>
