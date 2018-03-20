@@ -12,6 +12,23 @@ module MortgageCalculator
       end
     end
 
+    describe '#i18n_locale_namespace' do
+      it 'returns I18n key namespace' do
+        expect(controller.i18n_locale_namespace).to eq(
+          'land_transaction_tax'
+        )
+      end
+    end
+
+    describe '#calculator_form_path' do
+      it 'returns the respective form path' do
+        expect(controller.calculator_form_path).to eq(
+          '/en/mortgage_calculator/land-transaction-tax-calculator'
+        )
+      end
+    end
+
+
     describe '#standard_rates' do
       it 'returns the rates for each band' do
         expect(controller.standard_rates).to eq(
@@ -22,7 +39,7 @@ module MortgageCalculator
               rate: 0
             },
             {
-              start: 180000.01,
+              start: 180_000.01,
               end: 250_000,
               rate: 3.5
             },
@@ -48,6 +65,12 @@ module MortgageCalculator
             }
           ]
         )
+      end
+    end
+
+    describe '#i18n_locale_namespace' do
+      it 'returns land transaction tax' do
+        expect(controller.i18n_locale_namespace).to eq('land_transaction_tax')
       end
     end
 
