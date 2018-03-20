@@ -11,6 +11,8 @@ gem 'mas-development_dependencies', '2.3.0.35'
 gem 'meta-tags'
 
 group :test, :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug'
   gem 'rubocop', require: false
 end

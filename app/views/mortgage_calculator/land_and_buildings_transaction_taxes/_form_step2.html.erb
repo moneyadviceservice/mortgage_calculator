@@ -1,5 +1,5 @@
 <div class="stamp-duty__calculator-column">
-  <%= form_for @lbtt, url: land_and_buildings_transaction_tax_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
+  <%= form_for resource, url: land_and_buildings_transaction_tax_path, html: { id: 'update_stamp_duty', name: 'stamp_duty_form', role: 'form', class: 'step_two', 'ng-submit' => 'preventFormSubmission($event)', novalidate: '' } do |f| %>
     <div class="form__item stamp-duty__form">
       <%= f.label :price, class: 'stamp-duty__input-description' %>
       <div class="visually-hidden"
@@ -10,7 +10,7 @@
       <span class="stamp-duty__input-wrapper">
         <span class="stamp-duty__input--unit">£</span>
         <%= f.text_field :price,
-                         :value => @lbtt.price_formatted,
+                         :value => resource.price_formatted,
                          class: 'stamp-duty__input dynamic-slider-property',
                          "ng-model" => "stampDuty.propertyPrice",
                          "placeholder" => "0.00",
@@ -48,7 +48,7 @@
 
   <% end %>
 
-  <%= render 'stamp_duty_to_pay_panel' if @lbtt.valid? %>
+  <%= render 'stamp_duty_to_pay_panel' if resource.valid? %>
 
   <div class="">
     <h2 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h2>
