@@ -6,10 +6,9 @@ en:
       canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-transaction-tax-calculator"
     tooltip_show: show help
     tooltip_hide: hide help
-    tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
     heading_results: "Land Transaction Tax (LTT) calculator - Your Results"
-    title: "Calculate the Land and Buildings Transaction Tax on your residential property in Wales"
+    title: "Calculate the Land Transaction Tax on your residential property in Wales"
     next: Next
     select:
       label: I am
@@ -39,15 +38,15 @@ en:
         mortgage_calculator/land_transaction_tax:
           price: "Property Price:"
     results:
-      title: "Land and Buildings Transaction Tax to pay is"
-      second_title: "Land and Buildings Transaction Tax on your additional property"
+      title: "Land Transaction Tax to pay is"
+      second_title: "Land Transaction Tax on your additional property"
       sentence: "The effective tax rate is %{percentage}"
       sentence_prefix: "The effective tax rate is"
       sentence_suffix: "%"
       click_to_expand: Click to expand.
     table:
       property_price_header: "Purchase price of property"
-      rate_header: "Rate of Land and Buildings Transaction Tax"
+      rate_header: "Rate of Land Transaction Tax"
       extra_rate_header: "Buy to Let/Additional Home rate *"
       max: "%{value}+"
     next_steps:
