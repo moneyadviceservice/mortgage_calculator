@@ -1,9 +1,9 @@
 cy:
   land_and_buildings_transaction_tax:
     meta:
-      title: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
-      description: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
+      title: "Trafodiadau Tir ac Adeiladau (LBTT) – Cyfrifiannell Treth Stamp yr Alban"
+      description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir ac Adeiladau (LBTT) i gyfrifo faint o LBTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
+      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
@@ -32,7 +32,7 @@ cy:
       wales:
         title: "Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru"
         body: "Ym mis Ebrill 2018 bydd Treth Trafodiadau Tir (LTT) yn disodli Treth Stamp yng Nghymru. Bydd gennym gyfrifiannell ar gyfer hyn ym mis Ebrill ond am y tro defnyddiwch y Gyfrifiannell Treth Stamp."
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Trafodion Tir ac Adeiladau (LBTT) ar gyfraddau gwahanol, yn ddibynnol ar y band mae’r pris prynu ynddo. Er enghraifft, ni fyddai rhywun yn prynu eiddo am £280,000 yn talu treth ar werth yr eiddo hyd at £145,000, 2% o dreth ar werth yr eiddo rhwng £145,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, byddai cyfanswm yr atebolrwydd treth ar gyfer Treth Trafodion Tir ac Adeiladau (LBTT) yn £3,600 gan roi cyfradd dreth effeithiol o 1.29% (cyfartaledd cyfradd canrannol y dreth a dalwyd)."
     how_calculated_additional: "Bydd unrhyw un sy’n prynu ail gartref, gan gynnwys eiddo prynu-i-osod, yn talu 3% ychwanegol ar ben y band cyfradd safonol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu y byddai cyfanswm y dreth stamp yn £12,000 gan roi cyfradd treth effeithiol o 4.29%."

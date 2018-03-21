@@ -1,12 +1,11 @@
 en:
   land_and_buildings_transaction_tax:
     meta:
-      title: "Land and Buildings Transaction Tax calculator"
-      description: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-and-buildings-transaction-tax-calculator"
+      title: "Land and Buildings Transaction Tax (LBTT) – Scottish Stamp Duty calculator"
+      description: "Use our Land and Buildings Transaction Tax (LBTT) calculator to calculate how much LBTT (formerly Stamp Duty) you’ll need to pay on your home in Scotland"
+      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
     tooltip_show: show help
     tooltip_hide: hide help
-    tool_name: "land-and-buildings-transaction-tax-calculator"
     heading: "Land and Buildings Transaction Tax (LBTT) calculator"
     heading_description: "Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland. If you’re buying a residential property over £145,000, you’ll have to pay LBTT. This calculator works out how much Land and Buildings Transaction Tax you need to pay on your new home.
 
@@ -31,7 +30,7 @@ en:
       wales:
         title: Calculate Land Transaction Tax for Wales
         body: "Land Transaction Tax (LTT) will replace Stamp Duty in Wales. We will have a calculator for this in April but for now use the Stamp Duty Calculator."
-        link: "/en/tools/house-buying/stamp-duty-calculator"
+        link: "/en/tools/house-buying/land-transaction-tax-calculator-wales"
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid)."
     how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £8,400, meaning the total stamp duty would be £12,000 giving an effective tax rate of 4.29%."

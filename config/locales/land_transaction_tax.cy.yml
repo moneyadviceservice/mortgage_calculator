@@ -1,9 +1,9 @@
 cy:
   land_transaction_tax:
     meta:
-      title: "Cyfrifiannell Treth Trafodiadau Tir"
-      description: "Cyfrifwch y Dreth Trafodiadau Tir ar eich eiddo preswyl yng Nghymru"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
+      title: "Treth Trafodiadau Tir (LTT) - Cyfrifiannell Treth Stamp Cymru"
+      description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir (LTT) i gyfrifo faint o LTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
+      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
@@ -29,7 +29,7 @@ cy:
       scotland:
         title: 'Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban'
         body: 'Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban'
-        link: "/en/tools/house-buying/land-and-buildings-transaction-tax-calculator"
+        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Trafodiadau Tir (LTT) ar gyfraddau gwahanol, yn ddibynnol ar y band mae’r pris prynu ynddo. Er enghraifft, ni fyddai rhywun yn prynu eiddo am £280,000 yn talu treth ar werth yr eiddo hyd at £180,000, 3.5% o dreth ar werth yr eiddo rhwng £180,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, byddai cyfanswm yr atebolrwydd treth ar gyfer Treth Trafodiadau Tir ac Adeiladau (LTT) yn £3,950 gan roi cyfradd dreth effeithiol o 1.41% (cyfartaledd cyfradd canrannol y dreth a dalwyd)."
     how_calculated_additional: "Bydd unrhyw un sy’n prynu ail gartref, gan gynnwys eiddo prynu-i-osod, yn talu 3% ychwanegol ar ben y band cyfradd safonol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu y byddai cyfanswm y dreth stamp yn £12,350 gan roi cyfradd treth effeithiol o 4.41%."
