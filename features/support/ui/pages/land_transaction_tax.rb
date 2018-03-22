@@ -5,7 +5,7 @@ module UI
     class LandTransactionTax < UI::Pages::StampDuty
       include DefaultLocale
 
-      set_url '/{locale}/mortgage_calculator/land-transaction-tax-calculator'
+      set_url '/{locale}/mortgage_calculator/land-transaction-tax-calculator-wales'
       element :buyer_type, "form.step_one select[name='buyer_type']"
       element :property_price, "form.step_one input[name='land_transaction_tax[price]']"
       element :property_price_step_two, "form.step_two input[name='land_transaction_tax[price]']"

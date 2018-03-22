@@ -2,21 +2,53 @@ require 'spec_helper'
 
 module MortgageCalculator
   describe ApplicationHelper do
-
-    describe "#calculator_name" do
-      it "sets the calculator name to 'mortgage_calculator' when repayments controller" do
-        allow(helper).to receive(:controller_name).and_return('repayments')
-        expect(helper.calculator_name).to eq('mortgage_calculator')
+    describe '#calculator_name' do
+      before do
+        allow(helper).to receive(:controller_name).and_return(controller_name)
       end
 
-      it "sets the calculator name to 'stamp_duty' when stamp_duties controller" do
-        allow(helper).to receive(:controller_name).and_return('stamp_duties')
-        expect(helper.calculator_name).to eq('stamp_duty')
+      context 'when repayments controller' do
+        let(:controller_name) { 'repayments' }
+
+        it 'returns "mortgage_calculator"' do
+          expect(helper.calculator_name).to eq('mortgage_calculator')
+        end
       end
 
-      it "sets the calculator name to 'affordability' when affordabilities controller" do
-        allow(helper).to receive(:controller_name).and_return('affordabilities')
-        expect(helper.calculator_name).to eq('affordability')
+      context 'when stamp duties controller' do
+        let(:controller_name) { 'stamp_duties' }
+
+        it 'returns "stamp_duty"' do
+          expect(helper.calculator_name).to eq('stamp_duty')
+        end
+      end
+
+      context 'when affordabilities controller' do
+        let(:controller_name) { 'affordabilities' }
+
+        it 'returns "affordability"' do
+          expect(helper.calculator_name).to eq('affordability')
+        end
+      end
+
+      context 'when land_and_buildings_transaction_taxes controller' do
+        let(:controller_name) do
+          'land_and_buildings_transaction_taxes'
+        end
+
+        it 'returns "land_and_buildings_transaction_tax"' do
+          expect(helper.calculator_name).to eq('land_and_buildings_transaction_tax')
+        end
+      end
+
+      context 'when land transaction taxes controller' do
+        let(:controller_name) do
+          'land_transaction_taxes'
+        end
+
+        it 'returns "land_transaction_tax"' do
+          expect(helper.calculator_name).to eq('land_transaction_tax')
+        end
       end
     end
 

@@ -4,7 +4,9 @@ module MortgageCalculator
       {
         'affordabilities' => 'affordability',
         'stamp_duties'    => 'stamp_duty',
-        'repayments'      => 'mortgage_calculator'
+        'repayments'      => 'mortgage_calculator',
+        'land_transaction_taxes' => 'land_transaction_tax',
+        'land_and_buildings_transaction_taxes' => 'land_and_buildings_transaction_tax'
       }[controller_name]
     end
 
