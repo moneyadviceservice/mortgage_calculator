@@ -1,0 +1,13 @@
+<div class="l-constrained elsewhere__container">
+  <% other_countries.each do |country| %>
+    <a class="elsewhere__item promo__link" href="<%= I18n.t("stamp_duty.elsewhere.#{country}.link") %>">
+      <div class="elsewhere__item-content">
+        <h3 class="promo__heading"><%= I18n.t("stamp_duty.elsewhere.#{country}.title") %></h3>
+        <p class="promo__content"><%= I18n.t("stamp_duty.elsewhere.#{country}.body") %></p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right elsewhere__arrow" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right"></use>
+      </svg>
+    </a>
+  <% end %>
+</div>

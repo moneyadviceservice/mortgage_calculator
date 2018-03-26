@@ -18,6 +18,11 @@ module MortgageCalculator
       end
     end
 
+    def other_countries
+      ['scotland', 'wales']
+    end
+    helper_method :other_countries
+
     private
 
     def set_rates

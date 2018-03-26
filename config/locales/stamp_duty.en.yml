@@ -10,10 +10,8 @@ en:
     pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
     heading: "Stamp Duty calculator"
     heading_results: "Stamp Duty Calculator - Your Results"
-    title: Calculate the Stamp Duty on your residential property
-    subtitle: Calculate the Stamp Duty on your residential property in England, Wales or Northern Ireland. You have to pay Stamp Duty (SDLT) if you buy a property costing more than £125,000 (%{amount} for additional homes). Use this calculator to work out how much Stamp Duty is payable.
-    subtitle_legislation_change: "Anyone purchasing an additional home including buy to let properties will have to pay an extra 3% surcharge on top of each stamp duty band."
-    second_subtitle: "Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland. LBTT rates will also attract a 3% surcharge for second homes."
+    title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
+    subtitle: Stamp Duty Land Tax (SDLT) is a tax on properties bought in England and Northern Ireland. You’ll need to pay it when you buy a residential property that costs more than £125,000. Use this calculator to work out how much Stamp Duty you’ll need to pay on your new home. You can also use it to work out how much you’ll pay on an additional property that costs more than %{amount}, like a buy to let or second home, which attracts an extra 3% charge.
     href_second_subtitle: "Calculate the LBTT payable."
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
     legislation_change: "Before 4 December 2014, you paid Stamp Duty at a single rate on the whole purchase price. If you exchanged contracts by midnight on 3 December and the transaction completes on 4 December or later, you can choose whether you pay Stamp Duty at the old or new rates."
@@ -25,6 +23,21 @@ en:
       option_isFTB: a first-time buyer
       option_isSecondHome: buying an additional or buy-to-let property
       tooltip_html: Stamp Duty is applied at different rates depending on whether you are a first-time buyer, buying your next home, or buying an additional or buy-to-let property. <br /><br />You are generally classified as a first-time buyer if you’re buying your only or main residence and you have never owned a property in the UK or abroad. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">Read more in our First-time buyer guide</a>.
+    elsewhere:
+      title: Buying in Scotland or Wales?
+      body: If you are buying in either of these countries then use the appropriate calculator to work out how much you will pay
+      england_ni:
+        title: Calculate Stamp Duty in England or Northern Ireland
+        body: Properties in England and Northen Ireland are still subject to Stamp Duty.
+        link: "/en/tools/house-buying/stamp-duty-calculator"
+      wales:
+        title: Calculate Land Transaction Tax for Wales
+        body: Land Transaction Tax (LTT) has replaced Stamp Duty in Wales.
+        link: "/en/tools/house-buying/land-transaction-tax-calculator-wales"
+      scotland:
+        title: Calculate Land and Buildings Transaction Tax for Scotland
+        body: Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland.
+        link: "/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
     recalculate: Recalculate
     how_calculated_toggle: "How is this calculated?"
     how_calculated_ftb: "First-time buyers are entitled to relief for the first £300,000 of Stamp Duty on properties up to a value of %{amount}."

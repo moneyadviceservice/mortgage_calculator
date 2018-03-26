@@ -10,10 +10,8 @@ cy:
     pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
     heading: "Cyfrifiannell treth stamp"
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
-    title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl"
-    second_subtitle: "Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy. Os ydych yn byw yn yr Alban, mae Treth Stamp wedi ei ddileu ond efallai y bydd angen i chi dalu Treth Trafodion Tir ac Adeiladau (LBTT)."
-    subtitle: Cyfrifwch y Dreth Stamp ar eich eiddo preswyl yng Nghymru, Lloegr neu Ogledd Iwerddon. Rhaid i chi dalu Treth Stamp (neu Dreth Dir y Dreth Stamp i roi ei henw’n llawn) os prynwch eiddo sy’n costio mwy na £125,000 (%{amount} ar gyfer cartrefi ychwanegol). Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd yn daladwy.
-    subtitle_legislation_change: "Bydd unrhyw un sy'n prynu cartref ychwanegol gan gynnwys eiddo prynu i osod yn gorfod talu ffi ychwanegol o 3% ar ben pob band treth stamp."
+    title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
+    subtitle: Mae Treth Dir y Dreth Stamp (SDLT) yn dreth ar eiddo a brynir yn Lloegr a Gogledd Iwerddon. Bydd angen i chi ei thalu pan fyddwch yn prynu eiddo preswyl sy'n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd angen i chi dalu ar eich cartref newydd. Gallwch hefyd ei ddefnyddio i gyfrifo faint fyddwch chi'n ei dalu ar eiddo atodol sy'n costio mwy na %{amount}, fel prynu i osod neu ail gartref, sy'n denu tâl ychwanegol o 3%.
     second_subtitle: "Mae Treth Trafodion Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Bydd trethi LBTT yn destun ffi ychwanegol o 3% hefyd ar gyfer ail gartrefi."
     href_second_subtitle: "Cyfrifwch yr LBTT sy'n daladwy"
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
@@ -26,6 +24,21 @@ cy:
       option_isFTB: prynu am y tro cyntaf
       option_isSecondHome: prynu eiddo atodol neu eiddo prynu-i-osod
       tooltip_html: Codir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar os ydych yn prynu am y tro cyntaf, yn prynu eich cartref nesaf neu'n prynu eiddo atodol neu eiddo prynu-i-osod. <br /><br />Yn gyffredinol, rydych yn cael eich dosbarthu yn brynwr tro cyntaf os ydych chi'n prynu eich unig neu brif gartref ac nad ydych erioed wedi bod yn berchen ar eiddo yn y Deyrnas Unedig na thramor. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Darllenwch fwy yn ein canllaw i brynwyr tro cyntaf</a>.
+    elsewhere:
+      title: Prynu yn yr Alban neu Cymru?
+      body: Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu
+      england_ni:
+        title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
+        body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
+        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      wales:
+        title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
+        body: Mae Treth Trafodiadau Tir ac (LTT) wedi disodli Treth Stamp yng Nghymru.
+        link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru
+      scotland:
+        title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
+        body: Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban.
+        link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at %{amount}."
