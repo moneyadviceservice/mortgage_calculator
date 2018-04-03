@@ -159,19 +159,6 @@ input.stamp-duty__input {
   }
 }
 
-.stamp-duty__description {
-  overflow: hidden;
-  margin-bottom: $baseline-unit*6;
-}
-
-.stamp-duty__description-item {
-  @include column(12);
-
-  @include respond-to($mortgagecalc_mq-s) {
-    @include column(6);
-  }
-}
-
 .stamp-duty__have-you-tried {
   @include body(20, 24);
   margin-top: $baseline-unit*5;

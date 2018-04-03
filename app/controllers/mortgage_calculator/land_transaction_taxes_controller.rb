@@ -13,5 +13,10 @@ module MortgageCalculator
       land_transaction_tax_path
     end
     helper_method :calculator_form_path
+
+    def other_countries
+      ['england_ni', 'scotland']
+    end
+    helper_method :other_countries
   end
 end

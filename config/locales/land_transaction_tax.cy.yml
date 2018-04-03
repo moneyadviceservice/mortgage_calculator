@@ -22,14 +22,6 @@ cy:
     elsewhere:
       title: "Prynu yn Lloegr, Gogledd Iwerddon neu'r Alban?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
-      england_ni:
-        title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
-        body: "Rhaid talu Treth Stamp (SDLT) ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
-      scotland:
-        title: 'Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban'
-        body: 'Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban'
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Trafodiadau Tir (LTT) ar gyfraddau gwahanol, yn ddibynnol ar y band mae’r pris prynu ynddo. Er enghraifft, ni fyddai rhywun yn prynu eiddo am £280,000 yn talu treth ar werth yr eiddo hyd at £180,000, 3.5% o dreth ar werth yr eiddo rhwng £180,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, byddai cyfanswm yr atebolrwydd treth ar gyfer Treth Trafodiadau Tir ac Adeiladau (LTT) yn £3,950 gan roi cyfradd dreth effeithiol o 1.41% (cyfartaledd cyfradd canrannol y dreth a dalwyd)."
     how_calculated_additional: "Bydd unrhyw un sy’n prynu ail gartref, gan gynnwys eiddo prynu-i-osod, yn talu 3% ychwanegol ar ben y band cyfradd safonol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu y byddai cyfanswm y dreth stamp yn £12,350 gan roi cyfradd treth effeithiol o 4.41%."
