@@ -31,14 +31,15 @@ Feature: Land Transaction Tax Calculator
     Then I see the stamp duty I will have to pay is "£<duty>"
 
   Examples:
-    | price   | duty    | effective tax |
-    | 39000   | 0       | 0.00%         |
-    | 40000   | 0       | 0.00%         |
-    | 179000  | 0       | 0.00%         |
-    | 260000  | 2,950   | 1.13%         |
-    | 450000  | 13,700  | 3.04%         |
-    | 800000  | 41,200  | 5.15%         |
-    | 2000000 | 171,200 | 8.56%         |
+    | price   | duty       | effective tax |
+    | 39000   | 0          | 0.00%         |
+    | 40000   | 0          | 0.00%         |
+    | 179000  | 0          | 0.00%         |
+    | 260000  | 2,950      | 1.13%         |
+    | 333333  | 6,616.65   | 1.98%         |
+    | 467895  | 15,042.13  | 3.21%         |
+    | 800000  | 41,200     | 5.15%         |
+    | 2000000 | 171,200    | 8.56%         |
 
   Scenario: I recalculate for next home
     When I enter a house price of 260000
@@ -55,10 +56,10 @@ Feature: Land Transaction Tax Calculator
     When I enter a house price of 260000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£2,950"
-    Then I reenter my house price with "426000"
+    And I see the stamp duty I will have to pay is "£2,950.00"
+    Then I reenter my house price with "333333"
     And I click next again
-    And I see the stamp duty I will have to pay is "£11,900"
+    And I see the stamp duty I will have to pay is "£6,616.65"
 
   Scenario Outline: Buy to let buyer
     Given I am an additional or buy-to-let property buyer
