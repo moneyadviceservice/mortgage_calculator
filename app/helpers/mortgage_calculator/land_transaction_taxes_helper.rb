@@ -19,6 +19,7 @@ module MortgageCalculator
     def calculator_config_json
       calculator = MortgageCalculator::LandTransactionTax
       {
+        tool: 'ltt',
         standard: calculator::STANDARD_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD

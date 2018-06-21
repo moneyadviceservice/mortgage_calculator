@@ -19,12 +19,16 @@ module MortgageCalculator
       self.buyer_type = buyer_type
     end
 
-    %i[price tax_due total_due].each do |field|
-      define_method "#{field}_formatted" do
-        number_to_currency(
-          public_send(field).presence || 0, unit: '', precision: 0
-        )
-      end
+    def price_formatted
+      format_currency(price || 0)
+    end
+
+    def tax_due_formatted
+      format_currency(tax_due || 0)
+    end
+
+    def total_due_formatted
+      format_currency(total_due || 0)
     end
 
     def tax_due
@@ -82,6 +86,10 @@ module MortgageCalculator
 
     def price_in_band?(band_end)
       band_end.nil? || price <= band_end
+    end
+
+    def format_currency(value, precision = 0)
+      number_to_currency(value, unit: '', precision: precision)
     end
   end
 end
