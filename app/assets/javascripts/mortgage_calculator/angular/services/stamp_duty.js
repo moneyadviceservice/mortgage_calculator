@@ -69,7 +69,11 @@ App.factory('StampDuty', function() {
           totalTax += this.propertyPrice * (this.secondHomeTaxRate / 100);
         }
 
-        return Math.floor(totalTax);
+        if (cfg.tool === 'ltt') {
+          return totalTax;
+        } else {
+          return Math.floor(totalTax);
+        }
       },
 
       totalPurchase : function() {
