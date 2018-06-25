@@ -22,7 +22,7 @@ module MortgageCalculator
     %i[price tax_due total_due].each do |field|
       define_method "#{field}_formatted" do
         number_to_currency(
-          public_send(field).presence || 0, unit: '', precision: 0
+          public_send(field).presence || 0, unit: '', precision: 2
         )
       end
     end
@@ -77,7 +77,7 @@ module MortgageCalculator
       rate += SECOND_HOME_ADDITIONAL_TAX if second_home_taxable?
       upper_limit = price_in_band?(band_end) ? price : band_end
       amount_to_tax = upper_limit - band_start.floor
-      (amount_to_tax * rate / 100).floor
+      (amount_to_tax * rate / 100)
     end
 
     def price_in_band?(band_end)
