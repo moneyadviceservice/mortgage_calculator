@@ -361,9 +361,9 @@ describe MortgageCalculator::StampDuty do
         let(:buyer_type) { 'isNextHome' }
 
         it 'should round down to the nearest GBP' do
-          expect(subject.tax_due).to eql(5000.95)
+          expect(subject.tax_due).to eql(5000)
         end
-        its(:total_due) { is_expected.to eql(305_019.95) }
+        its(:total_due) { is_expected.to eql(305_019) }
       end
 
       context 'and is first time buy' do
@@ -371,9 +371,9 @@ describe MortgageCalculator::StampDuty do
         let(:buyer_type) { 'isFTB' }
 
         it 'should round down to the nearest GBP' do
-          expect(subject.tax_due).to eql(5000.6)
+          expect(subject.tax_due).to eql(5000)
         end
-        its(:total_due) { is_expected.to eql(405_012.6) }
+        its(:total_due) { is_expected.to eql(405_012) }
       end
 
       context 'and is a second home' do
@@ -381,9 +381,9 @@ describe MortgageCalculator::StampDuty do
         let(:buyer_type) { 'isSecondHome' }
 
         it 'should round down to the nearest GBP' do
-          expect(subject.tax_due).to eql(72304.66)
+          expect(subject.tax_due).to eql(72304)
         end
-        its(:total_due) { is_expected.to eq(1_061_186.66) }
+        its(:total_due) { is_expected.to eq(1_061_186) }
       end
     end
   end
