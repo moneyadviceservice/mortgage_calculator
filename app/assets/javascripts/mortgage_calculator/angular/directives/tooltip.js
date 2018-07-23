@@ -7,7 +7,7 @@ App.directive('ngTooltip', function() {
       '$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse) {
         var tooltipID = $element.attr('id'),
             $inputTarget = $('[aria-describedby="' + tooltipID + '"]'),
-            hiddenClass = 'tooltip--hidden',
+            hiddenClass = 'is-hidden',
             persistOnScreen = $element.attr('data-tooltip-persist'),
             debounceTimer;
 
