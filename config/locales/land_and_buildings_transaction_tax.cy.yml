@@ -6,6 +6,7 @@ cy:
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
+    holding_message_html: 'Mae’r gyfrifiannell hon yn cael ei datblygu ar hyn o bryd i gynnwys Gostyngiad Prynwyr Cyntaf, mae cyfrifiannell arall ar gael ar <a href="%{link}">Revenue Scotland</a>.'
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
     heading: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
     heading_description: "Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Os ydych chi'n prynu eiddo preswyl gwerth dros £145,000, bydd yn rhaid i chi dalu LBTT. Mae’r gyfrifiannell hon yn cyfrifo faint o Dreth Trafodiadau Tir ac Adeiladau fydd angen i chi dalu ar eich cartref newydd.
