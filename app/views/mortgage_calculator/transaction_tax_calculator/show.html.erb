@@ -4,6 +4,8 @@
   </script>
 <% end %>
 
+<%= render 'global_alert' %>
+
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
   <% resource.errors.full_messages.each do |message| %>
     <span style="color:red;"><%= message %></span>
