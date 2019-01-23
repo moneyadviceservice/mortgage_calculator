@@ -14,6 +14,8 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug'
+  gem 'danger', require: false
+  gem 'danger-rubocop', require: false
   gem 'rubocop', require: false
 end
 
