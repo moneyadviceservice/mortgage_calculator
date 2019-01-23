@@ -1,0 +1,30 @@
+#!/bin/bash -l
+
+set -e
+
+if [ -f /.dockerenv ]; then
+    source ~/.bashrc
+    rvm use default
+fi
+
+export RAILS_ENV=build
+export BUNDLE_WITHOUT="development:test"
+exit_code=0
+
+function run {
+    declare -a build_command=("$@")
+    echo ''
+    echo "=== Running \`${build_command[*]}\`"
+    if ! ${build_command[*]}; then
+        echo "=== This build failed."
+        exit_code=1
+    fi
+}
+
+run bower cache clean --allow-root
+run bundle install
+run bowndler install --production --allow-root
+run gem build *.gemspec
+run gem inabox *.gem -g http://gems.dev.mas.local
+
+exit "$exit_code"

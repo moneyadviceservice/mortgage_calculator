@@ -2,10 +2,11 @@
   "name": "mortgage-calculator",
   "dependencies": {
     "karma": "^1.7.0",
-    "karma-jasmine": "0.1.6",
     "karma-growl-reporter": "0.1.1",
-    "phantomjs-prebuilt": "2.1.16",
-    "karma-phantomjs-launcher": "1.0.4"
+    "karma-jasmine": "0.1.6",
+    "karma-phantomjs-launcher": "1.0.4",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "2.1.16"
   },
   "devDependencies": {
     "phantomjs-prebuilt": "2.1.16"
