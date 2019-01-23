@@ -32,12 +32,17 @@ function info {
     fi
 }
 
-run npm install
-run bundle install
+run npm install --quiet
+run bundle install --quiet
+run bundle update brakeman --quiet
 run bundle exec bowndler update --allow-root
-run bundle exec rspec
-run bundle exec cucumber
+run bundle exec rspec -f progress
+run bundle exec cucumber -f progress
 run bundle exec rake app:karma:run_once
-info brakeman -q --no-pager --ensure-latest
+run brakeman -q --no-pager --ensure-latest
+
+if [ -f /.dockerenv ]; then
+  run bundle exec danger --dangerfile=jenkins/Dangerfile --verbose
+fi
 
 exit "$exit_code"
