@@ -13,6 +13,7 @@ gem 'meta-tags'
 group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman', require: false
   gem 'byebug'
   gem 'danger', require: false
   gem 'danger-rubocop', require: false
