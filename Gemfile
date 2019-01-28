@@ -3,6 +3,8 @@ source "https://rubygems.org"
 
 gemspec
 
+ruby '2.5.3'
+
 gem 'rails', '4.2.10'
 
 gem 'bowndler'
