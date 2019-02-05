@@ -3,6 +3,8 @@ source "https://rubygems.org"
 
 gemspec
 
+ruby '2.5.3'
+
 gem 'rails', '4.2.10'
 
 gem 'bowndler'
@@ -22,7 +24,6 @@ group :test, :development do
 end
 
 group :test do
-  gem 'brakeman', require: false
   gem 'capybara', '2.18.0'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
