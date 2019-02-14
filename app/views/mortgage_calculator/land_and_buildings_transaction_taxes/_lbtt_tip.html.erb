@@ -1,0 +1,22 @@
+<div class="mortgagecalc__panel--full">
+  <div ng-show="expandedStampDutyInformation" class="mortgagecalc__tip">
+    <div class="stamp-duty stamp-duty__calculation-explanation">
+      <% if first_time_buyer? %>
+        <div ng-hide="js" class="stamp-duty__explanation-firsttimebuyer ng-hide is-active">
+          <%= render 'first_time_buyer_explanation' %>
+        </div>
+      <% else %>
+        <div ng-hide="js" class="stamp-duty__explanation-nexthome ng-hide is-active">
+          <%= render 'next_home_buyer_explanation' %>
+        </div>
+      <% end %>
+
+      <div class="rendered-from-js stamp-duty__explanation-firsttimebuyer">
+        <%= render 'first_time_buyer_explanation' %>
+      </div>
+      <div class="rendered-from-js stamp-duty__explanation-nexthome">
+        <%= render 'next_home_buyer_explanation' %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ module UI
       element :buyer_type, "form.step_one select[name='buyer_type']"
       element :property_price, "form.step_one input[name='land_and_buildings_transaction_tax[price]']"
       element :property_price_step_two, "form.step_two input[name='land_and_buildings_transaction_tax[price]']"
+      element :next, "form.step_one input[type=submit]"
     end
   end
 end

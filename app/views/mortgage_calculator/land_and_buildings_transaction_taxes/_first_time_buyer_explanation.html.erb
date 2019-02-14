@@ -1,0 +1,25 @@
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb', amount: ftb_threshold) %></p>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_2') %></p>
+<ul class="list stamp-duty__calculation-explanation-list">
+  <% I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_list').each do |ftb_list| %>
+    <li><%= ftb_list %></li>
+  <% end %>
+</ul>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_3') %></p>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_4', amount: ftb_threshold) %></p>
+
+<%= render 'first_time_buyer_table' %>
+
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_5', amount: ftb_threshold) %></p>
+<ul class="list stamp-duty__calculation-explanation-list">
+  <% I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_default_list').each do |default_list| %>
+    <li><%= default_list %></li>
+  <% end %>
+</ul>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_6') %></p>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_ftb_7') %></p>
+
+<%= render 'bands_table', rates: @rates %>
+
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_extra', amount: second_home_threshold) %></p>
+

@@ -1,0 +1,6 @@
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated') %></p>
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_additional') %></p>
+
+<%= render 'bands_table', rates: @rates %>
+
+<p><%= I18n.t('land_and_buildings_transaction_tax.how_calculated_extra', amount: second_home_threshold) %></p>

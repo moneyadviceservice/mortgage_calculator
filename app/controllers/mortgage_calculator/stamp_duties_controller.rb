@@ -4,7 +4,7 @@ module MortgageCalculator
     before_action :set_rates
 
     def show
-      @stamp_duty = StampDuty.new
+      @stamp_duty = CALCULATOR.new
     end
 
     def create

@@ -1,0 +1,34 @@
+<table class="mortgagecalc__table stamp-duty__ftb-table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__price">
+        <%= I18n.t('land_and_buildings_transaction_tax.table.property_price_header') %>
+      </th>
+      <th class="mortgagecalc__table__rate">
+        <%= I18n.t('land_and_buildings_transaction_tax.table.rate_header') %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ftb_rates.each do |b| %>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          <%= band(b[:start], b[:end]) %>
+        </td>
+        <td class="mortgagecalc__table__rate">
+          <%= b[:rate] %>
+          <%= I18n.t('land_and_buildings_transaction_tax.results.sentence_suffix') %>
+        </td>
+      </tr>
+    <% end %>
+
+    <tr>
+      <td class="mortgagecalc__table__price">
+        <%= formatted_currency(@ftb_rates.last[:end]) %>+
+      </td>
+      <td class="mortgagecalc__table__rate">
+        <%= I18n.t('land_and_buildings_transaction_tax.table.standard_rates_apply') %>
+      </td>
+    </tr>
+  </tbody>
+</table>

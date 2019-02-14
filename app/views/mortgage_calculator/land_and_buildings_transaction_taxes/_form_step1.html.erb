@@ -1,6 +1,6 @@
-<%= form_for @stamp_duty,
-  url: stamp_duty_path,
-  html: {
+<%= form_for @lbtt, 
+  url: land_and_buildings_transaction_tax_path,
+  html: { 
     name: 'stamp_duty_form',
     role: 'form',
     class: 'form step_one stamp-duty__step-one',
@@ -10,32 +10,32 @@
   <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
     <%= t('stamp_duty.select.label') %>
     <%= f.select(:buyer_type, [
-      [t('stamp_duty.select.option_prompt'), ''],
-      [t('stamp_duty.select.option_isNextHome'), 'isNextHome'],
-      [t('stamp_duty.select.option_isFTB'), 'isFTB'],
-      [t('stamp_duty.select.option_isSecondHome'), 'isSecondHome']
+      [t('land_and_buildings_transaction_tax.select.option_prompt'), ''],
+      [t('land_and_buildings_transaction_tax.select.option_isNextHome'), 'isNextHome'],
+      [t('land_and_buildings_transaction_tax.select.option_isFTB'), 'isFTB'],
+      [t('land_and_buildings_transaction_tax.select.option_isSecondHome'), 'isSecondHome']
       ], {}, {'ng-model' => 'stampDuty.buyerType'}
     )%>
     <span data-dough-component="PopupTip">
       <%= popup_tip_trigger options: {
-        text: t('stamp_duty.tooltip_show')
+        text: t('land_and_buildings_transaction_tax.tooltip_show')
       } %>
       <%= popup_tip_content options: {
-        text: t('stamp_duty.select.tooltip_html'),
+        text: t('land_and_buildings_transaction_tax.select.tooltip_html'),
         classname: 'details__helper',
-        tooltip_hide: t('stamp_duty.tooltip_hide')
+        tooltip_hide: t('land_and_buildings_transaction_tax.tooltip_hide')
       } %>
     </span>
   <% end %>
 
   <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
-    <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
+    <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'land_and_buildings_transaction_tax.describe_price_field' %></div>
 
     <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
       <%= f.text_field :price,
-                       :value => @stamp_duty.price_formatted,
+                       :value => @lbtt.price_formatted,
                        "autofocus" => '',
                        "ng-model" => "stampDuty.propertyPrice",
                        "placeholder" => "0",
@@ -45,7 +45,7 @@
                        "class" => 'stamp-duty__input' %>
     </span>
 
-      <%= f.submit I18n.t("stamp_duty.next"),
+      <%= f.submit I18n.t("land_and_buildings_transaction_tax.next"),
       class: "button button--primary stamp-duty__submit",
         'ng-click' => 'navigateAndFocus($event)',
         'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',

@@ -1,0 +1,37 @@
+<% content_for(:head) do %>
+  <script>
+   window.calculator_config = <%= raw calculator_config_json %>;
+  </script>
+<% end %>
+
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
+  <% @lbtt.errors.full_messages.each do |m| %>
+    <span style="color:red;"><%= m %></span>
+  <% end %>
+  <div wizard on-finish="finishedWizard()" hide-indicators='true'>
+    <div wz-step class="ng-hide">
+      <div class="stamp-duty__container">
+        <h1 class="stamp-duty__heading"><%= I18n.t('land_and_buildings_transaction_tax.heading') %></h1>
+        <h2 class="intro stamp-duty__subheading"><%= I18n.t('land_and_buildings_transaction_tax.title') %></h2>
+        <p><%= I18n.t('land_and_buildings_transaction_tax.subtitle', amount: second_home_threshold) %></p>
+        <%= render 'form_step1' %>
+
+        <hr />
+
+        <h2><%= I18n.t('land_and_buildings_transaction_tax.elsewhere.title') %></h2>
+        <p><%= I18n.t('land_and_buildings_transaction_tax.elsewhere.body') %></p>
+      </div>
+
+      <%= render 'mortgage_calculator/shared/links_to_other_tools' %>
+    </div>
+
+    <div wz-step class="ng-hide">
+      <div class="stamp-duty__container">
+        <div class="rendered-from-js">
+          <h1 class="stamp-duty__heading"><%= I18n.t('land_and_buildings_transaction_tax.heading_results') %></h1>
+          <%= render 'form_step2' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

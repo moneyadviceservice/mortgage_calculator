@@ -38,6 +38,10 @@ Then(/^I see the title for the results page$/) do
   expect(@stamp_duty.h1.first).to have_content('Stamp Duty Calculator - Your Results')
 end
 
+Then("I see the title for the {string} results page") do |calculator|
+  expect(@stamp_duty.h1.first).to have_content("#{calculator} calculator - Your Results")
+end
+
 Then(/^I reenter my house price with "(.*?)"$/) do |amount|
   @stamp_duty.property_price_step_two.set amount
 end

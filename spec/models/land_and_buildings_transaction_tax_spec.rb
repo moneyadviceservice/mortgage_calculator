@@ -50,6 +50,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 0' do
       let(:price) { 0 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to be_zero }
+      end
+
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -69,6 +77,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
     context 'when house price is 39000' do
       let(:price) { 39_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(39_000) }
+      end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
@@ -90,6 +106,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 40000' do
       let(:price) { 40_000 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(40_000) }
+      end
+
       context 'and is next home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -109,6 +133,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
     context 'when house price is 145000' do
       let(:price) { 145_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to be_zero }
+        its(:percentage_tax) { is_expected.to be_zero }
+        its(:total_due) { is_expected.to eq(145_000) }
+      end
 
       context 'and is next home' do
         let(:buyer_type) { 'isNextHome' }
@@ -130,6 +162,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 185000.00' do
       let(:price) { 185_000 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(200) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.11) }
+        its(:total_due) { is_expected.to eq(185_200) }
+      end
+
       context 'and is next home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -149,6 +189,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
     context 'when house price is 275000' do
       let(:price) { 275_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(2750) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(1.00) }
+        its(:total_due) { is_expected.to eql(277_750) }
+      end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
@@ -170,6 +218,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 300,000' do
       let(:price) { 300_000 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(4000) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(1.33) }
+        its(:total_due) { is_expected.to eql(304_000) }
+      end
+
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -189,6 +245,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
     context 'when house price is 490,000' do
       let(:price) { 490_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(21750) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.44) }
+        its(:total_due) { is_expected.to eql(511_750) }
+      end
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
@@ -210,6 +274,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 510000.00' do
       let(:price) { 510_000 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(23750) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.66) }
+        its(:total_due) { is_expected.to eql(533_750) }
+      end
+
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -230,6 +302,14 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     context 'when house price is 937500' do
       let(:price) { 937_500 }
 
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(70250) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.49) }
+        its(:total_due) { is_expected.to eql(1_007_750) }
+      end
+
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
@@ -249,6 +329,15 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
     context 'when house price is 2100000' do
       let(:price) { 2_100_000 }
+
+      context 'and is first time buy' do
+        let(:buyer_type) { 'isFTB' }
+
+        its(:tax_due) { is_expected.to eql(209_750) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(9.99) }
+        its(:total_due) { is_expected.to eql(2_309_750) }
+      end
+
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }

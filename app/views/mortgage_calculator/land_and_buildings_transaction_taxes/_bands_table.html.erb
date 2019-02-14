@@ -1,0 +1,18 @@
+<table class="mortgagecalc__table stamp-duty__table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__price"><%= I18n.t("land_and_buildings_transaction_tax.table.property_price_header") %></th>
+      <th class="mortgagecalc__table__rate"><%= I18n.t("land_and_buildings_transaction_tax.table.rate_header") %></th>
+      <th class="mortgagecalc__table__extra"><%= I18n.t("land_and_buildings_transaction_tax.table.extra_rate_header") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rates.each do |rate| %>
+      <tr>
+        <td class="mortgagecalc__table__price"><%= band(rate[:start], rate[:end]) %></td>
+        <td class="mortgagecalc__table__rate"><%= rate[:rate] %>%</td>
+        <td class="mortgagecalc__table__extra"><%= second_home_rate(rate[:rate]) %>%</td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
