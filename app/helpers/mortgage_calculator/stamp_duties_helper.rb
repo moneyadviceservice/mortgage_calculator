@@ -33,6 +33,7 @@ module MortgageCalculator
     def calculator_config_json
       calculator = MortgageCalculator::StampDuty
       {
+        tool: 'stampDuty',
         standard: calculator::STANDARD_BANDS,
         ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,

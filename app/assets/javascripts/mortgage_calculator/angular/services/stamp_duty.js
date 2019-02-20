@@ -25,7 +25,7 @@ App.factory('StampDuty', function() {
           $howcalculatedNextHome.removeClass('is-active');
           $howcalculatedFTB.addClass('is-active');
 
-          if (this.propertyPrice <= this.firstTimeBuyerThreshold) {
+          if (this.propertyPrice <= this.firstTimeBuyerThreshold || cfg.tool == 'lbtt') {
             rates = this.rates.ftb;
             $conditionalMessage.removeClass('is-active');
           } else {
