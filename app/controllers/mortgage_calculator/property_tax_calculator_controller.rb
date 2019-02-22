@@ -16,7 +16,7 @@ module MortgageCalculator
     def bands_to_use
       calculator.banding_for(calculator::STANDARD_BANDS)
     end
-    helper_method :standard_rates
+    helper_method :bands_to_use
 
     private
 

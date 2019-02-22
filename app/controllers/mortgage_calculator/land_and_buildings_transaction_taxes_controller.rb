@@ -14,7 +14,6 @@ module MortgageCalculator
     end
     helper_method :calculator_form_path
 
-
     def other_countries
       ['england_ni', 'wales']
     end

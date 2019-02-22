@@ -338,7 +338,6 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
         its(:total_due) { is_expected.to eql(2_309_750) }
       end
 
-
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 

@@ -11,7 +11,7 @@ module MortgageCalculator
     end
 
     def first_time_buyer?
-      @lbtt.first_time_buy?
+      resource.first_time_buy?
     end
 
     def second_home_threshold
@@ -33,7 +33,7 @@ module MortgageCalculator
     end
 
     def outside_first_time_rate?
-      @lbtt.first_time_ineligible?
+      resource.first_time_ineligible?
     end
 
     def ftb_threshold

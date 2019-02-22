@@ -5,14 +5,6 @@ cy:
       description: "Defnyddiwch ein Cyfrifiannell Morgais i ganfod faint fydd eich taliadau morgais misol yn cynnwys yr ad-daliad a'r taliad llog."
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais"
     tool_name: "cyfrifiannell-morgais-newydd"
-    budget_warning:
-      heading: "Sylwer:"
-      intro: "Yn dilyn cyhoeddiad y Gyllideb ar 22 Tachwedd Os ydych yn brynwr tro cyntaf:"
-      outro: "Mae’r newid hwn yn berthnasol i brynwyr yng Nghymru, Lloegr a Gogledd Iwerddon. Byddwn yn diweddaru’r offeryn i adlewyrchu’r polisi newydd ar y Dreth Stamp dros y dyddiau nesaf."
-      list_html: |
-        <li>Ni fyddwch yn talu Treth Stamp mwyach ar y £300,000 cyntaf wrth brynu eiddo sy’n werth hyd at £500,000.</li>
-        <li>Rhwng £300,000 a £500,000 bydd y gyfradd safonol o 5% yn berthnasol.</li>
-        <li>Os yw pris prynu’ch eiddo dros £500,000 ni fydd yr eithriad hwn yn berthnasol a byddwch yn talu’r cyfraddau safonol o’r Dreth Stamp.</li>
     activemodel:
       attributes:
         mortgage_calculator/repayment:

@@ -31,6 +31,7 @@ module MortgageCalculator
 
         return BigDecimal.new("0") if input.blank?
         return nil unless /\A[0-9, ]*(\.)?(\d)*\z/ =~ input.to_s
+
         BigDecimal(input.to_s.gsub(",",""))
       end
 

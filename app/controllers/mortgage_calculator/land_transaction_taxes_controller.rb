@@ -12,9 +12,8 @@ module MortgageCalculator
           .permit(:price, :buyer_type)
           .symbolize_keys
       )
-      unless @ltt.valid?
-        render :show
-      end
+      
+      render :show unless @ltt.valid?
     end
 
     def standard_rates

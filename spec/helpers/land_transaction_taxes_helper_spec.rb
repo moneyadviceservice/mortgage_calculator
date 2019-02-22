@@ -16,7 +16,7 @@ module MortgageCalculator
         end
       end
 
-      context 'for the maximum band' do
+      context 'with the maximum band' do
         it 'returns text for the maximum band' do
           expect(band(1500001, nil)).to eq('£1,500,000+')
         end

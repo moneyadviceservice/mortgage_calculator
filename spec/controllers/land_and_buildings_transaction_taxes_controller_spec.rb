@@ -46,7 +46,7 @@ module MortgageCalculator
     describe '#calculator_form_path' do
       it 'returns the respective form path' do
         expect(controller.calculator_form_path).to eq(
-          '/en/mortgage_calculator/land_and_buildings_transaction_tax-calculator-scotland'
+          '/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland'
         )
       end
     end
