@@ -68,7 +68,7 @@ module MortgageCalculator
 
     protected
 
-    def bands
+    def bands_to_use
       Raise 'bands must be implemented'
     end
 

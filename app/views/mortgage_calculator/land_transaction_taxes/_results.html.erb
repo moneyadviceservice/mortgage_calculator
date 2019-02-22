@@ -1,20 +1,20 @@
 <div class="stamp-duty__results">
   <div class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
     <div ng-hide="js">
-      <% key = resource.second_home? ? 'second_title' : 'title' %>
-      <%= I18n.t("#{i18n_locale_namespace}.results.#{key}") %>
+      <% key = @ltt.second_home? ? 'second_title' : 'title' %>
+      <%= I18n.t("land_transaction_tax.results.#{key}") %>
     </div>
     <div class="hidden-unless-js">
       <span ng-if="stampDuty.isSecondHome">
-        <%= I18n.t("#{i18n_locale_namespace}.results.second_title") %>
+        <%= I18n.t("land_transaction_tax.results.second_title") %>
       </span>
       <span ng-if="!stampDuty.isSecondHome">
-        <%= I18n.t("#{i18n_locale_namespace}.results.title") %>
+        <%= I18n.t("land_transaction_tax.results.title") %>
       </span>
     </div>
 
     <span ng-hide="js">
-      <%= number_to_currency resource.tax_due_formatted %>
+      <%= number_to_currency @ltt.tax_due_formatted %>
     </span>
     <span class="rendered-from-js">
       {{ stampDuty.cost() | customCurrency:"£" }}
@@ -22,18 +22,18 @@
   </div>
 
   <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide">
-    <%= I18n.t("#{i18n_locale_namespace}.results.sentence",
+    <%= I18n.t("land_transaction_tax.results.sentence",
               percentage: number_to_percentage(
-                resource.percentage_tax, precision: 2
+                @ltt.percentage_tax, precision: 2
               )
         )
     %>
   </p>
 
   <p class="rendered-from-js stamp-duty__results-tax-rate">
-    <%= I18n.t("#{i18n_locale_namespace}.results.sentence_prefix") %>
+    <%= I18n.t("land_transaction_tax.results.sentence_prefix") %>
     {{ stampDuty.percentageTax() | number: 2 }}
-    <%= I18n.t("#{i18n_locale_namespace}.results.sentence_suffix") %>
+    <%= I18n.t("land_transaction_tax.results.sentence_suffix") %>
   </p>
 
   <div>
@@ -44,9 +44,9 @@
                 ng-class="{ 'expander--expanded' : expandedStampDutyInformation }"
                 ng-click="toggleStampDutyExpanded($event)"
                 affects-height="click">
-      <%= I18n.t("#{i18n_locale_namespace}.how_calculated_toggle") %>
+      <%= I18n.t("land_transaction_tax.how_calculated_toggle") %>
       <span class="visually-hidden">
-        <%= I18n.t("#{i18n_locale_namespace}.results.click_to_expand") %>
+        <%= I18n.t("land_transaction_tax.results.click_to_expand") %>
       </span>
     </a>
     <%= render 'how_is_calculated_section' %>

@@ -1,5 +1,5 @@
-<%= form_for resource,
-  url: calculator_form_path,
+<%= form_for @ltt,
+  url: land_transaction_tax_path,
   html: {
     name: 'stamp_duty_form',
     role: 'form',
@@ -8,13 +8,13 @@
   } do |f| %>
 
   <%= f.label :buyer_type, class: 'stamp-duty__buyer-type' do %>
-    <%= t("#{i18n_locale_namespace}.select.label") %>
+    <%= t("land_transaction_tax.select.label") %>
     <%= f.select(
           :buyer_type,
           [
-            [t("#{i18n_locale_namespace}.select.option_prompt"), ''],
-            [t("#{i18n_locale_namespace}.select.option_isNextHome"), 'isNextHome'],
-            [t("#{i18n_locale_namespace}.select.option_isSecondHome"), 'isSecondHome']
+            [t("land_transaction_tax.select.option_prompt"), ''],
+            [t("land_transaction_tax.select.option_isNextHome"), 'isNextHome'],
+            [t("land_transaction_tax.select.option_isSecondHome"), 'isSecondHome']
           ],
           {},
           {
@@ -23,12 +23,12 @@
     ) %>
     <span data-dough-component="PopupTip">
       <%= popup_tip_trigger options: {
-        text: t("#{i18n_locale_namespace}.tooltip_show")
+        text: t("land_transaction_tax.tooltip_show")
       } %>
       <%= popup_tip_content options: {
-        text: t("#{i18n_locale_namespace}.select.tooltip_html"),
+        text: t("land_transaction_tax.select.tooltip_html"),
         classname: 'details__helper',
-        tooltip_hide: t("#{i18n_locale_namespace}.tooltip_hide")
+        tooltip_hide: t("land_transaction_tax.tooltip_hide")
       } %>
     </span>
   <% end %>
@@ -36,13 +36,13 @@
   <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
     <div class="visually-hidden" id="mc_accessibility_describe_price">
-      <%= t "#{i18n_locale_namespace}.describe_price_field" %>
+      <%= t "land_transaction_tax.describe_price_field" %>
     </div>
 
     <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
       <%= f.text_field :price,
-                       value: resource.price_formatted,
+                       value: @ltt.price_formatted,
                        "autofocus" => '',
                        "ng-model" => "stampDuty.propertyPrice",
                        "placeholder" => "0",
@@ -52,7 +52,7 @@
                        "class" => 'stamp-duty__input' %>
     </span>
 
-    <%= f.submit I18n.t("#{i18n_locale_namespace}.next"),
+    <%= f.submit I18n.t("land_transaction_tax.next"),
                  class: "button button--primary stamp-duty__submit",
                  'ng-click' => 'navigateAndFocus($event)',
                  'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
@@ -66,5 +66,5 @@
 <% end %>
 <hr />
 
-<h2><%= t("#{i18n_locale_namespace}.elsewhere.title") %></h2>
-<p><%= t("#{i18n_locale_namespace}.elsewhere.body") %></p>
+<h2><%= t("land_transaction_tax.elsewhere.title") %></h2>
+<p><%= t("land_transaction_tax.elsewhere.body") %></p>

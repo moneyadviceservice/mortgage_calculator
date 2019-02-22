@@ -4,31 +4,6 @@ module MortgageCalculator
   describe LandTransactionTaxesController do
     routes { MortgageCalculator::Engine.routes }
 
-    describe '#calculator' do
-      it 'returns land and buildings transaction tax' do
-        expect(controller.calculator).to be(
-          MortgageCalculator::LandTransactionTax
-        )
-      end
-    end
-
-    describe '#i18n_locale_namespace' do
-      it 'returns I18n key namespace' do
-        expect(controller.i18n_locale_namespace).to eq(
-          'land_transaction_tax'
-        )
-      end
-    end
-
-    describe '#calculator_form_path' do
-      it 'returns the respective form path' do
-        expect(controller.calculator_form_path).to eq(
-          '/en/mortgage_calculator/land-transaction-tax-calculator-wales'
-        )
-      end
-    end
-
-
     describe '#standard_rates' do
       it 'returns the rates for each band' do
         expect(controller.standard_rates).to eq(
@@ -65,12 +40,6 @@ module MortgageCalculator
             }
           ]
         )
-      end
-    end
-
-    describe '#i18n_locale_namespace' do
-      it 'returns land transaction tax' do
-        expect(controller.i18n_locale_namespace).to eq('land_transaction_tax')
       end
     end
 
