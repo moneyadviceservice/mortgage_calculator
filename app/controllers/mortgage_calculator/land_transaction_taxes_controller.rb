@@ -12,7 +12,7 @@ module MortgageCalculator
           .permit(:price, :buyer_type)
           .symbolize_keys
       )
-      
+
       render :show unless @ltt.valid?
     end
 

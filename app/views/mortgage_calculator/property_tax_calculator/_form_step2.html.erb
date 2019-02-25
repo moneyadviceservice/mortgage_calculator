@@ -57,7 +57,7 @@
 
   <% end %>
 
-  <%= render 'property_tax_to_pay_panel' if resource.valid? %>
+  <%= render 'property_tax_to_pay_panel', rates: rates if resource.valid? %>
 
   <div class="">
     <h2 class="mortgagecalc__heading stamp-duty__have-you-tried"><%= t("stamp_duty.next_steps.have_you_tried.title") %></h2>

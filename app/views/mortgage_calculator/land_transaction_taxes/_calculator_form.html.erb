@@ -1,4 +1,4 @@
-<%= form_for @ltt,
+<%= form_for ltt,
   url: land_transaction_tax_path,
   html: {
     name: 'stamp_duty_form',
@@ -42,7 +42,7 @@
     <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
       <%= f.text_field :price,
-                       value: @ltt.price_formatted,
+                       value: ltt.price_formatted,
                        "autofocus" => '',
                        "ng-model" => "stampDuty.propertyPrice",
                        "placeholder" => "0",

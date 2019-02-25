@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @ftb_rates.each do |b| %>
+    <% rates.each do |b| %>
       <tr>
         <td class="mortgagecalc__table__price">
           <%= band(b[:start], b[:end]) %>
@@ -24,7 +24,7 @@
 
     <tr>
       <td class="mortgagecalc__table__price">
-        <%= formatted_currency(@ftb_rates.last[:end]) %>+
+        <%= formatted_currency(rates.last[:end]) %>+
       </td>
       <td class="mortgagecalc__table__rate">
         <%= I18n.t("#{i18n_locale_namespace}.table.standard_rates_apply") %>
