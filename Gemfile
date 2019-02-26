@@ -16,9 +16,11 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
-  gem 'byebug'
   gem 'danger', require: false
   gem 'danger-rubocop', require: false
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'rb-readline'
   gem 'rubocop', '~> 0.63.1', require: false
   gem 'rubocop-rspec'
 end
@@ -28,6 +30,7 @@ group :test do
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
   gem 'cucumber-rails', '1.6.0'
+  gem 'launchy'
   gem 'mas-templating'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'

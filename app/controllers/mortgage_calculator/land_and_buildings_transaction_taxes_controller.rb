@@ -1,5 +1,5 @@
 module MortgageCalculator
-  class LandAndBuildingsTransactionTaxesController < ::MortgageCalculator::TransactionTaxCalculatorController
+  class LandAndBuildingsTransactionTaxesController < ::MortgageCalculator::PropertyTaxCalculatorController
     def calculator
       MortgageCalculator::LandAndBuildingsTransactionTax
     end

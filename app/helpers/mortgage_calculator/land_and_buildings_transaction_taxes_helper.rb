@@ -10,6 +10,10 @@ module MortgageCalculator
       rate + LandAndBuildingsTransactionTax::SECOND_HOME_ADDITIONAL_TAX
     end
 
+    def first_time_buyer?
+      resource.first_time_buy?
+    end
+
     def second_home_threshold
       formatted_currency(
         MortgageCalculator::LandAndBuildingsTransactionTax::SECOND_HOME_THRESHOLD
@@ -19,10 +23,21 @@ module MortgageCalculator
     def calculator_config_json
       calculator = MortgageCalculator::LandAndBuildingsTransactionTax
       {
+        tool: 'lbtt',
         standard: calculator::STANDARD_BANDS,
+        ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
-        second_home_threshold: calculator::SECOND_HOME_THRESHOLD
+        second_home_threshold: calculator::SECOND_HOME_THRESHOLD,
+        first_time_buyer_threshold: 0
       }.to_json
+    end
+
+    def outside_first_time_rate?
+      resource.first_time_ineligible?
+    end
+
+    def ftb_threshold
+      formatted_currency(0)
     end
 
     private

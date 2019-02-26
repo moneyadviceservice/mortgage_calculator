@@ -6,6 +6,7 @@ en:
       canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-transaction-tax-calculator-wales"
     tooltip_show: show help
     tooltip_hide: hide help
+    tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
     heading_description: "Stamp Duty has been replaced by Land Transaction Tax (LTT) for properties bought in Wales. LTT will apply to residential properties costing over £180,000. You can use this calculator to find the amount of Land Transaction Tax you’ll have to pay.
 

@@ -1,22 +1,40 @@
 module MortgageCalculator
-  class LandTransactionTaxesController < ::MortgageCalculator::TransactionTaxCalculatorController
-    def calculator
-      MortgageCalculator::LandTransactionTax
+  class LandTransactionTaxesController < MortgageCalculator::ApplicationController
+    CALCULATOR = MortgageCalculator::LandTransactionTax
+
+    def show
+      @ltt = CALCULATOR.new
     end
 
-    def i18n_locale_namespace
-      'land_transaction_tax'
-    end
-    helper_method :i18n_locale_namespace
+    def create
+      @ltt = CALCULATOR.new(
+        params.require(:land_transaction_tax)
+          .permit(:price, :buyer_type)
+          .symbolize_keys
+      )
 
-    def calculator_form_path
-      land_transaction_tax_path
+      render :show unless @ltt.valid?
     end
-    helper_method :calculator_form_path
+
+    def standard_rates
+      CALCULATOR.banding_for(CALCULATOR::STANDARD_BANDS)
+    end
+    helper_method :standard_rates
 
     def other_countries
       ['england_ni', 'scotland']
     end
     helper_method :other_countries
+
+    private
+
+    def category_id
+      'buying-a-home'
+    end
+    helper_method :category_id
+
+    def tool_name
+      I18n.translate('land_transaction_tax.tool_name')
+    end
   end
 end

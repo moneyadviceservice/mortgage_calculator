@@ -23,16 +23,17 @@ module MortgageCalculator
     end
 
     def first_time_buyer?
-      @stamp_duty.first_time_buy?
+      resource.first_time_buy?
     end
 
     def outside_first_time_rate?
-      @stamp_duty.first_time_ineligible?
+      resource.first_time_ineligible?
     end
 
     def calculator_config_json
       calculator = MortgageCalculator::StampDuty
       {
+        tool: 'stampDuty',
         standard: calculator::STANDARD_BANDS,
         ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,

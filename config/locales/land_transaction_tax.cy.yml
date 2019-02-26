@@ -6,6 +6,7 @@ cy:
       canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
+    tool_name: "treth-trafodiadau-tir"
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
     heading_description: "Mae Treth Stamp wedi ei ddisodli gan y Dreth Trafodiadau Tir (LTT) ar gyfer eiddo a brynir yng Nghymru. Bydd LTT yn berthnasol i eiddo preswyl sy'n costio dros £180,000. Gallwch ddefnyddio’r gyfrifiannell hon i ganfod faint o Dreth Trafodiadau Tir fydd rhaid i chi dalu. Gallwch hefyd gyfrifo cost LTT ar unrhyw eiddo atodol a brynwch dros £40,000, fel prynu i osod neu ail gartref, ble codir tâl atodol o 3% arnoch."
     heading_results: "Cyfrifiannell Treth Trafodiadau Tir - Eich canlyniadau"

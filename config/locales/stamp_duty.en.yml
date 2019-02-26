@@ -14,7 +14,6 @@ en:
     subtitle: Stamp Duty Land Tax (SDLT) is a tax on properties bought in England and Northern Ireland. You’ll need to pay it when you buy a residential property that costs more than £125,000. Use this calculator to work out how much Stamp Duty you’ll need to pay on your new home. You can also use it to work out how much you’ll pay on an additional property that costs more than %{amount}, like a buy to let or second home, which attracts an extra 3% charge.
     href_second_subtitle: "Calculate the LBTT payable."
     url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
-    legislation_change: "Before 4 December 2014, you paid Stamp Duty at a single rate on the whole purchase price. If you exchanged contracts by midnight on 3 December and the transaction completes on 4 December or later, you can choose whether you pay Stamp Duty at the old or new rates."
     next: Next
     select:
       label: I am

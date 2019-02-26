@@ -7,7 +7,7 @@
         </div>
       <% else %>
         <div ng-hide="js" class="stamp-duty__explanation-nexthome ng-hide is-active">
-          <%= render 'next_home_buyer_explanation' %>
+          <%= render 'next_home_buyer_explanation', rates: rates %>
         </div>
       <% end %>
 
@@ -15,7 +15,7 @@
         <%= render 'first_time_buyer_explanation' %>
       </div>
       <div class="rendered-from-js stamp-duty__explanation-nexthome">
-        <%= render 'next_home_buyer_explanation' %>
+        <%= render 'next_home_buyer_explanation', rates: rates %>
       </div>
     </div>
   </div>
