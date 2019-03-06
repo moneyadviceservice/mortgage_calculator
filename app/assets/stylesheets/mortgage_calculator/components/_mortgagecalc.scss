@@ -179,6 +179,25 @@
   }
 }
 
+.mortgagecalc__table__lbtt-price {
+  width: 34%;
+
+  @include respond-to($mq-xs-max) {
+    width: 25%;
+  }
+}
+
+.mortgagecalc__table__lbtt-standard-bill,
+.mortgagecalc__table__lbtt-ftb-relief-amount,
+.mortgagecalc__table__lbtt-ftb-total-amount{
+  width: 22%;
+  text-align: center;
+
+  @include respond-to($mq-xs-max) {
+    width: 25%;
+  }
+}
+
 .js {
   .label-follower--risk[type="text"],
   .label-follower--risk[type="number"],
