@@ -1,5 +1,7 @@
 module MortgageCalculator
   module LandAndBuildingsTransactionTaxesHelper
+    SAMPLE_JOURNEYS = [145_000, 155_000, 175_000, 250_000, 325_500, 750_500].freeze
+
     def band(num1, num2)
       num1 = num1.ceil
       return maximum_band(num1 - 1) if num2.nil?
@@ -21,7 +23,6 @@ module MortgageCalculator
     end
 
     def calculator_config_json
-      calculator = MortgageCalculator::LandAndBuildingsTransactionTax
       {
         tool: 'lbtt',
         standard: calculator::STANDARD_BANDS,
@@ -40,6 +41,17 @@ module MortgageCalculator
       formatted_currency(0)
     end
 
+    def buyer_journey_examples
+      SAMPLE_JOURNEYS.map do |purchase_price|
+        { 
+          purchase_price: formatted_currency(purchase_price),
+          standard_lbtt: formatted_currency(standard_lbtt(purchase_price)),
+          ftb_relief: ftb_relief(purchase_price),
+          ftb_lbtt: formatted_currency(ftb_lbtt(purchase_price))
+        }
+      end
+    end
+
     private
 
     def maximum_band(num)
@@ -51,6 +63,22 @@ module MortgageCalculator
 
     def formatted_currency(num)
       number_to_currency(num, precision: 0)
+    end
+
+    def standard_lbtt(price)
+      calculator.new(price: price, buyer_type: 'isNextHome').tax_due
+    end
+
+    def ftb_lbtt(price)
+      calculator.new(price: price, buyer_type: 'isFTB').tax_due
+    end
+
+    def ftb_relief(price)
+      formatted_currency(standard_lbtt(price) - ftb_lbtt(price))
+    end
+
+    def calculator
+      MortgageCalculator::LandAndBuildingsTransactionTax
     end
   end
 end

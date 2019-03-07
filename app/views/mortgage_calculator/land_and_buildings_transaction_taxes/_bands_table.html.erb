@@ -16,19 +16,19 @@
     </tr>
   </thead>
   <tbody>
-    <% rates.each do |rate| %>
+    <% buyer_journey_examples.each do |example| %>
       <tr>
         <td class="mortgagecalc__table__lbtt-price">
-          <%= band(rate[:start], rate[:end]) %>
+          <%= example[:purchase_price] %>
         </td>
         <td class="mortgagecalc__table__lbtt-standard-bill">
-          <%= rate[:rate] %>%
+          <%= example[:standard_lbtt] %>
         </td>
         <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
-          <%= second_home_rate(rate[:rate]) %>%
+          <%= example[:ftb_relief] %>
         </td>
         <td class="mortgagecalc__table__lbtt-ftb-total-amount">
-          <%= second_home_rate(rate[:rate]) %>%
+          <%= example[:ftb_lbtt] %>
         </td>
       </tr>
      <% end %>
