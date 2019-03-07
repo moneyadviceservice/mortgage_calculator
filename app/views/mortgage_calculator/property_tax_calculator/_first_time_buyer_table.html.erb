@@ -21,14 +21,15 @@
         </td>
       </tr>
     <% end %>
-
-    <tr>
-      <td class="mortgagecalc__table__price">
-        <%= formatted_currency(rates.last[:end]) %>+
-      </td>
-      <td class="mortgagecalc__table__rate">
-        <%= I18n.t("#{i18n_locale_namespace}.table.standard_rates_apply") %>
-      </td>
-    </tr>
+    <% if stamp_duty_calculator? %>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          <%= formatted_currency(rates.last[:end]) %>+
+        </td>
+        <td class="mortgagecalc__table__rate">
+          <%= I18n.t("#{i18n_locale_namespace}.table.standard_rates_apply") %>
+        </td>
+      </tr>
+    <% end %>
   </tbody>
 </table>

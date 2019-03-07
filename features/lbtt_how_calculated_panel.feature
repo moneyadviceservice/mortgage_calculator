@@ -10,7 +10,7 @@ Scenario: LBTT How is this calculated panel
   And I click on the How is this Calculated information icon
   Then I should see the values on the information panel as:
   | Purchase price | Standard LBTT bill | Amount of First-time Buyer Relief | Total to pay for a first-time buyer | 
-  | £145,000 | £0                 | £0                                |  £0                                 |
+  | Up to £145,000 | £0                 | £0                                |  £0                                 |
   | £155,000       | £200               | £200                              |  £0                                 |
   | £175,000       | £600               | £600                              |  £0                                 |
   | £250,000       | £2,100             | £600                              |  £1,500                             |

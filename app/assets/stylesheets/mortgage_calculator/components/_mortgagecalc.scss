@@ -191,7 +191,6 @@
 .mortgagecalc__table__lbtt-ftb-relief-amount,
 .mortgagecalc__table__lbtt-ftb-total-amount{
   width: 22%;
-  text-align: center;
 
   @include respond-to($mq-xs-max) {
     width: 25%;

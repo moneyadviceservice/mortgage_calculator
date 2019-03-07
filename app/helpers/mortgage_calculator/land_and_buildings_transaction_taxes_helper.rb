@@ -41,10 +41,14 @@ module MortgageCalculator
       formatted_currency(0)
     end
 
+    def ftb_starting_price
+      formatted_currency(calculator::FIRST_TIME_BUYER_BANDS.first[:threshold])
+    end
+
     def buyer_journey_examples
       SAMPLE_JOURNEYS.map do |purchase_price|
-        { 
-          purchase_price: formatted_currency(purchase_price),
+        {
+          purchase_price: formatted_price(purchase_price),
           standard_lbtt: formatted_currency(standard_lbtt(purchase_price)),
           ftb_relief: ftb_relief(purchase_price),
           ftb_lbtt: formatted_currency(ftb_lbtt(purchase_price))
@@ -65,12 +69,26 @@ module MortgageCalculator
       number_to_currency(num, precision: 0)
     end
 
+    def formatted_price(num)
+      threshold = calculator::STANDARD_BANDS.first[:threshold]
+
+      num <= threshold ? to_word(threshold) : formatted_currency(num)
+    end
+
+    def property_tax(price, buyer_type)
+      calculator.new(price: price, buyer_type: buyer_type).tax_due
+    end
+
     def standard_lbtt(price)
-      calculator.new(price: price, buyer_type: 'isNextHome').tax_due
+      property_tax(
+        price, MortgageCalculator::TaxCalculator::STANDARD_BUYER_TYPE
+      )
     end
 
     def ftb_lbtt(price)
-      calculator.new(price: price, buyer_type: 'isFTB').tax_due
+      property_tax(
+        price, MortgageCalculator::TaxCalculator::FIRST_TIME_BUYER_TYPE
+      )
     end
 
     def ftb_relief(price)
@@ -79,6 +97,10 @@ module MortgageCalculator
 
     def calculator
       MortgageCalculator::LandAndBuildingsTransactionTax
+    end
+
+    def to_word(num)
+      "Up to #{formatted_currency(num)}"
     end
   end
 end

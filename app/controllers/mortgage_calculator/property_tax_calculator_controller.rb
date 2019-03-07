@@ -1,7 +1,7 @@
 module MortgageCalculator
   class PropertyTaxCalculatorController < MortgageCalculator::ApplicationController
     before_action :set_rates
-    
+
     def resource
       @resource ||= calculator.new
     end
