@@ -27,22 +27,11 @@ en:
       title: "Buying in England, Northern Ireland or Wales?"
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
-    how_calculated_ftb: "First-time buyers are entitled to relief for the first £300,000 of Land and Buildings Transaction Tax on properties up to a value of %{amount}."
-    how_calculated_ftb_2: "For example, if you’re buying your first property for £350,000 you would pay:"
-    how_calculated_ftb_list:
-      - "no Land and Buildings Transaction Tax on the value of the property up to £175,000"
-      - "2% tax on the value between £175,001 and £250,000."
-      - "5% tax on the value between £250,001 and £325,000."
-      - "10% tax on the value between £325,001 and £750,000."
-    how_calculated_ftb_3: "In this case, the total amount of Land and Buildings Transaction Tax would be £2,500, giving an effective rate of 0.7%."
-    how_calculated_ftb_4: "For properties priced over %{amount}, no relief is available and you would pay Land and Buildings Transaction Tax on the full purchase price."
-    how_calculated_ftb_5: "If you're buying your next home or buying a property valued at over %{amount} you would pay:"
-    how_calculated_ftb_default_list:
-      - "no tax on the value of the property up to £125,000"
-      - "2% tax on the property value between £125,001 and £250,000"
-      - "5% tax on the property value between £250,001 and £550,000."
-    how_calculated_ftb_6: "In this case, the total amount of Land and Buildings Transaction Tax would be £17,500, giving an effective tax rate of 3.2%."
-    how_calculated_ftb_7: "These rates currently apply to Scotland"
+    how_calculated_ftb: Land and Buildings Transaction Tax (LBTT) is paid at different rates on residential property transactions and is dependent on the chargeable consideration (usually the purchase price) of your home. You don’t pay tax on the full amount, only the amount that falls into a certain band.
+    how_calculated_ftb_2: For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT. 
+    how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
+    how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
+    how_calculated_ftb_5: "For example:"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid)."
     how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £8,400, meaning the total stamp duty would be £12,000 giving an effective tax rate of 4.29%."
     how_calculated_extra: "* Properties under %{amount} are not subject to second home Additional Dwelling Supplement"
@@ -60,9 +49,11 @@ en:
       click_to_expand: Click to expand.
       FTB_conditional: "You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than %{amount}."
     table:
-      property_price_header: "Purchase price of property"
-      rate_header: "Rate of Land and Buildings Transaction Tax (LBTT)"
-      extra_rate_header: "Buy to Let/ Additional Dwelling Supplement (ADS)*"
+      property_price_header: "Purchase price"
+      rate_header: "Standard LBTT rate"
+      standard_bill_header: "Standard LBTT bill"
+      ftb_relief_amount_header: "Amount of First-time Buyer Relief"
+      ftb_total_amount_header: "Total to pay for a first-time buyer"
       standard_rates_apply: "Standard rates apply (see below)"
       max: "%{value}+"
     next_steps:
