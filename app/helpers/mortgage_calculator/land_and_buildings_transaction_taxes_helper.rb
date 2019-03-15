@@ -4,7 +4,9 @@ module MortgageCalculator
 
     def band(num1, num2)
       num1 = num1.ceil
+      return minimum_band(num2) if num1.zero?
       return maximum_band(num1 - 1) if num2.nil?
+
       "#{formatted_currency(num1)} - #{formatted_currency(num2)}"
     end
 
@@ -58,6 +60,13 @@ module MortgageCalculator
 
     private
 
+    def minimum_band(num)
+      I18n.t(
+        'land_and_buildings_transaction_tax.table.min',
+        value: formatted_currency(num)
+      )
+    end
+
     def maximum_band(num)
       I18n.t(
         'land_and_buildings_transaction_tax.table.max',
@@ -72,7 +81,7 @@ module MortgageCalculator
     def formatted_price(num)
       threshold = calculator::STANDARD_BANDS.first[:threshold]
 
-      num <= threshold ? to_word(threshold) : formatted_currency(num)
+      num <= threshold ? minimum_band(threshold) : formatted_currency(num)
     end
 
     def property_tax(price, buyer_type)
@@ -97,10 +106,6 @@ module MortgageCalculator
 
     def calculator
       MortgageCalculator::LandAndBuildingsTransactionTax
-    end
-
-    def to_word(num)
-      "Up to #{formatted_currency(num)}"
     end
   end
 end
