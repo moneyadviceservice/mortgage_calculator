@@ -8,12 +8,11 @@ cy:
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
     heading: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
-    heading_description: "Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Os ydych chi'n prynu eiddo preswyl gwerth dros £145,000, bydd yn rhaid i chi dalu LBTT. Mae’r gyfrifiannell hon yn cyfrifo faint o Dreth Trafodiadau Tir ac Adeiladau fydd angen i chi dalu ar eich cartref newydd.
+    subtitle: "Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Os ydych chi'n prynu eiddo preswyl gwerth dros £145,000, bydd yn rhaid i chi dalu LBTT. Mae’r gyfrifiannell hon yn cyfrifo faint o Dreth Trafodiadau Tir ac Adeiladau fydd angen i chi dalu ar eich cartref newydd.
 
       Mae hefyd yn cyfrifo faint fyddwch chi'n ei dalu ar unrhyw bryniant eiddo atodol dros £40,000, fel prynu i osod neu ail gartref, sy'n denu tâl ychwanegol o 3% fel Atodiad Annedd Atodol (ADS)."
     heading_results: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
-    subtitle: Stamp Duty Land Tax (SDLT) is a tax on properties bought in Scotland. You’ll need to pay it when you buy a residential property that costs more than £125,000. Use this calculator to work out how much Land and Buildings Transaction Tax you’ll need to pay on your new home. You can also use it to work out how much you’ll pay on an additional property that costs more than %{amount}, like a buy to let or second home, which attracts an extra 3% charge.
     next: "Nesaf"
     select:
       label: "Rwy'n"
@@ -27,22 +26,11 @@ cy:
       title: "Prynu yng Nghymru, Lloegr neu Ogledd Iwerddon?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated_ftb: "First-time buyers are entitled to relief for the first £300,000 of Land and Buildings Transaction Tax on properties up to a value of %{amount}."
-    how_calculated_ftb_2: "For example, if you’re buying your first property for £350,000 you would pay:"
-    how_calculated_ftb_list:
-      - "no Land and Buildings Transaction Tax on the value of the property up to £175,000"
-      - "2% tax on the value between £175,001 and £250,000."
-      - "5% tax on the value between £250,001 and £325,000."
-      - "10% tax on the value between £325,001 and £750,000."
-    how_calculated_ftb_3: "In this case, the total amount of Land and Buildings Transaction Tax would be £2,500, giving an effective rate of 0.7%."
-    how_calculated_ftb_4: "For properties priced over %{amount}, no relief is available and you would pay Land and Buildings Transaction Tax on the full purchase price."
-    how_calculated_ftb_5: "If you're buying your next home or buying a property valued at over %{amount} you would pay:"
-    how_calculated_ftb_default_list:
-      - "no tax on the value of the property up to £125,000"
-      - "2% tax on the property value between £125,001 and £250,000"
-      - "5% tax on the property value between £250,001 and £550,000."
-    how_calculated_ftb_6: "In this case, the total amount of Land and Buildings Transaction Tax would be £17,500, giving an effective tax rate of 3.2%."
-    how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Alban ar hyn o bryd."
+    how_calculated_ftb: Telir Treth Trafodion Tir ac Adeiladau (LBTT) ar gyfraddau gwahanol ar drafodion eiddo preswyl ac mae'n ddibynnol ar yr ystyriaeth o'r hyn sy'n daladwy ar eich eiddo (y pris prynu fel arfer). Nid ydych yn talu treth ar y swm llawn, dim ond y swm sydd o fewn band penodol.
+    how_calculated_ftb_2: "Er enghraifft, ni fyddai cost LBTT ar gartref sy'n costio £280,000 ar y £145,000 cyntaf, 2% ar y £105,000 nesaf, a 5% ar y £30,000 nesaf, felly byddech yn talu £3,600 mewn LBTT."
+    how_calculated_ftb_3_html: Gall prynwyr tro cyntaf hawlio gostyngiad Prynwr tro Cyntaf. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Mae rhagor o wybodaeth am beth yw prynwr tro cyntaf ar ein gwefan.</a> Yn ddibynnol ar y pris prynu, gall y gostyngiad hwn leihau eich bil LBTT hyd at £600.
+    how_calculated_ftb_4: "Golyga hynny bod cartrefi sydd â phrisiau prynu hyd at %{amount} wedi eu heithrio rhag LBTT fwy neu lai ar gyfer prynwyr tro cyntaf."
+    how_calculated_ftb_5: "Er enghraifft:"
     how_calculated: "Telir Treth Trafodion Tir ac Adeiladau (LBTT) ar gyfraddau gwahanol, yn ddibynnol ar y band mae’r pris prynu ynddo. Er enghraifft, ni fyddai rhywun yn prynu eiddo am £280,000 yn talu treth ar werth yr eiddo hyd at £145,000, 2% o dreth ar werth yr eiddo rhwng £145,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, byddai cyfanswm yr atebolrwydd treth ar gyfer Treth Trafodion Tir ac Adeiladau (LBTT) yn £3,600 gan roi cyfradd dreth effeithiol o 1.29% (cyfartaledd cyfradd canrannol y dreth a dalwyd)."
     how_calculated_additional: "Bydd unrhyw un sy’n prynu ail gartref, gan gynnwys eiddo prynu-i-osod, yn talu 3% ychwanegol ar ben y band cyfradd safonol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu y byddai cyfanswm y dreth stamp yn £12,000 gan roi cyfradd treth effeithiol o 4.29%."
     how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun yr Atodiad Annedd Atodol ar gyfer ail gartref"
@@ -60,11 +48,15 @@ cy:
       click_to_expand: Cliciwch i ehangu
       FTB_conditional: "You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than %{amount}."
     table:
-      property_price_header: "Pris prynu’r eiddo"
-      rate_header: "Cyfradd Treth Trafodion Tir ac Adeiladau (LBTT)"
+      property_price_header: "Pris prynu"
+      rate_header: "Cyfradd LBTT safonol"
+      standard_bill_header: "Bil LBTT safonol"
+      ftb_relief_amount_header: "Swm o Ostyngiad Prynwr tro Cyntaf"
+      ftb_total_amount_header: "Y cyfanswm i'w dalu fel prynwr am y tro cyntaf"
       extra_rate_header: "Atodiad Prynu-i-osod / Annedd Atodol (ADS)*"
       standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
-      max: "%{value}+"
+      min: "Hyd at %{value}"
+      max: "Dros %{value}"
     next_steps:
       learn_more:
         title: "A wyddech chi?"

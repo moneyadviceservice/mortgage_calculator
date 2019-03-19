@@ -13,8 +13,10 @@ module MortgageCalculator
 
     SECOND_HOME_THRESHOLD = 40_000
     SECOND_HOME_ADDITIONAL_TAX = 3
+    STANDARD_BUYER_TYPE = 'isNextHome'.freeze
+    FIRST_TIME_BUYER_TYPE = 'isFTB'.freeze
 
-    def initialize(price: 0, buyer_type: 'isNextHome')
+    def initialize(price: 0, buyer_type: STANDARD_BUYER_TYPE)
       self.price = price
       self.buyer_type = buyer_type
     end

@@ -1,0 +1,15 @@
+<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_ftb") %></p>
+<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_ftb_2") %></p>
+
+<%= render 'first_time_buyer_table', rates: @rates %>
+
+<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_ftb_3_html") %></p>
+<p>
+  <%= I18n.t(
+    "#{i18n_locale_namespace}.how_calculated_ftb_4", amount: ftb_starting_price
+  ) %>
+</p>
+
+<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_ftb_5") %></p>
+
+<%= render 'bands_table' %>
