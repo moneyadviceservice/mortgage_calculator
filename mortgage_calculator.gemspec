@@ -19,9 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", ">= 4", "< 5"
   s.add_dependency "sass-rails"
   s.add_dependency "modernizr-rails"
-  s.add_dependency "jquery-rails"
   s.add_dependency "angularjs-rails", '~> 1.2.18'
   s.add_dependency "underscore-rails"
-  s.add_dependency "dough-ruby", "~> 5.35.0"
+  s.add_dependency "dough-ruby", "~> 5.36"
   s.add_dependency "mas-fonts"
 end
