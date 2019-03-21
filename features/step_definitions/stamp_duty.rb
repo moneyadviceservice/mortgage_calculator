@@ -79,6 +79,10 @@ Then(/^I see the stamp duty I will have to pay is "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
 end
 
+Then(/^I should see the tax rate being used is "(.*?)"$/) do |tax_rate|
+  expect(@stamp_duty.tax_due.first).to have_content(tax_rate)
+end
+
 And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
 end

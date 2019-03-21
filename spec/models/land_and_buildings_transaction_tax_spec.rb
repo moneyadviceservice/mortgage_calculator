@@ -125,9 +125,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(1200) }
-        its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(41_200) }
+        its(:tax_due) { is_expected.to eq(1600) }
+        its(:percentage_tax) { is_expected.to eq(4.0) }
+        its(:total_due) { is_expected.to eq(41_600) }
       end
     end
 
@@ -153,9 +153,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(4350) }
-        its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(149_350) }
+        its(:tax_due) { is_expected.to eq(5800) }
+        its(:percentage_tax) { is_expected.to eq(4) }
+        its(:total_due) { is_expected.to eq(150_800) }
       end
     end
 
@@ -181,9 +181,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(6350) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(3.43) }
-        its(:total_due) { is_expected.to eq(191_350) }
+        its(:tax_due) { is_expected.to eq(8200) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(4.43) }
+        its(:total_due) { is_expected.to eq(193_200) }
       end
     end
 
@@ -209,9 +209,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(11_600) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(4.22) }
-        its(:total_due) { is_expected.to eq(286_600) }
+        its(:tax_due) { is_expected.to eq(14_350) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(5.22) }
+        its(:total_due) { is_expected.to eq(289_350) }
       end
     end
 
@@ -237,9 +237,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(13_600) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.53) }
-        its(:total_due) { is_expected.to eq(313_600) }
+        its(:tax_due) { is_expected.to eq(16_600) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(5.53) }
+        its(:total_due) { is_expected.to eq(316_600) }
       end
     end
 
@@ -265,9 +265,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(37_050) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.56) }
-        its(:total_due) { is_expected.to eq(527_050) }
+        its(:tax_due) { is_expected.to eq(41_950) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(8.56) }
+        its(:total_due) { is_expected.to eq(531_950) }
       end
     end
 
@@ -293,9 +293,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(39_650) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(7.77) }
-        its(:total_due) { is_expected.to eq(549_650) }
+        its(:tax_due) { is_expected.to eq(44_750) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(8.77) }
+        its(:total_due) { is_expected.to eq(554_750) }
       end
     end
 
@@ -321,9 +321,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(98_975) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(10.56) }
-        its(:total_due) { is_expected.to eq(1_036_475) }
+        its(:tax_due) { is_expected.to eq(108_350) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(11.56) }
+        its(:total_due) { is_expected.to eq(1_045_850) }
       end
     end
 
@@ -349,9 +349,9 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(273_350) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(13.02) }
-        its(:total_due) { is_expected.to eq(2_373_350) }
+        its(:tax_due) { is_expected.to eq(294_350) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(14.02) }
+        its(:total_due) { is_expected.to eq(2_394_350) }
       end
     end
   end
