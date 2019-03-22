@@ -3,7 +3,7 @@
     <div class="stamp-duty stamp-duty__calculation-explanation">
       <% if first_time_buyer? %>
         <div ng-hide="js" class="stamp-duty__explanation-firsttimebuyer ng-hide is-active">
-          <%= render 'first_time_buyer_explanation' %>
+          <%= render 'first_time_buyer_explanation', rates: rates %>
         </div>
       <% else %>
         <div ng-hide="js" class="stamp-duty__explanation-nexthome ng-hide is-active">
@@ -12,7 +12,7 @@
       <% end %>
 
       <div class="rendered-from-js stamp-duty__explanation-firsttimebuyer">
-        <%= render 'first_time_buyer_explanation' %>
+        <%= render 'first_time_buyer_explanation', rates: rates %>
       </div>
       <div class="rendered-from-js stamp-duty__explanation-nexthome">
         <%= render 'next_home_buyer_explanation', rates: rates %>

@@ -8,6 +8,16 @@ Given('I fill in details for a first time buyer') do
   step('I am a first time buyer')
 end
 
+Given('I fill in details for a next home buyer') do
+  step('I enter a house price of "300000"')
+  step('I am a next home buyer')
+end
+
+Given('I fill in details for a additional home buyer') do
+  step('I enter a house price of "300000"')
+  step('I am an additional or buy-to-let property buyer')
+end
+
 When('I enter a house price of {string}') do |price|
   @stamp_duty.property_price.set price.to_i
 end

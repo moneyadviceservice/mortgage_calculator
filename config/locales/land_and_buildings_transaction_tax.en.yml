@@ -49,10 +49,11 @@ en:
       FTB_conditional: "You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than %{amount}."
     table:
       property_price_header: "Purchase price"
-      rate_header: "Standard LBTT rate"
+      rate_header: "Rate of Land and Buildings Transaction Tax (LBTT)"
       standard_bill_header: "Standard LBTT bill"
       ftb_relief_amount_header: "Amount of First-time Buyer Relief"
       ftb_total_amount_header: "Total to pay for a first-time buyer"
+      extra_rate_header: "Buy to Let/ Additional Dwelling Supplement (ADS)*"
       standard_rates_apply: "Standard rates apply (see below)"
       min: "Up to %{value}"
       max: "Over %{value}"
