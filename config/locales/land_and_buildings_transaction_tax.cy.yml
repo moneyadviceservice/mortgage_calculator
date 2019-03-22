@@ -51,6 +51,7 @@ cy:
       property_price_header: "Pris prynu"
       rate_header: "Cyfradd LBTT safonol"
       standard_bill_header: "Bil LBTT safonol"
+      verbose_rate_header: "Cyfradd Treth Trafodiadau Tir ac Adeiladau (LBTT)"
       ftb_relief_amount_header: "Swm o Ostyngiad Prynwr tro Cyntaf"
       ftb_total_amount_header: "Y cyfanswm i'w dalu fel prynwr am y tro cyntaf"
       extra_rate_header: "Atodiad Prynu-i-osod / Annedd Atodol (ADS)*"
