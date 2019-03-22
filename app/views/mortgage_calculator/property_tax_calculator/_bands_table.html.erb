@@ -2,7 +2,13 @@
   <thead>
     <tr>
       <th class="mortgagecalc__table__price"><%= I18n.t("#{i18n_locale_namespace}.table.property_price_header") %></th>
-      <th class="mortgagecalc__table__rate"><%= I18n.t("#{i18n_locale_namespace}.table.rate_header") %></th>
+      <th class="mortgagecalc__table__rate">
+        <% if stamp_duty_calculator? %>
+          <%= I18n.t("#{i18n_locale_namespace}.table.rate_header") %>
+        <% else %>
+          <%= I18n.t("#{i18n_locale_namespace}.table.verbose_rate_header") %>
+        <% end %>
+      </th>
       <th class="mortgagecalc__table__extra"><%= I18n.t("#{i18n_locale_namespace}.table.extra_rate_header") %></th>
     </tr>
   </thead>
