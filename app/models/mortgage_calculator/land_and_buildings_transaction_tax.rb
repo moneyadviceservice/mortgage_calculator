@@ -20,6 +20,8 @@ module MortgageCalculator
       { threshold: nil, rate: 12 }
     ].freeze
 
+    SECOND_HOME_ADDITIONAL_TAX = 4
+
     def first_time_ineligible?
       !first_time_buy?
     end

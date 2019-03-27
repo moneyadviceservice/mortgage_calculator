@@ -19,6 +19,7 @@ module MortgageCalculator
     ].freeze
 
     FIRST_TIME_BUYER_THRESHOLD = 500_000
+    SECOND_HOME_ADDITIONAL_TAX = 3
 
     def first_time_ineligible?
       first_time_buy? && price > FIRST_TIME_BUYER_THRESHOLD

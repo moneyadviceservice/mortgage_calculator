@@ -13,6 +13,8 @@ module MortgageCalculator
       { threshold: nil, rate: 12 }
     ].freeze
 
+    SECOND_HOME_ADDITIONAL_TAX = 3
+
     protected
 
     def bands_to_use

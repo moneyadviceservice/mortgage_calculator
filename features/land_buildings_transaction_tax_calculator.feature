@@ -71,11 +71,11 @@ Feature: Land and Buildings Transaction Tax Calculator
     When I enter a house price of <price>
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
-    And I see the effective tax rate is "<effective tax>"
+    And I should see the tax rate being used is "<tax_rate>%"
 
     Examples:
-      | price   | duty   | effective tax |
-      | 35000   | 0      | 0.00%         |
-      | 50000   | 1,500  | 3.00%         |
-      | 260000  | 10,400 | 4.00%         |
-      | 750000  | 70,850 | 9.45%         |
+      | price   | duty   | tax_rate |
+      | 35000   | 0      | 0.00     |
+      | 50000   | 1,500  | 4.00     |
+      | 260000  | 13,000 | 5.00     |
+      | 750000  | 78,350 | 10.45    |
