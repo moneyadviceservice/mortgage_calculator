@@ -11,7 +11,8 @@ Scenario Outline: land and buildings transaction tax for first home
   And I am a first time buyer
   And I click next
   Then I see the title for the "Land and Buildings Transaction Tax (LBTT)" results page
-  Then I see the stamp duty I will have to pay is "£<duty>"
+  And I see the call out box with everything I need to know
+  And I see the stamp duty I will have to pay is "£<duty>"
 
 Examples:
   |  price    |  duty    |
@@ -31,8 +32,8 @@ Scenario Outline: land and buildings transaction tax for first home
   When I enter a house price of <price>
   And I am a first time buyer
   And I click next
-  
-  Then I see the stamp duty I will have to pay is "£<duty>"
+  Then I see the call out box with everything I need to know
+  And I see the stamp duty I will have to pay is "£<duty>"
 
 Examples:
   | price      | duty     |

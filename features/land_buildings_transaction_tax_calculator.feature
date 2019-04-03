@@ -10,6 +10,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     When I enter a house price of <price>
     And I am a next home buyer
     And I click next
+    Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"
     And I see the effective tax rate is "<effective tax>"
 
@@ -31,7 +32,8 @@ Feature: Land and Buildings Transaction Tax Calculator
     When I enter a house price of <price>
     And I am a next home buyer
     And I click next
-    Then I see the stamp duty I will have to pay is "£<duty>"
+    Then I see the call out box with everything I need to know
+    And I see the stamp duty I will have to pay is "£<duty>"
 
   Examples:
     | price   | duty   | effective tax |
@@ -70,6 +72,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     Given I am an additional or buy-to-let property buyer
     When I enter a house price of <price>
     And I click next
+    Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"
     And I should see the tax rate being used is "<tax_rate>%"
 
