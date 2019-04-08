@@ -11,6 +11,8 @@ module UI
       element :property_price_step_two, "form.step_two input[name='land_and_buildings_transaction_tax[price]']"
       element :next, "form.step_one input[type=submit]"
       element :how_is_this_calculated_link, ".stamp-duty__how-calculated-toggle"
+      element :call_out_box, ".callout__heading"
+      element :call_out_tip, ".stamp-duty__info-tip"
       elements :tax_due, ".stamp-duty__results-tax-rate"
       elements :lbtt_ftb_table_headings, ".mortgagecalc__table.stamp-duty__table thead tr"
       elements :lbtt_how_calculated_examples, ".mortgagecalc__table.stamp-duty__table tbody tr"

@@ -42,3 +42,9 @@ Then('I should see the values on the information panel as:') do |table|
     ).to have_content(rows[index].join(' '))
   end
 end
+
+Then('I see the call out box with everything I need to know') do
+  content = 'You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. Further information can be found on:'
+  expect(@stamp_duty).to have_call_out_box
+  expect(@stamp_duty.call_out_tip.text).to be_include(content)
+end
