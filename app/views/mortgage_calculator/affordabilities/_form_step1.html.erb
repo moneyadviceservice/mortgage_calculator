@@ -51,7 +51,7 @@
           <%= person.form_row :monthly_net_income do %>
             <%= person.errors_for :monthly_net_income %>
             <%= person.label :monthly_net_income, "id" => "label_monthly_net_income_0" do %>
-              <%= t('affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income')%> * 
+              <%= t('affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_income')%> *
               <span class="affcalc__row affcalc__sub-label"><%= t("affordability.activemodel.attributes.mortgage_calculator/person.monthly_net_sub")%></span>
               <span class="visually-hidden"><%= t('affordability.per_month') %>, <%= t('affordability.required') %></span>
             <% end %>
@@ -77,11 +77,13 @@
         </div>
       </div>
 
-      <div class="affcalc__row" data-dough-component="PopupTip">
+      <div class="affcalc__row">
         <div class="affcalc__col--field">
           <%= person.form_row :extra_income do %>
             <%= person.errors_for :extra_income %>
-            <%= person.label :extra_income, "id" => "label_extra_income0" do %>
+            <%= person.label :extra_income,
+              "id" => "label_extra_income0",
+              "data-dough-component" => "PopupTip" do %>
               <%= t('affordability.activemodel.attributes.mortgage_calculator/person.extra_income') %>
               <%= render 'mortgage_calculator/affordabilities/tooltips/trigger' %>
               <div data-dough-popup-container class="popup-tip__container details__helper">
