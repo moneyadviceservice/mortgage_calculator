@@ -11,16 +11,7 @@ cy:
     heading: "Cyfrifiannell treth stamp"
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
-    subtitle: Os prynwch eiddo dros drothwy presennol y SDLT o £125,000, yna mae'n rhaid i chi dalu Treth Tir y Doll Stamp (SDLT). Os yw'ch eiddo neu'ch tir yng 
-    subtitle_2: rydych yn talu treth wahanol. Ceir rheolau gwahanol os ydych chi neu'r unigolyn sy'n prynu ar y cyd â chi yn brynwyr tro cyntaf, sy'n prynu eich cartref cyntaf ac os yw'r pris prynu yn llai na £500,000. Bydd unrhyw un sy'n prynu eiddo preswyl ychwanegol sy'n werth £40,000 neu ragor yn gorfod prynu treth stamp ychwanegol hyd yn oed os yw'r eiddo sy'n berchen i chi eisoes wedi ei leoli dramor. Rhaid i chi anfon ffurflen SDLT i HMRC a thalu'r dreth cyn pen 14 diwrnod.
-    subtitle_href_scotland: Alban
-    subtitle_href_wales: Nghymru
-    subtitle_href_scotland_link: "/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
-    subtitle_href_wales_link: "/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
-    subtitle_href_separator: neu'r 
-    second_subtitle: "Mae Treth Trafodion Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Bydd trethi LBTT yn destun ffi ychwanegol o 3% hefyd ar gyfer ail gartrefi."
-    href_second_subtitle: "Cyfrifwch yr LBTT sy'n daladwy"
-    url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
+    subtitle_html: Os prynwch eiddo dros drothwy presennol y SDLT o £125,000, yna mae'n rhaid i chi dalu Treth Tir y Doll Stamp (SDLT). Os yw'ch eiddo neu'ch tir yng <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban" target="_blank">Alban</a> neu'r <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru" target="_blank">Nghymru</a> rydych yn talu treth wahanol. Ceir rheolau gwahanol os ydych chi neu'r unigolyn sy'n prynu ar y cyd â chi yn brynwyr tro cyntaf, sy'n prynu eich cartref cyntaf ac os yw'r pris prynu yn llai na £500,000. Bydd unrhyw un sy'n prynu eiddo preswyl ychwanegol sy'n werth £40,000 neu ragor yn gorfod prynu treth stamp ychwanegol hyd yn oed os yw'r eiddo sy'n berchen i chi eisoes wedi ei leoli dramor. Rhaid i chi anfon ffurflen SDLT i HMRC a thalu'r dreth cyn pen 14 diwrnod.
     next: "Nesaf"
     select:
       label: Rwy'n

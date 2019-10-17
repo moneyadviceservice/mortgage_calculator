@@ -14,15 +14,7 @@
         <h1 class="stamp-duty__heading"><%= I18n.t("#{i18n_locale_namespace}.heading") %></h1>
         <h2 class="intro stamp-duty__subheading"><%= I18n.t("#{i18n_locale_namespace}.title") %></h2>
         <p>
-          <%= I18n.t("#{i18n_locale_namespace}.subtitle") %>
-          <a href="<%= I18n.t("#{i18n_locale_namespace}.subtitle_href_scotland_link") %>" target="_blank">
-            <%= I18n.t("#{i18n_locale_namespace}.subtitle_href_scotland") %>
-          </a>
-          <%= I18n.t("#{i18n_locale_namespace}.subtitle_href_separator") %>
-          <a href="<%= I18n.t("#{i18n_locale_namespace}.subtitle_href_wales_link") %>" target="_blank">
-            <%= I18n.t("#{i18n_locale_namespace}.subtitle_href_wales") %>
-          </a>
-          <%= I18n.t("#{i18n_locale_namespace}.subtitle_2") %>
+          <%= I18n.t("#{i18n_locale_namespace}.subtitle_html").html_safe %>
         </p>
         <%= render 'form_step1' %>
 
