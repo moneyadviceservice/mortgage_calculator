@@ -18,7 +18,6 @@
 
 .stamp-duty {
   border: solid $color-grey-light 1px;
-  overflow: hidden;
   max-width: none;
   margin-top: $baseline-unit;
   @include respond-to($mortgagecalc_mq-s) {
