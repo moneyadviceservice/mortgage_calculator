@@ -11,32 +11,27 @@ cy:
     heading: "Cyfrifiannell treth stamp"
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
-    subtitle: Mae Treth Dir y Dreth Stamp (SDLT) yn dreth ar eiddo a brynir yn Lloegr a Gogledd Iwerddon. Bydd angen i chi ei thalu pan fyddwch yn prynu eiddo preswyl sy'n costio mwy na £125,000. Defnyddiwch y gyfrifiannell hon i gyfrifo faint o Dreth Stamp fydd angen i chi dalu ar eich cartref newydd. Gallwch hefyd ei ddefnyddio i gyfrifo faint fyddwch chi'n ei dalu ar eiddo atodol sy'n costio mwy na %{amount}, fel prynu i osod neu ail gartref, sy'n denu tâl ychwanegol o 3%.
-    second_subtitle: "Mae Treth Trafodion Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban. Bydd trethi LBTT yn destun ffi ychwanegol o 3% hefyd ar gyfer ail gartrefi."
-    href_second_subtitle: "Cyfrifwch yr LBTT sy'n daladwy"
-    url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
+    subtitle_html: Os prynwch eiddo dros drothwy presennol y SDLT o £125,000, yna mae'n rhaid i chi dalu Treth Tir y Doll Stamp (SDLT). Os yw'ch eiddo neu'ch tir yng <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban" target="_blank">Alban</a> neu'r <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru" target="_blank">Nghymru</a> rydych yn talu treth wahanol. Ceir rheolau gwahanol os ydych chi neu'r unigolyn sy'n prynu ar y cyd â chi yn brynwyr tro cyntaf, sy'n prynu eich cartref cyntaf ac os yw'r pris prynu yn llai na £500,000. Bydd unrhyw un sy'n prynu eiddo preswyl ychwanegol sy'n werth £40,000 neu ragor yn gorfod prynu treth stamp ychwanegol hyd yn oed os yw'r eiddo sy'n berchen i chi eisoes wedi ei leoli dramor. Rhaid i chi anfon ffurflen SDLT i HMRC a thalu'r dreth cyn pen 14 diwrnod.
     next: "Nesaf"
     select:
       label: Rwy'n
       option_prompt: dewiswch opsiwn
       option_isNextHome: prynu fy nghartref nesaf
       option_isFTB: prynu am y tro cyntaf
-      option_isSecondHome: prynu eiddo atodol neu eiddo prynu-i-osod
-      tooltip_html: Codir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar os ydych yn prynu am y tro cyntaf, yn prynu eich cartref nesaf neu'n prynu eiddo atodol neu eiddo prynu-i-osod. <br /><br />Yn gyffredinol, rydych yn cael eich dosbarthu yn brynwr tro cyntaf os ydych chi'n prynu eich unig neu brif gartref ac nad ydych erioed wedi bod yn berchen ar eiddo yn y Deyrnas Unedig na thramor. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Darllenwch fwy yn ein canllaw i brynwyr tro cyntaf</a>.
+      option_isSecondHome: prynu eiddo ychwanegol neu ail gartref
+      tooltip_html: Os prynwch eiddo dros bris penodol yn Lloegr a Gogledd Iwerddon, yna rhaid i chi dalu Treth Tir y Doll Stamp (SDLT). Ceir rheolau gwahanol os ydych yn prynu'ch cartref cyntaf neu eiddo preswyl ychwanegol. <br /><br />Ceir rheolau gwahanol os ydych yn prynu'ch cartref cyntaf. Cewch ostyngiad sy'n golygu y byddwch yn talu llai o dreth neu ddim treth o gwbl. Mae prynwr tro cyntaf yn unigolyn sydd erioed wedi sicrhau buddsoddiad mewn eiddo un ai yn y DU neu unrhyw le arall yn y byd a'i fwriad yw byw yn yr eiddo fel ei brif breswylfa. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Darllenwch fwy yn ein canllaw i brynwyr tro cyntaf</a>. <br /><br />Yn gyffredinol rhaid i chi dalu'r cyfraddau SDLT uwch pan brynwch eiddo preswyl neu ran o un os nad hwnnw fydd yr unig eiddo preswyl yr ydych yn berchen arno (neu'n berchen ar y cyd) yn unrhyw le yn y byd, os nad ydych wedi gwerthu neu roi eich prif gartref blaenorol i rywun ac nid oes gan neb les arno sydd â mwy na 21 mlynedd yn weddill. Mae'r rheolau hyn yn berthnasol os ydych yn briod neu'n prynu ar y cyd a'r unigolyn hwnnw neu honno.
     elsewhere:
       title: Prynu yn yr Alban neu Cymru?
-      body: Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu
+      body: Yng Nghymru a'r Alban, yr hyn sy'n cyfateb i Dreth Dir y Dreth Stamp (SDLT) a delir yn Lloegr a Gogledd Iwerddon, yw'r Dreth Trafodion Tir yng Nghymru (LTT) a'r Dreth Trafodion Tir ac Adeiladau (LBTT) yn yr Alban.
       england_ni:
         title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
         body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
         link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
       wales:
         title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
-        body: Mae Treth Trafodiadau Tir ac (LTT) wedi disodli Treth Stamp yng Nghymru.
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru
       scotland:
         title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
-        body: Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) wedi disodli Treth Stamp yn yr Alban.
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
@@ -54,9 +49,9 @@ cy:
       - "5% o dreth ar werth yr eiddo rhwng £250,001 a £550,000."
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
-    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n prynu eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
-    how_calculated_additional: "Bydd unrhyw un sy'n prynu ail gartref, gan gynnwys eiddo prynu i osod, yn talu 3% ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny'n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750, gan roi cyfradd dreth effeithiol o 4%."
-    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun SDLT ail gartref"
+    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau yn ddibynnol ar y pris prynu. Er enghraifft, byddai rhywun sy’n gorfod talu Treth Stamp ar eiddo am £245,000 yn talu dim treth o gwbl ar werth yr eiddo hyd at £125,000 a 2% o dreth ar werth yr eiddo rhwng £125,001 a £245,000. Yn yr achos hwn, £2,400 fyddai’r swm gofynnol o Dreth Stamp gan roi cyfradd dreth effeithiol o 1%."
+    how_calculated_additional: "Bydd y rhai sy'n destun cyfraddau ychwanegol o dreth stamp yn talu 3% yn ychwanegol ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon byddai hynny’n golygu £7,350 yn ychwanegol, ac felly byddai cyfanswm y dreth stamp yn £9,750, gan roi cyfradd dreth wirioneddol o 4%."
+    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun y cyfraddau SDLT ychwanegol"
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
@@ -76,7 +71,7 @@ cy:
     table:
       property_price_header: "Pris Prynu"
       rate_header: "Cyfradd treth stamp"
-      extra_rate_header: "Cyfradd Prynu i Werthu neu Gartref Ychwanegol *"
+      extra_rate_header: "Cyfradd Eiddo Ychwanegol*"
       standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
       over_a_million: Dros £%{number} miliwn
     next_steps:

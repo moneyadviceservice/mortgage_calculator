@@ -11,31 +11,27 @@ en:
     heading: "Stamp Duty calculator"
     heading_results: "Stamp Duty Calculator - Your Results"
     title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
-    subtitle: Stamp Duty Land Tax (SDLT) is a tax on properties bought in England and Northern Ireland. You’ll need to pay it when you buy a residential property that costs more than £125,000. Use this calculator to work out how much Stamp Duty you’ll need to pay on your new home. You can also use it to work out how much you’ll pay on an additional property that costs more than %{amount}, like a buy to let or second home, which attracts an extra 3% charge.
-    href_second_subtitle: "Calculate the LBTT payable."
-    url_second_subtitle: "https://www.revenue.scot/land-buildings-transaction-tax/tax-calculators"
+    subtitle_html: You must pay Stamp Duty Land Tax (SDLT) if you buy a property over the current SDLT threshold of £125,000. You pay a different tax if your property or land is in <a href="/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland" target="_blank">Scotland</a> or <a href="/en/tools/house-buying/land-transaction-tax-calculator-wales" target="_blank">Wales</a>. There are different rules if you or the person you’re buying with are first time buyers purchasing their first home and the purchase price is less than £500,000. Anyone buying an additional residential property worth £40,000 or more will have to pay additional stamp duty even if the property you already own is abroad. You must send an SDLT return to HMRC and pay the tax within 14 days.
     next: Next
     select:
       label: I am
       option_prompt: please select an option
       option_isNextHome: buying my next home
       option_isFTB: a first-time buyer
-      option_isSecondHome: buying an additional or buy-to-let property
-      tooltip_html: Stamp Duty is applied at different rates depending on whether you are a first-time buyer, buying your next home, or buying an additional or buy-to-let property. <br /><br />You are generally classified as a first-time buyer if you’re buying your only or main residence and you have never owned a property in the UK or abroad. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">Read more in our First-time buyer guide</a>.
+      option_isSecondHome: buying an additional property or second home
+      tooltip_html: You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over a certain price in England and Northern Ireland. There are different rules if you’re buying your first home or an additional residential property. <br /><br />There are different rules if you’re buying your first home. You get a discount (relief) that means you pay less or no tax. A first-time buyer is an individual who has never acquired a major interest in a property either in the UK or anywhere else in the world and intends to live in the property as their only or main residence. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">Read more in our First-time buyer guide</a>. <br /><br />You must generally pay the higher SDLT rates when you buy a residential property or a part of one if it will not be the only residential property that you own (or part own) anywhere in the world, you have not sold or given away your previous main home and no one else has a lease on it which has more than 21 years left to run. These rules apply if you’re married to or buying with someone.
     elsewhere:
       title: Buying in Scotland or Wales?
-      body: If you are buying in either of these countries then use the appropriate calculator to work out how much you will pay
+      body: The Scottish and Welsh equivalents of the Stamp Duty Land Tax (SDLT) paid in England and Northern Ireland is the Land and Buildings Transaction Tax (LBTT) in Scotland the Land Transaction Tax (LTT) in Wales.
       england_ni:
         title: Calculate Stamp Duty in England or Northern Ireland
         body: Properties in England and Northen Ireland are still subject to Stamp Duty.
         link: "/en/tools/house-buying/stamp-duty-calculator"
       wales:
         title: Calculate Land Transaction Tax for Wales
-        body: Land Transaction Tax (LTT) has replaced Stamp Duty in Wales.
         link: "/en/tools/house-buying/land-transaction-tax-calculator-wales"
       scotland:
         title: Calculate Land and Buildings Transaction Tax for Scotland
-        body: Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland.
         link: "/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
     recalculate: Recalculate
     how_calculated_toggle: "How is this calculated?"
@@ -53,9 +49,9 @@ en:
       - "5% tax on the property value between £250,001 and £550,000."
     how_calculated_ftb_6: "In this case, the total amount of Stamp Duty would be £17,500, giving an effective tax rate of 3.2%."
     how_calculated_ftb_7: "These rates currently apply to England, Wales and Northern Ireland"
-    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price. For example, someone buying a property for £245,000 would pay no tax on the value of the property up to £125,000 and 2% tax on the property value between £125,001 and £245,000. In this case, total liability for Stamp Duty would be £2,400 giving an effective tax rate of 1%."
-    how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £7,350, meaning the total stamp duty would be £9,750 giving an effective tax rate of 4%."
-    how_calculated_extra: "* Properties under %{amount} are not subject to second home SDLT"
+    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price. For example, someone subject to Stamp Duty buying a property for £245,000 would pay no tax on the value of the property up to £125,000 and 2% tax on the property value between £125,001 and £245,000. In this case, total liability for Stamp Duty would be £2,400 giving an effective tax rate of 1%."
+    how_calculated_additional: "Those subject to the additional rates of stamp duty rates will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £7,350, meaning the total stamp duty would be £9,750 giving an effective tax rate of 4%."
+    how_calculated_extra: "* Properties under %{amount} are not subject to the additional SDLT rates"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
@@ -75,7 +71,7 @@ en:
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Stamp Duty"
-      extra_rate_header: "Buy to Let/ Additional Home Rate*"
+      extra_rate_header: "Additional Property Rate*"
       standard_rates_apply: "Standard rates apply (see below)"
       over_million: Over £%{number} million
     next_steps:
