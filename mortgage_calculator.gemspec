@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_dependency "underscore-rails"
   s.add_dependency "dough-ruby", "~> 5.36"
   s.add_dependency "mas-fonts"
+  s.add_dependency "sprockets", "< 4"
 end
