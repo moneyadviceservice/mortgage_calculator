@@ -66,8 +66,12 @@ Given("I am an additional or buy-to-let property buyer") do
   @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
 end
 
+Given("I am buying an additional property or second home") do
+  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
+end
+
 And(/^I select to calculate for a second home$/) do
-  @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
+  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
 end
 
 When(/^I enter my house price$/) do
