@@ -1,4 +1,5 @@
 .bundle
+Gemfile.lock
 
 # Ignore all logfiles and tempfiles in the dummy app.
 /spec/tmp/*
