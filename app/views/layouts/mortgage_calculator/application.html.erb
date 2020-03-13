@@ -4,6 +4,12 @@
 
 <% content_for(:head) do %>
 
+  <% if params[:theme] %>
+         <script type='text/javascript'>
+           var theme = "<%= params[:theme]%>"
+    </script>
+    
+  <% end %>
     <% if disable_responsiveness? %>
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
     <% else %>

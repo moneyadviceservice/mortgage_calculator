@@ -1,7 +1,28 @@
 'use strict';
 
-App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repayments', 'WizardHandler', 'iframeHelpers', function ($scope, Affordability, StampDuty, Repayments, WizardHandler, iframeHelpers) {
+App.controller('CalculatorCtrl', ['$scope', '$window','Affordability', 'StampDuty', 'Repayments', 'WizardHandler', 'iframeHelpers', function ($scope, $window,   Affordability, StampDuty, Repayments, WizardHandler, iframeHelpers) {
 
+console.log('=*=======' );
+    //$locationProvider.html5Mode(true);
+//console.log($location);
+//console.log($location.search().theme);
+
+$window.onload = function(){
+console.log('=========' );
+if(typeof theme === 'undefined'){
+console.log('===1=====' );
+  $("link[href*='enhanced_responsive']").prop('disabled', true);
+  $("link[href*='basic.css']").prop('disabled', false);
+  $("link[href*='enhanced_responsive.css']").prop('disabled', false);
+}
+else{
+console.log('===2=====' );
+  $("link[href*='basic.css']").prop('disabled', true);
+  $("link[href*='enhanced_responsive.css']").prop('disabled', true);
+$(`link[href*='enhanced_responsive_${theme}.css']`).prop('disabled', false);
+
+}
+};
     $scope.js = true;
 
     $('.mortgagecalc').addClass('js');
