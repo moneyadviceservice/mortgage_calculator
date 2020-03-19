@@ -63,7 +63,7 @@ Feature: Land Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£6,616.65"
 
   Scenario Outline: Buy to let buyer
-    Given I am an additional or buy-to-let property buyer
+    Given I am buying an additional property or second home 
     When I enter a house price of <price>
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
