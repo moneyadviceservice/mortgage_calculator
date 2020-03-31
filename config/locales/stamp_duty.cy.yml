@@ -78,6 +78,8 @@ cy:
       learn_more:
         title: "A wyddech chi?"
         tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 14 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
+        url_online_portal: https://portal.revenue.scot/rslive/en/login
+        url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: Treth Stamp - Popeth sydd angen i chi wybod
           url: "/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"

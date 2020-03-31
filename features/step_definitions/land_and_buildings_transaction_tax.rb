@@ -15,7 +15,7 @@ end
 
 Given('I fill in details for a additional home buyer') do
   step('I enter a house price of "300000"')
-  step('I am an additional or buy-to-let property buyer')
+  step('I am buying an additional property or second home')
 end
 
 When('I enter a house price of {string}') do |price|
@@ -44,7 +44,7 @@ Then('I should see the values on the information panel as:') do |table|
 end
 
 Then('I see the call out box with everything I need to know') do
-  content = 'You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. Further information can be found on:'
+  content = 'You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s online portal or a LBTT form. Further information can be found on:'
   expect(@stamp_duty).to have_call_out_box
   expect(@stamp_duty.call_out_tip.text).to be_include(content)
 end

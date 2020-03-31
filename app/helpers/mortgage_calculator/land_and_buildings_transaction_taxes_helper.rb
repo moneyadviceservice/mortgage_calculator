@@ -10,8 +10,8 @@ module MortgageCalculator
       "#{formatted_currency(num1)} - #{formatted_currency(num2)}"
     end
 
-    def second_home_rate(rate)
-      rate + LandAndBuildingsTransactionTax::SECOND_HOME_ADDITIONAL_TAX
+    def second_home_rate(_rate)
+      LandAndBuildingsTransactionTax::SECOND_HOME_ADDITIONAL_TAX
     end
 
     def first_time_buyer?

@@ -8,9 +8,7 @@ en:
     tooltip_hide: hide help
     tool_name: "land-and-buildings-transaction-tax-calculator"
     heading: "Land and Buildings Transaction Tax (LBTT) calculator"
-    subtitle: "Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland. If you’re buying a residential property over £145,000, you’ll have to pay LBTT. This calculator works out how much Land and Buildings Transaction Tax you need to pay on your new home.
-
-      It also works out how much you’ll pay on any additional property purchase over £40,000, like a buy to let or second home, which attracts an extra %{additional_property_rate}% Additional Dwelling Supplement (ADS)."
+    subtitle: Land and Buildings Transaction Tax (LBTT) is a charge on land transactions in Scotland. Land transactions must be notified to Revenue Scotland unless the chargeable consideration is less than £40,000 or the transaction is otherwise exempt. For example, transactions in connection with a court order relating to divorce or dissolution of civil partnership. An Additional Dwelling Supplement (ADS), may be due on the purchase of an additional property. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due.
     heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
     title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
     next: Next
@@ -19,8 +17,8 @@ en:
       option_prompt: please select an option
       option_isNextHome: buying my next home
       option_isFTB: a first-time buyer
-      option_isSecondHome: buying an additional or buy-to-let property
-      tooltip_html: "Anyone purchasing an additional home including buy to let properties over the value of £40,000 will have to pay an extra %{additional_property_rate}% surcharge on top of each Land and Buildings Transaction Tax band"
+      option_isSecondHome: buying an additional property or second home
+      tooltip_html: An additional dwelling supplement (ADS) of LBTT may be applied on purchases of additional residential properties in Scotland of £40,000 or more. The current rate for ADS is %{additional_property_rate}% of the ‘relevant consideration’ (usually the purchase price).
     recalculate: Recalculate
     elsewhere:
       title: "Buying in England, Northern Ireland or Wales?"
@@ -31,8 +29,8 @@ en:
     how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
-    how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid)."
-    how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra %{additional_property_rate}% on top of the relevant standard rate band. In this example that would represent an extra £11,200, meaning the total stamp duty would be £14,800 giving an effective tax rate of 5.29%."
+    how_calculated: Land and Buildings Transaction Tax (LBTT) is a progressive tax that is applied to residential land and buildings transactions where a chargeable interest is acquired. It is a charge that is more proportionate to the actual price of the property. The percentage rate for each band is applied only to the part of the price over the relevant threshold and up to the next threshold. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid).
+    how_calculated_additional: "Anyone buying a second home in Scotland may be liable for an additional dwelling supplement (ADS) on purchases of additional residential properties in Scotland of £40,000 or more. The current rate is %{additional_property_rate}% of the total chargeable consideration (usually the property price) for an additional residential property of £40,000 or more. For example, for a £200,000 second home the ADS would be £8,000. The ADS is payable in addition to the LBTT that would be due on the purchase. The rates and bands for LBTT are set out below:"
     how_calculated_extra: "* Properties under %{amount} are not subject to second home Additional Dwelling Supplement"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
@@ -61,7 +59,9 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. Further information can be found on:"
+        tip_1: "You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a href=%{url_online_portal}>online portal</a> or a <a href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:"
+        url_online_portal: https://portal.revenue.scot/rslive/en/login
+        url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: "Land and Buildings Transaction Tax (LBTT) - Everything you need to know"
           url: "/en/articles/land-and-buildings-transaction-tax-everything-you-need-to-know"
