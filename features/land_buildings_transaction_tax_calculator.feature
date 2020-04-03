@@ -69,7 +69,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£15,950"
 
   Scenario Outline: Buy to let buyer
-    Given I am an additional or buy-to-let property buyer
+    Given I am buying an additional property or second home
     When I enter a house price of <price>
     And I click next
     Then I see the call out box with everything I need to know
@@ -77,8 +77,10 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I should see the tax rate being used is "<tax_rate>%"
 
     Examples:
-      | price   | duty   | tax_rate |
-      | 35000   | 0      | 0.00     |
-      | 50000   | 1,500  | 4.00     |
-      | 260000  | 13,000 | 5.00     |
-      | 750000  | 78,350 | 10.45    |
+      | price   | duty    | tax_rate |
+      | 35000   | 0       | 0.00     |
+      | 40000   | 1,600   | 4.00     |
+      | 125000  | 5,000   | 4.00     |
+      | 350000  | 22,350  | 6.39     |
+      | 750000  | 78,350  | 10.45    |
+      | 1223300 | 154,078 | 12.60    |
