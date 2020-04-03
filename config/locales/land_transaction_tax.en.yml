@@ -8,9 +8,7 @@ en:
     tooltip_hide: hide help
     tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
-    heading_description: "Stamp Duty has been replaced by Land Transaction Tax (LTT) for properties bought in Wales. LTT will apply to residential properties costing over £180,000. You can use this calculator to find the amount of Land Transaction Tax you’ll have to pay.
-
-      You can also work out the cost of LTT on any additional properties you purchase over £40,000, like buy to lets or second homes, which will be charged a 3% additional supplement."
+    heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £180,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
     heading_results: "Land Transaction Tax (LTT) calculator - Your Results"
     title: "Calculate the Land Transaction Tax on your residential property in Wales"
     next: Next
@@ -18,16 +16,20 @@ en:
       label: I am
       option_prompt: please select an option
       option_isNextHome: buying my next home
-      option_isSecondHome: buying an additional or buy-to-let property
-      tooltip_html: "Anyone purchasing an additional home including buy to let properties over the value of £40,000 will have to pay an extra 3% surcharge on top of each Land Transaction Tax band."
+      option_isSecondHome: buying an additional property or second home
+      tooltip_html: "You will usually have to pay higher rates of Land Transaction Tax if you are buying a residential property worth %{amount} or more and already own 1 or more properties."
     recalculate: Recalculate
     elsewhere:
       title: "Buying in England, Northern Ireland or Scotland?"
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
-    how_calculated: "Land Transaction Tax (LTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £180,000, 3.5% tax on the property value between £180,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LTT) would be £3,950 giving an effective tax rate of 1.41% (average percentage rate of tax paid)."
-    how_calculated_additional: "Anyone buying a second home including a buy to let property will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £8,400, meaning the total stamp duty would be £12,350 giving an effective tax rate of 4.41%."
-    how_calculated_extra: "* Properties under %{amount} are not subject to additional home surcharge."
+    how_calculated: "Land Transaction Tax (LTT) is paid at both main and higher rates of tax.  This is usually based on the price you pay for the property or land, but it might include other types of payment such as goods, works or services, release from a debt, or transfer of a debt, including the value of any outstanding mortgage. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £180,000, 3.5% tax on the property value between £180,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land Transaction Tax (LTT) would be £3,950 giving an effective tax rate of 1.41% (average percentage rate of tax paid)."
+
+    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT. In this example that would represent an extra £8,400, meaning the total Land Transaction Tax would be £12,350 giving an effective tax rate of 4.41%. If you are replacing your main residence the higher rates may not apply.
+
+"
+
+    how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
@@ -43,12 +45,14 @@ en:
     table:
       property_price_header: "Purchase price of property"
       rate_header: "Rate of Land Transaction Tax"
-      extra_rate_header: "Buy to Let/Additional Home rate *"
+      extra_rate_header: "Higher LTT Rate*"
       max: "%{value}+"
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You have to pay Land Transaction Tax within 14 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
+        tip_1: "You must send an LTT return and pay the tax within 30 days of the day after completion (or other effective date of the transaction). If you have a solicitor, agent or conveyancer, they’ll usually file your return and pay the tax on your behalf. If they don’t do this for you, you can file a return and pay the tax yourself using the"
+        tip_1_link: "https://gov.wales/paper-return-land-transaction-tax"
+        tip_1_link_url: "paper return."
         link_1:
           title: "Land Transaction Tax – Everything you need to know"
           url: "/en/articles/land-transaction-tax-everything-you-need-to-know"
@@ -62,6 +66,6 @@ en:
           - copy_html: Costs of moving day
             url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
-        title: 'Have you tried?'
+        title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"
         mortgage_affordability_calculator: "Affordability calculator"
