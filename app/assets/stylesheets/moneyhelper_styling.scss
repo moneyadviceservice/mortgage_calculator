@@ -1,0 +1,56 @@
+/* stylesheet to override MAS styles with Moneyhelper styles */ 
+
+/* Needs to be the same SASS syntax to overwrite 03/06/20 */ 
+
+/* Fonts come from dough/assets/fonts */ 
+
+.mortgagecalc__container {
+    background:#fff;
+}
+
+body .dough { /* this will need to be more specific */ 
+    color: #000; /* From Dough */ 
+    font: normal 16px/1.375, "Roobert";
+}
+
+.mortgagecalc {
+    font-family: '';
+    font-weight: 300; /* left the same */ 
+    font-size: 16px;
+}
+
+/* Desktop */ 
+
+h1, .heading-large {
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 54px;}
+
+h2, .heading-medium {
+    font-family: Roobert;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+}
+
+/* end Desktop */ 
+
+/* _forms.scss */ 
+
+label {
+    color: #000;} 
+
+&.label--accent {
+    background: ; /* what is this? */ 
+}
+
+
+.field_with_errors {
+    input[type="text"],
+    input[type="number"] {
+      border-top-color: ; /* what is this? */ 
+    }
+  }
