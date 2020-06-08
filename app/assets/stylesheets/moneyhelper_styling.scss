@@ -2,6 +2,8 @@
 
 /* Needs to be the same SASS syntax to overwrite 03/06/20 */ 
 
+/* use new variables */
+
 /* Fonts come from dough/assets/fonts */ 
 
 .mortgagecalc__container {
@@ -20,6 +22,11 @@ body .dough { /* this will need to be more specific */
     font-size: 16px;
 }
 
+input:focus {
+    color:#8800d1;
+}
+
+
 /* Desktop */ 
 
 h1, .heading-large {
@@ -27,7 +34,8 @@ h1, .heading-large {
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
-    line-height: 54px;}
+    line-height: 54px;
+    color:#0F19A0}
 
 h2, .heading-medium {
     font-family: Roobert;
@@ -35,6 +43,7 @@ h2, .heading-medium {
     font-weight: bold;
     font-size: 42px;
     line-height: 48px;
+    color:#000B3B;
 }
 
 /* end Desktop */ 
@@ -44,92 +53,92 @@ h2, .heading-medium {
 label {
     color: #000;} 
 
-&.label--accent {
-    background: ; /* what is this? */ 
-}
+/* .label--accent {
+    background: ; what is this? 
+}*/ 
 
 
-.field_with_errors {
+/* .field_with_errors {
     input[type="text"],
     input[type="number"] {
-      border-top-color: ; /* what is this? */ 
+      border-top-color: ; what is this? 
     }
-  }
+  } */
 
   /* from _forms.scss in Yeast */
 
-  button {
-  @extend %font-smoothing;
-}
+//   button {
+//   @extend %font-smoothing;
+// }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="search"],
-input[type="password"] {
-  @extend %form-input;
-  @extend %form-input-text;
+// input[type="text"],
+// input[type="number"],
+// input[type="email"],
+// input[type="search"],
+// input[type="password"] {
+//   @extend %form-input;
+//   @extend %form-input-text;
 
-  &[disabled] {
-    background-color: $color-input-disabled-background;
-    color: $color-input-disabled-text-color;
-  }
-}
+//   &[disabled] {
+//     background-color: $color-input-disabled-background;
+//     color: $color-input-disabled-text-color;
+//   }
+// }
 
-input[type="search"] {
-  box-sizing: border-box;
-}
+// input[type="search"] {
+//   box-sizing: border-box;
+// }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="search"],
-input[type="password"],
-input[type="checkbox"],
-input[type="radio"],
-textarea {
-  &:focus {
-    @include form-input-focus;
-    @include form-input-focus-outline;
-  }
-}
+// input[type="text"],
+// input[type="number"],
+// input[type="email"],
+// input[type="search"],
+// input[type="password"],
+// input[type="checkbox"],
+// input[type="radio"],
+// textarea {
+//   &:focus {
+//     @include form-input-focus;
+//     @include form-input-focus-outline;
+//   }
+// }
 
-input[type="checkbox"],
-input[type="radio"] {
-  &:hover {
-    @include form-input-focus;
-    @include form-input-focus-outline;
-    cursor: pointer;
-  }
-}
+// input[type="checkbox"],
+// input[type="radio"] {
+//   &:hover {
+//     @include form-input-focus;
+//     @include form-input-focus-outline;
+//     cursor: pointer;
+//   }
+// }
 
-input[type="search"] {
-  &:focus {
-    outline-offset: -1px;
-  }
-}
+// input[type="search"] {
+//   &:focus {
+//     outline-offset: -1px;
+//   }
+// }
 
-input[type="submit"],
-button,
-select {
-  &:focus {
-    @include form-input-focus-outline;
-  }
-}
+// input[type="submit"],
+// button,
+// select {
+//   &:focus {
+//     @include form-input-focus-outline;
+//   }
+// }
 
-textarea {
-  @extend %form-input;
-}
+// textarea {
+//   @extend %form-input;
+// }
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
+// fieldset {
+//   border: none;
+//   margin: 0;
+//   padding: 0;
+// }
 
-legend {
-  color: $color-fieldset-legend-fg;
-  display: block;
-  font-weight: 500;
-  margin-bottom: $baseline-unit*2;
-}
+// legend {
+//   color: $color-fieldset-legend-fg;
+//   display: block;
+//   font-weight: 500;
+//   margin-bottom: $baseline-unit*2;
+// }
