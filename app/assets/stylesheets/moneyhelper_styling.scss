@@ -12,6 +12,7 @@
 .mortgagecalc__container {
     background:#fff;
     color:$color-dark-blue-secondary;
+    font-family: 'Roobert';
 }
 
 
@@ -61,31 +62,34 @@ a {
 
 /* forms from yeast */ 
 input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="search"],
-  input[type="password"],
-  textarea,
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
   .form__input-container,
   .form__input-outline {
     border-color: $color-grey-secondary;
     // color: $color-validation-text;
 
-    .form__input:focus {border:2px solid $color-yellow-secondary;} 
+    // .form__input:focus {border:2px solid $color-yellow-secondary;} 
   }
-  
+
+.form__input-container:focus,.form__input-outline:focus {
+    border:2px solid $color-yellow-secondary;
+}
 
 
 /* end forms from yeast */ 
 
-input:hover {
-    border-color:#8800d1;
-}
+// input:hover {
+//     border-color:#8800d1;
+// }
 
-input:focus {
-    color:#8800d1;
-    border: 4px solid $color-yellow-secondary;
-}
+// input:focus {
+//     color:#8800d1;
+//     border: 4px solid $color-yellow-secondary;
+// }
 
 /* Numbering */ 
 
@@ -158,11 +162,21 @@ label {
     &:active {
       color:$color-magenta-dark-primary;
       border-bottom:2px solid $color-magenta-dark-primary;
-      background:$color-light-grey-supporting;      
+      background: $color-white-supporting;      
+    }
+    &:visited {}
+    &:hover {
+        background:$color-light-grey-supporting;
+    }
+    &.tabs__current {
+        background: $color-white-supporting;   
     }
   }
+
+
   
   .tabs__content {
+      border:none;
 }
     
   
