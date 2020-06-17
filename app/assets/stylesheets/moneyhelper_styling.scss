@@ -8,9 +8,12 @@
 
 @import 'moneyhelper_variables'; /* should this go here? */
 
+
 .mortgagecalc__container {
     background:#fff;
+    color:$color-dark-blue-secondary;
 }
+
 
 body .dough { /* this will need to be more specific */ 
     color:$color-blue-primary; /* From Dough */ 
@@ -23,6 +26,39 @@ body .dough { /* this will need to be more specific */
     font-size: 16px;
 }
 
+/* links */
+a {
+    &:link, &:active {
+        color:$color-magenta-primary;
+    }
+    &:visited {color:$color-violet-secondary;}
+    &:hover {color:$color-magenta-dark-primary;}
+}
+
+/* buttons */ 
+
+.button--primary {
+    background:$color-magenta-primary;
+    border-radius:4px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    padding:12px 16px;
+    color:$color-white-supporting;
+
+    &:visited {background:$color-magenta-active-dark-primary; }
+
+    &:hover {background:$color-magenta-dark-primary;}
+
+    &:focus {
+        background:$color-yellow-secondary; 
+        border:2px solid $color-violet-primary;
+        color:$color-dark-blue-secondary;}
+}
+
+.button--primary[disabled] {
+    color:$color-grey-secondary; 
+    background:transparent;}
+
+
 /* forms from yeast */ 
 input[type="text"],
   input[type="number"],
@@ -34,6 +70,8 @@ input[type="text"],
   .form__input-outline {
     border-color: $color-grey-secondary;
     // color: $color-validation-text;
+
+    .form__input:focus {border:2px solid $color-yellow-secondary;} 
   }
   
 
@@ -92,16 +130,42 @@ label {
     border:1px solid $color-grey-secondary;
   }
   .ui-slider .ui-slider-handle {
-    border:none;
+    border:2px solid $color-magenta-primary;
     background:$color-magenta-primary;
     box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
     width:28px;
     height:28px;
+    
+    &:focus {
+        border:2px solid $color-yellow-secondary;
+    }
   }
   .ui-slider .ui-slider-range {
     background:$color-magenta-primary;
     border-radius:0px;
+    
   }
+
+  .ui-slider .ui-state-hover {
+      background:$color-magenta-dark-primary;
+  }
+
+  /* tabs from mortgage calculator */ 
+
+  .tabs__link {
+    &.tabs__current,
+    &:focus,
+    &:active {
+      color:$color-magenta-dark-primary;
+      border-bottom:2px solid $color-magenta-dark-primary;
+      background:$color-light-grey-supporting;      
+    }
+  }
+  
+  .tabs__content {
+}
+    
+  
 
 /* .label--accent {
     background: ; what is this? 
