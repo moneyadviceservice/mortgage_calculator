@@ -83,6 +83,26 @@ h2, .heading-medium {
 label {
     color: #000;} 
 
+
+/* from _slider.scss in mortgage calc */ 
+
+.ui-slider {
+    border-radius:4px;
+    background:$color-white-supporting;
+    border:1px solid $color-grey-secondary;
+  }
+  .ui-slider .ui-slider-handle {
+    border:none;
+    background:$color-magenta-primary;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    width:28px;
+    height:28px;
+  }
+  .ui-slider .ui-slider-range {
+    background:$color-magenta-primary;
+    border-radius:0px;
+  }
+
 /* .label--accent {
     background: ; what is this? 
 }*/ 
