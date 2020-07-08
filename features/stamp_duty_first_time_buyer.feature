@@ -18,10 +18,12 @@ Examples:
   | 120000  | 0       |
   | 126000  | 0       |
   | 260000  | 0       |
-  | 350000  | 2,500   |
-  | 400012  | 5,000   |
-  | 450000  | 7,500   |
-  | 550000  | 17,500  |
+  | 350000  | 0       |
+  | 400012  | 0       |
+  | 450000  | 0       |
+  | 550000  | 2,500   |
+  | 750000  | 12,500  |
+  | 1500000 | 78,750   |
 
 @javascript
 Scenario Outline: stamp duty for first home
@@ -39,11 +41,12 @@ Examples:
   | 120000  | 0       |
   | 126000  | 0       |
   | 260000  | 0       |
-  | 350000  | 2,500   |
-  | 400012  | 5,000   |
-  | 450000  | 7,500   |
-  | 550000  | 17,500  |
-
+  | 350000  | 0       |
+  | 400012  | 0       |
+  | 450000  | 0       |
+  | 550000  | 2,500   |
+  | 750000  | 12,500  |
+  | 1500000 | 78,750  |
 
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
@@ -58,7 +61,7 @@ Scenario: I recalculate for first home
 @javascript
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
-  When I enter my house price with "350000"
+  When I enter my house price with "550000"
   And I am a first time buyer
   And I click next
   And I see the stamp duty I will have to pay is "£2,500"
