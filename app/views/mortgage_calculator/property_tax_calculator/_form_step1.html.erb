@@ -12,7 +12,6 @@
     <%= f.select(:buyer_type, [
       [t("#{i18n_locale_namespace}.select.option_prompt"), ''],
       [t("#{i18n_locale_namespace}.select.option_isNextHome"), 'isNextHome'],
-      [t("#{i18n_locale_namespace}.select.option_isFTB"), 'isFTB'],
       [t("#{i18n_locale_namespace}.select.option_isSecondHome"), 'isSecondHome']
       ], {}, {'ng-model' => 'stampDuty.buyerType'}
     )%>
