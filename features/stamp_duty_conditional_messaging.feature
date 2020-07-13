@@ -12,12 +12,12 @@ Scenario Outline: First time buyer
 
   Examples:
     | buyer                                             | price  |
-    | a first time buyer                                | 490000 |
     | a next home buyer                                 | 490000 |
     | buying an additional property or second home      | 490000 |
     | a next home buyer                                 | 510000 |
     | buying an additional property or second home      | 510000 |
 
+@wip
 Scenario: First time buyer
   Given I visit the Stamp Duty page
   And I am a first time buyer

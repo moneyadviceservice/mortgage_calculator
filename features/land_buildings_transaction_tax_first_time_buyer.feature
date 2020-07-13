@@ -1,3 +1,4 @@
+@wip
 Feature: Land Buildings Transaction Tax - First Time Buyer
 So that I know how much land buildings transaction tax to pay
 As a user buying my first home in Scotland

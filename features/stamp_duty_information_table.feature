@@ -3,6 +3,7 @@ In order to understand how my stamp duty is calculated
 As a home buyer
 I want to see what percentages apply to the purchase price
 
+@wip
 Scenario: First time buyer
   Given I visit the Stamp Duty page
   And I am a first time buyer
@@ -17,9 +18,8 @@ Scenario: Next home buyer
   And I should see the additional home buyer message
   And I should see the stamp duty percentages table:
     | Purchase price of property | Rate of Stamp Duty | Additional Property Rate* |
-    | £0 - £125,000              | 0%                 | 3%                        |
-    | £125,001 - £250,000        | 2%                 | 5%                        |
-    | £250,001 - £925,000        | 5%                 | 8%                        |
+    | £0 - £500,000              | 0%                 | 3%                        |
+    | £500,001 - £925,000        | 5%                 | 8%                        |
     | £925,001 - £1,500,000      | 10%                | 13%                       |
     | Over £1.5 million          | 12%                | 15%                       |
 

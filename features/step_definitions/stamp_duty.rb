@@ -96,7 +96,7 @@ Then(/^I see the Welsh stamp duty calculator$/) do
 end
 
 When("I reach the results page") do
-  step('I enter my house price with "300000"')
+  step('I enter my house price with "30000"')
   step('I click next')
 end
 
@@ -120,7 +120,6 @@ Then("I should see the stamp duty percentages table:") do |table|
   expect(@stamp_duty.info_table).to have_content(data[2].join(' '))
   expect(@stamp_duty.info_table).to have_content(data[3].join(' '))
   expect(@stamp_duty.info_table).to have_content(data[4].join(' '))
-  expect(@stamp_duty.info_table).to have_content(data[5].join(' '))
 end
 
 Then(/^I should( NOT)? see the first time eligibility message$/) do |should_not|
