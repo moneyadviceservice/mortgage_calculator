@@ -40,24 +40,46 @@ a {
 
 .button--primary {
     background:$color-magenta-primary;
+    border:3px solid $color-magenta-primary;
     border-radius:4px;
-    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:0px 3px 0px rgba(0, 0, 0, 0.25);
     padding:12px 16px;
     color:$color-white-supporting;
 
     &:visited {background:$color-magenta-active-dark-primary; }
 
-    &:hover {background:$color-magenta-dark-primary;}
+    &:hover {
+        background:$color-magenta-dark-primary;
+        border:3px solid $color-magenta-dark-primary;
+        box-shadow:0px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
 
     &:focus {
         background:$color-yellow-secondary; 
-        border:2px solid $color-violet-primary;
-        color:$color-dark-blue-secondary;}
+        border:3px solid $color-violet-primary;
+        color:$color-dark-blue-secondary;
+        outline:none;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:target {
+        background:$color-magenta-dark-primary;
+        border:3px solid $color-yellow-secondary;
+        color:$color-white-supporting;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active:focus {
+        background:$color-magenta-dark-primary;
+        border:3px solid $color-yellow-secondary;
+    }
 }
 
 .button--primary[disabled] {
-    color:$color-grey-secondary; 
-    background:transparent;}
+    background-color: $color-grey;
+    border:3px solid $color-grey;
+    color: $color-grey-secondary;}
 
 
 /* forms from yeast */ 
