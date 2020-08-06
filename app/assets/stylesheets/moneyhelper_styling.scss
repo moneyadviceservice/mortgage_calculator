@@ -9,7 +9,7 @@
 @import 'moneyhelper_variables'; /* should this go here? */
 
 
-.mortgagecalc__container {
+.mortgagecalc__container, .mortgagecalc__panel {
     background:#fff;
     color:$color-dark-blue-secondary;
     font-family: 'Roobert';
@@ -46,7 +46,17 @@ a {
     padding:12px 16px;
     color:$color-white-supporting;
 
-    &:visited {background:$color-magenta-active-dark-primary; }
+    a {
+        &:link, &:active {
+            color:$color-white-supporting;
+        }
+        &:visited {color:$color-white-supporting;}
+        &:hover {color:$color-magenta-dark-primary;}
+    }
+
+    &:visited {
+        background:$color-magenta-active-dark-primary;
+        }
 
     &:hover {
         background:$color-magenta-dark-primary;
@@ -74,11 +84,12 @@ a {
         background:$color-magenta-dark-primary;
         border:3px solid $color-yellow-secondary;
     }
+
 }
 
 .button--primary[disabled] {
-    background-color: $color-grey;
-    border:3px solid $color-grey;
+    background-color: transparent;
+    border:1px solid $color-grey;
     color: $color-grey-secondary;}
 
 
