@@ -36,9 +36,9 @@ a {
     &:hover {color:$color-magenta-dark-primary;}
 }
 
-/* buttons */ 
+/* buttons */   
 
-.button--primary, .mortgagecalc__panel .button--primary {
+.button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
     background:$color-magenta-primary;
     border:3px solid $color-magenta-primary;
     border-radius:4px;
@@ -169,6 +169,7 @@ label {
     border-radius:4px;
     background:$color-white-supporting;
     border:1px solid $color-grey-secondary;
+    height:8px;
   }
   .ui-slider .ui-slider-handle {
     border:2px solid $color-magenta-primary;
@@ -194,29 +195,71 @@ label {
   /* tabs from mortgage calculator */ 
 
   .tabs__link {
+    text-decoration: none;
+
     &.tabs__current,
     &:focus,
     &:active {
-      color:$color-magenta-dark-primary;
-      border-bottom:2px solid $color-magenta-dark-primary;
-      background: $color-white-supporting;      
+        border:1px solid $color-grey-blue-supporting;
+        border-bottom:none;
+        color:$color-blue-primary;
+        font-size:18px;
+        line-height: 26px;
+        font-weight:normal;
+        
     }
     &:visited {}
     &:hover {
-        background:$color-light-grey-supporting;
+       
     }
     &.tabs__current {
-        background: $color-white-supporting;   
+         
     }
   }
 
 
   
   .tabs__content {
-      border:none;
+        border:1px solid $color-grey-blue-supporting;
+        border-radius: 0px 0px 0px 36px;
+
+      .callout--tip {
+        border:8px solid $color-yellow-secondary;
+        border-radius: 0px 0px 0px 36px;
+        padding:32px 30px 30px 77px;
+
+        span {
+            display:none;
+        }
+      }
+}
+
+/* call out visibilty:hidden */
+.step_one .mortgagecalc__panel .callout--tip {
+    border: 8px solid $color-yellow-secondary;
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 36px;
+    padding:32px 30px 30px 77px;
+
+    span {
+        display:none;
+    }
 }
     
-  
+.form__item {
+    .form__input-container {
+        .form__input-label, .form__input {
+            font-weight:normal;
+            font-style: italic;
+            color:$color-grey-secondary;
+            font-size:16px;
+            line-height:23px;
+        }
+    }
+}
+
+
+
 
 /* .label--accent {
     background: ; what is this? 
