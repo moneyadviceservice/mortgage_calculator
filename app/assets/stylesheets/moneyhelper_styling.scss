@@ -38,7 +38,7 @@ a {
 
 /* buttons */ 
 
-.button--primary {
+.button--primary, .mortgagecalc__panel .button--primary {
     background:$color-magenta-primary;
     border:3px solid $color-magenta-primary;
     border-radius:4px;
@@ -55,7 +55,7 @@ a {
     }
 
     &:visited {
-        background:$color-magenta-active-dark-primary;
+        // background:$color-magenta-active-dark-primary;
         }
 
     &:hover {
@@ -76,13 +76,13 @@ a {
     &:target {
         background:$color-magenta-dark-primary;
         border:3px solid $color-yellow-secondary;
-        color:$color-white-supporting;
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     }
 
     &:active:focus {
         background:$color-magenta-dark-primary;
         border:3px solid $color-yellow-secondary;
+        color:$color-white-supporting!important;
     }
 
 }
@@ -128,7 +128,11 @@ textarea,
 
 .featured-list {
     > li:before {
-        background:$color-yellow-secondary;
+        border:1px solid $color-teal-dark-secondary;
+        color:$color-teal-dark-secondary;
+        background:$color-white-supporting;
+        border-radius: 0px;
+        font-size:16px;
     }
 }
 
