@@ -13,6 +13,20 @@
     background:#fff;
     color:$color-dark-blue-secondary;
     font-family: 'Roobert';
+
+    .mortgagecalc__panel--border-left {
+        border-left:1px solid $color-grey-blue-supporting;
+    }
+
+    .mortgagecalc__panel--border {
+        border-top:1px solid $color-grey-blue-supporting;
+        width:100%;
+
+        .button--primary {
+            width:50%;
+        }
+        
+    }
 }
 
 
@@ -45,10 +59,12 @@ a {
     box-shadow:0px 3px 0px rgba(0, 0, 0, 0.25);
     padding:12px 16px;
     color:$color-white-supporting;
+    text-decoration: none!important;
 
-    a {
+    a {text-decoration: none!important;
         &:link, &:active {
             color:$color-white-supporting;
+            
         }
         &:visited {color:$color-white-supporting;}
         &:hover {color:$color-magenta-dark-primary;}
@@ -56,6 +72,7 @@ a {
 
     &:visited {
         // background:$color-magenta-active-dark-primary;
+        text-decoration: none!important;
         }
 
     &:hover {
@@ -227,6 +244,9 @@ label {
         border:8px solid $color-yellow-secondary;
         border-radius: 0px 0px 0px 36px;
         padding:32px 30px 30px 77px;
+        background: image_url('images-mh/callout-arrow.svg') 23px 0 no-repeat;
+        background-size:45px 66px;
+        
 
         span {
             display:none;
@@ -240,6 +260,8 @@ label {
     box-sizing: border-box;
     border-radius: 0px 0px 0px 36px;
     padding:32px 30px 30px 77px;
+    background: image_url('images-mh/callout-arrow.svg') 23px 0 no-repeat;
+    background-size:45px 66px;
 
     span {
         display:none;
