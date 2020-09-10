@@ -1,5 +1,6 @@
 en:
   land_and_buildings_transaction_tax:
+    holding: This tool is currently undergoing maintenance. Please visit the <a href="%{href}" target="_blank">gov.uk land tax calculator</a> in the meantime.
     meta:
       title: "Land and Buildings Transaction Tax (LBTT) – Scottish Stamp Duty calculator"
       description: "Use our Land and Buildings Transaction Tax (LBTT) calculator to calculate how much LBTT (formerly Stamp Duty) you’ll need to pay on your home in Scotland"

@@ -1,5 +1,6 @@
 en:
   stamp_duty:
+    holding: This tool is currently undergoing maintenance. Please visit the <a href="%{href}" target="_blank">gov.uk land tax calculator</a> in the meantime.
     meta:
       title: "Stamp Duty Calculator - Work out the new updated Stamp Duty Land Tax rates"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty Land Tax you’ll need to pay on your new home based on the new updated rates"

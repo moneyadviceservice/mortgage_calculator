@@ -1,5 +1,6 @@
 cy:
   land_and_buildings_transaction_tax:
+    holding: Mae’r teclyn hwn yn cael ei ddiweddaru ar hyn o bryd. Ewch i <a href="%{href}" target="_blank">gyfrifiannell treth ar dir gov.uk</a> yn y cyfamser
     meta:
       title: "Trafodiadau Tir ac Adeiladau (LBTT) – Cyfrifiannell Treth Stamp yr Alban"
       description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir ac Adeiladau (LBTT) i gyfrifo faint o LBTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"

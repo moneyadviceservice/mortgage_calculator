@@ -1,5 +1,6 @@
 en:
   land_transaction_tax:
+    holding: This tool is currently undergoing maintenance. Please visit the <a href="%{href}" target="_blank">gov.uk land tax calculator</a> in the meantime.
     meta:
       title: "Land Transaction Tax (LTT) - Welsh Stamp Duty Calculator"
       description: "Use our Land Transaction Tax (LTT) calculator to calculate how much LTT (formerly Stamp Duty) you'll need to pay on your home in Scotland"
