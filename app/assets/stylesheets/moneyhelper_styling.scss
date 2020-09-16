@@ -49,9 +49,17 @@ body .dough { /* this will need to be more specific */
 a {
     &:link, &:active {
         color:$color-magenta-primary;
+        text-decoration:none;
     }
     &:visited {color:$color-violet-secondary;}
     &:hover {color:$color-magenta-dark-primary;}
+
+    &:focus {
+        outline:none;
+        color:$color-dark-blue-secondary;
+        background:$color-yellow-secondary;
+        border-bottom:4px solid $color-violet-primary;
+    }
 }
 
 /* buttons */   
@@ -124,13 +132,19 @@ textarea,
   .form__input-container,
   .form__input-outline {
     border-color: $color-grey-secondary;
-    // color: $color-validation-text;
+    color:$color-grey-secondary;
 
-    // .form__input:focus {border:2px solid $color-yellow-secondary;} 
+    .form__input:focus {
+        border:2px solid $color-violet-primary;
+        outline:2px solid $color-yellow-secondary;
+        border-radius: 4px;
+    } 
   }
 
 .form__input-container:focus,.form__input-outline:focus {
-    border:2px solid $color-yellow-secondary;
+    border:2px solid $color-violet-primary;
+    outline:2px solid $color-yellow-secondary;
+    border-radius: 4px;
 }
 
 
@@ -153,7 +167,7 @@ textarea,
         color:$color-teal-dark-secondary;
         background:$color-white-supporting;
         border-radius: 0px;
-        font-size:16px;
+        // font-size:16px;
     }
 }
 
@@ -278,7 +292,7 @@ label {
             font-weight:normal;
             font-style: italic;
             color:$color-grey-secondary;
-            font-size:16px;
+            // font-size:16px;
             line-height:23px;
         }
     }
