@@ -59,7 +59,7 @@ Given(/^I am a first time buyer$/) do
 end
 
 Given(/^I am a next home buyer$/) do
-  @stamp_duty.select('buying my next home', from: @buyer_type)
+  @stamp_duty.select('buying my first or my next home', from: @buyer_type)
 end
 
 Given("I am an additional or buy-to-let property buyer") do

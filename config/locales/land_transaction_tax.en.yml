@@ -15,7 +15,7 @@ en:
     select:
       label: I am
       option_prompt: please select an option
-      option_isNextHome: buying my next home
+      option_isNextHome: buying my first or my next home
       option_isSecondHome: buying an additional property or second home
       tooltip_html: "You will usually have to pay higher rates of Land Transaction Tax if you are buying a residential property worth %{amount} or more and already own 1 or more properties."
     recalculate: Recalculate
@@ -23,11 +23,9 @@ en:
       title: "Buying in England, Northern Ireland or Scotland?"
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
-    how_calculated: "Land Transaction Tax (LTT) is paid at both main and higher rates of tax.  This is usually based on the price you pay for the property or land, but it might include other types of payment such as goods, works or services, release from a debt, or transfer of a debt, including the value of any outstanding mortgage. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £180,000, 3.5% tax on the property value between £180,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land Transaction Tax (LTT) would be £3,950 giving an effective tax rate of 1.41% (average percentage rate of tax paid)."
+    how_calculated: "Land Transaction Tax (LTT) is paid at both main and higher rates of tax.  This is usually based on the price you pay for the property or land, but it might include other types of payment such as goods, works or services, release from a debt, or transfer of a debt, including the value of any outstanding mortgage.  For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £250,000  and 5% on the value between £250,000 and £280,000.  In this case, total liability for Land Transaction Tax (LTT) would be £1,500."
 
-    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT. In this example that would represent an extra £8,400, meaning the total Land Transaction Tax would be £12,350 giving an effective tax rate of 4.41%. If you are replacing your main residence the higher rates may not apply.
-
-"
+    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT.  In this example LTT of 3% would be due on the value of the property up to £180,000 (£5,400), 6.5% on the value between £180,000 and £250,000 (£4,550) and 8% on the value between £250,000 and £280,000 (£2,400) meaning the total LTT due would be £12,350.  If you are replacing your main residence, the higher rates may not apply."
 
     how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
     describe_price_field: Make sure to clear the existing number before entering the new number.
@@ -47,6 +45,9 @@ en:
       rate_header: "Rate of Land Transaction Tax"
       extra_rate_header: "Higher LTT Rate*"
       max: "%{value}+"
+      caption:
+        main_rate: Main residential LTT rates
+        higher_rate: Higher residential LTT rates
     next_steps:
       learn_more:
         title: "Did you know?"

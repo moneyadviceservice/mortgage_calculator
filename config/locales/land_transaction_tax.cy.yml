@@ -15,7 +15,7 @@ cy:
     select:
       label: "Rwy'n"
       option_prompt: "dewiswch opsiwn"
-      option_isNextHome: "prynu fy nghartref nesaf"
+      option_isNextHome: "prynu fy nghartref cyntaf neu fy nghartref nesaf"
       option_isSecondHome: "prynu eiddo ychwanegol neu ail gartref"
       tooltip_html: "Fel arfer bydd yn rhaid i chi dalu cyfraddau uwch o Dreth Trafodiad Tir os ydych yn prynu eiddo preswyl sy'n werth %{amount} neu fwy ac eisoes yn berchen ar 1 eiddo neu fwy."
     recalculate: Ailgyfrifo
@@ -24,9 +24,9 @@ cy:
       title: "Prynu yn Lloegr, Gogledd Iwerddon neu'r Alban?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar y brif gyfradd treth a chyfradd uwch. Mae hyn fel arfer yn seiliedig ar y pris rydych yn ei dalu am yr eiddo neu'r tir, ond gallai gynnwys mathau eraill o daliad fel nwyddau, gwaith neu wasanaethau, rhyddhau o ddyled, neu drosglwyddo dyled, gan gynnwys gwerth unrhyw forgais sy'n ddyledus. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £280,000 yn talu unrhyw dreth ar werth yr eiddo hyd at £180,000, treth o 3.5% ar werth yr eiddo rhwng £180,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am Dreth Trafodiad Tir (LTT) fyddai £3,950 gan roi cyfradd dreth effeithiol o 1.41% (cyfradd ganrannol y dreth a dalwyd)."
+    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch. Mae hyn fel arfer yn seiliedig ar y pris rydych chi'n ei dalu am yr eiddo neu'r tir, ond gallai gynnwys mathau eraill o daliad fel nwyddau, gwaith neu wasanaethau, rhyddhau o ddyled, neu drosglwyddo dyled, gan gynnwys gwerth unrhyw forgais sy'n ddyledus. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £280,000 yn talu unrhyw dreth ar werth yr eiddo hyd at  £250,000 a 5% ar y gwerth rhwng £250,000 a £280,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am Dreth Trafodiad Tir (LTT) fyddai £1,500."
  
-    how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo ychwanegol dalu cyfradd uwch o LTT. Yn yr enghraifft hon, byddai hynny'n cynrychioli £8,400 ychwanegol, sy'n golygu mai cyfanswm y Treth Trafodiadau Tir fyddai £12,350 gan roi cyfradd dreth effeithiol o 4.41%. Os ydych yn amnewid eich prif breswylfa efallai na fydd y cyfraddau uwch yn berthnasol. Os ydych yn amnewid eich prif breswylfa efallai na fydd y cyfraddau uwch yn berthnasol."
+    how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo ychwanegol dalu cyfradd uwch o LTT. Yn yr enghraifft hon, byddai LTT o 3% yn ddyledus ar werth yr eiddo hyd at £180,000 (£5,400), 6.5% ar y gwerth rhwng £180,000 a £ 250,000 (£4,550) ac 8% ar y gwerth rhwng £ 250,000 a  £280,000 (£2,400) sy'n golygu mai cyfanswm y LTT sy'n ddyledus fyddai £12,350. Os ydych chi'n amnewid eich prif breswylfa, efallai na fydd y cyfraddau uwch yn berthnasol."
 
     how_calculated_extra: "* Nid yw prynu eiddo o dan %{amount} yn destun i gyfraddau uwch o Treth Trafodiad Tir (LTT)"
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
@@ -46,6 +46,9 @@ cy:
       rate_header: "Cyfradd Treth Trafodion Tir ac Adeiladau (LBTT)"
       extra_rate_header: "Cyfradd LTT Uwch*"
       max: "%{value}+"
+      caption:
+        main_rate: Prif gyfraddau preswyl Treth Trafodiadau Tir (LTT)
+        higher_rate: Cyfraddau preswyl uwch Treth Trafodiadau Tir (LTT)
     next_steps:
       learn_more:
         title: "A wyddech chi?"

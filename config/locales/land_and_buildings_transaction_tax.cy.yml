@@ -15,7 +15,7 @@ cy:
     select:
       label: "Rwy'n"
       option_prompt: "dewiswch opsiwn"
-      option_isNextHome: "prynu fy nghartref nesaf"
+      option_isNextHome: "prynu fy nghartref cyntaf neu fy nghartref nesaf"
       option_isFTB: prynu am y tro cyntaf
       option_isSecondHome: prynu eiddo ychwanegol neu ail gartref
       tooltip_html: Efallai bydd atodiad annedd atodol (ADS) o LBTT yn cael ei gynhwyso i brynu eiddo preswyl o £40,000 neu fwy yn yr Alban. Y gyfradd bresennol ar gyfer ADS yw %{additional_property_rate}% o’r ‘ystyriaeth berthnasol’ (fel arfer y pris prynu).
@@ -29,8 +29,8 @@ cy:
     how_calculated_ftb_3_html: Gall prynwyr tro cyntaf hawlio gostyngiad Prynwr tro Cyntaf. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Mae rhagor o wybodaeth am beth yw prynwr tro cyntaf ar ein gwefan.</a> Yn ddibynnol ar y pris prynu, gall y gostyngiad hwn leihau eich bil LBTT hyd at £600.
     how_calculated_ftb_4: "Golyga hynny bod cartrefi sydd â phrisiau prynu hyd at %{amount} wedi eu heithrio rhag LBTT fwy neu lai ar gyfer prynwyr tro cyntaf."
     how_calculated_ftb_5: "Er enghraifft:"
-    how_calculated: Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) yn dreth ddatblygol sy'n cael ei chymhwyso i drafodion tir ac adeiladau preswyl lle ceir buddiant trethadwy. Mae'n dâl sy'n fwy cymesur â phris gwirioneddol yr eiddo. Mae'r gyfradd ganrannol ar gyfer pob band yn cael ei chymhwyso i'r rhan o'r pris dros y trothwy perthnasol yn unig a hyd at y trothwy nesaf. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £280,000 yn talu unrhyw dreth ar werth yr eiddo hyd at £145,000, treth o 2% ar werth yr eiddo rhwng £145,001 a £250,000 a 5% ar werth yr eiddo rhwng £250,001 a £280,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am Dreth Trafodiad Tir ac Adeiladau (LBTT) fyddai £3,600 gan roi cyfradd dreth effeithiol o 1.29% (cyfradd ganrannol y dreth a dalwyd).
-    how_calculated_additional: "Gall unrhyw un sy'n prynu ail gartref yn yr Alban fod yn atebol am atodiad annedd atodol (ADS) ar brynu eiddo preswyl ychwanegol yn yr Alban o £40,000 neu fwy. Y gyfradd gyfredol yw %{additional_property_rate}% o gyfanswm yr ystyriaeth daladwy (pris yr eiddo fel arfer) ar gyfer eiddo preswyl ychwanegol o £40,000 neu fwy. Er enghraifft, ar gyfer ail gartref o £200,000 byddai'r ADS yn £8,000. Mae'r ADS yn daladwy yn ychwanegol i’r LBTT a fyddai'n ddyledus ar y pryniant. Nodir y cyfraddau a'r bandiau ar gyfer LBTT isod:"
+    how_calculated: "Mae Treth Trafodiad Tir ac Adeiladau (LBTT) yn dreth a gymhwysir i drafodion tir ac adeiladau preswyl ac amhreswyl (gan gynnwys prydlesi masnachol). Mae'r dreth yn daladwy ar wahanol gyfraddau ar bob cyfran o'r pris prynu o fewn bandiau treth penodedig. Dim ond i'r rhan o bris yr eiddo sy'n dod o fewn y band hwnnw y mae'r gyfradd ganrannol ar gyfer pob band yn cael ei chymhwyso. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £ 280,000 yn talu unrhyw LBTT ar werth yr eiddo hyd at £250,000 ac yna 5% o'r gwerth rhwng £ 250,000 a £280,000. Yn yr achos hwn, cyfanswm y LBTT a dalwyd fyddai £1,500."
+    how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu-i-osod) dalu Atodiad Annedd Ychwanegol (ADS) os yw'r pris prynu yn £ 40,000 neu fwy. Yn yr enghraifft uchod, pe bai'r eiddo'n ail gartref, cyfanswm y LBTT a dalwyd fyddai £1,500 PLWS ADS o £11,200 (4% o £280,000), felly cyfanswm o £12,700. Nodir y cyfraddau a'r bandiau ar gyfer LBTT isod:"
     how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun yr Atodiad Annedd Atodol ar gyfer ail gartref"
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:

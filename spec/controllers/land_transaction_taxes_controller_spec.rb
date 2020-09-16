@@ -10,13 +10,8 @@ module MortgageCalculator
           [
             {
               start: 0,
-              end: 180_000,
-              rate: 0
-            },
-            {
-              start: 180_000.01,
               end: 250_000,
-              rate: 3.5
+              rate: 0
             },
             {
               start: 250_000.01,
@@ -37,6 +32,41 @@ module MortgageCalculator
               start: 1_500_000.01,
               end: nil,
               rate: 12
+            }
+          ]
+        )
+
+        expect(controller.higher_rates).to eq(
+          [
+            {
+              start: 0,
+              end: 180_000,
+              rate: 3
+            },
+            {
+              start: 180_000.01,
+              end: 250_000,
+              rate: 6.5
+            },
+            {
+              start: 250_000.01,
+              end: 400_000,
+              rate: 8
+            },
+            {
+              start: 400_000.01,
+              end: 750_000,
+              rate: 10.5
+            },
+            {
+              start: 750_000.01,
+              end: 1_500_000,
+              rate: 13
+            },
+            {
+              start: 1_500_000.01,
+              end: nil,
+              rate: 15
             }
           ]
         )

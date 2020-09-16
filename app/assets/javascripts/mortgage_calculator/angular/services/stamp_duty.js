@@ -9,6 +9,7 @@ App.factory('StampDuty', function() {
       secondHomeTaxRate: cfg.second_home_tax_rate || 0,
       firstTimeBuyerThreshold: cfg.first_time_buyer_threshold || 0,
       rates: {
+          higher: cfg.higher || [],
           standard: cfg.standard || [],
           ftb: cfg.ftb || []
       },
@@ -32,6 +33,11 @@ App.factory('StampDuty', function() {
             rates = this.rates.standard;
             $conditionalMessage.addClass('is-active');
           }
+        } else if (cfg.tool === 'ltt' && this.buyerType === 'isSecondHome') {
+          rates = this.rates.higher;
+          $conditionalMessage.removeClass('is-active');
+          $howcalculatedFTB.removeClass('is-active');
+          $howcalculatedNextHome.addClass('is-active');
         } else {
           rates = this.rates.standard;
           $conditionalMessage.removeClass('is-active');
@@ -65,8 +71,14 @@ App.factory('StampDuty', function() {
           }
         }
 
-        if (this.buyerType === 'isSecondHome' && this.propertyPrice >= this.secondHomeTaxThreshold) {
-          totalTax += this.propertyPrice * (this.secondHomeTaxRate / 100);
+        if (cfg.tool === 'ltt') {
+          if (this.buyerType === 'isSecondHome' && this.propertyPrice < this.secondHomeTaxThreshold) {
+            totalTax = 0;
+          }
+        } else {
+          if (this.buyerType === 'isSecondHome' && this.propertyPrice >= this.secondHomeTaxThreshold) {
+            totalTax += this.propertyPrice * (this.secondHomeTaxRate / 100);
+          }
         }
 
         if (cfg.tool === 'ltt') {

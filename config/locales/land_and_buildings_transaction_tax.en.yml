@@ -15,7 +15,7 @@ en:
     select:
       label: I am
       option_prompt: please select an option
-      option_isNextHome: buying my next home
+      option_isNextHome: buying my first or my next home
       option_isFTB: a first-time buyer
       option_isSecondHome: buying an additional property or second home
       tooltip_html: An additional dwelling supplement (ADS) of LBTT may be applied on purchases of additional residential properties in Scotland of £40,000 or more. The current rate for ADS is %{additional_property_rate}% of the ‘relevant consideration’ (usually the purchase price).
@@ -29,8 +29,8 @@ en:
     how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
-    how_calculated: Land and Buildings Transaction Tax (LBTT) is a progressive tax that is applied to residential land and buildings transactions where a chargeable interest is acquired. It is a charge that is more proportionate to the actual price of the property. The percentage rate for each band is applied only to the part of the price over the relevant threshold and up to the next threshold. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid).
-    how_calculated_additional: "Anyone buying a second home in Scotland may be liable for an additional dwelling supplement (ADS) on purchases of additional residential properties in Scotland of £40,000 or more. The current rate is %{additional_property_rate}% of the total chargeable consideration (usually the property price) for an additional residential property of £40,000 or more. For example, for a £200,000 second home the ADS would be £8,000. The ADS is payable in addition to the LBTT that would be due on the purchase. The rates and bands for LBTT are set out below:"
+    how_calculated: "Land and Buildings Transaction Tax (LBTT) is a tax applied to residential and non-residential land and buildings transactions (including commercial leases). The tax is payable at different rates on each portion of the purchase price within specified tax bands. The percentage rate for each band is applied only to the part of the property price that falls within that band. For example, someone buying a property for £280,000 would pay no LBTT on the value of the property up to £250,000 and then 5% of the value between £250,000 and £280,000. In this case the total LBTT paid would be £1,500."
+    how_calculated_additional: "Anyone buying an additional residential property in Scotland (such as a second home or a buy-to-let property) may also have to pay an Additional Dwelling Supplement (ADS) if the purchase price is £40,000 or more. In the example above, if the property was a second home the total amount of LBTT paid would be £1,500 PLUS ADS of £11,200 (4% of £280,000), so £12,700 in total. The rates and bands for LBTT are set out below:"
     how_calculated_extra: "* Properties under %{amount} are not subject to second home Additional Dwelling Supplement"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
