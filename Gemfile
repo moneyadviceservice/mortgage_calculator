@@ -12,6 +12,10 @@ gem 'mas-build', '~> 2.0'  if ENV['MAS_BUILD']
 gem 'mas-development_dependencies', '2.3.0.35'
 gem 'meta-tags'
 
+group :development do
+  gem 'solargraph'
+end
+
 group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
