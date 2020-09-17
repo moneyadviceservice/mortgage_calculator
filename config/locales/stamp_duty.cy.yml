@@ -1,6 +1,5 @@
 cy:
   stamp_duty:
-    holding: Mae’r teclyn hwn yn cael ei ddiweddaru ar hyn o bryd. Ewch i <a href="%{href}" target="_blank">gyfrifiannell treth ar dir gov.uk</a> yn y cyfamser
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"

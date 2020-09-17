@@ -24,12 +24,12 @@ Feature: Land Transaction Tax Calculator
     | 800000  | 41,200     | 5.15%         |
     | 2000000 | 171,200    | 8.56%         |
 
-#  @javascript
-#  Scenario Outline: tax for next home
-#    When I enter a house price of <price>
-#    And I am a next home buyer
-#    And I click next
-#    Then I see the stamp duty I will have to pay is "£<duty>"
+  @javascript
+  Scenario Outline: tax for next home
+    When I enter a house price of <price>
+    And I am a next home buyer
+    And I click next
+    Then I see the stamp duty I will have to pay is "£<duty>"
 
   Examples:
     | price   | duty       | effective tax |
@@ -52,15 +52,15 @@ Feature: Land Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£11,900"
     And I see the effective tax rate is "2.79%"
 
-#  @javascript
-#  Scenario: I recalculate for next home
-#    When I enter a house price of 260000
-#    And I am a next home buyer
-#    And I click next
-#    And I see the stamp duty I will have to pay is "£2,950.00"
-#    Then I reenter my house price with "333333"
-#    And I click next again
-#    And I see the stamp duty I will have to pay is "£6,616.65"
+  @javascript
+  Scenario: I recalculate for next home
+    When I enter a house price of 260000
+    And I am a next home buyer
+    And I click next
+    And I see the stamp duty I will have to pay is "£2,950.00"
+    Then I reenter my house price with "333333"
+    And I click next again
+    And I see the stamp duty I will have to pay is "£6,616.65"
 
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home 

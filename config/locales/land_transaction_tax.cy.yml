@@ -1,6 +1,5 @@
 cy:
   land_transaction_tax:
-    holding: Mae’r teclyn hwn yn cael ei ddiweddaru ar hyn o bryd. Ewch i <a href="%{href}" target="_blank">gyfrifiannell treth ar dir gov.uk</a> yn y cyfamser
     meta:
       title: "Treth Trafodiadau Tir (LTT) - Cyfrifiannell Treth Stamp Cymru"
       description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir (LTT) i gyfrifo faint o LTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
