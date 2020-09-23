@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :syndicated_tool_request?
   def syndicated_tool_request?
-    params.include?('syndicated')
+    true
   end
 end

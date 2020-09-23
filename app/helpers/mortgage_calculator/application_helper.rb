@@ -35,7 +35,7 @@ module MortgageCalculator
     end
 
     def no_follow?
-      syndicated_tool_request? ? "nofollow" : nil
+      "nofollow"
     end
 
     def localize_route(route)
