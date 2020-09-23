@@ -1,17 +1,16 @@
 /* stylesheet to override MAS styles with Moneyhelper styles */ 
 
-/* Needs to be the same SASS syntax to overwrite 03/06/20 */ 
+/* Needs to be the same SASS syntax to overwrite */ 
 
 /* use new variables */
 
 /* Fonts come from dough/assets/fonts */ 
 
-@import 'moneyhelper_variables'; /* should this go here? */
+@import 'moneyhelper_variables'; /* should this go here? check structure once uplift structure confirmed */
 
 .mortgagecalc__container {
     margin:0 auto;
 }
-
 
 .mortgagecalc__container, .mortgagecalc__panel {
     background:#fff;
@@ -24,15 +23,12 @@
 
     .mortgagecalc__panel--border {
         border-top:1px solid $color-grey-blue-supporting;
-        width:100%;
+    }
 
-        .button--primary {
-            width:50%;
-        }
-        
+    .mortgagecalc__panel--full {
+        padding-bottom:30px;
     }
 }
-
 
 body .dough { /* this will need to be more specific */ 
     color:$color-blue-primary; /* From Dough */ 
@@ -42,7 +38,7 @@ body .dough { /* this will need to be more specific */
 .mortgagecalc {
     font-family: '';
     font-weight: 300; /* left the same */ 
-    font-size: 16px;
+    // font-size: 16px;
 }
 
 /* links */
@@ -130,34 +126,25 @@ input[type="search"],
 input[type="password"],
 textarea,
   .form__input-container,
-  .form__input-outline {
-    border-color: $color-grey-secondary;
+//   .form__input-outline 
+  {
+    border:1px solid $color-grey-secondary;
+    border-radius:4px;
     color:$color-grey-secondary;
 
-    .form__input:focus {
-        border:2px solid $color-violet-primary;
-        outline:2px solid $color-yellow-secondary;
-        border-radius: 4px;
+    .form__input {
+        font-weight:normal;
+        font-style: italic;
+        color:$color-grey-secondary;
+         
+        &:focus {
+            background:$color-yellow-secondary;
+            border-radius: 4px;
+        }
     } 
   }
 
-.form__input-container:focus,.form__input-outline:focus {
-    border:2px solid $color-violet-primary;
-    outline:2px solid $color-yellow-secondary;
-    border-radius: 4px;
-}
 
-
-/* end forms from yeast */ 
-
-// input:hover {
-//     border-color:#8800d1;
-// }
-
-// input:focus {
-//     color:#8800d1;
-//     border: 4px solid $color-yellow-secondary;
-// }
 
 /* Numbering */ 
 
@@ -177,20 +164,18 @@ h1, .heading-large {
     font-family: Roobert;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 54px;
+    // font-size: 48px;
+    // line-height: 54px;
     color:#0F19A0}
 
 h2, .heading-medium {
     font-family: Roobert;
     font-style: normal;
     font-weight: bold;
-    font-size: 42px;
-    line-height: 48px;
+    // font-size: 42px;
+    // line-height: 48px;
     color:#000B3B;
 }
-
-/* end Desktop */ 
 
 /* _forms.scss */ 
 
@@ -214,7 +199,13 @@ label {
     height:28px;
     
     &:focus {
-        border:2px solid $color-yellow-secondary;
+        border:2px solid $color-violet-primary;
+        background:$color-yellow-secondary;
+    }
+
+    &:hover {
+        border:2px solid $color-magenta-dark-primary;
+        background:$color-magenta-dark-primary;
     }
   }
   .ui-slider .ui-slider-range {
@@ -236,13 +227,20 @@ label {
     &:focus,
     &:active {
         border:1px solid $color-grey-blue-supporting;
+        border-radius:4px 4px 0px 0px;
         border-bottom:none;
         color:$color-blue-primary;
         font-size:18px;
         line-height: 26px;
         font-weight:normal;
-        
     }
+
+    &:focus {
+        background:$color-yellow-secondary;
+        // border-bottom:4px solid $color-violet-primary;
+    }
+
+
     &:visited {}
     &:hover {
        
@@ -251,7 +249,6 @@ label {
          
     }
   }
-
 
   
   .tabs__content {
@@ -265,6 +262,14 @@ label {
         background: image_url('images-mh/callout-arrow.svg') 23px 0 no-repeat;
         background-size:45px 66px;
         
+        h5 {
+            font-size:1.5em;
+            margin:0px;
+        }
+
+        p {
+            margin:10px 0px;
+        }
 
         span {
             display:none;
@@ -281,112 +286,24 @@ label {
     background: image_url('images-mh/callout-arrow.svg') 23px 0 no-repeat;
     background-size:45px 66px;
 
+    p {
+        margin:0px;
+    }
+
     span {
         display:none;
     }
 }
     
-.form__item {
-    .form__input-container {
-        .form__input-label, .form__input {
-            font-weight:normal;
-            font-style: italic;
-            color:$color-grey-secondary;
-            // font-size:16px;
-            line-height:23px;
-        }
-    }
-}
-
-
-
-
-/* .label--accent {
-    background: ; what is this? 
-}*/ 
-
-
-/* .field_with_errors {
-    input[type="text"],
-    input[type="number"] {
-      border-top-color: ; what is this? 
-    }
-  } */
-
-  /* from _forms.scss in Yeast */
-
-//   button {
-//   @extend %font-smoothing;
+// .form__item {
+//     .form__input-container {
+//         .form__input-label, .form__input {
+//             font-weight:normal;
+//             font-style: italic;
+//             color:$color-grey-secondary;
+//             // font-size:16px;
+//             line-height:23px;
+//         }
+//     }
 // }
 
-// input[type="text"],
-// input[type="number"],
-// input[type="email"],
-// input[type="search"],
-// input[type="password"] {
-//   @extend %form-input;
-//   @extend %form-input-text;
-
-//   &[disabled] {
-//     background-color: $color-input-disabled-background;
-//     color: $color-input-disabled-text-color;
-//   }
-// }
-
-// input[type="search"] {
-//   box-sizing: border-box;
-// }
-
-// input[type="text"],
-// input[type="number"],
-// input[type="email"],
-// input[type="search"],
-// input[type="password"],
-// input[type="checkbox"],
-// input[type="radio"],
-// textarea {
-//   &:focus {
-//     @include form-input-focus;
-//     @include form-input-focus-outline;
-//   }
-// }
-
-// input[type="checkbox"],
-// input[type="radio"] {
-//   &:hover {
-//     @include form-input-focus;
-//     @include form-input-focus-outline;
-//     cursor: pointer;
-//   }
-// }
-
-// input[type="search"] {
-//   &:focus {
-//     outline-offset: -1px;
-//   }
-// }
-
-// input[type="submit"],
-// button,
-// select {
-//   &:focus {
-//     @include form-input-focus-outline;
-//   }
-// }
-
-// textarea {
-//   @extend %form-input;
-// }
-
-// fieldset {
-//   border: none;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// legend {
-//   color: $color-fieldset-legend-fg;
-//   display: block;
-//   font-weight: 500;
-//   margin-bottom: $baseline-unit*2;
-// }
