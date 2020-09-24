@@ -16,14 +16,14 @@
 //   }
   
   $mq-xs: 0 !default;
-  $mq-xs-max: px(479) !default;
-  $mq-s: px(480) !default;
-  $mq-s-max: px(719) !default;
-  $mq-m: px(720) !default;
-  $mq-m-max: px(959) !default;
-  $mq-l: px(960) !default;
-  $mq-l-max: px(1199) !default;
-  $mq-xl: px(1200) !default;
+  $mq-xs-max: (479px) !default;
+  $mq-s: (480px) !default;
+  $mq-s-max: (719px) !default;
+  $mq-m: (720px) !default;
+  $mq-m-max: (959px) !default;
+  $mq-l: (960px) !default;
+  $mq-l-max: (1199px) !default;
+  $mq-xl: (1200px) !default;
   
 //   @mixin respond-to($min-width, $max-width: false) {
 //     @if $responsive {
@@ -320,6 +320,7 @@ label {
 
         @media (min-width: $mq-m-max) {
             background: image_url('images-mh/desktop-arrow.svg') 23px 0 no-repeat;
+            background-size:45px 66px;
         }
         
         h5 {
@@ -337,14 +338,40 @@ label {
       }
 }
 
+.expander {
+    
+}
+
+.expander__link {
+    display: inline-block;
+    background: image_url('images-mh/tool-accordion-icon.png') 0 0 no-repeat;
+    padding-left: 55px;
+    height:40px;
+    line-height:40px;
+  
+    &.expander__link--expanded {
+        background: image_url('images-mh/tool-accordion-icon-close.png') 0 0 no-repeat;
+    }
+  
+    &.expander__link--nudge {
+      margin-top: 15px;
+    }
+  }
+  
+
 /* call out visibilty:hidden */
 .step_one .mortgagecalc__panel .callout--tip {
     border: 8px solid $color-yellow-secondary;
     box-sizing: border-box;
     border-radius: 0px 0px 0px 36px;
     padding:32px 30px 30px 77px;
-    background: image_url('images-mh/callout-arrow.svg') 23px 0 no-repeat;
-    background-size:45px 66px;
+    background: image_url('images-mh/mobile-call-out-arrow.svg') 0 28px no-repeat;
+    // background-size:45px 66px;
+
+    @media screen and (min-width: $mq-m-max) {
+        background: image_url('images-mh/desktop-arrow.svg') 23px 0 no-repeat;
+        // background-size:45px 66px;
+    }
 
     p {
         margin:0px;
@@ -354,6 +381,8 @@ label {
         display:none;
     }
 }
+
+
     
 // .form__item {
 //     .form__input-container {
