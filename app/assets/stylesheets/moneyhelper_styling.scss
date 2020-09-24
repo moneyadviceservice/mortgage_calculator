@@ -11,10 +11,6 @@
 //Media Query Variables (copied from dough/assets/stylesheets/lib/_mediaqueries.scss - we will need to find a global
 //place for these or write to 3 into 1 mq
 
-// @function px($px) {
-//     @return ($px / $base-font-size) * 1em
-//   }
-  
   $mq-xs: 0 !default;
   $mq-xs-max: (479px) !default;
   $mq-s: (480px) !default;
@@ -25,42 +21,6 @@
   $mq-l-max: (1199px) !default;
   $mq-xl: (1200px) !default;
   
-//   @mixin respond-to($min-width, $max-width: false) {
-//     @if $responsive {
-//       @media screen and (min-width: $min-width) {
-//         @if $max-width {
-//           @media (max-width: $max-width) {
-//             @content
-//           }
-//         } @else {
-//           @content;
-//         }
-//       }
-//     } @else if $min-width <= $mq-l and (not $max-width or $max-width and $max-width >= $mq-l) {
-//       // output content without mediaqueries if fixed width and less than x-large
-//       @content;
-//     }
-//   }
-  
-//   @mixin device-pixel-ratio($ratio: 2) {
-//     @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-//     only screen and (min--moz-device-pixel-ratio: $ratio),
-//     only screen and (-o-min-device-pixel-ratio: #{($ratio*10)}/10),
-//     only screen and (min-device-pixel-ratio: $ratio),
-//     only screen and (min-resolution: #{($ratio*96)}dpi),
-//     only screen and (min-resolution: #{$ratio}dppx) {
-//       @content;
-//     }
-//   }
-  
-//   .js-mediaquery-test:after {
-//     display: none;
-//     @include respond-to($mq-xs) { content: 'mq-xs'; }
-//     @include respond-to($mq-s) { content: 'mq-s'; }
-//     @include respond-to($mq-m) { content: 'mq-m'; }
-//     @include respond-to($mq-l) { content: 'mq-l'; }
-//     @include respond-to($mq-xl) { content: 'mq-xl'; }
-//   }
 
 //End Media Query Variables 
 
@@ -94,7 +54,6 @@ body .dough { /* this will need to be more specific */
 .mortgagecalc {
     font-family: '';
     font-weight: 300; /* left the same */ 
-    // font-size: 16px;
 }
 
 /* links */
@@ -115,7 +74,6 @@ a {
 }
 
 /* buttons */   
-
 .button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
     background:$color-magenta-primary;
     border:3px solid $color-magenta-primary;
@@ -135,7 +93,6 @@ a {
     }
 
     &:visited {
-        // background:$color-magenta-active-dark-primary;
         text-decoration: none!important;
         }
 
@@ -182,7 +139,7 @@ input[type="search"],
 input[type="password"],
 textarea,
   .form__input-container,
-//   .form__input-outline 
+
   {
     border:1px solid $color-grey-secondary;
     border-radius:4px;
@@ -200,47 +157,35 @@ textarea,
     } 
   }
 
-
-
 /* Numbering */ 
-
 .featured-list {
     > li:before {
         border:1px solid $color-teal-dark-secondary;
         color:$color-teal-dark-secondary;
         background:$color-white-supporting;
         border-radius: 0px;
-        // font-size:16px;
     }
 }
-
-/* Desktop */ 
 
 h1, .heading-large {
     font-family: Roobert;
     font-style: normal;
     font-weight: bold;
-    // font-size: 48px;
-    // line-height: 54px;
     color:#0F19A0}
 
 h2, .heading-medium {
     font-family: Roobert;
     font-style: normal;
     font-weight: bold;
-    // font-size: 42px;
-    // line-height: 48px;
     color:#000B3B;
 }
 
-/* _forms.scss */ 
 
 label {
     color: #000;} 
 
 
 /* from _slider.scss in mortgage calc */ 
-
 .ui-slider {
     border-radius:4px;
     background:$color-white-supporting;
@@ -264,10 +209,10 @@ label {
         background:$color-magenta-dark-primary;
     }
   }
+
   .ui-slider .ui-slider-range {
     background:$color-magenta-primary;
-    border-radius:0px;
-    
+    border-radius:0px; 
   }
 
   .ui-slider .ui-state-hover {
@@ -275,7 +220,6 @@ label {
   }
 
   /* tabs from mortgage calculator */ 
-
   .tabs__link {
     text-decoration: none;
 
@@ -293,7 +237,6 @@ label {
 
     &:focus {
         background:$color-yellow-secondary;
-        // border-bottom:4px solid $color-violet-primary;
     }
 
 
@@ -335,11 +278,7 @@ label {
         span {
             display:none;
         }
-      }
-}
-
-.expander {
-    
+    }
 }
 
 .expander__link {
@@ -356,9 +295,8 @@ label {
     &.expander__link--nudge {
       margin-top: 15px;
     }
-  }
+}
   
-
 /* call out visibilty:hidden */
 .step_one .mortgagecalc__panel .callout--tip {
     border: 8px solid $color-yellow-secondary;
@@ -366,11 +304,9 @@ label {
     border-radius: 0px 0px 0px 36px;
     padding:32px 30px 30px 77px;
     background: image_url('images-mh/mobile-call-out-arrow.svg') 0 28px no-repeat;
-    // background-size:45px 66px;
 
     @media screen and (min-width: $mq-m-max) {
         background: image_url('images-mh/desktop-arrow.svg') 23px 0 no-repeat;
-        // background-size:45px 66px;
     }
 
     p {
@@ -381,18 +317,4 @@ label {
         display:none;
     }
 }
-
-
-    
-// .form__item {
-//     .form__input-container {
-//         .form__input-label, .form__input {
-//             font-weight:normal;
-//             font-style: italic;
-//             color:$color-grey-secondary;
-//             // font-size:16px;
-//             line-height:23px;
-//         }
-//     }
-// }
 
