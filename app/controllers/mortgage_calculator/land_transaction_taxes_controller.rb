@@ -21,6 +21,11 @@ module MortgageCalculator
     end
     helper_method :standard_rates
 
+    def higher_rates
+      CALCULATOR.banding_for(CALCULATOR::HIGHER_BANDS)
+    end
+    helper_method :higher_rates
+
     def other_countries
       ['england_ni', 'scotland']
     end

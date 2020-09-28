@@ -26,14 +26,12 @@
               percentage: number_to_percentage(
                 resource.percentage_tax, precision: 2
               )
-        )
-    %>
+        )%>
   </p>
 
   <p class="rendered-from-js stamp-duty__results-tax-rate">
     <%= I18n.t("#{i18n_locale_namespace}.results.sentence_prefix") %>
-    {{ stampDuty.percentageTax() | number: 2 }}
-    <%= I18n.t("#{i18n_locale_namespace}.results.sentence_suffix") %>
+    {{ stampDuty.percentageTax() | number: 2 }}<%= I18n.t("#{i18n_locale_namespace}.results.sentence_suffix") %>
   </p>
 
   <% if outside_first_time_rate? %>

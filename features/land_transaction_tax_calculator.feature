@@ -18,49 +18,49 @@ Feature: Land Transaction Tax Calculator
     | 39000   | 0          | 0.00%         |
     | 40000   | 0          | 0.00%         |
     | 179000  | 0          | 0.00%         |
-    | 260000  | 2,950      | 1.13%         |
-    | 333333  | 6,616      | 1.98%         |
-    | 467895  | 15,042     | 3.21%         |
-    | 800000  | 41,200     | 5.15%         |
-    | 2000000 | 171,200    | 8.56%         |
+    | 260000  | 500        | 0.19%         |
+    | 333333  | 4,166      | 1.25%         |
+    | 467895  | 12,592     | 2.69%         |
+    | 800000  | 38,750     | 4.84%         |
+    | 2000000 | 168,750    | 8.44%         |
 
-#  @javascript
-#  Scenario Outline: tax for next home
-#    When I enter a house price of <price>
-#    And I am a next home buyer
-#    And I click next
-#    Then I see the stamp duty I will have to pay is "£<duty>"
+  @javascript
+  Scenario Outline: tax for next home
+    When I enter a house price of <price>
+    And I am a next home buyer
+    And I click next
+    Then I see the stamp duty I will have to pay is "£<duty>"
 
   Examples:
     | price   | duty       | effective tax |
     | 39000   | 0          | 0.00%         |
     | 40000   | 0          | 0.00%         |
     | 179000  | 0          | 0.00%         |
-    | 260000  | 2,950      | 1.13%         |
-    | 333333  | 6,616.65   | 1.98%         |
-    | 467895  | 15,042.13  | 3.21%         |
-    | 800000  | 41,200     | 5.15%         |
-    | 2000000 | 171,200    | 8.56%         |
+    | 260000  | 500        | 0.19%         |
+    | 333333  | 4,166      | 1.25%         |
+    | 467895  | 12,592     | 2.69%         |
+    | 800000  | 38,750     | 4.84%         |
+    | 2000000 | 168,750    | 8.44%         |
 
   Scenario: I recalculate for next home
     When I enter a house price of 260000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£2,950"
+    And I see the stamp duty I will have to pay is "£500"
     Then I reenter my house price with "426000"
     And I click next again
-    And I see the stamp duty I will have to pay is "£11,900"
-    And I see the effective tax rate is "2.79%"
+    And I see the stamp duty I will have to pay is "£9,450"
+    And I see the effective tax rate is "2.22%"
 
-#  @javascript
-#  Scenario: I recalculate for next home
-#    When I enter a house price of 260000
-#    And I am a next home buyer
-#    And I click next
-#    And I see the stamp duty I will have to pay is "£2,950.00"
-#    Then I reenter my house price with "333333"
-#    And I click next again
-#    And I see the stamp duty I will have to pay is "£6,616.65"
+  @javascript
+  Scenario: I recalculate for next home
+    When I enter a house price of 260000
+    And I am a next home buyer
+    And I click next
+    And I see the stamp duty I will have to pay is "£500"
+    Then I reenter my house price with "333333"
+    And I click next again
+    And I see the stamp duty I will have to pay is "£4,166.65"
 
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home 
@@ -68,6 +68,23 @@ Feature: Land Transaction Tax Calculator
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
     And I see the effective tax rate is "<effective tax>"
+
+    Examples:
+      | price   | duty     | effective tax |
+      | 35000   | 0        | 0.00%         |
+      | 135588  | 4,067    | 3.00%         |
+      | 180000  | 5,400    | 3.00%         |
+      | 260000  | 10,750   | 4.13%         |
+      | 500000  | 32,450   | 6.49%         |
+      | 900000  | 78,200   | 8.69%         |
+      | 1800000 | 201,200  | 11.18%        |
+
+  @javascript
+  Scenario Outline: Buy to let buyer
+    Given I am buying an additional property or second home 
+    When I enter a house price of <price>
+    And I click next
+    And I see the stamp duty I will have to pay is "£<duty>"
 
     Examples:
       | price   | duty     | effective tax |

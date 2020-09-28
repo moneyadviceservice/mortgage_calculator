@@ -23,10 +23,6 @@
   @include respond-to($mortgagecalc_mq-s) {
     margin-top: $baseline-unit*8;
   }
-
-  .ng-hide {
-    display: none; 
-  }
 }
 
 .stamp-duty__budget-warning {
