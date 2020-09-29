@@ -31,7 +31,7 @@ cy:
     how_calculated_ftb_5: "Er enghraifft:"
     how_calculated: "Mae Treth Trafodiad Tir ac Adeiladau (LBTT) yn dreth a gymhwysir i drafodion tir ac adeiladau preswyl ac amhreswyl (gan gynnwys prydlesi masnachol). Mae'r dreth yn daladwy ar wahanol gyfraddau ar bob cyfran o'r pris prynu o fewn bandiau treth penodedig. Dim ond i'r rhan o bris yr eiddo sy'n dod o fewn y band hwnnw y mae'r gyfradd ganrannol ar gyfer pob band yn cael ei chymhwyso. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £ 280,000 yn talu unrhyw LBTT ar werth yr eiddo hyd at £250,000 ac yna 5% o'r gwerth rhwng £ 250,000 a £280,000. Yn yr achos hwn, cyfanswm y LBTT a dalwyd fyddai £1,500."
     how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu-i-osod) dalu Atodiad Annedd Ychwanegol (ADS) os yw'r pris prynu yn £ 40,000 neu fwy. Yn yr enghraifft uchod, pe bai'r eiddo'n ail gartref, cyfanswm y LBTT a dalwyd fyddai £1,500 PLWS ADS o £11,200 (4% o £280,000), felly cyfanswm o £12,700. Nodir y cyfraddau a'r bandiau ar gyfer LBTT isod:"
-    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun yr Atodiad Annedd Atodol ar gyfer ail gartref"
+    how_calculated_extra: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:
@@ -46,16 +46,17 @@ cy:
       click_to_expand: Cliciwch i ehangu
       FTB_conditional: "You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than %{amount}."
     table:
-      property_price_header: "Pris prynu"
+      property_price_header: Pris prynu’r eiddo
       rate_header: "Cyfradd LBTT safonol"
       standard_bill_header: "Bil LBTT safonol"
-      verbose_rate_header: "Cyfradd Treth Trafodiadau Tir ac Adeiladau (LBTT)"
+      verbose_rate_header: Cyfradd Treth Trafodiad Tir ac Adeiladau (LBTT) (eiddo preswyl sengl neu luosog)
       ftb_relief_amount_header: "Swm o Ostyngiad Prynwr tro Cyntaf"
       ftb_total_amount_header: "Y cyfanswm i'w dalu fel prynwr am y tro cyntaf"
-      extra_rate_header: "Atodiad Prynu-i-osod / Annedd Atodol (ADS)*"
+      extra_rate_header: Atodiad Annedd Ychwanegol (ADS) ar ail eiddo preswyl neu eiddo preswyl ychwanegol
       standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
       min: "Hyd at %{value}"
       max: "Dros %{value}"
+      extra_rate: "%{rate}% o'r pris prynu (wedi'i dalu yn ychwanegol at unrhyw LBTT sy'n ddyledus)"
     next_steps:
       learn_more:
         title: "A wyddech chi?"
