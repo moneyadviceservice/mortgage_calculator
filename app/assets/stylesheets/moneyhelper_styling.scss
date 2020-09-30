@@ -234,7 +234,7 @@ label {
     &:focus,
     &:active {
         border:1px solid $color-grey-blue-supporting;
-        background-color:$color-grey;
+        // background-color:$color-grey;
         border-radius:4px 4px 0px 0px;
         border-bottom:none;
         color:$color-blue-primary;
@@ -252,13 +252,20 @@ label {
        color:$color-magenta-dark-primary;
     }
     
-    &.tabs__current {
-        
+    &.tabs__current {  
         color:$color-blue-primary;
 
         &:hover {
             background-color:$color-white-supporting;
+            text-decoration:none;
         }
+
+        &:focus {
+            background-image:image_url('images-mh/focus-state-purple-line-bg.png');
+            background-position:0px 100%;
+            background-repeat: repeat-x;
+        }
+
         &:target {
             background:$color-white-smoke-supporting;
         }
