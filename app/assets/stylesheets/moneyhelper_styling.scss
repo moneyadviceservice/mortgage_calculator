@@ -42,7 +42,7 @@
     }
 
     .mortgagecalc__panel--full {
-        padding-bottom:30px;
+        // padding-bottom:30px;
     }
 }
 
@@ -106,7 +106,6 @@ a {
         box-shadow:0px 1px 0px rgba(0, 0, 0, 0.25);
     }
 
-
     &:focus {
         background:$color-yellow-secondary; 
         border:3px solid $color-violet-primary;
@@ -159,15 +158,23 @@ textarea,
             border-radius: 4px;
         }
     } 
-  }
+}
 
 /* Numbering */ 
 .featured-list {
-    > li:before {
-        border:1px solid $color-teal-dark-secondary;
-        color:$color-teal-dark-secondary;
-        background:$color-white-supporting;
-        border-radius: 0px;
+    li { 
+        margin-left:0px;
+        padding-top:0px;
+
+        &:before {
+            border:1px solid $color-teal-dark-secondary;
+            color:$color-teal-dark-secondary;
+            background:$color-white-supporting;
+            border-radius: 0px;}
+
+        @media screen and (min-width: $mq-m-max) {
+            margin-left:1em;
+        }
     }
 }
 
@@ -243,13 +250,17 @@ label {
         font-weight:normal;
     }
 
+    &:hover {
+        text-decoration:underline;
+        color:$color-magenta-dark-primary;
+    }
+
     &:focus {
         background-color:$color-yellow-secondary;
     }
-
-    &:hover {
-       text-decoration:underline;
-       color:$color-magenta-dark-primary;
+    
+    &:active:focus {
+        background:$color-white-smoke-supporting;
     }
     
     &.tabs__current {  
@@ -265,10 +276,6 @@ label {
             background-position:0px 100%;
             background-repeat: repeat-x;
         }
-
-        &:target {
-            background:$color-white-smoke-supporting;
-        }
     }
 }
 
@@ -280,14 +287,16 @@ label {
     .callout--tip {
         border:8px solid $color-yellow-secondary;
         border-radius: 0px 0px 0px 36px;
-        padding:32px 30px 30px 77px;
-        background: image_url('images-mh/mobile-call-out-arrow.svg') 23px 0 no-repeat;
-        background-size:48px 40px;
+        margin-top:30px;
+        padding:32px 29px 26px 57px;
+        background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
         
 
-        @media (min-width: $mq-m-max) {
+        @media screen and (min-width: $mq-m-max) {
             background: image_url('images-mh/desktop-arrow.svg') 23px -4px no-repeat;
             background-size:51px 78px;
+            padding:32px 30px 30px 77px;
+    
         }
         
         h5 {
@@ -324,7 +333,7 @@ label {
             background-repeat: no-repeat;
 
             &:focus {
-                background:transparent;
+                // background:transparent;
                 background-color:$color-yellow-secondary;
             }
         }
@@ -340,13 +349,15 @@ label {
     border: 8px solid $color-yellow-secondary;
     box-sizing: border-box;
     border-radius: 0px 0px 0px 36px;
-    padding:32px 30px 30px 77px;
-    background: image_url('images-mh/mobile-call-out-arrow.svg') 0 28px no-repeat;
-    background-size:48px 40px;
+    margin-top:30px;
+    padding:32px 29px 26px 57px;
+    background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
+    
 
     @media screen and (min-width: $mq-m-max) {
         background: image_url('images-mh/desktop-arrow.svg') 23px -4px no-repeat;
         background-size:51px 78px;
+        padding:32px 30px 30px 77px;
     }
 
     p {
