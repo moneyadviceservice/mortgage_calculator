@@ -24,11 +24,11 @@ Scenario: LBTT How is this calculated panel - Next home buyer journey
   When I progress to the results page
   And I click on the How is this Calculated information icon
   Then I should see the values on the information panel as:
-  | Purchase price      | Rate of Land and Buildings Transaction Tax (LBTT) | Buy to Let/ Additional Dwelling Supplement (ADS)* |
-  | Up to £250,000      | 0%                 | 4%                           |
-  | £250,001 - £325,000 | 5%                 | 4%                           |
-  | £325,001 - £750,000 | 10%                | 4%                           |
-  | Over £750,000       | 12%                | 4%                           |
+  | Purchase price of property | Rate of Land and Buildings Transaction Tax (LBTT) (single or multiple residential properties) | Additional Dwelling Supplement (ADS) on second or additional residential property |
+  | Up to £250,000             | 0%                                                                                            | 4% of purchase price (paid in addition to any LBTT due)                           |
+  | £250,001 - £325,000        | 5%                                                                                            |                                                                                   |
+  | £325,001 - £750,000        | 10%                                                                                           |                                                                                   |
+  | Over £750,000              | 12%                                                                                           |                                                                                   |
 
 Scenario: LBTT How is this calculated panel - Additional home buyer journey
   Given I visit the land and buildings transaction tax page
@@ -36,8 +36,8 @@ Scenario: LBTT How is this calculated panel - Additional home buyer journey
   When I progress to the results page
   And I click on the How is this Calculated information icon
   Then I should see the values on the information panel as:
-  | Purchase price      | Rate of Land and Buildings Transaction Tax (LBTT) | Buy to Let/ Additional Dwelling Supplement (ADS)* |
-  | Up to £250,000      | 0%                 | 4%                           |
-  | £250,001 - £325,000 | 5%                 | 4%                           |
-  | £325,001 - £750,000 | 10%                | 4%                           |
-  | Over £750,000       | 12%                | 4%                           |
+  | Purchase price of property | Rate of Land and Buildings Transaction Tax (LBTT) (single or multiple residential properties) | Additional Dwelling Supplement (ADS) on second or additional residential property |
+  | Up to £250,000             | 0%                                                                                            | 4% of purchase price (paid in addition to any LBTT due)                           |
+  | £250,001 - £325,000        | 5%                                                                                            |                                                                                   |
+  | £325,001 - £750,000        | 10%                                                                                           |                                                                                   |
+  | Over £750,000              | 12%                                                                                           |                                                                                   |
