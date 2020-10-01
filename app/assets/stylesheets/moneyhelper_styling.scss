@@ -114,17 +114,21 @@ a {
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     }
 
-    &:target {
-        background:$color-magenta-dark-primary;
-        border:3px solid $color-yellow-secondary;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-    }
 
     &:active:focus {
         background:$color-magenta-dark-primary;
         border:3px solid $color-yellow-secondary;
         color:$color-white-supporting!important;
     }
+
+
+    // &:target {
+    //     background:$color-yellow-secondary; 
+    //     border:3px solid $color-violet-primary;
+    //     color:$color-dark-blue-secondary;
+    //     outline:none;
+    //     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    // }
 
 }
 
