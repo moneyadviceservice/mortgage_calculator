@@ -162,6 +162,13 @@
   margin-bottom: 78px;
 }
 
+.mortgagecalc__table__caption {
+  font-size: 1rem; 
+  margin: 0 0 $baseline-unit;
+  text-align: left; 
+  font-weight: 500; 
+}
+
 .mortgagecalc__table__price {
   width: 50%;
 
@@ -177,6 +184,10 @@
   @include respond-to($mq-xs-max) {
     width: 30%;
   }
+}
+
+.mortgagecalc__table__common-row {
+  vertical-align: middle; 
 }
 
 .mortgagecalc__table__lbtt-price {

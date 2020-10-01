@@ -1,6 +1,5 @@
 en:
   stamp_duty:
-    holding: This tool is currently undergoing maintenance. Please visit the <a href="%{href}" target="_blank">gov.uk land tax calculator</a> in the meantime.
     meta:
       title: "Stamp Duty Calculator - Work out the new updated Stamp Duty Land Tax rates"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty Land Tax you’ll need to pay on your new home based on the new updated rates"
@@ -17,7 +16,7 @@ en:
     select:
       label: I am
       option_prompt: please select an option
-      option_isNextHome: buying my next home
+      option_isNextHome: buying my first or my next home
       option_isFTB: a first-time buyer
       option_isSecondHome: buying an additional property or second home
       tooltip_html: You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over a certain price in England and Northern Ireland. There are different rules if you’re buying an additional property. <br /><br />You must generally pay the higher SDLT rates when you buy a residential property or a part of one if it will not be the only residential property that you own (or part own) anywhere in the world, you have not sold or given away your previous main home and no one else has a lease on it which has more than 21 years left to run. These rules apply if you’re married to or buying with someone.

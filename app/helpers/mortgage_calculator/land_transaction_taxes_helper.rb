@@ -21,6 +21,7 @@ module MortgageCalculator
       {
         tool: 'ltt',
         standard: calculator::STANDARD_BANDS,
+        higher: calculator::HIGHER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD
       }.to_json

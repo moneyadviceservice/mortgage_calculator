@@ -34,7 +34,7 @@ function info {
 
 run npm install --quiet
 run bundle install
-run bundle update brakeman --quiet
+# run bundle update brakeman --quiet
 run bundle exec bowndler update --allow-root
 run bundle exec rspec -f progress
 run bundle exec cucumber -f progress
