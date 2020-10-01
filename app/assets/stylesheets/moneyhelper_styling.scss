@@ -78,7 +78,7 @@ a {
 }
 
 /* buttons */   
-.button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
+.button, .button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
     background:$color-magenta-primary;
     border:3px solid $color-magenta-primary;
     border-radius:4px;
@@ -250,13 +250,14 @@ label {
         font-weight:normal;
     }
 
+    &:focus {
+        background-color:$color-yellow-secondary;
+    }
+
     &:hover {
         text-decoration:underline;
         color:$color-magenta-dark-primary;
-    }
-
-    &:focus {
-        background-color:$color-yellow-secondary;
+        background:$color-white-supporting;
     }
     
     &:active:focus {
@@ -264,17 +265,23 @@ label {
     }
     
     &.tabs__current {  
-        color:$color-blue-primary;
-
-        &:hover {
-            background-color:$color-white-supporting;
-            text-decoration:none;
-        }
+        color:$color-blue-primary; 
 
         &:focus {
             background-image:image_url('images-mh/focus-state-purple-line-bg.png');
             background-position:0px 100%;
             background-repeat: repeat-x;
+        }
+
+        &:hover {
+            background-image:none;
+            background-color:$color-white-supporting;
+            text-decoration:none;
+        }
+
+        &:active:focus {
+            background-image:none;
+            background:$color-white-smoke-supporting;
         }
     }
 }
