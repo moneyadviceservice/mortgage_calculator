@@ -31,7 +31,8 @@
 .mortgagecalc__container, .mortgagecalc__panel {
     background:#fff;
     color:$color-dark-blue-secondary;
-    font-family: 'Roobert';
+    font-family: 'museo_sans';
+    // font-family: 'Roobert';
 
     .mortgagecalc__panel--border-left {
         border-left:1px solid $color-grey-blue-supporting;
@@ -114,21 +115,11 @@ a {
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     }
 
-
     &:active:focus {
         background:$color-magenta-dark-primary;
         border:3px solid $color-yellow-secondary;
         color:$color-white-supporting!important;
     }
-
-
-    // &:target {
-    //     background:$color-yellow-secondary; 
-    //     border:3px solid $color-violet-primary;
-    //     color:$color-dark-blue-secondary;
-    //     outline:none;
-    //     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-    // }
 
 }
 
@@ -183,13 +174,15 @@ textarea,
 }
 
 h1, .heading-large {
-    font-family: Roobert;
+    // font-family: Roobert;
+    font-family: 'museo_sans';
     font-style: normal;
     font-weight: bold;
     color:#0F19A0}
 
 h2, .heading-medium {
-    font-family: Roobert;
+    // font-family: Roobert;
+    font-family: 'museo_sans';
     font-style: normal;
     font-weight: bold;
     color:#000B3B;
@@ -336,6 +329,7 @@ label {
         padding-left: 55px;
         height:47px;
         line-height:40px;
+        padding-right:15px;
     
         &.expander__link--expanded {
             background:none;
