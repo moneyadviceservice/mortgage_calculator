@@ -33,6 +33,34 @@
     p {
         line-height:23px;
     }
+
+    select {
+        border:1px solid $color-grey-secondary;
+        border-radius:4px;
+        font-weight:normal;
+        font-style: italic;
+        color:$color-grey-secondary;
+        
+        &:focus {
+            background-color:$color-yellow-secondary;
+            border-radius: 4px;
+        }
+    }
+
+    .popup-tip__button {
+        background-color:$color-light-grey-supporting;
+        color:$color-magenta-primary;
+        border:3px solid $color-magenta-primary;
+        width:30px;
+        height:30px;
+
+        &:focus {
+            background-color:$color-yellow-secondary;
+            outline:none;
+            border-color:$color-violet-primary;
+            color:$color-violet-primary;
+        }
+    }
 }
 
 .mortgagecalc__container, .mortgagecalc__panel {
@@ -407,32 +435,5 @@ label {
     }   
 }
 
-/* all tools */ 
-select {
-    border:1px solid $color-grey-secondary;
-    border-radius:4px;
-    font-weight:normal;
-    font-style: italic;
-    color:$color-grey-secondary;
-     
-    &:focus {
-        background-color:$color-yellow-secondary;
-        border-radius: 4px;
-    }
-}
 
-.popup-tip__button {
-    background-color:$color-light-grey-supporting;
-    color:$color-magenta-primary;
-    border:3px solid $color-magenta-primary;
-    width:30px;
-    height:30px;
-
-    &:focus {
-        background-color:$color-yellow-secondary;
-        outline:none;
-        border-color:$color-violet-primary;
-        color:$color-violet-primary;
-    }
-}
 
