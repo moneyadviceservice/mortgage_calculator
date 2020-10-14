@@ -20,11 +20,7 @@
   $mq-l: (960px) !default;
   $mq-l-max: (1199px) !default;
   $mq-xl: (1200px) !default;
-  
-
 //End Media Query Variables 
-
-
 
 .mortgagecalc {
     margin:0 auto;
@@ -98,7 +94,6 @@ a {
         color:$color-magenta-primary;
         text-decoration:none;
     }
-   
     &:hover {color:$color-magenta-dark-primary;}
 
     &:focus {
@@ -114,7 +109,7 @@ a {
 }
 
 /* buttons */   
-.button, .button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
+.button, a.button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit {
     // font-family: Roobert;
     font-family: 'museo_sans';
     background:$color-magenta-primary;
@@ -132,7 +127,7 @@ a {
             color:$color-white-supporting;
             
         }
-        &:visited {color:$color-white-supporting;}
+        // &:visited {color:$color-white-supporting;}
         &:hover {color:$color-magenta-dark-primary;}
     }
 
@@ -423,6 +418,14 @@ label {
     }
 }
 
+.elsewhere__arrow {
+    background-color:$color-light-grey-supporting;
+    background-image: image_url('images-mh/chevron-vector-right.svg');
+    background-position: 12px 12px;
+    background-size:27px 27px;
+    background-repeat: no-repeat;
+}
+
 /* Affordability */ 
 
 .affcalc__col, .affcalc__col--field {  
@@ -434,6 +437,14 @@ label {
         }
     }   
 }
+
+.risk--high .risk__accent--color-only {background-color:$risk-high;color:$color-white-supporting;}
+.risk--medium .risk__accent--color-only {background-color:$risk-medium;}
+.risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
+
+.risk--high .ui-slider .ui-slider-handle:focus {border-color:$risk-high;}
+.risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
+.risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
 
 
 
