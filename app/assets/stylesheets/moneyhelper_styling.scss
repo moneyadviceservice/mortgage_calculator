@@ -326,7 +326,7 @@ label {
 
         @media screen and (min-width: $mq-m-max) {
             background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
-            background-size:51px 78px;
+            background-size:45px 66px;
             padding:32px 30px 30px 77px;
         }
         
@@ -400,7 +400,6 @@ label {
 }
 
 /* Stamp duty */ 
-
 .mortgagecalc {
 
     .stamp-duty__input-wrapper {
@@ -416,16 +415,16 @@ label {
         }
     }
 
+    //right hand chevron inside circle
     .elsewhere__arrow {
         background-color:$color-light-grey-supporting;
         background-image: image_url('images-mh/chevron-vector-right.svg');
-        background-position: 12px 12px;
-        background-size:27px 27px;
+        background-position: 14px 14px;
+        background-size:22px 22px;
         background-repeat: no-repeat;
     }
 
     /* Affordability */ 
-
     .affcalc__col, .affcalc__col--field {  
         .form__row {
             margin:15px 0px;
