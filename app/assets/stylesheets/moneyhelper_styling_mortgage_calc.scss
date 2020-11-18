@@ -163,10 +163,12 @@
         border:1px solid $color-grey;
         color: $color-grey-secondary;}
 
-    .previous {
+    .previous, .mortgagecalc__panel--full .mortgagecalc__submit {
         background-color:$color-white-supporting;
         color:$color-magenta-primary;
-        border:3px solid $color-magenta-primary;
+        border:1px solid $color-magenta-primary;
+        box-sizing: border-box;
+        position: relative;
 
         &:visited {
             color:$color-magenta-primary;
