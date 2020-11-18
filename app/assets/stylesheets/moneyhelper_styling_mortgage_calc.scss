@@ -1,0 +1,526 @@
+/* stylesheet to override MAS styles with Moneyhelper styles */ 
+
+/* Needs to be the same SASS syntax to overwrite */ 
+
+/* use new variables */
+
+/* Fonts come from dough/assets/fonts */ 
+
+@import 'moneyhelper_variables'; /* should this go here? check structure once uplift structure confirmed */
+
+//Media Query Variables (copied from dough/assets/stylesheets/lib/_mediaqueries.scss - we will need to find a global
+//place for these or write to 3 into 1 mq
+
+  $mq-xs: 0 !default;
+  $mq-xs-max: (479px) !default;
+  $mq-s: (480px) !default;
+  $mq-s-max: (719px) !default;
+  $mq-m: (720px) !default;
+  $mq-m-max: (959px) !default;
+  $mq-l: (960px) !default;
+  $mq-l-max: (1199px) !default;
+  $mq-xl: (1200px) !default;
+
+//End Media Query Variables 
+
+//Where I've placed styles inside .mortgagecalc for now until we know the structure and what will affect what. 
+//We will aim to use global styling for tools but as this is the first one, this is not written in final layout. 
+
+.mortgagecalc {
+    margin:0 auto;
+    max-width:750px;
+    font-family: 'museo_sans';
+    font-weight: 300; /* left the same */ 
+    // font-family: 'Roobert';
+
+    p, ul {
+        line-height:23px;
+    }
+
+    select {
+        border:1px solid $color-grey-secondary;
+        border-radius:4px;
+        font-weight:normal;
+        font-style: italic;
+        color:$color-grey-secondary;
+        font-size: 1rem;
+        
+        &:focus {
+            background-color:$color-yellow-secondary;
+            border:2px solid $color-violet-primary;
+            border-radius: 4px;
+            outline:none;
+        }
+    }
+
+    .popup-tip__button {
+        background-color:$color-light-grey-supporting;
+        color:$color-magenta-primary;
+        border:3px solid $color-magenta-primary;
+        width:30px;
+        height:30px;
+
+        &:focus {
+            background-color:$color-yellow-secondary;
+            outline:none;
+            border-color:$color-violet-primary;
+            color:$color-violet-primary;
+        }
+    }
+}
+
+.mortgagecalc__container, .mortgagecalc__panel {
+    background:#fff;
+    color:$color-dark-blue-secondary;
+    font-family: 'museo_sans';
+    // font-family: 'Roobert';
+
+    .mortgagecalc__panel--border-left {
+        border-left:1px solid $color-grey-blue-supporting;
+    }
+
+    .mortgagecalc__panel--border {
+        border-top:1px solid $color-grey-blue-supporting;
+    }
+}
+
+.mortgagecalc {
+    /* links */
+    p a, ol li a, ul li a, .stamp-duty__results a {
+        &:link, &:active {
+            color:$color-magenta-primary;
+            text-decoration:none;
+        }
+        &:hover {color:$color-magenta-dark-primary;}
+
+        &:focus {
+            outline:none;
+            color:$color-dark-blue-secondary;
+            background-color:$color-yellow-secondary;
+            border-bottom:4px solid $color-violet-primary;
+        }
+
+        &:target {
+            color:$color-violet-secondary;
+        }
+    }
+}
+
+.mortgagecalc {
+    /* buttons */   
+    .button, a.button--primary, .mortgagecalc__panel .button--primary, .mortgagecalc__panel .mortgagecalc__submit, .stamp-duty__calculator-column a.button {
+        // font-family: Roobert;
+        font-family: 'museo_sans';
+        background:$color-magenta-primary;
+        border:3px solid $color-magenta-primary;
+        border-radius:4px;
+        box-shadow:0px 3px 0px rgba(0, 0, 0, 0.25);
+        padding:8px 16px;
+        min-height:40px;
+        color:$color-white-supporting;
+        text-decoration: none!important;
+        font-size: 1rem;
+        font-weight:600;
+
+        a {text-decoration: none!important;
+            &:link, &:active {
+                color:$color-white-supporting;
+                
+            }
+            // &:visited {color:$color-white-supporting;}
+            &:hover {color:$color-magenta-dark-primary;}
+        }
+
+        &:visited {
+            text-decoration: none!important;
+            color:$color-white-supporting;
+        }
+
+        &:hover {
+            background:$color-magenta-dark-primary;
+            border:3px solid $color-magenta-dark-primary;
+            box-shadow:0px 1px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &:focus {
+            background:$color-yellow-secondary; 
+            border:3px solid $color-violet-primary;
+            color:$color-dark-blue-secondary;
+            outline:none;
+            box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active:focus {
+            background:$color-magenta-dark-primary;
+            border:3px solid $color-yellow-secondary;
+            color:$color-white-supporting!important;
+        }
+
+    }
+
+    .button--primary[disabled] {
+        background-color: transparent;
+        border:1px solid $color-grey;
+        color: $color-grey-secondary;}
+
+    .previous {
+        background-color:$color-white-supporting;
+        color:$color-magenta-primary;
+        border:3px solid $color-magenta-primary;
+
+        &:visited {
+            color:$color-magenta-primary;
+        }
+
+        &:hover {
+            background-color:$color-light-grey-supporting;
+            border:3px solid $color-magenta-dark-primary;
+        }
+
+        &:focus {}
+
+        
+        &:active:focus {
+            background-color:$color-light-grey-supporting;
+            border:3px solid $color-violet-primary;
+            color:$color-dark-blue-secondary!important;
+        }
+    }
+}
+
+/* forms from yeast */ 
+input[type="text"],
+input[type="number"],
+input[type="select"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+.form__input-container,
+
+  {border:1px solid $color-grey-secondary;
+    border-radius:4px;
+    color:$color-grey-secondary;
+
+    .form__input {
+        font-weight:normal;
+        font-style: italic;
+        color:$color-grey-secondary;
+        padding:8px 0px;
+        min-height:40px;
+         
+        &:focus {
+            background:$color-yellow-secondary;
+            border:2px solid $color-violet-primary;
+            border-radius: 4px;
+            padding:6px 0px; 
+            outline:none;
+        }
+    } 
+}
+
+/* Numbering */ 
+.featured-list {
+    li { 
+        margin-left:0px;
+        padding-top:0px;
+
+        &:before {
+            border:1px solid $color-teal-dark-secondary;
+            color:$color-teal-dark-secondary;
+            background:$color-white-supporting;
+            border-radius: 0px;}
+
+        @media screen and (min-width: $mq-m-max) {
+            margin-left:1em;
+        }
+    }
+}
+
+h1, .heading-large {
+    // font-family: Roobert;
+    font-family: 'museo_sans';
+    font-style: normal;
+    font-weight: bold;
+    color:#0F19A0}
+
+h2, .heading-medium {
+    // font-family: Roobert;
+    font-family: 'museo_sans';
+    font-style: normal;
+    font-weight: bold;
+    color:#000B3B;
+}
+
+label {
+    color: #000;} 
+
+/* from _slider.scss in mortgage calc */ 
+.ui-slider {
+    border-radius:4px;
+    background:$color-white-supporting;
+    border:1px solid $color-grey-secondary;
+    height:8px;
+  }
+  .ui-slider .ui-slider-handle {
+    border:2px solid $color-magenta-primary;
+    background:$color-magenta-primary;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    width:28px;
+    height:28px;
+    
+    &:focus {
+        border:2px solid $color-violet-primary;
+        background:$color-yellow-secondary;
+        outline:none;
+    }
+
+    &:hover {
+        border:2px solid $color-magenta-dark-primary;
+        background:$color-magenta-dark-primary;
+    }
+}
+
+.ui-slider .ui-slider-range {
+    background:$color-magenta-primary;
+    border-radius:0px; 
+}
+
+.ui-slider .ui-state-hover {
+      background:$color-magenta-dark-primary;
+}
+
+  /* tabs from mortgage calculator */ 
+.tabs__link {
+    text-decoration: none;
+    font-weight:normal;
+    color:$color-magenta-primary;
+    border:1px solid $color-grey-blue-supporting;
+    border-radius:4px 4px 0px 0px;
+    border-bottom:none;
+   
+    &.tabs__current {
+        color:$color-magenta-primary;
+        border:1px solid $color-grey-blue-supporting;
+        border-radius:4px 4px 0px 0px;
+        border-bottom:none;
+
+        &:focus {
+            background-image:image_url('images-mh/focus-state-purple-line-bg.png');
+            background-position:0px 100%;
+            background-repeat: repeat-x;
+        }
+    }
+
+    &:focus {
+        color:$color-blue-primary;
+        background-color:$color-yellow-secondary;
+        border-bottom:0;
+        outline:none;
+    }
+
+    &:hover {
+        text-decoration:underline;
+        color:$color-magenta-dark-primary;
+        background:$color-white-supporting;
+    }
+    
+    &:active:focus {
+        background:$color-white-smoke-supporting;
+    }
+    
+    &.tabs__current {  
+        color:$color-blue-primary; 
+
+        &:focus {
+            background-image:image_url('images-mh/focus-state-purple-line-bg.png');
+            background-position:0px 100%;
+            background-repeat: repeat-x;
+            border-bottom:none;
+        }
+
+        &:hover {
+            background-image:none;
+            background-color:$color-white-supporting;
+            text-decoration:none;
+        }
+
+        &:active:focus {
+            background-image:none;
+            background:$color-white-smoke-supporting;
+        }
+    }
+}
+
+.tabs__content {
+    border:1px solid $color-grey-blue-supporting;
+    border-radius: 0px 0px 0px 36px;
+
+    .callout--tip {
+        border:8px solid $color-yellow-secondary;
+        border-radius: 0px 0px 0px 36px;
+        margin-top:30px;
+        padding:32px 29px 26px 57px;
+        background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
+        
+
+        @media screen and (min-width: $mq-m-max) {
+            background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
+            background-size:45px 66px;
+            padding:32px 30px 30px 77px;
+        }
+        
+        h5 {
+            font-size:1.5em;
+            margin:0px;}
+
+        p {
+            margin:10px 0px;}
+
+        span {
+            display:none;
+        }
+    }
+}
+
+.expander {
+    margin-top:15px;
+
+    .expander__link,
+    .expander__link--expanded {
+        display: inline-block;
+        background-image:image_url('images-mh/tool-accordion-icon.png'); 
+        background-position:0 0;
+        background-repeat: no-repeat;
+        padding-left: 55px;
+        height:47px;
+        line-height:40px;
+        padding-right:15px;
+
+        &.expander__link--expanded {
+            background:none;
+            background-image: image_url('images-mh/tool-accordion-icon-close.png');
+            background-position:0 0;
+            background-repeat: no-repeat;
+        }
+
+        &:focus {
+            background-color:$color-yellow-secondary;
+            border-bottom:4px solid $color-violet-primary;
+            outline:none;
+        }
+    
+        &.expander__link--nudge {
+            margin-top: 15px;
+        }   
+    }
+}
+  
+/* call out visibilty:hidden */
+.step_one .mortgagecalc__panel .callout--tip {
+    border: 8px solid $color-yellow-secondary;
+    box-sizing: border-box;
+    border-radius: 0px 0px 0px 36px;
+    margin-top:30px;
+    padding:32px 29px 26px 57px;
+    background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
+    
+
+    @media screen and (min-width: $mq-m-max) {
+        background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
+        background-size:51px 78px;
+        padding:32px 30px 30px 77px;
+    }
+
+    p {
+        margin:0px;
+    }
+
+    span {
+        display:none;
+    }
+}
+
+/* Stamp duty */ 
+.mortgagecalc {
+    .stamp-duty__input-wrapper {
+        input {
+            font-weight:normal;
+            font-style: italic;
+            color:$color-grey-secondary;
+            
+            &:focus {
+                background:$color-yellow-secondary!important; /* necessary I'm afraid */
+                border:2px solid $color-violet-primary;
+                border-radius: 4px;
+                outline:none;
+            }  
+        }
+    }
+
+    .elsewhere__item {
+        color:$color-magenta-primary;
+        text-decoration:none;
+        
+        &:hover {color:$color-magenta-dark-primary;}
+
+        &:focus {
+            outline:none;
+            color:$color-dark-blue-secondary;
+            background-color:$color-yellow-secondary;
+            border-bottom:4px solid $color-violet-primary;
+        }
+
+        &:target {
+            color:$color-violet-secondary;
+        }
+    }
+
+    //right hand chevron inside circle
+    .elsewhere__arrow {
+        background-color:$color-light-grey-supporting;
+        background-image: image_url('images-mh/chevron-vector-right.svg');
+        background-position: 14px 14px;
+        background-size:22px 22px;
+        background-repeat: no-repeat;
+    }
+
+    /* Affordability */ 
+    .affcalc__col, .affcalc__col--field {  
+        .form__row {
+            margin:15px 0px;
+
+            label {
+                margin-bottom:30px;
+            }
+        }   
+    }
+
+    .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
+    .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
+    .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
+
+    .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
+    .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
+    .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
+
+    .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
+    .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
+    .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
+
+    .risk--low .risk-slice--incoming {fill:$risk-low;}
+    .risk--medium .risk-slice--incoming {fill:$risk-medium;}
+    .risk--high .risk-slice--incoming {fill:$error-red;}
+
+    .risk--low .risk-key--incoming:after {background:$risk-low;}
+    .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
+    .risk--high .risk-key--incoming:after {background:$error-red;}
+
+    .validation-summary__content-container {
+        background-color:transparent;
+        border:2px solid $error-red;
+        border-radius: 4px;
+        padding:10px;
+    }
+
+}
