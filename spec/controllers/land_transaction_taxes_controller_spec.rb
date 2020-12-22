@@ -41,32 +41,32 @@ module MortgageCalculator
             {
               start: 0,
               end: 180_000,
-              rate: 3
+              rate: 4
             },
             {
               start: 180_000.01,
               end: 250_000,
-              rate: 6.5
+              rate: 7.5
             },
             {
               start: 250_000.01,
               end: 400_000,
-              rate: 8
+              rate: 9
             },
             {
               start: 400_000.01,
               end: 750_000,
-              rate: 10.5
+              rate: 11.5
             },
             {
               start: 750_000.01,
               end: 1_500_000,
-              rate: 13
+              rate: 14
             },
             {
               start: 1_500_000.01,
               end: nil,
-              rate: 15
+              rate: 16
             }
           ]
         )
