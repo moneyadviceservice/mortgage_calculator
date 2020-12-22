@@ -67,7 +67,7 @@ describe MortgageCalculator::LandTransactionTax do
       end
     end
 
-    context 'when house price is 39000' do
+    context 'when house price is 39,000' do
       let(:price) { 39_000 }
 
       context 'and is not a second home' do
@@ -83,11 +83,11 @@ describe MortgageCalculator::LandTransactionTax do
 
         its(:tax_due) { is_expected.to be_zero }
         its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(39000) }
+        its(:total_due) { is_expected.to eq(39_000) }
       end
     end
 
-    context 'when house price is 40000' do
+    context 'when house price is 40,000' do
       let(:price) { 40_000 }
 
       context 'and is next home' do
@@ -101,13 +101,13 @@ describe MortgageCalculator::LandTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(1200) }
-        its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(41200) }
+        its(:tax_due) { is_expected.to eq(1_600) }
+        its(:percentage_tax) { is_expected.to eq(4) }
+        its(:total_due) { is_expected.to eq(41_600) }
       end
     end
 
-    context 'when house price is 145000' do
+    context 'when house price is 145,000' do
       let(:price) { 145_000 }
 
       context 'and is next home' do
@@ -121,13 +121,13 @@ describe MortgageCalculator::LandTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(4350) }
-        its(:percentage_tax) { is_expected.to eq(3) }
-        its(:total_due) { is_expected.to eq(149350) }
+        its(:tax_due) { is_expected.to eq(5_800) }
+        its(:percentage_tax) { is_expected.to eq(4) }
+        its(:total_due) { is_expected.to eq(150_800) }
       end
     end
 
-    context 'when house price is 185000.00' do
+    context 'when house price is 185,000' do
       let(:price) { 185_000 }
 
       context 'and is next home' do
@@ -141,29 +141,29 @@ describe MortgageCalculator::LandTransactionTax do
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eql(5725) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(3.094594594594595) }
-        its(:total_due) { is_expected.to eql(190725) }
+        its(:tax_due) { is_expected.to eql(7_575) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.094594594594595) }
+        its(:total_due) { is_expected.to eql(192_575) }
       end
     end
 
-    context 'when house price is 275000' do
+    context 'when house price is 275,000' do
       let(:price) { 275_000 }
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(1250) }
+        its(:tax_due) { is_expected.to eql(1_250) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.454545454545455) }
-        its(:total_due) { is_expected.to eql(276250) }
+        its(:total_due) { is_expected.to eql(276_250) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(11950) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(4.345454545454545) }
-        its(:total_due) { is_expected.to eq(286950) }
+        its(:tax_due) { is_expected.to eq(14_700) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(5.345454545454545) }
+        its(:total_due) { is_expected.to eq(289_700) }
       end
     end
 
@@ -173,17 +173,17 @@ describe MortgageCalculator::LandTransactionTax do
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(2500) }
+        its(:tax_due) { is_expected.to eql(2_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(0.833333333333333) }
-        its(:total_due) { is_expected.to eql(302500) }
+        its(:total_due) { is_expected.to eql(302_500) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(13950) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.65) }
-        its(:total_due) { is_expected.to eq(313950) }
+        its(:tax_due) { is_expected.to eq(16_950) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(5.65) }
+        its(:total_due) { is_expected.to eq(316_950) }
       end
     end
 
@@ -193,77 +193,77 @@ describe MortgageCalculator::LandTransactionTax do
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(14250) }
+        its(:tax_due) { is_expected.to eql(14_250) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(2.908163265306122) }
-        its(:total_due) { is_expected.to eql(504250) }
+        its(:total_due) { is_expected.to eql(504_250) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(31400) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(6.408163265306122) }
-        its(:total_due) { is_expected.to eq(521400) }
+        its(:tax_due) { is_expected.to eq(36_300) }
+        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.408163265306122) }
+        its(:total_due) { is_expected.to eq(526_300) }
       end
     end
 
-    context 'when house price is 510000.00' do
+    context 'when house price is 510,000' do
       let(:price) { 510_000 }
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(15750) }
+        its(:tax_due) { is_expected.to eql(15_750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(3.088235294117647) }
-        its(:total_due) { is_expected.to eql(525750) }
+        its(:total_due) { is_expected.to eql(525_750) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(33500) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(6.568627450980392) }
-        its(:total_due) { is_expected.to eq(543500) }
+        its(:tax_due) { is_expected.to eq(38_600) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(7.568627450980392) }
+        its(:total_due) { is_expected.to eq(548_600) }
       end
     end
 
-    context 'when house price is 937500' do
+    context 'when house price is 937,500' do
       let(:price) { 937_500 }
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(52500) }
+        its(:tax_due) { is_expected.to eql(52_500) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(5.6) }
-        its(:total_due) { is_expected.to eql(990000) }
+        its(:total_due) { is_expected.to eql(990_000) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(83075) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(8.861333333333333) }
-        its(:total_due) { is_expected.to eq(1020575) }
+        its(:tax_due) { is_expected.to eq(92_450) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(9.861333333333333) }
+        its(:total_due) { is_expected.to eq(1_029_950) }
       end
     end
 
-    context 'when house price is 2100000' do
+    context 'when house price is 2,100,000' do
       let(:price) { 2_100_000 }
 
       context 'and is not a second home' do
         let(:buyer_type) { 'isNextHome' }
 
-        its(:tax_due) { is_expected.to eql(180750) }
+        its(:tax_due) { is_expected.to eql(180_750) }
         its(:percentage_tax) { is_expected.to be_within(0.1).of(8.607142857142857) }
-        its(:total_due) { is_expected.to eql(2280750) }
+        its(:total_due) { is_expected.to eql(2_280_750) }
       end
 
       context 'and is a second home' do
         let(:buyer_type) { 'isSecondHome' }
 
-        its(:tax_due) { is_expected.to eq(246200) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(11.723809523809524) }
-        its(:total_due) { is_expected.to eq(2346200) }
+        its(:tax_due) { is_expected.to eq(267_200) }
+        its(:percentage_tax) { is_expected.to be_within(0.01).of(12.723809523809524) }
+        its(:total_due) { is_expected.to eq(2_367_200) }
       end
     end
   end
