@@ -3,7 +3,7 @@ en:
     meta:
       title: "Stamp Duty Calculator - Work out the new updated Stamp Duty Land Tax rates"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty Land Tax you’ll need to pay on your new home based on the new updated rates"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/stamp-duty-calculator"
+      canonical_url: "https://www.moneyhelper.org/en/tools/house-buying/stamp-duty-calculator"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "stamp-duty-calculator"
@@ -87,11 +87,11 @@ en:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org/en/articles/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+            url: "https://www.moneyhelper.org/en/articles/mortgage-related-fees-and-costs-at-a-glance"
           - copy_html: Costs of moving day
-            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
         title: 'Have you tried?'
         mortgage_calculator: "Mortgage calculator"
