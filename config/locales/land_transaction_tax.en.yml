@@ -3,7 +3,7 @@ en:
     meta:
       title: "Land Transaction Tax (LTT) - Welsh Stamp Duty Calculator"
       description: "Use our Land Transaction Tax (LTT) calculator to calculate how much LTT (formerly Stamp Duty) you'll need to pay on your home in Scotland"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-transaction-tax-calculator-wales"
+      canonical_url: "https://www.moneyhelper.org/en/tools/house-buying/land-transaction-tax-calculator-wales"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "land-transaction-tax-calculator"
@@ -74,11 +74,11 @@ en:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org/en/articles/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+            url: "https://www.moneyhelper.org/en/articles/mortgage-related-fees-and-costs-at-a-glance"
           - copy_html: Costs of moving day
-            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"

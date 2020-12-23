@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Treth Trafodiadau Tir (LTT) - Cyfrifiannell Treth Stamp Cymru"
       description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir (LTT) i gyfrifo faint o LTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
+      canonical_url: "https://www.moneyhelper.org/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "treth-trafodiadau-tir"
@@ -75,11 +75,11 @@ cy:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
+            url: "https://www.moneyhelper.org/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
           - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "https://www.moneyhelper.org/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
       have_you_tried:
         title: 'Rhowch gynnig ar?'
         mortgage_calculator: "Cyfrifiannell morgais"

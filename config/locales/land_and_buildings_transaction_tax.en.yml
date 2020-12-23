@@ -3,7 +3,7 @@ en:
     meta:
       title: "Land and Buildings Transaction Tax (LBTT) – Scottish Stamp Duty calculator"
       description: "Use our Land and Buildings Transaction Tax (LBTT) calculator to calculate how much LBTT (formerly Stamp Duty) you’ll need to pay on your home in Scotland"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
+      canonical_url: "https://www.moneyhelper.org/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "land-and-buildings-transaction-tax-calculator"
@@ -28,8 +28,8 @@ en:
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
     how_calculated_ftb: Land and Buildings Transaction Tax (LBTT) is paid at different rates on residential property transactions and is dependent on the chargeable consideration (usually the purchase price) of your home. You don’t pay tax on the full amount, only the amount that falls into a certain band.
-    how_calculated_ftb_2: For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT.
-    how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
+    how_calculated_ftb_2: For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT. 
+    how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyhelper.org/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates depending on the purchase price."
@@ -83,11 +83,11 @@ en:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org/en/articles/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+            url: "https://www.moneyhelper.org/en/articles/mortgage-related-fees-and-costs-at-a-glance"
           - copy_html: Costs of moving day
-            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
         title: 'Have you tried?'
         mortgage_calculator: "Mortgage calculator"
