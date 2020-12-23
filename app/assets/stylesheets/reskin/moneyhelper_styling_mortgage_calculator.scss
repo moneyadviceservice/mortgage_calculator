@@ -1,6 +1,11 @@
-.mortgagecalc p a:link {
+label {
+    font-family: 'Roobert-Regular', sans-serif !important;
+    color: $text_secondary !important;
+}
+
+.mortgagecalc p a:link, .mortgagecalc ol li a {
     text-decoration: underline !important;
-    &:hover {
+    &:hover, &:focus {
         text-decoration: none !important;
     }
 }
@@ -15,7 +20,7 @@
 
 
     .tabs {
-        font-family: 'Roobert-Regular', sans-serif!important;
+        font-family: 'Roobert-Regular', sans-serif !important;
     }
 
     .tabs__link.tabs__current {
@@ -49,25 +54,32 @@
   #label_price + .form__input-container,
   #label_deposit + .form__input-container {
     .form__input-label {
+        font-family: 'Roobert-Regular', sans-serif !important;
         position: absolute;
         z-index: 999;
-        top: 10px;
+        top: 9px;
     }
     .form__input {
         padding: 8px 20px !important;
+        font-style: normal;
+        color: #000b3b;
     }
 }
     
 #label_term + .form__input-container,
 #label_rate + .form__input-container {
+    font-style: normal !important;
     .form__input-label {
+        font-family: 'Roobert-Regular', sans-serif !important;
         position: absolute;
         z-index: 999;
-        top: 10px;
+        top: 9px;
         right: 45px;
     }
     .form__input {
         padding: 8px 5px !important;
+        font-style: normal;
+        color: #000b3b;
     }
 }
 
