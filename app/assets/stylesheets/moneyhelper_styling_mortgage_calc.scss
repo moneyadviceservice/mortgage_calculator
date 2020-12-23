@@ -203,9 +203,8 @@ input[type="email"],
 input[type="search"],
 input[type="password"],
 textarea,
-.form__input-container,
-
-  {border:1px solid $color-grey-secondary;
+.form__input-container {
+    border:1px solid $color-grey-secondary;
     border-radius:4px;
     color:$color-grey-secondary;
 
