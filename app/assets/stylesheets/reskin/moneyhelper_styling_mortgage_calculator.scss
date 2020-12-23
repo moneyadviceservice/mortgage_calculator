@@ -1,0 +1,83 @@
+.mortgagecalc p a:link {
+    text-decoration: underline !important;
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+
+    .mortgagecalc__panel {
+        padding-top: 40px;
+    }
+    .visibly-hidden {
+        display: none;
+    }
+
+
+    .tabs {
+        font-family: 'Roobert-Regular', sans-serif!important;
+    }
+
+    .tabs__link.tabs__current {
+        border: 1px solid #9DA1CA !important;
+        border-bottom: none !important;
+        &:hover {
+            padding-bottom: 10px !important;
+        }
+    }
+    .tabs__link {
+        border:none !important;
+        &:hover {
+            padding-bottom: 9px !important;
+        }
+    }
+
+
+    .mortgagecalc__payment {
+        line-height: 45px !important;
+    }
+
+    label#label_price, label#label_initial_price, h4.mortgagecalc__heading, .featured-list {
+        font-family: 'Roobert-Regular', sans-serif!important;
+        color: #000B3B !important;
+    }
+
+
+
+  #label_initial_price + .form__input-container,
+  #label_initial_deposit + .form__input-container,
+  #label_price + .form__input-container,
+  #label_deposit + .form__input-container {
+    .form__input-label {
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+    }
+    .form__input {
+        padding: 8px 20px !important;
+    }
+}
+    
+#label_term + .form__input-container,
+#label_rate + .form__input-container {
+    .form__input-label {
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        right: 45px;
+    }
+    .form__input {
+        padding: 8px 5px !important;
+    }
+}
+
+#label_rate + .form__input-container {
+    .form__input-label {
+        right: 15px;
+    }
+}
+
+
+.button.button--primary {
+    padding: 5px 16px;
+}
