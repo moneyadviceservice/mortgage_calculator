@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell Morgais - Cyfrifwch eich ad-daliadau morgais a'ch taliadau llog"
       description: "Defnyddiwch ein Cyfrifiannell Morgais i ganfod faint fydd eich taliadau morgais misol yn cynnwys yr ad-daliad a'r taliad llog."
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/cyfrifiannell-morgais"
+      canonical_url: "https://www.moneyhelper.org/cy/tools/cyfrifiannell-morgais"
     tool_name: "cyfrifiannell-morgais-newydd"
     activemodel:
       attributes:
@@ -59,34 +59,34 @@ cy:
         tip_1:
           heading: Dewiswch y math gorau o forgais ac ystyriwch cael cynghorydd
           info_html: "Cyngor ar forgeisi - a ddylech chi gael cynghorydd morgeisi? <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
+          url: "https://www.moneyhelper.org/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
         tip_2:
           heading: Cynyddu'ch blaendal
           info_html: Sut i osod targed cynilo
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/sut-i-bennu-nod-cynilo"
+          url: "https://www.moneyhelper.org/cy/articles/sut-i-bennu-nod-cynilo"
         tip_3:
           heading: A ydych chi'n gymwys ar gyfer cynllun tai fforddiadwy?
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai presennol <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          url: "https://www.moneyhelper.org/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
         learn_more:
           title: Dysgu mwy
           tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
           more:
             copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
+            url: "https://www.moneyhelper.org/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
         find_out_more:
           title: Dewch o hyd i ragor
           tips:
             - copy_html: "Gwefannau cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyadviceservice.org.uk/cy/articles/dod-o-hyd-ir-bargeinion-gorau-gyda-gwefannau-cymharu-prisiau#choosing-a-price-comparison-website"
+              url: "https://www.moneyhelper.org/cy/articles/dod-o-hyd-ir-bargeinion-gorau-gyda-gwefannau-cymharu-prisiau#choosing-a-price-comparison-website"
             - copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyadviceservice.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
+              url: "https://www.moneyhelper.org/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
             - copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+              url: "https://www.moneyhelper.org/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
             - copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyadviceservice.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
+              url: "https://www.moneyhelper.org/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
             - copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+              url: "https://www.moneyhelper.org/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
         have_you_tried:
           title: 'Rhowch gynnig ar?'
           stamp_duty: "cyfrifiannell Treth Stamp"
