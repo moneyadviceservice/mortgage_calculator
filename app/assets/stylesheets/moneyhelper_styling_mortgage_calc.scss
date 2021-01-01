@@ -29,27 +29,191 @@
 .mortgagecalc {
     margin:0 auto;
     max-width:750px;
-    font-family: 'museo_sans';
     font-weight: 300; /* left the same */ 
-    // font-family: 'Roobert';
+
+    /* headings */
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Roobert-Bold', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        color: $color-blue-primary;
+    }
 
     p, ul {
+        font-family: 'Roobert-Regular', sans-serif;
+        color: $color-dark-blue-secondary;
         line-height:23px;
     }
+
+    /* links */
+    p a, ol li a, ul li a, .stamp-duty__results a, .expander a {
+        font-family: 'Roobert-Regular', sans-serif;
+        color:$color-magenta-primary;
+        //text-decoration: underline;
+        &:link, &:active {
+            text-decoration: underline;
+        }
+        &:hover {
+            color:$color-magenta-dark-primary;
+            text-decoration: none;
+        }
+        &:visited {
+            color: $link_visited;
+        }
+
+        &:focus {
+            outline:none;
+            text-decoration: none;
+            color:$color-dark-blue-secondary;
+            background-color:$color-yellow-secondary;
+            border-bottom:4px solid $color-violet-primary;
+        }
+
+        &:target {
+            color:$color-violet-secondary;
+        }
+    }
+    /* form components */
+    label {
+        font-family: 'Roobert-Medium', sans-serif;
+        color: $color-dark-blue-secondary;
+    }
+    
+    /* forms from yeast */ 
+    input[type="text"],
+    input[type="number"],
+    input[type="select"],
+    input[type="email"],
+    input[type="search"],
+    input[type="password"],
+    textarea,
+    .form__input-container {
+        border:1px solid $color-grey-secondary;
+        border-radius:4px;
+        .form__input-label{
+            font-family: 'Roobert-Regular', sans-serif;
+            color: $color-dark-blue-secondary;
+        }
+        .form__input {
+            font-family: 'Roobert-Regular', sans-serif;
+            color: $color-dark-blue-secondary;
+            font-weight:normal;
+            font-style: normal;
+            border:none;
+            padding:8px 0px;
+            min-height:38px;
+            
+            &:focus {
+                background:$color-yellow-secondary;
+                border:2px solid $color-violet-primary;
+                border-radius: 4px;
+                padding:6px 0px; 
+                outline:none;
+            }
+        } 
+    }
+
 
     select {
         border:1px solid $color-grey-secondary;
         border-radius:4px;
         font-weight:normal;
-        font-style: italic;
+        font-style: normal;
         color:$color-grey-secondary;
         font-size: 1rem;
-        
         &:focus {
             background-color:$color-yellow-secondary;
             // border:2px solid $color-violet-primary;
-            // border-radius: 4px;
-            outline:2px solid $color-violet-primary;
+            border-radius: 4px;
+            //outline:2px solid $color-violet-primary;
+            outline: none;
+            border: 2px solid  $color-violet-primary;
+        }
+    }
+
+    /* buttons */
+    .button {
+        font-family: 'Roobert-SemiBold', sans-serif;
+        box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+        background: $color-white-supporting;
+        color: $color-magenta-primary;
+        border: 1px solid $color-magenta-primary;
+        border-radius: 4px;
+        padding: 8px 16px;
+        text-decoration: none;
+        height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $color-magenta-dark-primary;
+            background: $color-light-grey-supporting;
+            border: 1px solid $color-magenta-dark-primary;
+            box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
+        }
+
+        &:focus,
+        &:active,
+        &:active:focus {
+            padding: 6px 14px;
+            border: 3px solid $color-violet-primary;
+            color: $color-dark-blue-secondary;
+            outline: none;
+        }
+
+        &:focus {
+            background: $color-yellow-secondary;
+            box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
+        }
+
+        &:active,
+        &:active:focus {
+            background: $color-light-grey-supporting;
+            box-shadow: 0px 1px 0px $color-white-supporting,
+                inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+        }
+
+        &.button--primary {
+            color: $color-white-supporting;
+            background: $color-magenta-primary;
+            box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                color: $color-white-supporting;
+                background: $color-magenta-dark-primary;
+                box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            &:focus {
+                background: $color-yellow-secondary;
+                box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+                color: $color-dark-blue-secondary;
+            }
+
+            &:active,
+            &:active:focus {
+                background: $color-magenta-dark-primary;
+                border: 3px solid $color-yellow-secondary;
+                color: $color-white-supporting;
+                box-shadow: 0px 1px 0px $color-white-supporting,
+                inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+            }
+        }
+
+        &:disabled {
+        background-color: transparent;
+        border: 1px solid $color-grey;
+        color: $color-grey-secondary;
+        box-shadow: none;
+        }
+
+        &.button--compact .icon {
+        display: none;
         }
     }
 
@@ -67,14 +231,33 @@
             color:$color-violet-primary;
         }
     }
+    /* Numbering */ 
+    .featured-list {
+        li { 
+            font-family: 'Roobert-Regular', sans-serif!important;
+            color: $color-dark-blue-secondary !important;
+            line-height: 26px;
+            margin-left:0px;
+            padding-top:0px;
+
+            &:before {
+                border:1px solid $color-teal-dark-secondary;
+                color:$color-teal-dark-secondary;
+                background:$color-white-supporting;
+                border-radius: 0px;}
+
+            @media screen and (min-width: $mq-m-max) {
+                margin-left:1em;
+            }
+        }
+    }
 }
+
+
 
 .mortgagecalc__container, .mortgagecalc__panel {
     background:#fff;
-    color:$color-dark-blue-secondary;
-    font-family: 'museo_sans';
-    // font-family: 'Roobert';
-
+    color: $color-dark-blue-secondary;
     .mortgagecalc__panel--border-left {
         border-left:1px solid $color-grey-blue-supporting;
     }
@@ -84,182 +267,31 @@
     }
 }
 
-.mortgagecalc {
-    /* links */
-    p a, ol li a, ul li a, .stamp-duty__results a {
-        &:link, &:active {
-            color:$color-magenta-primary;
-            text-decoration:none;
-        }
-        &:hover {color:$color-magenta-dark-primary;}
-
-        &:focus {
-            outline:none;
-            color:$color-dark-blue-secondary;
-            background-color:$color-yellow-secondary;
-            border-bottom:4px solid $color-violet-primary;
-        }
-
-        &:target {
-            color:$color-violet-secondary;
-        }
-    }
-
-    p a.button--primary {
-        color:$color-white-supporting;
-    }
+/* new styles for reskin */
+.mortgagecalc__panel h3 {
+    color: $color-dark-blue-secondary;
 }
 
-  /* buttons */
-  .button {
-    box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
-    background: $color-white-supporting;
-    color: $color-magenta-primary;
-    border: 1px solid $color-magenta-primary;
-    border-radius: 4px;
-    padding: 8px 16px;
-    text-decoration: none;
-    height: 40px;
-    font-size: 16px;
-    line-height: 23px;
-    font-weight: 600;
-
-    &:visited {
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: $color-magenta-dark-primary;
-      background: $color-light-grey-supporting;
-      border: 1px solid $color-magenta-dark-primary;
-      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
-    }
-
-    &:focus,
-    &:active,
-    &:active:focus {
-      padding: 6px 14px;
-      border: 3px solid $color-violet-primary;
-      color: $color-dark-blue-secondary;
-      outline: none;
-    }
-
-    &:focus {
-      background: $color-yellow-secondary;
-      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
-    }
-
-    &:active,
-    &:active:focus {
-      background: $color-light-grey-supporting;
-      box-shadow: 0px 1px 0px $color-white-supporting,
-        inset 0px 5px 2px rgba(0, 11, 59, 0.25);
-    }
-
-    &.button--primary {
-      color: $color-white-supporting;
-      background: $color-magenta-primary;
-      box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
-
-      &:hover {
-        color: $color-white-supporting;
-        background: $color-magenta-dark-primary;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-      }
-
-      &:focus {
-        background: $color-yellow-secondary;
-        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-        color: $color-dark-blue-secondary;
-      }
-
-      &:active,
-      &:active:focus {
-        background: $color-magenta-dark-primary;
-        border: 3px solid $color-yellow-secondary;
-        color: $color-white-supporting;
-        box-shadow: 0px 1px 0px $color-white-supporting,
-          inset 0px 5px 2px rgba(0, 11, 59, 0.25);
-      }
-    }
-
-    &:disabled {
-      background-color: transparent;
-      border: 1px solid $color-grey;
-      color: $color-grey-secondary;
-      box-shadow: none;
-    }
-
-    &.button--compact .icon {
-      display: none;
-    }
-  }
-
-/* forms from yeast */ 
-input[type="text"],
-input[type="number"],
-input[type="select"],
-input[type="email"],
-input[type="search"],
-input[type="password"],
-textarea,
-.form__input-container {
-    border:1px solid $color-grey-secondary;
-    border-radius:4px;
-    color:$color-grey-secondary;
-
-    .form__input {
-        font-weight:normal;
-        font-style: italic;
-        color:$color-grey-secondary;
-        padding:8px 0px;
-        min-height:38px;
-         
-        &:focus {
-            background:$color-yellow-secondary;
-            border:2px solid $color-violet-primary;
-            border-radius: 4px;
-            padding:6px 0px; 
-            outline:none;
-        }
-    } 
+.visibly-hidden {
+    display: none;
 }
 
-/* Numbering */ 
-.featured-list {
-    li { 
-        margin-left:0px;
-        padding-top:0px;
-
-        &:before {
-            border:1px solid $color-teal-dark-secondary;
-            color:$color-teal-dark-secondary;
-            background:$color-white-supporting;
-            border-radius: 0px;}
-
-        @media screen and (min-width: $mq-m-max) {
-            margin-left:1em;
-        }
-    }
+.mortgagecalc__submit {
+    margin-top: 40px;
 }
+/* -------------------- */
+
 
 h1, .heading-large {
-    // font-family: Roobert;
-    font-family: 'museo_sans';
     font-style: normal;
     font-weight: bold;
     color:#0F19A0}
 
 h2, .heading-medium {
-    // font-family: Roobert;
-    font-family: 'museo_sans';
     font-style: normal;
     font-weight: bold;
     color:#000B3B;
 }
-
-label {
-    color: #000;} 
 
 /* from _slider.scss in mortgage calc */ 
 .ui-slider {
@@ -298,15 +330,16 @@ label {
 
   /* tabs from mortgage calculator */ 
 .tabs__link {
+    font-family: 'Roobert-SemiBold', sans-serif !important;
     text-decoration: none;
     font-weight:normal;
-    color:$color-magenta-primary;
-    border:1px solid $color-grey-blue-supporting;
+    color:$color-magenta-primary !important;
     border-radius:4px 4px 0px 0px;
     border-bottom:none;
+    
    
     &.tabs__current {
-        color:$color-magenta-primary;
+        color: $color-blue-primary !important;
         border:1px solid $color-grey-blue-supporting;
         border-radius:4px 4px 0px 0px;
         border-bottom:none;
@@ -316,6 +349,7 @@ label {
             background-position:0px 100%;
             background-repeat: repeat-x;
         }
+       
     }
 
     &:focus {
@@ -329,6 +363,7 @@ label {
         text-decoration:underline;
         color:$color-magenta-dark-primary;
         background:$color-white-supporting;
+        padding-bottom: 9px !important;
     }
     
     &:active:focus {
@@ -336,8 +371,6 @@ label {
     }
     
     &.tabs__current {  
-        color:$color-blue-primary; 
-
         &:focus {
             background-image:image_url('images-mh/focus-state-purple-line-bg.png');
             background-position:0px 100%;
@@ -349,6 +382,7 @@ label {
             background-image:none;
             background-color:$color-white-supporting;
             text-decoration:none;
+            padding-bottom: 10px !important;
         }
 
         &:active:focus {
@@ -358,7 +392,7 @@ label {
     }
 }
 
-.tabs__content {
+.tabs__content, .stamp-duty__info-column {
     border:1px solid $color-grey-blue-supporting;
     border-radius: 0px 0px 0px 36px;
 
@@ -387,6 +421,21 @@ label {
             display:none;
         }
     }
+}
+
+.stamp-duty__info-column {
+    border: none;
+    border-radius: 0;
+}
+
+.squeeze strong {
+    font-family: 'Roobert-Regular', sans-serif;
+    color: $color-dark-blue-secondary;
+    display: inline-block;
+    margin-top: 10px;
+}
+p.squeeze strong {
+    margin-top: 17px;
 }
 
 .expander {
@@ -430,37 +479,85 @@ label {
     margin-top:30px;
     padding:32px 29px 26px 57px;
     background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
-    
 
-    @media screen and (min-width: $mq-m-max) {
-        background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
-        background-size:51px 78px;
-        padding:32px 30px 30px 77px;
+    /* new styles for reskin */
+    span.callout__icon + p:before {
+        background: none;
     }
-
+    /***********************/
+    
     p {
-        margin:0px;
+        margin: 0px;
     }
 
     span {
         display:none;
     }
+
+    @media screen and (min-width: $mq-m-max) {
+        background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
+        background-size:51px 78px;
+        padding:32px 30px 30px 77px;
+
+        p {
+            margin: 5px;
+        }
+    }
+
+    
 }
 
+/* new styles for reskin */
+h5.callout__heading {
+    background: none !important;
+    padding: 0 !important;
+    text-indent: 0 !important;
+    margin-top: -6px !important;
+    color: $color-dark-blue-secondary !important; 
+}
+
+h4.mortgagecalc__heading {
+    font-family: 'Roobert-Regular', sans-serif!important;
+    color: $color-dark-blue-secondary !important; 
+    font-weight: normal;
+}
+/***********************/
+
 /* Stamp duty */ 
+// .mortgagecalc {
+//     .stamp-duty__input-wrapper {
+//         input {
+//             font-weight:normal;
+//             font-style: italic;
+//             color:$color-grey-secondary;
+            
+//             &:focus {
+//                 background:$color-yellow-secondary!important; /* necessary I'm afraid */
+//                 // border:2px solid $color-violet-primary;
+//                 // border-radius: 4px;
+//                 outline:none;
+//                 outline: 2px solid $color-violet-primary;
+//             }  
+//         }
+//     }
+
 .mortgagecalc {
     .stamp-duty__input-wrapper {
+        .stamp-duty__input--unit {
+            top: 0.5rem
+        }
         input {
             font-weight:normal;
-            font-style: italic;
+            font-style: normal;
+            height: 40px;
             color:$color-grey-secondary;
             
             &:focus {
                 background:$color-yellow-secondary!important; /* necessary I'm afraid */
-                // border:2px solid $color-violet-primary;
-                // border-radius: 4px;
+                border:2px solid $color-violet-primary;
+                border-radius: 4px;
                 outline:none;
-                outline: 2px solid $color-violet-primary;
+                //outline: 2px solid $color-violet-primary;
             }  
         }
     }
@@ -490,6 +587,66 @@ label {
         background-position: 14px 14px;
         background-size:22px 22px;
         background-repeat: no-repeat;
+    }
+
+    /* stamp duty calc new styles for reskin */
+
+    h2.stamp-duty__subheading {
+        font-family: 'Roobert-Regular', sans-serif!important;
+        color: $color-dark-blue-secondary;
+    }
+
+    select {
+        color: $color-dark-blue-secondary !important;
+    }
+
+    label.stamp-duty__input-description {
+        color: $color-dark-blue-secondary !important;
+    }
+
+    span.stamp-duty__input--unit, span.stamp-duty__input--unit + input {
+        font-family: "Roobert-Medium", sans-serif !important;
+        color: $color-dark-blue-secondary !important;
+        line-height: 24px;
+    }
+
+    .stamp-duty__results {
+        background: $color-white-smoke-supporting;
+    }
+    .stamp-duty__results-heading {
+        font-family: 'Roobert-Medium', sans-serif!important;
+        color: $color-dark-blue-secondary;
+    }
+
+    .stamp-duty__results-tax-rate, 
+    h2.stamp-duty__have-you-tried,
+    .stamp-duty__info-column h2 {
+        font-family: 'Roobert-Regular', sans-serif!important;
+        color: $color-dark-blue-secondary;
+    }
+
+    .stamp-duty__info-column h2 {
+        background: none;
+        text-indent: unset;
+        padding: 0;
+        margin-top: -5px;
+    }
+
+    a.stamp-duty__button:link {
+        font-family: 'Roobert-SemiBold', sans-serif !important;
+        text-decoration: none !important;
+
+    }
+
+
+    //right hand chevron inside circle
+    .elsewhere__arrow {
+        background-color:$color-light-grey-supporting;
+        background-image: image_url('images-mh/chevron-vector-right.svg');
+        background-position: 14px 14px;
+        background-size:22px 22px;
+        background-repeat: no-repeat;
+        fill: $color-magenta-primary;
     }
 
     /* Affordability */ 
