@@ -524,167 +524,171 @@ h4.mortgagecalc__heading {
 /***********************/
 
 /* Stamp duty */ 
-// .mortgagecalc {
-//     .stamp-duty__input-wrapper {
-//         input {
-//             font-weight:normal;
-//             font-style: italic;
-//             color:$color-grey-secondary;
-            
-//             &:focus {
-//                 background:$color-yellow-secondary!important; /* necessary I'm afraid */
-//                 // border:2px solid $color-violet-primary;
-//                 // border-radius: 4px;
-//                 outline:none;
-//                 outline: 2px solid $color-violet-primary;
-//             }  
-//         }
-//     }
-
 .mortgagecalc {
-    .stamp-duty__input-wrapper {
-        .stamp-duty__input--unit {
-            top: 0.5rem
-        }
-        input {
-            font-weight:normal;
-            font-style: normal;
-            height: 40px;
-            color:$color-grey-secondary;
-            
-            &:focus {
-                background:$color-yellow-secondary!important; /* necessary I'm afraid */
-                border:2px solid $color-violet-primary;
-                border-radius: 4px;
-                outline:none;
-                //outline: 2px solid $color-violet-primary;
-            }  
-        }
-    }
-
-    .elsewhere__item {
-        color:$color-magenta-primary;
-        text-decoration:none;
-        
-        &:hover {color:$color-magenta-dark-primary;}
-
-        &:focus {
-            outline:none;
-            color:$color-dark-blue-secondary;
-            background-color:$color-yellow-secondary;
-            border-bottom:4px solid $color-violet-primary;
-        }
-
-        &:target {
-            color:$color-violet-secondary;
-        }
-    }
-
-    //right hand chevron inside circle
-    .elsewhere__arrow {
-        background-color:$color-light-grey-supporting;
-        background-image: image_url('images-mh/chevron-vector-right.svg');
-        background-position: 14px 14px;
-        background-size:22px 22px;
-        background-repeat: no-repeat;
-    }
-
-    /* stamp duty calc new styles for reskin */
-
-    h2.stamp-duty__subheading {
-        font-family: 'Roobert-Regular', sans-serif!important;
-        color: $color-dark-blue-secondary;
-    }
-
-    select {
-        color: $color-dark-blue-secondary !important;
-    }
-
-    label.stamp-duty__input-description {
-        color: $color-dark-blue-secondary !important;
-    }
-
-    span.stamp-duty__input--unit, span.stamp-duty__input--unit + input {
-        font-family: "Roobert-Medium", sans-serif !important;
-        color: $color-dark-blue-secondary !important;
-        line-height: 24px;
-    }
-
-    .stamp-duty__results {
-        background: $color-white-smoke-supporting;
-    }
-    .stamp-duty__results-heading {
-        font-family: 'Roobert-Medium', sans-serif!important;
-        color: $color-dark-blue-secondary;
-    }
-
-    .stamp-duty__results-tax-rate, 
-    h2.stamp-duty__have-you-tried,
-    .stamp-duty__info-column h2 {
-        font-family: 'Roobert-Regular', sans-serif!important;
-        color: $color-dark-blue-secondary;
-    }
-
-    .stamp-duty__info-column h2 {
-        background: none;
-        text-indent: unset;
-        padding: 0;
-        margin-top: -5px;
-    }
-
-    a.stamp-duty__button:link {
-        font-family: 'Roobert-SemiBold', sans-serif !important;
-        text-decoration: none !important;
-
-    }
-
-
-    //right hand chevron inside circle
-    .elsewhere__arrow {
-        background-color:$color-light-grey-supporting;
-        background-image: image_url('images-mh/chevron-vector-right.svg');
-        background-position: 14px 14px;
-        background-size:22px 22px;
-        background-repeat: no-repeat;
-        fill: $color-magenta-primary;
-    }
-
-    /* Affordability */ 
-    .affcalc__col, .affcalc__col--field {  
-        .form__row {
-            margin:15px 0px;
-
-            label {
-                margin-bottom:30px;
+    .stamp-duty{
+        overflow: hidden;
+        .stamp-duty__input-wrapper {
+            .stamp-duty__input--unit {
+                top: 0.5rem
             }
-        }   
+            input {
+                font-weight:normal;
+                font-style: normal;
+                height: 40px;
+                color:$color-grey-secondary;
+                width: 275px;
+                
+                &:focus {
+                    background:$color-yellow-secondary!important; /* necessary I'm afraid */
+                    border:2px solid $color-violet-primary;
+                    border-radius: 4px;
+                    outline:none;
+                }  
+            }
+        }
+
+        .elsewhere__container {
+            background: $color-white-smoke-supporting !important;
+            overflow: hidden;
+            .elsewhere__item {
+                color:$color-magenta-primary ;
+                text-decoration:none;
+                h3 {
+                    color:$color-magenta-primary !important ;
+                    text-decoration:underline; 
+                }
+                
+                &:hover {
+                    color:$color-magenta-dark-primary !important;
+                    h3{
+                        text-decoration: none;
+                    }
+                }
+                &:visited {
+                    h3 {
+                        color: $link_visited !important;
+                    }
+                }
+
+                &:focus {
+                    outline:none !important;
+                    text-decoration: none;
+        
+                    h3{
+                        text-decoration: none;
+                        outline: none;
+                        color:$color-dark-blue-secondary !important;
+                        background-color: #f0f05a;
+                        border-bottom: 4px solid #8200d1;
+                    }
+                }
+
+                &:target {
+                    color:$color-violet-secondary;
+                }
+                
+            }
+        }
+
+        // right hand chevron inside circle
+        .elsewhere__arrow {
+            background-color:$color-light-grey-supporting;
+            background-image: image_url('images-mh/chevron-vector-right.svg') !important;
+            background-position: 14px 14px;
+            background-size:22px 22px;
+            background-repeat: no-repeat;
+            
+            use {
+                display: none;
+            }
+        }
+
+        /* stamp duty calc new styles for reskin */
+
+        h2.stamp-duty__subheading {
+            font-family: 'Roobert-Regular', sans-serif!important;
+            color: $color-dark-blue-secondary;
+        }
+
+        select {
+            color: $color-dark-blue-secondary !important;
+        }
+
+        label.stamp-duty__input-description {
+            color: $color-dark-blue-secondary !important;
+        }
+
+        span.stamp-duty__input--unit, span.stamp-duty__input--unit + input {
+            font-family: "Roobert-Medium", sans-serif !important;
+            color: $color-dark-blue-secondary !important;
+            line-height: 24px;
+        }
+
+        .stamp-duty__results {
+            background: $color-white-smoke-supporting;
+        }
+        .stamp-duty__results-heading {
+            font-family: 'Roobert-Medium', sans-serif!important;
+            color: $color-dark-blue-secondary;
+        }
+
+        .stamp-duty__results-tax-rate, 
+        h2.stamp-duty__have-you-tried,
+        .stamp-duty__info-column h2 {
+            font-family: 'Roobert-Regular', sans-serif!important;
+            color: $color-dark-blue-secondary;
+            font-weight: normal;
+        }
+
+        .stamp-duty__info-column h2 {
+            background: none;
+            text-indent: unset;
+            padding: 0;
+            margin-top: -5px;
+        }
+
+        a.stamp-duty__button:link {
+            font-family: 'Roobert-SemiBold', sans-serif !important;
+            text-decoration: none !important;
+
+        }
+
+        /* Affordability */ 
+        .affcalc__col, .affcalc__col--field {  
+            .form__row {
+                margin:15px 0px;
+
+                label {
+                    margin-bottom:30px;
+                }
+            }   
+        }
+
+        .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
+        .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
+        .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
+
+        .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
+        .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
+        .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
+
+        .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
+        .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
+        .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
+
+        .risk--low .risk-slice--incoming {fill:$risk-low;}
+        .risk--medium .risk-slice--incoming {fill:$risk-medium;}
+        .risk--high .risk-slice--incoming {fill:$error-red;}
+
+        .risk--low .risk-key--incoming:after {background:$risk-low;}
+        .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
+        .risk--high .risk-key--incoming:after {background:$error-red;}
+
+        .validation-summary__content-container {
+            background-color:transparent;
+            border:2px solid $error-red;
+            border-radius: 4px;
+            padding:10px;
+        }
     }
-
-    .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
-    .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
-    .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
-
-    .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
-    .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
-    .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
-
-    .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
-    .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
-    .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
-
-    .risk--low .risk-slice--incoming {fill:$risk-low;}
-    .risk--medium .risk-slice--incoming {fill:$risk-medium;}
-    .risk--high .risk-slice--incoming {fill:$error-red;}
-
-    .risk--low .risk-key--incoming:after {background:$risk-low;}
-    .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
-    .risk--high .risk-key--incoming:after {background:$error-red;}
-
-    .validation-summary__content-container {
-        background-color:transparent;
-        border:2px solid $error-red;
-        border-radius: 4px;
-        padding:10px;
-    }
-
 }
