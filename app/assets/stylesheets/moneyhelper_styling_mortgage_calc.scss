@@ -30,10 +30,10 @@
     margin:0 auto;
     max-width:750px;
     font-weight: 300; /* left the same */ 
-
+}
     /* headings */
     h1,h2,h3,h4,h5,h6{
-        font-family: 'Roobert-Bold', sans-serif;
+        font-family: 'Roobert-Bold', sans-serif !important;
         font-style: normal;
         font-weight: bold;
         color: $color-blue-primary;
@@ -88,11 +88,24 @@
     input[type="password"],
     textarea,
     .form__input-container {
+        font-family: 'Roobert-Regular', sans-serif;
         border:1px solid $color-grey-secondary;
         border-radius:4px;
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $input_border;
+            opacity: 1; /* Firefox */
+          }
+          
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $input_border; 
+          }
+          
+          ::-ms-input-placeholder { /* Microsoft Edge */
+            color: $input_border; 
+          }
         .form__input-label{
             font-family: 'Roobert-Regular', sans-serif;
-            color: $color-dark-blue-secondary;
+            color: $input_border;
         }
         .form__input {
             font-family: 'Roobert-Regular', sans-serif;
@@ -112,6 +125,20 @@
             }
         } 
     }
+
+    // ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    //     color: $input_border; 
+        
+    //     opacity: 1; /* Firefox */
+    //   }
+      
+    //   :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    //     color: $input_border; 
+    //   }
+      
+    //   ::-ms-input-placeholder { /* Microsoft Edge */
+    //     color: $input_border; 
+    //   }
 
 
     select {
@@ -251,7 +278,7 @@
             }
         }
     }
-}
+
 
 
 
@@ -535,7 +562,7 @@ h4.mortgagecalc__heading {
                 font-weight:normal;
                 font-style: normal;
                 height: 40px;
-                color:$color-grey-secondary;
+                color: $color-dark-blue-secondary;
                 width: 275px;
                 
                 &:focus {
@@ -618,9 +645,9 @@ h4.mortgagecalc__heading {
             color: $color-dark-blue-secondary !important;
         }
 
-        span.stamp-duty__input--unit, span.stamp-duty__input--unit + input {
+        span.stamp-duty__input--unit {
             font-family: "Roobert-Medium", sans-serif !important;
-            color: $color-dark-blue-secondary !important;
+            color: $input_border;
             line-height: 24px;
         }
 
@@ -652,9 +679,14 @@ h4.mortgagecalc__heading {
             text-decoration: none !important;
 
         }
+    }
+}
 
         /* Affordability */ 
         .affcalc__col, .affcalc__col--field {  
+            h3 {
+                color: $color-dark-blue-secondary;
+            }
             .form__row {
                 margin:15px 0px;
 
@@ -663,6 +695,8 @@ h4.mortgagecalc__heading {
                 }
             }   
         }
+
+       
 
         .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
         .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
@@ -684,11 +718,52 @@ h4.mortgagecalc__heading {
         .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
         .risk--high .risk-key--incoming:after {background:$error-red;}
 
-        .validation-summary__content-container {
-            background-color:transparent;
-            border:2px solid $error-red;
-            border-radius: 4px;
-            padding:10px;
+    
+
+
+ /* Affordability validation error styles */ 
+.new_affordability {
+    .validation-summary {
+        .validation-summary__content-container, .validation-summary__error--no-link {
+            background-color: $red_error_background;
+            .validation-summary__title {
+                color: $red_error;
+                font-weight: bold;
+            }
+            border-left: 4px solid $red_error;
+            color: $red_error;
+            .validation-summary__list {
+                .validation-summary__error {
+                    a {
+                        color: $error-red;
+                    }
+                }
+            }
         }
     }
+    
+    .is-errored{
+        border-left: 4px solid $red_error;
+        border-color: $red_error;
+        label{
+            color: $text_secondary;
+        }
+        input[type=text],
+        input[type=number]{
+            border: 2px solid $red_error;
+        }
+        select{
+            border: 2px solid $red_error;
+            color: $text_secondary;
+        }
+        .js-inline-error{
+            p{
+                color: $red_error;
+                font-size: 16px;
+                line-height: 23px;
+            }
+        }
+    }
+    
 }
+
