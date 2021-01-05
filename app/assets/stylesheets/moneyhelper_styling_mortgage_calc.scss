@@ -30,7 +30,7 @@
     margin:0 auto;
     max-width:750px;
     font-weight: 300; /* left the same */ 
-}
+
     /* headings */
     h1,h2,h3,h4,h5,h6{
         font-family: 'Roobert-Bold', sans-serif !important;
@@ -125,20 +125,6 @@
             }
         } 
     }
-
-    // ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    //     color: $input_border; 
-        
-    //     opacity: 1; /* Firefox */
-    //   }
-      
-    //   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    //     color: $input_border; 
-    //   }
-      
-    //   ::-ms-input-placeholder { /* Microsoft Edge */
-    //     color: $input_border; 
-    //   }
 
 
     select {
@@ -278,7 +264,7 @@
             }
         }
     }
-
+}
 
 
 
@@ -682,88 +668,260 @@ h4.mortgagecalc__heading {
     }
 }
 
-        /* Affordability */ 
-        .affcalc__col, .affcalc__col--field {  
-            h3 {
-                color: $color-dark-blue-secondary;
-            }
-            .form__row {
-                margin:15px 0px;
-
-                label {
-                    margin-bottom:30px;
-                }
-            }   
+/* Affordability */ 
+.affcalc{
+    .affcalc__col, .affcalc__col--field {  
+        h3 {
+            color: $color-dark-blue-secondary;
         }
-
-       
-
-        .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
-        .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
-        .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
-
-        .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
-        .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
-        .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
-
-        .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
-        .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
-        .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
-
-        .risk--low .risk-slice--incoming {fill:$risk-low;}
-        .risk--medium .risk-slice--incoming {fill:$risk-medium;}
-        .risk--high .risk-slice--incoming {fill:$error-red;}
-
-        .risk--low .risk-key--incoming:after {background:$risk-low;}
-        .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
-        .risk--high .risk-key--incoming:after {background:$error-red;}
-
+        span.affcalc__label {
+            font-family: 'Roobert-Medium', sans-serif;
+            color: $color-dark-blue-secondary;
+        }
+        span.label--inline {
+            font-family: 'Roobert-Regular', sans-serif;
+        }
     
+        h4, .mortgagecalc__heading {
+            font-family: 'Roobert-Medium', sans-serif;
+            color: $color-dark-blue-secondary;
+        }
+        .form__row {
+            margin:15px 0px;
 
-
- /* Affordability validation error styles */ 
-.new_affordability {
-    .validation-summary {
-        .validation-summary__content-container, .validation-summary__error--no-link {
-            background-color: $red_error_background;
-            .validation-summary__title {
-                color: $red_error;
-                font-weight: bold;
+            label {
+                margin-bottom:30px;
+                input[type=checkbox] {
+                    &:focus,
+                    &:hover{
+                        outline-color: $support_focus;
+                    }
+                    + label{
+                        cursor: pointer;
+                    }
+                } 
             }
-            border-left: 4px solid $red_error;
-            color: $red_error;
-            .validation-summary__list {
-                .validation-summary__error {
-                    a {
-                        color: $error-red;
+            p {
+                a.button{
+                    color: $color-magenta-primary;
+                    text-decoration: none;
+                    // &:visited {
+                    //     color: $color-magenta-primary;
+                    // }
+                    &:focus,
+                    &:active,
+                    &:active:focus {
+                        color: $color-dark-blue-secondary;
                     }
                 }
             }
         }
+        .is-errored {
+            padding: 1px 0px 0px 10px;
+        }   
     }
-    
-    .is-errored{
-        border-left: 4px solid $red_error;
-        border-color: $red_error;
-        label{
-            color: $text_secondary;
-        }
-        input[type=text],
-        input[type=number]{
-            border: 2px solid $red_error;
-        }
-        select{
-            border: 2px solid $red_error;
-            color: $text_secondary;
-        }
-        .js-inline-error{
-            p{
-                color: $red_error;
-                font-size: 16px;
-                line-height: 23px;
+
+    .affcalc__col--tooltip{
+        p {
+            b {
+                font-family: 'Roobert-Bold', sans-serif;
             }
         }
     }
-    
+
+    .affcalc__col--clip {
+        h3,h4.tooltip__title {
+            color: $color-dark-blue-secondary;     
+        }
+        h4.mortgagecalc__heading {
+            font-family: 'Roobert-Medium', sans-serif !important;
+        }
+        ol.featured-list li {
+            font-family: 'Roobert-Medium', sans-serif !important;
+        }
+        
+        p {
+            strong {
+                font-family: 'Roobert-Bold', sans-serif;
+            }
+        }
+        .validation-summary__content-container {
+            padding: 1px 0px 1px 10px;
+        }
+        p.t-offered-amount-js {
+            font-family: 'Roobert-Medium', sans-serif;
+            color: $color-teal-dark-secondary;
+        }
+        input#borrowing-amount{
+            font-family: 'Roobert-Regular', sans-serif;
+            background: $risk-low;
+            color: $color-white-supporting;
+        }
+        input#borrowing-amount + div + a:after{
+            border-bottom-color: $risk-low;
+        }
+        input#term-years {
+            font-family: 'Roobert-Regular', sans-serif;
+            background: $risk-medium;
+            color: $color-dark-blue-secondary; 
+        }
+        input#term-years + div + a:after{
+            border-bottom-color: $risk-medium;
+        }
+        input#interest-rate {
+            font-family: 'Roobert-Regular', sans-serif;
+            background: $error-red;
+            color: $color-white-supporting;
+        }
+        input#interest-rate + div + a:after{
+            border-bottom-color: $error-red;
+        }
+        label#label_term_years{
+            font-family: 'Roobert-Bold', sans-serif;
+        }
+        span.risk__accent{
+            font-family: 'Roobert-Bold', sans-serif;
+            color: $color-dark-blue-secondary; 
+        }
+        .inset-block__content-container{
+            border-left: 10px solid $color-teal-dark-secondary;
+            padding: 10px 0 0 10px;
+        }
+        a.button {
+            text-decoration: none;
+        }
+        a.previous {
+            &:visited {
+                color: $color-magenta-primary;
+            }
+            &:focus,
+            &:active,
+            &:active:focus {
+                color: $color-dark-blue-secondary;
+                outline: none;
+            }
+        }
+    }
+    .affcalc__row{
+        .affcalc__col--33{
+            @media screen and (min-width: 45em) {
+                width: 33%;
+            }
+            
+           
+            .callout {
+                border: 8px solid #f0f05a;
+                border-radius: 0px 0px 0px 36px;
+                margin-top: 30px;
+                padding: 32px 29px 26px 57px;
+                background: url(/assets/images-mh/mobile-call-out-arrow.svg) 0 20px no-repeat;
+                p {
+                    margin: revert;
+                }
+            }
+            .callout__icon {
+                display: none;
+            }
+            h5.callout__heading {
+                font-size: 22px; 
+                margin-bottom: 10px;
+            }
+
+            ul{
+                padding: 0 0 0 25px;
+                li {
+                    margin-bottom: 0.75rem;
+                    a{
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    // input[type=radio],
+    // input[type=checkbox] {
+    //     &:focus,
+    //     &:hover{
+    //         outline-color: $support_focus;
+    //     }
+    //     + label{
+    //         cursor: pointer;
+    //     }
+    // }   
+
+    .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
+    .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
+    .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
+
+    .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
+    .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
+    .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
+
+    .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
+    .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
+    .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
+
+    .risk--low .risk-slice--incoming {fill:$risk-low}
+    .risk--medium .risk-slice--incoming {fill:$risk-medium;}
+    .risk--high .risk-slice--incoming {fill:$error-red;}
+
+    .risk--low .risk-key--incoming:after {background:$risk-low;}
+    .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
+    .risk--high .risk-key--incoming:after {background:$error-red;}
+
+        
+
+
+    /* Affordability validation error styles */ 
+    .new_affordability {
+        .validation-summary {
+            .validation-summary__content-container, .validation-summary__error--no-link {
+                background-color: $red_error_background;
+                .validation-summary__title {
+                    font-family: 'Roobert-Bold', sans-serif;
+                    color: $red_error;
+                    font-weight: bold;
+                }
+                border-left: 4px solid $red_error;
+                color: $red_error;
+                .validation-summary__list {
+                    font-family: 'Roobert-Regular', sans-serif;
+                    .validation-summary__error {
+                        a {
+                            color: $error-red;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .is-errored{
+            border-left: 4px solid $red_error;
+            border-color: $red_error;
+            label{
+                color: $text_secondary;
+                font-weight:  normal;
+            }
+            input[type=text],
+            input[type=number]{
+                border: 2px solid $red_error;
+            }
+            select{
+                border: 2px solid $red_error;
+                color: $text_secondary;
+            }
+            .js-inline-error{
+                p{
+                    color: $red_error;
+                    font-size: 16px;
+                    line-height: 23px;
+                }
+            }
+        }
+        
+    }
 }
 
