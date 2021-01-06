@@ -46,7 +46,7 @@
     }
 
     /* links */
-    p a, ol li a, ul li a, .stamp-duty__results a, .expander a {
+    p a, ol li a, ul li a, .stamp-duty__results a, .expander a, .tooltip a.tooltip__link {
         font-family: 'Roobert-Regular', sans-serif;
         color:$color-magenta-primary;
         //text-decoration: underline;
@@ -603,6 +603,11 @@ h4.mortgagecalc__heading {
             }
         }
 
+        div.popup-tip__container {
+            top: 16px !important;
+            left: -21.9375px !important
+        }
+
         // right hand chevron inside circle
         .elsewhere__arrow {
             background-color:$color-light-grey-supporting;
@@ -624,6 +629,7 @@ h4.mortgagecalc__heading {
         }
 
         select {
+            font-family: 'Roobert-Regular', sans-serif;
             color: $color-dark-blue-secondary !important;
         }
 
@@ -744,6 +750,16 @@ h4.mortgagecalc__heading {
             strong {
                 font-family: 'Roobert-Bold', sans-serif;
             }
+
+            a.button {
+                //color: $color-magenta-primary;
+                &:focus,
+                &:active,
+                &:active:focus {
+                    color: $color-dark-blue-secondary;
+                }
+
+            }
         }
         .validation-summary__content-container {
             padding: 1px 0px 1px 10px;
@@ -801,11 +817,43 @@ h4.mortgagecalc__heading {
                 outline: none;
             }
         }
+        .tooltip__content-container {
+            a.tooltip__link {
+                color:$color-magenta-primary;
+                //text-decoration: underline;
+                &:link, &:active {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    color:$color-magenta-dark-primary;
+                    text-decoration: none;
+                }
+                &:visited {
+                    color: $link_visited;
+                    
+                }
+
+                &:focus {
+                    text-decoration: none;
+                    span {
+                    outline:none;
+                    text-decoration: none;
+                    color:$color-dark-blue-secondary;
+                    background-color:$color-yellow-secondary;
+                    border-bottom:4px solid $color-violet-primary;
+                    }
+                }
+
+                &:target {
+                    color:$color-violet-secondary;
+                }
+            }
+        }
     }
     .affcalc__row{
         .affcalc__col--33{
             @media screen and (min-width: 45em) {
-                width: 33%;
+                width: 36%;
             }
             
            
@@ -815,8 +863,14 @@ h4.mortgagecalc__heading {
                 margin-top: 30px;
                 padding: 32px 29px 26px 57px;
                 background: url(/assets/images-mh/mobile-call-out-arrow.svg) 0 20px no-repeat;
+                
                 p {
                     margin: revert;
+                }
+                @media screen and (min-width: 959px) {
+                    background: url(/assets/images-mh/callout-arrow-desktop.svg) 23px -4px no-repeat;
+                    background-size: 45px 66px;
+                    padding: 32px 30px 30px 77px;
                 }
             }
             .callout__icon {
