@@ -11,7 +11,9 @@ en:
     heading: "Stamp Duty calculator"
     heading_results: "Stamp Duty Calculator - Your Results"
     title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
-    subtitle: Until 31 March 2021, you will pay no Stamp Duty Land Tax (SDLT) on the purchase of your main property costing up to £500,000. You pay a different tax if your property or land is in <a href="/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland" target="_blank">Scotland</a> or <a href="/en/tools/house-buying/land-transaction-tax-calculator-wales" target="_blank">Wales</a>.  Anyone buying an additional residential property worth £40,000 or more will still have to pay an additional rate of stamp duty even if the property you already own is abroad. You are responsible for ensuring an SDLT return is sent to HMRC and pay any tax due within 14 days of the transaction date (usually the date of completion)..
+    subtitle_paras: 
+      - Until 1 April 2021, you will pay no Stamp Duty Land Tax (SDLT) on the purchase of your main property costing up to £500,000. If the completion date of your house purchase is on or after this date we recommend you use this <a href="https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax/#/intro" target="_blank">calculator</a> to calculate any liability to stamp duty on your property purchase.
+      - You pay a different tax if your property or land is in <a href="/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland" target="_blank">Scotland</a> or <a href="/en/tools/house-buying/land-transaction-tax-calculator-wales" target="_blank">Wales</a>.  Anyone buying an additional residential property worth £40,000 or more will still have to pay an additional rate of stamp duty even if the property you already own is abroad. You are responsible for ensuring an SDLT return is sent to HMRC and pay any tax due within 14 days of the transaction date (usually the date of completion).
     next: Next
     select:
       label: I am
