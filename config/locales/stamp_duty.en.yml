@@ -3,7 +3,7 @@ en:
     meta:
       title: "Stamp Duty Calculator - Work out the new updated Stamp Duty Land Tax rates"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty Land Tax you’ll need to pay on your new home based on the new updated rates"
-      canonical_url: "https://www.moneyhelper.org/en/tools/house-buying/stamp-duty-calculator"
+      canonical_url: "https://www.moneyhelper.org/en/homes/buying-a-home/stamp-duty-calculator"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "stamp-duty-calculator"
@@ -30,7 +30,7 @@ en:
       england_ni:
         title: Calculate Stamp Duty in England or Northern Ireland
         body: Properties in England and Northen Ireland are still subject to Stamp Duty.
-        link: "/en/tools/house-buying/stamp-duty-calculator"
+        link: "/en/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Calculate Land Transaction Tax for Wales
         link: "/en/tools/house-buying/land-transaction-tax-calculator-wales"

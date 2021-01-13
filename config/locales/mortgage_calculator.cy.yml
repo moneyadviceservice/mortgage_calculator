@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell Morgais - Cyfrifwch eich ad-daliadau morgais a'ch taliadau llog"
       description: "Defnyddiwch ein Cyfrifiannell Morgais i ganfod faint fydd eich taliadau morgais misol yn cynnwys yr ad-daliad a'r taliad llog."
-      canonical_url: "https://www.moneyhelper.org/cy/tools/cyfrifiannell-morgais"
+      canonical_url: "https://www.moneyhelper.org/cy/homes/buying-a-home/mortgage-calculator"
     tool_name: "cyfrifiannell-morgais-newydd"
     activemodel:
       attributes:
@@ -47,7 +47,7 @@ cy:
           title: Llog yn unig
           tip_1: Golyga’r rheoliadau diweddaraf y bydd angen i chi a’ch darparwr benthyciadau gytuno ar gynllun ad-dalu ar gyfer eich morgais.
           tip_1_linktext: Darllenwch fwy
-          tip_1_url: /cy/articles/dulliau-ad-dalu-morgais-llog-yn-unig
+          tip_1_url: /cy/homes/buying-a-home/help-with-mortgages/ways-of-repaying-an-interest-only-mortgage
           hidden_title: Eich diddordeb yn unig ad-daliadau
       tips:
         hidden_costs: Cofiwch gynllunio ar gyfer costau eraill fel ffioedd morgais, ffioedd cyfreithiol a threth stamp.
@@ -59,21 +59,21 @@ cy:
         tip_1:
           heading: Dewiswch y math gorau o forgais ac ystyriwch cael cynghorydd
           info_html: "Cyngor ar forgeisi - a ddylech chi gael cynghorydd morgeisi? <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyhelper.org/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
+          url: "https://www.moneyhelper.org/cy/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
         tip_2:
           heading: Cynyddu'ch blaendal
           info_html: Sut i osod targed cynilo
-          url: "https://www.moneyhelper.org/cy/articles/sut-i-bennu-nod-cynilo"
+          url: "https://www.moneyhelper.org/cy/savings/types-of-savings/help-meeting-savings-goals/how-to-set-a-savings-goal"
         tip_3:
           heading: A ydych chi'n gymwys ar gyfer cynllun tai fforddiadwy?
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai presennol <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-          url: "https://www.moneyhelper.org/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          url: "https://www.moneyhelper.org/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Dysgu mwy
           tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
           more:
             copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-            url: "https://www.moneyhelper.org/cy/articles/dewis-morgais-sut-mae-cael-y-cynnig-iawn"
+            url: "https://www.moneyhelper.org/cy/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
         find_out_more:
           title: Dewch o hyd i ragor
           tips:
@@ -82,7 +82,7 @@ cy:
             - copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
               url: "https://www.moneyhelper.org/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
             - copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+              url: "https://www.moneyhelper.org/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
             - copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
               url: "https://www.moneyhelper.org/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
             - copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
