@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
-      canonical_url: "https://www.moneyhelper.org/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      canonical_url: "https://www.moneyhelper.org/cy/homes/buying-a-home/stamp-duty-calculator"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-stamp"
@@ -26,7 +26,7 @@ cy:
       england_ni:
         title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
         body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+        link: "/cy/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru
