@@ -2,16 +2,16 @@
 Gemfile.lock
 
 # Ignore all logfiles and tempfiles in the dummy app.
-/spec/tmp/*
-/spec/dummy/db/*.sqlite3
-/spec/dummy/db/*.rb
-spec/dummy/log/*
-spec/dummy/tmp/*
-spec/dummy/public/decision-trees/assets/**
-spec/dummy/public/assets/**
-spec/dummy/public/version
-spec/dummy/db/*.sqlite3
-spec/dummy/screenshot*
+# /spec/tmp/*
+# /spec/dummy/db/*.sqlite3
+# /spec/dummy/db/*.rb
+# spec/dummy/log/*
+# spec/dummy/tmp/*
+# spec/dummy/public/decision-trees/assets/**
+# spec/dummy/public/assets/**
+# spec/dummy/public/version
+# spec/dummy/db/*.sqlite3
+# spec/dummy/screenshot*
 
 .byebug_history
 
