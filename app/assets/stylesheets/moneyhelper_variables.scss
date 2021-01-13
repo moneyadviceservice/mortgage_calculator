@@ -1,0 +1,100 @@
+
+/*New colours based on the design*/
+
+$color-blue-primary: #0F19A0;
+$color-magenta-primary: #C82A87;
+$color-magenta-light-primary: #DB7BB4;
+$color-magenta-dark-primary: #AE0060;
+$color-magenta-active-dark-primary: #9C0052;
+
+$color-yellow-secondary: #F0F05A;
+$color-teal-light-secondary: #6FD8D8;
+$color-teal-dark-secondary: #00788F;
+$color-dark-blue-secondary: #000B3B;
+$color-grey-secondary: #60637E;
+
+$color-white-supporting: #FFFFFF;
+$color-grey-blue-supporting: #9DA1CA;
+$color-grey: #E5E5E5;
+$color-light-grey-supporting: #F3F1F3;
+$color-grey-white-supporting: #FBFAFB;
+$color-white-smoke-supporting: #EEEBEE;
+
+$color-violet-primary: #8200D1;
+$color-violet-secondary:#8E2B9E;
+$color-violet-supporting: linear-gradient(0deg, #8800D1, #8800D1), #FFFFFF;
+
+//Risk colours used in some tools 
+$error-red:#D00000;
+$risk-medium:#FFC200;
+$risk-low:#008021;
+
+
+$color-focus-style: $color-violet-supporting;
+$color-card-focus-state: $color-white-smoke-supporting;
+$color-card-hover-state: $color-grey-white-supporting;
+$color-light-grey-background: $color-light-grey-supporting;
+$color-form-outline: $color-grey-blue-supporting;
+$color-page-background: $color-white-supporting;
+$color-form-font-placeholder: $color-grey-secondary;
+$color-text: $color-dark-blue-secondary;
+$color-support-active: $color-magenta-active-dark-primary;
+$color-hover-over: $color-magenta-dark-primary;
+
+
+
+
+
+/* Common reskin styles */
+
+// -- Colours -----------------------------------------
+
+$white: #ffffff;
+$text_secondary: #000B3B;
+$input_border: #60637E;
+$blue_primary: #0F19A0;
+$magenta_primary: #C82A87;
+$magenta_dark: #AE0060;
+$magenta_darker: #9C0052;
+$button_active_bg: #9C0052;
+$light_grayish_magenta: #eeebee;
+$yellow_secondary: #F0F05A;
+$teal_secondary: #00788F;
+$red_error: #D00000;
+$red_error_background: #ffeef0;
+$support_focus: #8200D1;
+$link_visited: #792B9E;
+$light_grey: #F3F3FA;
+$light_grey_2: #F3F1F3;
+
+// ----------------------------------------------------
+
+// -- Dimensions --------------------------------------
+$border_radius: 4px;
+$mobile_width: 768px;
+// ----------------------------------------------------
+
+// -- Fonts -------------------------------------------
+@font-face{
+    font-family: 'Roobert-Regular';
+    src: font-url('Roobert-Regular.woff2') format('woff2'),
+         font-url('Roobert-Regular.woff') format('woff');
+}
+@font-face{
+    font-family: 'Roobert-Medium';
+    src: font-url('Roobert-Medium.woff2') format('woff2'),
+         font-url('Roobert-Medium.woff') format('woff');
+}
+@font-face{
+    font-family: 'Roobert-Bold';
+    src: font-url('Roobert-Bold.woff2') format('woff2'),
+         font-url('Roobert-Bold.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Roobert-SemiBold';
+    src: font-url('Roobert-SemiBold.woff2') format('woff2'),
+         font-url('Roobert-SemiBold.woff') format('woff');
+}
+// ----------------------------------------------------
+
