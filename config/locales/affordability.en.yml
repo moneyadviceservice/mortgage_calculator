@@ -3,7 +3,7 @@ en:
     meta:
       title: Mortgage affordability calculator – How much mortgage can you afford to borrow?
       description: Use the Money Helper mortgage affordability calculator to find out how much mortgage you can afford to borrow for your new house
-      canonical_url: "https://www.moneyhelper.org/en/tools/house-buying/mortgage-affordability-calculator"
+      canonical_url: "https://www.moneyhelper.org/en/homes/buying-a-home/mortgage-affordability-calculator"
     tool_name: "mortgage-affordability-calculator"
     title: Mortgage Affordability Calculator
     sub_title: "How much can you borrow?"
@@ -189,7 +189,7 @@ en:
         tip_1:
           heading: "Explore different schemes to help you buy a home"
           info_html: "Government schemes for first-time home buyers and existing homeowners"
-          url: "https://www.moneyhelper.org/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         tip_2:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
@@ -211,7 +211,7 @@ en:
         tip_2:
           heading: "Explore different schemes to help you buy a home"
           info_html: "Government schemes for first-time home buyers and existing homeowners"
-          url: "https://www.moneyhelper.org/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         tip_3:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
