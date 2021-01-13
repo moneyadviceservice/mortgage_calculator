@@ -1,0 +1,936 @@
+
+
+Started GET "/" for ::1 at 2020-11-20 11:17:53 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (28.9ms)
+Completed 200 OK in 57ms (Views: 57.0ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-20 11:17:57 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (31.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (10.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (32.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (36.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (11.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (14.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (112.1ms)
+  Rendered layouts/application.html.erb (12.3ms)
+  Rendered layouts/embedded_tool.html.erb (14.1ms)
+Completed 200 OK in 2743ms (Views: 2696.1ms)
+
+
+Started GET "/assets/modernizr.self-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator_enhanced_responsive.self-d0d2386e3c3c5cc632d89132a70a7a15596284312b55266564ef25fc884754bc.css?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/jquery/dist/jquery.self-5af507e253c37e9c9dcf65064fc3f93795e6e28012780579975a4d709f4074ad.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/jquery-migrate/jquery-migrate.self-e794a30678832da3ef0d24e426e547177c7f5e55160759a9a05fb497b4443863.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/angular-mocks.self-ef3cc6182643d5186161b1d1ff2770c756dead5d6e144c7ad5e816ca207828c6.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/jquery-ui-mod.self-751ee5733d3aeaea5465018a4147c515da4273072aba2263325d09e4bfa0eed9.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/jquery-waypoints/waypoints.self-41230404062181948be7eac7c1a8b8bf4225886de2fbfb0a38d1140ac6c3a42a.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.self-4757515d4cc75af1ab32d564135edc9ba80bcef035a0230149dcd1df0e8f0d26.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/placeholder_polyfill.jquery.self-e902f046d36fd4bb2074c86972c5bec39d33bdf6a659c5ba511b0063cd50e424.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/args.self-e18cee2016edb80e32a72360ba936226d7d4c2648d4690d8c9be01f4edfa2c26.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/autonumeric.self-d221077e874a38ba750e2cac1c68c34b119e6da1668196c2ce62a899b0e0a33c.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/accessibility_helpers.self-a1d29addd7f05889b5be139a8b35565c37e0171c80c0a302bf203333650671d1.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/angular-wizard.self-0f7b29a0496f5805e06d6e9b280ccc33d1f7342fc3c8fca4d00376bc16e5bd98.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/require_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/mortgage_calculator_app.self-d10bd874f9fe44b73f418fbb785d43c4bf7a46abd64cf47a3ef1455b429e0bd4.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/affordability.self-c831e632c282665f5bada894b3deef9f9f5bf4617829b913578e67a0bea2ac94.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/iframe_helpers.self-054cdc9bbc7d9c21559d3b39585c3611091ecbf5058c4ec1aea0429d27cc26a6.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/repayments.self-0210482f1d4c8ca502d5e29b845800fb5ae8438a017ab514c04f7ce9b6da440b.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/stamp_duty.self-03c44714683bd3fd7e7507b55ad83ee38f7c9a763a50f2b966bf72a156985b5d.js?body=1" for ::1 at 2020-11-20 11:17:59 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/controllers/calculator.self-c5ade111b1635c1829577508e4a290dbb37426cf90e0f0a13f505d805d109a24.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/filters/custom-currency.self-0e2971dc52b86b0e78a36027e23d917c1e6b01001fcc126e94e76ca65e5262d3.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/filters/percentages.self-45093489d0cf2be3c0b244710c7d428773d5b730fc1e42dc3e06cb626f2c577b.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/affects_height.self-44ff9a717d50f2c3bc934eaf28a38d469d31c6f1dd77fd66e358e24e330ad1af.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/analytics.self-8eeeabb334c3ab569dcd7796f1e4ffbc2f36f3c1e68956371cc9d51ef5d0fea3.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/autoselect.self-ac65041bb8957a865bb47c9ef41feb6fdb17d12d95889f91ba5911ad01bffd47.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/autosize.self-8a0c4f1a6f12e0bc68d894caa399daa19c86ec59ee019556022a48f7c3815192.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/calculate.self-e88ac500705a03618ae12c30cba34b7f022019068bfeed50ba93525d2a8709b6.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/currency.self-50a8192060cf45874aa31daa921c8611acc2fd947da1b3dae28840794084e1ed.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/docker.self-6765becd6030ebc998dd777dff2e764ee782ba58e6abed5ce43dfc355c866be2.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/initial.self-521ae3b93bf3d511ffb9ea23156d0499747e9c857627f705cb9001dd14287a9c.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/integer.self-b0837ef166d1b3f723cf3d493ad0de7d0092e93e6c573ecaf8359a7e6d6f419e.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/link_to_button.self-6b41c5aa7c937e9b81e2f6d8310d9be2176c480c3b9de3c02767aed28e9855bd.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/nosubmit.self-cbd0e94137684dd2a0ca0536c70908a491dfea20be20c5be12acf3c1abb007a7.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/percentage.self-eb70230860129c6138c2d7a4ad606974b7f0f5b0cc6977d731a42a1f3db3c6e3.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/pie.self-76ec61d6cd06cdffbcba87675fccc9db246573313e22579d883cdef345a471fa.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/slider.self-f67313b79fc98e1e6d3887ea1686c497a84aad55d919f6e5f8da3b9e38f4b184.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/tooltip.self-a9176a88153b06525a8dea55127433361a9f78f7969841922efa2f7ee24b1fd9.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator/application.self-9122ef61b67051b54c02d7b3ec658fd82c1029231857006c8677953179ed8050.js?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/assets/mortgage_calculator_print.self-71c0f1139ec0d7771574562469c29e022003a21acd9a833d2eaeae9f082a30ee.css?body=1" for ::1 at 2020-11-20 11:18:00 +0000
+
+
+Started GET "/" for ::1 at 2020-11-20 15:54:43 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (34.5ms)
+Completed 200 OK in 64ms (Views: 64.4ms)
+
+
+Started GET "/cy/mortgage_calculator/" for ::1 at 2020-11-20 15:54:50 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"cy"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (34.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (11.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (42.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (46.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (13.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (18.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (1.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (141.1ms)
+  Rendered layouts/application.html.erb (12.5ms)
+  Rendered layouts/embedded_tool.html.erb (16.1ms)
+Completed 200 OK in 1361ms (Views: 1312.5ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-20 15:54:58 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (3.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (21.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (24.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (8.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (11.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (59.8ms)
+  Rendered layouts/application.html.erb (4.0ms)
+  Rendered layouts/embedded_tool.html.erb (5.8ms)
+Completed 200 OK in 141ms (Views: 140.6ms)
+
+
+Started GET "/assets/mortgage_calculator/expander-b876cd757d817518ffb5484836e5c4d433ebeb6131e2279e43df53d4d31fe500.png" for ::1 at 2020-11-20 15:55:05 +0000
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-20 15:57:09 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.4ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.7ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (189.8ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 15:57:24 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (28.2ms)
+Completed 200 OK in 43ms (Views: 43.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 15:57:26 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (21.6ms)
+Completed 200 OK in 31ms (Views: 31.1ms)
+
+
+Started GET "/en/mortgage_calculator/stamp-duty-calculator" for ::1 at 2020-11-20 15:57:39 +0000
+Processing by MortgageCalculator::StampDutiesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.3ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (114.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (11.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_explanation.html.erb (19.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (61.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (73.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (87.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (224.6ms)
+  Rendered layouts/application.html.erb (7.2ms)
+  Rendered layouts/embedded_tool.html.erb (9.5ms)
+Completed 200 OK in 902ms (Views: 869.6ms)
+
+
+Started GET "/assets/modernizr.self-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator_enhanced_responsive.self-d0d2386e3c3c5cc632d89132a70a7a15596284312b55266564ef25fc884754bc.css?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/jquery-migrate/jquery-migrate.self-e794a30678832da3ef0d24e426e547177c7f5e55160759a9a05fb497b4443863.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/jquery/dist/jquery.self-5af507e253c37e9c9dcf65064fc3f93795e6e28012780579975a4d709f4074ad.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/angular-mocks.self-ef3cc6182643d5186161b1d1ff2770c756dead5d6e144c7ad5e816ca207828c6.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/jquery-ui-mod.self-751ee5733d3aeaea5465018a4147c515da4273072aba2263325d09e4bfa0eed9.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/jquery-waypoints/waypoints.self-41230404062181948be7eac7c1a8b8bf4225886de2fbfb0a38d1140ac6c3a42a.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.self-4757515d4cc75af1ab32d564135edc9ba80bcef035a0230149dcd1df0e8f0d26.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/placeholder_polyfill.jquery.self-e902f046d36fd4bb2074c86972c5bec39d33bdf6a659c5ba511b0063cd50e424.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/args.self-e18cee2016edb80e32a72360ba936226d7d4c2648d4690d8c9be01f4edfa2c26.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/autonumeric.self-d221077e874a38ba750e2cac1c68c34b119e6da1668196c2ce62a899b0e0a33c.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/accessibility_helpers.self-a1d29addd7f05889b5be139a8b35565c37e0171c80c0a302bf203333650671d1.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/angular-wizard.self-0f7b29a0496f5805e06d6e9b280ccc33d1f7342fc3c8fca4d00376bc16e5bd98.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/require_config.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/mortgage_calculator_app.self-d10bd874f9fe44b73f418fbb785d43c4bf7a46abd64cf47a3ef1455b429e0bd4.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/affordability.self-c831e632c282665f5bada894b3deef9f9f5bf4617829b913578e67a0bea2ac94.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/iframe_helpers.self-054cdc9bbc7d9c21559d3b39585c3611091ecbf5058c4ec1aea0429d27cc26a6.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/repayments.self-0210482f1d4c8ca502d5e29b845800fb5ae8438a017ab514c04f7ce9b6da440b.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/services/stamp_duty.self-03c44714683bd3fd7e7507b55ad83ee38f7c9a763a50f2b966bf72a156985b5d.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/controllers/calculator.self-c5ade111b1635c1829577508e4a290dbb37426cf90e0f0a13f505d805d109a24.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/filters/custom-currency.self-0e2971dc52b86b0e78a36027e23d917c1e6b01001fcc126e94e76ca65e5262d3.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/filters/percentages.self-45093489d0cf2be3c0b244710c7d428773d5b730fc1e42dc3e06cb626f2c577b.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/affects_height.self-44ff9a717d50f2c3bc934eaf28a38d469d31c6f1dd77fd66e358e24e330ad1af.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/analytics.self-8eeeabb334c3ab569dcd7796f1e4ffbc2f36f3c1e68956371cc9d51ef5d0fea3.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/autoselect.self-ac65041bb8957a865bb47c9ef41feb6fdb17d12d95889f91ba5911ad01bffd47.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/autosize.self-8a0c4f1a6f12e0bc68d894caa399daa19c86ec59ee019556022a48f7c3815192.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/calculate.self-e88ac500705a03618ae12c30cba34b7f022019068bfeed50ba93525d2a8709b6.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/currency.self-50a8192060cf45874aa31daa921c8611acc2fd947da1b3dae28840794084e1ed.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/docker.self-6765becd6030ebc998dd777dff2e764ee782ba58e6abed5ce43dfc355c866be2.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/initial.self-521ae3b93bf3d511ffb9ea23156d0499747e9c857627f705cb9001dd14287a9c.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/integer.self-b0837ef166d1b3f723cf3d493ad0de7d0092e93e6c573ecaf8359a7e6d6f419e.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/link_to_button.self-6b41c5aa7c937e9b81e2f6d8310d9be2176c480c3b9de3c02767aed28e9855bd.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/nosubmit.self-cbd0e94137684dd2a0ca0536c70908a491dfea20be20c5be12acf3c1abb007a7.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/percentage.self-eb70230860129c6138c2d7a4ad606974b7f0f5b0cc6977d731a42a1f3db3c6e3.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/pie.self-76ec61d6cd06cdffbcba87675fccc9db246573313e22579d883cdef345a471fa.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/slider.self-f67313b79fc98e1e6d3887ea1686c497a84aad55d919f6e5f8da3b9e38f4b184.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/angular/directives/tooltip.self-a9176a88153b06525a8dea55127433361a9f78f7969841922efa2f7ee24b1fd9.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/application.self-9122ef61b67051b54c02d7b3ec658fd82c1029231857006c8677953179ed8050.js?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator_print.self-71c0f1139ec0d7771574562469c29e022003a21acd9a833d2eaeae9f082a30ee.css?body=1" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/assets/mortgage_calculator/triangle-492208a46d0374264f224955b2d03d2f2c0187374f59da38c309584df0f92b8e.png" for ::1 at 2020-11-20 15:57:40 +0000
+
+
+Started GET "/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland" for ::1 at 2020-11-20 15:57:45 +0000
+Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (92.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_and_buildings_transaction_taxes/_first_time_buyer_examples_table.html (5.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_and_buildings_transaction_taxes/_first_time_buyer_explanation.html.erb (19.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (57.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (66.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (74.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (188.6ms)
+  Rendered layouts/application.html.erb (3.5ms)
+  Rendered layouts/embedded_tool.html.erb (5.1ms)
+Completed 200 OK in 277ms (Views: 276.1ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:06:10 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (15.8ms)
+Completed 200 OK in 26ms (Views: 26.4ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:06:11 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (15.1ms)
+Completed 200 OK in 25ms (Views: 24.7ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:06:12 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (19.0ms)
+Completed 200 OK in 29ms (Views: 28.5ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:06:12 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (17.6ms)
+Completed 200 OK in 27ms (Views: 26.6ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:06:13 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (21.7ms)
+Completed 200 OK in 31ms (Views: 31.4ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-20 16:06:14 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (4.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (31.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (35.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (16.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (19.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (1.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (92.0ms)
+  Rendered layouts/application.html.erb (11.4ms)
+  Rendered layouts/embedded_tool.html.erb (13.3ms)
+Completed 200 OK in 516ms (Views: 512.2ms)
+
+
+Started GET "/assets/mortgage_calculator/angular/controllers/calculator.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2020-11-20 16:06:15 +0000
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-20 16:06:22 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (1.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (19.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (22.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (4.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (7.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (53.6ms)
+  Rendered layouts/application.html.erb (5.5ms)
+  Rendered layouts/embedded_tool.html.erb (8.1ms)
+Completed 200 OK in 166ms (Views: 165.4ms)
+
+
+Started GET "/" for ::1 at 2020-11-20 16:19:03 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (24.1ms)
+Completed 200 OK in 35ms (Views: 35.2ms)
+
+
+Started GET "/" for ::1 at 2020-11-24 10:09:36 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (32.1ms)
+Completed 200 OK in 79ms (Views: 79.3ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-24 10:10:59 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (56.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (17.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (1.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (52.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (57.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (15.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (20.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (1.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (193.3ms)
+  Rendered layouts/application.html.erb (19.1ms)
+  Rendered layouts/embedded_tool.html.erb (24.3ms)
+Completed 200 OK in 1714ms (Views: 1641.3ms)
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for ::1 at 2020-11-24 10:11:01 +0000
+
+
+Started GET "/en/mortgage_calculator/stamp-duty-calculator" for ::1 at 2020-11-24 10:11:11 +0000
+Processing by MortgageCalculator::StampDutiesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.4ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (135.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (2.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (13.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_explanation.html.erb (23.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (11.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (75.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (93.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (113.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (278.7ms)
+  Rendered layouts/application.html.erb (4.7ms)
+  Rendered layouts/embedded_tool.html.erb (6.5ms)
+Completed 200 OK in 394ms (Views: 388.8ms)
+
+
+Started GET "/assets/mortgage_calculator/triangle-492208a46d0374264f224955b2d03d2f2c0187374f59da38c309584df0f92b8e.png" for ::1 at 2020-11-24 10:11:12 +0000
+
+
+Started GET "/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland" for ::1 at 2020-11-24 10:11:15 +0000
+Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (116.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (2.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (14.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (2.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_and_buildings_transaction_taxes/_first_time_buyer_examples_table.html (8.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_and_buildings_transaction_taxes/_first_time_buyer_explanation.html.erb (29.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (12.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (82.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (92.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (104.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (240.0ms)
+  Rendered layouts/application.html.erb (5.2ms)
+  Rendered layouts/embedded_tool.html.erb (8.3ms)
+Completed 200 OK in 373ms (Views: 370.7ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:06:58 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (57.9ms)
+Completed 200 OK in 104ms (Views: 103.5ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-25 09:07:33 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (32.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (12.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (38.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (42.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (14.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (20.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (1.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (134.1ms)
+  Rendered layouts/application.html.erb (9.0ms)
+  Rendered layouts/embedded_tool.html.erb (13.4ms)
+Completed 200 OK in 1334ms (Views: 1287.8ms)
+
+
+Started GET "/en/mortgage_calculator/stamp-duty-calculator" for ::1 at 2020-11-25 09:11:12 +0000
+Processing by MortgageCalculator::StampDutiesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.4ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (123.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (12.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (1.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_explanation.html.erb (20.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (66.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (78.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (93.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (242.9ms)
+  Rendered layouts/application.html.erb (5.2ms)
+  Rendered layouts/embedded_tool.html.erb (8.4ms)
+Completed 200 OK in 362ms (Views: 358.4ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:59:17 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (21.1ms)
+Completed 200 OK in 45ms (Views: 45.2ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 09:59:18 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (22.4ms)
+Completed 200 OK in 33ms (Views: 32.5ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-25 10:00:08 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (26.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (10.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (29.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (33.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (9.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (15.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (105.2ms)
+  Rendered layouts/application.html.erb (9.3ms)
+  Rendered layouts/embedded_tool.html.erb (11.3ms)
+Completed 200 OK in 1517ms (Views: 1481.6ms)
+
+
+Started GET "/assets/moneyhelper_styling_mortgage_calc.self-ae403555369bb20f8d27e00ce1206e0c439d02b572a43f67d06ff6bb0c3ff9d1.css?body=1" for ::1 at 2020-11-25 10:00:09 +0000
+
+
+Started GET "/assets/images-mh/callout-arrow-desktop-54349bd05e40f540b26c0c9694db0137c2954bfc050b681a2e5cd9d4ea3bd153.svg" for ::1 at 2020-11-25 10:00:10 +0000
+
+
+Started GET "/assets/images-mh/tool-accordion-icon-a1bbc81eeabac60c6664b965057a12d1f72bdd39da25ef4f7d1affdc99a8a4c0.png" for ::1 at 2020-11-25 10:00:20 +0000
+
+
+Started GET "/en/mortgage_calculator/stamp-duty-calculator" for ::1 at 2020-11-25 10:00:26 +0000
+Processing by MortgageCalculator::StampDutiesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (108.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (1.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (2.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (2.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_explanation.html.erb (21.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (9.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (63.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (76.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (91.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (220.5ms)
+  Rendered layouts/application.html.erb (3.9ms)
+  Rendered layouts/embedded_tool.html.erb (6.9ms)
+Completed 200 OK in 337ms (Views: 334.6ms)
+
+
+Started GET "/assets/images-mh/chevron-vector-right-48e63f9dfc43bfd9caad69c0652172942ec795400b8c7c42d0f6c9c1a32ccd32.svg" for ::1 at 2020-11-25 10:00:27 +0000
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-25 10:14:45 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (27.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (10.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (30.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (33.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (10.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (17.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (111.5ms)
+  Rendered layouts/application.html.erb (8.5ms)
+  Rendered layouts/embedded_tool.html.erb (10.6ms)
+Completed 200 OK in 1062ms (Views: 1024.2ms)
+
+
+Started GET "/" for ::1 at 2020-11-25 16:25:14 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (24.5ms)
+Completed 200 OK in 53ms (Views: 52.8ms)
+
+
+Started GET "/en/mortgage_calculator/" for ::1 at 2020-11-25 16:25:34 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (31.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (16.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (43.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (46.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (12.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (18.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (1.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (133.6ms)
+  Rendered layouts/application.html.erb (9.2ms)
+  Rendered layouts/embedded_tool.html.erb (11.4ms)
+Completed 200 OK in 1468ms (Views: 1421.1ms)
+
+
+Started GET "/assets/modernizr.self-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/mortgage_calculator_enhanced_responsive.self-d0d2386e3c3c5cc632d89132a70a7a15596284312b55266564ef25fc884754bc.css?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/moneyhelper_styling_mortgage_calc.self-ae403555369bb20f8d27e00ce1206e0c439d02b572a43f67d06ff6bb0c3ff9d1.css?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/jquery/dist/jquery.self-5af507e253c37e9c9dcf65064fc3f93795e6e28012780579975a4d709f4074ad.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/jquery-migrate/jquery-migrate.self-e794a30678832da3ef0d24e426e547177c7f5e55160759a9a05fb497b4443863.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/angular-mocks.self-ef3cc6182643d5186161b1d1ff2770c756dead5d6e144c7ad5e816ca207828c6.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/jquery-ui-mod.self-751ee5733d3aeaea5465018a4147c515da4273072aba2263325d09e4bfa0eed9.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/jquery-waypoints/waypoints.self-41230404062181948be7eac7c1a8b8bf4225886de2fbfb0a38d1140ac6c3a42a.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/placeholder_polyfill.jquery.self-e902f046d36fd4bb2074c86972c5bec39d33bdf6a659c5ba511b0063cd50e424.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/args.self-e18cee2016edb80e32a72360ba936226d7d4c2648d4690d8c9be01f4edfa2c26.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/autonumeric.self-d221077e874a38ba750e2cac1c68c34b119e6da1668196c2ce62a899b0e0a33c.js?body=1" for ::1 at 2020-11-25 16:25:35 +0000
+
+
+Started GET "/assets/images-mh/callout-arrow-desktop-54349bd05e40f540b26c0c9694db0137c2954bfc050b681a2e5cd9d4ea3bd153.svg" for ::1 at 2020-11-25 16:25:36 +0000
+
+
+Started GET "/en/mortgage_calculator/land-transaction-tax-calculator-wales" for ::1 at 2020-11-26 09:13:43 +0000
+Processing by MortgageCalculator::LandTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_calculator_form.html.erb (190.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_next_home_buyer_explanation.html.erb (6.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_next_home_buyer_explanation.html.erb (18.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_how_is_calculated_section.html.erb (33.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results.html.erb (50.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results_recalculation_form.html.erb (63.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/show.html.erb within layouts/mortgage_calculator/application (270.7ms)
+  Rendered layouts/application.html.erb (9.3ms)
+  Rendered layouts/embedded_tool.html.erb (12.7ms)
+Completed 200 OK in 523ms (Views: 522.4ms)
+
+
+Started GET "/assets/images-mh/chevron-vector-right-48e63f9dfc43bfd9caad69c0652172942ec795400b8c7c42d0f6c9c1a32ccd32.svg" for ::1 at 2020-11-26 09:13:44 +0000
+
+
+Started GET "/en/mortgage_calculator/mortgage-affordability-calculator" for ::1 at 2020-11-26 09:13:52 +0000
+Processing by MortgageCalculator::AffordabilitiesController#step_1 as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_header.html.erb (0.8ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors_li.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors.html.erb (89.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (87.2ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (81.9ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_trigger.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_close.html.erb (1.7ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (90.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (15.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (79.4ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (80.5ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_trigger.html.erb (0.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_close.html.erb (1.0ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (88.6ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (0.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_form_step1.html.erb (766.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_seo_links.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/affordabilities/step_1.html.erb within layouts/mortgage_calculator/application (780.7ms)
+  Rendered layouts/application.html.erb (5.9ms)
+  Rendered layouts/embedded_tool.html.erb (8.4ms)
+Completed 200 OK in 941ms (Views: 908.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-26 11:50:48 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (48.9ms)
+Completed 200 OK in 97ms (Views: 96.6ms)
+
+
+Started GET "/en/mortgage_calculator/" for 127.0.0.1 at 2020-11-26 11:50:56 +0000
+Processing by MortgageCalculator::RepaymentsController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_header.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step1.html.erb (63.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_repayments.html.erb (18.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_repayment_tip.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayments.html.erb (0.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_only_repayment_tip.html.erb (0.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_monthly_increment.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_interest_monthly_increment.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_tabs.html.erb (48.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_left_panel.html.erb (51.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_term_years_input.html.erb (1.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_form_step2.html.erb (13.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_calc_right_panel.html.erb (19.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.8ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_suggested_tools.html.erb (0.7ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/_next_steps_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/repayments/show.html.erb within layouts/mortgage_calculator/application (187.6ms)
+  Rendered layouts/application.html.erb (20.0ms)
+  Rendered layouts/embedded_tool.html.erb (26.1ms)
+Completed 200 OK in 1947ms (Views: 1873.8ms)
+
+
+Started GET "/en/mortgage_calculator/stamp-duty-calculator" for 127.0.0.1 at 2020-11-26 11:51:11 +0000
+Processing by MortgageCalculator::StampDutiesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.4ms)
+  Rendered /Users/xabdua/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.4ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (115.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (10.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_table.html.erb (1.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.3ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_first_time_buyer_explanation.html.erb (19.5ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.2ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (7.9ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (60.6ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (73.0ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (88.1ms)
+  Rendered /Users/xabdua/repos/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (226.3ms)
+  Rendered layouts/application.html.erb (4.0ms)
+  Rendered layouts/embedded_tool.html.erb (6.5ms)
+Completed 200 OK in 336ms (Views: 332.8ms)
