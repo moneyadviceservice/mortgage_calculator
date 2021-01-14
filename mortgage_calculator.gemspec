@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "mortgage_calculator"
   s.version     = MortgageCalculator::Version::STRING
   s.authors     = ["Team D"]
-  s.email       = ["team.d@moneyhelper.org"]
-  s.homepage    = "http://www.moneyhelper.org"
+  s.email       = ["team.d@moneyhelper.org.uk"]
+  s.homepage    = "http://www.moneyhelper.org.uk"
   s.summary     = "A Mortgage Calculator"
   s.description = "A Mortgage Calculator"
 
