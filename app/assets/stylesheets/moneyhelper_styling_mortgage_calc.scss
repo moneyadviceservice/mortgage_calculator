@@ -926,8 +926,6 @@ h4.mortgagecalc__heading {
     .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
     .risk--high .risk-key--incoming:after {background:$error-red;}
 
-        
-
 
     /* Affordability validation error styles */ 
     .new_affordability {
@@ -979,3 +977,43 @@ h4.mortgagecalc__heading {
     }
 }
 
+
+    
+.affcalc{
+    &.risk--high{
+        .affcalc__col--clip{
+            input#borrowing-amount,
+            input#term-years,
+            input#interest-rate{
+                &.risk__accent--color-only{
+                    background-color: $error-red!important;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &.risk--medium{
+        .affcalc__col--clip{
+            input#borrowing-amount,
+            input#term-years,
+            input#interest-rate{
+                &.risk__accent--color-only{
+                    background-color: $risk-medium!important;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    &.risk--low{
+        .affcalc__col--clip{
+            input#borrowing-amount,
+            input#term-years,
+            input#interest-rate{
+                &.risk__accent--color-only{
+                    background-color: $risk-low!important;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
