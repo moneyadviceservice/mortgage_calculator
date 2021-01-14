@@ -12,25 +12,25 @@ module MortgageCalculator
 
     def full_mortgage_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyhelper.org/cy/homes/buying-a-home/mortgage-calculator"
+        "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/mortgage-calculator"
       else
-        "https://www.moneyhelper.org/en/homes/buying-a-home/mortgage-calculator"
+        "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-calculator"
       end
     end
 
     def full_stamp_duty_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyhelper.org/cy/homes/buying-a-home/stamp-duty-calculator"
+        "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/stamp-duty-calculator"
       else
-        "https://www.moneyhelper.org/en/homes/buying-a-home/stamp-duty-calculator"
+        "https://www.moneyhelper.org.uk/en/homes/buying-a-home/stamp-duty-calculator"
       end
     end
 
     def full_mortgage_affordability_calculator_url
       if I18n.locale == :cy
-        "https://www.moneyhelper.org/cy/homes/buying-a-home/mortgage-affordability-calculator"
+        "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/mortgage-affordability-calculator"
       else
-        "https://www.moneyhelper.org/en/homes/buying-a-home/mortgage-affordability-calculator"
+        "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-affordability-calculator"
       end
     end
 
