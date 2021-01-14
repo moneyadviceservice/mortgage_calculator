@@ -227,6 +227,7 @@ en:
           heading: "Make changes to your spending"
           info_html: "Use our %{budget_planner} to get the full picture"
           url_text: "Budget Planner"
+          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
         tip_3:
           heading: "Think about borrowing less"
           info_html: "Try %{saving}, or look for property in a more affordable area"
