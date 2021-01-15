@@ -660,6 +660,7 @@ h4.mortgagecalc__heading {
         }
 
         .stamp-duty__info-column h2 {
+            font-family: 'Roobert-Bold', sans-serif !important;
             background: none;
             text-indent: unset;
             padding: 0;
@@ -670,6 +671,106 @@ h4.mortgagecalc__heading {
             font-family: 'Roobert-SemiBold', sans-serif !important;
             text-decoration: none !important;
 
+        }
+    }
+
+    // .stamp-duty__results a {
+    //     &:focus {
+    //         background: none;
+    //         border-bottom: none;
+    //         &:before {
+    //             background-color: $yellow_secondary;
+    //             background-image: $select_down_svg_active_show;
+    //             border: 3px solid $support_focus;
+    //         }
+    //     }
+    // }
+    // .stamp-duty__results a::before{
+    //     background-image: $select_down_svg_default_show;
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     content: '';
+    //     display: inline-block;
+    //     height: 30px;
+    //     width: 30px;
+    //     background-position: 1px 2px;
+    //     border: 1px solid #c82a87;
+    //     background-color: white;
+    //     box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+    //     border-radius: 4px;
+    //     position: relative;
+    //     top: 12px;
+    //     left: -7px;
+         
+    // }
+
+    .stamp-duty__results a {
+        &::before {
+            background-image: $select_down_svg_default_show;
+            background-size: contain;
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            background-position: 1px 2px;
+            border: 1px solid #c82a87;
+            background-color: white;
+            box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+            border-radius: 4px;
+            position: relative;
+            top: 12px;
+            left: -7px;
+        }
+        &:hover {
+            &::before {
+                background-color: $light_grey_2 !important;
+            }
+        }
+        &:focus {
+            background: none;
+            border-bottom: none;
+            &::before {
+                background-color: $yellow_secondary;
+                background-image: $select_down_svg_active_show;
+                border: 3px solid $support_focus;
+                background-position: 0px 1px;
+            }
+        }
+
+        &:active {
+            background: none;
+            border-bottom: none;
+            &::before {
+                background-color: $light_grey_2;
+                background-image: $select_down_svg_active_show;
+                border: 3px solid $support_focus;
+            }
+        }
+    }
+
+    .stamp-duty__results a.expander--expanded {
+        &::before {
+            box-shadow: none;
+            transform: rotate(180deg);
+        }
+    }
+
+    table {
+        thead, tbody {
+            tr {
+                font-family: 'Roobert-Bold', sans-serif;
+                color: $text_secondary; 
+                background-color: unset;
+                border-bottom: 1px solid $support_hr;
+                th {
+                    border-right: none;
+                }
+                td {
+                    font-family: 'Roobert-Regular', sans-serif;
+                    border-right: none;
+                }
+            }
         }
     }
 }
