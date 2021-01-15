@@ -777,7 +777,26 @@ h4.mortgagecalc__heading {
 
     .mortgagecalc table thead tr th, .mortgagecalc table tbody tr th {
         text-align: left;
+        background-color: $white;
     }
+    .mortgagecalc table thead tr td, .mortgagecalc table tbody tr td {
+        background-color: $white;
+    }
+
+    .popup-tip__container{
+        border: 2px solid $blue_primary!important;
+        .popup-tip__close{
+            border-color: $blue_primary!important;
+            background-image: $close_svg;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 18px;
+            svg{
+                display: none;
+            }
+        }
+    }
+
 }
 
 /* Affordability */ 
