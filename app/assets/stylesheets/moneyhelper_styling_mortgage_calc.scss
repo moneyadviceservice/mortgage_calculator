@@ -538,6 +538,7 @@ h4.mortgagecalc__heading {
 
 /* Stamp duty */ 
 .mortgagecalc {
+    max-width: none;
     .stamp-duty{
         overflow: hidden;
         .stamp-duty__input-wrapper {
@@ -772,6 +773,10 @@ h4.mortgagecalc__heading {
                 }
             }
         }
+    }
+
+    .mortgagecalc table thead tr th, .mortgagecalc table tbody tr th {
+        text-align: left;
     }
 }
 
