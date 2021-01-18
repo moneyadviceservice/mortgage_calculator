@@ -1142,3 +1142,14 @@ h4.mortgagecalc__heading {
         }
     }
 }
+
+
+.risk--high .ui-slider .ui-slider-handle:after{
+    border-bottom-color: $error-red!important;
+}
+.risk--medium .ui-slider .ui-slider-handle:after{
+    border-bottom-color: $risk-medium!important;
+}
+.risk--low .ui-slider .ui-slider-handle:after{
+    border-bottom-color: $risk-low!important;
+}
