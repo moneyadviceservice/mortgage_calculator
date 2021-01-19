@@ -3,7 +3,7 @@ en:
     meta:
       title: "Land Transaction Tax (LTT) - Welsh Stamp Duty Calculator"
       description: "Use our Land Transaction Tax (LTT) calculator to calculate how much LTT (formerly Stamp Duty) you'll need to pay on your home in Scotland"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-transaction-tax-calculator-wales"
+      canonical_url: "https://www.moneyhelper.org.uk/en/tools/house-buying/land-transaction-tax-calculator-wales"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "land-transaction-tax-calculator"
@@ -24,9 +24,7 @@ en:
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "Land Transaction Tax (LTT) is paid at both main and higher rates of tax.  This is usually based on the price you pay for the property or land, but it might include other types of payment such as goods, works or services, release from a debt, or transfer of a debt, including the value of any outstanding mortgage.  For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £250,000  and 5% on the value between £250,000 and £280,000.  In this case, total liability for Land Transaction Tax (LTT) would be £1,500."
-
-    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT.  In this example LTT of 3% would be due on the value of the property up to £180,000 (£5,400), 6.5% on the value between £180,000 and £250,000 (£4,550) and 8% on the value between £250,000 and £280,000 (£2,400) meaning the total LTT due would be £12,350.  If you are replacing your main residence, the higher rates may not apply."
-
+    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT. In this example LTT of 4% would be due on the value of the property up to £180,000 (£7,200), 7.5% on the value between £180,000 and £250,000 (£5,250) and 9% on the value between £250,000 and £280,000 (£2,700) meaning the total LTT due would be £15,150. If you are replacing your main residence, the higher rates may not apply."
     how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
@@ -61,11 +59,11 @@ en:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
+            url: "https://www.moneyhelper.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
           - copy_html: Costs of moving day
-            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org.uk/en/articles/planning-for-the-cost-of-moving-day"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"

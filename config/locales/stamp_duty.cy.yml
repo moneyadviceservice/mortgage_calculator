@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      canonical_url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/stamp-duty-calculator"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-stamp"
@@ -26,7 +26,7 @@ cy:
       england_ni:
         title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
         body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+        link: "/cy/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru
@@ -87,11 +87,11 @@ cy:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
+            url: "https://www.moneyhelper.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
           - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "https://www.moneyhelper.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
       have_you_tried:
         title: 'Rhowch gynnig ar?'
         mortgage_calculator: "Cyfrifiannell morgais"

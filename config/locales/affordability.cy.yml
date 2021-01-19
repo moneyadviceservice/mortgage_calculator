@@ -2,8 +2,8 @@ cy:
   affordability:
     meta:
       title: "Cyfrifiannell fforddiadwyedd morgais – Faint o forgais allwch chi fforddio ei fenthyca?"
-      description: "Defnyddiwch gyfrifiannell fforddiadwyedd morgais y Gwasanaeth Cynghori Ariannol i ganfod faint o forgais allwch chi fforddio ei fenthyca ar gyfer eich tŷ newydd"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
+      description: "Defnyddiwch gyfrifiannell fforddiadwyedd morgais y Helpiwr Arian i ganfod faint o forgais allwch chi fforddio ei fenthyca ar gyfer eich tŷ newydd"
+      canonical_url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/mortgage-affordability-calculator"
     tool_name: "cyfrifiannell-fforddiadwyedd-morgais"
     title: Cyfrifiannell fforddiadwyedd morgais
     sub_title: "Faint allwch chi ei fenthyg?"
@@ -174,71 +174,71 @@ cy:
         tip_1:
           heading: "Gwnewch yn siŵr eich bod yn cael y morgais gorau ar eich cyfer chi"
           info_html: "Deall gwahanol fathau o forgeisi"
-          url: "https://www.moneyadviceservice.org.uk/cy/categories/types-of-mortgage"
+          url: "https://www.moneyhelper.org.uk/cy/categories/types-of-mortgage"
         tip_2:
           heading: "Peidiwch â gwneud y camgymeriadau hyn"
           info_html: "Prynu cartref: sut i osgoi’r camgymeriadau mwyaf cyffredin"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/prynu-cartref-sut-i-osgoir-camgymeriadau-mwyaf-cyffredin"
+          url: "https://www.moneyhelper.org.uk/cy/articles/prynu-cartref-sut-i-osgoir-camgymeriadau-mwyaf-cyffredin"
         tip_3:
           heading: "Dechreuwch arni gyda’ch cais"
           info_html: "Y broses o brynu tŷ – %{steps}"
           url_text: "camau i brynu tŷ neu fflat newydd"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/llinell-amser-arian-wrth-brynu-cartref"
+          url: "https://www.moneyhelper.org.uk/cy/articles/llinell-amser-arian-wrth-brynu-cartref"
       medium:
         title: "Beth ddylech chi ei wneud nesaf"
         tip_1:
           heading: "Edrychwch ar wahanol gynlluniau i’ch helpu i brynu cartref"
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai cyfredol"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         tip_2:
           heading: "Rhowch drefn ar eich arian"
           info_html: "Defnyddiwch ein %{budget_planner} i gael y darlun llawn"
           url_text: "Cynllunydd Cyllideb"
-          url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb/start"
+          url: "https://www.moneyhelper.org.uk/cy/tools/cynllunydd-cyllideb/start"
         tip_3:
           heading: "Deallwch yr holl gostau"
           info_html: "Gwnewch yn siŵr eich bod yn deall yr holl gostau cychwynnol o brynu cartref"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+          url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
       high:
         title: "Tri cham i wneud eich morgais yn fwy fforddiadwy"
         tip_1:
           heading: "Ystyriwch fenthyca llai"
           info_html: "Dysgwch am %{deposit} a %{ratios}"
           url_text_1: "gynilo i gael blaendal"
-          url_1: "https://www.moneyadviceservice.org.uk/cy/articles/arbed-arian-ar-gyfer-blaendal"
+          url_1: "https://www.moneyhelper.org.uk/cy/articles/arbed-arian-ar-gyfer-blaendal"
           url_text_2: "chymarebau benthyciad i werth"
-          url_2: "https://www.moneyadviceservice.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
+          url_2: "https://www.moneyhelper.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
         tip_2:
           heading: "Edrychwch ar wahanol gynlluniau i’ch helpu i brynu cartref"
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai cyfredol"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         tip_3:
           heading: "Rhowch drefn ar eich arian"
           info_html: "Defnyddiwch ein %{budget_planner} i gael y darlun llawn"
           url_text: "Cynllunydd Cyllideb"
-          url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb/start"
+          url: "https://www.moneyhelper.org.uk/cy/tools/cynllunydd-cyllideb/start"
       learn_more:
         title: "Fforddio eich morgais"
         tip_1: "Meddyliwch am wariant eich cartref yn ogystal â’ch taliadau morgais."
         tip_2 : "Mae gwario mwy na 50% o’ch cyflog clir ar gostau ymroddedig a morgais yn creu risg uchel iawn o orymestyn eich cyllideb. Gwnewch yn siŵr bod gennych ddigon o arian dros ben ar ddiwedd y mis i’ch helpu i ymdopi, pe byddai cyfraddau llog yn codi neu’ch amgylchiadau’n newid."
         more:
           copy_html: "Darllen mwy"
-          url: "https://www.moneyadviceservice.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
+          url: "https://www.moneyhelper.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
       find_out_more:
         title: "Cewch fwy o wybodaeth yn"
         tips:
           - copy_html: "Costau prynu"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
           - copy_html: "Cynllunydd Cyllideb"
-            url: "https://www.moneyadviceservice.org.uk/cy/tools/cynllunydd-cyllideb"
+            url: "https://www.moneyhelper.org.uk/cy/tools/cynllunydd-cyllideb"
           - copy_html: "Gwella eich statws credyd"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd"
+            url: "https://www.moneyhelper.org.uk/cy/articles/sut-mae-gwella-eich-statws-credyd"
           - copy_html: "Cynlluniau tai fforddiadwy"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/homebuy-firstbuy-a-chynlluniau-tai-fforddiadwy-eraill"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
           - copy_html: "Cynilo ar gyfer blaendal"
-            url: "https://www.moneyadviceservice.org.uk/cy/tools/cynilo-ar-gyfer-blaendal"
+            url: "https://www.moneyhelper.org.uk/cy/tools/cynilo-ar-gyfer-blaendal"
           - copy_html: "Tabl cymharu morgeisi"
-            url: "https://compare.moneyadviceservice.org.uk/mortgages/step1?language=cy"
+            url: "https://compare.moneyhelper.org.uk/mortgages/step1?language=cy"
       have_you_tried:
         title: "Rhowch gynnig ar"
         mortgage_calculator: "Cyfrifiannell Morgais"

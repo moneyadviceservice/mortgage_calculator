@@ -3,7 +3,7 @@ en:
     meta:
       title: "Mortgage Calculator - Work out your mortgage repayments and interest payments"
       description: "Use our Mortgage Calculator to find out your monthly mortgage payments including the repayment and interest payment."
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator"
+      canonical_url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-calculator"
     tool_name: "mortgage-calculator-new"
     activemodel:
       attributes:
@@ -47,7 +47,7 @@ en:
           title: Interest Only
           tip_1: The latest regulations mean you and your lender will need to agree a repayment plan for your mortgage.
           tip_1_linktext: Read more
-          tip_1_url: /en/articles/ways-of-repaying-an-interest-only-mortgage
+          tip_1_url: /en/homes/buying-a-home/help-with-mortgages/ways-of-repaying-an-interest-only-mortgage
           hidden_title: Your interest only repayments will be
       tips:
         hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
@@ -59,34 +59,34 @@ en:
         tip_1:
           heading: Choose the right type of mortgage and consider getting an adviser
           info_html: "Mortgage advice-should you get a mortgage advisor? <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
         tip_2:
           heading: Increase your deposit
           info_html: How to set a saving goal
-          url: "https://www.moneyadviceservice.org.uk/en/articles/how-to-set-a-savings-goal"
+          url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/help-meeting-savings-goals/how-to-set-a-savings-goal"
         tip_3:
           heading: "Are you eligible for an affordable housing scheme?"
           info_html: "Government scheme for first time home buyers and existing home owners <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Learn about LTV
           tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
           more:
             copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(opens in a new window)</span>"
-            url: "https://www.moneyadviceservice.org.uk/en/articles/choosing-a-mortgage-shop-around-or-get-advice"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
         find_out_more:
           title: Find out more
           tips:
             - copy_html: "Mortgage comparison websites <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyadviceservice.org.uk/en/articles/price-comparison-sites-guide#choosing-a-price-comparison-website"
+              url: "https://www.moneyhelper.org.uk/en/articles/price-comparison-sites-guide#choosing-a-price-comparison-website"
             - copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyadviceservice.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+              url: "https://www.moneyhelper.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
             - copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyadviceservice.org.uk/en/articles/help-to-buy-homebuy-and-other-housing-schemes"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
             - copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-interest-rate-options"
+              url: "https://www.moneyhelper.org.uk/en/articles/mortgage-interest-rate-options"
             - copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+              url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
         have_you_tried:
           title: 'Have you tried?'
           stamp_duty: "Stamp Duty calculator"

@@ -13,12 +13,12 @@ module MortgageCalculator
     ].freeze
 
     HIGHER_BANDS = [
-      { threshold: 180_000, rate: 3 },
-      { threshold: 250_000, rate: 6.5 },
-      { threshold: 400_000, rate: 8 },
-      { threshold: 750_000, rate: 10.5 },
-      { threshold: 1_500_000, rate: 13 },
-      { threshold: nil, rate: 15 }
+      { threshold: 180_000, rate: 4 },
+      { threshold: 250_000, rate: 7.5 },
+      { threshold: 400_000, rate: 9 },
+      { threshold: 750_000, rate: 11.5 },
+      { threshold: 1_500_000, rate: 14 },
+      { threshold: nil, rate: 16 }
     ].freeze
 
     SECOND_HOME_ADDITIONAL_TAX = 3
