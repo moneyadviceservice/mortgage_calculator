@@ -436,6 +436,8 @@ h2, .heading-medium {
     }
 }
 
+
+
 .stamp-duty__info-column {
     border: none;
     border-radius: 0;
@@ -550,7 +552,7 @@ h4.mortgagecalc__heading {
                 font-style: normal;
                 height: 40px;
                 color: $color-dark-blue-secondary;
-                width: 275px;
+                //width: 275px;
                 
                 &:focus {
                     background:$color-yellow-secondary!important; /* necessary I'm afraid */
@@ -604,10 +606,6 @@ h4.mortgagecalc__heading {
             }
         }
 
-        div.popup-tip__container {
-            top: 16px !important;
-            left: -21.9375px !important
-        }
 
         // right hand chevron inside circle
         .elsewhere__arrow {
