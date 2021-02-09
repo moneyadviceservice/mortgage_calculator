@@ -8,7 +8,8 @@ en:
     tooltip_hide: hide help
     tool_name: "land-and-buildings-transaction-tax-calculator"
     heading: "Land and Buildings Transaction Tax (LBTT) calculator"
-    subtitle: Land and Buildings Transaction Tax (LBTT) is a charge on land transactions in Scotland. Land transactions must be notified to Revenue Scotland unless the chargeable consideration is less than £40,000 or the transaction is otherwise exempt. For example, transactions in connection with a court order relating to divorce or dissolution of civil partnership. An Additional Dwelling Supplement (ADS), may be due on the purchase of an additional property. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due.
+    subtitle_paras: 
+      - Land and Buildings Transaction Tax (LBTT) is a charge on land transactions in Scotland. Land transactions must be notified to Revenue Scotland unless the chargeable consideration is less than £40,000 or the transaction is otherwise exempt. For example, transactions in connection with a court order relating to divorce or dissolution of civil partnership. An Additional Dwelling Supplement (ADS), may be due on the purchase of an additional property. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due.
     heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
     title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
     next: Next
