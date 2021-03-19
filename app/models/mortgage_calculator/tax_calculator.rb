@@ -50,6 +50,17 @@ module MortgageCalculator
       false
     end
 
+    def phase
+      case
+      when Date.today < Date.new(2021, 7, 1)
+        :phase_1
+      when Date.today < Date.new(2021, 10, 1)
+        :phase_2
+      else
+        :phase_3
+      end
+    end
+
     def percentage_tax
       result = (tax_due / price) * 100
       result.nan? ? 0 : result

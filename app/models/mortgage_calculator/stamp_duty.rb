@@ -10,14 +10,25 @@ module MortgageCalculator
       { threshold: 500_001, rate: 5 },
     ].freeze
 
-    STANDARD_BANDS = [
-      { threshold: 500_000, rate: 0 },
-      { threshold: 925_000, rate: 5 },
-      { threshold: 1_500_000, rate: 10 },
-      { threshold: nil, rate: 12 }
-    ].freeze
+    STANDARD_BANDS = {:phase_1 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 925_000, rate: 5 },
+       { threshold: 1_500_000, rate: 10 },
+       { threshold: nil, rate: 12 }],
+      :phase_2 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 925_000, rate: 5 },
+       { threshold: 1_500_000, rate: 10 },
+       { threshold: nil, rate: 12 }],
+      :phase_3 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 925_000, rate: 5 },
+       { threshold: 1_500_000, rate: 10 },
+       { threshold: nil, rate: 12 }]
+     }.freeze
 
     FIRST_TIME_BUYER_THRESHOLD = 500_000
+    # NB second home additional tax is now per band so this needs altering
     SECOND_HOME_ADDITIONAL_TAX = 3
 
     def first_time_ineligible?
@@ -31,7 +42,7 @@ module MortgageCalculator
     protected
 
     def bands_to_use
-      first_time_rate? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS
+      first_time_rate? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS[phase]
     end
 
     private
