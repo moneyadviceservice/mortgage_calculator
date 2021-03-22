@@ -1,6 +1,7 @@
 module MortgageCalculator
   class PropertyTaxCalculatorController < MortgageCalculator::ApplicationController
     before_action :set_rates
+    include PhaseHelper
 
     def resource
       @resource ||= calculator.new
@@ -14,7 +15,7 @@ module MortgageCalculator
     end
 
     def bands_to_use
-      calculator.banding_for(calculator::STANDARD_BANDS)
+      calculator.banding_for(calculator::STANDARD_BANDS[phase])
     end
     helper_method :bands_to_use
 
@@ -22,7 +23,7 @@ module MortgageCalculator
 
     def set_rates
       @rates = calculator.banding_for(
-        calculator::STANDARD_BANDS
+        calculator::STANDARD_BANDS[phase]
       )
       @ftb_rates = calculator.banding_for(
         calculator::FIRST_TIME_BUYER_BANDS

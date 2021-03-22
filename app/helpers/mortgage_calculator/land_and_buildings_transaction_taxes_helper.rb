@@ -1,5 +1,7 @@
 module MortgageCalculator
   module LandAndBuildingsTransactionTaxesHelper
+    include PhaseHelper
+
     SAMPLE_JOURNEYS = [145_000, 155_000, 175_000, 250_000, 325_500, 750_500].freeze
 
     def band(num1, num2)
@@ -27,7 +29,7 @@ module MortgageCalculator
     def calculator_config_json
       {
         tool: 'lbtt',
-        standard: calculator::STANDARD_BANDS,
+        standard: calculator::STANDARD_BANDS[phase],
         ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD,
@@ -79,7 +81,7 @@ module MortgageCalculator
     end
 
     def formatted_price(num)
-      threshold = calculator::STANDARD_BANDS.first[:threshold]
+      threshold = calculator::STANDARD_BANDS[phase].first[:threshold]
 
       num <= threshold ? minimum_band(threshold) : formatted_currency(num)
     end

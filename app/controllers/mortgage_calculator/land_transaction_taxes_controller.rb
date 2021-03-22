@@ -1,5 +1,6 @@
 module MortgageCalculator
   class LandTransactionTaxesController < MortgageCalculator::ApplicationController
+    include PhaseHelper
     CALCULATOR = MortgageCalculator::LandTransactionTax
 
     def show
@@ -17,12 +18,12 @@ module MortgageCalculator
     end
 
     def standard_rates
-      CALCULATOR.banding_for(CALCULATOR::STANDARD_BANDS)
+      CALCULATOR.banding_for(CALCULATOR::STANDARD_BANDS[phase])
     end
     helper_method :standard_rates
 
     def higher_rates
-      CALCULATOR.banding_for(CALCULATOR::HIGHER_BANDS)
+      CALCULATOR.banding_for(CALCULATOR::HIGHER_BANDS[phase])
     end
     helper_method :higher_rates
 

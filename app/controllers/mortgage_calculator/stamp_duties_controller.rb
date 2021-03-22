@@ -1,5 +1,7 @@
 module MortgageCalculator
   class StampDutiesController < ::MortgageCalculator::PropertyTaxCalculatorController
+    include PhaseHelper
+
     def calculator
       MortgageCalculator::StampDuty
     end

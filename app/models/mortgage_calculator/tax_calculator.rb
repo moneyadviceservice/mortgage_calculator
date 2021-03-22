@@ -5,6 +5,7 @@ module MortgageCalculator
     include ActiveModel::Conversion
     include CurrencyInput::Macro
     include ActionView::Helpers::NumberHelper
+    include PhaseHelper
 
     attr_reader :price
     attr_accessor :buyer_type
@@ -48,17 +49,6 @@ module MortgageCalculator
 
     def persisted?
       false
-    end
-
-    def phase
-      case
-      when Date.today < Date.new(2021, 7, 1)
-        :phase_1
-      when Date.today < Date.new(2021, 10, 1)
-        :phase_2
-      else
-        :phase_3
-      end
     end
 
     def percentage_tax

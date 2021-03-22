@@ -1,5 +1,7 @@
 module MortgageCalculator
   module StampDutiesHelper
+    include PhaseHelper
+
     def band(num1, num2)
       num1 = num1.ceil
       return maximum_band(num1 - 1) if num2.nil?
@@ -34,7 +36,7 @@ module MortgageCalculator
       calculator = MortgageCalculator::StampDuty
       {
         tool: 'stampDuty',
-        standard: calculator::STANDARD_BANDS,
+        standard: calculator::STANDARD_BANDS[phase],
         ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD,

@@ -1,5 +1,7 @@
 module MortgageCalculator
   module LandTransactionTaxesHelper
+    include PhaseHelper
+
     def band(num1, num2)
       num1 = num1.ceil
       return maximum_band(num1 - 1) if num2.nil?
@@ -20,8 +22,8 @@ module MortgageCalculator
       calculator = MortgageCalculator::LandTransactionTax
       {
         tool: 'ltt',
-        standard: calculator::STANDARD_BANDS,
-        higher: calculator::HIGHER_BANDS,
+        standard: calculator::STANDARD_BANDS[phase],
+        higher: calculator::HIGHER_BANDS[phase],
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD
       }.to_json
