@@ -4,6 +4,8 @@ module MortgageCalculator
       'land_transaction_tax.activemodel'
     end
 
+    # WALES
+
     STANDARD_BANDS = {:phase_1 =>
       [{ threshold: 250_000, rate: 0 },
        { threshold: 400_000, rate: 5 },

@@ -26,7 +26,7 @@ module MortgageCalculator
         calculator::STANDARD_BANDS[phase]
       )
       @ftb_rates = calculator.banding_for(
-        calculator::FIRST_TIME_BUYER_BANDS
+        calculator::FIRST_TIME_BUYER_BANDS[phase]
       )
     end
 

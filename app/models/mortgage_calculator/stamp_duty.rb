@@ -5,10 +5,18 @@ module MortgageCalculator
       'stamp_duty.activemodel'
     end
 
-    FIRST_TIME_BUYER_BANDS = [
-      { threshold: 500_000, rate: 0 },
-      { threshold: 500_001, rate: 5 },
-    ].freeze
+    # England and Northern Ireland
+
+    FIRST_TIME_BUYER_BANDS = {:phase_1 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 500_001, rate: 5 }],
+      :phase_2 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 500_001, rate: 5 }],
+      :phase_3 =>
+      [{ threshold: 500_000, rate: 0 },
+       { threshold: 500_001, rate: 5 }]
+    }.freeze
 
     STANDARD_BANDS = {:phase_1 =>
       [{ threshold: 500_000, rate: 0 },
@@ -28,7 +36,6 @@ module MortgageCalculator
      }.freeze
 
     FIRST_TIME_BUYER_THRESHOLD = 500_000
-    # NB second home additional tax is now per band so this needs altering
     SECOND_HOME_ADDITIONAL_TAX = 3
 
     def first_time_ineligible?
@@ -42,7 +49,7 @@ module MortgageCalculator
     protected
 
     def bands_to_use
-      first_time_rate? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS[phase]
+      first_time_rate? ? FIRST_TIME_BUYER_BANDS[phase] : STANDARD_BANDS[phase]
     end
 
     private
