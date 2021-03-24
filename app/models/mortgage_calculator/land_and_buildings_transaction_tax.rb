@@ -7,34 +7,40 @@ module MortgageCalculator
     # SCOTLAND
 
     FIRST_TIME_BUYER_BANDS = {:phase_1 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 175_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }],
       :phase_2 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 175_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }],
       :phase_3 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 175_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }]
     }.freeze
 
     STANDARD_BANDS = {:phase_1 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 145_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }],
       :phase_2 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 145_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }],
       :phase_3 =>
-      [{ threshold: 250_000, rate: 0 },
+      [{ threshold: 145_000, rate: 0 },
+       { threshold: 250_000, rate: 2 },
        { threshold: 325_000, rate: 5 },
        { threshold: 750_000, rate: 10 },
        { threshold: nil, rate: 12 }]
