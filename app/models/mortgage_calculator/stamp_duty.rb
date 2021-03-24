@@ -1,5 +1,4 @@
 module MortgageCalculator
-  # Stamp Duty Calculation for England/NI
   class StampDuty < TaxCalculator
     def self.i18n_scope
       'stamp_duty.activemodel'
