@@ -1,7 +1,7 @@
 module MortgageCalculator
   class PropertyTaxCalculatorController < MortgageCalculator::ApplicationController
-    before_action :set_rates
     include PhaseHelper
+    before_action :set_rates
 
     def resource
       @resource ||= calculator.new
@@ -18,6 +18,12 @@ module MortgageCalculator
       calculator.banding_for(calculator::STANDARD_BANDS[phase])
     end
     helper_method :bands_to_use
+
+    def completion_date
+      return @resource.try(:completion_date) unless @resource.try(:completion_date).nil?
+      return calculator_params[:completion_date] unless calculator_params[:completion_date].blank?
+      Date.today
+    end
 
     private
 
@@ -38,7 +44,7 @@ module MortgageCalculator
     def calculator_params
       params
         .require(calculator_params_key)
-        .permit(:price, :buyer_type)
+        .permit(:price, :buyer_type, :completion_date)
         .symbolize_keys
     end
 

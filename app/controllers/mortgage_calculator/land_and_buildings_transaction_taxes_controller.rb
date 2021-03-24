@@ -1,7 +1,5 @@
 module MortgageCalculator
   class LandAndBuildingsTransactionTaxesController < ::MortgageCalculator::PropertyTaxCalculatorController
-    include PhaseHelper
-
     def calculator
       MortgageCalculator::LandAndBuildingsTransactionTax
     end

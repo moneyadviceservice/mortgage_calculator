@@ -28,6 +28,10 @@
   <% end %>
 
   <div class="stamp-duty__form form__item">
+    <%= f.date_select :completion_date %>
+  </div>
+
+  <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
     <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
 

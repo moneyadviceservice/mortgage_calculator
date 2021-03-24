@@ -32,6 +32,10 @@ module MortgageCalculator
       resource.first_time_ineligible?
     end
 
+    def completion_date
+      resource.completion_date
+    end
+
     def calculator_config_json
       calculator = MortgageCalculator::StampDuty
       {
