@@ -8,11 +8,7 @@ module MortgageCalculator
     end
 
     def create
-      @ltt = CALCULATOR.new(
-        params.require(:land_transaction_tax)
-          .permit(:price, :buyer_type)
-          .symbolize_keys
-      )
+      @ltt = CALCULATOR.new(calculator_params)
 
       render :show unless @ltt.valid?
     end
@@ -34,6 +30,12 @@ module MortgageCalculator
 
     private
 
+    def completion_date
+      return @ltt.try(:completion_date) if @ltt.completion_date.present?
+      #return calculator_params[:completion_date] if calculator_params[:completion_date].present?
+      Date.today
+    end
+
     def category_id
       'buying-a-home'
     end
@@ -41,6 +43,12 @@ module MortgageCalculator
 
     def tool_name
       I18n.translate('land_transaction_tax.tool_name')
+    end
+
+    def calculator_params
+      params.require(:land_transaction_tax)
+          .permit(:price, :buyer_type, :completion_date)
+          .symbolize_keys
     end
   end
 end

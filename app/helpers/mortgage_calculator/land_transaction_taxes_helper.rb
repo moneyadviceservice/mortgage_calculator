@@ -18,6 +18,10 @@ module MortgageCalculator
       )
     end
 
+    def completion_date
+      @ltt.completion_date
+    end
+
     def calculator_config_json
       calculator = MortgageCalculator::LandTransactionTax
       {

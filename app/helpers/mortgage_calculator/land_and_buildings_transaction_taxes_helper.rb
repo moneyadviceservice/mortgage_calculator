@@ -26,6 +26,10 @@ module MortgageCalculator
       )
     end
 
+    def completion_date
+      resource.completion_date
+    end
+
     def calculator_config_json
       {
         tool: 'lbtt',

@@ -8,6 +8,7 @@ Background:
 
 Scenario Outline: stamp duty for next home
   When I enter a house price of <price>
+  And I enter a completion date of <completion date>
   And I am a next home buyer
   And I click next
   Then I see the title for the results page
@@ -15,39 +16,40 @@ Scenario Outline: stamp duty for next home
   And I see the effective tax rate is "<effective tax>"
 
 Examples:
-  | price   | duty    | effective tax |
-  | 39000   | 0       | 0.00%         |
-  | 40000   | 0       | 0.00%         |
-  | 120000  | 0       | 0.00%         |
-  | 126000  | 0       | 0.00%         |
-  | 260000  | 0       | 0.00%         |
-  | 300019  | 0       | 0.00%         |
-  | 350000  | 0       | 0.00%         |
-  | 450000  | 0       | 0.00%         |
-  | 550000  | 2,500   | 0.45%         |
-  | 650000  | 7,500   | 1.15%         |
+  | price   | duty    | effective tax | completion date |
+  | 39000   | 0       | 0.00%         | 2021-4-21       |
+  | 40000   | 0       | 0.00%         | 2021-4-21       |
+  | 120000  | 0       | 0.00%         | 2021-4-21       |
+  | 126000  | 0       | 0.00%         | 2021-4-21       |
+  | 260000  | 0       | 0.00%         | 2021-4-21       |
+  | 300019  | 0       | 0.00%         | 2021-4-21       |
+  | 350000  | 0       | 0.00%         | 2021-4-21       |
+  | 450000  | 0       | 0.00%         | 2021-4-21       |
+  | 550000  | 2,500   | 0.45%         | 2021-4-21       |
+  | 650000  | 7,500   | 1.15%         | 2021-4-21       |
 
 @javascript
 Scenario Outline: stamp duty for next home
   When I enter a house price of <price>
+  And I enter a completion date of <completion date>
   And I am a next home buyer
   And I click next
   Then I see the title for the results page
   Then I see the stamp duty I will have to pay is "£<duty>"
 
 Examples:
-  | price   | duty   |
-  | 39000   | 0      |
-  | 40000   | 0      |
-  | 120000  | 0      |
-  | 126000  | 0      |
-  | 260000  | 0      |
-  | 350000  | 0      |
-  | 400012  | 0      |
-  | 450000  | 0      |
-  | 550000  | 2,500  |
-  | 750000  | 12,500 |
-  | 1500000 | 78,750 |
+  | price   | duty   | completion date |
+  | 39000   | 0      | 2021-4-21       |
+  | 40000   | 0      | 2021-4-21       |
+  | 120000  | 0      | 2021-4-21       |
+  | 126000  | 0      | 2021-4-21       |
+  | 260000  | 0      | 2021-4-21       |
+  | 350000  | 0      | 2021-4-21       |
+  | 400012  | 0      | 2021-4-21       |
+  | 450000  | 0      | 2021-4-21       |
+  | 550000  | 2,500  | 2021-4-21       |
+  | 750000  | 12,500 | 2021-4-21       |
+  | 1500000 | 78,750 | 2021-4-21       |
 
 Scenario: I recalculate for next home
   When I enter a house price of 550000

@@ -7,7 +7,9 @@ module UI
 
       elements :h1, "h1"
       element :h2, "h2"
+
       element :buyer_type, "form.step_one select[name='buyer_type']"
+      element :buyer_type_select, "#new_stamp_duty > label"
       element :property_price, "form.step_one input[name='stamp_duty[price]']"
       element :property_price_step_two, "form.step_two input[name='stamp_duty[price]']"
 
@@ -22,6 +24,8 @@ module UI
       element :ftb_explanation, ".stamp-duty__explanation-firsttimebuyer.ng-hide"
       element :next_home_explanation, ".stamp-duty__explanation-nexthome.ng-hide"
       element :ftb_conditional, ".stamp-duty__FTB_conditional.ng-hide"
+
+      element :completion_date, "form.step_one stamp-duty__completion-date"
     end
 
     class WelshStampDuty < StampDuty
