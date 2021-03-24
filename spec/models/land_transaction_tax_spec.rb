@@ -62,6 +62,32 @@ describe MortgageCalculator::LandTransactionTax do
     { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
     { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
 
+
+    { price: 0,       buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
+    { price: 39_000,  buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
+    { price: 40_000,  buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
+    { price: 145_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 5_800,  percentage_tax: 4,   precision: 0, total_due: 150_800 },
+    { price: 185_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 7_575,  percentage_tax: 4.094594594594595, precision: 0.1,  total_due: 192_575 },
+    { price: 275_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 14_700, percentage_tax: 5.345454545454545, precision: 0.01, total_due: 289_700 },
+    { price: 300_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 16_950, percentage_tax: 5.64,              precision: 0.1,  total_due: 316_950 },
+    { price: 490_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 36_300, percentage_tax: 7.408163265306122, precision: 0.01, total_due: 526_300 },
+    { price: 510_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 38_600, percentage_tax: 7.568627450980392, precision: 0.01, total_due: 548_600 },
+    { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
+    { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_2, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
+
+    { price: 0,       buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
+    { price: 39_000,  buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
+    { price: 40_000,  buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
+    { price: 145_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 5_800,  percentage_tax: 4,   precision: 0, total_due: 150_800 },
+    { price: 185_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 7_575,  percentage_tax: 4.094594594594595, precision: 0.1,  total_due: 192_575 },
+    { price: 275_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 14_700, percentage_tax: 5.345454545454545, precision: 0.01, total_due: 289_700 },
+    { price: 300_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 16_950, percentage_tax: 5.64,              precision: 0.1,  total_due: 316_950 },
+    { price: 490_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 36_300, percentage_tax: 7.408163265306122, precision: 0.01, total_due: 526_300 },
+    { price: 510_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 38_600, percentage_tax: 7.568627450980392, precision: 0.01, total_due: 548_600 },
+    { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
+    { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_3, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
+
+
     { price: 0,       buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
     { price: 39_000,  buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
     { price: 40_000,  buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 40_000 },
