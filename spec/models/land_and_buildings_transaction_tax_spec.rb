@@ -86,7 +86,7 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
   describe 'calculation scenarios' do
     scenarios.each do |scenario|
-      context_name = case scenario[:price]
+      context_name = case scenario[:buyer_type]
                       when 'isFTB'
                         'and is first time buy'
                       when 'isNextHome'
