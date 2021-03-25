@@ -26,6 +26,7 @@ module MortgageCalculator
       calculator = MortgageCalculator::LandTransactionTax
       {
         tool: 'ltt',
+        completion_date: completion_date,
         standard: calculator::STANDARD_BANDS[phase],
         higher: calculator::HIGHER_BANDS[phase],
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,

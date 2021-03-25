@@ -32,7 +32,6 @@ module MortgageCalculator
 
     def completion_date
       return @ltt.try(:completion_date) if @ltt.completion_date.present?
-      #return calculator_params[:completion_date] if calculator_params[:completion_date].present?
       Date.today
     end
 
@@ -46,9 +45,16 @@ module MortgageCalculator
     end
 
     def calculator_params
-      params.require(:land_transaction_tax)
+      cp = params.require(:land_transaction_tax)
           .permit(:price, :buyer_type, :completion_date)
           .symbolize_keys
+
+      y = cp[:"completion_date(1i)"].to_i
+      m = cp[:"completion_date(2i)"].to_i
+      d = cp[:"completion_date(3i)"].to_i
+      cp.merge!(completion_date: Date.new(y,m,d))
+
+      return cp.except(:"completion_date(1i)", :"completion_date(2i)", :"completion_date(3i)" )
     end
   end
 end

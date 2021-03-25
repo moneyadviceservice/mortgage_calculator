@@ -25,7 +25,11 @@ module UI
       element :next_home_explanation, ".stamp-duty__explanation-nexthome.ng-hide"
       element :ftb_conditional, ".stamp-duty__FTB_conditional.ng-hide"
 
-      element :completion_date, "form.step_one stamp-duty__completion-date"
+      element :completion_date_year, "#stamp_duty_completion_date_1i"
+      element :completion_date_month, "#stamp_duty_completion_date_2i"
+      element :completion_date_day, "#stamp_duty_completion_date_3i"
+
+
     end
 
     class WelshStampDuty < StampDuty
