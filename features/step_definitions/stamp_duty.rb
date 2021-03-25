@@ -30,6 +30,10 @@ When(/^I enter a house price of (\d+)$/) do |amount|
   @stamp_duty.property_price.set amount
 end
 
+And(/^I enter a completion date of (\d+)$/) do |completion_date|
+  @stamp_duty.completion_date.set completion_date
+end
+
 When(/^I click next$/) do
   @stamp_duty.next.click
 end
@@ -55,23 +59,23 @@ Then(/^they see "(.*?)"$/) do |content|
 end
 
 Given(/^I am a first time buyer$/) do
-  @stamp_duty.select('a first-time buyer', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('a first-time buyer', from: @buyer_type)
 end
 
 Given(/^I am a next home buyer$/) do
-  @stamp_duty.select('buying my first or my next home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying my first or my next home', from: @buyer_type)
 end
 
 Given("I am an additional or buy-to-let property buyer") do
-  @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional or buy-to-let property', from: @buyer_type)
 end
 
 Given("I am buying an additional property or second home") do
-  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional property or second home', from: @buyer_type)
 end
 
 And(/^I select to calculate for a second home$/) do
-  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional property or second home', from: @buyer_type)
 end
 
 When(/^I enter my house price$/) do

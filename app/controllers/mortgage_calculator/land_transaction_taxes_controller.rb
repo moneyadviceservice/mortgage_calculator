@@ -31,8 +31,8 @@ module MortgageCalculator
     private
 
     def completion_date
-      return @ltt.try(:completion_date) if @resource.completion_date.present?
-      return calculator_params[:completion_date] if calculator_params[:completion_date].present?
+      return @ltt.try(:completion_date) if @ltt.completion_date.present?
+      #return calculator_params[:completion_date] if calculator_params[:completion_date].present?
       Date.today
     end
 

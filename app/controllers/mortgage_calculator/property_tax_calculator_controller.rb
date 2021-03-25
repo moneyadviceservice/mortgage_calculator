@@ -21,7 +21,7 @@ module MortgageCalculator
 
     def completion_date
       return @resource.try(:completion_date) unless @resource.try(:completion_date).nil?
-      return calculator_params[:completion_date] unless calculator_params[:completion_date].blank?
+      #return calculator_params[:completion_date] unless calculator_params[:completion_date].blank?
       Date.today
     end
 
