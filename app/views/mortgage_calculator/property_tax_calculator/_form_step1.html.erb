@@ -29,7 +29,11 @@
   <% end %>
 
   <div class="stamp-duty__form form__item">
-    <%= f.date_select :completion_date, class: "stamp-duty__completion-date" %>
+    <%= f.date_select :completion_date,
+                      :value => resource.price_formatted,
+                      "ng-model" => "stampDuty.completionDate",
+
+                      class: "stamp-duty__completion-date" %>
   </div>
 
   <div class="stamp-duty__form form__item">

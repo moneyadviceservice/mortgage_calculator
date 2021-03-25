@@ -8,6 +8,7 @@ Feature: Land and Buildings Transaction Tax Calculator
 
   Scenario Outline: taxes for next home
     When I enter a house price of <price>
+    And I enter a completion date of "2021-04-21"
     And I am a next home buyer
     And I click next
     Then I see the call out box with everything I need to know
@@ -15,16 +16,17 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the effective tax rate is "<effective tax>"
 
   Examples:
-    | price  | duty   | effective tax |
-    | 39000  | 0      | 0.00%         |
-    | 40000  | 0      | 0.00%         |
-    | 120000 | 0      | 0.00%         |
-    | 260000 | 500    | 0.19%         |
-    | 300019 | 2,500  | 0.83%         |
-    | 350000 | 6,250  | 1.79%         |
-    | 450000 | 16,250 | 3.61%         |
-    | 550000 | 26,250 | 4.77%         |
-    | 901000 | 64,370 | 7.14%         |
+    | price   | duty    | effective tax |
+    | 39000   | 0       | 0.00%         |
+    | 40000   | 0       | 0.00%         |
+    | 120000  | 0       | 0.00%         |
+    | 260000  | 2,600   | 1.00%         |
+    | 300019  | 4,600   | 1.53%         |
+    | 350000  | 8,350   | 2.39%         |
+    | 450000  | 18,350  | 4.08%         |
+    | 550000  | 28,350  | 5.15%         |
+    | 901000  | 66,470  | 7.38%         |
+
 
   @javascript
   Scenario Outline: tax for next home
@@ -35,19 +37,20 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£<duty>"
 
   Examples:
-    | price  | duty   | effective tax |
-    | 39000  | 0      | 0.00%         |
-    | 40000  | 0      | 0.00%         |
-    | 120000 | 0      | 0.00%         |
-    | 260000 | 500    | 0.19%         |
-    | 300019 | 2,500  | 0.83%         |
-    | 350000 | 6,250  | 1.79%         |
-    | 450000 | 16,250 | 3.61%         |
-    | 550000 | 26,250 | 4.77%         |
-    | 901000 | 64,370 | 7.14%         |
+    | price   | duty   | effective tax |
+    | 39000   | 0      | 0.00%         |
+    | 40000   | 0      | 0.00%         |
+    | 120000  | 0      | 0.00%         |
+    | 260000  | 2,600   | 1.00%         |
+    | 300019  | 4,600   | 1.53%         |
+    | 350000  | 8,350   | 2.39%         |
+    | 450000  | 18,350  | 4.08%         |
+    | 550000  | 28,350  | 5.15%         |
+    | 901000  | 66,470  | 7.38%         |
 
   Scenario: I recalculate for next home
     When I enter a house price of 280000
+    And I enter a completion date of "2021-04-21"
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£1,500"
@@ -59,6 +62,7 @@ Feature: Land and Buildings Transaction Tax Calculator
   @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 280000
+    And I enter a completion date of "2021-04-21"
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£1,500"
@@ -87,6 +91,7 @@ Feature: Land and Buildings Transaction Tax Calculator
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
+    And I enter a completion date of "2021-04-21"
     And I click next
     Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"

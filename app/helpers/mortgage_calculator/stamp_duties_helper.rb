@@ -40,6 +40,7 @@ module MortgageCalculator
       calculator = MortgageCalculator::StampDuty
       {
         tool: 'stampDuty',
+        completion_date: completion_date,
         standard: calculator::STANDARD_BANDS[phase],
         ftb: calculator::FIRST_TIME_BUYER_BANDS[phase],
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,

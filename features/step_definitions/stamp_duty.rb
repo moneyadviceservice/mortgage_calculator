@@ -30,8 +30,10 @@ When(/^I enter a house price of (\d+)$/) do |amount|
   @stamp_duty.property_price.set amount
 end
 
-And(/^I enter a completion date of (\d+)$/) do |completion_date|
-  @stamp_duty.completion_date.set completion_date
+And("I enter a completion date of {int}{int}{int}") do |year, month, day|
+  @stamp_duty.completion_date_year.set year
+  @stamp_duty.completion_date_month.set month
+  @stamp_duty.completion_date_day.set day
 end
 
 When(/^I click next$/) do
@@ -39,6 +41,7 @@ When(/^I click next$/) do
 end
 
 Then(/^I see the title for the results page$/) do
+  # binding.pry
   expect(@stamp_duty.h1.first).to have_content('Stamp Duty Calculator - Your Results')
 end
 

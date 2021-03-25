@@ -21,7 +21,6 @@ module MortgageCalculator
 
     def completion_date
       return @resource.try(:completion_date) unless @resource.try(:completion_date).nil?
-      #return calculator_params[:completion_date] unless calculator_params[:completion_date].blank?
       Date.today
     end
 
@@ -42,10 +41,16 @@ module MortgageCalculator
     helper_method :category_id
 
     def calculator_params
-      params
-        .require(calculator_params_key)
-        .permit(:price, :buyer_type, :completion_date)
-        .symbolize_keys
+      cp = params.require(:land_transaction_tax)
+          .permit(:price, :buyer_type, :completion_date)
+          .symbolize_keys
+
+      y = cp[:"completion_date(1i)"].to_i
+      m = cp[:"completion_date(2i)"].to_i
+      d = cp[:"completion_date(3i)"].to_i
+      cp.merge!(completion_date: Date.new(y,m,d))
+
+      return cp.except(:"completion_date(1i)", :"completion_date(2i)", :"completion_date(3i)" )
     end
 
     def calculator_params_key
