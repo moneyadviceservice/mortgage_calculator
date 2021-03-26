@@ -13,7 +13,6 @@ Scenario Outline: stamp duty for next home
   And I click next
   Then I see the title for the results page
   And I see the stamp duty I will have to pay is "£<duty>"
-  And I see the effective tax rate is "<effective tax>"
 
 Examples:
   | price   | duty    | completion date |
@@ -57,7 +56,7 @@ Examples:
   | 988882  | 42,638  | 2021-10-21      |
   | 2100000 | 165,750 | 2021-10-21      |
 
-@javascript
+@wip @javascript
 Scenario Outline: stamp duty for next home
   When I enter a house price of <price>
   And I enter a completion date of <completion date>
@@ -108,6 +107,7 @@ Examples:
   | 988882  | 42,638  | 2021-10-21      |
   | 2100000 | 165,750 | 2021-10-21      |
 
+@wip
 Scenario: I recalculate for next home
   When I enter a house price of 550000
   And I am a next home buyer
@@ -117,7 +117,7 @@ Scenario: I recalculate for next home
   And I click next again
   And I see the stamp duty I will have to pay is "£0"
 
-@javascript
+@wip @javascript
 Scenario: I recalculate for next home
   When I enter a house price of 550000
   And I am a next home buyer

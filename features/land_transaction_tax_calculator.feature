@@ -8,6 +8,7 @@ Feature: Land Transaction Tax Calculator
 
   Scenario Outline: taxes for next home
     When I enter a house price of <price>
+    And I enter a completion date
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
@@ -24,9 +25,10 @@ Feature: Land Transaction Tax Calculator
     | 800000  | 38,750     | 4.84%         |
     | 2000000 | 168,750    | 8.44%         |
 
-  @javascript
+  @wip @javascript
   Scenario Outline: tax for next home
     When I enter a house price of <price>
+    And I enter a completion date
     And I am a next home buyer
     And I click next
     Then I see the stamp duty I will have to pay is "£<duty>"
@@ -52,7 +54,7 @@ Feature: Land Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£9,450"
     And I see the effective tax rate is "2.22%"
 
-  @javascript
+  @wip @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 260000
     And I am a next home buyer
@@ -63,8 +65,9 @@ Feature: Land Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£4,166.65"
 
   Scenario Outline: Buy to let buyer
-    Given I am buying an additional property or second home 
+    Given I am buying an additional property or second home
     When I enter a house price of <price>
+    And I enter a completion date
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
     And I see the effective tax rate is "<effective tax>"
@@ -79,10 +82,11 @@ Feature: Land Transaction Tax Calculator
       | 900000  | 87,200   | 9.69%         |
       | 1800000 | 219,200  | 12.18%        |
 
-  @javascript
+  @wip @javascript
   Scenario Outline: Buy to let buyer
-    Given I am buying an additional property or second home 
+    Given I am buying an additional property or second home
     When I enter a house price of <price>
+    And I enter a completion date
     And I click next
     And I see the stamp duty I will have to pay is "£<duty>"
 

@@ -38,6 +38,13 @@
 
     </div>
     <%= f.hidden_field :buyer_type %>
+    <div class="stamp-duty__form form__item">
+      <%= f.date_select :completion_date,
+                      :value => resource.completion_date,
+                      "ng-model" => "stampDuty.completionDate",
+
+                      class: "stamp-duty__completion-date" %>
+    </div>
 
     <div class="slider"
           ui-slider
@@ -80,8 +87,8 @@
     <span class="callout__icon" aria-hidden="true">?</span>
     <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.title") %></h2>
     <p class="stamp-duty__info-tip">
-      <%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.tip_1", 
-        url_online_portal: t("#{i18n_locale_namespace}.next_steps.learn_more.url_online_portal"), 
+      <%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.tip_1",
+        url_online_portal: t("#{i18n_locale_namespace}.next_steps.learn_more.url_online_portal"),
         url_LBTT_form: t("#{i18n_locale_namespace}.next_steps.learn_more.url_LBTT_form")
       ).html_safe %>
     </p>

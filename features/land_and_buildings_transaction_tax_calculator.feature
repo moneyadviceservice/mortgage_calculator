@@ -8,7 +8,7 @@ Feature: Land and Buildings Transaction Tax Calculator
 
   Scenario Outline: taxes for next home
     When I enter a house price of <price>
-    And I enter a completion date of "2021-04-21"
+    And I enter a completion date
     And I am a next home buyer
     And I click next
     Then I see the call out box with everything I need to know
@@ -27,8 +27,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     | 550000  | 28,350  | 5.15%         |
     | 901000  | 66,470  | 7.38%         |
 
-
-  @javascript
+  @wip @javascript
   Scenario Outline: tax for next home
     When I enter a house price of <price>
     And I am a next home buyer
@@ -50,7 +49,7 @@ Feature: Land and Buildings Transaction Tax Calculator
 
   Scenario: I recalculate for next home
     When I enter a house price of 280000
-    And I enter a completion date of "2021-04-21"
+    And I enter a completion date
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£1,500"
@@ -59,10 +58,10 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£13,850"
     And I see the effective tax rate is "3.25%"
 
-  @javascript
+  @wip @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 280000
-    And I enter a completion date of "2021-04-21"
+    And I enter a completion date
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£1,500"
@@ -73,6 +72,7 @@ Feature: Land and Buildings Transaction Tax Calculator
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
+    And I enter a completion date
     And I click next
     Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"
@@ -87,11 +87,11 @@ Feature: Land and Buildings Transaction Tax Calculator
       | 750000  | 76,250  | 10.17    |
       | 1223300 | 151,978 | 12.42    |
 
-  @javascript
+  @wip @javascript
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
-    And I enter a completion date of "2021-04-21"
+    And I enter a completion date
     And I click next
     Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"
