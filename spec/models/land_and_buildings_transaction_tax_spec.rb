@@ -49,17 +49,16 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
   end
 
   scenarios = [
-    # { price: 0,       buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
-    # { price: 39_000,  buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
-    # { price: 40_000,  buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
-    # { price: 145_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 5_800,  percentage_tax: 4,   precision: 0, total_due: 150_800 },
-    # { price: 185_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 7_400,  percentage_tax: 4,   precision: 0.01, total_due: 192_400 },
-    # { price: 275_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 12_250, percentage_tax: 4.454545454545455, precision: 0.01, total_due: 287_250 },
-    # { price: 300_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 14_500, percentage_tax: 4.833333333333333, precision: 0.01, total_due: 314_500 },
-    # { price: 490_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 39_850, percentage_tax: 8.13265306122449,  precision: 0.01, total_due: 529_850 },
-    # { price: 510_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 42_650, percentage_tax: 8.362745098039216, precision: 0.01, total_due: 552_650 },
-    # { price: 937_500, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 106_250, percentage_tax: 11.333333333333333, precision: 0.01, total_due: 1_043_750 },
-    #{ price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 292_250, percentage_tax: 13.916666666666667, precision: 0.01, total_due: 2_392_250 },
+    { price: 120_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 4800,  percentage_tax: 4.00,   precision: 0.1, total_due: 124_800 },
+    { price: 175_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 7600,  percentage_tax: 4.34,   precision: 0.1, total_due: 182_600 },
+    { price: 201_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 9160,  percentage_tax: 4.56,   precision: 0.1, total_due: 210_160 },
+    { price: 250_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 12100,  percentage_tax: 4.84,   precision: 0.1, total_due: 262_100 },
+    { price: 300_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 16600,  percentage_tax: 5.53,   precision: 0.1, total_due: 316_600 },
+    { price: 325_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 18850,  percentage_tax: 5.80,   precision: 0.1, total_due: 343_850 },
+    { price: 400_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 29350,  percentage_tax: 7.34,   precision: 0.1, total_due: 429_350 },
+    { price: 743_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 77370,  percentage_tax: 10.41,   precision: 0.1, total_due: 820_370 },
+    { price: 750_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 78350,  percentage_tax: 10.45,   precision: 0.1, total_due: 828_350 },
+    { price: 1_200_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 150350,  percentage_tax: 12.53,   precision: 0.1, total_due: 1_350_350 },
 
     { price: 39_000,  buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
     { price: 40_000,  buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
