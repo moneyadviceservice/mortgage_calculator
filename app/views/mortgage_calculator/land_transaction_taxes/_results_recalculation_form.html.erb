@@ -39,6 +39,13 @@
 
     </div>
     <%= f.hidden_field :buyer_type %>
+    <div class="stamp-duty__form form__item">
+      <%= f.date_select :completion_date,
+                        :value => ltt.completion_date,
+                        "ng-model" => "stampDuty.completionDate",
+
+                        class: "stamp-duty__completion-date" %>
+    </div>
 
     <div class="slider"
           ui-slider

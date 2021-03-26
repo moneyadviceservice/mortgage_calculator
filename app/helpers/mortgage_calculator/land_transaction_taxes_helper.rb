@@ -19,7 +19,8 @@ module MortgageCalculator
     end
 
     def completion_date
-      @ltt.completion_date
+      return @ltt.try(:completion_date) if defined? @ltt
+      Date.today
     end
 
     def calculator_config_json
