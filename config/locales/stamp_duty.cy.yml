@@ -11,7 +11,7 @@ cy:
     heading: "Cyfrifiannell treth stamp"
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
-    subtitle_paras: 
+    subtitle_paras:
       - Hyd at 1 Ebrill 2021, ni fyddwch yn talu unrhyw Dreth Tir Treth Stamp (SDLT) ar brynu'ch prif eiddo sy'n costio hyd at £500,000. Os yw dyddiad cwblhau eich pryniant tŷ ar neu ar ôl y dyddiad hwn, rydym yn argymell eich bod yn defnyddio'r <a href="https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax/#/intro" target="_blank">gyfrifiannell</a> hon i gyfrifo unrhyw atebolrwydd i dreth stamp ar eich pryniant eiddo.
       - Rydych yn talu treth wahanol os yw'ch eiddo neu'ch tir yn yr <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban" target="_blank">Alban</a> neu <a href="/cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru" target="_blank">Gymru</a>. Bydd yn rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol gwerth £40,000 neu fwy dalu cyfradd ychwanegol o dreth stamp hyd yn oed os yw'r eiddo rydych eisoes yn berchen arno dramor. Chi sy'n gyfrifol am sicrhau bod ffurflen SDLT yn cael ei hanfon at CThEM ac yn talu unrhyw dreth sy'n ddyledus cyn pen 14 diwrnod o ddyddiad y trafodiad (y dyddiad cwblhau fel arfer).
     next: "Nesaf"
@@ -52,6 +52,10 @@ cy:
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
     how_calculated: "Telir y Dreth Stamp ar wahanol gyfraddau, yn dibynnu ar y pris prynu. Er enghraifft, ni fyddai rhywun sy'n destun i Dreth Stamp sy'n prynu eiddo am £550,000 yn talu unrhyw dreth ar werth yr eiddo hyd at £500,000 a 5% o dreth ar werth yr eiddo rhwng £500,001 a £550,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am y Dreth Stamp fyddai £2,500 gan roi cyfradd dreth effeithiol o 0.45%. Mae hwn yn arbediad o £15,000 yn seiliedig ar y cyfraddau Treth Stamp a oedd ar waith cyn 8fed Gorffennaf 2020."
+    how_calculated_table_ftb_phase_2: "The table below shows the rates of stamp duty a <b>first-time buyer</b> with a completion date on or before %{date} would pay."
+    how_calculated_table_next_phase_2: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> with a completion date on or before %{date} would pay."
+    how_calculated_table_ftb_phase_3: "The table below shows the rates of stamp duty a <b>first-time buyer</b> would pay."
+    how_calculated_table_next_phase_3: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> would pay."
     how_calculated_additional: "Bydda'r sawl sy'n destun i'r cyfraddau ychwanegol o gyfraddau treth stamp yn talu 3% yn ychwanegol ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £16,500 yn ychwanegol, sy'n golygu mai cyfanswm y dreth stamp fyddai £19,000 gan roi cyfradd dreth effeithiol o 3.45%."
     how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun y cyfraddau SDLT ychwanegol"
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.

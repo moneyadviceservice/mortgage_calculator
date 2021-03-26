@@ -11,7 +11,7 @@ en:
     heading: "Stamp Duty calculator"
     heading_results: "Stamp Duty Calculator - Your Results"
     title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
-    subtitle_paras: 
+    subtitle_paras:
       - Until 1 April 2021, you will pay no Stamp Duty Land Tax (SDLT) on the purchase of your main property costing up to £500,000. If the completion date of your house purchase is on or after this date we recommend you use this <a href="https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax/#/intro" target="_blank">calculator</a> to calculate any liability to stamp duty on your property purchase.
       - You pay a different tax if your property or land is in <a href="/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland" target="_blank">Scotland</a> or <a href="/en/tools/house-buying/land-transaction-tax-calculator-wales" target="_blank">Wales</a>.  Anyone buying an additional residential property worth £40,000 or more will still have to pay an additional rate of stamp duty even if the property you already own is abroad. You are responsible for ensuring an SDLT return is sent to HMRC and pay any tax due within 14 days of the transaction date (usually the date of completion).
     next: Next
@@ -51,9 +51,13 @@ en:
       - "5% tax on the property value between £250,001 and £550,000."
     how_calculated_ftb_6: "In this case, the total amount of Stamp Duty would be £17,500, giving an effective tax rate of 3.2%."
     how_calculated_ftb_7: "These rates currently apply to England, Wales and Northern Ireland"
-    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price. For example, someone subject to Stamp Duty buying a property for £550,000 would pay no tax on the value of the property up to £500,000 and 5% tax on the property value between £500,001 and £550,000. In this case, total liability for Stamp Duty would be £2,500 giving an effective tax rate of 0.45%. This is a saving of £15,000 based on the Stamp Duty rates that were in place prior to the 8th July 2020."
-    how_calculated_additional: "Those subject to the additional rates of stamp duty rates will pay an extra 3% on top of the relevant standard rate band. In this example that would represent an extra £16,500, meaning the total stamp duty would be £19,000 giving an effective tax rate of 3.45%."
-    how_calculated_extra: "* Properties under %{amount} are not subject to the additional SDLT rates"
+    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price."
+    how_calculated_table_ftb_phase_2: "The table below shows the rates of stamp duty a <b>first-time buyer</b> with a completion date on or before %{date} would pay."
+    how_calculated_table_next_phase_2: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> with a completion date on or before %{date} would pay."
+    how_calculated_table_ftb_phase_3: "The table below shows the rates of stamp duty a <b>first-time buyer</b> would pay."
+    how_calculated_table_next_phase_3: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> would pay."
+    how_calculated_additional: "If the property is an additional property or second home there will be an extra 3% to pay on top of the relevant standard rates."
+    how_calculated_extra: "* An extra 3% is charged if property is an additional property or second home. Properties under %{amount} are not subject to the additional SDLT rate."
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
