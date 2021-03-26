@@ -53,7 +53,7 @@ Then(/^I reenter my house price with "(.*?)"$/) do |amount|
 end
 
 When(/^I click next again$/) do
-  @stamp_duty.recalculate.click if js_disabled?
+  @stamp_duty.recalculate.click
 end
 
 Then(/^they see "(.*?)"$/) do |content|
@@ -65,7 +65,7 @@ Given(/^I am a first time buyer$/) do
 end
 
 Given(/^I am a next home buyer$/) do
-  @stamp_duty.buyer_type_select.select('buying my first or my next home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying my next home', from: @buyer_type)
 end
 
 Given("I am an additional or buy-to-let property buyer") do

@@ -30,9 +30,7 @@
 
   <div class="stamp-duty__form form__item completion_date">
     <%= f.date_select :completion_date,
-                      :value => resource.price_formatted,
-                      "ng-model" => "stampDuty.completionDate",
-
+                      :value => resource.completion_date,
                       class: "stamp-duty__completion-date" %>
   </div>
 
@@ -55,7 +53,7 @@
 
       <%= f.submit I18n.t("#{i18n_locale_namespace}.next"),
       class: "button button--primary stamp-duty__submit",
-        'ng-click' => 'navigateAndFocus($event)',
+
         'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
         'analytics-category' => 'Stamp Duty Calculator',
         'analytics-action' => 'Completion',

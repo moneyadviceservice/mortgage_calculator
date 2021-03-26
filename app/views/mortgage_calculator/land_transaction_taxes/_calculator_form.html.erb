@@ -13,6 +13,7 @@
           :buyer_type,
           [
             [t("land_transaction_tax.select.option_prompt"), ''],
+            [t("land_transaction_tax.select.option_isFTB"), 'isFTB'],
             [t("land_transaction_tax.select.option_isNextHome"), 'isNextHome'],
             [t("land_transaction_tax.select.option_isSecondHome"), 'isSecondHome']
           ],
@@ -35,7 +36,7 @@
 
   <div class="stamp-duty__form form__item">
     <%= f.date_select :completion_date %>
-  </div
+  </div>
 
   <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
@@ -58,7 +59,7 @@
 
     <%= f.submit I18n.t("land_transaction_tax.next"),
                  class: "button button--primary stamp-duty__submit",
-                 'ng-click' => 'navigateAndFocus($event)',
+
                  'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
                  'analytics-category' => 'Stamp Duty Calculator',
                  'analytics-action' => 'Completion',

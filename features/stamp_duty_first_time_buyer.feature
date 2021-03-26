@@ -54,7 +54,7 @@ Examples:
   | 988882  | 42,638   | 2021-10-21      |
   | 2100000 | 165,750  | 2021-10-21      |
 
-@wip @javascript
+@javascript
 Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
   When I enter a house price of <price>
@@ -81,6 +81,7 @@ Examples:
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
   When I enter my house price with "350000"
+  And I enter a completion date
   And I am a first time buyer
   And I click next
   And I see the stamp duty I will have to pay is "£2,500"
@@ -91,7 +92,8 @@ Scenario: I recalculate for first home
 @javascript
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
-  When I enter my house price with "550000"
+  When I enter my house price with "350000"
+  And I enter a completion date
   And I am a first time buyer
   And I click next
   And I see the stamp duty I will have to pay is "£2,500"

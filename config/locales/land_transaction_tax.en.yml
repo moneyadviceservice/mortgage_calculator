@@ -9,13 +9,18 @@ en:
     tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
     heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £180,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
+    subtitle_paras:
+    - You must pay Land Transaction Tax if you buy a property or land over a certain price in Wales.
+    - This calculator will help you work out how much you have to pay if you are buying residential property.
+    - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
     heading_results: "Land Transaction Tax (LTT) calculator - Your Results"
     title: "Calculate the Land Transaction Tax on your residential property in Wales"
     next: Next
     select:
       label: I am
       option_prompt: please select an option
-      option_isNextHome: buying my first or my next home
+      option_isNextHome: buying my next home
+      option_isFTB: a first-time buyer
       option_isSecondHome: buying an additional property or second home
       tooltip_html: "You will usually have to pay higher rates of Land Transaction Tax if you are buying a residential property worth %{amount} or more and already own 1 or more properties."
     recalculate: Recalculate
@@ -23,8 +28,17 @@ en:
       title: "Buying in England, Northern Ireland or Scotland?"
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
-    how_calculated: "Land Transaction Tax (LTT) is paid at both main and higher rates of tax.  This is usually based on the price you pay for the property or land, but it might include other types of payment such as goods, works or services, release from a debt, or transfer of a debt, including the value of any outstanding mortgage.  For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £250,000  and 5% on the value between £250,000 and £280,000.  In this case, total liability for Land Transaction Tax (LTT) would be £1,500."
-    how_calculated_additional: "Anyone buying additional property may have to pay a higher rate of LTT. In this example LTT of 4% would be due on the value of the property up to £180,000 (£7,200), 7.5% on the value between £180,000 and £250,000 (£5,250) and 9% on the value between £250,000 and £280,000 (£2,700) meaning the total LTT due would be £15,150. If you are replacing your main residence, the higher rates may not apply."
+    how_calculated: "Land Transaction Tax (LTT) is paid at different rates depending on the purchase price."
+    how_calculated_table_ftb_phase_1:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b>, with a completion date on or before 30 June 2021, would pay."
+    how_calculated_table_next_phase_1:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
+    how_calculated_table_second_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
+    how_calculated_table_ftb_phase_2:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_next_phase_2:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_second_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_ftb_phase_3:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_next_phase_3:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>  on or after 1 July 2021, would pay."
+    how_calculated_table_second_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
+    how_calculated_additional: "If the property is an additional property or second home, the higher residential rates shown in the second table below may apply."
     how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:

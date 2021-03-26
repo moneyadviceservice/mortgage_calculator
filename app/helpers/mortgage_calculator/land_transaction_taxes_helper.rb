@@ -18,9 +18,13 @@ module MortgageCalculator
       )
     end
 
+    def first_time_buyer?
+      @ltt.first_time_buy?
+    end
+
     def completion_date
       return @ltt.try(:completion_date) if defined? @ltt
-      Date.today
+      Time.zone.today
     end
 
     def calculator_config_json

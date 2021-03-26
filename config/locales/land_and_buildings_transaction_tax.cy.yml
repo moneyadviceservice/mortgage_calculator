@@ -8,15 +8,17 @@ cy:
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
     heading: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
-    subtitle_paras: 
-      - Mae Treth Trafodiadau Tir ac Adeiladau (LBTT) yn dâl ar drafodiadau tir yn yr Alban. Mae’n rhaid i drafodiadau tir gael eu hysbysu i Refeniw’r Alban oni bai bod yr ystyriaeth daladwy yn llai na £40,000 neu fod y trafodiad wedi'i eithrio fel arall. Er enghraifft, trafodion mewn cysylltiad â gorchymyn llys sy'n ymwneud ag ysgariad neu ddiddymiad partneriaeth sifil. Efallai y bydd Atodiad Annedd Atodol (ADS) yn ddyledus wrth brynu eiddo ychwanegol. Cyfrifoldeb y trethdalwr yw cwblhau a chyflwyno ffurflen LBTT gywir, lle bo angen, a thalu unrhyw dreth sy'n ddyledus.
+    subtitle_paras:
+      - Mae rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) os byddwch yn prynu eiddo neu dir dros bris penodol yn yr Alban.
+      - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
+      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
     heading_results: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
     next: "Nesaf"
     select:
       label: "Rwy'n"
       option_prompt: "dewiswch opsiwn"
-      option_isNextHome: "prynu fy nghartref cyntaf neu fy nghartref nesaf"
+      option_isNextHome: "prynu fy nghartref nesaf"
       option_isFTB: prynu am y tro cyntaf
       option_isSecondHome: prynu eiddo ychwanegol neu ail gartref
       tooltip_html: Efallai bydd atodiad annedd atodol (ADS) o LBTT yn cael ei gynhwyso i brynu eiddo preswyl o £40,000 neu fwy yn yr Alban. Y gyfradd bresennol ar gyfer ADS yw %{additional_property_rate}% o’r ‘ystyriaeth berthnasol’ (fel arfer y pris prynu).
@@ -31,7 +33,16 @@ cy:
     how_calculated_ftb_4: "Golyga hynny bod cartrefi sydd â phrisiau prynu hyd at %{amount} wedi eu heithrio rhag LBTT fwy neu lai ar gyfer prynwyr tro cyntaf."
     how_calculated_ftb_5: "Er enghraifft:"
     how_calculated: "Mae Treth Trafodiad Tir ac Adeiladau (LBTT) yn dreth a gymhwysir i drafodion tir ac adeiladau preswyl ac amhreswyl (gan gynnwys prydlesi masnachol). Mae'r dreth yn daladwy ar wahanol gyfraddau ar bob cyfran o'r pris prynu o fewn bandiau treth penodedig. Dim ond i'r rhan o bris yr eiddo sy'n dod o fewn y band hwnnw y mae'r gyfradd ganrannol ar gyfer pob band yn cael ei chymhwyso. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £ 280,000 yn talu unrhyw LBTT ar werth yr eiddo hyd at £250,000 ac yna 5% o'r gwerth rhwng £ 250,000 a £280,000. Yn yr achos hwn, cyfanswm y LBTT a dalwyd fyddai £1,500."
-    how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu-i-osod) dalu Atodiad Annedd Ychwanegol (ADS) os yw'r pris prynu yn £ 40,000 neu fwy. Yn yr enghraifft uchod, pe bai'r eiddo'n ail gartref, cyfanswm y LBTT a dalwyd fyddai £1,500 PLWS ADS o £11,200 (4% o £280,000), felly cyfanswm o £12,700. Nodir y cyfraddau a'r bandiau ar gyfer LBTT isod:"
+    how_calculated_table_ftb_phase_1:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_1:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_ftb_phase_2:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_2:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_ftb_phase_3:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_3:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_additional: "Efallai bydd rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu i osod) dalu Ychwanegiad Annedd Ychwanegol (ADS) os yw'r pris prynu'n £40,000 neu fwy. Mae un cyfradd ADS a dangosir hon yn y tabl isod hefyd."
     how_calculated_extra: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
@@ -50,7 +61,7 @@ cy:
       property_price_header: Pris prynu’r eiddo
       rate_header: "Cyfradd LBTT safonol"
       standard_bill_header: "Bil LBTT safonol"
-      verbose_rate_header: Cyfradd Treth Trafodiad Tir ac Adeiladau (LBTT) (eiddo preswyl sengl neu luosog)
+      verbose_rate_header: Cyfradd Treth Trafodiadau Tir ac Adeiladau (LBTT)
       ftb_relief_amount_header: "Swm o Ostyngiad Prynwr tro Cyntaf"
       ftb_total_amount_header: "Y cyfanswm i'w dalu fel prynwr am y tro cyntaf"
       extra_rate_header: Atodiad Annedd Ychwanegol (ADS) ar ail eiddo preswyl neu eiddo preswyl ychwanegol

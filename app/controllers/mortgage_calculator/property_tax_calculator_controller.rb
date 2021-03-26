@@ -11,7 +11,10 @@ module MortgageCalculator
     def create
       @resource = calculator.new(calculator_params)
 
-      render :show if @resource.invalid?
+      if @resource.invalid?
+        @resource.completion_date = Date.tomorrow if @resource.errors.keys.include? :completion_date
+        render :show
+      end
     end
 
     def bands_to_use
@@ -21,9 +24,9 @@ module MortgageCalculator
 
     def completion_date
       return @resource.try(:completion_date) unless @resource.try(:completion_date).nil?
-      return calculator_params[:completion_date] unless calculator_params[:completion_date].blank?
+      return calculator_params[:completion_date] if calculator_params[:completion_date].present?
 
-      Date.today
+      Time.zone.today
     end
     helper_method :completion_date
 
@@ -44,18 +47,20 @@ module MortgageCalculator
     helper_method :category_id
 
     def calculator_params
-      return {} unless params.keys.include? calculator_params_key
+      return {} unless params.key?(calculator_params_key)
 
-      cp = params.require(calculator_params_key)
-          .permit(:price, :buyer_type, :completion_date)
-          .symbolize_keys
+      y = params[calculator_params_key]["completion_date(1i)"].to_i
+      m = params[calculator_params_key]["completion_date(2i)"].to_i
+      d = params[calculator_params_key]["completion_date(3i)"].to_i
 
-      y = cp[:"completion_date(1i)"].to_i
-      m = cp[:"completion_date(2i)"].to_i
-      d = cp[:"completion_date(3i)"].to_i
-      cp.merge!(completion_date: Date.new(y,m,d)) if Date.valid_date?(y,m,d)
+      completion_date = Date.valid_date?(y.to_i, m.to_i, d.to_i) ? "#{y}-#{m}-#{d}".to_date : "#{y}-#{m}-#{d}"
 
-      return cp.except(:"completion_date(1i)", :"completion_date(2i)", :"completion_date(3i)" )
+      #Allow invalid dates here, so the model picks them up
+      params.require(calculator_params_key)
+                 .merge(:completion_date => completion_date)
+                 .except(:"completion_date(1i)", :"completion_date(2i)", :"completion_date(3i)")
+                 .permit(:price, :buyer_type, :completion_date)
+                 .symbolize_keys
     end
 
     def calculator_params_key

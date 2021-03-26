@@ -27,7 +27,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     | 550000  | 28,350  | 5.15%         |
     | 901000  | 66,470  | 7.38%         |
 
-  @wip @javascript
+  @javascript
   Scenario Outline: tax for next home
     When I enter a house price of <price>
     And I am a next home buyer
@@ -58,7 +58,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£18,350"
     And I see the effective tax rate is "4.08%"
 
-  @wip @javascript
+  @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 260000
     And I enter a completion date
@@ -93,7 +93,7 @@ Feature: Land and Buildings Transaction Tax Calculator
       | 750000  | 78,350  | 10.45         |
       | 1200000 | 150,350 | 12.53         |
 
-  @wip @javascript
+  @javascript
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
@@ -107,7 +107,13 @@ Feature: Land and Buildings Transaction Tax Calculator
       | price   | duty    | effective tax |
       | 35000   | 0       | 0.00          |
       | 40000   | 1,600   | 4.00          |
-      | 125000  | 5,000   | 4.00          |
-      | 350000  | 20,250  | 5.79          |
-      | 750000  | 76,250  | 10.17         |
-      | 1223300 | 151,978 | 12.42         |
+      | 120000  | 4,800   | 4.00          |
+      | 175000  | 7,600   | 4.34          |
+      | 201000  | 9,160   | 4.56          |
+      | 250000  | 12,100  | 4.84          |
+      | 300000  | 16,600  | 5.53          |
+      | 325000  | 18,850  | 5.80          |
+      | 400000  | 29,350  | 7.34          |
+      | 743000  | 77,370  | 10.41         |
+      | 750000  | 78,350  | 10.45         |
+      | 1200000 | 150,350 | 12.53         |

@@ -123,6 +123,9 @@ Layout/ExtraSpacing:
     - 'Gemfile'
     - 'spec/dummy/config.ru'
     - 'spec/models/affordability_spec.rb'
+    - 'spec/models/stamp_duty_spec.rb'
+    - 'spec/models/land_and_buildings_transaction_tax_spec.rb'
+    - 'spec/models/land_transaction_tax_spec.rb'
 
 # Offense count: 7
 # Cop supports --auto-correct.
@@ -320,6 +323,9 @@ RSpec/ExampleLength:
     - 'spec/controllers/land_transaction_taxes_controller_spec.rb'
     - 'spec/models/outgoings_spec.rb'
     - 'spec/models/repayment_spec.rb'
+    - 'spec/models/land_and_buildings_transaction_tax_spec.rb'
+    - 'spec/models/land_transaction_tax_spec.rb'
+    - 'spec/models/stamp_duty_spec.rb'
 
 # Offense count: 5
 # Cop supports --auto-correct.
@@ -653,3 +659,9 @@ Style/ZeroLengthPredicate:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 241
+
+Lint/ParenthesesAsGroupedExpression:
+  Exclude:
+    - spec/models/stamp_duty_spec.rb
+    - spec/models/land_transaction_tax_spec.rb
+    - spec/models/land_and_buildings_transaction_tax_spec.rb

@@ -124,38 +124,39 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
     { price: 350_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 8350,  percentage_tax: 2.39,   precision: 0.1, total_due: 358_350 },
     { price: 450_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 18350,  percentage_tax: 4.08,   precision: 0.1, total_due: 468_350 },
     { price: 550_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 28350,  percentage_tax: 5.15,   precision: 0.1, total_due: 578_350 },
-    { price: 901_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 66470,  percentage_tax: 7.38,   precision: 0.1, total_due: 967_470 },
+    { price: 901_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 66470,  percentage_tax: 7.38,   precision: 0.1, total_due: 967_470 }
 
   ]
 
   describe 'calculation scenarios' do
     scenarios.each do |scenario|
       context_name = case scenario[:buyer_type]
-                      when 'isFTB'
-                        'and is first time buy'
-                      when 'isNextHome'
-                        'and is not a second home'
-                      when 'isSecondHome'
-                        'and is a second home'
-                      end
+                     when 'isFTB'
+                       'and is first time buy'
+                     when 'isNextHome'
+                       'and is not a second home'
+                     when 'isSecondHome'
+                       'and is a second home'
+                     end
 
       completion_date = case scenario[:phase]
                         when :phase_1
-                          Date.new(2021,04,21)
+                          Date.new(2021, 4, 21)
                         when :phase_2
-                          Date.new(2021,07,21)
+                          Date.new(2021, 7, 21)
                         when :phase_3
-                          Date.new(2021,10,21)
+                          Date.new(2021, 10, 21)
                         else
-                          Date.new(2022,01,01)
+                          Date.new(2022, 1, 1)
                         end
 
       context "When house price is #{scenario[:price]} #{context_name} and completion_date is #{completion_date}" do
         subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type], completion_date: completion_date) }
-        #its(:tax_due) { binding.pry }
+
         its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
 
-        its(:percentage_tax) { is_expected.to (
+        its(:percentage_tax) do
+          is_expected.to (
           if scenario[:percentage_tax] == 0
             be_zero
           elsif scenario[:percentage_tax] != 0 && scenario[:precision] != 0
@@ -164,7 +165,7 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
             eq(scenario[:percentage_tax])
           end
         )
-        }
+        end
         its(:total_due) { is_expected.to (scenario[:total_due] == 0 ? be_zero : eq(scenario[:total_due])) }
       end
     end

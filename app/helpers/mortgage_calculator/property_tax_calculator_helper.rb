@@ -1,6 +1,6 @@
 module MortgageCalculator
   module PropertyTaxCalculatorHelper
-  	include PhaseHelper
+    include PhaseHelper
 
     def stamp_duty_calculator?
       resource.class.name == 'MortgageCalculator::StampDuty'
