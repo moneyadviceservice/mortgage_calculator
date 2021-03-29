@@ -58,7 +58,7 @@ Feature: Land and Buildings Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£18,350"
     And I see the effective tax rate is "4.08%"
 
-  @wip @javascript
+  @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 260000
     And I enter a completion date

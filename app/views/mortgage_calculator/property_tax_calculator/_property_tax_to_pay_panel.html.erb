@@ -1,20 +1,16 @@
 <div class="stamp-duty__results">
   <div class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
     <div class="hidden-unless-js">
-      <span ng-if="stampDuty.isSecondHome">
-        <%= I18n.t("#{i18n_locale_namespace}.results.second_title") %>
-      </span>
-      <span ng-if="!stampDuty.isSecondHome">
-        <%= I18n.t("#{i18n_locale_namespace}.results.title") %>
-      </span>
+      <% key = resource.second_home? ? 'second_title' : 'title' %>
+      <span><%= I18n.t("#{i18n_locale_namespace}.results.#{key}") %></span>
     </div>
 
-    <span ng-hide="js">
+    <span>
       <%= number_to_currency resource.tax_due_formatted %>
     </span>
   </div>
 
-  <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide">
+  <p class="stamp-duty__results-tax-rate">
     <%= I18n.t("#{i18n_locale_namespace}.results.sentence",
               percentage: number_to_percentage(
                 resource.percentage_tax, precision: 2
@@ -23,13 +19,10 @@
   </p>
 
   <% if outside_first_time_rate? %>
-    <p ng-hide="js" class="stamp-duty__FTB_conditional is-active">
+    <p class="stamp-duty__FTB_conditional is-active">
       <%= I18n.t("#{i18n_locale_namespace}.results.FTB_conditional", amount: ftb_threshold) %>
     </p>
   <% end %>
-  <p class="rendered-from-js stamp-duty__FTB_conditional">
-    <%= I18n.t("#{i18n_locale_namespace}.results.FTB_conditional", amount: ftb_threshold) %>
-  </p>
 
   <div>
     <%= render 'property_tax_tip', rates: rates %>

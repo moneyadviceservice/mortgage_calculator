@@ -91,7 +91,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
     $scope.navigateAndFocus = function($event, direction) {
       $event.preventDefault();
-      // WizardHandler.wizard()[direction || 'next']();
+      WizardHandler.wizard()[direction || 'next']();
 
       // We have no hooks for when angular-wizard has completed its navigation, so we have to wait for a tick
       setTimeout(function() {

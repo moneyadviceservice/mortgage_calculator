@@ -37,7 +37,7 @@ Feature: Land Transaction Tax Calculator
     | 2100000 | 180,750    | 8.61%         | 2021-4-21       |
 
 
-  @wip @javascript
+  @javascript
   Scenario Outline: tax for next home
     When I enter a house price of <price>
     And I enter a completion date of <completion date>
@@ -77,7 +77,7 @@ Feature: Land Transaction Tax Calculator
     And I see the stamp duty I will have to pay is "£14,250"
     And I see the effective tax rate is "2.91%"
 
-  @wip @javascript
+  @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 275000
     And I am a next home buyer

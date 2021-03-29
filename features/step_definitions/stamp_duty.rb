@@ -53,7 +53,7 @@ Then(/^I reenter my house price with "(.*?)"$/) do |amount|
 end
 
 When(/^I click next again$/) do
-  @stamp_duty.recalculate.click if js_disabled?
+  @stamp_duty.recalculate.click
 end
 
 Then(/^they see "(.*?)"$/) do |content|

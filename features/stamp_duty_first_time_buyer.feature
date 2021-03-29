@@ -89,10 +89,10 @@ Scenario: I recalculate for first home
   And I click next again
   And I see the stamp duty I will have to pay is "£0"
 
-@wip @javascript
+@javascript
 Scenario: I recalculate for first home
   Given I visit the Stamp Duty page
-  When I enter my house price with "550000"
+  When I enter my house price with "350000"
   And I enter a completion date
   And I am a first time buyer
   And I click next

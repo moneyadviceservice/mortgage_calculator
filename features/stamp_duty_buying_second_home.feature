@@ -116,7 +116,7 @@ Scenario: I recalculate for second home
   And I click next again
   And I see the stamp duty I will have to pay is "£3,780"
 
-@wip @javascript
+@javascript
 Scenario: I recalculate for second home
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"

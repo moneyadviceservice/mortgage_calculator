@@ -3,7 +3,7 @@ In order to understand how my stamp duty is calculated
 As a home buyer
 I want to see what percentages apply to the purchase price
 
-Scenario Outline: First time buyer
+Scenario Outline: Next or Second home buyer
   Given I visit the Stamp Duty page
   And I am <buyer>
   When I enter a house price of <price>
