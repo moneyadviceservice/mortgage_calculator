@@ -68,8 +68,8 @@ en:
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
-          price: "Property Price:"
-          completion_date: "Completion Date: "
+          price: "Property price"
+          completion_date: "Completion date"
     caveat:
       title: Important
       one: "This calculator is a guide only to Stamp Duty on residential properties. Different rates apply to properties for non-residential use."

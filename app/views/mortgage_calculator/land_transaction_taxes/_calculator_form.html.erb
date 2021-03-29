@@ -35,7 +35,11 @@
   <% end %>
 
   <div class="stamp-duty__form form__item">
-    <%= f.date_select :completion_date %>
+    <%= f.label :completion_date %>
+
+    <%= f.date_select :completion_date, {
+      order: [:day, :month, :year]
+    } %>
   </div>
 
   <div class="stamp-duty__form form__item">
