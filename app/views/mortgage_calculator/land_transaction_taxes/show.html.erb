@@ -17,16 +17,16 @@
         <h2 class="intro stamp-duty__subheading">
           <%= I18n.t("land_transaction_tax.title") %>
         </h2>
-        <p>
-          <%= I18n.t("land_transaction_tax.heading_description") %>
-        </p>
+        <% I18n.t("land_transaction_tax.subtitle_paras").each do |para| %>
+          <p><%= para.html_safe %></p>
+        <% end %>
         <%= render 'calculator_form', ltt: @ltt %>
       </div>
 
       <%= render 'mortgage_calculator/shared/links_to_other_tools' %>
     </div>
 
-    <div>
+    <div class ="ng-hide">
       <div class="rendered-from-js">
         <div class="stamp-duty__container">
           <h1 class="stamp-duty__heading">

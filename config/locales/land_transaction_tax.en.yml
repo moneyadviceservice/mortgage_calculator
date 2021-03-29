@@ -9,6 +9,10 @@ en:
     tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
     heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £180,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
+    subtitle_paras:
+    - You must pay Land and Buildings Transaction Tax if you buy a property or land over a certain price in Scotland.
+    - This calculator will help you work out how much you have to pay if you are buying residential property.
+    - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
     heading_results: "Land Transaction Tax (LTT) calculator - Your Results"
     title: "Calculate the Land Transaction Tax on your residential property in Wales"
     next: Next

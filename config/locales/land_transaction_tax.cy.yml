@@ -9,6 +9,10 @@ cy:
     tool_name: "treth-trafodiadau-tir"
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
     heading_description: "Mae’n rhaid i chi dalu Treth Trafodiadau Tir os ydych yn prynu eiddo neu dir dros bris penodol yng Nghymru. Y trothwy presennol yw £180,000 ar gyfer eiddo preswyl.Efallai bydd cyfraddau preswyl uwch yn berthnasol os ydych eisoes yn berchen ar un neu fwy eiddo preswyl. Mae’n rhaid i chi anfon ffurflen dychweliad LTT i Awdurdod Refeniw Cymru a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad)."
+    subtitle_paras:
+    - Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.
+    - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
+    - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
     heading_results: "Cyfrifiannell Treth Trafodiadau Tir - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodiadau Tir ar eich eiddo preswyl yng Nghymru"
     next: "Nesaf"
