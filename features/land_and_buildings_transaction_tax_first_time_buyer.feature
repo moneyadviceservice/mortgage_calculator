@@ -34,7 +34,7 @@ Examples:
 @wip @javascript
 Scenario Outline: land and buildings transaction tax for first home
   When I enter a house price of <price>
-  And I enter a completion dat
+  And I enter a completion date
   And I am a first time buyer
   And I click next
   Then I see the call out box with everything I need to know

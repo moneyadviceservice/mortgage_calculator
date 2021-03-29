@@ -3,7 +3,7 @@ So that I know how much stamp duty to pay
 As a user buying a second house
 I want to enter my house price
 
-@wip @javascript
+@javascript
 Scenario Outline: stamp duty for second home
   Given I visit the Stamp Duty page
   When I enter a house price of <price>
@@ -116,7 +116,7 @@ Scenario: I recalculate for second home
   And I click next again
   And I see the stamp duty I will have to pay is "£3,780"
 
-@javascript
+@wip @javascript
 Scenario: I recalculate for second home
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"

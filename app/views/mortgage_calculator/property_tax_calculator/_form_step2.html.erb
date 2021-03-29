@@ -19,9 +19,9 @@
       <span class="stamp-duty__input-wrapper">
         <span class="stamp-duty__input--unit">£</span>
         <%= f.text_field :price,
-                         :value => resource.price_formatted,
+                         :value => resource.price,
                          class: 'stamp-duty__input dynamic-slider-property',
-                         "ng-model" => "stampDuty.propertyPrice",
+
                          "placeholder" => "0.00",
                          "currency" => '',
                          "data-m-dec" => "0",
@@ -46,20 +46,9 @@
                       class: "stamp-duty__completion-date" %>
     </div>
 
-    <div class="slider"
-          ui-slider
-          dynamic-for='dynamic-slider-property'
-          ng-model="stampDuty.propertyPrice"
-          analytics-category="Stamp Duty"
-          analytics-action="Refinement"
-          analytics-label="Price"
-          aria-hidden="true">
-    </div>
-
-    <div class="hide-with-js">
+    <div>
       <p><br><%= f.submit I18n.t("#{i18n_locale_namespace}.recalculate"),
-                          'class' => 'button',
-                          'wz-next' => '' %></p>
+                          'class' => 'button' %></p>
     </div>
 
   <% end %>

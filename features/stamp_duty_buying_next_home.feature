@@ -56,7 +56,7 @@ Examples:
   | 988882  | 42,638  | 2021-10-21      |
   | 2100000 | 165,750 | 2021-10-21      |
 
-@wip @javascript
+@javascript
 Scenario Outline: stamp duty for next home
   When I enter a house price of <price>
   And I enter a completion date of <completion date>
@@ -107,7 +107,7 @@ Examples:
   | 988882  | 42,638  | 2021-10-21      |
   | 2100000 | 165,750 | 2021-10-21      |
 
-@wip
+
 Scenario: I recalculate for next home
   When I enter a house price of 550000
   And I am a next home buyer

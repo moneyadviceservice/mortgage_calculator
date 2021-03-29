@@ -31,7 +31,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
 
     //Stamp Duty Calculations
-    $scope.stampDuty = StampDuty;
+    // $scope.stampDuty = StampDuty;
 
     //Repayment Calculations
     $scope.repayments = Repayments;
@@ -60,15 +60,15 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     };
 
     // Helpers
-    $scope.preventFormSubmission = function($event) {
-      $event.preventDefault();
-    };
+    // $scope.preventFormSubmission = function($event) {
+    //   $event.preventDefault();
+    // };
 
-    $scope.expandedStampDutyInformation = false;
-    $scope.toggleStampDutyExpanded = function($event) {
-      $event.preventDefault();
-      $scope.expandedStampDutyInformation = !$scope.expandedStampDutyInformation;
-    };
+    // $scope.expandedStampDutyInformation = false;
+    // $scope.toggleStampDutyExpanded = function($event) {
+    //   $event.preventDefault();
+    //   $scope.expandedStampDutyInformation = !$scope.expandedStampDutyInformation;
+    // };
 
     $scope.expandedRepaymentMortgageInformation = false;
     $scope.toggleRepaymentExpanded = function($event) {
