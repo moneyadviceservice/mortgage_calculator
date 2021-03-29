@@ -36,6 +36,7 @@ cy:
         title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban
     recalculate: Ailgyfrifo
+    non_uk_resident_buyer: Cewch eich trin fel pe na fyddech yn preswylio yn y DU os na fyddwch yn bresennol yn y DU am 183 diwrnod neu fwy yn ystod y 12 mis cyn dyddiad gweithredol y pryniant.
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at %{amount}."
     how_calculated_ftb_2: "Er enghraifft, os ydych chi'n prynu eich eiddo cyntaf am £350,000 byddech yn talu:"
@@ -51,13 +52,15 @@ cy:
       - "5% o dreth ar werth yr eiddo rhwng £250,001 a £550,000."
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
-    how_calculated: "Telir y Dreth Stamp ar wahanol gyfraddau, yn dibynnu ar y pris prynu. Er enghraifft, ni fyddai rhywun sy'n destun i Dreth Stamp sy'n prynu eiddo am £550,000 yn talu unrhyw dreth ar werth yr eiddo hyd at £500,000 a 5% o dreth ar werth yr eiddo rhwng £500,001 a £550,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am y Dreth Stamp fyddai £2,500 gan roi cyfradd dreth effeithiol o 0.45%. Mae hwn yn arbediad o £15,000 yn seiliedig ar y cyfraddau Treth Stamp a oedd ar waith cyn 8fed Gorffennaf 2020."
-    how_calculated_table_ftb_phase_2: "The table below shows the rates of stamp duty a <b>first-time buyer</b> with a completion date on or before %{date} would pay."
-    how_calculated_table_next_phase_2: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> with a completion date on or before %{date} would pay."
-    how_calculated_table_ftb_phase_3: "The table below shows the rates of stamp duty a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_3: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> would pay."
-    how_calculated_additional: "Bydda'r sawl sy'n destun i'r cyfraddau ychwanegol o gyfraddau treth stamp yn talu 3% yn ychwanegol ar ben y band cyfradd safonol perthnasol. Yn yr enghraifft hon, byddai hynny'n cynrychioli £16,500 yn ychwanegol, sy'n golygu mai cyfanswm y dreth stamp fyddai £19,000 gan roi cyfradd dreth effeithiol o 3.45%."
-    how_calculated_extra: "* Nid yw eiddo dan %{amount} yn destun y cyfraddau SDLT ychwanegol"
+    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau, gan ddibynnu ar y pris prynu."
+    how_calculated_table_ftb_phase_1:  "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
+    how_calculated_table_next_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
+    how_calculated_table_ftb_phase_2:  "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
+    how_calculated_table_next_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
+    how_calculated_table_ftb_phase_3:  "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
+    how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref bydd 3% ychwanegol i'w dalu ar ben y cyfraddau safonol perthnasol."
+    how_calculated_extra: "* Codir tâl o 3% yn ychwanegol os yw eiddo yn eiddo ychwanegol neu'n ail gartref. Nid yw eiddo o dan %{amount} yn destun i'r gyfradd SDLT ychwanegol."
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:

@@ -57,6 +57,10 @@ module MortgageCalculator
       buyer_type == 'isSecondHome'
     end
 
+    def first_time_buy?
+      buyer_type == 'isFTB'
+    end
+
     protected
 
     def bands_to_use
