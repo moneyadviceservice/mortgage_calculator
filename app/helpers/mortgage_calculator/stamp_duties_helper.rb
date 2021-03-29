@@ -34,7 +34,7 @@ module MortgageCalculator
 
     def completion_date
       return resource.try(:completion_date) if defined? resource
-      Date.today
+      Time.zone.today
     end
 
     def calculator_config_json

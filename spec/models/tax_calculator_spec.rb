@@ -6,7 +6,7 @@ module MortgageCalculator
 
     describe 'validations' do
       context 'when it is valid Date' do
-        let(:completion_date) { Date.tomorrow }
+        let(:completion_date) { Time.zone.now.tomorrow }
 
         it 'is valid' do
           expect(subject).to be_valid
@@ -30,7 +30,7 @@ module MortgageCalculator
       end
 
       context 'when it is in the past' do
-        let(:completion_date) { Date.yesterday }
+        let(:completion_date) { Time.zone.now.yesterday }
 
         it 'is not valid' do
           expect(subject).not_to be_valid

@@ -33,7 +33,6 @@ describe MortgageCalculator::StampDuty do
 
   it_should_behave_like 'currency inputs', [:price]
 
-
   describe 'validations' do
     let(:buyer_type) { 'isNextHome' }
 
@@ -168,20 +167,20 @@ describe MortgageCalculator::StampDuty do
     { price: 510_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 15500,  percentage_tax: 3.04,   precision: 0.1, total_due: 525_500 },
     { price: 937_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 37450,  percentage_tax: 4.00,   precision: 0.1, total_due: 974_450 },
     { price: 988_882, buyer_type: 'isFTB', phase: :phase_3, tax_due: 42638,  percentage_tax: 4.31,   precision: 0.1, total_due: 1_031_520 },
-    { price: 2_100_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 165750,  percentage_tax: 7.89,   precision: 0.1, total_due: 2_265_750 },
+    { price: 2_100_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 165750,  percentage_tax: 7.89,   precision: 0.1, total_due: 2_265_750 }
 
   ]
 
   describe 'calculation scenarios' do
     scenarios.each do |scenario|
       context_name = case scenario[:buyer_type]
-                      when 'isFTB'
-                        'and is first time buy'
-                      when 'isNextHome'
-                        'and is not a second home'
-                      when 'isSecondHome'
-                        'and is a second home'
-                      end
+                     when 'isFTB'
+                       'and is first time buy'
+                     when 'isNextHome'
+                       'and is not a second home'
+                     when 'isSecondHome'
+                       'and is a second home'
+                     end
 
       completion_date = case scenario[:phase]
                         when :phase_1
@@ -199,7 +198,8 @@ describe MortgageCalculator::StampDuty do
 
         its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
 
-        its(:percentage_tax) { is_expected.to (
+        its(:percentage_tax) do
+          is_expected.to (
           if scenario[:percentage_tax] == 0
             be_zero
           elsif scenario[:percentage_tax] != 0 && scenario[:precision] != 0
@@ -208,7 +208,7 @@ describe MortgageCalculator::StampDuty do
             eq(scenario[:percentage_tax])
           end
         )
-        }
+        end
         its(:total_due) { is_expected.to (scenario[:total_due] == 0 ? be_zero : eq(scenario[:total_due])) }
       end
     end

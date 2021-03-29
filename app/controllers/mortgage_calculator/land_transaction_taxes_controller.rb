@@ -32,7 +32,7 @@ module MortgageCalculator
       return @ltt.try(:completion_date) unless @ltt.nil? || @ltt.completion_date.nil?
       return calculator_params[:completion_date] if calculator_params[:completion_date].present?
 
-      Date.today
+      Time.zone.today
     end
     helper_method :completion_date
 
