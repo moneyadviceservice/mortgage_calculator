@@ -6,50 +6,42 @@ module MortgageCalculator
 
     # WALES
 
-    STANDARD_BANDS = {:phase_1 =>
-      [{ threshold: 250_000, rate: 0 },
-       { threshold: 400_000, rate: 5 },
-       { threshold: 750_000, rate: 7.5 },
-       { threshold: 1_500_000, rate: 10 },
-       { threshold: nil, rate: 12 }],
-      :phase_2 =>
-      [{ threshold: 180_000, rate: 0 },
-       { threshold: 250_000, rate: 3.5 },
-       { threshold: 400_000, rate: 5 },
-       { threshold: 750_000, rate: 7.5 },
-       { threshold: 1_500_000, rate: 10 },
-       { threshold: nil, rate: 12 }],
-      :phase_3 =>
-      [{ threshold: 180_000, rate: 0 },
-       { threshold: 250_000, rate: 3.5 },
-       { threshold: 400_000, rate: 5 },
-       { threshold: 750_000, rate: 7.5 },
-       { threshold: 1_500_000, rate: 10 },
-       { threshold: nil, rate: 12 }]
-     }.freeze
+    STANDARD_BANDS = { phase_1: [{ threshold: 250_000, rate: 0 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }],
+                       phase_2: [{ threshold: 180_000, rate: 0 },
+                                 { threshold: 250_000, rate: 3.5 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }],
+                       phase_3: [{ threshold: 180_000, rate: 0 },
+                                 { threshold: 250_000, rate: 3.5 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }] }.freeze
 
-     HIGHER_BANDS = {:phase_1 =>
-      [{ threshold: 180_000, rate: 4 },
-       { threshold: 250_000, rate: 7.5 },
-       { threshold: 400_000, rate: 9 },
-       { threshold: 750_000, rate: 11.5 },
-       { threshold: 1_500_000, rate: 14 },
-       { threshold: nil, rate: 16 }],
-      :phase_2 =>
-      [{ threshold: 180_000, rate: 4 },
-       { threshold: 250_000, rate: 7.5 },
-       { threshold: 400_000, rate: 9 },
-       { threshold: 750_000, rate: 11.5 },
-       { threshold: 1_500_000, rate: 14 },
-       { threshold: nil, rate: 16 }],
-      :phase_3 =>
-      [{ threshold: 180_000, rate: 4 },
-       { threshold: 250_000, rate: 7.5 },
-       { threshold: 400_000, rate: 9 },
-       { threshold: 750_000, rate: 11.5 },
-       { threshold: 1_500_000, rate: 14 },
-       { threshold: nil, rate: 16 }]
-     }.freeze
+    HIGHER_BANDS = { phase_1: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }],
+                     phase_2: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }],
+                     phase_3: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }] }.freeze
 
     SECOND_HOME_ADDITIONAL_TAX = 3
 

@@ -185,18 +185,18 @@ describe MortgageCalculator::StampDuty do
 
       completion_date = case scenario[:phase]
                         when :phase_1
-                          Date.new(2021,04,21)
+                          Date.new(2021, 4, 21)
                         when :phase_2
-                          Date.new(2021,07,21)
+                          Date.new(2021, 7, 21)
                         when :phase_3
-                          Date.new(2021,10,21)
+                          Date.new(2021, 10, 21)
                         else
-                          Date.new(2022,01,01)
+                          Date.new(2022, 1, 1)
                         end
 
       context "When house price is #{scenario[:price]} #{context_name} and completion_date is #{completion_date}" do
         subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type], completion_date: completion_date) }
-        #its(:tax_due) { binding.pry }
+
         its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
 
         its(:percentage_tax) { is_expected.to (

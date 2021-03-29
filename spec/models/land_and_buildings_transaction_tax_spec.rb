@@ -152,7 +152,7 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
       context "When house price is #{scenario[:price]} #{context_name} and completion_date is #{completion_date}" do
         subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type], completion_date: completion_date) }
-        #its(:tax_due) { binding.pry }
+
         its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
 
         its(:percentage_tax) { is_expected.to (
