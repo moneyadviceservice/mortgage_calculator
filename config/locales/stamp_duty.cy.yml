@@ -65,8 +65,8 @@ cy:
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
-          price: "Pris eiddo:"
-          completion_date: "Dyddiad cwblhau: "
+          price: "Pris eiddo"
+          completion_date: "Dyddiad cwblhau"
     caveat:
       title: "Pwysig"
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."

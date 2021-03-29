@@ -45,7 +45,8 @@ en:
     activemodel:
       attributes:
         mortgage_calculator/land_and_buildings_transaction_tax:
-          price: "Property Price:"
+          price: "Property price"
+          completion_date: "Completion date"
     results:
       title: "Land and Buildings Transaction Tax to pay is"
       second_title: "Land and Buildings Transaction Tax on your additional property"
