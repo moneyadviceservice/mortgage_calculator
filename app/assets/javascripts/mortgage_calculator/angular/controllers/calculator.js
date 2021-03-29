@@ -31,7 +31,7 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
 
 
     //Stamp Duty Calculations
-    // $scope.stampDuty = StampDuty;
+    $scope.stampDuty = StampDuty;
 
     //Repayment Calculations
     $scope.repayments = Repayments;
