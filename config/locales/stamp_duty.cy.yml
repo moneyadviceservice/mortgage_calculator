@@ -18,8 +18,8 @@ cy:
     select:
       label: Rwy'n
       option_prompt: dewiswch opsiwn
-      option_isNextHome: prynu fy nghartref cyntaf neu fy nghartref nesaf
-      option_isFTB: prynu am y tro cyntaf
+      option_isNextHome: prynu fy nghartref nesaf
+      option_isFTB: prynu fy nghartref cyntaf
       option_isSecondHome: prynu eiddo ychwanegol neu ail gartref
       tooltip_html: Mae'n rhaid i chi dalu Treth Tir Treth Stamp (SDLT) os ydych yn prynu eiddo neu dir dros bris penodol yn Lloegr a Gogledd Iwerddon. Mae yna reolau gwahanol os ydych yn prynu eiddo ychwanegol. <br /><br />Yn gyffredinol rhaid i chi dalu'r cyfraddau SDLT uwch pan brynwch eiddo preswyl neu ran o un os nad hwnnw fydd yr unig eiddo preswyl yr ydych yn berchen arno (neu'n berchen ar y cyd) yn unrhyw le yn y byd, os nad ydych wedi gwerthu neu roi eich prif gartref blaenorol i rywun ac nid oes gan neb les arno sydd â mwy na 21 mlynedd yn weddill. Mae'r rheolau hyn yn berthnasol os ydych yn briod neu'n prynu ar y cyd a'r unigolyn hwnnw neu honno.
     elsewhere:
@@ -63,6 +63,7 @@ cy:
       attributes:
         mortgage_calculator/stamp_duty:
           price: "Pris eiddo:"
+          completion_date: "Dyddiad cwblhau: "
     caveat:
       title: "Pwysig"
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."
