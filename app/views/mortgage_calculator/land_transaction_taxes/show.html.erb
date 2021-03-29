@@ -8,8 +8,8 @@
   <% @ltt.errors.full_messages.each do |message| %>
     <span style="color:red;"><%= message %></span>
   <% end %>
-  <div wizard on-finish="finishedWizard()" hide-indicators='true'>
-    <div wz-step class="ng-hide">
+  <div hide-indicators='true'>
+    <div>
       <div class="stamp-duty__container">
         <h1 class="stamp-duty__heading">
           <%= I18n.t("land_transaction_tax.heading") %>
@@ -26,7 +26,7 @@
       <%= render 'mortgage_calculator/shared/links_to_other_tools' %>
     </div>
 
-    <div wz-step class="ng-hide">
+    <div>
       <div class="rendered-from-js">
         <div class="stamp-duty__container">
           <h1 class="stamp-duty__heading">

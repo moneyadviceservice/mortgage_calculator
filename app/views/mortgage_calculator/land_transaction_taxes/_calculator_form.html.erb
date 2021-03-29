@@ -58,7 +58,7 @@
 
     <%= f.submit I18n.t("land_transaction_tax.next"),
                  class: "button button--primary stamp-duty__submit",
-                 'ng-click' => 'navigateAndFocus($event)',
+
                  'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
                  'analytics-category' => 'Stamp Duty Calculator',
                  'analytics-action' => 'Completion',
