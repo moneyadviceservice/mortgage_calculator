@@ -7,7 +7,8 @@ module MortgageCalculator
     # England and Northern Ireland
 
     FIRST_TIME_BUYER_BANDS = { phase_1: [{ threshold: 500_000, rate: 0 },
-                                         { threshold: 500_001, rate: 5 }],
+                                         { threshold: 1_500_000, rate: 10 },
+                                         { threshold: nil, rate: 12 }],
                                phase_2: [{ threshold: 300_000, rate: 0 },
                                          { threshold: 500_000, rate: 5 },
                                          { threshold: 1_500_000, rate: 10 },
