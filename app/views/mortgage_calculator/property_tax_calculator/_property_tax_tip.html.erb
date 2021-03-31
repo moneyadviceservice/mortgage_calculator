@@ -3,7 +3,7 @@
     <div class="stamp-duty stamp-duty__calculation-explanation">
       <% if first_time_buyer? %>
         <div class="stamp-duty__explanation-firsttimebuyer is-active">
-          <%= render 'first_time_buyer_explanation', rates: rates %>
+          <%= render 'first_time_buyer_explanation', rates: @ftb_rates %>
         </div>
       <% else %>
         <div class="stamp-duty__explanation-nexthome is-active">
