@@ -10,11 +10,11 @@ module MortgageCalculator
                                          { threshold: 1_500_000, rate: 10 },
                                          { threshold: nil, rate: 12 }],
                                phase_2: [{ threshold: 300_000, rate: 0 },
-                                         { threshold: 500_000, rate: 5 },
+                                         { threshold: 925_000, rate: 5 },
                                          { threshold: 1_500_000, rate: 10 },
                                          { threshold: nil, rate: 12 }],
                                phase_3: [{ threshold: 300_000, rate: 0 },
-                                         { threshold: 500_000, rate: 5 },
+                                         { threshold: 925_000, rate: 5 },
                                          { threshold: 1_500_000, rate: 10 },
                                          { threshold: nil, rate: 12 }] }.freeze
 
