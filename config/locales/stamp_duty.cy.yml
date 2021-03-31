@@ -13,7 +13,7 @@ cy:
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
     subtitle_paras:
       - Mae rhaid i chi dalu treth tir treth stamp (SDLT) os byddwch yn prynu eiddo neu dir dros bris penodol yn Lloegr neu Ogledd Iwerddon. Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
-      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir, neu os nad yw unrhyw un o'r prynwyr yn preswylio yn y DU (i) ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
+      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir, neu os nad yw unrhyw un o'r prynwyr yn preswylio yn y DU ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
     next: "Nesaf"
     select:
       label: Rwy'n
@@ -35,8 +35,8 @@ cy:
       scotland:
         title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
         link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban
-    recalculate: Ailgyfrifo
     non_uk_resident_buyer: Cewch eich trin fel pe na fyddech yn preswylio yn y DU os na fyddwch yn bresennol yn y DU am 183 diwrnod neu fwy yn ystod y 12 mis cyn dyddiad gweithredol y pryniant.
+    recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at %{amount}."
     how_calculated_ftb_2: "Er enghraifft, os ydych chi'n prynu eich eiddo cyntaf am £350,000 byddech yn talu:"
