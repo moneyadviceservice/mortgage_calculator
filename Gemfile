@@ -5,9 +5,9 @@ gemspec
 
 ruby '2.5.3'
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11'
 
-gem 'bowndler'
+gem 'bowndler', git: 'https://github.com/moneyadviceservice/bowndler'
 gem 'mas-build', '~> 2.0'  if ENV['MAS_BUILD']
 gem 'mas-development_dependencies', '2.3.0.35'
 gem 'meta-tags'

@@ -18,6 +18,7 @@ Scenario: LBTT How is this calculated panel - First time buyer journey
   | £325,500       | £5,900             | £600                              |  £5,300                             |
   | £750,500       | £48,410            | £600                              |  £47,810                            |
 
+@wip
 Scenario: LBTT How is this calculated panel - Next home buyer journey
   Given I visit the land and buildings transaction tax page
   And I fill in details for a next home buyer
@@ -30,6 +31,7 @@ Scenario: LBTT How is this calculated panel - Next home buyer journey
   | £325,001 - £750,000        | 10%                                                                                           |                                                                                   |
   | Over £750,000              | 12%                                                                                           |                                                                                   |
 
+@wip
 Scenario: LBTT How is this calculated panel - Additional home buyer journey
   Given I visit the land and buildings transaction tax page
   And I fill in details for a additional home buyer

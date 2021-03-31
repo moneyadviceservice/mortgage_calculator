@@ -4,22 +4,44 @@ module MortgageCalculator
       'land_transaction_tax.activemodel'
     end
 
-    STANDARD_BANDS = [
-      { threshold: 250_000, rate: 0 },
-      { threshold: 400_000, rate: 5 },
-      { threshold: 750_000, rate: 7.5 },
-      { threshold: 1_500_000, rate: 10 },
-      { threshold: nil, rate: 12 }
-    ].freeze
+    # WALES
 
-    HIGHER_BANDS = [
-      { threshold: 180_000, rate: 4 },
-      { threshold: 250_000, rate: 7.5 },
-      { threshold: 400_000, rate: 9 },
-      { threshold: 750_000, rate: 11.5 },
-      { threshold: 1_500_000, rate: 14 },
-      { threshold: nil, rate: 16 }
-    ].freeze
+    STANDARD_BANDS = { phase_1: [{ threshold: 250_000, rate: 0 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }],
+                       phase_2: [{ threshold: 180_000, rate: 0 },
+                                 { threshold: 250_000, rate: 3.5 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }],
+                       phase_3: [{ threshold: 180_000, rate: 0 },
+                                 { threshold: 250_000, rate: 3.5 },
+                                 { threshold: 400_000, rate: 5 },
+                                 { threshold: 750_000, rate: 7.5 },
+                                 { threshold: 1_500_000, rate: 10 },
+                                 { threshold: nil, rate: 12 }] }.freeze
+
+    HIGHER_BANDS = { phase_1: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }],
+                     phase_2: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }],
+                     phase_3: [{ threshold: 180_000, rate: 4 },
+                               { threshold: 250_000, rate: 7.5 },
+                               { threshold: 400_000, rate: 9 },
+                               { threshold: 750_000, rate: 11.5 },
+                               { threshold: 1_500_000, rate: 14 },
+                               { threshold: nil, rate: 16 }] }.freeze
 
     SECOND_HOME_ADDITIONAL_TAX = 3
 
@@ -27,10 +49,14 @@ module MortgageCalculator
       buyer_type == 'isSecondHome'
     end
 
+    def first_time_buy?
+      buyer_type == 'isFTB'
+    end
+
     protected
 
     def bands_to_use
-      higher_rate? ? HIGHER_BANDS : STANDARD_BANDS
+      higher_rate? ? HIGHER_BANDS[phase] : STANDARD_BANDS[phase]
     end
 
     def tax_for_band(band_start, band_end, rate)

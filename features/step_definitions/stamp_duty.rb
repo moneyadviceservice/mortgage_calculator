@@ -30,6 +30,12 @@ When(/^I enter a house price of (\d+)$/) do |amount|
   @stamp_duty.property_price.set amount
 end
 
+And("I enter a completion date of {int}-{int}-{int}") do |year, month, day|
+  @stamp_duty.completion_date_year.select(year)
+  @stamp_duty.completion_date_month.select(Date::MONTHNAMES[month])
+  @stamp_duty.completion_date_day.select(day)
+end
+
 When(/^I click next$/) do
   @stamp_duty.next.click
 end
@@ -47,7 +53,7 @@ Then(/^I reenter my house price with "(.*?)"$/) do |amount|
 end
 
 When(/^I click next again$/) do
-  @stamp_duty.recalculate.click if js_disabled?
+  @stamp_duty.recalculate.click
 end
 
 Then(/^they see "(.*?)"$/) do |content|
@@ -55,23 +61,23 @@ Then(/^they see "(.*?)"$/) do |content|
 end
 
 Given(/^I am a first time buyer$/) do
-  @stamp_duty.select('a first-time buyer', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('a first-time buyer', from: @buyer_type)
 end
 
 Given(/^I am a next home buyer$/) do
-  @stamp_duty.select('buying my first or my next home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying my next home', from: @buyer_type)
 end
 
 Given("I am an additional or buy-to-let property buyer") do
-  @stamp_duty.select('buying an additional or buy-to-let property', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional or buy-to-let property', from: @buyer_type)
 end
 
 Given("I am buying an additional property or second home") do
-  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional property or second home', from: @buyer_type)
 end
 
 And(/^I select to calculate for a second home$/) do
-  @stamp_duty.select('buying an additional property or second home', from: @buyer_type)
+  @stamp_duty.buyer_type_select.select('buying an additional property or second home', from: @buyer_type)
 end
 
 When(/^I enter my house price$/) do
@@ -89,6 +95,12 @@ end
 
 And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
+end
+
+And("I see a completion date of {int}{int}{int}") do |year, month, day|
+  expect(@stamp_duty.completion_date_year_step_two).to eq(year)
+  expect(@stamp_duty.completion_date_month_step_two).to eq(month)
+  expect(@stamp_duty.completion_date_day_step_two).to eq(day)
 end
 
 Then(/^I see the Welsh stamp duty calculator$/) do
