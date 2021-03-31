@@ -24,4 +24,4 @@ Scenario: First time buyer
   When I enter a house price of 510000
   And I enter a completion date
   And I click next
-  Then I should see the first time eligibility message
+  Then I should NOT see the first time eligibility message
