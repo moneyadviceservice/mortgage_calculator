@@ -45,7 +45,8 @@ cy:
     activemodel:
       attributes:
         mortgage_calculator/land_transaction_tax:
-          price: "Pris eiddo:"
+          price: "Pris eiddo"
+          completion_date: "Dyddiad cwblhau"
     results:
       title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
       second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
