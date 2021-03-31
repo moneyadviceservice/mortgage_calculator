@@ -29,7 +29,7 @@ cy:
       title: "Prynu yn Lloegr, Gogledd Iwerddon neu'r Alban?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch. Mae hyn fel arfer yn seiliedig ar y pris rydych chi'n ei dalu am yr eiddo neu'r tir, ond gallai gynnwys mathau eraill o daliad fel nwyddau, gwaith neu wasanaethau, rhyddhau o ddyled, neu drosglwyddo dyled, gan gynnwys gwerth unrhyw forgais sy'n ddyledus. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £280,000 yn talu unrhyw dreth ar werth yr eiddo hyd at  £250,000 a 5% ar y gwerth rhwng £250,000 a £280,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am Dreth Trafodiad Tir (LTT) fyddai £1,500."
+    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch."
     how_calculated_table_ftb_phase_1:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
     how_calculated_table_next_phase_1:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
     how_calculated_table_second_phase_1: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
