@@ -55,10 +55,13 @@ en:
     how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price."
     how_calculated_table_ftb_phase_1: "The table below shows the rates of stamp duty a <b>first-time buyer</b> with a completion date on or before 30 June 2021 would pay."
     how_calculated_table_next_phase_1: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> with a completion date on or before 30 June 2021 would pay."
+    how_calculated_table_second_phase_1: "The table below shows the rates of stamp duty for <b>someone buying their additional property or second home</b> with a completion date on or before 30 June 2021 would pay."
     how_calculated_table_ftb_phase_2: "The table below shows the rates of stamp duty a <b>first-time buyer</b> with a completion date on or before 30 September 2021 would pay."
     how_calculated_table_next_phase_2: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> with a completion date on or before 30 September 2021 would pay."
+    how_calculated_table_second_phase_2: "The table below shows the rates of stamp duty for <b>someone buying their additional property or second home</b> with a completion date on or before 30 September 2021 would pay."
     how_calculated_table_ftb_phase_3: "The table below shows the rates of stamp duty a <b>first-time buyer</b> would pay."
     how_calculated_table_next_phase_3: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> would pay."
+    how_calculated_table_second_phase_3: "The table below shows the rates of stamp duty for <b>someone buying their additional property or second home</b> would pay."
     how_calculated_additional: "If the property is an additional property or second home there will be an extra 3% to pay on top of the relevant standard rates."
     how_calculated_extra: "* An extra 3% is charged if property is an additional property or second home. Properties under %{amount} are not subject to the additional SDLT rate."
     describe_price_field: Make sure to clear the existing number before entering the new number.
