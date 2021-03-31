@@ -407,6 +407,7 @@ RSpec/NamedSubject:
     - 'spec/models/person_spec.rb'
     - 'spec/models/repayment_spec.rb'
     - 'spec/models/stamp_duty_spec.rb'
+    - 'spec/models/tax_calculator_spec.rb'
 
 # Offense count: 88
 RSpec/NestedGroups:
@@ -534,6 +535,8 @@ Style/ExpandPathArguments:
 Style/GuardClause:
   Exclude:
     - 'app/controllers/mortgage_calculator/repayments_controller.rb'
+    - 'app/controllers/mortgage_calculator/land_transaction_taxes_controller.rb'
+    - 'app/controllers/mortgage_calculator/property_tax_calculator_controller.rb'
     - 'app/controllers/mortgage_calculator/stamp_duties_controller.rb'
     - 'app/models/mortgage_calculator/person.rb'
 
