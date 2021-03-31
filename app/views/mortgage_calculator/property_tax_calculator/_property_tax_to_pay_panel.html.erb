@@ -18,12 +18,6 @@
         )%>
   </p>
 
-  <% if outside_first_time_rate? && phase == :phase_1 && i18n_locale_namespace == 'stamp_duty' %>
-    <p class="stamp-duty__FTB_conditional is-active">
-      <%= I18n.t("#{i18n_locale_namespace}.results.FTB_conditional", amount: ftb_threshold) %>
-    </p>
-  <% end %>
-
   <div>
     <%= render 'property_tax_tip', rates: rates %>
   </div>
