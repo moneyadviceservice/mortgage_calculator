@@ -77,7 +77,7 @@ module MortgageCalculator
     def completion_date_is_in_the_future
       errors.add(:completion_date, 'must be present') && return if completion_date.blank?
       errors.add(:completion_date, 'invalid date') && return unless valid_date?(completion_date)
-      errors.add(:completion_date, 'must be in the future') && return unless completion_date.to_date.future?
+      errors.add(:completion_date, 'must be in the future') && return if completion_date.to_date.past?
     end
 
     def valid_date?(value)
