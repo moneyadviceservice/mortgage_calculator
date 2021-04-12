@@ -204,19 +204,19 @@ cy:
         tip_1:
           heading: "Ystyriwch fenthyca llai"
           info_html: "Dysgwch am %{deposit} a %{ratios}"
-          url_text_1: "gynilo i gael blaendal"
-          url_1: "https://www.moneyhelper.org.uk/cy/articles/arbed-arian-ar-gyfer-blaendal"
-          url_text_2: "chymarebau benthyciad i werth"
-          url_2: "https://www.moneyhelper.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
+          url_text_1: "Gynilo i gael blaendal"
+          url_1: "https://www.moneyhelper.org.uk/cy/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
+          url_text_2: "Chymarebau benthyciad i werth"
+          url_2: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/buying-your-first-home/how-much-can-you-afford-to-borrow"
         tip_2:
           heading: "Edrychwch ar wahanol gynlluniau i’ch helpu i brynu cartref"
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai cyfredol"
-          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners.html"
         tip_3:
           heading: "Rhowch drefn ar eich arian"
           info_html: "Defnyddiwch ein %{budget_planner} i gael y darlun llawn"
           url_text: "Cynllunydd Cyllideb"
-          url: "https://www.moneyhelper.org.uk/cy/tools/cynllunydd-cyllideb/start"
+          url: "https://www.moneyhelper.org.uk/cy/everyday-money/budgeting/budget-planner"
       learn_more:
         title: "Fforddio eich morgais"
         tip_1: "Meddyliwch am wariant eich cartref yn ogystal â’ch taliadau morgais."

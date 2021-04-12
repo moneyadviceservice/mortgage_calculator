@@ -204,19 +204,19 @@ en:
         tip_1:
           heading: "Think about borrowing less"
           info_html: "Learn about %{deposit} and %{ratios}"
-          url_text_1: "saving for a deposit"
-          url_1: "https://www.moneyhelper.org.uk/en/articles/saving-money-for-a-deposit"
-          url_text_2: "loan to value ratios"
-          url_2: "https://www.moneyhelper.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+          url_text_1: "Saving for a deposit"
+          url_1: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
+          url_text_2: "Loan to value ratios"
+          url_2: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/how-much-can-you-afford-to-borrow"
         tip_2:
           heading: "Explore different schemes to help you buy a home"
           info_html: "Government schemes for first-time home buyers and existing homeowners"
-          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners.html"
         tip_3:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
-          url_text: "Budger Planner"
-          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+          url_text: "Budget Planner"
+          url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
       default:
         title: "Three steps to finding an affordable mortgage"
         tip_1:
