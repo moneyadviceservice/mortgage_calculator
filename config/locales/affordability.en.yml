@@ -173,17 +173,17 @@ en:
         title: "Three steps to finding an affordable mortgage"
         tip_1:
           heading: "Make sure you get the best mortgage for you"
-          info_html: "Understanding different types of mortgages"
-          url: "https://www.moneyhelper.org.uk/en/categories/types-of-mortgage"
+          info_html: "Understanding mortgages"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-interest-rate-options.html"
         tip_2:
           heading: "Don’t make these mistakes"
           info_html: "Buying a home: how to avoid the most common mistakes"
-          url: "https://www.moneyhelper.org.uk/en/articles/buying-a-home-how-to-avoid-the-most-common-mistakes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/issues-with-the-property-when-buying-a-house.html"
         tip_3:
           heading: "Get started with your application"
           info_html: "Home-buying process – %{steps}"
-          url_text: "steps to buying a new house or flat"
-          url: "https://www.moneyhelper.org.uk/en/articles/money-timeline-when-buying-property-england-wales--n-ireland"
+          url_text: "Steps to buying a new house or flat"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/money-timeline-when-buying-property-england-wales-n-ireland.html"
       medium:
         title: "What you should do next"
         tip_1:

@@ -173,8 +173,8 @@ cy:
         title: "Tri cham i ganfod morgais fforddiadwy"
         tip_1:
           heading: "Gwnewch yn siŵr eich bod yn cael y morgais gorau ar eich cyfer chi"
-          info_html: "Deall gwahanol fathau o forgeisi"
-          url: "https://www.moneyhelper.org.uk/cy/categories/types-of-mortgage"
+          info_html: "Deall morgeisi"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-interest-rate-options.html"
         tip_2:
           heading: "Peidiwch â gwneud y camgymeriadau hyn"
           info_html: "Prynu cartref: sut i osgoi’r camgymeriadau mwyaf cyffredin"
@@ -182,8 +182,8 @@ cy:
         tip_3:
           heading: "Dechreuwch arni gyda’ch cais"
           info_html: "Y broses o brynu tŷ – %{steps}"
-          url_text: "camau i brynu tŷ neu fflat newydd"
-          url: "https://www.moneyhelper.org.uk/cy/articles/llinell-amser-arian-wrth-brynu-cartref"
+          url_text: "Camau i brynu tŷ neu fflat newydd"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/buying-your-first-home/money-timeline-when-buying-property-england-wales-n-ireland.html"
       medium:
         title: "Beth ddylech chi ei wneud nesaf"
         tip_1:
