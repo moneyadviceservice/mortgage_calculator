@@ -193,12 +193,12 @@ en:
         tip_2:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
-          url_text: "Budger Planner"
-          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+          url_text: "Budget Planner"
+          url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
         tip_3:
           heading: "Understand all the costs"
           info_html: "Make sure you understand all the up front costs of buying a home"
-          url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
       high:
         title: "Three steps to making your mortgage more affordable"
         tip_1:
@@ -236,6 +236,7 @@ en:
       learn_more:
         title: "Affording your mortgage"
         tip_1_html: "Think about your household spend as well as your mortgage repayments."
+        tip_1: "Think about your household spend as well as your mortgage repayments."
         tip_2: "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
         more:
           copy_html: "Read more"
