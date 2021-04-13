@@ -1,8 +1,8 @@
 module MortgageCalculator
   module Version
     MAJOR = 3
-    MINOR = 17
-    PATCH = 0
+    MINOR = 18
+    PATCH = 1
 
     STRING = [MAJOR, MINOR, PATCH].join('.')
   end

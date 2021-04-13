@@ -1,5 +1,7 @@
 module MortgageCalculator
   module LandTransactionTaxesHelper
+    include PhaseHelper
+
     def band(num1, num2)
       num1 = num1.ceil
       return maximum_band(num1 - 1) if num2.nil?
@@ -16,12 +18,22 @@ module MortgageCalculator
       )
     end
 
+    def first_time_buyer?
+      @ltt.first_time_buy?
+    end
+
+    def completion_date
+      return @ltt.try(:completion_date) if defined? @ltt
+      Time.zone.today
+    end
+
     def calculator_config_json
       calculator = MortgageCalculator::LandTransactionTax
       {
         tool: 'ltt',
-        standard: calculator::STANDARD_BANDS,
-        higher: calculator::HIGHER_BANDS,
+        completion_date: completion_date,
+        standard: calculator::STANDARD_BANDS[phase],
+        higher: calculator::HIGHER_BANDS[phase],
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD
       }.to_json

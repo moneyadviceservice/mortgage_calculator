@@ -9,13 +9,18 @@ cy:
     tool_name: "treth-trafodiadau-tir"
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
     heading_description: "Mae’n rhaid i chi dalu Treth Trafodiadau Tir os ydych yn prynu eiddo neu dir dros bris penodol yng Nghymru. Y trothwy presennol yw £180,000 ar gyfer eiddo preswyl.Efallai bydd cyfraddau preswyl uwch yn berthnasol os ydych eisoes yn berchen ar un neu fwy eiddo preswyl. Mae’n rhaid i chi anfon ffurflen dychweliad LTT i Awdurdod Refeniw Cymru a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad)."
+    subtitle_paras:
+    - Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.
+    - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
+    - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://llyw.cymru/cyfrifiannell-treth-trafodiadau-tir'>llyw.cymru/cyfrifiannell-treth-trafodiadau-tir</a>.
     heading_results: "Cyfrifiannell Treth Trafodiadau Tir - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodiadau Tir ar eich eiddo preswyl yng Nghymru"
     next: "Nesaf"
     select:
       label: "Rwy'n"
       option_prompt: "dewiswch opsiwn"
-      option_isNextHome: "prynu fy nghartref cyntaf neu fy nghartref nesaf"
+      option_isNextHome: "prynu fy nghartref nesaf"
+      option_isFTB: prynu am y tro cyntaf
       option_isSecondHome: "prynu eiddo ychwanegol neu ail gartref"
       tooltip_html: "Fel arfer bydd yn rhaid i chi dalu cyfraddau uwch o Dreth Trafodiad Tir os ydych yn prynu eiddo preswyl sy'n werth %{amount} neu fwy ac eisoes yn berchen ar 1 eiddo neu fwy."
     recalculate: Ailgyfrifo
@@ -24,14 +29,24 @@ cy:
       title: "Prynu yn Lloegr, Gogledd Iwerddon neu'r Alban?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch. Mae hyn fel arfer yn seiliedig ar y pris rydych chi'n ei dalu am yr eiddo neu'r tir, ond gallai gynnwys mathau eraill o daliad fel nwyddau, gwaith neu wasanaethau, rhyddhau o ddyled, neu drosglwyddo dyled, gan gynnwys gwerth unrhyw forgais sy'n ddyledus. Er enghraifft, ni fyddai rhywun sy'n prynu eiddo am £280,000 yn talu unrhyw dreth ar werth yr eiddo hyd at  £250,000 a 5% ar y gwerth rhwng £250,000 a £280,000. Yn yr achos hwn, cyfanswm yr atebolrwydd am Dreth Trafodiad Tir (LTT) fyddai £1,500." 
-    how_calculated_additional: "Efallai y bydd yn rhaid i unrhyw un sy'n prynu eiddo ychwanegol dalu cyfradd uwch o LTT. Yn yr enghraifft hon, byddai LTT o 4% yn ddyledus ar werth yr eiddo hyd at £180,000 (£7,200), 7.5% ar y gwerth rhwng £180,000 a £ 250,000 (£5,250) ac 9% ar y gwerth rhwng £250,000 a  £280,000 (£2,700) sy'n golygu mai cyfanswm y LTT sy'n ddyledus fyddai £15,150. Os ydych chi'n amnewid eich prif breswylfa, efallai na fydd y cyfraddau uwch yn berthnasol."
+    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch."
+    how_calculated_table_ftb_phase_1:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
+    how_calculated_table_next_phase_1:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
+    how_calculated_table_second_phase_1: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
+    how_calculated_table_ftb_phase_2:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
+    how_calculated_table_next_phase_2:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_table_second_phase_2: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_table_ftb_phase_3:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
+    how_calculated_table_next_phase_3:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_table_second_phase_3: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref, efallai bydd y cyfraddau preswyl uwch a ddangosir yn yr ail dabl yn berthnasol."
     how_calculated_extra: "* Nid yw prynu eiddo o dan %{amount} yn destun i gyfraddau uwch o Treth Trafodiad Tir (LTT)"
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:
         mortgage_calculator/land_transaction_tax:
-          price: "Pris eiddo:"
+          price: "Pris eiddo"
+          completion_date: "Dyddiad cwblhau"
     results:
       title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
       second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"

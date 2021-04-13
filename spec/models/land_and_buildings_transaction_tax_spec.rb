@@ -33,7 +33,7 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
 
   it_should_behave_like 'currency inputs', [:price]
 
-  describe 'calculations' do
+  describe 'validations' do
     let(:buyer_type) { 'isNextHome' }
 
     subject { described_class.new(price: price, buyer_type: buyer_type) }
@@ -46,312 +46,127 @@ describe MortgageCalculator::LandAndBuildingsTransactionTax do
         expect(subject.errors).not_to be_empty
       end
     end
-
-    context 'when house price is 0' do
-      let(:price) { 0 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to be_zero }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to be_zero }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to be_zero }
-      end
-    end
-
-    context 'when house price is 39000' do
-      let(:price) { 39_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(39_000) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(39_000) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(39_000) }
-      end
-    end
-
-    context 'when house price is 40000' do
-      let(:price) { 40_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(40_000) }
-      end
-
-      context 'and is next home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(40_000) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(1600) }
-        its(:percentage_tax) { is_expected.to eq(4.0) }
-        its(:total_due) { is_expected.to eq(41_600) }
-      end
-    end
-
-    context 'when house price is 145000' do
-      let(:price) { 145_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(145_000) }
-      end
-
-      context 'and is next home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(145_000) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(5800) }
-        its(:percentage_tax) { is_expected.to eq(4) }
-        its(:total_due) { is_expected.to eq(150_800) }
-      end
-    end
-
-    context 'when house price is 185000.00' do
-      let(:price) { 185_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eq(185_000) }
-      end
-
-      context 'and is next home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to be_zero }
-        its(:percentage_tax) { is_expected.to be_zero }
-        its(:total_due) { is_expected.to eql(185_000) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(7_400) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(4) }
-        its(:total_due) { is_expected.to eq(192_400) }
-      end
-    end
-
-    context 'when house price is 275000' do
-      let(:price) { 275_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(1250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.454545454545455) }
-        its(:total_due) { is_expected.to eql(276250) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(1250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.454545454545455) }
-        its(:total_due) { is_expected.to eql(276250) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(12250) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(4.454545454545455) }
-        its(:total_due) { is_expected.to eq(287250) }
-      end
-    end
-
-    context 'when house price is 300,000' do
-      let(:price) { 300_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(2500) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.833333333333333) }
-        its(:total_due) { is_expected.to eql(302500) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(2500) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(0.833333333333333) }
-        its(:total_due) { is_expected.to eql(302500) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(14_500) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.833333333333333) }
-        its(:total_due) { is_expected.to eq(314_500) }
-      end
-    end
-
-    context 'when house price is 490,000' do
-      let(:price) { 490_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(20250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.13265306122449) }
-        its(:total_due) { is_expected.to eql(510250) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(20250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.13265306122449) }
-        its(:total_due) { is_expected.to eql(510250) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(39_850) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(8.13265306122449) }
-        its(:total_due) { is_expected.to eq(529_850) }
-      end
-    end
-
-    context 'when house price is 510000.00' do
-      let(:price) { 510_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(22250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.362745098039216) }
-        its(:total_due) { is_expected.to eql(532250) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(22250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(4.362745098039216) }
-        its(:total_due) { is_expected.to eql(532250) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(42650) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(8.362745098039216) }
-        its(:total_due) { is_expected.to eq(552650) }
-      end
-    end
-
-    context 'when house price is 937500' do
-      let(:price) { 937_500 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(68750) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.333333333333333) }
-        its(:total_due) { is_expected.to eql(1006250) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(68750) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(7.333333333333333) }
-        its(:total_due) { is_expected.to eql(1006250) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(106_250) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(11.333333333333333) }
-        its(:total_due) { is_expected.to eq(1_043_750) }
-      end
-    end
-
-    context 'when house price is 2100000' do
-      let(:price) { 2_100_000 }
-
-      context 'and is first time buy' do
-        let(:buyer_type) { 'isFTB' }
-
-        its(:tax_due) { is_expected.to eql(208250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(9.916666666666667) }
-        its(:total_due) { is_expected.to eql(2308250) }
-      end
-
-      context 'and is not a second home' do
-        let(:buyer_type) { 'isNextHome' }
-
-        its(:tax_due) { is_expected.to eql(208250) }
-        its(:percentage_tax) { is_expected.to be_within(0.1).of(9.916666666666667) }
-        its(:total_due) { is_expected.to eql(2308250) }
-      end
-
-      context 'and is a second home' do
-        let(:buyer_type) { 'isSecondHome' }
-
-        its(:tax_due) { is_expected.to eq(292_250) }
-        its(:percentage_tax) { is_expected.to be_within(0.01).of(13.916666666666667) }
-        its(:total_due) { is_expected.to eq(2_392_250) }
+  end
+
+  scenarios = [
+    { price: 120_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 4800,  percentage_tax: 4.00,   precision: 0.1, total_due: 124_800 },
+    { price: 175_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 7600,  percentage_tax: 4.34,   precision: 0.1, total_due: 182_600 },
+    { price: 201_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 9160,  percentage_tax: 4.56,   precision: 0.1, total_due: 210_160 },
+    { price: 250_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 12100,  percentage_tax: 4.84,   precision: 0.1, total_due: 262_100 },
+    { price: 300_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 16600,  percentage_tax: 5.53,   precision: 0.1, total_due: 316_600 },
+    { price: 325_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 18850,  percentage_tax: 5.80,   precision: 0.1, total_due: 343_850 },
+    { price: 400_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 29350,  percentage_tax: 7.34,   precision: 0.1, total_due: 429_350 },
+    { price: 743_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 77370,  percentage_tax: 10.41,   precision: 0.1, total_due: 820_370 },
+    { price: 750_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 78350,  percentage_tax: 10.45,   precision: 0.1, total_due: 828_350 },
+    { price: 1_200_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 150350,  percentage_tax: 12.53,   precision: 0.1, total_due: 1_350_350 },
+
+    { price: 39_000,  buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 175_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 175_000 },
+    { price: 201_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 520,  percentage_tax: 0.26,   precision: 0.1, total_due: 201_520 },
+    { price: 250_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 1500,  percentage_tax: 0.6,   precision: 0.1, total_due: 251_500 },
+    { price: 300_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 4000,  percentage_tax: 1.33,   precision: 0.1, total_due: 304_000 },
+    { price: 325_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 5250,  percentage_tax: 1.62,   precision: 0.1, total_due: 330_250 },
+    { price: 400_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 12750,  percentage_tax: 3.19,   precision: 0.1, total_due: 412_750 },
+    { price: 743_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 47050,  percentage_tax: 6.33,   precision: 0.1, total_due: 790_050 },
+    { price: 750_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 47750,  percentage_tax: 6.37,   precision: 0.1, total_due: 797_750 },
+    { price: 1_200_000, buyer_type: 'isFTB', phase: :phase_1, tax_due: 101750,  percentage_tax: 8.48,   precision: 0.1, total_due: 1_301_750 },
+    { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 2600,  percentage_tax: 1,   precision: 0.1, total_due: 262_600 },
+    { price: 300_019, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 4600,  percentage_tax: 1.53,   precision: 0.1, total_due: 304_619 },
+    { price: 350_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 8350,  percentage_tax: 2.39,   precision: 0.1, total_due: 358_350 },
+    { price: 450_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 18350,  percentage_tax: 4.08,   precision: 0.1, total_due: 468_350 },
+    { price: 550_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 28350,  percentage_tax: 5.15,   precision: 0.1, total_due: 578_350 },
+    { price: 901_000, buyer_type: 'isNextHome', phase: :phase_1, tax_due: 66470,  percentage_tax: 7.38,   precision: 0.1, total_due: 967_470 },
+
+    { price: 39_000,  buyer_type: 'isFTB', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isFTB', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 175_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 175_000 },
+    { price: 201_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 520,  percentage_tax: 0.26,   precision: 0.1, total_due: 201_520 },
+    { price: 250_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 1500,  percentage_tax: 0.6,   precision: 0.1, total_due: 251_500 },
+    { price: 300_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 4000,  percentage_tax: 1.33,   precision: 0.1, total_due: 304_000 },
+    { price: 325_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 5250,  percentage_tax: 1.62,   precision: 0.1, total_due: 330_250 },
+    { price: 400_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 12750,  percentage_tax: 3.19,   precision: 0.1, total_due: 412_750 },
+    { price: 743_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 47050,  percentage_tax: 6.33,   precision: 0.1, total_due: 790_050 },
+    { price: 750_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 47750,  percentage_tax: 6.27,   precision: 0.1, total_due: 797_750 },
+    { price: 1_200_000, buyer_type: 'isFTB', phase: :phase_2, tax_due: 101750,  percentage_tax: 8.48,   precision: 0.1, total_due: 1_301_750 },
+    { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 2600,  percentage_tax: 1,   precision: 0.1, total_due: 262_600 },
+    { price: 300_019, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 4600,  percentage_tax: 1.53,   precision: 0.1, total_due: 304_619 },
+    { price: 350_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 8350,  percentage_tax: 2.39,   precision: 0.1, total_due: 358_350 },
+    { price: 450_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 18350,  percentage_tax: 4.08,   precision: 0.1, total_due: 468_350 },
+    { price: 550_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 28350,  percentage_tax: 5.15,   precision: 0.1, total_due: 578_350 },
+    { price: 901_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 66470,  percentage_tax: 7.38,   precision: 0.1, total_due: 967_470 },
+
+    { price: 39_000,  buyer_type: 'isFTB', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isFTB', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 175_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 175_000 },
+    { price: 201_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 520,  percentage_tax: 0.26,   precision: 0.1, total_due: 201_520 },
+    { price: 250_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 1500,  percentage_tax: 0.6,   precision: 0.1, total_due: 251_500 },
+    { price: 300_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 4000,  percentage_tax: 1.33,   precision: 0.1, total_due: 304_000 },
+    { price: 325_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 5250,  percentage_tax: 1.62,   precision: 0.1, total_due: 330_250 },
+    { price: 400_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 12750,  percentage_tax: 3.19,   precision: 0.1, total_due: 412_750 },
+    { price: 743_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 47050,  percentage_tax: 6.33,   precision: 0.1, total_due: 790_050 },
+    { price: 750_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 47750,  percentage_tax: 6.37,   precision: 0.1, total_due: 797_750 },
+    { price: 1_200_000, buyer_type: 'isFTB', phase: :phase_3, tax_due: 101750,  percentage_tax: 8.48,   precision: 0.1, total_due: 1_301_750 },
+    { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
+    { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
+    { price: 120_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 120_000 },
+    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 2600,  percentage_tax: 1,   precision: 0.1, total_due: 262_600 },
+    { price: 300_019, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 4600,  percentage_tax: 1.53,   precision: 0.1, total_due: 304_619 },
+    { price: 350_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 8350,  percentage_tax: 2.39,   precision: 0.1, total_due: 358_350 },
+    { price: 450_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 18350,  percentage_tax: 4.08,   precision: 0.1, total_due: 468_350 },
+    { price: 550_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 28350,  percentage_tax: 5.15,   precision: 0.1, total_due: 578_350 },
+    { price: 901_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 66470,  percentage_tax: 7.38,   precision: 0.1, total_due: 967_470 }
+
+  ]
+
+  describe 'calculation scenarios' do
+    scenarios.each do |scenario|
+      context_name = case scenario[:buyer_type]
+                     when 'isFTB'
+                       'and is first time buy'
+                     when 'isNextHome'
+                       'and is not a second home'
+                     when 'isSecondHome'
+                       'and is a second home'
+                     end
+
+      completion_date = case scenario[:phase]
+                        when :phase_1
+                          Date.new(2021, 4, 21)
+                        when :phase_2
+                          Date.new(2021, 7, 21)
+                        when :phase_3
+                          Date.new(2021, 10, 21)
+                        else
+                          Date.new(2022, 1, 1)
+                        end
+
+      context "When house price is #{scenario[:price]} #{context_name} and completion_date is #{completion_date}" do
+        subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type], completion_date: completion_date) }
+
+        its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
+
+        its(:percentage_tax) do
+          is_expected.to (
+          if scenario[:percentage_tax] == 0
+            be_zero
+          elsif scenario[:percentage_tax] != 0 && scenario[:precision] != 0
+            be_within(scenario[:precision]).of(scenario[:percentage_tax])
+          else
+            eq(scenario[:percentage_tax])
+          end
+        )
+        end
+        its(:total_due) { is_expected.to (scenario[:total_due] == 0 ? be_zero : eq(scenario[:total_due])) }
       end
     end
   end

@@ -5,7 +5,7 @@ module MortgageCalculator
     describe '#calculator_config_json' do
       it 'sets the first theshold to the correct value' do
         config = JSON.parse(calculator_config_json)
-        expect(config["standard"].first["threshold"]).to eq(250000)
+        expect(config["standard"].first["threshold"]).to eq(145000)
       end
     end
 
@@ -31,7 +31,7 @@ module MortgageCalculator
 
     describe '#ftb_starting_price' do
       it 'returns the formatted price at which lbtt becomes payable for first time buyers' do
-        expect(ftb_starting_price).to eq('£250,000')
+        expect(ftb_starting_price).to eq('£175,000')
       end
     end
   end

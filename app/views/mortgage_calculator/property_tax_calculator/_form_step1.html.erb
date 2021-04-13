@@ -11,6 +11,7 @@
     <%= t("#{i18n_locale_namespace}.select.label") %>
     <%= f.select(:buyer_type, [
       [t("#{i18n_locale_namespace}.select.option_prompt"), ''],
+      [t("#{i18n_locale_namespace}.select.option_isFTB"), 'isFTB'],
       [t("#{i18n_locale_namespace}.select.option_isNextHome"), 'isNextHome'],
       [t("#{i18n_locale_namespace}.select.option_isSecondHome"), 'isSecondHome']
       ], {}, {'ng-model' => 'stampDuty.buyerType'}
@@ -28,8 +29,19 @@
   <% end %>
 
   <div class="stamp-duty__form form__item">
+    <%= f.label :completion_date %>
+
+    <%= f.date_select :completion_date, {
+      value: resource.price_formatted, 
+      order: [:day, :month, :year]
+    } %>
+  </div>
+
+  <div class="stamp-duty__form form__item">
     <%= f.label :price, class: "stamp-duty__input-description" %>
-    <div class="visually-hidden" id="mc_accessibility_describe_price"><%= t 'stamp_duty.describe_price_field' %></div>
+    <div class="visually-hidden" id="mc_accessibility_describe_price">
+      <%= t 'stamp_duty.describe_price_field' %>
+    </div>
 
     <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
       <span class="stamp-duty__input--unit">£</span>
@@ -44,15 +56,14 @@
                        "class" => 'stamp-duty__input' %>
     </span>
 
-      <%= f.submit I18n.t("#{i18n_locale_namespace}.next"),
+    <%= f.submit I18n.t("#{i18n_locale_namespace}.next"),
       class: "button button--primary stamp-duty__submit",
-        'ng-click' => 'navigateAndFocus($event)',
-        'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
-        'analytics-category' => 'Stamp Duty Calculator',
-        'analytics-action' => 'Completion',
-        'analytics-label' => 'Click',
-        'analytics' => '',
-        'analytics-on' => 'click'
-        %>
+      'ng-disabled' => '!stampDuty.propertyPrice || !stampDuty.buyerType',
+      'analytics-category' => 'Stamp Duty Calculator',
+      'analytics-action' => 'Completion',
+      'analytics-label' => 'Click',
+      'analytics' => '',
+      'analytics-on' => 'click'
+    %>
   </div>
 <% end %>

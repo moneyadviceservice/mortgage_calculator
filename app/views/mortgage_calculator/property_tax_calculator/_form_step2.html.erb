@@ -19,9 +19,9 @@
       <span class="stamp-duty__input-wrapper">
         <span class="stamp-duty__input--unit">£</span>
         <%= f.text_field :price,
-                         :value => resource.price_formatted,
+                         :value => resource.price,
                          class: 'stamp-duty__input dynamic-slider-property',
-                         "ng-model" => "stampDuty.propertyPrice",
+
                          "placeholder" => "0.00",
                          "currency" => '',
                          "data-m-dec" => "0",
@@ -37,22 +37,17 @@
       </span>
 
     </div>
-    <%= f.hidden_field :buyer_type %>
 
-    <div class="slider"
-          ui-slider
-          dynamic-for='dynamic-slider-property'
-          ng-model="stampDuty.propertyPrice"
-          analytics-category="Stamp Duty"
-          analytics-action="Refinement"
-          analytics-label="Price"
-          aria-hidden="true">
+    <%= f.hidden_field :buyer_type %>
+    <div class="stamp-duty__form form__item">
+      <%= f.date_select :completion_date,
+                      :value => resource.completion_date,
+                      class: "stamp-duty__completion-date" %>
     </div>
 
-    <div class="hide-with-js">
+    <div>
       <p><br><%= f.submit I18n.t("#{i18n_locale_namespace}.recalculate"),
-                          'class' => 'button',
-                          'wz-next' => '' %></p>
+                          'class' => 'button' %></p>
     </div>
 
   <% end %>
@@ -80,8 +75,8 @@
     <span class="callout__icon" aria-hidden="true">?</span>
     <h2 class="stamp-duty__info-subheading callout__heading"><%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.title") %></h2>
     <p class="stamp-duty__info-tip">
-      <%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.tip_1", 
-        url_online_portal: t("#{i18n_locale_namespace}.next_steps.learn_more.url_online_portal"), 
+      <%= I18n.t("#{i18n_locale_namespace}.next_steps.learn_more.tip_1",
+        url_online_portal: t("#{i18n_locale_namespace}.next_steps.learn_more.url_online_portal"),
         url_LBTT_form: t("#{i18n_locale_namespace}.next_steps.learn_more.url_LBTT_form")
       ).html_safe %>
     </p>
