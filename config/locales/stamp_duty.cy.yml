@@ -30,7 +30,7 @@ cy:
       england_ni:
         title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
         body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
-        link: "/cy/homes/buying-a-home/stamp-duty-calculator"
+        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
         link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-transaction-tax-calculator-wales"

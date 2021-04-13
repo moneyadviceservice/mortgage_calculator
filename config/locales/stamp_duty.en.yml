@@ -30,7 +30,7 @@ en:
       england_ni:
         title: Calculate Stamp Duty in England or Northern Ireland
         body: Properties in England and Northen Ireland are still subject to Stamp Duty.
-        link: "/en/homes/buying-a-home/stamp-duty-calculator"
+        link: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Calculate Land Transaction Tax for Wales
         link: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-transaction-tax-calculator-wales"
