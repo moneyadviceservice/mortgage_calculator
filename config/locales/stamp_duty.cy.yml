@@ -96,16 +96,16 @@ cy:
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: Treth Stamp - Popeth sydd angen i chi wybod
-          url: "/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/everything-you-need-to-know-about-stamp-duty"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyhelper.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-          - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyhelper.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: "Arolygon ac adroddiadau prynwyr tai"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/home-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: "Rhowch gynnig ar?"
         mortgage_calculator: "Cyfrifiannell morgais"

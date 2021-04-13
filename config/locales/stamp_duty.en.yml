@@ -96,16 +96,16 @@ en:
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: Stamp Duty - Everything you need to know
-          url: "/en/articles/everything-you-need-to-know-about-stamp-duty"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/everything-you-need-to-know-about-stamp-duty"
       find_out_more:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyhelper.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
-          - copy_html: Costs of moving day
-            url: "https://www.moneyhelper.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Homebuyer surveys and costs
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"
