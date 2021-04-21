@@ -47,7 +47,7 @@ en:
           title: Interest Only
           tip_1: The latest regulations mean you and your lender will need to agree a repayment plan for your mortgage.
           tip_1_linktext: Read more
-          tip_1_url: /en/homes/buying-a-home/help-with-mortgages/ways-of-repaying-an-interest-only-mortgage
+          tip_1_url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-with-mortgages/ways-of-repaying-an-interest-only-mortgage"
           hidden_title: Your interest only repayments will be
       tips:
         hidden_costs: Remember to plan for other costs like mortgage fees, legal fees and Stamp Duty tax.
@@ -88,7 +88,7 @@ en:
             - copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
               url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
         have_you_tried:
-          title: 'Have you tried?'
+          title: "Have you tried?"
           stamp_duty: "Stamp Duty calculator"
           affordability_calculator: "Affordability calculator"
       caveat:
