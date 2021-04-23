@@ -70,7 +70,7 @@ cy:
           url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Dysgu mwy
-          tip_1: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
+          tip_1_html: "Mae cael blaendal mwy neu brynu eiddo rhatach yn golygu y byddwch yn lleihau’r swm rydych yn ei fenthyca, o gymharu â gwerth yr eiddo. Gelwir hyn yn Fenthyciad i Werth. Gydag Fenthyciad i Werth is, efallai y byddwch yn gallu cael cyfraddau llog is."
           more:
             copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
             url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
@@ -88,7 +88,7 @@ cy:
             - copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
               url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
         have_you_tried:
-          title: 'Rhowch gynnig ar?'
+          title: "Rhowch gynnig ar?"
           stamp_duty: "cyfrifiannell Treth Stamp"
           affordability_calculator: "Cyfrifiannell fforddiadwyedd"
       caveat:

@@ -65,12 +65,12 @@ cy:
     next_steps:
       learn_more:
         title: "A wyddech chi?"
-        tip_1: "Mae’n rhaid i chi anfon ffurflen LTT a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad). Os oes gennych gyfreithiwr, asiant neu drawsgludwr, byddant fel arfer yn ffeilio'ch ffurflen ac yn talu'r dreth ar eich rhan. Os na wnânt hyn ar eich rhan, gallwch ffeilio ffurflen a thalu'r dreth eich hun gan ddefnyddio'r"
+        tip_1_html: "Mae’n rhaid i chi anfon ffurflen LTT a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad). Os oes gennych gyfreithiwr, asiant neu drawsgludwr, byddant fel arfer yn ffeilio'ch ffurflen ac yn talu'r dreth ar eich rhan. Os na wnânt hyn ar eich rhan, gallwch ffeilio ffurflen a thalu'r dreth eich hun gan ddefnyddio'r"
         tip_1_link: "https://llyw.cymru/ffurflen-dreth-bapur-ar-gyfer-treth-trafodiadau-tir"
         tip_1_link_url: "ffurflen bapur."
         link_1:
           title: "Treth Trafodiadau Tir – Popeth y mae angen i chi ei wybod"
-          url: "/cy/articles/treth-trafodiadau-tir-popeth-y-mae-angen-i-chi-ei-wybod"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/land-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
