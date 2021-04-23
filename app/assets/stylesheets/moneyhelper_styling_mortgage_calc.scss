@@ -1,1153 +1,1197 @@
-/* stylesheet to override MAS styles with Moneyhelper styles */ 
+/* stylesheet to override MAS styles with Moneyhelper styles */
 
-/* Needs to be the same SASS syntax to overwrite */ 
+/* Needs to be the same SASS syntax to overwrite */
 
 /* use new variables */
 
-/* Fonts come from dough/assets/fonts */ 
+/* Fonts come from dough/assets/fonts */
 
-@import 'moneyhelper_variables'; /* should this go here? check structure once uplift structure confirmed */
+@import "moneyhelper_variables"; /* should this go here? check structure once uplift structure confirmed */
 
 //Media Query Variables (copied from dough/assets/stylesheets/lib/_mediaqueries.scss - we will need to find a global
 //place for these or write to 3 into 1 mq
 
-  $mq-xs: 0 !default;
-  $mq-xs-max: (479px) !default;
-  $mq-s: (480px) !default;
-  $mq-s-max: (719px) !default;
-  $mq-m: (720px) !default;
-  $mq-m-max: (959px) !default;
-  $mq-l: (960px) !default;
-  $mq-l-max: (1199px) !default;
-  $mq-xl: (1200px) !default;
+$mq-xs: 0 !default;
+$mq-xs-max: (479px) !default;
+$mq-s: (480px) !default;
+$mq-s-max: (719px) !default;
+$mq-m: (720px) !default;
+$mq-m-max: (959px) !default;
+$mq-l: (960px) !default;
+$mq-l-max: (1199px) !default;
+$mq-xl: (1200px) !default;
 
-//End Media Query Variables 
+//End Media Query Variables
 
-//Where I've placed styles inside .mortgagecalc for now until we know the structure and what will affect what. 
-//We will aim to use global styling for tools but as this is the first one, this is not written in final layout. 
+//Where I've placed styles inside .mortgagecalc for now until we know the structure and what will affect what.
+//We will aim to use global styling for tools but as this is the first one, this is not written in final layout.
 
 .mortgagecalc {
-    margin:0 auto;
-    max-width:750px;
-    font-weight: 300; /* left the same */ 
+  margin: 0 auto;
+  max-width: 750px;
+  font-weight: 300; /* left the same */
 
-    /* headings */
-    h1,h2,h3,h4,h5,h6{
-        font-family: 'Roobert-Bold', sans-serif !important;
-        font-style: normal;
-        font-weight: bold;
-        color: $color-blue-primary;
+  /* headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roobert-Bold", sans-serif !important;
+    font-style: normal;
+    font-weight: bold;
+    color: $color-blue-primary;
+  }
+
+  p,
+  ul {
+    font-family: "Roobert-Regular", sans-serif;
+    color: $color-dark-blue-secondary;
+    line-height: 23px;
+  }
+
+  /* links */
+  p a,
+  ol li a,
+  ul li a,
+  .stamp-duty__results a,
+  .expander a,
+  .tooltip a.tooltip__link {
+    font-family: "Roobert-Regular", sans-serif;
+    color: $color-magenta-primary;
+    //text-decoration: underline;
+    &:link,
+    &:active {
+      text-decoration: underline;
+    }
+    &:hover {
+      color: $color-magenta-dark-primary;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $link_visited;
     }
 
-    p, ul {
-        font-family: 'Roobert-Regular', sans-serif;
-        color: $color-dark-blue-secondary;
-        line-height:23px;
+    &:focus {
+      outline: none;
+      text-decoration: none;
+      color: $color-dark-blue-secondary;
+      background-color: $color-yellow-secondary;
+      border-bottom: 4px solid $color-violet-primary;
     }
 
-    /* links */
-    p a, ol li a, ul li a, .stamp-duty__results a, .expander a, .tooltip a.tooltip__link {
-        font-family: 'Roobert-Regular', sans-serif;
-        color:$color-magenta-primary;
-        //text-decoration: underline;
-        &:link, &:active {
-            text-decoration: underline;
-        }
-        &:hover {
-            color:$color-magenta-dark-primary;
-            text-decoration: none;
-        }
-        &:visited {
-            color: $link_visited;
-        }
-
-        &:focus {
-            outline:none;
-            text-decoration: none;
-            color:$color-dark-blue-secondary;
-            background-color:$color-yellow-secondary;
-            border-bottom:4px solid $color-violet-primary;
-        }
-
-        &:target {
-            color:$color-violet-secondary;
-        }
+    &:target {
+      color: $color-violet-secondary;
     }
-    /* form components */
-    label {
-        font-family: 'Roobert-Medium', sans-serif;
-        color: $color-dark-blue-secondary;
-    }
-    
-    /* forms from yeast */ 
-    input[type="text"],
-    input[type="number"],
-    input[type="select"],
-    input[type="email"],
-    input[type="search"],
-    input[type="password"],
-    textarea,
-    .form__input-container {
-        font-family: 'Roobert-Regular', sans-serif;
-        border:1px solid $color-grey-secondary;
-        border-radius:4px;
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: $input_border;
-            opacity: 1; /* Firefox */
-          }
-          
-          :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $input_border; 
-          }
-          
-          ::-ms-input-placeholder { /* Microsoft Edge */
-            color: $input_border; 
-          }
-        .form__input-label{
-            font-family: 'Roobert-Regular', sans-serif;
-            color: $input_border;
-        }
-        .form__input {
-            font-family: 'Roobert-Regular', sans-serif;
-            color: $color-dark-blue-secondary;
-            font-weight:normal;
-            font-style: normal;
-            border:none;
-            padding:8px 0px;
-            min-height:38px;
-            
-            &:focus {
-                background:$color-yellow-secondary;
-                border:2px solid $color-violet-primary;
-                border-radius: 4px;
-                padding:6px 0px; 
-                outline:none;
-            }
-        } 
+  }
+  /* form components */
+  label {
+    font-family: "Roobert-Medium", sans-serif;
+    color: $color-dark-blue-secondary;
+  }
+
+  /* forms from yeast */
+  input[type="text"],
+  input[type="number"],
+  input[type="select"],
+  input[type="email"],
+  input[type="search"],
+  input[type="password"],
+  textarea,
+  .form__input-container {
+    font-family: "Roobert-Regular", sans-serif;
+    border: 1px solid $color-grey-secondary;
+    border-radius: 4px;
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $input_border;
+      opacity: 1; /* Firefox */
     }
 
-
-    select {
-        border:1px solid $color-grey-secondary;
-        border-radius:4px;
-        font-weight:normal;
-        font-style: normal;
-        color:$color-grey-secondary;
-        font-size: 1rem;
-        &:focus {
-            background-color:$color-yellow-secondary;
-            // border:2px solid $color-violet-primary;
-            border-radius: 4px;
-            //outline:2px solid $color-violet-primary;
-            outline: none;
-            border: 2px solid  $color-violet-primary;
-        }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $input_border;
     }
 
-    /* buttons */
-    .button {
-        font-family: 'Roobert-SemiBold', sans-serif;
-        box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
-        background: $color-white-supporting;
-        color: $color-magenta-primary;
-        border: 1px solid $color-magenta-primary;
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $input_border;
+    }
+    .form__input-label {
+      font-family: "Roobert-Regular", sans-serif;
+      color: $input_border;
+    }
+    .form__input {
+      font-family: "Roobert-Regular", sans-serif;
+      color: $color-dark-blue-secondary;
+      font-weight: normal;
+      font-style: normal;
+      border: none;
+      padding: 8px 0px;
+      min-height: 38px;
+
+      &:focus {
+        background: $color-yellow-secondary;
+        border: 2px solid $color-violet-primary;
         border-radius: 4px;
-        padding: 8px 16px;
-        text-decoration: none;
-        height: 40px;
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 600;
+        padding: 6px 0px;
+        outline: none;
+      }
+    }
+  }
 
-        &:visited {
-            text-decoration: none;
-        }
+  select {
+    border: 1px solid $color-grey-secondary;
+    border-radius: 4px;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-grey-secondary;
+    font-size: 1rem;
+    &:focus {
+      background-color: $color-yellow-secondary;
+      // border:2px solid $color-violet-primary;
+      border-radius: 4px;
+      //outline:2px solid $color-violet-primary;
+      outline: none;
+      border: 2px solid $color-violet-primary;
+    }
+  }
 
-        &:hover {
-            color: $color-magenta-dark-primary;
-            background: $color-light-grey-supporting;
-            border: 1px solid $color-magenta-dark-primary;
-            box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
-        }
+  /* buttons */
+  .button {
+    font-family: "Roobert-SemiBold", sans-serif;
+    box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+    background: $color-white-supporting;
+    color: $color-magenta-primary;
+    border: 1px solid $color-magenta-primary;
+    border-radius: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
 
-        &:focus,
-        &:active,
-        &:active:focus {
-            padding: 6px 14px;
-            border: 3px solid $color-violet-primary;
-            color: $color-dark-blue-secondary;
-            outline: none;
-        }
-
-        &:focus {
-            background: $color-yellow-secondary;
-            box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
-        }
-
-        &:active,
-        &:active:focus {
-            background: $color-light-grey-supporting;
-            box-shadow: 0px 1px 0px $color-white-supporting,
-                inset 0px 5px 2px rgba(0, 11, 59, 0.25);
-        }
-
-        &.button--primary {
-            color: $color-white-supporting;
-            background: $color-magenta-primary;
-            box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
-
-            &:hover {
-                color: $color-white-supporting;
-                background: $color-magenta-dark-primary;
-                box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-            }
-
-            &:focus {
-                background: $color-yellow-secondary;
-                box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-                color: $color-dark-blue-secondary;
-            }
-
-            &:active,
-            &:active:focus {
-                background: $color-magenta-dark-primary;
-                border: 3px solid $color-yellow-secondary;
-                color: $color-white-supporting;
-                box-shadow: 0px 1px 0px $color-white-supporting,
-                inset 0px 5px 2px rgba(0, 11, 59, 0.25);
-            }
-        }
-
-        &:disabled {
-        background-color: transparent;
-        border: 1px solid $color-grey;
-        color: $color-grey-secondary;
-        box-shadow: none;
-        }
-
-        &.button--compact .icon {
-        display: none;
-        }
+    &:visited {
+      text-decoration: none;
     }
 
-    .popup-tip__button {
-        background-color:$color-light-grey-supporting;
-        color:$color-magenta-primary;
-        border:3px solid $color-magenta-primary;
-        width:30px;
-        height:30px;
-
-        &:focus {
-            background-color:$color-yellow-secondary;
-            outline:none;
-            border-color:$color-violet-primary;
-            color:$color-violet-primary;
-        }
+    &:hover {
+      color: $color-magenta-dark-primary;
+      background: $color-light-grey-supporting;
+      border: 1px solid $color-magenta-dark-primary;
+      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
     }
-    /* Numbering */ 
-    .featured-list {
-        li { 
-            font-family: 'Roobert-Regular', sans-serif!important;
-            color: $color-dark-blue-secondary !important;
-            line-height: 26px;
-            margin-left:0px;
-            padding-top:0px;
 
-            &:before {
-                border:1px solid $color-teal-dark-secondary;
-                color:$color-teal-dark-secondary;
-                background:$color-white-supporting;
-                border-radius: 0px;}
-
-            @media screen and (min-width: $mq-m-max) {
-                margin-left:1em;
-            }
-        }
+    &:focus,
+    &:active,
+    &:active:focus {
+      padding: 6px 14px;
+      border: 3px solid $color-violet-primary;
+      color: $color-dark-blue-secondary;
+      outline: none;
     }
+
+    &:focus {
+      background: $color-yellow-secondary;
+      box-shadow: 0px 1px 0px rgba(0, 11, 59, 0.25);
+    }
+
+    &:active,
+    &:active:focus {
+      background: $color-light-grey-supporting;
+      box-shadow: 0px 1px 0px $color-white-supporting,
+        inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+    }
+
+    &.button--primary {
+      color: $color-white-supporting;
+      background: $color-magenta-primary;
+      box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        color: $color-white-supporting;
+        background: $color-magenta-dark-primary;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      &:focus {
+        background: $color-yellow-secondary;
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+        color: $color-dark-blue-secondary;
+      }
+
+      &:active,
+      &:active:focus {
+        background: $color-magenta-dark-primary;
+        border: 3px solid $color-yellow-secondary;
+        color: $color-white-supporting;
+        box-shadow: 0px 1px 0px $color-white-supporting,
+          inset 0px 5px 2px rgba(0, 11, 59, 0.25);
+      }
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid $color-grey;
+      color: $color-grey-secondary;
+      box-shadow: none;
+    }
+
+    &.button--compact .icon {
+      display: none;
+    }
+  }
+
+  .popup-tip__button {
+    background-color: $color-light-grey-supporting;
+    color: $color-magenta-primary;
+    border: 3px solid $color-magenta-primary;
+    width: 30px;
+    height: 30px;
+
+    &:focus {
+      background-color: $color-yellow-secondary;
+      outline: none;
+      border-color: $color-violet-primary;
+      color: $color-violet-primary;
+    }
+  }
+  /* Numbering */
+  .featured-list {
+    li {
+      font-family: "Roobert-Regular", sans-serif !important;
+      color: $color-dark-blue-secondary !important;
+      line-height: 26px;
+      margin-left: 0px;
+      padding-top: 0px;
+
+      &:before {
+        border: 1px solid $color-teal-dark-secondary;
+        color: $color-teal-dark-secondary;
+        background: $color-white-supporting;
+        border-radius: 0px;
+      }
+
+      @media screen and (min-width: $mq-m-max) {
+        margin-left: 1em;
+      }
+    }
+  }
 }
 
+.mortgagecalc__container,
+.mortgagecalc__panel {
+  background: #fff;
+  color: $color-dark-blue-secondary;
+  .mortgagecalc__panel--border-left {
+    border-left: 1px solid $color-grey-blue-supporting;
+  }
 
-
-.mortgagecalc__container, .mortgagecalc__panel {
-    background:#fff;
-    color: $color-dark-blue-secondary;
-    .mortgagecalc__panel--border-left {
-        border-left:1px solid $color-grey-blue-supporting;
-    }
-
-    .mortgagecalc__panel--border {
-        border-top:1px solid $color-grey-blue-supporting;
-    }
+  .mortgagecalc__panel--border {
+    border-top: 1px solid $color-grey-blue-supporting;
+  }
 }
 
 /* new styles for reskin */
 .mortgagecalc__panel h3 {
-    color: $color-dark-blue-secondary;
+  color: $color-dark-blue-secondary;
 }
 
 .visibly-hidden {
-    display: none;
+  display: none;
 }
 
 .mortgagecalc__submit {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 /* -------------------- */
 
-
-h1, .heading-large {
-    font-style: normal;
-    font-weight: bold;
-    color:#0F19A0}
-
-h2, .heading-medium {
-    font-style: normal;
-    font-weight: bold;
-    color:#000B3B;
+h1,
+.heading-large {
+  font-style: normal;
+  font-weight: bold;
+  color: #0f19a0;
 }
 
-/* from _slider.scss in mortgage calc */ 
-.ui-slider {
-    border-radius:4px;
-    background:$color-white-supporting;
-    border:1px solid $color-grey-secondary;
-    height:8px;
-  }
-  .ui-slider .ui-slider-handle {
-    border:2px solid $color-magenta-primary;
-    background:$color-magenta-primary;
-    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
-    width:28px;
-    height:28px;
-    
-    &:focus {
-        border:2px solid $color-violet-primary;
-        background:$color-yellow-secondary;
-        outline:none;
-    }
+h2,
+.heading-medium {
+  font-style: normal;
+  font-weight: bold;
+  color: #000b3b;
+}
 
-    &:hover {
-        border:2px solid $color-magenta-dark-primary;
-        background:$color-magenta-dark-primary;
-    }
+/* from _slider.scss in mortgage calc */
+.ui-slider {
+  border-radius: 4px;
+  background: $color-white-supporting;
+  border: 1px solid $color-grey-secondary;
+  height: 8px;
+}
+.ui-slider .ui-slider-handle {
+  border: 2px solid $color-magenta-primary;
+  background: $color-magenta-primary;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+  width: 28px;
+  height: 28px;
+
+  &:focus {
+    border: 2px solid $color-violet-primary;
+    background: $color-yellow-secondary;
+    outline: none;
+  }
+
+  &:hover {
+    border: 2px solid $color-magenta-dark-primary;
+    background: $color-magenta-dark-primary;
+  }
 }
 
 .ui-slider .ui-slider-range {
-    background:$color-magenta-primary;
-    border-radius:0px; 
+  background: $color-magenta-primary;
+  border-radius: 0px;
 }
 
 .ui-slider .ui-state-hover {
-      background:$color-magenta-dark-primary;
+  background: $color-magenta-dark-primary;
 }
 
-  /* tabs from mortgage calculator */ 
+/* tabs from mortgage calculator */
 .tabs__link {
-    font-family: 'Roobert-SemiBold', sans-serif !important;
-    text-decoration: none;
-    font-weight:normal;
-    color:$color-magenta-primary !important;
-    border-radius:4px 4px 0px 0px;
-    border-bottom:none;
-    
-   
-    &.tabs__current {
-        color: $color-blue-primary !important;
-        border:1px solid $color-grey-blue-supporting;
-        border-radius:4px 4px 0px 0px;
-        border-bottom:none;
+  font-family: "Roobert-SemiBold", sans-serif !important;
+  text-decoration: none;
+  font-weight: normal;
+  color: $color-magenta-primary !important;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: none;
 
-        &:focus {
-            background-image:image_url('images-mh/focus-state-purple-line-bg.png');
-            background-position:0px 100%;
-            background-repeat: repeat-x;
-        }
-       
-    }
+  &.tabs__current {
+    color: $color-blue-primary !important;
+    border: 1px solid $color-grey-blue-supporting;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: none;
 
     &:focus {
-        color:$color-blue-primary;
-        background-color:$color-yellow-secondary;
-        border-bottom:0;
-        outline:none;
+      background-image: image_url("images-mh/focus-state-purple-line-bg.png");
+      background-position: 0px 100%;
+      background-repeat: repeat-x;
+    }
+  }
+
+  &:focus {
+    color: $color-blue-primary;
+    background-color: $color-yellow-secondary;
+    border-bottom: 0;
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-magenta-dark-primary;
+    background: $color-white-supporting;
+    padding-bottom: 9px !important;
+  }
+
+  &:active:focus {
+    background: $color-white-smoke-supporting;
+  }
+
+  &.tabs__current {
+    &:focus {
+      background-image: image_url("images-mh/focus-state-purple-line-bg.png");
+      background-position: 0px 100%;
+      background-repeat: repeat-x;
+      border-bottom: none;
     }
 
     &:hover {
-        text-decoration:underline;
-        color:$color-magenta-dark-primary;
-        background:$color-white-supporting;
-        padding-bottom: 9px !important;
+      background-image: none;
+      background-color: $color-white-supporting;
+      text-decoration: none;
+      padding-bottom: 10px !important;
     }
-    
+
     &:active:focus {
-        background:$color-white-smoke-supporting;
+      background-image: none;
+      background: $color-white-smoke-supporting;
     }
-    
-    &.tabs__current {  
-        &:focus {
-            background-image:image_url('images-mh/focus-state-purple-line-bg.png');
-            background-position:0px 100%;
-            background-repeat: repeat-x;
-            border-bottom:none;
-        }
-
-        &:hover {
-            background-image:none;
-            background-color:$color-white-supporting;
-            text-decoration:none;
-            padding-bottom: 10px !important;
-        }
-
-        &:active:focus {
-            background-image:none;
-            background:$color-white-smoke-supporting;
-        }
-    }
+  }
 }
 
-.tabs__content, .stamp-duty__info-column {
-    border:1px solid $color-grey-blue-supporting;
-    border-radius: 0px 0px 0px 36px;
-
-    .callout--tip {
-        border:8px solid $color-yellow-secondary;
-        border-radius: 0px 0px 0px 36px;
-        margin-top:30px;
-        padding:32px 29px 26px 57px;
-        background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
-        
-
-        @media screen and (min-width: $mq-m-max) {
-            background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
-            background-size:45px 66px;
-            padding:32px 30px 30px 77px;
-        }
-        
-        h5 {
-            font-size:1.5em;
-            margin:0px;}
-
-        p {
-            margin:10px 0px;}
-
-        span {
-            display:none;
-        }
-    }
-}
-
-
-
+.tabs__content,
 .stamp-duty__info-column {
-    border: none;
-    border-radius: 0;
-}
+  border: 1px solid $color-grey-blue-supporting;
+  border-radius: 0px 0px 0px 36px;
 
-.squeeze strong {
-    font-family: 'Roobert-Regular', sans-serif;
-    color: $color-dark-blue-secondary;
-    display: inline-block;
-    margin-top: 10px;
-}
-p.squeeze strong {
-    margin-top: 17px;
-}
-
-.expander {
-    margin-top:15px;
-
-    .expander__link,
-    .expander__link--expanded {
-        display: inline-block;
-        background-image:image_url('images-mh/tool-accordion-icon.png'); 
-        background-position:0 0;
-        background-repeat: no-repeat;
-        padding-left: 55px;
-        height:47px;
-        line-height:40px;
-        padding-right:15px;
-
-        &.expander__link--expanded {
-            background:none;
-            background-image: image_url('images-mh/tool-accordion-icon-close.png');
-            background-position:0 0;
-            background-repeat: no-repeat;
-        }
-
-        &:focus {
-            background-color:$color-yellow-secondary;
-            border-bottom:4px solid $color-violet-primary;
-            outline:none;
-        }
-    
-        &.expander__link--nudge {
-            margin-top: 15px;
-        }   
-    }
-}
-  
-/* call out visibilty:hidden */
-.step_one .mortgagecalc__panel .callout--tip {
+  .callout--tip {
     border: 8px solid $color-yellow-secondary;
-    box-sizing: border-box;
     border-radius: 0px 0px 0px 36px;
-    margin-top:30px;
-    padding:32px 29px 26px 57px;
-    background: image_url('images-mh/mobile-call-out-arrow.svg') 0 20px no-repeat;
+    margin-top: 30px;
+    padding: 32px 29px 26px 57px;
+    background: image_url("images-mh/mobile-call-out-arrow.svg") 0 20px
+      no-repeat;
 
-    /* new styles for reskin */
-    span.callout__icon + p:before {
-        background: none;
+    @media screen and (min-width: $mq-m-max) {
+      background: image_url("images-mh/callout-arrow-desktop.svg") 23px -4px no-repeat;
+      background-size: 45px 66px;
+      padding: 32px 30px 30px 77px;
     }
-    /***********************/
-    
+
+    h5 {
+      font-size: 1.5em;
+      margin: 0px;
+    }
+
     p {
-        margin: 0px;
+      margin: 10px 0px;
     }
 
     span {
-        display:none;
+      display: none;
+    }
+  }
+}
+
+.stamp-duty__info-column {
+  border: none;
+  border-radius: 0;
+}
+
+.squeeze strong {
+  font-family: "Roobert-Regular", sans-serif;
+  color: $color-dark-blue-secondary;
+  display: inline-block;
+  margin-top: 10px;
+}
+p.squeeze strong {
+  margin-top: 17px;
+}
+
+.expander {
+  margin-top: 15px;
+
+  .expander__link,
+  .expander__link--expanded {
+    display: inline-block;
+    background-image: image_url("images-mh/tool-accordion-icon.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding-left: 55px;
+    height: 47px;
+    line-height: 40px;
+    padding-right: 15px;
+
+    &.expander__link--expanded {
+      background: none;
+      background-image: image_url("images-mh/tool-accordion-icon-close.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
     }
 
-    @media screen and (min-width: $mq-m-max) {
-        background: image_url('images-mh/callout-arrow-desktop.svg') 23px -4px no-repeat;
-        background-size:51px 78px;
-        padding:32px 30px 30px 77px;
-
-        p {
-            margin: 5px;
-        }
+    &:focus {
+      background-color: $color-yellow-secondary;
+      border-bottom: 4px solid $color-violet-primary;
+      outline: none;
     }
 
-    
+    &.expander__link--nudge {
+      margin-top: 15px;
+    }
+  }
+}
+
+/* call out visibilty:hidden */
+.step_one .mortgagecalc__panel .callout--tip {
+  border: 8px solid $color-yellow-secondary;
+  box-sizing: border-box;
+  border-radius: 0px 0px 0px 36px;
+  margin-top: 30px;
+  padding: 32px 29px 26px 57px;
+  background: image_url("images-mh/mobile-call-out-arrow.svg") 0 20px no-repeat;
+
+  /* new styles for reskin */
+  span.callout__icon + p:before {
+    background: none;
+  }
+  /***********************/
+
+  p {
+    margin: 0px;
+  }
+
+  span {
+    display: none;
+  }
+
+  @media screen and (min-width: $mq-m-max) {
+    background: image_url("images-mh/callout-arrow-desktop.svg") 23px -4px no-repeat;
+    background-size: 51px 78px;
+    padding: 32px 30px 30px 77px;
+
+    p {
+      margin: 5px;
+    }
+  }
 }
 
 /* new styles for reskin */
 h5.callout__heading {
-    background: none !important;
-    padding: 0 !important;
-    text-indent: 0 !important;
-    margin-top: -6px !important;
-    color: $color-dark-blue-secondary !important; 
+  background: none !important;
+  padding: 0 !important;
+  text-indent: 0 !important;
+  margin-top: -6px !important;
+  color: $color-dark-blue-secondary !important;
 }
 
 h4.mortgagecalc__heading {
-    font-family: 'Roobert-Regular', sans-serif!important;
-    color: $color-dark-blue-secondary !important; 
-    font-weight: normal;
+  font-family: "Roobert-Regular", sans-serif !important;
+  color: $color-dark-blue-secondary !important;
+  font-weight: normal;
 }
 /***********************/
 
-/* Stamp duty */ 
+/* Stamp duty */
 .mortgagecalc {
-    max-width: none;
-    .stamp-duty{
-        overflow: hidden;
-        .stamp-duty__input-wrapper {
-            .stamp-duty__input--unit {
-                top: 0.5rem
-            }
-            input {
-                font-weight:normal;
-                font-style: normal;
-                height: 40px;
-                color: $color-dark-blue-secondary;
-                //width: 275px;
-                
-                &:focus {
-                    background:$color-yellow-secondary!important; /* necessary I'm afraid */
-                    border:2px solid $color-violet-primary;
-                    border-radius: 4px;
-                    outline:none;
-                }  
-            }
+  max-width: none;
+  .stamp-duty {
+    overflow: hidden;
+    .stamp-duty__input-wrapper {
+      .stamp-duty__input--unit {
+        top: 0.5rem;
+      }
+      input {
+        font-weight: normal;
+        font-style: normal;
+        height: 40px;
+        color: $color-dark-blue-secondary;
+        //width: 275px;
+
+        &:focus {
+          background: $color-yellow-secondary !important; /* necessary I'm afraid */
+          border: 2px solid $color-violet-primary;
+          border-radius: 4px;
+          outline: none;
         }
-
-        .elsewhere__container {
-            background: $color-white-smoke-supporting !important;
-            overflow: hidden;
-            .elsewhere__item {
-                color:$color-magenta-primary ;
-                text-decoration:none;
-                h3 {
-                    color:$color-magenta-primary !important ;
-                    text-decoration:underline; 
-                }
-                
-                &:hover {
-                    color:$color-magenta-dark-primary !important;
-                    h3{
-                        text-decoration: none;
-                    }
-                }
-                &:visited {
-                    h3 {
-                        color: $link_visited !important;
-                    }
-                }
-
-                &:focus {
-                    outline:none !important;
-                    text-decoration: none;
-        
-                    h3{
-                        text-decoration: none;
-                        outline: none;
-                        color:$color-dark-blue-secondary !important;
-                        background-color: #f0f05a;
-                        border-bottom: 4px solid #8200d1;
-                    }
-                }
-
-                &:target {
-                    color:$color-violet-secondary;
-                }
-                
-            }
-        }
-
-
-        // right hand chevron inside circle
-        .elsewhere__arrow {
-            background-color:$color-light-grey-supporting;
-            background-image: image_url('images-mh/chevron-vector-right.svg') !important;
-            background-position: 14px 14px;
-            background-size:22px 22px;
-            background-repeat: no-repeat;
-            
-            use {
-                display: none;
-            }
-        }
-
-        /* stamp duty calc new styles for reskin */
-
-        h2.stamp-duty__subheading {
-            font-family: 'Roobert-Regular', sans-serif!important;
-            color: $color-dark-blue-secondary;
-        }
-
-        select {
-            font-family: 'Roobert-Regular', sans-serif;
-            color: $color-dark-blue-secondary !important;
-        }
-
-        label.stamp-duty__input-description {
-            color: $color-dark-blue-secondary !important;
-        }
-
-        span.stamp-duty__input--unit {
-            font-family: "Roobert-Medium", sans-serif !important;
-            color: $input_border;
-            line-height: 24px;
-        }
-
-        .stamp-duty__results {
-            background: $color-white-smoke-supporting;
-        }
-        .stamp-duty__results-heading {
-            font-family: 'Roobert-Medium', sans-serif!important;
-            color: $color-dark-blue-secondary;
-        }
-
-        .stamp-duty__results-tax-rate, 
-        h2.stamp-duty__have-you-tried,
-        .stamp-duty__info-column h2 {
-            font-family: 'Roobert-Regular', sans-serif!important;
-            color: $color-dark-blue-secondary;
-            font-weight: normal;
-        }
-
-        .stamp-duty__info-column h2 {
-            font-family: 'Roobert-Bold', sans-serif !important;
-            background: none;
-            text-indent: unset;
-            padding: 0;
-            margin-top: -5px;
-        }
-
-        a.stamp-duty__button:link {
-            font-family: 'Roobert-SemiBold', sans-serif !important;
-            text-decoration: none !important;
-
-        }
+      }
     }
 
-    // .stamp-duty__results a {
-    //     &:focus {
-    //         background: none;
-    //         border-bottom: none;
-    //         &:before {
-    //             background-color: $yellow_secondary;
-    //             background-image: $select_down_svg_active_show;
-    //             border: 3px solid $support_focus;
-    //         }
-    //     }
-    // }
-    // .stamp-duty__results a::before{
-    //     background-image: $select_down_svg_default_show;
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     content: '';
-    //     display: inline-block;
-    //     height: 30px;
-    //     width: 30px;
-    //     background-position: 1px 2px;
-    //     border: 1px solid #c82a87;
-    //     background-color: white;
-    //     box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
-    //     border-radius: 4px;
-    //     position: relative;
-    //     top: 12px;
-    //     left: -7px;
-         
-    // }
+    .elsewhere__container {
+      background: $color-white-smoke-supporting !important;
+      overflow: hidden;
+      .elsewhere__item {
+        color: $color-magenta-primary;
+        text-decoration: none;
+        h3 {
+          color: $color-magenta-primary !important ;
+          text-decoration: underline;
+        }
 
-    .stamp-duty__results a {
-        &::before {
-            background-image: $select_down_svg_default_show;
-            background-size: contain;
-            background-repeat: no-repeat;
-            content: '';
-            display: inline-block;
-            height: 30px;
-            width: 30px;
-            background-position: 1px 2px;
-            border: 1px solid #c82a87;
-            background-color: white;
-            box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
-            border-radius: 4px;
-            position: relative;
-            top: 12px;
-            left: -7px;
+        &:hover {
+          color: $color-magenta-dark-primary !important;
+          h3 {
+            text-decoration: none;
+          }
+        }
+        &:visited {
+          h3 {
+            color: $link_visited !important;
+          }
+        }
+
+        &:focus {
+          outline: none !important;
+          text-decoration: none;
+
+          h3 {
+            text-decoration: none;
+            outline: none;
+            color: $color-dark-blue-secondary !important;
+            background-color: #f0f05a;
+            border-bottom: 4px solid #8200d1;
+          }
+        }
+
+        &:target {
+          color: $color-violet-secondary;
+        }
+      }
+    }
+
+    // right hand chevron inside circle
+    .elsewhere__arrow {
+      background-color: $color-light-grey-supporting;
+      background-image: image_url(
+        "images-mh/chevron-vector-right.svg"
+      ) !important;
+      background-position: 14px 14px;
+      background-size: 22px 22px;
+      background-repeat: no-repeat;
+
+      use {
+        display: none;
+      }
+    }
+
+    /* stamp duty calc new styles for reskin */
+
+    h2.stamp-duty__subheading {
+      font-family: "Roobert-Regular", sans-serif !important;
+      color: $color-dark-blue-secondary;
+    }
+
+    select {
+      font-family: "Roobert-Regular", sans-serif;
+      color: $color-dark-blue-secondary !important;
+    }
+
+    label.stamp-duty__input-description {
+      color: $color-dark-blue-secondary !important;
+    }
+
+    span.stamp-duty__input--unit {
+      font-family: "Roobert-Medium", sans-serif !important;
+      color: $input_border;
+      line-height: 24px;
+    }
+
+    .stamp-duty__results {
+      background: $color-white-smoke-supporting;
+    }
+    .stamp-duty__results-heading {
+      font-family: "Roobert-Medium", sans-serif !important;
+      color: $color-dark-blue-secondary;
+    }
+
+    .stamp-duty__results-tax-rate,
+    h2.stamp-duty__have-you-tried,
+    .stamp-duty__info-column h2 {
+      font-family: "Roobert-Regular", sans-serif !important;
+      color: $color-dark-blue-secondary;
+      font-weight: normal;
+    }
+
+    .stamp-duty__info-column h2 {
+      font-family: "Roobert-Bold", sans-serif !important;
+      background: none;
+      text-indent: unset;
+      padding: 0;
+      margin-top: -5px;
+    }
+
+    a.stamp-duty__button:link {
+      font-family: "Roobert-SemiBold", sans-serif !important;
+      text-decoration: none !important;
+    }
+  }
+
+  // .stamp-duty__results a {
+  //     &:focus {
+  //         background: none;
+  //         border-bottom: none;
+  //         &:before {
+  //             background-color: $yellow_secondary;
+  //             background-image: $select_down_svg_active_show;
+  //             border: 3px solid $support_focus;
+  //         }
+  //     }
+  // }
+  // .stamp-duty__results a::before{
+  //     background-image: $select_down_svg_default_show;
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     content: '';
+  //     display: inline-block;
+  //     height: 30px;
+  //     width: 30px;
+  //     background-position: 1px 2px;
+  //     border: 1px solid #c82a87;
+  //     background-color: white;
+  //     box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+  //     border-radius: 4px;
+  //     position: relative;
+  //     top: 12px;
+  //     left: -7px;
+
+  // }
+
+  .stamp-duty__results a {
+    &::before {
+      background-image: $select_down_svg_default_show;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background-position: 1px 2px;
+      border: 1px solid #c82a87;
+      background-color: white;
+      box-shadow: 0px 3px 0px rgba(0, 11, 59, 0.25);
+      border-radius: 4px;
+      position: relative;
+      top: 12px;
+      left: -7px;
+    }
+    &:hover {
+      &::before {
+        background-color: $light_grey_2 !important;
+      }
+    }
+    &:focus {
+      background: none;
+      border-bottom: none;
+      &::before {
+        background-color: $yellow_secondary;
+        background-image: $select_down_svg_active_show;
+        border: 3px solid $support_focus;
+        background-position: 0px 1px;
+      }
+    }
+
+    &:active {
+      background: none;
+      border-bottom: none;
+      &::before {
+        background-color: $light_grey_2;
+        background-image: $select_down_svg_active_show;
+        border: 3px solid $support_focus;
+      }
+    }
+  }
+
+  .stamp-duty__results a.expander--expanded {
+    &::before {
+      box-shadow: none;
+      transform: rotate(180deg);
+    }
+  }
+
+  table {
+    thead,
+    tbody {
+      tr {
+        font-family: "Roobert-Bold", sans-serif;
+        color: $text_secondary;
+        background-color: unset;
+        border-bottom: 1px solid $support_hr;
+        th {
+          border-right: none;
+        }
+        td {
+          font-family: "Roobert-Regular", sans-serif;
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .mortgagecalc table thead tr th,
+  .mortgagecalc table tbody tr th {
+    text-align: left;
+    background-color: $white;
+  }
+  .mortgagecalc table thead tr td,
+  .mortgagecalc table tbody tr td {
+    background-color: $white;
+  }
+
+  .popup-tip__container {
+    border: 2px solid $blue_primary !important;
+    .popup-tip__close {
+      border-color: $blue_primary !important;
+      background-image: $close_svg;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 18px;
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Affordability */
+.affcalc {
+  width: 100%;
+  .affcalc__col,
+  .affcalc__col--field {
+    h3 {
+      color: $color-dark-blue-secondary;
+    }
+    span.affcalc__label {
+      font-family: "Roobert-Medium", sans-serif;
+      color: $color-dark-blue-secondary;
+    }
+    span.label--inline {
+      font-family: "Roobert-Regular", sans-serif;
+    }
+
+    h4,
+    .mortgagecalc__heading {
+      font-family: "Roobert-Medium", sans-serif;
+      color: $color-dark-blue-secondary;
+    }
+    .form__row {
+      margin: 15px 0px;
+
+      label {
+        margin-bottom: 30px;
+        input[type="checkbox"] {
+          &:focus,
+          &:hover {
+            outline-color: $support_focus;
+          }
+          + label {
+            cursor: pointer;
+          }
+        }
+      }
+      p {
+        a.button {
+          color: $color-magenta-primary;
+          text-decoration: none;
+          // &:visited {
+          //     color: $color-magenta-primary;
+          // }
+          &:focus,
+          &:active,
+          &:active:focus {
+            color: $color-dark-blue-secondary;
+          }
+        }
+      }
+    }
+    .is-errored {
+      padding: 1px 0px 0px 10px;
+    }
+  }
+
+  .affcalc__col--tooltip {
+    p {
+      b {
+        font-family: "Roobert-Bold", sans-serif;
+      }
+    }
+  }
+
+  .affcalc__col--clip {
+    h3,
+    h4.tooltip__title {
+      color: $color-dark-blue-secondary;
+    }
+    h4.mortgagecalc__heading {
+      font-family: "Roobert-Medium", sans-serif !important;
+    }
+    ol.featured-list li {
+      font-family: "Roobert-Medium", sans-serif !important;
+    }
+
+    p {
+      strong {
+        font-family: "Roobert-Bold", sans-serif;
+      }
+
+      a.button {
+        //color: $color-magenta-primary;
+        &:focus,
+        &:active,
+        &:active:focus {
+          color: $color-dark-blue-secondary;
+        }
+      }
+    }
+    .validation-summary__content-container {
+      padding: 1px 0px 1px 10px;
+    }
+    p.t-offered-amount-js {
+      font-family: "Roobert-Medium", sans-serif;
+      color: $color-teal-dark-secondary;
+    }
+    input#borrowing-amount {
+      font-family: "Roobert-Regular", sans-serif;
+      background: $risk-low;
+      color: $color-white-supporting;
+    }
+    input#borrowing-amount + div + a:after {
+      border-bottom-color: $risk-low;
+    }
+    input#term-years {
+      font-family: "Roobert-Regular", sans-serif;
+      background: $risk-medium;
+      color: $color-dark-blue-secondary;
+    }
+    input#term-years + div + a:after {
+      border-bottom-color: $risk-medium;
+    }
+    input#interest-rate {
+      font-family: "Roobert-Regular", sans-serif;
+      background: $error-red;
+      color: $color-white-supporting;
+    }
+    input#interest-rate + div + a:after {
+      border-bottom-color: $error-red;
+    }
+    label#label_term_years {
+      font-family: "Roobert-Bold", sans-serif;
+    }
+    span.risk__accent {
+      font-family: "Roobert-Bold", sans-serif;
+      color: $color-dark-blue-secondary;
+    }
+    .inset-block__content-container {
+      border-left: 10px solid $color-teal-dark-secondary;
+      padding: 10px 0 0 10px;
+    }
+    a.button {
+      text-decoration: none;
+    }
+    a.previous {
+      &:visited {
+        color: $color-magenta-primary;
+      }
+      &:focus,
+      &:active,
+      &:active:focus {
+        color: $color-dark-blue-secondary;
+        outline: none;
+      }
+    }
+    .tooltip__content-container {
+      a.tooltip__link {
+        color: $color-magenta-primary;
+        //text-decoration: underline;
+        &:link,
+        &:active {
+          text-decoration: underline;
         }
         &:hover {
-            &::before {
-                background-color: $light_grey_2 !important;
-            }
+          color: $color-magenta-dark-primary;
+          text-decoration: none;
         }
+        &:visited {
+          color: $link_visited;
+        }
+
         &:focus {
-            background: none;
-            border-bottom: none;
-            &::before {
-                background-color: $yellow_secondary;
-                background-image: $select_down_svg_active_show;
-                border: 3px solid $support_focus;
-                background-position: 0px 1px;
-            }
-        }
-
-        &:active {
-            background: none;
-            border-bottom: none;
-            &::before {
-                background-color: $light_grey_2;
-                background-image: $select_down_svg_active_show;
-                border: 3px solid $support_focus;
-            }
-        }
-    }
-
-    .stamp-duty__results a.expander--expanded {
-        &::before {
-            box-shadow: none;
-            transform: rotate(180deg);
-        }
-    }
-
-    table {
-        thead, tbody {
-            tr {
-                font-family: 'Roobert-Bold', sans-serif;
-                color: $text_secondary; 
-                background-color: unset;
-                border-bottom: 1px solid $support_hr;
-                th {
-                    border-right: none;
-                }
-                td {
-                    font-family: 'Roobert-Regular', sans-serif;
-                    border-right: none;
-                }
-            }
-        }
-    }
-
-    .mortgagecalc table thead tr th, .mortgagecalc table tbody tr th {
-        text-align: left;
-        background-color: $white;
-    }
-    .mortgagecalc table thead tr td, .mortgagecalc table tbody tr td {
-        background-color: $white;
-    }
-
-    .popup-tip__container{
-        border: 2px solid $blue_primary!important;
-        .popup-tip__close{
-            border-color: $blue_primary!important;
-            background-image: $close_svg;
-            background-repeat: no-repeat;
-            background-position: 50%;
-            background-size: 18px;
-            svg{
-                display: none;
-            }
-        }
-    }
-
-}
-
-/* Affordability */ 
-.affcalc{
-    .affcalc__col, .affcalc__col--field {  
-        h3 {
-            color: $color-dark-blue-secondary;
-        }
-        span.affcalc__label {
-            font-family: 'Roobert-Medium', sans-serif;
-            color: $color-dark-blue-secondary;
-        }
-        span.label--inline {
-            font-family: 'Roobert-Regular', sans-serif;
-        }
-    
-        h4, .mortgagecalc__heading {
-            font-family: 'Roobert-Medium', sans-serif;
-            color: $color-dark-blue-secondary;
-        }
-        .form__row {
-            margin:15px 0px;
-
-            label {
-                margin-bottom:30px;
-                input[type=checkbox] {
-                    &:focus,
-                    &:hover{
-                        outline-color: $support_focus;
-                    }
-                    + label{
-                        cursor: pointer;
-                    }
-                } 
-            }
-            p {
-                a.button{
-                    color: $color-magenta-primary;
-                    text-decoration: none;
-                    // &:visited {
-                    //     color: $color-magenta-primary;
-                    // }
-                    &:focus,
-                    &:active,
-                    &:active:focus {
-                        color: $color-dark-blue-secondary;
-                    }
-                }
-            }
-        }
-        .is-errored {
-            padding: 1px 0px 0px 10px;
-        }   
-    }
-
-    .affcalc__col--tooltip{
-        p {
-            b {
-                font-family: 'Roobert-Bold', sans-serif;
-            }
-        }
-    }
-
-    .affcalc__col--clip {
-        h3,h4.tooltip__title {
-            color: $color-dark-blue-secondary;     
-        }
-        h4.mortgagecalc__heading {
-            font-family: 'Roobert-Medium', sans-serif !important;
-        }
-        ol.featured-list li {
-            font-family: 'Roobert-Medium', sans-serif !important;
-        }
-        
-        p {
-            strong {
-                font-family: 'Roobert-Bold', sans-serif;
-            }
-
-            a.button {
-                //color: $color-magenta-primary;
-                &:focus,
-                &:active,
-                &:active:focus {
-                    color: $color-dark-blue-secondary;
-                }
-
-            }
-        }
-        .validation-summary__content-container {
-            padding: 1px 0px 1px 10px;
-        }
-        p.t-offered-amount-js {
-            font-family: 'Roobert-Medium', sans-serif;
-            color: $color-teal-dark-secondary;
-        }
-        input#borrowing-amount{
-            font-family: 'Roobert-Regular', sans-serif;
-            background: $risk-low;
-            color: $color-white-supporting;
-        }
-        input#borrowing-amount + div + a:after{
-            border-bottom-color: $risk-low;
-        }
-        input#term-years {
-            font-family: 'Roobert-Regular', sans-serif;
-            background: $risk-medium;
-            color: $color-dark-blue-secondary; 
-        }
-        input#term-years + div + a:after{
-            border-bottom-color: $risk-medium;
-        }
-        input#interest-rate {
-            font-family: 'Roobert-Regular', sans-serif;
-            background: $error-red;
-            color: $color-white-supporting;
-        }
-        input#interest-rate + div + a:after{
-            border-bottom-color: $error-red;
-        }
-        label#label_term_years{
-            font-family: 'Roobert-Bold', sans-serif;
-        }
-        span.risk__accent{
-            font-family: 'Roobert-Bold', sans-serif;
-            color: $color-dark-blue-secondary; 
-        }
-        .inset-block__content-container{
-            border-left: 10px solid $color-teal-dark-secondary;
-            padding: 10px 0 0 10px;
-        }
-        a.button {
+          text-decoration: none;
+          span {
+            outline: none;
             text-decoration: none;
+            color: $color-dark-blue-secondary;
+            background-color: $color-yellow-secondary;
+            border-bottom: 4px solid $color-violet-primary;
+          }
         }
-        a.previous {
-            &:visited {
-                color: $color-magenta-primary;
-            }
-            &:focus,
-            &:active,
-            &:active:focus {
-                color: $color-dark-blue-secondary;
-                outline: none;
-            }
-        }
-        .tooltip__content-container {
-            a.tooltip__link {
-                color:$color-magenta-primary;
-                //text-decoration: underline;
-                &:link, &:active {
-                    text-decoration: underline;
-                }
-                &:hover {
-                    color:$color-magenta-dark-primary;
-                    text-decoration: none;
-                }
-                &:visited {
-                    color: $link_visited;
-                    
-                }
 
-                &:focus {
-                    text-decoration: none;
-                    span {
-                    outline:none;
-                    text-decoration: none;
-                    color:$color-dark-blue-secondary;
-                    background-color:$color-yellow-secondary;
-                    border-bottom:4px solid $color-violet-primary;
-                    }
-                }
-
-                &:target {
-                    color:$color-violet-secondary;
-                }
-            }
+        &:target {
+          color: $color-violet-secondary;
         }
+      }
     }
-    .affcalc__row{
-        .affcalc__col--33{
-            @media screen and (min-width: 45em) {
-                width: 36%;
-            }
-            
-           
-            .callout {
-                border: 8px solid #f0f05a;
-                border-radius: 0px 0px 0px 36px;
-                margin-top: 30px;
-                padding: 32px 29px 26px 57px;
-                background: url(/assets/images-mh/mobile-call-out-arrow.svg) 0 20px no-repeat;
-                
-                p {
-                    margin: revert;
-                }
-                @media screen and (min-width: 959px) {
-                    background: url(/assets/images-mh/callout-arrow-desktop.svg) 23px -4px no-repeat;
-                    background-size: 45px 66px;
-                    padding: 32px 30px 30px 77px;
-                }
-            }
-            .callout__icon {
-                display: none;
-            }
-            h5.callout__heading {
-                font-size: 22px; 
-                margin-bottom: 10px;
-            }
+  }
+  .affcalc__row {
+    .affcalc__col--33 {
+      @media screen and (min-width: 45em) {
+        width: 36%;
+      }
 
-            ul{
-                padding: 0 0 0 25px;
-                li {
-                    margin-bottom: 0.75rem;
-                    a{
-                        line-height: 26px;
-                    }
-                }
-            }
+      .callout {
+        border: 8px solid #f0f05a;
+        border-radius: 0px 0px 0px 36px;
+        margin-top: 30px;
+        padding: 32px 29px 26px 57px;
+        background: url(/assets/images-mh/mobile-call-out-arrow.svg) 0 20px
+          no-repeat;
+
+        p {
+          margin: revert;
         }
-        
+        @media screen and (min-width: 959px) {
+          background: url(/assets/images-mh/callout-arrow-desktop.svg) 23px -4px
+            no-repeat;
+          background-size: 45px 66px;
+          padding: 32px 30px 30px 77px;
+        }
+      }
+      .callout__icon {
+        display: none;
+      }
+      h5.callout__heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding: 0 0 0 25px;
+        li {
+          margin-bottom: 0.75rem;
+          a {
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  // input[type=radio],
+  // input[type=checkbox] {
+  //     &:focus,
+  //     &:hover{
+  //         outline-color: $support_focus;
+  //     }
+  //     + label{
+  //         cursor: pointer;
+  //     }
+  // }
+
+  .risk--low .risk__accent--color-only {
+    background-color: $risk-low;
+    color: $color-white-supporting;
+  }
+  .risk--medium .risk__accent--color-only {
+    background-color: $risk-medium;
+  }
+  .risk--high .risk__accent--color-only {
+    background-color: $error-red;
+    color: $color-white-supporting;
+  }
+
+  .risk--low .ui-slider .ui-slider-handle:focus {
+    border-color: $risk-low;
+  }
+  .risk--medium .ui-slider .ui-slider-handle:focus {
+    border-color: $risk-medium;
+  }
+  .risk--high .ui-slider .ui-slider-handle:focus {
+    border-color: $error-red;
+  }
+
+  .risk--low .ui-slider .ui-slider-handle:after {
+    border-bottom: 8px solid $risk-low;
+  }
+  .risk--medium .ui-slider .ui-slider-handle:after {
+    border-bottom: 8px solid $risk-medium;
+  }
+  .risk--high .ui-slider .ui-slider-handle:after {
+    border-bottom: 8px solid $error-red;
+  }
+
+  .risk--low .risk-slice--incoming {
+    fill: $risk-low;
+  }
+  .risk--medium .risk-slice--incoming {
+    fill: $risk-medium;
+  }
+  .risk--high .risk-slice--incoming {
+    fill: $error-red;
+  }
+
+  .risk--low .risk-key--incoming:after {
+    background: $risk-low;
+  }
+  .risk--medium .risk-key--incoming:after {
+    background: $risk-medium;
+  }
+  .risk--high .risk-key--incoming:after {
+    background: $error-red;
+  }
+
+  /* Affordability validation error styles */
+  .new_affordability {
+    .validation-summary {
+      .validation-summary__content-container,
+      .validation-summary__error--no-link {
+        background-color: $red_error_background;
+        .validation-summary__title {
+          font-family: "Roobert-Bold", sans-serif;
+          color: $red_error;
+          font-weight: bold;
+        }
+        border-left: 4px solid $red_error;
+        color: $red_error;
+        .validation-summary__list {
+          font-family: "Roobert-Regular", sans-serif;
+          .validation-summary__error {
+            a {
+              color: $error-red;
+            }
+          }
+        }
+      }
     }
 
-
-    // input[type=radio],
-    // input[type=checkbox] {
-    //     &:focus,
-    //     &:hover{
-    //         outline-color: $support_focus;
-    //     }
-    //     + label{
-    //         cursor: pointer;
-    //     }
-    // }   
-
-    .risk--low .risk__accent--color-only {background-color:$risk-low; color:$color-white-supporting;}
-    .risk--medium .risk__accent--color-only {background-color:$risk-medium;}
-    .risk--high .risk__accent--color-only {background-color:$error-red;color:$color-white-supporting;}
-
-    .risk--low .ui-slider .ui-slider-handle:focus {border-color:$risk-low;}
-    .risk--medium .ui-slider .ui-slider-handle:focus {border-color:$risk-medium;}
-    .risk--high .ui-slider .ui-slider-handle:focus {border-color:$error-red;}
-
-    .risk--low .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-low;}
-    .risk--medium .ui-slider .ui-slider-handle:after {border-bottom:8px solid $risk-medium;}
-    .risk--high .ui-slider .ui-slider-handle:after {border-bottom:8px solid $error-red;}
-
-    .risk--low .risk-slice--incoming {fill:$risk-low}
-    .risk--medium .risk-slice--incoming {fill:$risk-medium;}
-    .risk--high .risk-slice--incoming {fill:$error-red;}
-
-    .risk--low .risk-key--incoming:after {background:$risk-low;}
-    .risk--medium  .risk-key--incoming:after {background:$risk-medium;}
-    .risk--high .risk-key--incoming:after {background:$error-red;}
-
-
-    /* Affordability validation error styles */ 
-    .new_affordability {
-        .validation-summary {
-            .validation-summary__content-container, .validation-summary__error--no-link {
-                background-color: $red_error_background;
-                .validation-summary__title {
-                    font-family: 'Roobert-Bold', sans-serif;
-                    color: $red_error;
-                    font-weight: bold;
-                }
-                border-left: 4px solid $red_error;
-                color: $red_error;
-                .validation-summary__list {
-                    font-family: 'Roobert-Regular', sans-serif;
-                    .validation-summary__error {
-                        a {
-                            color: $error-red;
-                        }
-                    }
-                }
-            }
+    .is-errored {
+      border-left: 4px solid $red_error;
+      border-color: $red_error;
+      label {
+        color: $text_secondary;
+        font-weight: normal;
+      }
+      input[type="text"],
+      input[type="number"] {
+        border: 2px solid $red_error;
+      }
+      select {
+        border: 2px solid $red_error;
+        color: $text_secondary;
+      }
+      .js-inline-error {
+        p {
+          color: $red_error;
+          font-size: 16px;
+          line-height: 23px;
         }
-        
-        .is-errored{
-            border-left: 4px solid $red_error;
-            border-color: $red_error;
-            label{
-                color: $text_secondary;
-                font-weight:  normal;
-            }
-            input[type=text],
-            input[type=number]{
-                border: 2px solid $red_error;
-            }
-            select{
-                border: 2px solid $red_error;
-                color: $text_secondary;
-            }
-            .js-inline-error{
-                p{
-                    color: $red_error;
-                    font-size: 16px;
-                    line-height: 23px;
-                }
-            }
-        }
-        
+      }
     }
+  }
 }
 
-
-    
-.affcalc{
-    &.risk--high{
-        .affcalc__col--clip{
-            input#borrowing-amount,
-            input#term-years,
-            input#interest-rate{
-                &.risk__accent--color-only{
-                    background-color: $error-red!important;
-                    color: $white;
-                }
-            }
+.affcalc {
+  &.risk--high {
+    .affcalc__col--clip {
+      input#borrowing-amount,
+      input#term-years,
+      input#interest-rate {
+        &.risk__accent--color-only {
+          background-color: $error-red !important;
+          color: $white;
         }
+      }
     }
-    &.risk--medium{
-        .affcalc__col--clip{
-            input#borrowing-amount,
-            input#term-years,
-            input#interest-rate{
-                &.risk__accent--color-only{
-                    background-color: $risk-medium!important;
-                    color: #000000;
-                }
-            }
+  }
+  &.risk--medium {
+    .affcalc__col--clip {
+      input#borrowing-amount,
+      input#term-years,
+      input#interest-rate {
+        &.risk__accent--color-only {
+          background-color: $risk-medium !important;
+          color: #000000;
         }
+      }
     }
-    &.risk--low{
-        .affcalc__col--clip{
-            input#borrowing-amount,
-            input#term-years,
-            input#interest-rate{
-                &.risk__accent--color-only{
-                    background-color: $risk-low!important;
-                    color: #ffffff;
-                }
-            }
+  }
+  &.risk--low {
+    .affcalc__col--clip {
+      input#borrowing-amount,
+      input#term-years,
+      input#interest-rate {
+        &.risk__accent--color-only {
+          background-color: $risk-low !important;
+          color: #ffffff;
         }
+      }
     }
+  }
 }
 
-
-.risk--high .ui-slider .ui-slider-handle:after{
-    border-bottom-color: $error-red!important;
+.risk--high .ui-slider .ui-slider-handle:after {
+  border-bottom-color: $error-red !important;
 }
-.risk--medium .ui-slider .ui-slider-handle:after{
-    border-bottom-color: $risk-medium!important;
+.risk--medium .ui-slider .ui-slider-handle:after {
+  border-bottom-color: $risk-medium !important;
 }
-.risk--low .ui-slider .ui-slider-handle:after{
-    border-bottom-color: $risk-low!important;
+.risk--low .ui-slider .ui-slider-handle:after {
+  border-bottom-color: $risk-low !important;
 }

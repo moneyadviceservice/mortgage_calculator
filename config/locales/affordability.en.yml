@@ -173,17 +173,17 @@ en:
         title: "Three steps to finding an affordable mortgage"
         tip_1:
           heading: "Make sure you get the best mortgage for you"
-          info_html: "Understanding different types of mortgages"
-          url: "https://www.moneyhelper.org.uk/en/categories/types-of-mortgage"
+          info_html: "Understanding mortgages"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-interest-rate-options.html"
         tip_2:
           heading: "Don’t make these mistakes"
           info_html: "Buying a home: how to avoid the most common mistakes"
-          url: "https://www.moneyhelper.org.uk/en/articles/buying-a-home-how-to-avoid-the-most-common-mistakes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/issues-with-the-property-when-buying-a-house.html"
         tip_3:
           heading: "Get started with your application"
           info_html: "Home-buying process – %{steps}"
-          url_text: "steps to buying a new house or flat"
-          url: "https://www.moneyhelper.org.uk/en/articles/money-timeline-when-buying-property-england-wales--n-ireland"
+          url_text: "Steps to buying a new house or flat"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/money-timeline-when-buying-property-england-wales-n-ireland.html"
       medium:
         title: "What you should do next"
         tip_1:
@@ -193,30 +193,30 @@ en:
         tip_2:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
-          url_text: "Budger Planner"
-          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+          url_text: "Budget Planner"
+          url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
         tip_3:
           heading: "Understand all the costs"
           info_html: "Make sure you understand all the up front costs of buying a home"
-          url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
       high:
         title: "Three steps to making your mortgage more affordable"
         tip_1:
           heading: "Think about borrowing less"
           info_html: "Learn about %{deposit} and %{ratios}"
-          url_text_1: "saving for a deposit"
-          url_1: "https://www.moneyhelper.org.uk/en/articles/saving-money-for-a-deposit"
-          url_text_2: "loan to value ratios"
-          url_2: "https://www.moneyhelper.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+          url_text_1: "Saving for a deposit"
+          url_1: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
+          url_text_2: "Loan to value ratios"
+          url_2: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/how-much-can-you-afford-to-borrow"
         tip_2:
           heading: "Explore different schemes to help you buy a home"
           info_html: "Government schemes for first-time home buyers and existing homeowners"
-          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners.html"
         tip_3:
           heading: "Take control of your money"
           info_html: "Use our %{budget_planner} to get the full picture"
-          url_text: "Budger Planner"
-          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+          url_text: "Budget Planner"
+          url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
       default:
         title: "Three steps to finding an affordable mortgage"
         tip_1:
@@ -244,17 +244,17 @@ en:
         title: "Find out more"
         tips:
           - copy_html: "Costs of buying"
-            url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: "Budget Planner"
-            url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+            url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
           - copy_html: "Improve your credit rating"
-            url: "https://www.moneyhelper.org.uk/en/articles/how-to-improve-your-credit-rating"
+            url: "https://www.moneyhelper.org.uk/en/everyday-money/credit-and-purchases/understanding-your-credit-rating/how-to-improve-your-credit-rating"
           - copy_html: "Affordable housing schemes"
-            url: "https://www.moneyhelper.org.uk/en/categories/affordable-housing-schemes"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
           - copy_html: "Saving for a deposit"
-            url: "https://www.moneyhelper.org.uk/en/tools/saving-for-a-deposit"
+            url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
           - copy_html: "Mortgage comparison table"
-            url: "https://compare.moneyhelper.org.uk/mortgages/step1"
+            url: "https:/www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/your-mortgage-comparison-checklist.html"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage Calculator"
