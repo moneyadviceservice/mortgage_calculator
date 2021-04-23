@@ -64,12 +64,12 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You must send an LTT return and pay the tax within 30 days of the day after completion (or other effective date of the transaction). If you have a solicitor, agent or conveyancer, they’ll usually file your return and pay the tax on your behalf. If they don’t do this for you, you can file a return and pay the tax yourself using the"
+        tip_1_html: "You must send an LTT return and pay the tax within 30 days of the day after completion (or other effective date of the transaction). If you have a solicitor, agent or conveyancer, they’ll usually file your return and pay the tax on your behalf. If they don’t do this for you, you can file a return and pay the tax yourself using the"
         tip_1_link: "https://gov.wales/paper-return-land-transaction-tax"
         tip_1_link_url: "paper return."
         link_1:
           title: "Land Transaction Tax – Everything you need to know"
-          url: "/en/articles/land-transaction-tax-everything-you-need-to-know"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/land-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: Find out more
         tips:

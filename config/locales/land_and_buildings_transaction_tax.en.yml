@@ -73,7 +73,8 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a href=%{url_online_portal}>online portal</a> or a <a href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:"
+        tip_1_html: >
+          You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a target="_blanck" href=%{url_online_portal}>online portal</a> or a <a target="_blanck" href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:

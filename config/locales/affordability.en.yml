@@ -127,30 +127,30 @@ en:
       living_costs_description: "Your lifestyle costs shouldn't change when you get a mortgage, but lenders will want to 'stress test' if you can afford your payments should interest rates rise or your circumstances change."
     budget_affect:
       high:
-        percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">more than 60%</span> of your total take-home pay."
-        affordability_html: "You run a <span class=\"risk__accent\">very high</span> risk of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage. <a href='%{next_steps_affordability_path}'>Here’s what you can do now</a>."
+        percentage_html: 'Your mortgage repayments + your monthly essential costs are <span class="risk__accent">more than 60%</span> of your total take-home pay.'
+        affordability_html: 'You run a <span class="risk__accent">very high</span> risk of overstretching your budget to meet these repayments. Think about a smaller, more affordable mortgage. <a href=''%{next_steps_affordability_path}''>Here’s what you can do now</a>.'
       medium:
-        percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">between 40% - 60%</span> of your total take-home pay."
-        affordability_html: "You are at <span class=\"risk__accent\">risk</span> of overstretching your budget to meet these repayments, particularly if your circumstances change or interest rates rise. %{link}."
+        percentage_html: 'Your mortgage repayments + your monthly essential costs are <span class="risk__accent">between 40% - 60%</span> of your total take-home pay.'
+        affordability_html: 'You are at <span class="risk__accent">risk</span> of overstretching your budget to meet these repayments, particularly if your circumstances change or interest rates rise. %{link}.'
         link_text: " Here's what you can do now"
       low:
-        percentage_html: "Your mortgage repayments + your monthly essential costs are <span class=\"risk__accent\">less than 40%</span> of your total take-home pay."
-        affordability_html: "Your budget is <span class=\"risk__accent\">not overstretched</span> and you can meet these repayments. But think ahead - if interest rates rise, could you afford this mortgage?"
+        percentage_html: 'Your mortgage repayments + your monthly essential costs are <span class="risk__accent">less than 40%</span> of your total take-home pay.'
+        affordability_html: 'Your budget is <span class="risk__accent">not overstretched</span> and you can meet these repayments. But think ahead - if interest rates rise, could you afford this mortgage?'
     interest_changer:
       title: "What if interest rates rise?"
       changes_by_would_increase_html: "If interest rates rise by %{percent}, your monthly repayment will rise to %{repayment}."
       remaining_html: "Your remaining budget will be %{remaining} per month."
     monthly_repayment:
-      estimated_html: "Your estimated mortgage repayments per month will be approximately: <span class=\"accent\">%{repayment}</span>"
-      current_html: "Compared with your current rent or mortgage payment of: <span class=\"accent\">%{rent_and_mortgage}</span>"
+      estimated_html: 'Your estimated mortgage repayments per month will be approximately: <span class="accent">%{repayment}</span>'
+      current_html: 'Compared with your current rent or mortgage payment of: <span class="accent">%{rent_and_mortgage}</span>'
     remaining:
-      estimate_html: "The amount you have left over after living costs is <span class=\"accent\">%{remaining}</span> per month."
+      estimate_html: 'The amount you have left over after living costs is <span class="accent">%{remaining}</span> per month.'
     range:
       offer_html: "You might be offered between %{min} and %{max}"
     take_home:
-      per_month_html: "Your total take-home pay per month is: <span class=\"accent\">%{take_home}</span>"
+      per_month_html: 'Your total take-home pay per month is: <span class="accent">%{take_home}</span>'
     budget:
-      commitments_html: "Your estimated fixed and committed spend per month is: <span class=\"accent\">%{commitment}</span>"
+      commitments_html: 'Your estimated fixed and committed spend per month is: <span class="accent">%{commitment}</span>'
       outgoing_html: "Mortgage repayments and essential costs per month amount to roughly %{percent} of your total take-home pay: %{absolute}"
       leftover_html: "What you have left over is roughly %{percent} of your monthly take-home: %{absolute}"
       positive:
@@ -235,8 +235,8 @@ en:
           url_text: "saving for a larger deposit"
       learn_more:
         title: "Affording your mortgage"
-        tip_1: "Think about your household spend as well as your mortgage repayments."
-        tip_2 : "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
+        tip_1_html: "Think about your household spend as well as your mortgage repayments."
+        tip_2: "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
         more:
           copy_html: "Read more"
           url: "https://www.moneyhelper.org.uk/en/articles/how-much-can-you-afford-to-borrow"
