@@ -91,7 +91,7 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You have to pay Stamp Duty within 14 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
+        tip_1_html: "You have to pay Stamp Duty within 14 days of buying a property. If you're using a solicitor to carry out the conveyancing, they will normally organise the payment for you."
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:

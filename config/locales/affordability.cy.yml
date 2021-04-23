@@ -127,30 +127,30 @@ cy:
       living_costs_description: "Ni ddylai’ch costau ffordd o fyw newid pan gewch forgais, ond bydd benthycwyr eisiau cyflawni 'prawf straen' i weld a allwch chi fforddio’ch taliadau os bydd cyfraddau llog yn codi neu os bydd eich amgylchiadau’n newid."
     budget_affect:
       high:
-        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">fwy na 60%</span> o gyfanswm eich cyflog clir."
-        affordability_html: "Rydych yn cyflwyno risg <span class=\"risk__accent\">uchel iawn</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn."
+        percentage_html: 'Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class="risk__accent">fwy na 60%</span> o gyfanswm eich cyflog clir.'
+        affordability_html: 'Rydych yn cyflwyno risg <span class="risk__accent">uchel iawn</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn.'
       medium:
-        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">rhwng 40% - 60%</span> o gyfanswm eich cyflog clir."
-        affordability_html: "Rydych yn cyflwyno <span class=\"risk__accent\">risg</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn, yn arbennig os yw'ch amgylchiadau’n newid neu gyfraddau llog yn codi. %{link}."
+        percentage_html: 'Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class="risk__accent">rhwng 40% - 60%</span> o gyfanswm eich cyflog clir.'
+        affordability_html: 'Rydych yn cyflwyno <span class="risk__accent">risg</span> o fynd heibio’ch cyllideb i fodloni’r ad-daliadau hyn, yn arbennig os yw''ch amgylchiadau’n newid neu gyfraddau llog yn codi. %{link}.'
         link_text: " Dyma beth allech chi wneud nawr"
       low:
-        percentage_html: "Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class=\"risk__accent\">llai na 40%</span> o gyfanswm eich cyflog clir."
-        affordability_html: "Nid yw’ch cyllideb <span class=\"risk__accent\">wedi ei hestyn yn ormodol</span> a gallwch wneud yr ad-daliadau hyn. Ond cynlluniwch ymlaen – os yw cyfraddau llog yn codi, a allech chi fforddio’r morgais hwn?"
+        percentage_html: 'Mae’ch ad-daliadau morgais + costau allweddol misol yn <span class="risk__accent">llai na 40%</span> o gyfanswm eich cyflog clir.'
+        affordability_html: 'Nid yw’ch cyllideb <span class="risk__accent">wedi ei hestyn yn ormodol</span> a gallwch wneud yr ad-daliadau hyn. Ond cynlluniwch ymlaen – os yw cyfraddau llog yn codi, a allech chi fforddio’r morgais hwn?'
     interest_changer:
       title: "Beth os bydd cyfraddau llog yn codi?"
       changes_by_would_increase_html: "Os yw cyfraddau llog yn codi o %{percent}, bydd eich ad-daliad misol yn codi i %{repayment}."
       remaining_html: "Bydd eich cyllideb sy’n weddill yn %{remaining} y mis."
     monthly_repayment:
-      estimated_html: "Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class=\"accent\">%{repayment}</span>"
-      current_html: "O’i chymharu â’ch rhent neu daliad morgais presennol o: <span class=\"accent\">%{rent_and_mortgage}</span>"
+      estimated_html: 'Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class="accent">%{repayment}</span>'
+      current_html: 'O’i chymharu â’ch rhent neu daliad morgais presennol o: <span class="accent">%{rent_and_mortgage}</span>'
     remaining:
-      estimate_html: "Y swm sydd gennych yn weddill wedi costau byw yw <span class=\"accent\">%{remaining}</span> y mis."
+      estimate_html: 'Y swm sydd gennych yn weddill wedi costau byw yw <span class="accent">%{remaining}</span> y mis.'
     range:
       offer_html: "Efallai y byddwch yn cael cynnig rhwng %{min} a %{max}"
     take_home:
-      per_month_html: "Eich cyfanswm cyflog clir misol yw: <span class=\"accent\">%{take_home}</span>"
+      per_month_html: 'Eich cyfanswm cyflog clir misol yw: <span class="accent">%{take_home}</span>'
     budget:
-      commitments_html: "Eich gwariant misol sefydlog ac ymroddedig amcangyfrifol yw: <span class=\"accent\">%{commitment}</span>"
+      commitments_html: 'Eich gwariant misol sefydlog ac ymroddedig amcangyfrifol yw: <span class="accent">%{commitment}</span>'
       outgoing_html: "Mae ad-daliadau morgais a chostau allweddol y mis yn dod i gyfanswm o tua %{percent} o gyfanswm eich cyflog clir: %{absolute}"
       leftover_html: "Mae beth sydd gennych yn weddill yn tua %{percent} o’ch cyflog clir misol: %{absolute}"
       positive:
@@ -219,8 +219,8 @@ cy:
           url: "https://www.moneyhelper.org.uk/cy/tools/cynllunydd-cyllideb/start"
       learn_more:
         title: "Fforddio eich morgais"
-        tip_1: "Meddyliwch am wariant eich cartref yn ogystal â’ch taliadau morgais."
-        tip_2 : "Mae gwario mwy na 50% o’ch cyflog clir ar gostau ymroddedig a morgais yn creu risg uchel iawn o orymestyn eich cyllideb. Gwnewch yn siŵr bod gennych ddigon o arian dros ben ar ddiwedd y mis i’ch helpu i ymdopi, pe byddai cyfraddau llog yn codi neu’ch amgylchiadau’n newid."
+        tip_1_html: "Meddyliwch am wariant eich cartref yn ogystal â’ch taliadau morgais."
+        tip_2: "Mae gwario mwy na 50% o’ch cyflog clir ar gostau ymroddedig a morgais yn creu risg uchel iawn o orymestyn eich cyllideb. Gwnewch yn siŵr bod gennych ddigon o arian dros ben ar ddiwedd y mis i’ch helpu i ymdopi, pe byddai cyfraddau llog yn codi neu’ch amgylchiadau’n newid."
         more:
           copy_html: "Darllen mwy"
           url: "https://www.moneyhelper.org.uk/cy/articles/faint-allwch-chi-fforddio-ei-fenthyca"
