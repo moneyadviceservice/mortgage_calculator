@@ -65,21 +65,21 @@ cy:
     next_steps:
       learn_more:
         title: "A wyddech chi?"
-        tip_1: "Mae’n rhaid i chi anfon ffurflen LTT a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad). Os oes gennych gyfreithiwr, asiant neu drawsgludwr, byddant fel arfer yn ffeilio'ch ffurflen ac yn talu'r dreth ar eich rhan. Os na wnânt hyn ar eich rhan, gallwch ffeilio ffurflen a thalu'r dreth eich hun gan ddefnyddio'r"
+        tip_1_html: "Mae’n rhaid i chi anfon ffurflen LTT a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad). Os oes gennych gyfreithiwr, asiant neu drawsgludwr, byddant fel arfer yn ffeilio'ch ffurflen ac yn talu'r dreth ar eich rhan. Os na wnânt hyn ar eich rhan, gallwch ffeilio ffurflen a thalu'r dreth eich hun gan ddefnyddio'r"
         tip_1_link: "https://llyw.cymru/ffurflen-dreth-bapur-ar-gyfer-treth-trafodiadau-tir"
         tip_1_link_url: "ffurflen bapur."
         link_1:
           title: "Treth Trafodiadau Tir – Popeth y mae angen i chi ei wybod"
-          url: "/cy/articles/treth-trafodiadau-tir-popeth-y-mae-angen-i-chi-ei-wybod"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/land-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyhelper.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-          - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyhelper.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "	https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: "Arolygon ac adroddiadau prynwyr tai"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/home-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: 'Rhowch gynnig ar?'
         mortgage_calculator: "Cyfrifiannell morgais"

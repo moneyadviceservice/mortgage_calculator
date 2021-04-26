@@ -73,21 +73,22 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a href=%{url_online_portal}>online portal</a> or a <a href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:"
+        tip_1_html: >
+          You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a target="_blanck" href=%{url_online_portal}>online portal</a> or a <a target="_blanck" href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: "Land and Buildings Transaction Tax (LBTT) - Everything you need to know"
-          url: "/en/articles/land-and-buildings-transaction-tax-everything-you-need-to-know"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/land-and-buildings-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyhelper.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
-          - copy_html: Costs of moving day
-            url: "https://www.moneyhelper.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Homebuyer surveys and costs
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"

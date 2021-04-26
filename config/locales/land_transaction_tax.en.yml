@@ -10,9 +10,9 @@ en:
     heading: "Land Transaction Tax (LTT) calculator"
     heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £180,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
     subtitle_paras:
-    - You must pay Land Transaction Tax if you buy a property or land over a certain price in Wales.
-    - This calculator will help you work out how much you have to pay if you are buying residential property.
-    - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://gov.wales/land-transaction-tax-calculator'>gov.wales/land-transaction-tax-calculator</a>.
+      - You must pay Land Transaction Tax if you buy a property or land over a certain price in Wales.
+      - This calculator will help you work out how much you have to pay if you are buying residential property.
+      - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://gov.wales/land-transaction-tax-calculator'>gov.wales/land-transaction-tax-calculator</a>.
     heading_results: "Land Transaction Tax (LTT) calculator - Your Results"
     title: "Calculate the Land Transaction Tax on your residential property in Wales"
     next: Next
@@ -29,14 +29,14 @@ en:
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "Land Transaction Tax (LTT) is paid at different rates depending on the purchase price."
-    how_calculated_table_ftb_phase_1:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b>, with a completion date on or before 30 June 2021, would pay."
-    how_calculated_table_next_phase_1:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
+    how_calculated_table_ftb_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b>, with a completion date on or before 30 June 2021, would pay."
+    how_calculated_table_next_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
     how_calculated_table_second_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
-    how_calculated_table_ftb_phase_2:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_next_phase_2:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_ftb_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_next_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
     how_calculated_table_second_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_ftb_phase_3:    "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_next_phase_3:   "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>  on or after 1 July 2021, would pay."
+    how_calculated_table_ftb_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_next_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>  on or after 1 July 2021, would pay."
     how_calculated_table_second_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
     how_calculated_additional: "If the property is an additional property or second home, the higher residential rates shown in the second table below may apply."
     how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
@@ -64,21 +64,21 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You must send an LTT return and pay the tax within 30 days of the day after completion (or other effective date of the transaction). If you have a solicitor, agent or conveyancer, they’ll usually file your return and pay the tax on your behalf. If they don’t do this for you, you can file a return and pay the tax yourself using the"
+        tip_1_html: "You must send an LTT return and pay the tax within 30 days of the day after completion (or other effective date of the transaction). If you have a solicitor, agent or conveyancer, they’ll usually file your return and pay the tax on your behalf. If they don’t do this for you, you can file a return and pay the tax yourself using the"
         tip_1_link: "https://gov.wales/paper-return-land-transaction-tax"
         tip_1_link_url: "paper return."
         link_1:
           title: "Land Transaction Tax – Everything you need to know"
-          url: "/en/articles/land-transaction-tax-everything-you-need-to-know"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/land-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyhelper.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
-          - copy_html: Costs of moving day
-            url: "https://www.moneyhelper.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Homebuyer surveys and costs
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage calculator"

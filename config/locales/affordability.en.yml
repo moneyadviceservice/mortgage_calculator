@@ -235,7 +235,7 @@ en:
           url_text: "saving for a larger deposit"
       learn_more:
         title: "Affording your mortgage"
-        tip_1: "Think about your household spend as well as your mortgage repayments."
+        tip_1_html: "Think about your household spend as well as your mortgage repayments."
         tip_2: "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
         more:
           copy_html: "Read more"

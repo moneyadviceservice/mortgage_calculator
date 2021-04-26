@@ -70,7 +70,7 @@ en:
           url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Learn about LTV
-          tip_1: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
+          tip_1_html: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
           more:
             copy_html: "Read more about choosing a mortgage <span class='visually-hidden'>(opens in a new window)</span>"
             url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
