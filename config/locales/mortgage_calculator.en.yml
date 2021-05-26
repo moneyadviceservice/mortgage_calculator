@@ -58,15 +58,15 @@ en:
         title: "Three steps to lower your monthly payments:"
         tip_1:
           heading: Choose the right type of mortgage and consider getting an adviser
-          info_html: "Mortgage advice-should you get a mortgage advisor? <span class='visually-hidden'>(opens in a new window)</span>"
+          info_html: "Mortgage advice-should you get a mortgage adviser? <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/choosing-a-mortgage-shop-around-or-get-advice"
         tip_2:
           heading: Increase your deposit
-          info_html: How to set a saving goal
+          info_html: How to set a savings goal
           url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/help-meeting-savings-goals/how-to-set-a-savings-goal"
         tip_3:
-          heading: "Are you eligible for an affordable housing scheme?"
-          info_html: "Government scheme for first time home buyers and existing home owners <span class='visually-hidden'>(opens in a new window)</span>"
+          heading: "Do you qualify for an affordable housing scheme?"
+          info_html: "Government schemes for first-time home buyers and existing homeowners <span class='visually-hidden'>(opens in a new window)</span>"
           url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
         learn_more:
           title: Learn about LTV
