@@ -63,11 +63,11 @@ en:
         tip_2:
           heading: Increase your deposit
           info_html: How to set a savings goal
-          url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/help-meeting-savings-goals/how-to-set-a-savings-goal"
+          url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/help-with-meeting-your-savings-goals/how-to-set-a-savings-goal"
         tip_3:
           heading: "Do you qualify for an affordable housing scheme?"
           info_html: "Government schemes for first-time home buyers and existing homeowners <span class='visually-hidden'>(opens in a new window)</span>"
-          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners"
         learn_more:
           title: Learn about LTV
           tip_1_html: "Having a bigger deposit or buying a cheaper property means the amount you need to borrow is smaller compared with the property's value. This is known as the <b>Loan To Value ratio (LTV)</b>. With a lower LTV, you might be able to get a lower interest rate."
@@ -96,3 +96,5 @@ en:
         one: These results are a guide to give you an idea of what you might pay each month – the exact cost will depend on the mortgage you choose and the lender.
         two: People who are self employed or are not in full-time employment may have other criteria to fulfil.
         three: Before applying for a mortgage, it's best to check your credit rating and make sure you're registered on the electoral roll.
+
+
