@@ -1048,3 +1048,75 @@ Processing by MortgageCalculator::StampDutiesController#show as HTML
   Rendered layouts/application.html.erb (3.9ms)
   Rendered layouts/embedded_tool.html.erb (7.1ms)
 Completed 200 OK in 319ms (Views: 283.6ms)
+
+
+Started GET "/" for ::1 at 2021-06-16 20:41:31 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (15.3ms)
+Completed 200 OK in 26ms (Views: 26.3ms)
+
+
+Started GET "/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland" for ::1 at 2021-06-16 20:41:32 +0100
+Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (96.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (9.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (15.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (22.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (29.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (141.8ms)
+  Rendered layouts/application.html.erb (7.2ms)
+  Rendered layouts/embedded_tool.html.erb (10.3ms)
+Completed 200 OK in 244ms (Views: 242.8ms)
+
+
+Started GET "/" for ::1 at 2021-06-16 20:44:36 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (13.8ms)
+Completed 200 OK in 25ms (Views: 24.5ms)
+
+
+Started GET "/" for ::1 at 2021-06-16 20:44:37 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (16.3ms)
+Completed 200 OK in 24ms (Views: 24.2ms)
+
+
+Started GET "/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland" for ::1 at 2021-06-16 20:44:39 +0100
+Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (90.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (7.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (13.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (20.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (28.6ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (133.2ms)
+  Rendered layouts/application.html.erb (2.8ms)
+  Rendered layouts/embedded_tool.html.erb (4.4ms)
+Completed 200 OK in 266ms (Views: 237.2ms)
+
+
+Started GET "/cy/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland" for ::1 at 2021-06-16 20:44:53 +0100
+Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"cy"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step1.html.erb (140.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_bands_table.html.erb (1.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_next_home_buyer_explanation.html.erb (11.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_tip.html.erb (19.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_property_tax_to_pay_panel.html.erb (27.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/_form_step2.html.erb (38.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/property_tax_calculator/show.html.erb within layouts/mortgage_calculator/application (201.3ms)
+  Rendered layouts/application.html.erb (3.2ms)
+  Rendered layouts/embedded_tool.html.erb (6.0ms)
+Completed 200 OK in 320ms (Views: 319.6ms)
