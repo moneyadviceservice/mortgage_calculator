@@ -1120,3 +1120,54 @@ Processing by MortgageCalculator::LandAndBuildingsTransactionTaxesController#sho
   Rendered layouts/application.html.erb (3.2ms)
   Rendered layouts/embedded_tool.html.erb (6.0ms)
 Completed 200 OK in 320ms (Views: 319.6ms)
+
+
+Started GET "/en/mortgage_calculator/land-transaction-tax-calculator-wales" for ::1 at 2021-06-16 20:46:06 +0100
+Processing by MortgageCalculator::LandTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_calculator_form.html.erb (96.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_next_home_buyer_explanation.html.erb (6.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_how_is_calculated_section.html.erb (9.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results.html.erb (14.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results_recalculation_form.html.erb (22.8ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/show.html.erb within layouts/mortgage_calculator/application (128.6ms)
+  Rendered layouts/application.html.erb (3.0ms)
+  Rendered layouts/embedded_tool.html.erb (4.4ms)
+Completed 200 OK in 271ms (Views: 270.6ms)
+
+
+Started GET "/en/mortgage_calculator/land-transaction-tax-calculator-wales" for ::1 at 2021-06-16 20:47:37 +0100
+Processing by MortgageCalculator::LandTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_calculator_form.html.erb (87.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_next_home_buyer_explanation.html.erb (3.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_how_is_calculated_section.html.erb (6.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results.html.erb (9.6ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results_recalculation_form.html.erb (14.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/show.html.erb within layouts/mortgage_calculator/application (108.4ms)
+  Rendered layouts/application.html.erb (3.2ms)
+  Rendered layouts/embedded_tool.html.erb (4.6ms)
+Completed 200 OK in 226ms (Views: 201.2ms)
+
+
+Started GET "/cy/mortgage_calculator/land-transaction-tax-calculator-wales" for ::1 at 2021-06-16 20:47:46 +0100
+Processing by MortgageCalculator::LandTransactionTaxesController#show as HTML
+  Parameters: {"locale"=>"cy"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_trigger/_popup_tip_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/popup_tip_content/_popup_tip_content.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_calculator_form.html.erb (131.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/shared/_links_to_other_tools.html.erb (0.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_next_home_buyer_explanation.html.erb (5.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_how_is_calculated_section.html.erb (8.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results.html.erb (13.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/_results_recalculation_form.html.erb (20.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/land_transaction_taxes/show.html.erb within layouts/mortgage_calculator/application (164.3ms)
+  Rendered layouts/application.html.erb (2.8ms)
+  Rendered layouts/embedded_tool.html.erb (4.7ms)
+Completed 200 OK in 252ms (Views: 251.9ms)
