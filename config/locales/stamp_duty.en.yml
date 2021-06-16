@@ -36,7 +36,7 @@ en:
         link: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-transaction-tax-calculator-wales"
       scotland:
         title: Calculate Land and Buildings Transaction Tax for Scotland
-        link: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-and-and-buildings-transaction-tax-calculator-scotland"
+        link: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-and-buildings-transaction-tax-calculator-scotland"
     recalculate: Recalculate
     how_calculated_toggle: "How is this calculated?"
     how_calculated_ftb: "First-time buyers are entitled to relief for the first £300,000 of Stamp Duty on properties up to a value of %{amount}."

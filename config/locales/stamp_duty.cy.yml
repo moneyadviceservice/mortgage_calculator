@@ -36,7 +36,7 @@ cy:
         link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-transaction-tax-calculator-wales"
       scotland:
         title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
-        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-and-and-buildings-transaction-tax-calculator-scotland"
+        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-and-buildings-transaction-tax-calculator-scotland"
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at %{amount}."
