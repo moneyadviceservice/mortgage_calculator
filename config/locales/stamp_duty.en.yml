@@ -13,7 +13,7 @@ en:
     title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
     subtitle_paras:
       - You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over a certain price in England and Northern Ireland. This calculator will help you work out how much you have to pay if you are buying residential property.
-      - If you are buying non-residential property or land, or if any of the purchasers are non-UK resident&#42; this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax' target="_blank">www.gov.uk/stamp-duty-land-tax</a>.
+      - If you are buying non-residential property or land, or if any of the purchasers are non-UK resident&#42; this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax' target='_blank'>www.gov.uk/stamp-duty-land-tax</a>.
       - "&#42; You are treated as non-UK resident for Stamp Duty Land Tax (SDLT) if you are not present in the UK for 183 days or more in the 12 months before the effective date of the purchase."
 
     next: Next

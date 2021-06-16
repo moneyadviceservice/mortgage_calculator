@@ -12,7 +12,7 @@ cy:
     subtitle_paras:
     - Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.
     - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
-    - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://llyw.cymru/cyfrifiannell-treth-trafodiadau-tir' target="_blank">llyw.cymru/cyfrifiannell-treth-trafodiadau-tir</a>.
+    - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://llyw.cymru/cyfrifiannell-treth-trafodiadau-tir' target='_blank'>llyw.cymru/cyfrifiannell-treth-trafodiadau-tir</a>.
     heading_results: "Cyfrifiannell Treth Trafodiadau Tir - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodiadau Tir ar eich eiddo preswyl yng Nghymru"
     next: "Nesaf"
