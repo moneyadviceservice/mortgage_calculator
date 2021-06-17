@@ -39,6 +39,7 @@ Feature: Land Transaction Tax Calculator
 
   @javascript
   Scenario Outline: tax for next home
+    Given the date is "2021-04-01"
     When I enter a house price of <price>
     And I enter a completion date of <completion date>
     And I am a next home buyer
