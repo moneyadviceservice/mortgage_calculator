@@ -5,6 +5,7 @@ I want to enter my house price
 
 Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
+  And the date is "2021-04-01"
   When I enter a house price of <price>
   And I enter a completion date of <completion date>
   And I am a first time buyer
@@ -57,6 +58,7 @@ Examples:
 @javascript
 Scenario Outline: stamp duty for first home
   Given I visit the Stamp Duty page
+  And the date is "2021-04-01"
   When I enter a house price of <price>
   And I enter a completion date of <completion date>
   And I am a first time buyer

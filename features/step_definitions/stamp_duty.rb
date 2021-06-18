@@ -1,5 +1,9 @@
 # encoding: UTF-8
 
+Given("the date is {string}") do |date|
+  travel_to date.to_date
+end
+
 Given /^I visit the( Welsh)? Stamp Duty (?:page|calculator)$/i do |welsh|
   welsh = (welsh =~ /welsh/i)
 

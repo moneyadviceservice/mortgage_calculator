@@ -29,7 +29,7 @@ group :test do
   gem 'capybara', '2.18.0'
   gem 'coffee-rails'
   gem 'cucumber', '~> 3.0.1'
-  gem 'cucumber-rails', '1.6.0'
+  gem 'cucumber-rails', '1.6.0', require: false
   gem 'launchy'
   gem 'mas-templating'
   gem 'rspec-its'
