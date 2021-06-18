@@ -41,32 +41,32 @@ module MortgageCalculator
             {
               start: 0,
               end: 180_000,
-              rate: 3
+              rate: 4
             },
             {
               start: 180_000.01,
               end: 250_000,
-              rate: 6.5
+              rate: 7.5
             },
             {
               start: 250_000.01,
               end: 400_000,
-              rate: 8
+              rate: 9
             },
             {
               start: 400_000.01,
               end: 750_000,
-              rate: 10.5
+              rate: 11.5
             },
             {
               start: 750_000.01,
               end: 1_500_000,
-              rate: 13
+              rate: 14
             },
             {
               start: 1_500_000.01,
               end: nil,
-              rate: 15
+              rate: 16
             }
           ]
         )
@@ -91,6 +91,15 @@ module MortgageCalculator
 
         it 'renders show template' do
           post :create, land_transaction_tax: { price: 'asd' }
+          expect(response).to render_template('show')
+        end
+      end
+
+      context 'when date is invalid' do
+        render_views
+
+        it 'renders show template' do
+          post :create, land_transaction_tax: { completion_date: "2021-06-31" }
           expect(response).to render_template('show')
         end
       end

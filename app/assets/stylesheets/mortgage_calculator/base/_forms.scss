@@ -17,6 +17,10 @@ label {
     padding: 6px;
     background: $colour-label-accent;
   }
+
+  &[for*="completion_date"] {
+    display: inline-block;
+  }
 }
 
 .field_with_errors {
@@ -58,6 +62,10 @@ select {
   -webkit-appearance:none;
   -moz-appearance:none;
   cursor: pointer;
+
+  &[name*="completion_date"] {
+    padding-right: 31px; 
+  }
 
   &::-ms-expand {
     display: none;

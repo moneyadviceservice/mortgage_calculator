@@ -9,6 +9,7 @@ Scenario: When a user uses the mortgage calculator
   When  I have entered some details into the repayment tool
   Then  My repayment completion interaction is tracked
 
+@wip
 Scenario: When a user uses the stamp duty calculator
   Given I visit the stamp duty calculator
   And I select to calculate for a second home

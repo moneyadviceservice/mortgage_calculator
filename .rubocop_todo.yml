@@ -123,6 +123,9 @@ Layout/ExtraSpacing:
     - 'Gemfile'
     - 'spec/dummy/config.ru'
     - 'spec/models/affordability_spec.rb'
+    - 'spec/models/stamp_duty_spec.rb'
+    - 'spec/models/land_and_buildings_transaction_tax_spec.rb'
+    - 'spec/models/land_transaction_tax_spec.rb'
 
 # Offense count: 7
 # Cop supports --auto-correct.
@@ -320,6 +323,9 @@ RSpec/ExampleLength:
     - 'spec/controllers/land_transaction_taxes_controller_spec.rb'
     - 'spec/models/outgoings_spec.rb'
     - 'spec/models/repayment_spec.rb'
+    - 'spec/models/land_and_buildings_transaction_tax_spec.rb'
+    - 'spec/models/land_transaction_tax_spec.rb'
+    - 'spec/models/stamp_duty_spec.rb'
 
 # Offense count: 5
 # Cop supports --auto-correct.
@@ -401,6 +407,7 @@ RSpec/NamedSubject:
     - 'spec/models/person_spec.rb'
     - 'spec/models/repayment_spec.rb'
     - 'spec/models/stamp_duty_spec.rb'
+    - 'spec/models/tax_calculator_spec.rb'
 
 # Offense count: 88
 RSpec/NestedGroups:
@@ -528,6 +535,8 @@ Style/ExpandPathArguments:
 Style/GuardClause:
   Exclude:
     - 'app/controllers/mortgage_calculator/repayments_controller.rb'
+    - 'app/controllers/mortgage_calculator/land_transaction_taxes_controller.rb'
+    - 'app/controllers/mortgage_calculator/property_tax_calculator_controller.rb'
     - 'app/controllers/mortgage_calculator/stamp_duties_controller.rb'
     - 'app/models/mortgage_calculator/person.rb'
 
@@ -653,3 +662,9 @@ Style/ZeroLengthPredicate:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 241
+
+Lint/ParenthesesAsGroupedExpression:
+  Exclude:
+    - spec/models/stamp_duty_spec.rb
+    - spec/models/land_transaction_tax_spec.rb
+    - spec/models/land_and_buildings_transaction_tax_spec.rb

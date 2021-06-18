@@ -1,0 +1,532 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+<head>
+  <title>Dummy</title>
+  <script src="/assets/modernizr-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js"></script>
+    <script>
+   window.calculator_config = {"tool":"lbtt","standard":[{"threshold":145000,"rate":0},{"threshold":250000,"rate":2},{"threshold":325000,"rate":5},{"threshold":750000,"rate":10},{"threshold":null,"rate":12}],"ftb":[{"threshold":175000,"rate":0},{"threshold":250000,"rate":2},{"threshold":325000,"rate":5},{"threshold":750000,"rate":10},{"threshold":null,"rate":12}],"second_home_tax_rate":4,"second_home_threshold":40000,"first_time_buyer_threshold":0};
+  </script>
+
+      <!--[if ( gte IE 7 ) & ( lte IE 8 ) & (!IEMobile) ]>
+      <link rel="stylesheet" media="all" href="/assets/mortgage_calculator_enhanced_fixed-b1e9a95d6c8f9b9e6f99fd25936da1881084e33f6987b0e8938f31e051c462e3.css" />
+      <![endif]-->
+
+      <!--[if ( !IE ) | ( gte IE 9 ) ]><!-->
+      <link rel="stylesheet" media="only all" href="/assets/mortgage_calculator_enhanced_responsive-b9518bd0f8f64343ae532bcb5313b471089b9cfd81fdeae5435f06bd8ebfb9a2.css" />
+      <!--<![endif]-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" media="print" href="/assets/mortgage_calculator_print-07a3235df860c9183533a25994c42b3bb72df879e5bbea712b09d8b0a0d27624.css" />
+
+  <script src="/assets/mortgage_calculator/application-e59824896df2dbf3ed0ede3436d8a5addec9dddab2c0098bcba57e4fa6cf1516.js"></script>
+
+    <script type='text/javascript'>
+    var dataLayer = dataLayer || [];
+  </script>
+
+</head>
+<body class="locale-en">
+
+  <div ng-app="mortgageCalculatorApp" class="mortgagecalc">
+    
+<div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
+  <div wizard on-finish="finishedWizard()" hide-indicators='true'>
+    <div wz-step class="ng-hide">
+      <div class="stamp-duty__container">
+        <h1 class="stamp-duty__heading">Land and Buildings Transaction Tax (LBTT) calculator</h1>
+        <h2 class="intro stamp-duty__subheading">Calculate the Land and Buildings Transaction Tax on your residential property in Scotland</h2>
+        <p>
+          Land and Buildings Transaction Tax (LBTT) has replaced Stamp Duty in Scotland. If you’re buying a residential property over £145,000, you’ll have to pay LBTT. This calculator works out how much Land and Buildings Transaction Tax you need to pay on your new home.
+It also works out how much you’ll pay on any additional property purchase over £40,000, like a buy to let or second home, which attracts an extra %{additional_property_rate}% Additional Dwelling Supplement (ADS).
+        </p>
+        <form name="stamp_duty_form" role="form" class="form step_one stamp-duty__step-one" novalidate="novalidate" id="new_land_and_buildings_transaction_tax" action="/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland?locale=en" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+
+  <label class="stamp-duty__buyer-type" for="land_and_buildings_transaction_tax_buyer_type">
+    I am
+    <select ng-model="stampDuty.buyerType" name="land_and_buildings_transaction_tax[buyer_type]" id="land_and_buildings_transaction_tax_buyer_type"><option value="">please select an option</option>
+<option selected="selected" value="isNextHome">buying my next home</option>
+<option value="isFTB">a first-time buyer</option>
+<option value="isSecondHome">buying an additional or buy-to-let property</option></select>
+    <span data-dough-component="PopupTip">
+      
+<button type="button"
+        class= "helper popup-tip__button "
+        data-dough-popup-trigger>
+  <span aria-hidden="true">i</span>
+  <span class="visually-hidden">show help</span>
+</button>
+
+      
+<div data-dough-popup-container class="helper popup-tip__container details__helper">
+  <p data-dough-popup-content class="popup-tip__content">
+    Anyone purchasing an additional home including buy to let properties over the value of £40,000 will have to pay an extra 4% surcharge on top of each Land and Buildings Transaction Tax band
+  </p>
+
+  <button data-dough-popup-close type="button" class="popup-tip__close">
+    <span aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--mobile-close-box">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--mobile-close-box"></use>
+      </svg>
+    </span>
+    <span class="visually-hidden">hide help</span>
+  </button>
+</div>
+
+    </span>
+</label>
+  <div class="stamp-duty__form form__item">
+    <label class="stamp-duty__input-description" for="land_and_buildings_transaction_tax_price">Property Price:</label>
+    <div class="visually-hidden" id="mc_accessibility_describe_price">Make sure to clear the existing number before entering the new number.</div>
+
+    <span class="stamp-duty__input-wrapper stamp-duty__input-wrapper--inline">
+      <span class="stamp-duty__input--unit">£</span>
+      <input value="0" autofocus="autofocus" ng-model="stampDuty.propertyPrice" placeholder="0" currency="" data-m-dec="0" pattern="\d*" class="stamp-duty__input" type="text" name="land_and_buildings_transaction_tax[price]" id="land_and_buildings_transaction_tax_price" />
+    </span>
+
+      <input type="submit" name="commit" value="Next" class="button button--primary stamp-duty__submit" ng-click="navigateAndFocus($event)" ng-disabled="!stampDuty.propertyPrice || !stampDuty.buyerType" analytics-category="Stamp Duty Calculator" analytics-action="Completion" analytics-label="Click" analytics="" analytics-on="click" />
+  </div>
+</form>
+
+        <hr />
+
+        <h2>Buying in England, Northern Ireland or Wales?</h2>
+        <p>If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay</p>
+      </div>
+
+      <div class="l-constrained elsewhere__container">
+    <a class="elsewhere__item promo__link" href="/en/tools/house-buying/stamp-duty-calculator">
+      <div class="elsewhere__item-content">
+        <h3 class="promo__heading">Calculate Stamp Duty in England or Northern Ireland</h3>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right elsewhere__arrow" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right"></use>
+      </svg>
+    </a>
+    <a class="elsewhere__item promo__link" href="/en/tools/house-buying/land-transaction-tax-calculator-wales">
+      <div class="elsewhere__item-content">
+        <h3 class="promo__heading">Calculate Land Transaction Tax for Wales</h3>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon--arrow-right elsewhere__arrow" focusable="false">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon--arrow-right"></use>
+      </svg>
+    </a>
+</div>
+
+    </div>
+
+    <div wz-step class="ng-hide">
+      <div class="stamp-duty__container">
+        <div class="rendered-from-js">
+          <h1 class="stamp-duty__heading">Land and Buildings Transaction Tax (LBTT) calculator - Your Results</h1>
+          <div class="stamp-duty__calculator-column">
+  <form id="update_stamp_duty" name="stamp_duty_form" role="form" class="step_two" ng-submit="preventFormSubmission($event)" novalidate="novalidate" action="/en/mortgage_calculator/land-and-buildings-transaction-tax-calculator-scotland?locale=en" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+    <div class="form__item stamp-duty__form">
+      <label class="stamp-duty__input-description" for="land_and_buildings_transaction_tax_price">Property Price:</label>
+      <div class="visually-hidden"
+            id="mc_accessibility_describe_price">
+        Make sure to clear the existing number before entering the new number.
+      </div>
+
+      <span class="stamp-duty__input-wrapper">
+        <span class="stamp-duty__input--unit">£</span>
+        <input value="0" class="stamp-duty__input dynamic-slider-property" ng-model="stampDuty.propertyPrice" placeholder="0.00" currency="" data-m-dec="0" analytics="" analytics-on="change" analytics-category="Stamp Duty Calculator" analytics-action="Refinement" analytics-label="Price" pattern="\d*" aria-describedby="mc_accessibility_describe_price" autoselect="" type="text" name="land_and_buildings_transaction_tax[price]" id="land_and_buildings_transaction_tax_price" />
+      </span>
+
+    </div>
+    <input type="hidden" value="isNextHome" name="land_and_buildings_transaction_tax[buyer_type]" id="land_and_buildings_transaction_tax_buyer_type" />
+
+    <div class="slider"
+          ui-slider
+          dynamic-for='dynamic-slider-property'
+          ng-model="stampDuty.propertyPrice"
+          analytics-category="Stamp Duty"
+          analytics-action="Refinement"
+          analytics-label="Price"
+          aria-hidden="true">
+    </div>
+
+    <div class="hide-with-js">
+      <p><br><input type="submit" name="commit" value="Recalculate" class="button" wz-next="" /></p>
+    </div>
+
+</form>
+  <div class="stamp-duty__results">
+  <div class="stamp-duty__results-heading" aria-live="polite" aria-atomic="true">
+    <div ng-hide="js">
+      Land and Buildings Transaction Tax to pay is
+    </div>
+    <div class="hidden-unless-js">
+      <span ng-if="stampDuty.isSecondHome">
+        Land and Buildings Transaction Tax on your additional property
+      </span>
+      <span ng-if="!stampDuty.isSecondHome">
+        Land and Buildings Transaction Tax to pay is
+      </span>
+    </div>
+
+    <span ng-hide="js">
+      £0.00
+    </span>
+    <span class="rendered-from-js">
+      {{ stampDuty.cost() | customCurrency:"£" }}
+    </span>
+  </div>
+
+  <p ng-hide="js" class="stamp-duty__results-tax-rate ng-hide">
+    The effective tax rate is 0.00%
+  </p>
+
+  <p class="rendered-from-js stamp-duty__results-tax-rate">
+    The effective tax rate is
+    {{ stampDuty.percentageTax() | number: 2 }}
+    %
+  </p>
+
+    <p ng-hide="js" class="stamp-duty__FTB_conditional ng-hide is-active">
+      You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than £0.
+    </p>
+  <p class="rendered-from-js stamp-duty__FTB_conditional">
+    You are not eligible for relief on Land and Buildings Transaction Tax because the property value is greater than £0.
+  </p>
+
+  <div>
+    <a href="#"
+       class="rendered-from-js
+              expander expander--nudge
+              stamp-duty__how-calculated-toggle"
+                ng-class="{ 'expander--expanded' : expandedStampDutyInformation }"
+                ng-click="toggleStampDutyExpanded($event)"
+                affects-height="click">
+      How is this calculated?
+      <span class="visually-hidden">
+        Click to expand.
+      </span>
+    </a>
+    <div class="mortgagecalc__panel--full">
+  <div ng-show="expandedStampDutyInformation" class="mortgagecalc__tip">
+    <div class="stamp-duty stamp-duty__calculation-explanation">
+        <div ng-hide="js" class="stamp-duty__explanation-nexthome ng-hide is-active">
+          <p>Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid).</p>
+<p>Anyone buying a second home including a buy to let property will pay an extra 4% on top of the relevant standard rate band. In this example that would represent an extra £11,200, meaning the total stamp duty would be £14,800 giving an effective tax rate of 5.29%.</p>
+
+<table class="mortgagecalc__table stamp-duty__table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__price">Purchase price</th>
+      <th class="mortgagecalc__table__rate">
+          Rate of Land and Buildings Transaction Tax (LBTT)
+      </th>
+      <th class="mortgagecalc__table__extra">Buy to Let/ Additional Dwelling Supplement (ADS)*</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td class="mortgagecalc__table__price">Up to £145,000</td>
+        <td class="mortgagecalc__table__rate">0%</td>
+        <td class="mortgagecalc__table__extra">4%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£145,001 - £250,000</td>
+        <td class="mortgagecalc__table__rate">2%</td>
+        <td class="mortgagecalc__table__extra">6%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£250,001 - £325,000</td>
+        <td class="mortgagecalc__table__rate">5%</td>
+        <td class="mortgagecalc__table__extra">9%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£325,001 - £750,000</td>
+        <td class="mortgagecalc__table__rate">10%</td>
+        <td class="mortgagecalc__table__extra">14%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">Over £750,000</td>
+        <td class="mortgagecalc__table__rate">12%</td>
+        <td class="mortgagecalc__table__extra">16%</td>
+      </tr>
+  </tbody>
+</table>
+
+
+<p>* Properties under £40,000 are not subject to second home Additional Dwelling Supplement</p>
+
+        </div>
+
+      <div class="rendered-from-js stamp-duty__explanation-firsttimebuyer">
+        <p>Land and Buildings Transaction Tax (LBTT) is paid at different rates on residential property transactions and is dependent on the chargeable consideration (usually the purchase price) of your home. You don’t pay tax on the full amount, only the amount that falls into a certain band.</p>
+<p>For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT.</p>
+
+<table class="mortgagecalc__table stamp-duty__ftb-table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__price">
+        Purchase price
+      </th>
+      <th class="mortgagecalc__table__rate">
+        Standard LBTT rate
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          Up to £145,000
+        </td>
+        <td class="mortgagecalc__table__rate">
+          0
+          %
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          £145,001 - £250,000
+        </td>
+        <td class="mortgagecalc__table__rate">
+          2
+          %
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          £250,001 - £325,000
+        </td>
+        <td class="mortgagecalc__table__rate">
+          5
+          %
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          £325,001 - £750,000
+        </td>
+        <td class="mortgagecalc__table__rate">
+          10
+          %
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">
+          Over £750,000
+        </td>
+        <td class="mortgagecalc__table__rate">
+          12
+          %
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+
+<p>First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.</p>
+<p>
+  It means that homes with purchase prices up to £175,000 are effectively free from LBTT for first-time buyers.
+</p>
+
+<p>For example:</p>
+
+<table class="mortgagecalc__table stamp-duty__table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__lbtt-price">
+        Purchase price
+      </th>
+      <th class="mortgagecalc__table__lbtt-standard-bill">
+        Standard LBTT bill
+      </th>
+      <th class="mortgagecalc__table__lbtt-ftb-relief-amount">
+        Amount of First-time Buyer Relief
+      </th>
+      <th class="mortgagecalc__table__lbtt-ftb-total-amount">
+        Total to pay for a first-time buyer
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          Up to £145,000
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £0
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £0
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £0
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          £155,000
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £200
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £200
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £0
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          £175,000
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £600
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £600
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £0
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          £250,000
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £2,100
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £600
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £1,500
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          £325,500
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £5,900
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £600
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £5,300
+        </td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__lbtt-price">
+          £750,500
+        </td>
+        <td class="mortgagecalc__table__lbtt-standard-bill">
+          £48,410
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-relief-amount">
+          £600
+        </td>
+        <td class="mortgagecalc__table__lbtt-ftb-total-amount">
+          £47,810
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+
+      </div>
+      <div class="rendered-from-js stamp-duty__explanation-nexthome">
+        <p>Land and Buildings Transaction Tax (LBTT) is paid at different rates, depending on the band the purchase price falls into. For example, someone buying a property for £280,000 would pay no tax on the value of the property up to £145,000, 2% tax on the property value between £145,001 and £250,000 and 5% on the property value between £250,001 and £280,000. In this case, total liability for Land and Buildings Transaction Tax (LBTT) would be £3,600 giving an effective tax rate of 1.29% (average percentage rate of tax paid).</p>
+<p>Anyone buying a second home including a buy to let property will pay an extra 4% on top of the relevant standard rate band. In this example that would represent an extra £11,200, meaning the total stamp duty would be £14,800 giving an effective tax rate of 5.29%.</p>
+
+<table class="mortgagecalc__table stamp-duty__table">
+  <thead>
+    <tr>
+      <th class="mortgagecalc__table__price">Purchase price</th>
+      <th class="mortgagecalc__table__rate">
+          Rate of Land and Buildings Transaction Tax (LBTT)
+      </th>
+      <th class="mortgagecalc__table__extra">Buy to Let/ Additional Dwelling Supplement (ADS)*</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td class="mortgagecalc__table__price">Up to £145,000</td>
+        <td class="mortgagecalc__table__rate">0%</td>
+        <td class="mortgagecalc__table__extra">4%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£145,001 - £250,000</td>
+        <td class="mortgagecalc__table__rate">2%</td>
+        <td class="mortgagecalc__table__extra">6%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£250,001 - £325,000</td>
+        <td class="mortgagecalc__table__rate">5%</td>
+        <td class="mortgagecalc__table__extra">9%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">£325,001 - £750,000</td>
+        <td class="mortgagecalc__table__rate">10%</td>
+        <td class="mortgagecalc__table__extra">14%</td>
+      </tr>
+      <tr>
+        <td class="mortgagecalc__table__price">Over £750,000</td>
+        <td class="mortgagecalc__table__rate">12%</td>
+        <td class="mortgagecalc__table__extra">16%</td>
+      </tr>
+  </tbody>
+</table>
+
+
+<p>* Properties under £40,000 are not subject to second home Additional Dwelling Supplement</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+  <div class="">
+    <h2 class="mortgagecalc__heading stamp-duty__have-you-tried">Have you tried?</h2>
+    <p><a class="button button--primary mortgagecalc__spread stamp-duty__button" target="_blank" href="https://www.moneyadviceservice.org.uk/en/tools/mortgage-calculator">Mortgage calculator</a>
+
+      <a class="button button--primary mortgagecalc__spread stamp-duty__button" target="_blank" href="https://www.moneyadviceservice.org.uk/en/tools/house-buying/mortgage-affordability-calculator">Affordability calculator</a></p>
+  </div>
+</div>
+
+<div class="stamp-duty__info-column">
+  <div class="callout callout--tip">
+    <span class="callout__icon" aria-hidden="true">?</span>
+    <h2 class="stamp-duty__info-subheading callout__heading">Did you know?</h2>
+    <p class="stamp-duty__info-tip">You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. Further information can be found on:</p>
+    <p><a class="stamp-duty__info-tip-link" href="/en/articles/land-and-buildings-transaction-tax-everything-you-need-to-know" target="_blank">Land and Buildings Transaction Tax (LBTT) - Everything you need to know</a>
+  </div>
+
+  <h2 class="mortgagecalc__subheading">Find out more:</h2>
+  <ul>
+      <li class="stamp-duty__info-tip-link"><a target="_blank" href="https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs">Upfront home buying costs</a></li>
+      <li class="stamp-duty__info-tip-link"><a target="_blank" href="https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance">Mortgage fees and costs</a></li>
+      <li class="stamp-duty__info-tip-link"><a target="_blank" href="https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day">Costs of moving day</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+</body>
+</html>
+
+
+

@@ -5,20 +5,24 @@ module MortgageCalculator
     include ActiveModel::Conversion
     include CurrencyInput::Macro
     include ActionView::Helpers::NumberHelper
+    include PhaseHelper
 
     attr_reader :price
     attr_accessor :buyer_type
+    attr_accessor :completion_date
     currency_inputs :price
     validates :price, presence: true, numericality: true
+    validate :completion_date_is_in_the_future
 
     SECOND_HOME_THRESHOLD = 40_000
     STANDARD_BUYER_TYPE = 'isNextHome'.freeze
     FIRST_TIME_BUYER_TYPE = 'isFTB'.freeze
     SECOND_PROPERTY_BUYER = 'isSecondHome'.freeze
 
-    def initialize(price: 0, buyer_type: STANDARD_BUYER_TYPE)
+    def initialize(price: 0, buyer_type: STANDARD_BUYER_TYPE, completion_date: Date.tomorrow)
       self.price = price
       self.buyer_type = buyer_type
+      self.completion_date = completion_date
     end
 
     def price_formatted
@@ -69,6 +73,19 @@ module MortgageCalculator
     end
 
     protected
+
+    def completion_date_is_in_the_future
+      errors.add(:completion_date, 'must be present') && return if completion_date.blank?
+      errors.add(:completion_date, 'invalid date') && return unless valid_date?(completion_date)
+      errors.add(:completion_date, 'must be in the future') && return if completion_date.to_date.past?
+    end
+
+    def valid_date?(value)
+      return true if value.is_a?(Date) || value.is_a?(Time)
+
+      d, m, y = value.split('/')
+      Date.valid_date?(y.to_i, m.to_i, d.to_i)
+    end
 
     def bands_to_use
       Raise 'bands must be implemented'

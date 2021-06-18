@@ -60,15 +60,15 @@ App.controller('CalculatorCtrl', ['$scope', 'Affordability', 'StampDuty', 'Repay
     };
 
     // Helpers
-    $scope.preventFormSubmission = function($event) {
-      $event.preventDefault();
-    };
+    // $scope.preventFormSubmission = function($event) {
+    //   $event.preventDefault();
+    // };
 
-    $scope.expandedStampDutyInformation = false;
-    $scope.toggleStampDutyExpanded = function($event) {
-      $event.preventDefault();
-      $scope.expandedStampDutyInformation = !$scope.expandedStampDutyInformation;
-    };
+    // $scope.expandedStampDutyInformation = false;
+    // $scope.toggleStampDutyExpanded = function($event) {
+    //   $event.preventDefault();
+    //   $scope.expandedStampDutyInformation = !$scope.expandedStampDutyInformation;
+    // };
 
     $scope.expandedRepaymentMortgageInformation = false;
     $scope.toggleRepaymentExpanded = function($event) {

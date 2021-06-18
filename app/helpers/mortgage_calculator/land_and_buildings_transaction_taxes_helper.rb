@@ -1,5 +1,7 @@
 module MortgageCalculator
   module LandAndBuildingsTransactionTaxesHelper
+    include PhaseHelper
+
     SAMPLE_JOURNEYS = [145_000, 155_000, 175_000, 250_000, 325_500, 750_500].freeze
 
     def band(num1, num2)
@@ -24,11 +26,17 @@ module MortgageCalculator
       )
     end
 
+    def completion_date
+      return resource.try(:completion_date) if defined? resource
+      Time.zone.today
+    end
+
     def calculator_config_json
       {
         tool: 'lbtt',
-        standard: calculator::STANDARD_BANDS,
-        ftb: calculator::FIRST_TIME_BUYER_BANDS,
+        completion_date: completion_date,
+        standard: calculator::STANDARD_BANDS[phase],
+        ftb: calculator::FIRST_TIME_BUYER_BANDS[phase],
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD,
         first_time_buyer_threshold: 0
@@ -44,7 +52,7 @@ module MortgageCalculator
     end
 
     def ftb_starting_price
-      formatted_currency(calculator::FIRST_TIME_BUYER_BANDS.first[:threshold])
+      formatted_currency(calculator::FIRST_TIME_BUYER_BANDS[phase].first[:threshold])
     end
 
     def buyer_journey_examples
@@ -79,7 +87,7 @@ module MortgageCalculator
     end
 
     def formatted_price(num)
-      threshold = calculator::STANDARD_BANDS.first[:threshold]
+      threshold = calculator::STANDARD_BANDS[phase].first[:threshold]
 
       num <= threshold ? minimum_band(threshold) : formatted_currency(num)
     end
