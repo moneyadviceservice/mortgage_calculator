@@ -11,7 +11,7 @@ en:
     subtitle_paras:
       - You must pay Land and Buildings Transaction Tax if you buy a property or land over a certain price in Scotland.
       - This calculator will help you work out how much you have to pay if you are buying residential property.
-      - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
+      - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator' target='_blank'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
     heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
     title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
     next: Next
