@@ -183,7 +183,7 @@ cy:
           heading: "Dechreuwch arni gyda’ch cais"
           info_html: "Y broses o brynu tŷ – %{steps}"
           url_text: "Camau i brynu tŷ neu fflat newydd"
-          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/buying-your-first-home/money-timeline-when-buying-property-england-wales-n-ireland.html"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/money-timeline-when-buying-property-england-wales-n-ireland"
       medium:
         title: "Beth ddylech chi ei wneud nesaf"
         tip_1:
