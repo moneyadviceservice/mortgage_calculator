@@ -183,7 +183,7 @@ en:
           heading: "Get started with your application"
           info_html: "Home-buying process – %{steps}"
           url_text: "Steps to buying a new house or flat"
-          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/buying-your-first-home/money-timeline-when-buying-property-england-wales-n-ireland.html"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/money-timeline-when-buying-property-england-wales-n-ireland"
       medium:
         title: "What you should do next"
         tip_1:
