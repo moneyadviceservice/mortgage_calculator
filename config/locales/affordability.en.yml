@@ -255,7 +255,7 @@ en:
           - copy_html: "Saving for a deposit"
             url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
           - copy_html: "Mortgage comparison table"
-            url: "https:/www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/your-mortgage-comparison-checklist.html"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/your-mortgage-comparison-checklist"
       have_you_tried:
         title: "Have you tried?"
         mortgage_calculator: "Mortgage Calculator"
