@@ -237,7 +237,7 @@ cy:
           - copy_html: "Cynlluniau tai fforddiadwy"
             url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners"
           - copy_html: "Cynilo ar gyfer blaendal"
-            url: "https://www.moneyhelper.org.uk/cy/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/saving-money-for-a-mortgage-deposit"
           - copy_html: "Tabl cymharu morgeisi"
             url: " https://www.moneyhelper.org.uk/cy/homes/buying-a-home/your-mortgage-comparison-checklist"
       have_you_tried:
