@@ -934,3 +934,141 @@ Processing by MortgageCalculator::StampDutiesController#show as HTML
   Rendered layouts/application.html.erb (4.0ms)
   Rendered layouts/embedded_tool.html.erb (6.5ms)
 Completed 200 OK in 336ms (Views: 332.8ms)
+
+
+Started GET "/" for ::1 at 2021-06-29 12:32:19 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (21.3ms)
+Completed 200 OK in 54ms (Views: 54.4ms)
+
+
+Started GET "/en/mortgage_calculator/mortgage-affordability-calculator" for ::1 at 2021-06-29 12:32:23 +0100
+Processing by MortgageCalculator::AffordabilitiesController#step_1 as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_header.html.erb (0.5ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors_li.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors.html.erb (65.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (83.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (55.9ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_trigger.html.erb (0.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_close.html.erb (1.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (63.8ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (6.2ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (57.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.4ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_trigger.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/tooltips/_close.html.erb (0.8ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (62.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (0.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_form_step1.html.erb (563.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_seo_links.html.erb (0.6ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/step_1.html.erb within layouts/mortgage_calculator/application (577.3ms)
+  Rendered layouts/application.html.erb (5.5ms)
+  Rendered layouts/embedded_tool.html.erb (7.2ms)
+Completed 200 OK in 1329ms (Views: 1283.8ms)
+
+
+Started POST "/en/mortgage_calculator/mortgage-affordability-calculator/step-1?locale=en" for ::1 at 2021-06-29 12:32:29 +0100
+Processing by MortgageCalculator::AffordabilitiesController#step_1 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lltFW2UU2wK1/bQy2mQHWDM7j015EbA4tDHEOiR0IFnPU3hfLXlTivqTxoPISzWroOcZx4wsFK2tSl3he7aOxw==", "affordability"=>{"people_attributes"=>{"0"=>{"annual_income"=>"65,000", "monthly_net_income"=>"3,800.00", "extra_income"=>""}}, "two_applicants"=>"0"}, "commit"=>"Next", "locale"=>"en"}
+Redirected to http://localhost:3000/en/mortgage_calculator/mortgage-affordability-calculator/step-2?locale=en
+Completed 302 Found in 2ms
+
+
+Started GET "/en/mortgage_calculator/mortgage-affordability-calculator/step-2?locale=en" for ::1 at 2021-06-29 12:32:29 +0100
+Processing by MortgageCalculator::AffordabilitiesController#step_2 as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors_li.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors.html.erb (54.9ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.4ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (55.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.1ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (56.3ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (56.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (53.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_errors_for_field.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (54.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_field_tooltip.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (0.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_form_step2.html.erb (682.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_seo_links.html.erb (0.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/step_2.html.erb within layouts/mortgage_calculator/application (688.8ms)
+  Rendered layouts/application.html.erb (2.3ms)
+  Rendered layouts/embedded_tool.html.erb (3.6ms)
+Completed 200 OK in 759ms (Views: 757.8ms)
+
+
+Started POST "/en/mortgage_calculator/mortgage-affordability-calculator/step-2?locale=en" for ::1 at 2021-06-29 12:32:33 +0100
+Processing by MortgageCalculator::AffordabilitiesController#step_2 as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z3i1LyhzRsEv/LVirK4UTqm1eNIXnk1MrxfyLDYqMAaWcIgrYB7OSWCSx9O+gSa9OmnuWOKj6dm2bGv3aeiemA==", "affordability"=>{"people_attributes"=>{"0"=>{"annual_income"=>"65000.0", "extra_income"=>"0.0", "monthly_net_income"=>"3800.0"}, "1"=>{"annual_income"=>"0.0", "extra_income"=>"0.0", "monthly_net_income"=>"0.0"}}, "outgoings"=>{"credit_repayments"=>"400", "child_maintenance"=>"700", "childcare"=>"", "travel"=>"", "utilities"=>"150", "rent_and_mortgage"=>"", "entertainment"=>"100", "holidays"=>"", "food"=>"100"}}, "commit"=>"Find out how much you can borrow", "locale"=>"en"}
+Redirected to http://localhost:3000/en/mortgage_calculator/mortgage-affordability-calculator/step-3?locale=en
+Completed 302 Found in 2ms
+
+
+Started GET "/en/mortgage_calculator/mortgage-affordability-calculator/step-3?locale=en" for ::1 at 2021-06-29 12:32:33 +0100
+Processing by MortgageCalculator::AffordabilitiesController#step_3 as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors_li.html.erb (0.0ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/forms/builders/validation/_summary_for_errors.html.erb (60.8ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_offered_amount.html.erb (1.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_borrowing.html.erb (5.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_term_years.html.erb (3.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_annual_interest_rate.html.erb (0.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_monthly_mortgage_repayment.html.erb (1.3ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_committed_costs.html.erb (0.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_take_home_pay.html.erb (0.8ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_high_budget_affect.html.erb (0.6ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_medium_budget_affect.html.erb (0.5ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_low_budget_affect.html.erb (0.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_budget_scenarios.html.erb (10.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_risk_chart.html.erb (2.9ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_risk_information.html.erb (1.6ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/form_row/_form_row.html.erb (0.7ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_estimated_remaining.html.erb (1.1ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_remaining_vector.html.erb (0.8ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/form/_interest_changes.html.erb (1.7ms)
+  Rendered /Users/akintadeajibade/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/dough-ruby-5.39.0/app/views/dough/helpers/inset_block/_inset_block.html.erb (0.4ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_form_step3.html.erb (266.8ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_seo_links.html.erb (0.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/step_3.html.erb within layouts/mortgage_calculator/application (288.2ms)
+  Rendered layouts/application.html.erb (2.5ms)
+  Rendered layouts/embedded_tool.html.erb (3.8ms)
+Completed 200 OK in 360ms (Views: 357.1ms)
+
+
+Started GET "/en/mortgage_calculator/mortgage-affordability-calculator/next_steps?locale=en" for ::1 at 2021-06-29 12:32:36 +0100
+Processing by MortgageCalculator::AffordabilitiesController#next_steps as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_medium_risk_next_steps.html.erb (1.0ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/_next_steps_content.html.erb (5.2ms)
+  Rendered /Users/akintadeajibade/Sites/mortgage_calculator/app/views/mortgage_calculator/affordabilities/next_steps.html.erb within layouts/mortgage_calculator/application (8.0ms)
+  Rendered layouts/application.html.erb (2.1ms)
+  Rendered layouts/embedded_tool.html.erb (3.4ms)
+Completed 200 OK in 88ms (Views: 87.3ms)
+
+
+Started GET "/assets/images-mh/callout-arrow-desktop.svg" for ::1 at 2021-06-29 12:32:37 +0100
