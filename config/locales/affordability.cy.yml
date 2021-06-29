@@ -205,7 +205,7 @@ cy:
           heading: "Ystyriwch fenthyca llai"
           info_html: "Dysgwch am %{deposit} a %{ratios}"
           url_text_1: "Gynilo i gael blaendal"
-          url_1: "https://www.moneyhelper.org.uk/cy/savings/types-of-savings/savings-for-life-goals/saving-money-for-a-deposit"
+          url_1: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/saving-money-for-a-mortgage-deposit"
           url_text_2: "Chymarebau benthyciad i werth"
           url_2: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/buying-your-first-home/how-much-can-you-afford-to-borrow"
         tip_2:
