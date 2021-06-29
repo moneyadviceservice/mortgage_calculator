@@ -211,7 +211,7 @@ cy:
         tip_2:
           heading: "Edrychwch ar wahanol gynlluniau i’ch helpu i brynu cartref"
           info_html: "Cynlluniau llywodraeth ar gyfer prynwyr am y tro cyntaf a pherchnogion tai cyfredol"
-          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners.html"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/government-schemes-for-first-time-home-buyers-and-existing-homeowners"
         tip_3:
           heading: "Rhowch drefn ar eich arian"
           info_html: "Defnyddiwch ein %{budget_planner} i gael y darlun llawn"
