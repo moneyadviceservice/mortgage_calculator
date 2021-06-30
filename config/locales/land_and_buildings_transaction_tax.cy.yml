@@ -88,7 +88,7 @@ cy:
           - copy_html: "Ffioedd a chostau morgais"
             url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
           - copy_html: "Arolygon ac adroddiadau prynwyr tai"
-            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/home-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: "Rhowch gynnig ar?"
         mortgage_calculator: "Cyfrifiannell morgais"
