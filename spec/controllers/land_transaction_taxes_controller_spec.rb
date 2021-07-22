@@ -5,73 +5,87 @@ module MortgageCalculator
     routes { MortgageCalculator::Engine.routes }
 
     describe '#standard_rates' do
-      it 'returns the rates for each band' do
-        expect(controller.standard_rates).to eq(
-          [
-            {
-              start: 0,
-              end: 250_000,
-              rate: 0
-            },
-            {
-              start: 250_000.01,
-              end: 400_000,
-              rate: 5
-            },
-            {
-              start: 400_000.01,
-              end: 750_000,
-              rate: 7.5
-            },
-            {
-              start: 750_000.01,
-              end: 1_500_000,
-              rate: 10
-            },
-            {
-              start: 1_500_000.01,
-              end: nil,
-              rate: 12
-            }
-          ]
-        )
+      let :standard_rates do
+        [
+          {
+            start: 0,
+            end: 180_000,
+            rate: 0
+          },
+          {
+            start: 180_000.01,
+            end: 250_000,
+            rate: 3.5
+          },
+          {
+            start: 250_000.01,
+            end: 400_000,
+            rate: 5
+          },
+          {
+            start: 400_000.01,
+            end: 750_000,
+            rate: 7.5
+          },
+          {
+            start: 750_000.01,
+            end: 1_500_000,
+            rate: 10
+          },
+          {
+            start: 1_500_000.01,
+            end: nil,
+            rate: 12
+          }
+        ]
+      end
 
-        expect(controller.higher_rates).to eq(
-          [
-            {
-              start: 0,
-              end: 180_000,
-              rate: 4
-            },
-            {
-              start: 180_000.01,
-              end: 250_000,
-              rate: 7.5
-            },
-            {
-              start: 250_000.01,
-              end: 400_000,
-              rate: 9
-            },
-            {
-              start: 400_000.01,
-              end: 750_000,
-              rate: 11.5
-            },
-            {
-              start: 750_000.01,
-              end: 1_500_000,
-              rate: 14
-            },
-            {
-              start: 1_500_000.01,
-              end: nil,
-              rate: 16
-            }
-          ]
-        )
+      it 'returns the rates for each band' do
+        expect(controller.standard_rates).to eq(standard_rates)
       end
     end
+
+    describe '#higher_rates' do
+      let :higher_rates do
+        [
+          {
+            start: 0,
+            end: 180_000,
+            rate: 4
+          },
+          {
+            start: 180_000.01,
+            end: 250_000,
+            rate: 7.5
+          },
+          {
+            start: 250_000.01,
+            end: 400_000,
+            rate: 9
+          },
+          {
+            start: 400_000.01,
+            end: 750_000,
+            rate: 11.5
+          },
+          {
+            start: 750_000.01,
+            end: 1_500_000,
+            rate: 14
+          },
+          {
+            start: 1_500_000.01,
+            end: nil,
+            rate: 16
+          }
+        ]
+      end
+
+      it 'returns the rates for each band' do
+        expect(controller.higher_rates).to eq(higher_rates)
+      end
+    end
+
 
     describe '#show' do
       it 'responds with 200' do
