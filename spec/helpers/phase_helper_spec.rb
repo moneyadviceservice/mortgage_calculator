@@ -6,7 +6,7 @@ module MortgageCalculator
     completion_phases = %i[phase_2 phase_2 phase_3]
     completion_expectations = completion_dates.zip(completion_phases)
 
-    context 'When calling #phase' do
+    context 'when calling #phase' do
       completion_expectations.each do |(date, phase)|
         it "returns phase: #{phase} on #{date}" do
           allow(helper).to receive(:completion_date).and_return(date)
