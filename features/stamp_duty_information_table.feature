@@ -11,6 +11,7 @@ Scenario: First time buyer
   Then I should see the first time buyer message
 
 Scenario: Next home buyer
+  Given the date is "2021-04-01"
   Given I visit the Stamp Duty page
   And I am a next home buyer
   When I reach the results page
