@@ -18,8 +18,8 @@ Scenario: Next home buyer
   And I should see the additional home buyer message
   And I should see the stamp duty percentages table:
     | Purchase price of property | Rate of Stamp Duty | Additional Property Rate* |
-    | £0 - £500,000              | 0%                 | 3%                        |
-    | £500,001 - £925,000        | 5%                 | 8%                        |
+    | £0 - £250,000              | 0%                 | 3%                        |
+    | £250,001 - £925,000        | 5%                 | 8%                        |
     | £925,001 - £1,500,000      | 10%                | 13%                       |
     | Over £1.5 million          | 12%                | 15%                       |
 
