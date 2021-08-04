@@ -7,6 +7,7 @@ Feature: Land Transaction Tax Calculator
     Given I visit the land transaction tax page
 
   Scenario Outline: taxes for next home
+    Given the date is "2021-04-01"
     When I enter a house price of <price>
     And I enter a completion date of <completion date>
     And I am a next home buyer
@@ -72,21 +73,21 @@ Feature: Land Transaction Tax Calculator
     When I enter a house price of 275000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£1,250"
+    And I see the stamp duty I will have to pay is "£3,700"
     Then I reenter my house price with "490000"
     And I click next again
-    And I see the stamp duty I will have to pay is "£14,250"
-    And I see the effective tax rate is "2.91%"
+    And I see the stamp duty I will have to pay is "£16,700"
+    And I see the effective tax rate is "3.41%"
 
   @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 275000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£1,250"
+    And I see the stamp duty I will have to pay is "£3,700"
     Then I reenter my house price with "490000"
     And I click next again
-    And I see the stamp duty I will have to pay is "£14,250"
+    And I see the stamp duty I will have to pay is "£16,700"
 
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home

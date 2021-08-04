@@ -114,7 +114,7 @@ Scenario: I recalculate for next home
   When I enter a house price of 550000
   And I am a next home buyer
   And I click next
-  And I see the stamp duty I will have to pay is "£2,500"
+  And I see the stamp duty I will have to pay is "£15,000"
   Then I reenter my house price with "126000"
   And I click next again
   And I see the stamp duty I will have to pay is "£0"
