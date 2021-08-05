@@ -1,7 +1,5 @@
-// $error-red:#D00000;
-// $risk-medium:#FFC200;
-// $risk-low:#008021;
 @import '../../moneyhelper_variables.scss';
+
 .risk__accent {
   @extend %font-heading-heavy;
 }
@@ -79,4 +77,3 @@ $risk-levels: (high, $error-red) (medium, $risk-medium) (low, $risk-low);
     }
   }
 }
-
