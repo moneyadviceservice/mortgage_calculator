@@ -78,15 +78,15 @@ cy:
           title: Dewch o hyd i ragor
           tips:
             - copy_html: "Gwefannau cymharu morgeisi <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org.uk/cy/articles/dod-o-hyd-ir-bargeinion-gorau-gyda-gwefannau-cymharu-prisiau#choosing-a-price-comparison-website"
+              url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/your-mortgage-comparison-checklist"
             - copy_html: "Dewis y morgais cywir <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org.uk/cy/action_plans/sut-i-ddewis-y-morgais-cywir"
+              url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/mortgage-interest-rate-options"
             - copy_html: "Cynlluniau tai fforddiadwy <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-interest-rate-options"
             - copy_html: "Cyfraddau llog <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org.uk/cy/articles/cyfraddau-llogau-morgeisi-y-mathau-gwahanol"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/estimate-your-overall-buying-and-moving-costs"
             - copy_html: "Ystyriwch gostau erail <span class='visually-hidden'>(agorir mewn ffenestr newydd)</span>"
-              url: "https://www.moneyhelper.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+              url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/help-with-mortgages/ways-of-repaying-an-interest-only-mortgage"
         have_you_tried:
           title: "Rhowch gynnig ar?"
           stamp_duty: "cyfrifiannell Treth Stamp"

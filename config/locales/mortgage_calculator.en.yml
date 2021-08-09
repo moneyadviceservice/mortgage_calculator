@@ -78,15 +78,15 @@ en:
           title: Find out more
           tips:
             - copy_html: "Mortgage comparison websites <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyhelper.org.uk/en/articles/price-comparison-sites-guide#choosing-a-price-comparison-website"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/your-mortgage-comparison-checklist"
             - copy_html: "Choose the right mortgage <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyhelper.org.uk/en/action_plans/how-to-choose-the-right-mortgage"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-interest-rate-options"
             - copy_html: "Affordable housing schemes <span class='visually-hidden'>(opens in a new window)</span>"
               url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/help-to-buy-a-home/help-to-buy-homebuy-and-other-housing-schemes"
             - copy_html: "Interest rates explained <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyhelper.org.uk/en/articles/mortgage-interest-rate-options"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-interest-rate-options"
             - copy_html: "Think about other costs <span class='visually-hidden'>(opens in a new window)</span>"
-              url: "https://www.moneyhelper.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+              url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/estimate-your-overall-buying-and-moving-costs"
         have_you_tried:
           title: "Have you tried?"
           stamp_duty: "Stamp Duty calculator"

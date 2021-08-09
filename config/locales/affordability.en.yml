@@ -222,16 +222,16 @@ en:
         tip_1:
           heading: "What lenders look for when you apply"
           info_html: "How much can you really afford to borrow?"
-          url: "https://www.moneyhelper.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/how-much-can-you-afford-to-borrow-for-a-mortgage"
         tip_2:
           heading: "Make changes to your spending"
           info_html: "Use our %{budget_planner} to get the full picture"
           url_text: "Budget Planner"
-          url: "https://www.moneyhelper.org.uk/en/tools/budget-planner"
+          url: "https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner"
         tip_3:
           heading: "Think about borrowing less"
           info_html: "Try %{saving}, or look for property in a more affordable area"
-          url: "https://www.moneyhelper.org.uk/en/tools/saving-for-a-deposit"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/saving-money-for-a-mortgage-deposit"
           url_text: "saving for a larger deposit"
       learn_more:
         title: "Affording your mortgage"
@@ -240,7 +240,7 @@ en:
         tip_2: "Spending more than 50% of your take-home pay on committed costs and mortgage puts you at very high risk of overstretching your budget. Make sure you have enough money left over at the end of the month to help you cope, should interest rates rise or your circumstances change."
         more:
           copy_html: "Read more"
-          url: "https://www.moneyhelper.org.uk/en/articles/how-much-can-you-afford-to-borrow"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/how-much-can-you-afford-to-borrow-for-a-mortgage"
       find_out_more:
         title: "Find out more"
         tips:
