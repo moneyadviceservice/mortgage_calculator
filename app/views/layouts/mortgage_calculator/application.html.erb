@@ -3,7 +3,6 @@
                  canonical: t("#{calculator_name}.meta.canonical_url") %>
 
 <% content_for(:head) do %>
-
     <% if disable_responsiveness? %>
       <%= stylesheet_link_tag 'mortgage_calculator_enhanced_fixed', media: 'all' %>
     <% else %>
@@ -19,8 +18,9 @@
     <% end %>
 
     <%= stylesheet_link_tag 'mortgage_calculator_print', media: 'print' %>
+    <%= stylesheet_link_tag 'moneyhelper_styling_mortgage_calc', media: 'only all' %>
 
-  <%= javascript_include_tag "mortgage_calculator/application" %>
+    <%= javascript_include_tag "mortgage_calculator/application" %>
 <% end %>
 
 <% content_for(:javascripts) do %>

@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Trafodiadau Tir ac Adeiladau (LBTT) – Cyfrifiannell Treth Stamp yr Alban"
       description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir ac Adeiladau (LBTT) i gyfrifo faint o LBTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban"
+      canonical_url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-and-buildings-transaction-tax-calculator-scotland"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
@@ -11,7 +11,7 @@ cy:
     subtitle_paras:
       - Mae rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) os byddwch yn prynu eiddo neu dir dros bris penodol yn yr Alban.
       - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
-      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
+      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator' target='_blank'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
     heading_results: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
     next: "Nesaf"
@@ -29,18 +29,18 @@ cy:
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: Telir Treth Trafodion Tir ac Adeiladau (LBTT) ar gyfraddau gwahanol ar drafodion eiddo preswyl ac mae'n ddibynnol ar yr ystyriaeth o'r hyn sy'n daladwy ar eich eiddo (y pris prynu fel arfer). Nid ydych yn talu treth ar y swm llawn, dim ond y swm sydd o fewn band penodol.
     how_calculated_ftb_2: "Er enghraifft, ni fyddai cost LBTT ar gartref sy'n costio £280,000 ar y £145,000 cyntaf, 2% ar y £105,000 nesaf, a 5% ar y £30,000 nesaf, felly byddech yn talu £3,600 mewn LBTT."
-    how_calculated_ftb_3_html: Gall prynwyr tro cyntaf hawlio gostyngiad Prynwr tro Cyntaf. <a href="https://www.moneyadviceservice.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Mae rhagor o wybodaeth am beth yw prynwr tro cyntaf ar ein gwefan.</a> Yn ddibynnol ar y pris prynu, gall y gostyngiad hwn leihau eich bil LBTT hyd at £600.
+    how_calculated_ftb_3_html: Gall prynwyr tro cyntaf hawlio gostyngiad Prynwr tro Cyntaf. <a href="https://www.moneyhelper.org.uk/cy/articles/awgrymiadau-ar-arian-i-brynwyr-tro-cyntaf" target="_blank">Mae rhagor o wybodaeth am beth yw prynwr tro cyntaf ar ein gwefan.</a> Yn ddibynnol ar y pris prynu, gall y gostyngiad hwn leihau eich bil LBTT hyd at £600.
     how_calculated_ftb_4: "Golyga hynny bod cartrefi sydd â phrisiau prynu hyd at %{amount} wedi eu heithrio rhag LBTT fwy neu lai ar gyfer prynwyr tro cyntaf."
     how_calculated_ftb_5: "Er enghraifft:"
     how_calculated: "Mae Treth Trafodiad Tir ac Adeiladau (LBTT) yn dreth a gymhwysir i drafodion tir ac adeiladau preswyl ac amhreswyl (gan gynnwys prydlesi masnachol)."
-    how_calculated_table_ftb_phase_1:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_1:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_ftb_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_table_second_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_ftb_phase_2:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_2:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_ftb_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_table_second_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_ftb_phase_3:    "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_3:   "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_ftb_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_additional: "Efallai bydd rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu i osod) dalu Ychwanegiad Annedd Ychwanegol (ADS) os yw'r pris prynu'n £40,000 neu fwy. Mae un cyfradd ADS a dangosir hon yn y tabl isod hefyd."
     how_calculated_extra: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
@@ -73,22 +73,23 @@ cy:
     next_steps:
       learn_more:
         title: "A wyddech chi?"
-        tip_1: "Efallai bydd yn rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) ar drafodion tir ac eiddo preswyl ac amhreswyl. Cyfrifoldeb y trethdalwr yw cwblhau a chyflwyno ffurflen LBTT gywir, lle bo angen, a thalu unrhyw dreth sy'n ddyledus. Gellir cyflwyno ffurflenni LBTT gan ddefnyddio <a href=%{url_online_portal}>porth ar-lein</a> neu <a href=%{url_LBTT_form}>ffurflen LBTT</a> Refeniw’r Alban. Gellir dod o hyd i fwy o wybodaeth ar:"
+        tip_1_html: >
+          Efallai bydd yn rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) ar drafodion tir ac eiddo preswyl ac amhreswyl. Cyfrifoldeb y trethdalwr yw cwblhau a chyflwyno ffurflen LBTT gywir, lle bo angen, a thalu unrhyw dreth sy'n ddyledus. Gellir cyflwyno ffurflenni LBTT gan ddefnyddio <a target="_blanck" href=%{url_online_portal}>porth ar-lein</a> neu <a target="_blanck" href=%{url_LBTT_form}>ffurflen LBTT</a> Refeniw’r Alban. Gellir dod o hyd i fwy o wybodaeth ar:
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: "Treth Trafodiadau Tir ac Adeiladau (LBTT) - Popeth y mae angen i chi wybod"
-          url: "/cy/articles/treth-trafodiadau-tir-ac-adeiladau-popeth-y-mae-angen-i-chi-ei-wybod/"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-and-buildings-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-          - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: "Arolygon ac adroddiadau prynwyr tai"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
-        title: 'Rhowch gynnig ar?'
+        title: "Rhowch gynnig ar?"
         mortgage_calculator: "Cyfrifiannell morgais"
         mortgage_affordability_calculator: "Cyfrifiannell fforddiadwyedd"

@@ -3,7 +3,7 @@ en:
     meta:
       title: "Land and Buildings Transaction Tax (LBTT) – Scottish Stamp Duty calculator"
       description: "Use our Land and Buildings Transaction Tax (LBTT) calculator to calculate how much LBTT (formerly Stamp Duty) you’ll need to pay on your home in Scotland"
-      canonical_url: "https://www.moneyadviceservice.org.uk/en/tools/house-buying/land-and-buildings-transaction-tax-calculator-scotland"
+      canonical_url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-and-buildings-transaction-tax-calculator-scotland"
     tooltip_show: show help
     tooltip_hide: hide help
     tool_name: "land-and-buildings-transaction-tax-calculator"
@@ -11,7 +11,7 @@ en:
     subtitle_paras:
       - You must pay Land and Buildings Transaction Tax if you buy a property or land over a certain price in Scotland.
       - This calculator will help you work out how much you have to pay if you are buying residential property.
-      - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
+      - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator' target='_blank'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
     heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
     title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
     next: Next
@@ -28,8 +28,8 @@ en:
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
     how_calculated_ftb: Land and Buildings Transaction Tax (LBTT) is paid at different rates on residential property transactions and is dependent on the chargeable consideration (usually the purchase price) of your home. You don’t pay tax on the full amount, only the amount that falls into a certain band.
-    how_calculated_ftb_2: For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT.
-    how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyadviceservice.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
+    how_calculated_ftb_2: For example, a home costing £280,000 would be charged no LBTT on the first £145,000, 2% on the next £105,000, and 5% on the next £30,000, so you’d pay £3,600 in LBTT. 
+    how_calculated_ftb_3_html: First-time buyers can claim First-time Buyer relief. <a href="https://www.moneyhelper.org.uk/en/articles/first-time-buyer-money-tips" target="_blank">You can find out more about what a first-time buyer is on our website.</a> Depending on the purchase price, this relief can reduce your LBTT bill by up to £600.
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates depending on the purchase price."
@@ -73,21 +73,22 @@ en:
     next_steps:
       learn_more:
         title: "Did you know?"
-        tip_1: "You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a href=%{url_online_portal}>online portal</a> or a <a href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:"
+        tip_1_html: >
+          You may have to pay Land and Buildings Transaction Tax (LBTT) on residential and non-residential land and property transactions. It is the responsibility of the taxpayer to complete and submit an accurate LBTT return, where required, and pay any tax due. LBTT returns can be submitted using Revenue Scotland’s <a target="_blanck" href=%{url_online_portal}>online portal</a> or a <a target="_blanck" href=%{url_LBTT_form}>LBTT form</a>. Further information can be found on:
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: "Land and Buildings Transaction Tax (LBTT) - Everything you need to know"
-          url: "/en/articles/land-and-buildings-transaction-tax-everything-you-need-to-know"
+          url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/land-and-buildings-transaction-tax-everything-you-need-to-know"
       find_out_more:
         title: Find out more
         tips:
           - copy_html: Upfront home buying costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/estimate-your-overall-buying-and-moving-costs"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/estimate-your-overall-buying-and-moving-costs"
           - copy_html: Mortgage fees and costs
-            url: "https://www.moneyadviceservice.org.uk/en/articles/mortgage-related-fees-and-costs-at-a-glance"
-          - copy_html: Costs of moving day
-            url: "https://www.moneyadviceservice.org.uk/en/articles/planning-for-the-cost-of-moving-day"
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: Homebuyer surveys and costs
+            url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/house-buying-extra-costs/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
         title: 'Have you tried?'
         mortgage_calculator: "Mortgage calculator"

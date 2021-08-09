@@ -3,7 +3,7 @@ cy:
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
-      canonical_url: "https://www.moneyadviceservice.org.uk/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+      canonical_url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/stamp-duty-calculator"
     tooltip_show: sioe help
     tooltip_hide: cuddio cymorth
     tool_name: "cyfrifiannell-treth-stamp"
@@ -13,8 +13,8 @@ cy:
     title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
     subtitle_paras:
       - Mae rhaid i chi dalu treth tir treth stamp (SDLT) os byddwch yn prynu eiddo neu dir dros bris penodol yn Lloegr neu Ogledd Iwerddon. Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
-      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir, neu os nad yw unrhyw un o'r prynwyr yn preswylio yn y DU ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax'>www.gov.uk/stamp-duty-land-tax</a>.
-      - '&#42; Cewch eich trin fel pe na fyddech yn preswylio yn y DU os na fyddwch yn bresennol yn y DU am 183 diwrnod neu fwy yn ystod y 12 mis cyn dyddiad gweithredol y pryniant.'
+      - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir, neu os nad yw unrhyw un o'r prynwyr yn preswylio yn y DU ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax' target='_blank'>www.gov.uk/stamp-duty-land-tax</a>.
+      - "&#42; Cewch eich trin fel pe na fyddech yn preswylio yn y DU os na fyddwch yn bresennol yn y DU am 183 diwrnod neu fwy yn ystod y 12 mis cyn dyddiad gweithredol y pryniant."
 
     next: "Nesaf"
     select:
@@ -30,13 +30,13 @@ cy:
       england_ni:
         title: "Cyfrifwch Dreth Stamp yng Nghymru, Lloegr neu Ogledd Iwerddon"
         body: "Rhaid talu Treth Stamp ar eiddo yn Lloegr a Gogledd Iwerddon o hyd"
-        link: "/cy/tools/prynu-ty/cyfrifiannell-treth-stamp"
+        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/stamp-duty-calculator"
       wales:
         title: Cyfrifwch Dreth Trafodiadau Tir ar gyfer Cymru
-        link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodiadau-tir-cymru
+        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-transaction-tax-calculator-wales"
       scotland:
         title: Cyfrifwch Dreth Trafodiadau Tir ac Adeiladau ar gyfer yr Alban
-        link: /cy/tools/prynu-ty/cyfrifiannell-treth-trafodion-tir-ac-adeiladau-alban
+        link: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/land-and-buildings-transaction-tax-calculator-scotland"
     recalculate: Ailgyfrifo
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated_ftb: "Mae prynwyr tro cyntaf yn gymwys i gael gostyngiad Treth Stamp ar y £300,000 cyntaf ar eiddo sy'n werth hyd at %{amount}."
@@ -54,14 +54,14 @@ cy:
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
     how_calculated: "Telir Treth Stamp ar wahanol gyfraddau, gan ddibynnu ar y pris prynu."
-    how_calculated_table_ftb_phase_1:    "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_next_phase_1:   "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
+    how_calculated_table_ftb_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
+    how_calculated_table_next_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
     how_calculated_table_second_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_ftb_phase_2:    "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
-    how_calculated_table_next_phase_2:   "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
+    how_calculated_table_ftb_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
+    how_calculated_table_next_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
     how_calculated_table_second_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
-    how_calculated_table_ftb_phase_3:    "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_3:   "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
+    how_calculated_table_ftb_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
     how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
     how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref bydd 3% ychwanegol i'w dalu ar ben y cyfraddau safonol perthnasol."
     how_calculated_extra: "* Codir tâl o 3% yn ychwanegol os yw eiddo yn eiddo ychwanegol neu'n ail gartref. Nid yw eiddo o dan %{amount} yn destun i'r gyfradd SDLT ychwanegol."
@@ -91,22 +91,22 @@ cy:
     next_steps:
       learn_more:
         title: "A wyddech chi?"
-        tip_1: "Rhaid i chi dalu Treth Stamp cyn pen 14 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
+        tip_1_html: "Rhaid i chi dalu Treth Stamp cyn pen 14 diwrnod ar ol prynu eiddo. Os ydych yn defnyddio cyfreithiwr i gwblhau'r trawsgludo, bydd fel arfer yn trefnu'r taliad ar eich rhan"
         url_online_portal: https://portal.revenue.scot/rslive/en/login
         url_LBTT_form: https://www.revenue.scot/land-buildings-transaction-tax/forms/paper-lbtt-return-form
         link_1:
           title: Treth Stamp - Popeth sydd angen i chi wybod
-          url: "/cy/articles/popeth-sydd-angen-ichi-ei-wybod-am-y-dreth-stamp"
+          url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/everything-you-need-to-know-about-stamp-duty"
       find_out_more:
         title: "Darganfyddwch fwy"
         tips:
           - copy_html: "Costau ymlaen llaw prynu cartref"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/amcangyfrifwch-eich-costau-prynu-a-symud-cyffredinol"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/house-buying-extra-costs/estimate-your-overall-buying-and-moving-costs"
           - copy_html: "Ffioedd a chostau morgais"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cipolwg-ar-ffioedd-a-chostau-syn-gysylltiedig-a-morgeisi"
-          - copy_html: "Costau diwrnod symud"
-            url: "https://www.moneyadviceservice.org.uk/cy/articles/cynllunio-ar-gyfer-cost-diwrnod-symud"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/understanding-mortgages/mortgage-related-fees-and-costs-at-a-glance"
+          - copy_html: "Arolygon ac adroddiadau prynwyr tai"
+            url: "https://www.moneyhelper.org.uk/cy/homes/buying-a-home/a-guide-to-homebuyer-surveys-and-costs"
       have_you_tried:
-        title: 'Rhowch gynnig ar?'
+        title: "Rhowch gynnig ar?"
         mortgage_calculator: "Cyfrifiannell morgais"
         mortgage_affordability_calculator: "Cyfrifiannell fforddiadwyedd"
