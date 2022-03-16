@@ -31,7 +31,7 @@ module MortgageCalculator
     describe '#calculator_config_json' do
       it 'it sets first threshold to the correct value' do
         config = JSON.parse(calculator_config_json)
-        expect(config["standard"].first["threshold"]).to eq(250_000)
+        expect(config["standard"].first["threshold"]).to eq(125_000)
       end
     end
   end

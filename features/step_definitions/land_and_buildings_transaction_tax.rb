@@ -23,9 +23,10 @@ When('I enter a house price of {string}') do |price|
 end
 
 And("I enter a completion date") do
-  @stamp_duty.completion_date_year.select(2021)
-  @stamp_duty.completion_date_month.select(Date::MONTHNAMES[11])
-  @stamp_duty.completion_date_day.select(21)
+  date = 1.year.from_now
+  @stamp_duty.completion_date_year.select(date.year)
+  @stamp_duty.completion_date_month.select(Date::MONTHNAMES[date.month])
+  @stamp_duty.completion_date_day.select(date.day)
 end
 
 When('I progress to the results page') do
