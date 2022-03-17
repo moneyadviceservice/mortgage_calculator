@@ -1,9 +1,9 @@
 <p><%= I18n.t("land_transaction_tax.how_calculated") %></p>
 
 <% if first_time_buyer? %>
-  <p><%= raw I18n.t("land_transaction_tax.how_calculated_table_ftb_#{phase}") %></p>
+  <p><%= raw I18n.t("land_transaction_tax.how_calculated_table_ftb") %></p>
 <% else %>
-  <p><%= raw I18n.t("land_transaction_tax.how_calculated_table_next_#{phase}") %></p>
+  <p><%= raw I18n.t("land_transaction_tax.how_calculated_table_next") %></p>
 <% end %>
 
 <p><%= I18n.t("land_transaction_tax.how_calculated_additional") %></p>

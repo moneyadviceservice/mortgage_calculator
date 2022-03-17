@@ -8,7 +8,6 @@ Background:
 
 Scenario Outline: land and buildings transaction tax for first home
   When I enter a house price of <price>
-  And I enter a completion date
   And I am a first time buyer
   And I click next
   Then I see the title for the "Land and Buildings Transaction Tax (LBTT)" results page
@@ -34,7 +33,6 @@ Examples:
 @javascript
 Scenario Outline: land and buildings transaction tax for first home
   When I enter a house price of <price>
-  And I enter a completion date
   And I am a first time buyer
   And I click next
   Then I see the call out box with everything I need to know

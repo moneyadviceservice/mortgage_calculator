@@ -50,30 +50,6 @@ describe MortgageCalculator::LandTransactionTax do
 
   scenarios = [
     # TO DO rounding errors on 467_895
-    { price: 0,       buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
-    { price: 39_000,  buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
-    { price: 40_000,  buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
-    { price: 145_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 5_800,  percentage_tax: 4,   precision: 0, total_due: 150_800 },
-    { price: 185_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 7_575,  percentage_tax: 4.094594594594595, precision: 0.1,  total_due: 192_575 },
-    { price: 275_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 14_700, percentage_tax: 5.345454545454545, precision: 0.01, total_due: 289_700 },
-    { price: 300_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 16_950, percentage_tax: 5.64,              precision: 0.1,  total_due: 316_950 },
-    { price: 490_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 36_300, percentage_tax: 7.408163265306122, precision: 0.01, total_due: 526_300 },
-    { price: 510_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 38_600, percentage_tax: 7.568627450980392, precision: 0.01, total_due: 548_600 },
-    { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
-    { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_1, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
-
-    { price: 0,       buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
-    { price: 39_000,  buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
-    { price: 40_000,  buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
-    { price: 145_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 5_800,  percentage_tax: 4,   precision: 0, total_due: 150_800 },
-    { price: 185_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 7_575,  percentage_tax: 4.094594594594595, precision: 0.1,  total_due: 192_575 },
-    { price: 275_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 14_700, percentage_tax: 5.345454545454545, precision: 0.01, total_due: 289_700 },
-    { price: 300_000, buyer_type:   'isSecondHome', phase: :phase_1, tax_due: 16_950, percentage_tax: 5.64,              precision: 0.1,  total_due: 316_950 },
-    { price: 490_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 36_300, percentage_tax: 7.408163265306122, precision: 0.01, total_due: 526_300 },
-    { price: 510_000, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 38_600, percentage_tax: 7.568627450980392, precision: 0.01, total_due: 548_600 },
-    { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_2, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
-    { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_2, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
-
     { price: 0,       buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
     { price: 39_000,  buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
     { price: 40_000,  buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 1_600,  percentage_tax: 4,   precision: 0, total_due: 41_600 },
@@ -85,28 +61,6 @@ describe MortgageCalculator::LandTransactionTax do
     { price: 510_000, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 38_600, percentage_tax: 7.568627450980392, precision: 0.01, total_due: 548_600 },
     { price: 937_500, buyer_type:   'isSecondHome', phase: :phase_3, tax_due: 92_450, percentage_tax: 9.861333333333333, precision: 0.01, total_due: 1_029_950 },
     { price: 2_100_000, buyer_type: 'isSecondHome', phase: :phase_3, tax_due: 267_200, percentage_tax: 12.723809523809524, precision: 0.01, total_due: 2_367_200 },
-
-    { price: 0,       buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 0 },
-    { price: 39_000,  buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 39_000 },
-    { price: 40_000,  buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 40_000 },
-    { price: 145_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 145_000 },
-    { price: 185_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 0,      percentage_tax: 0,   precision: 0, total_due: 185_000 },
-    { price: 275_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 1_250,  percentage_tax: 0.454545454545455, precision: 0.1,  total_due: 276_250 },
-    { price: 300_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 2_500,  percentage_tax: 0.833333333333333, precision: 0.1,  total_due: 302_500 },
-    { price: 490_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 14_250, percentage_tax: 2.908163265306122, precision: 0.1,  total_due: 504_250 },
-    { price: 510_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 15_750, percentage_tax: 3.088235294117647, precision: 0.1,  total_due: 525_750 },
-    { price: 937_500, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 52_500, percentage_tax: 5.6,               precision: 0.1,  total_due: 990_000 },
-    { price: 2_100_000, buyer_type: 'isNextHome',   phase: :phase_1, tax_due: 180_750, percentage_tax: 8.607142857142857,  precision: 0.1,  total_due: 2_280_750 },
-
-    { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
-    { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
-    { price: 179_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 179_000 },
-    { price: 190_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 350,  percentage_tax: 0.18,   precision: 0.1, total_due: 190_350 },
-    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 2950,  percentage_tax: 1.13,   precision: 0.1, total_due: 262_950 },
-    { price: 333_333, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 6616.65,  percentage_tax: 1.98,   precision: 0.1, total_due: 339_949.65 },
-    { price: 467_895, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 15042.125,  percentage_tax: 3.21,   precision: 0.1, total_due: 482_937.125 },
-    { price: 800_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 41200,  percentage_tax: 5.15,   precision: 0.1, total_due: 841_200 },
-    { price: 2_000_000, buyer_type: 'isNextHome', phase: :phase_2, tax_due: 171200,  percentage_tax: 8.56,   precision: 0.1, total_due: 2_171_200 },
 
     { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
     { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
@@ -130,19 +84,8 @@ describe MortgageCalculator::LandTransactionTax do
                        'and is a second home'
                      end
 
-      completion_date = case scenario[:phase]
-                        when :phase_1
-                          Date.new(2021, 4, 21)
-                        when :phase_2
-                          Date.new(2021, 7, 21)
-                        when :phase_3
-                          Date.new(2021, 10, 21)
-                        else
-                          Date.new(2022, 1, 1)
-                        end
-
-      context "When house price is #{scenario[:price]} #{context_name} and completion_date is #{completion_date}" do
-        subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type], completion_date: completion_date) }
+      context "When house price is #{scenario[:price]} #{context_name}" do
+        subject { described_class.new(price: scenario[:price], buyer_type: scenario[:buyer_type]) }
 
         its(:tax_due) { is_expected.to (scenario[:tax_due] == 0 ? be_zero : eq(scenario[:tax_due])) }
 

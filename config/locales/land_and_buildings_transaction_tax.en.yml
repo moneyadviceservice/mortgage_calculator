@@ -33,15 +33,9 @@ en:
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates depending on the purchase price."
-    how_calculated_table_ftb_phase_1:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_1:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_1: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
-    how_calculated_table_ftb_phase_2:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_2:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_2: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
-    how_calculated_table_ftb_phase_3:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_3:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_3: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
+    how_calculated_table_ftb: "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
+    how_calculated_table_next: "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
+    how_calculated_table_second: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
     how_calculated_additional: "Anyone buying an additional residential property in Scotland (such as a second home or buy-to-let property) may also have to pay an Additional Dwelling Supplement (ADS) if the purchase price is £40,000 or more.  There is one rate of ADS and this is also shown in the table below."
     how_calculated_extra: Properties under %{amount} are not subject to Additional Dwelling Supplement (ADS) but if ADS is due it is payable on the total purchase price.
     describe_price_field: Make sure to clear the existing number before entering the new number.
@@ -49,7 +43,6 @@ en:
       attributes:
         mortgage_calculator/land_and_buildings_transaction_tax:
           price: "Property price"
-          completion_date: "Completion date"
     results:
       title: "Land and Buildings Transaction Tax to pay is"
       second_title: "Land and Buildings Transaction Tax on your additional property"

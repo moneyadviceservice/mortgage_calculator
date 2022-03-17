@@ -1,9 +1,9 @@
 <p><%= I18n.t("#{i18n_locale_namespace}.how_calculated") %></p>
 
 <% if resource.buyer_type == 'isNextHome' %>
-	<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_next_#{phase}") %></p>
+	<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_next") %></p>
 <% else %>
-	<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_second_#{phase}") %></p>
+	<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_second") %></p>
 <% end %>
 
 

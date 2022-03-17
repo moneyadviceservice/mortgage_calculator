@@ -30,15 +30,9 @@ cy:
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
     how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch."
-    how_calculated_table_ftb_phase_1:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_next_phase_1:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
-    how_calculated_table_second_phase_1: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 30 Mehefin 2021, yn eu talu."
-    how_calculated_table_ftb_phase_2:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
-    how_calculated_table_next_phase_2:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
-    how_calculated_table_second_phase_2: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
-    how_calculated_table_ftb_phase_3:    "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
-    how_calculated_table_next_phase_3:   "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
-    how_calculated_table_second_phase_3: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_table_ftb: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
+    how_calculated_table_next: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
+    how_calculated_table_second: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
     how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref, efallai bydd y cyfraddau preswyl uwch a ddangosir yn yr ail dabl yn berthnasol."
     how_calculated_extra: "* Nid yw prynu eiddo o dan %{amount} yn destun i gyfraddau uwch o Treth Trafodiad Tir (LTT)"
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
@@ -46,7 +40,6 @@ cy:
       attributes:
         mortgage_calculator/land_transaction_tax:
           price: "Pris eiddo"
-          completion_date: "Dyddiad cwblhau"
     results:
       title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
       second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"

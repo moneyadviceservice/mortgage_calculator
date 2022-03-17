@@ -29,15 +29,9 @@ en:
       body: "If you are buying in any of these countries then use the appropriate calculator to work out how much you will pay"
     how_calculated_toggle: "How is this calculated?"
     how_calculated: "Land Transaction Tax (LTT) is paid at different rates depending on the purchase price."
-    how_calculated_table_ftb_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b>, with a completion date on or before 30 June 2021, would pay."
-    how_calculated_table_next_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
-    how_calculated_table_second_phase_1: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>, with a completion date on or before 30 June 2021, would pay."
-    how_calculated_table_ftb_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_next_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_second_phase_2: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_ftb_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
-    how_calculated_table_next_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>  on or after 1 July 2021, would pay."
-    how_calculated_table_second_phase_3: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_ftb: "The first table below shows the rates of Land Transaction Tax <b>someone buying their first home</b> on or after 1 July 2021, would pay."
+    how_calculated_table_next: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b>  on or after 1 July 2021, would pay."
+    how_calculated_table_second: "The first table below shows the rates of Land Transaction Tax <b>someone buying their next home</b> on or after 1 July 2021, would pay."
     how_calculated_additional: "If the property is an additional property or second home, the higher residential rates shown in the second table below may apply."
     how_calculated_extra: "* Buying a residential property under %{amount} is not subject to higher rates of Land Transaction Tax (LTT)"
     describe_price_field: Make sure to clear the existing number before entering the new number.
@@ -45,7 +39,6 @@ en:
       attributes:
         mortgage_calculator/land_transaction_tax:
           price: "Property price"
-          completion_date: "Completion date"
     results:
       title: "Land Transaction Tax to pay is"
       second_title: "Land Transaction Tax on your additional property"

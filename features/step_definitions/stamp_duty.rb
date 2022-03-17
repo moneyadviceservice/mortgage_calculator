@@ -34,12 +34,6 @@ When(/^I enter a house price of (\d+)$/) do |amount|
   @stamp_duty.property_price.set amount
 end
 
-And("I enter a completion date of {int}-{int}-{int}") do |year, month, day|
-  @stamp_duty.completion_date_year.select(year)
-  @stamp_duty.completion_date_month.select(Date::MONTHNAMES[month])
-  @stamp_duty.completion_date_day.select(day)
-end
-
 When(/^I click next$/) do
   @stamp_duty.next.click
 end
@@ -99,12 +93,6 @@ end
 
 And(/^I see that the stamp duty cost falls into a band of "(.*?)"$/) do |content|
   expect(@stamp_duty).to have_content(content)
-end
-
-And("I see a completion date of {int}{int}{int}") do |year, month, day|
-  expect(@stamp_duty.completion_date_year_step_two).to eq(year)
-  expect(@stamp_duty.completion_date_month_step_two).to eq(month)
-  expect(@stamp_duty.completion_date_day_step_two).to eq(day)
 end
 
 Then(/^I see the Welsh stamp duty calculator$/) do
