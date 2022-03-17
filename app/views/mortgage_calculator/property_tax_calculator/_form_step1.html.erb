@@ -16,16 +16,6 @@
       [t("#{i18n_locale_namespace}.select.option_isSecondHome"), 'isSecondHome']
       ], {}, {'ng-model' => 'stampDuty.buyerType'}
     )%>
-    <span data-dough-component="PopupTip">
-      <%= popup_tip_trigger options: {
-        text: t("#{i18n_locale_namespace}.tooltip_show")
-      } %>
-      <%= popup_tip_content options: {
-        text: t("#{i18n_locale_namespace}.select.tooltip_html", additional_property_rate: additional_property_rate),
-        classname: 'details__helper',
-        tooltip_hide: t("#{i18n_locale_namespace}.tooltip_hide")
-      } %>
-    </span>
   <% end %>
 
   <div class="stamp-duty__form form__item">

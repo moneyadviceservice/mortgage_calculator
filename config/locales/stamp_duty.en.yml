@@ -10,11 +10,10 @@ en:
     pretitle: Use this calculator to work out much Stamp Duty you’ll need to pay on a new home
     heading: "Stamp Duty calculator"
     heading_results: "Stamp Duty Calculator - Your Results"
-    title: Calculate the Stamp Duty on your residential property purchase in England or Northern Ireland
+    title: Calculate the Stamp Duty you will owe if you’re purchasing a residential property in England or Northern Ireland
     subtitle_paras:
-      - You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over a certain price in England and Northern Ireland. This calculator will help you work out how much you have to pay if you are buying residential property.
-      - If you are buying non-residential property or land, or if any of the purchasers are non-UK resident&#42; this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax' target='_blank'>www.gov.uk/stamp-duty-land-tax</a>.
-      - "&#42; You are treated as non-UK resident for Stamp Duty Land Tax (SDLT) if you are not present in the UK for 183 days or more in the 12 months before the effective date of the purchase."
+      - You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over the current threshold in England and Northern Ireland. This calculator will help you work out how much you must pay. 
+      - If you are buying non-residential property or land, or if any of the purchasers are non-UK resident this calculator can’t help. Instead go to <a href='https://www.gov.uk/stamp-duty-land-tax' target='_blank'>www.gov.uk/stamp-duty-land-tax</a>.
 
     next: Next
     select:
@@ -23,7 +22,6 @@ en:
       option_isNextHome: buying my next home
       option_isFTB: a first-time buyer
       option_isSecondHome: buying an additional property or second home
-      tooltip_html: You must pay Stamp Duty Land Tax (SDLT) if you buy a property or land over a certain price in England and Northern Ireland. There are different rules if you’re buying an additional property. <br /><br />You must generally pay the higher SDLT rates when you buy a residential property or a part of one if it will not be the only residential property that you own (or part own) anywhere in the world, you have not sold or given away your previous main home and no one else has a lease on it which has more than 21 years left to run. These rules apply if you’re married to or buying with someone.
     elsewhere:
       title: Buying in Scotland or Wales?
       body: The Scottish and Welsh equivalents of the Stamp Duty Land Tax (SDLT) paid in England and Northern Ireland is the Land and Buildings Transaction Tax (LBTT) in Scotland the Land Transaction Tax (LTT) in Wales.
@@ -53,12 +51,33 @@ en:
       - "5% tax on the property value between £250,001 and £550,000."
     how_calculated_ftb_6: "In this case, the total amount of Stamp Duty would be £17,500, giving an effective tax rate of 3.2%."
     how_calculated_ftb_7: "These rates currently apply to England, Wales and Northern Ireland"
-    how_calculated: "Stamp Duty is paid at different rates, depending on the purchase price."
-    how_calculated_table_ftb: "The table below shows the rates of stamp duty a <b>first-time buyer</b> would pay."
-    how_calculated_table_next: "The table below shows the rates of stamp duty for <b>someone buying their next home</b> would pay."
-    how_calculated_table_second: "The table below shows the rates of stamp duty for <b>someone buying their additional property or second home</b> would pay."
+    how_calculated: "You usually pay Stamp Duty Land Tax (SDLT) on the portion of the property price when you buy a residential property. "
+    how_calculated_table_ftb: "The table below shows the rates of stamp duty an eligible <b>first-time buyer</b> would pay."
+    how_calculated_table_next: "The table below shows the rates of stamp duty someone <b>buying their next home</b> would pay.."
+    how_calculated_table_second: "The table below shows the rates of stamp duty for someone buying an <b>additional property or second home would pay</b>."
     how_calculated_additional: "If the property is an additional property or second home there will be an extra 3% to pay on top of the relevant standard rates."
-    how_calculated_extra: "* An extra 3% is charged if property is an additional property or second home. Properties under %{amount} are not subject to the additional SDLT rate."
+    how_calculated_extra_ftb: |
+      <p>First time buyers paying between £300,000 and £500,000 will pay SDLT at 5% on the amount of the purchase price in excess of £300,000. First time buyers purchasing property for more than £500,000 will not be entitled to any relief and will pay SDLT at the normal rates.</p>
+      <p>A first-time buyer is defined as an individual or individuals who have never owned an interest in a residential property in the United Kingdom or anywhere else in the world and who intends to occupy the property as their main residence. This includes acquisitions by inheritance or gift.</p>
+      <p>First time buyers purchasing property for more than £500,000 will not be entitled to any relief and will pay SDLT at the normal rates. The relief must be claimed in an SDLT return.</p>
+    how_calculated_extra_second: |
+      <p>* You must pay the higher Stamp Duty Land Tax (SDLT) rates when you buy a residential property (or a part of one) for £40,000 or more, if all the following apply: </p>
+      <ul>
+        <li>it will not be the only residential property worth £40,000 or more that you own (or part own) anywhere in the world</li>
+        <li>you have not sold or given away your previous main home</li>
+        <li>no one else has a lease on it which has more than 21 years left to run</li>
+      </ul>
+      <p>You may have to pay the higher rates even if you intend to live in the property you’re buying (and regardless of whether or not you already own a residential property).</p>
+      <p>This is because the rules do not apply only to you (the buyer), but also to anyone you’re married to or buying with.</p>
+    how_calculated_extra_next: |
+      <p>* You must pay the higher Stamp Duty Land Tax (SDLT) rates when you buy a residential property (or a part of one) for £40,000 or more, if all the following apply:</p>
+      <ul>
+        <li>it will not be the only residential property worth £40,000 or more that you own (or part own) anywhere in the world</li>
+        <li>you have not sold or given away your previous main home</li>
+        <li>no one else has a lease on it which has more than 21 years left to run</li>
+      </ul>
+      <p>You may have to pay the higher rates even if you intend to live in the property you’re buying (and regardless of whether or not you already own a residential property).</p>
+      <p>This is because the rules do not apply only to you (the buyer), but also to anyone you’re married to or buying with.</p>
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:

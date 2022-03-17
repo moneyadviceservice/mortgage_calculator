@@ -37,7 +37,9 @@ cy:
     how_calculated_table_next: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_table_second: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
     how_calculated_additional: "Efallai bydd rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu i osod) dalu Ychwanegiad Annedd Ychwanegol (ADS) os yw'r pris prynu'n £40,000 neu fwy. Mae un cyfradd ADS a dangosir hon yn y tabl isod hefyd."
-    how_calculated_extra: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
+    how_calculated_extra_ftb: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
+    how_calculated_extra_second: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
+    how_calculated_extra_next: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:

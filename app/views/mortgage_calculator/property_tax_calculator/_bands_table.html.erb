@@ -9,7 +9,9 @@
           <%= I18n.t("#{i18n_locale_namespace}.table.verbose_rate_header") %>
         <% end %>
       </th>
-      <th class="mortgagecalc__table__extra"><%= I18n.t("#{i18n_locale_namespace}.table.extra_rate_header") %></th>
+      <% unless hide_additional %>
+        <th class="mortgagecalc__table__extra"><%= I18n.t("#{i18n_locale_namespace}.table.extra_rate_header") %></th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +26,9 @@
             </td>
           <% end %>
         <% else %>
-          <td class="mortgagecalc__table__extra"><%= second_home_rate(rate[:rate]) %>%</td>
+          <% unless hide_additional %>
+            <td class="mortgagecalc__table__extra"><%= second_home_rate(rate[:rate]) %>%</td>
+          <% end %>
         <% end %>
       </tr>
      <% end %>
