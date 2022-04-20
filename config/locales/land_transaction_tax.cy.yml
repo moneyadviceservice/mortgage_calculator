@@ -9,10 +9,18 @@ cy:
     tool_name: "treth-trafodiadau-tir"
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
     heading_description: "Mae’n rhaid i chi dalu Treth Trafodiadau Tir os ydych yn prynu eiddo neu dir dros bris penodol yng Nghymru. Y trothwy presennol yw £180,000 ar gyfer eiddo preswyl.Efallai bydd cyfraddau preswyl uwch yn berthnasol os ydych eisoes yn berchen ar un neu fwy eiddo preswyl. Mae’n rhaid i chi anfon ffurflen dychweliad LTT i Awdurdod Refeniw Cymru a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad)."
-    subtitle_paras:
-    - Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.
-    - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
-    - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://llyw.cymru/cyfrifiannell-treth-trafodiadau-tir' target='_blank'>llyw.cymru/cyfrifiannell-treth-trafodiadau-tir</a>.
+    subtitle_paras_html: |
+      <p>Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.</p>
+      <p>Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.</p>
+      <p>
+        Byddwch yn talu’r dreth pan fyddwch yn:
+        <ul>
+          <li>prynu eiddo rhydd-ddaliadol</li>
+          <li>prynu lesddaliad newydd neu bresennol</li>
+          <li>trosglwyddo tir neu eiddo yn gyfnewid am daliad, er enghraifft, rydych yn cymryd morgais neu'n prynu rhan mewn tŷ</li>
+        </ul>
+      </p>
+      <p>Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://llyw.cymru/cyfrifiannell-treth-trafodiadau-tir' target='_blank'>llyw.cymru/cyfrifiannell-treth-trafodiadau-tir</a>.</p>
     heading_results: "Cyfrifiannell Treth Trafodiadau Tir - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodiadau Tir ar eich eiddo preswyl yng Nghymru"
     next: "Nesaf"
@@ -29,12 +37,12 @@ cy:
       title: "Prynu yn Lloegr, Gogledd Iwerddon neu'r Alban?"
       body: "Os ydych chi'n prynu yn unrhyw un o'r gwledydd hyn, yna defnyddiwch y gyfrifiannell briodol i gyfrifo faint fyddwch chi'n ei dalu:"
     how_calculated_toggle: "Sut y cyfrifir hyn?"
-    how_calculated: "Telir Treth Trafodiad Tir (LTT) ar brif gyfraddau treth ac uwch."
-    how_calculated_table_ftb: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021 yn eu talu."
-    how_calculated_table_next: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
-    how_calculated_table_second: "Mae'r tabl cyntaf isod yn dangos pa gyfraddau Treth Trafodiadau Tir byddai rhywun sy'n prynu ei gartref nesaf, â dyddiad cwblhau ar neu cyn 1 Gorffennaf 2021, yn eu talu."
-    how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref, efallai bydd y cyfraddau preswyl uwch a ddangosir yn yr ail dabl yn berthnasol."
-    how_calculated_extra: "* Nid yw prynu eiddo o dan %{amount} yn destun i gyfraddau uwch o Treth Trafodiad Tir (LTT)"
+    how_calculated: "Fel arfer byddwch yn talu Treth Trafodiadau Tir (LTT) ar y gyfran o bris yr eiddo pan fyddwch yn prynu eiddo preswyl"
+    how_calculated_table_ftb: "Mae'r tabl cyntaf isod yn dangos y cyfraddau LTT byddai rhywun sy'n <b>prynu eu cartref nesaf</b> yn ei dalu."
+    how_calculated_table_next: "Mae'r tabl cyntaf isod yn dangos y cyfraddau LTT byddai rhywun sy'n <b>prynu eu cartref nesaf</b> yn ei dalu."
+    how_calculated_table_second: "Mae'r tabl cyntaf isod yn dangos y cyfraddau LTT byddai rhywun sy'n <b>prynu eu cartref nesaf</b> yn ei dalu."
+    how_calculated_additional: "Os yw’r eiddo’n <b>eiddo ychwanegol neu’n ail gartref</b>, efallai y bydd y cyfraddau preswyl uwch a ddangosir yn yr ail dabl isod yn berthnasol."
+    how_calculated_extra: "Ar gyfer eiddo sengl mae LTT wedi'i heithrio ar y £180,000 cyntaf."
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:
