@@ -34,6 +34,11 @@
   </tbody>
 </table>
 
+<p>
+<%= I18n.t("land_transaction_tax.how_calculated_extra",
+           amount: second_home_threshold) %>
+</p>
+
 <table class="mortgagecalc__table stamp-duty__table">
   <caption class="mortgagecalc__table__caption"><%= I18n.t("land_transaction_tax.table.caption.higher_rate") %></caption>
   <thead>
@@ -59,8 +64,3 @@
     <% end %>
   </tbody>
 </table>
-
-<p>
-<%= I18n.t("land_transaction_tax.how_calculated_extra",
-           amount: second_home_threshold) %>
-</p>
