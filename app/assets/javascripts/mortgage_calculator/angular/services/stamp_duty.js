@@ -5,7 +5,6 @@ App.factory('StampDuty', function() {
     var stampDuty = {
       propertyPrice : 0,
       buyerType: '',
-      completionDate: cfg.completion_date,
       secondHomeTaxThreshold: cfg.second_home_threshold || 0,
       secondHomeTaxRate: cfg.second_home_tax_rate || 0,
       firstTimeBuyerThreshold: cfg.first_time_buyer_threshold || 0,

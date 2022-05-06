@@ -9,7 +9,9 @@
           <%= I18n.t("#{i18n_locale_namespace}.table.verbose_rate_header") %>
         <% end %>
       </th>
-      <th class="mortgagecalc__table__extra"><%= I18n.t("#{i18n_locale_namespace}.table.extra_rate_header") %></th>
+      <% unless hide_additional %>
+        <th class="mortgagecalc__table__extra"><%= I18n.t("#{i18n_locale_namespace}.table.extra_rate_header") %></th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -17,14 +19,16 @@
       <tr>
         <td class="mortgagecalc__table__price"><%= band(rate[:start], rate[:end]) %></td>
         <td class="mortgagecalc__table__rate"><%= rate[:rate] %>%</td>
-        <% if i18n_locale_namespace == 'land_and_buildings_transaction_tax' %>
-          <% if index == 0 %>
-            <td class="mortgagecalc__table__extra mortgagecalc__table__common-row" rowspan="<%= rates.length %>">
-              <%= I18n.t("#{i18n_locale_namespace}.table.extra_rate", rate: second_home_rate(rate[:rate])) %>
-            </td>
+        <% unless hide_additional %>
+          <% if i18n_locale_namespace == 'land_and_buildings_transaction_tax' %>
+            <% if index == 0 %>
+              <td class="mortgagecalc__table__extra mortgagecalc__table__common-row" rowspan="<%= rates.length %>">
+                <%= I18n.t("#{i18n_locale_namespace}.table.extra_rate", rate: second_home_rate(rate[:rate])) %>
+              </td>
+            <% end %>
+          <% else %>
+            <td class="mortgagecalc__table__extra"><%= second_home_rate(rate[:rate]) %>%</td>
           <% end %>
-        <% else %>
-          <td class="mortgagecalc__table__extra"><%= second_home_rate(rate[:rate]) %>%</td>
         <% end %>
       </tr>
      <% end %>

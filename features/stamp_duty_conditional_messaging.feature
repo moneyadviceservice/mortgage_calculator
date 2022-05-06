@@ -7,7 +7,6 @@ Scenario Outline: Next or Second home buyer
   Given I visit the Stamp Duty page
   And I am <buyer>
   When I enter a house price of <price>
-  And I enter a completion date
   And I click next
   Then I should NOT see the first time eligibility message
 
@@ -22,6 +21,5 @@ Scenario: First time buyer
   Given I visit the Stamp Duty page
   And I am a first time buyer
   When I enter a house price of 510000
-  And I enter a completion date
   And I click next
   Then I should NOT see the first time eligibility message

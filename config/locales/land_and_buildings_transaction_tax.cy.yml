@@ -9,8 +9,8 @@ cy:
     tool_name: "cyfrifiannell-treth-trafodion-tir-ac-adeiladau"
     heading: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau"
     subtitle_paras:
-      - Mae rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau (LBTT) os byddwch yn prynu eiddo neu dir dros bris penodol yn yr Alban.
-      - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
+      - Mae rhaid i chi dalu Treth Trafodiadau Tir ac Adeiladau os byddwch yn prynu eiddo neu dir dros bris penodol.
+      - Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl yn yr Alban.
       - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator' target='_blank'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
     heading_results: "Cyfrifiannell Treth Trafodion Tir ac Adeiladau - Eich canlyniadau"
     title: "Cyfrifwch y Dreth Trafodion Tir ac Adeiladau ar eich eiddo preswyl yn yr Alban"
@@ -33,23 +33,18 @@ cy:
     how_calculated_ftb_4: "Golyga hynny bod cartrefi sydd â phrisiau prynu hyd at %{amount} wedi eu heithrio rhag LBTT fwy neu lai ar gyfer prynwyr tro cyntaf."
     how_calculated_ftb_5: "Er enghraifft:"
     how_calculated: "Mae Treth Trafodiad Tir ac Adeiladau (LBTT) yn dreth a gymhwysir i drafodion tir ac adeiladau preswyl ac amhreswyl (gan gynnwys prydlesi masnachol)."
-    how_calculated_table_ftb_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_second_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_ftb_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_second_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_ftb_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
-    how_calculated_additional: "Efallai bydd rhaid i unrhyw un sy'n prynu eiddo preswyl ychwanegol yn yr Alban (fel ail gartref neu eiddo prynu i osod) dalu Ychwanegiad Annedd Ychwanegol (ADS) os yw'r pris prynu'n £40,000 neu fwy. Mae un cyfradd ADS a dangosir hon yn y tabl isod hefyd."
-    how_calculated_extra: Nid yw eiddo o dan %{amount} yn destun i Atodiad Annedd Ychwanegol (ADS) ond os yw ADS yn ddyledus mae'n daladwy ar gyfanswm y pris prynu.
+    how_calculated_table_ftb: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai prynwr tro cyntaf yn eu talu."
+    how_calculated_table_next: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_table_second: "Mae'r tabl isod yn dangos pa gyfraddau LBTT byddai rhywun sy'n prynu ei gartref newydd yn eu talu."
+    how_calculated_additional: ""
+    how_calculated_extra_ftb: Bydd pryniannau tro cyntaf dros £175k hefyd yn elwa ar ryddhad prynwr tro cyntaf ar y gyfran o dan y trothwy £175k.
+    how_calculated_extra_second: Mae Atodiad Annedd Ychwanegol (ADS) ar ail eiddo neu eiddo preswyl ychwanegol yn cael ei gymhwyso ar 4% o gyfanswm y pris prynu (wedi'i dalu yn ychwanegol at unrhyw LBTT sy'n ddyledus). Nid yw eiddo o dan £40,000 yn destun i’r Atodiad Annedd Ychwanegol (ADS).
+    how_calculated_extra_next: Mae treth yn daladwy ar gyfraddau gwahanol ar bob cyfran o'r pris prynu o fewn bandiau treth penodedig. Os prynwch eiddo am lai na’r trothwy, nid oes LBTT i’w dalu.
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:
         mortgage_calculator/land_and_buildings_transaction_tax:
           price: "Pris eiddo"
-          completion_date: "Dyddiad cwblhau"
     results:
       title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
       second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
@@ -69,7 +64,7 @@ cy:
       standard_rates_apply: "Codir cyfraddau safonol (gweler isod)"
       min: "Hyd at %{value}"
       max: "Dros %{value}"
-      extra_rate: "%{rate}% o'r pris prynu (wedi'i dalu yn ychwanegol at unrhyw LBTT sy'n ddyledus)"
+      extra_rate: ""
     next_steps:
       learn_more:
         title: "A wyddech chi?"

@@ -10,11 +10,10 @@ cy:
     pretitle: "Defnyddiwch y gyfrifiannell hon i gyfrifo faint o dreth stamp y bydd angen ichi ei thalu ar gartref newydd"
     heading: "Cyfrifiannell treth stamp"
     heading_results: "Cyfrifiannell treth stamp - Eich canlyniadau"
-    title: "Cyfrifwch y dreth stamp ar eich eiddo preswyl prynu yng Lloegr neu Ogledd Iwerddon"
+    title: "Cyfrifwch y Dreth Stamp fydd yn ddyledus gennych os ydych yn prynu eiddo preswyl yn Lloegr neu Ogledd Iwerddon"
     subtitle_paras:
-      - Mae rhaid i chi dalu treth tir treth stamp (SDLT) os byddwch yn prynu eiddo neu dir dros bris penodol yn Lloegr neu Ogledd Iwerddon. Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.
+      - Mae rhaid i chi dalu Treth Tir Treth Stamp (SDLT) os byddwch yn prynu eiddo neu dir dros y terfyn presennol yn Lloegr neu Ogledd Iwerddon. Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint fydd yn rhaid i chi ei dalu. 
       - Os ydych yn prynu eiddo nad yw'n breswylfa neu dir, neu os nad yw unrhyw un o'r prynwyr yn preswylio yn y DU ni all y gyfrifiannell hon helpu. Yn hytrach ewch i <a href='https://www.gov.uk/stamp-duty-land-tax' target='_blank'>www.gov.uk/stamp-duty-land-tax</a>.
-      - "&#42; Cewch eich trin fel pe na fyddech yn preswylio yn y DU os na fyddwch yn bresennol yn y DU am 183 diwrnod neu fwy yn ystod y 12 mis cyn dyddiad gweithredol y pryniant."
 
     next: "Nesaf"
     select:
@@ -23,7 +22,6 @@ cy:
       option_isNextHome: prynu fy nghartref nesaf
       option_isFTB: prynu fy nghartref cyntaf
       option_isSecondHome: prynu eiddo ychwanegol neu ail gartref
-      tooltip_html: Mae'n rhaid i chi dalu Treth Tir Treth Stamp (SDLT) os ydych yn prynu eiddo neu dir dros bris penodol yn Lloegr a Gogledd Iwerddon. Mae yna reolau gwahanol os ydych yn prynu eiddo ychwanegol. <br /><br />Yn gyffredinol rhaid i chi dalu'r cyfraddau SDLT uwch pan brynwch eiddo preswyl neu ran o un os nad hwnnw fydd yr unig eiddo preswyl yr ydych yn berchen arno (neu'n berchen ar y cyd) yn unrhyw le yn y byd, os nad ydych wedi gwerthu neu roi eich prif gartref blaenorol i rywun ac nid oes gan neb les arno sydd â mwy na 21 mlynedd yn weddill. Mae'r rheolau hyn yn berthnasol os ydych yn briod neu'n prynu ar y cyd a'r unigolyn hwnnw neu honno.
     elsewhere:
       title: Prynu yn yr Alban neu Cymru?
       body: Yng Nghymru a'r Alban, yr hyn sy'n cyfateb i Dreth Dir y Dreth Stamp (SDLT) a delir yn Lloegr a Gogledd Iwerddon, yw'r Dreth Trafodion Tir yng Nghymru (LTT) a'r Dreth Trafodion Tir ac Adeiladau (LBTT) yn yr Alban.
@@ -53,24 +51,38 @@ cy:
       - "5% o dreth ar werth yr eiddo rhwng £250,001 a £550,000."
     how_calculated_ftb_6: "Yn yr achos hwn, byddai cyfanswm y Dreth Stamp yn £17,500, gan roi cyfradd treth effeithiol o 3.2%."
     how_calculated_ftb_7: "Mae'r cyfraddau hyn yn gymwys i Gymru, Lloegr a Gogledd Iwerddon ar hyn o bryd."
-    how_calculated: "Telir Treth Stamp ar wahanol gyfraddau, gan ddibynnu ar y pris prynu."
-    how_calculated_table_ftb_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_next_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_second_phase_1: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Mehefin 2021 yn eu talu."
-    how_calculated_table_ftb_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
-    how_calculated_table_next_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
-    how_calculated_table_second_phase_2: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf â dyddiad cwblhau ar neu cyn 30 Medi 2021 yn eu talu."
-    how_calculated_table_ftb_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai prynwr tro cyntaf yn eu talu."
-    how_calculated_table_next_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
-    how_calculated_table_second_phase_3: "Mae'r tabl isod yn dangos pa gyfraddau treth stamp byddai rhywun sy'n prynu ei gartref nesaf yn eu talu."
+    how_calculated: "Fel arfer byddwch yn talu Treth Tir Treth Stamp (SDLT) ar y gyfran o bris yr eiddo pan fyddwch yn prynu eiddo preswyl."
+    how_calculated_table_ftb: "Mae’r tabl isod yn dangos y cyfraddau treth stamp y byddai rhywun sy’n <b>prynu cartref am y tro cyntaf</b> yn ei dalu. "
+    how_calculated_table_next: "Mae’r tabl isod yn dangos y cyfraddau treth stamp y byddai rhywun sy’n <b>prynu eu cartref nesaf</b> yn ei dalu."
+    how_calculated_table_second: "Mae’r tabl isod yn dangos y cyfraddau treth stamp y byddai rhywun sy’n prynu <b>eiddo ychwanegol neu ail gartref yn ei dalu.</b>"
     how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref bydd 3% ychwanegol i'w dalu ar ben y cyfraddau safonol perthnasol."
-    how_calculated_extra: "* Codir tâl o 3% yn ychwanegol os yw eiddo yn eiddo ychwanegol neu'n ail gartref. Nid yw eiddo o dan %{amount} yn destun i'r gyfradd SDLT ychwanegol."
+    how_calculated_extra_ftb: |
+      <p>Bydd prynwyr tro cyntaf sy'n talu rhwng £300,000 a £500,000 yn talu SDLT ar 5% ar swm y pris prynu sy'n fwy na £300,000. Ni fydd gan brynwyr tro cyntaf sy’n prynu eiddo am fwy na £500,000 hawl i unrhyw ryddhad a byddant yn talu SDLT ar y cyfraddau arferol.</p>
+      <p>Diffinnir prynwr tro cyntaf fel unigolyn neu unigolion nad ydynt erioed wedi bod yn berchen ar fuddiant mewn eiddo preswyl yn y Deyrnas Unedig neu unrhyw le arall yn y byd ac sy’n bwriadu byw yn yr eiddo fel eu prif breswylfa. Mae hyn yn cynnwys caffaeliadau trwy etifeddiaeth neu rodd.</p>
+      <p>Ni fydd gan brynwyr tro cyntaf sy’n prynu eiddo am fwy na £500,000 hawl i unrhyw ryddhad a byddant yn talu SDLT ar y cyfraddau arferol. Rhaid hawlio'r rhyddhad ar ffurflen SDLT.</p>
+    how_calculated_extra_second: |
+      <p>* Rhaid i chi dalu’r cyfraddau Treth Tir Treth Stamp (SDLT) uwch pan fyddwch yn prynu eiddo preswyl (neu ran o un) am £40,000 neu fwy, os yw’r canlynol i gyd yn berthnasol: </p>
+      <ul>
+        <li>nid hwn fydd yr unig eiddo preswyl gwerth £40,000 neu fwy rydych yn berchen arno (neu'n rhannol berchen arno) unrhyw le yn y byd</li>
+        <li>ni ydych wedi gwerthu neu roi eich prif gartref blaenorol i ffwrdd</li>
+        <li>nid oes gan neb arall les arni sydd â mwy na 21 mlynedd ar ôl</li>
+      </ul>
+      <p>Mae’n bosibl y bydd yn rhaid i chi dalu’r cyfraddau uwch hyd yn oed os ydych yn bwriadu byw yn yr eiddo rydych yn ei brynu (a ph’un a ydych eisoes yn berchen ar eiddo preswyl ai peidio).</p>
+      <p>Mae hyn oherwydd bod y rheolau’n berthnasol nid yn unig i chi (y prynwr), ond hefyd i unrhyw un rydych yn briod â nhw neu’n prynu gyda hwy.</p>
+    how_calculated_extra_next: |
+      <p>* Rhaid i chi dalu’r cyfraddau Treth Tir Treth Stamp (SDLT) uwch pan fyddwch yn prynu eiddo preswyl (neu ran o un) am £40,000 neu fwy, os yw’r canlynol i gyd yn berthnasol:</p>
+      <ul>
+        <li>nid hwn fydd yr unig eiddo preswyl gwerth £40,000 neu fwy rydych yn berchen arno (neu'n rhannol berchen arno) unrhyw le yn y byd </li>
+        <li>ni ydych wedi gwerthu neu roi eich prif gartref blaenorol i ffwrdd </li>
+        <li>nid oes gan neb arall les arni sydd â mwy na 21 mlynedd ar ôl </li>
+      </ul>
+      <p>Mae’n bosibl y bydd yn rhaid i chi dalu’r cyfraddau uwch hyd yn oed os ydych yn bwriadu byw yn yr eiddo rydych yn ei brynu (a ph’un a ydych eisoes yn berchen ar eiddo preswyl ai peidio). </p>
+      <p>Mae hyn oherwydd bod y rheolau’n berthnasol nid yn unig i chi (y prynwr), ond hefyd i unrhyw un rydych yn briod â nhw neu’n prynu gyda hwy. </p>
     describe_price_field: Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn.
     activemodel:
       attributes:
         mortgage_calculator/stamp_duty:
           price: "Pris eiddo"
-          completion_date: "Dyddiad cwblhau"
     caveat:
       title: "Pwysig"
       one: "Mae'r gyfrifiannell hon yn ganllaw yn unig i dreth stamp ar eiddo preswyl. Mae gwahanol gyfraddau'n gymwys ar gyfer eiddo nad yw'n eiddo preswyl."

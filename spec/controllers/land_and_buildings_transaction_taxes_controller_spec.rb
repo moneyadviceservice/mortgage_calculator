@@ -26,14 +26,6 @@ module MortgageCalculator
         end
       end
 
-      context 'when date is invalid' do
-        render_views
-
-        it 'renders show template' do
-          post :create, land_and_buildings_transaction_tax: { completion_date: "2021-06-31" }
-          expect(response).to render_template('show')
-        end
-      end
     end
 
     describe '#calculator' do

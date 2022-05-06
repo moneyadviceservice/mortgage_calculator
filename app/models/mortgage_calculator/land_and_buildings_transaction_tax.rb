@@ -6,37 +6,21 @@ module MortgageCalculator
 
     # SCOTLAND
 
-    FIRST_TIME_BUYER_BANDS = { phase_1: [{ threshold: 175_000, rate: 0 },
-                                         { threshold: 250_000, rate: 2 },
-                                         { threshold: 325_000, rate: 5 },
-                                         { threshold: 750_000, rate: 10 },
-                                         { threshold: nil, rate: 12 }],
-                               phase_2: [{ threshold: 175_000, rate: 0 },
-                                         { threshold: 250_000, rate: 2 },
-                                         { threshold: 325_000, rate: 5 },
-                                         { threshold: 750_000, rate: 10 },
-                                         { threshold: nil, rate: 12 }],
-                               phase_3: [{ threshold: 175_000, rate: 0 },
-                                         { threshold: 250_000, rate: 2 },
-                                         { threshold: 325_000, rate: 5 },
-                                         { threshold: 750_000, rate: 10 },
-                                         { threshold: nil, rate: 12 }] }.freeze
+    FIRST_TIME_BUYER_BANDS = [
+      { threshold: 175_000, rate: 0 },
+      { threshold: 250_000, rate: 2 },
+      { threshold: 325_000, rate: 5 },
+      { threshold: 750_000, rate: 10 },
+      { threshold: nil, rate: 12 }
+    ].freeze
 
-    STANDARD_BANDS = { phase_1: [{ threshold: 145_000, rate: 0 },
-                                 { threshold: 250_000, rate: 2 },
-                                 { threshold: 325_000, rate: 5 },
-                                 { threshold: 750_000, rate: 10 },
-                                 { threshold: nil, rate: 12 }],
-                       phase_2: [{ threshold: 145_000, rate: 0 },
-                                 { threshold: 250_000, rate: 2 },
-                                 { threshold: 325_000, rate: 5 },
-                                 { threshold: 750_000, rate: 10 },
-                                 { threshold: nil, rate: 12 }],
-                       phase_3: [{ threshold: 145_000, rate: 0 },
-                                 { threshold: 250_000, rate: 2 },
-                                 { threshold: 325_000, rate: 5 },
-                                 { threshold: 750_000, rate: 10 },
-                                 { threshold: nil, rate: 12 }] }.freeze
+    STANDARD_BANDS = [
+      { threshold: 145_000, rate: 0 },
+      { threshold: 250_000, rate: 2 },
+      { threshold: 325_000, rate: 5 },
+      { threshold: 750_000, rate: 10 },
+      { threshold: nil, rate: 12 }
+    ].freeze
 
     SECOND_HOME_ADDITIONAL_TAX = 4
 
@@ -51,7 +35,7 @@ module MortgageCalculator
     protected
 
     def bands_to_use
-      first_time_buy? ? FIRST_TIME_BUYER_BANDS[phase] : STANDARD_BANDS[phase]
+      first_time_buy? ? FIRST_TIME_BUYER_BANDS : STANDARD_BANDS
     end
   end
 end

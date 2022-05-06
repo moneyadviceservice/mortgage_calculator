@@ -1,9 +1,7 @@
 <p><%= I18n.t("#{i18n_locale_namespace}.how_calculated") %></p>
 
-<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_ftb_#{phase}") %></p>
+<p><%= raw I18n.t("#{i18n_locale_namespace}.how_calculated_table_ftb") %></p>
 
-<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_additional", additional_property_rate: additional_property_rate) %></p>
+<%= render 'bands_table', rates: rates, hide_additional: true %>
 
-<%= render 'bands_table', rates: rates %>
-
-<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_extra", amount: second_home_threshold) %></p>
+<p><%= I18n.t("#{i18n_locale_namespace}.how_calculated_extra_ftb", amount: second_home_threshold).html_safe %></p>

@@ -1,6 +1,5 @@
 module MortgageCalculator
   module StampDutiesHelper
-    include PhaseHelper
 
     def band(num1, num2)
       num1 = num1.ceil
@@ -32,18 +31,12 @@ module MortgageCalculator
       resource.first_time_ineligible?
     end
 
-    def completion_date
-      return resource.try(:completion_date) if defined? resource
-      Time.zone.today
-    end
-
     def calculator_config_json
       calculator = MortgageCalculator::StampDuty
       {
         tool: 'stampDuty',
-        completion_date: completion_date,
-        standard: calculator::STANDARD_BANDS[phase],
-        ftb: calculator::FIRST_TIME_BUYER_BANDS[phase],
+        standard: calculator::STANDARD_BANDS,
+        ftb: calculator::FIRST_TIME_BUYER_BANDS,
         second_home_tax_rate: calculator::SECOND_HOME_ADDITIONAL_TAX,
         second_home_threshold: calculator::SECOND_HOME_THRESHOLD,
         first_time_buyer_threshold: calculator::FIRST_TIME_BUYER_THRESHOLD

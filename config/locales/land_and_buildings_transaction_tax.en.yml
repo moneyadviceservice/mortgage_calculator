@@ -9,8 +9,8 @@ en:
     tool_name: "land-and-buildings-transaction-tax-calculator"
     heading: "Land and Buildings Transaction Tax (LBTT) calculator"
     subtitle_paras:
-      - You must pay Land and Buildings Transaction Tax if you buy a property or land over a certain price in Scotland.
-      - This calculator will help you work out how much you have to pay if you are buying residential property.
+      - You must pay Land and Buildings Transaction Tax if you buy a property or land over a certain price.
+      - This calculator will help you work out how much you must pay if you are buying residential property in Scotland.
       - If you are buying non-residential property or land this calculator can’t help. Instead go to <a href='https://revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator' target='_blank'>revenue.scot/land-buildings-transaction-tax/tax-calculator/lbtt-property-transactions-calculator</a>.
     heading_results: "Land and Buildings Transaction Tax (LBTT) calculator - Your Results"
     title: "Calculate the Land and Buildings Transaction Tax on your residential property in Scotland"
@@ -33,23 +33,18 @@ en:
     how_calculated_ftb_4: "It means that homes with purchase prices up to %{amount} are effectively free from LBTT for first-time buyers."
     how_calculated_ftb_5: "For example:"
     how_calculated: "Land and Buildings Transaction Tax (LBTT) is paid at different rates depending on the purchase price."
-    how_calculated_table_ftb_phase_1:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_1:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_1: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
-    how_calculated_table_ftb_phase_2:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_2:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_2: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
-    how_calculated_table_ftb_phase_3:    "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
-    how_calculated_table_next_phase_3:   "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
-    how_calculated_table_second_phase_3: "The table below shows the rates of LBTT <b>someone buying their additional property or second home</b> would pay."
-    how_calculated_additional: "Anyone buying an additional residential property in Scotland (such as a second home or buy-to-let property) may also have to pay an Additional Dwelling Supplement (ADS) if the purchase price is £40,000 or more.  There is one rate of ADS and this is also shown in the table below."
-    how_calculated_extra: Properties under %{amount} are not subject to Additional Dwelling Supplement (ADS) but if ADS is due it is payable on the total purchase price.
+    how_calculated_table_ftb: "The table below shows the rates of LBTT a <b>first-time buyer</b> would pay."
+    how_calculated_table_next: "The table below shows the rates of LBTT <b>someone buying their next home</b> would pay."
+    how_calculated_table_second: "The table below shows the rates of LBTT <b>someone buying their additional property, or second home</b> would pay."
+    how_calculated_additional: ""
+    how_calculated_extra_ftb: First time purchases above £175k will also benefit from the first-time buyer’s relief on the portion below the £175k threshold.
+    how_calculated_extra_second: Additional Dwelling Supplement (ADS) on second or additional residential property is applied at 4% of the total purchase price (paid in addition to any LBTT due). Properties under £40,000 are not subject to the Additional Dwelling Supplement (ADS).
+    how_calculated_extra_next: Tax is payable at different rates on each portion of the purchase price within specified tax bands. If you buy a property for less than the threshold, there’s no LBTT to pay.
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:
         mortgage_calculator/land_and_buildings_transaction_tax:
           price: "Property price"
-          completion_date: "Completion date"
     results:
       title: "Land and Buildings Transaction Tax to pay is"
       second_title: "Land and Buildings Transaction Tax on your additional property"
@@ -69,7 +64,7 @@ en:
       standard_rates_apply: "Standard rates apply (see below)"
       min: "Up to %{value}"
       max: "Over %{value}"
-      extra_rate: "%{rate}% of purchase price (paid in addition to any LBTT due)"
+      extra_rate: ""
     next_steps:
       learn_more:
         title: "Did you know?"

@@ -24,16 +24,6 @@ module UI
       element :ftb_explanation, ".stamp-duty__explanation-firsttimebuyer"
       element :next_home_explanation, ".stamp-duty__explanation-nexthome"
       element :ftb_conditional, ".stamp-duty__FTB_conditional"
-
-      element :completion_date_year, "form.step_one #stamp_duty_completion_date_1i"
-      element :completion_date_month, "form.step_one #stamp_duty_completion_date_2i"
-      element :completion_date_day, "form.step_one #stamp_duty_completion_date_3i"
-
-      element :completion_date_year_step_two, "form.step_two #stamp_duty_completion_date_1i"
-      element :completion_date_month_step_two, "form.step_two #stamp_duty_completion_date_2i"
-      element :completion_date_day_step_two, "form.step_two #stamp_duty_completion_date_3i"
-
-
     end
 
     class WelshStampDuty < StampDuty

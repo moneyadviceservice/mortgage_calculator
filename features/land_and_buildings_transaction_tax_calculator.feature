@@ -8,7 +8,6 @@ Feature: Land and Buildings Transaction Tax Calculator
 
   Scenario Outline: taxes for next home
     When I enter a house price of <price>
-    And I enter a completion date
     And I am a next home buyer
     And I click next
     Then I see the call out box with everything I need to know
@@ -49,7 +48,6 @@ Feature: Land and Buildings Transaction Tax Calculator
 
   Scenario: I recalculate for next home
     When I enter a house price of 260000
-    And I enter a completion date
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£2,600"
@@ -61,7 +59,6 @@ Feature: Land and Buildings Transaction Tax Calculator
   @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 260000
-    And I enter a completion date
     And I am a next home buyer
     And I click next
     And I see the stamp duty I will have to pay is "£2,600"
@@ -72,7 +69,6 @@ Feature: Land and Buildings Transaction Tax Calculator
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
-    And I enter a completion date
     And I click next
     Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"
@@ -97,7 +93,6 @@ Feature: Land and Buildings Transaction Tax Calculator
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
     When I enter a house price of <price>
-    And I enter a completion date
     And I click next
     Then I see the call out box with everything I need to know
     And I see the stamp duty I will have to pay is "£<duty>"

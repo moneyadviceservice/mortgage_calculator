@@ -17,9 +17,8 @@
         <h2 class="intro stamp-duty__subheading">
           <%= I18n.t("land_transaction_tax.title") %>
         </h2>
-        <% I18n.t("land_transaction_tax.subtitle_paras").each do |para| %>
-          <p><%= para.html_safe %></p>
-        <% end %>
+        <%= I18n.t("land_transaction_tax.subtitle_paras_html").html_safe %>
+
         <%= render 'calculator_form', ltt: @ltt %>
       </div>
 
