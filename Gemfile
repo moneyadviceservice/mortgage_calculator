@@ -32,6 +32,7 @@ group :test do
   gem 'cucumber-rails', '1.6.0', require: false
   gem 'launchy'
   gem 'mas-templating'
+  gem 'multi_test', '0.1.2'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 3.0'
