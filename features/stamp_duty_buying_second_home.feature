@@ -17,16 +17,16 @@ Examples:
   | 39000   | 0          |
   | 40000   | 1,200      |
   | 125000  | 3,750      |
-  | 185000  | 6,750      |
-  | 275000  | 12,000     |
-  | 300019  | 14,001     |
-  | 310000  | 14,800     |
-  | 400012  | 22,000     |
-  | 490000  | 29,200     |
-  | 510000  | 30,800     |
-  | 937000  | 65,560     |
-  | 988882  | 72,304     |
-  | 2100000 | 228,750    |
+  | 185000  | 5,550      |
+  | 275000  | 9,500      |
+  | 300019  | 11,501     |
+  | 310000  | 12,300     |
+  | 400012  | 19,500     |
+  | 490000  | 26,700     |
+  | 510000  | 28,300     |
+  | 937000  | 63,060     |
+  | 988882  | 69,804     |
+  | 2100000 | 226,250    |
 
 Scenario Outline: stamp duty for second home
   Given I visit the Stamp Duty page
@@ -41,26 +41,26 @@ Examples:
   | 39000   | 0          |
   | 40000   | 1,200      |
   | 125000  | 3,750      |
-  | 185000  | 6,750      |
-  | 275000  | 12,000     |
-  | 300019  | 14,001     |
-  | 310000  | 14,800     |
-  | 400012  | 22,000     |
-  | 490000  | 29,200     |
-  | 510000  | 30,800     |
-  | 937000  | 65,560     |
-  | 988882  | 72,304     |
-  | 2100000 | 228,750    |
+  | 185000  | 5,550      |
+  | 275000  | 9,500      |
+  | 300019  | 11,501     |
+  | 310000  | 12,300     |
+  | 400012  | 19,500     |
+  | 490000  | 26,700     |
+  | 510000  | 28,300     |
+  | 937000  | 63,060     |
+  | 988882  | 69,804     |
+  | 2100000 | 226,250    |
 
 Scenario: I recalculate for second home
   Given I visit the Stamp Duty page
   When I enter my house price with "260000"
   And I select to calculate for a second home
   And I click next
-  And I see the stamp duty I will have to pay is "£10,800"
+  And I see the stamp duty I will have to pay is "£8,300"
   Then I reenter my house price with "126000"
   And I click next again
-  And I see the stamp duty I will have to pay is "£3,800"
+  And I see the stamp duty I will have to pay is "£3,780"
 
 @javascript
 Scenario: I recalculate for second home
@@ -68,7 +68,7 @@ Scenario: I recalculate for second home
   When I enter my house price with "260000"
   And I select to calculate for a second home
   And I click next
-  And I see the stamp duty I will have to pay is "£10,800"
+  And I see the stamp duty I will have to pay is "£8,300"
   Then I reenter my house price with "126000"
   And I click next again
-  And I see the stamp duty I will have to pay is "£3,800"
+  And I see the stamp duty I will have to pay is "£3,780"

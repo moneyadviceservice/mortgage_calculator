@@ -24,14 +24,14 @@ module MortgageCalculator
 
     describe '#ftb_threshold' do
       it 'returns the first time buyer threshold formatted with a currency sign' do
-        expect(ftb_threshold).to eq('£500,000')
+        expect(ftb_threshold).to eq('£625,000')
       end
     end
 
     describe '#calculator_config_json' do
       it 'it sets first threshold to the correct value' do
         config = JSON.parse(calculator_config_json)
-        expect(config["standard"].first["threshold"]).to eq(125_000)
+        expect(config["standard"].first["threshold"]).to eq(250_000)
       end
     end
   end
