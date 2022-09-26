@@ -1,6 +1,5 @@
 cy:
   stamp_duty:
-    update_message: "Newidiodd cyfraddau treth stamp yn Lloegr a Gogledd Iwerddon ar 23 Medi ac rydym yn gweithio i ddiweddaru ein cyfrifiannell."
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
