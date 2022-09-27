@@ -1,6 +1,5 @@
 en:
   stamp_duty:
-    update_message: "Stamp duty rates in England and Northern Ireland changed on 23 September and we're working to update our calculator."
     meta:
       title: "Stamp Duty Calculator - Work out the new updated Stamp Duty Land Tax rates"
       description: "Use our Stamp Duty calculator to get an estimate of how much Stamp Duty Land Tax you’ll need to pay on your new home based on the new updated rates"
@@ -58,9 +57,39 @@ en:
     how_calculated_table_second: "The table below shows the rates of stamp duty for someone buying an <b>additional property or second home would pay</b>."
     how_calculated_additional: "If the property is an additional property or second home there will be an extra 3% to pay on top of the relevant standard rates."
     how_calculated_extra_ftb: |
-      <p>First time buyers paying between £300,000 and £500,000 will pay SDLT at 5% on the amount of the purchase price in excess of £300,000. First time buyers purchasing property for more than £500,000 will not be entitled to any relief and will pay SDLT at the normal rates.</p>
+      <p>Eligible first-time buyers paying between £425,000 and £625,000 will pay SDLT at 5% on the amount of the purchase price more than £425,000.</p>
+      <p>Homes costing less than £425,000 will pay no stamp duty at all.</p>
+      <p>First time buyers purchasing property for more than £625,000 will not be entitled to any relief and will pay SDLT at the standard rates.</p>
+      <p>The relief must be claimed in an SDLT return.</p>
       <p>A first-time buyer is defined as an individual or individuals who have never owned an interest in a residential property in the United Kingdom or anywhere else in the world and who intends to occupy the property as their main residence. This includes acquisitions by inheritance or gift.</p>
-      <p>First time buyers purchasing property for more than £500,000 will not be entitled to any relief and will pay SDLT at the normal rates. The relief must be claimed in an SDLT return.</p>
+      <p>You are eligible if you and anyone else you are buying with are first-time buyers.</p>
+      <p>Standard rates of Stamp Duty are shown below:</p>
+      <table class="mortgagecalc__table stamp-duty__table">
+        <thead>
+          <tr>
+            <th class="mortgagecalc__table__price">Purchase price of property</th>
+            <th class="mortgagecalc__table__rate">Rate of Stamp Duty</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="mortgagecalc__table__price">£0 - £250,000</td>
+              <td class="mortgagecalc__table__rate">0%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">£250,001 - £925,000</td>
+              <td class="mortgagecalc__table__rate">5%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">£925,001 - £1,500,000</td>
+              <td class="mortgagecalc__table__rate">10%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">Over £1.5 million</td>
+              <td class="mortgagecalc__table__rate">12%</td>
+            </tr>
+        </tbody>
+      </table>
     how_calculated_extra_second: |
       <p>* You must pay the higher Stamp Duty Land Tax (SDLT) rates when you buy a residential property (or a part of one) for £40,000 or more, if all the following apply: </p>
       <ul>

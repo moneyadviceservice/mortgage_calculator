@@ -1,6 +1,5 @@
 cy:
   stamp_duty:
-    update_message: "Newidiodd cyfraddau treth stamp yn Lloegr a Gogledd Iwerddon ar 23 Medi ac rydym yn gweithio i ddiweddaru ein cyfrifiannell."
     meta:
       title: "Cyfrifiannell Treth Stamp - Cyfrifwch y cyfraddau newydd a ddiweddarwyd ar gyfer Treth Dir y Doll Stamp"
       description: "Defnyddiwch ein cyfrifiannell Treth Stamp i gael amcangyfrif o faint o Dreth Dir y Doll Stamp y bydd angen i chi ei thalu ar eich cartref newydd yn seiliedig ar y cyfraddau newydd a ddiweddarwyd"
@@ -58,9 +57,39 @@ cy:
     how_calculated_table_second: "Mae’r tabl isod yn dangos y cyfraddau treth stamp y byddai rhywun sy’n prynu <b>eiddo ychwanegol neu ail gartref yn ei dalu.</b>"
     how_calculated_additional: "Os yw'r eiddo'n eiddo ychwanegol neu'n ail gartref bydd 3% ychwanegol i'w dalu ar ben y cyfraddau safonol perthnasol."
     how_calculated_extra_ftb: |
-      <p>Bydd prynwyr tro cyntaf sy'n talu rhwng £300,000 a £500,000 yn talu SDLT ar 5% ar swm y pris prynu sy'n fwy na £300,000. Ni fydd gan brynwyr tro cyntaf sy’n prynu eiddo am fwy na £500,000 hawl i unrhyw ryddhad a byddant yn talu SDLT ar y cyfraddau arferol.</p>
-      <p>Diffinnir prynwr tro cyntaf fel unigolyn neu unigolion nad ydynt erioed wedi bod yn berchen ar fuddiant mewn eiddo preswyl yn y Deyrnas Unedig neu unrhyw le arall yn y byd ac sy’n bwriadu byw yn yr eiddo fel eu prif breswylfa. Mae hyn yn cynnwys caffaeliadau trwy etifeddiaeth neu rodd.</p>
-      <p>Ni fydd gan brynwyr tro cyntaf sy’n prynu eiddo am fwy na £500,000 hawl i unrhyw ryddhad a byddant yn talu SDLT ar y cyfraddau arferol. Rhaid hawlio'r rhyddhad ar ffurflen SDLT.</p>
+      <p>Bydd prynwyr tro cyntaf cymwys sy’n talu rhwng £425,000 a £625,000 yn talu SDLT ar 5% ar swm y pris pryniant dros £425,000.</p>
+      <p>Ni fydd tai sydd yn costio llai na £425,000 yn talu treth stamp.</p>
+      <p>Ni fydd prynwyr tro cyntaf sy’n prynu eiddo am dros £625,000 yn gymwys am unrhyw ryddhad a byddant yn talu SDLT ar y cyfraddau arferol.</p>
+      <p>Rhaid hawlio’r rhyddhad mewn ffurflen SDLT.</p>
+      <p>Diffinnir prynwr tro cyntaf fel unigolyn neu unigolion sydd erioed wedi perchen ar fuddiant mewn eiddo preswyl yn y Deyrnas Unedig nac unrhyw le arall yn y byd ac sy’n bwriadu byw yn yr eiddo fel eu prif breswylfa. Mae hwn yn cynnwys caffaeliadau trwy etifeddiaeth neu rodd.</p>
+      <p>Rydych yn gymwys os ydych chi ac unrhyw un arall rydych yn ei brynu gyda nhw yn brynwyr tro cyntaf.</p>
+      <p>Dangosir cyfraddau safonol Treth Stamp isod:</p>
+      <table class="mortgagecalc__table stamp-duty__table">
+        <thead>
+          <tr>
+            <th class="mortgagecalc__table__price">Pris prynu'r eiddo</th>
+            <th class="mortgagecalc__table__rate">Cyfradd Treth Stamp</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="mortgagecalc__table__price">£0 - £250,000</td>
+              <td class="mortgagecalc__table__rate">0%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">£250,001 - £925,000</td>
+              <td class="mortgagecalc__table__rate">5%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">£925,001 - £1,500,000</td>
+              <td class="mortgagecalc__table__rate">10%</td>
+            </tr>
+            <tr>
+              <td class="mortgagecalc__table__price">Dros £1.5 miliwn</td>
+              <td class="mortgagecalc__table__rate">12%</td>
+            </tr>
+        </tbody>
+      </table>
     how_calculated_extra_second: |
       <p>* Rhaid i chi dalu’r cyfraddau Treth Tir Treth Stamp (SDLT) uwch pan fyddwch yn prynu eiddo preswyl (neu ran o un) am £40,000 neu fwy, os yw’r canlynol i gyd yn berthnasol: </p>
       <ul>

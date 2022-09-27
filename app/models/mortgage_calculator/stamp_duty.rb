@@ -7,21 +7,18 @@ module MortgageCalculator
     # England and Northern Ireland
 
     FIRST_TIME_BUYER_BANDS = [
-      { threshold: 300_000, rate: 0 },
-      { threshold: 925_000, rate: 5 },
-      { threshold: 1_500_000, rate: 10 },
-      { threshold: nil, rate: 12 }
+      { threshold: 425_000, rate: 0 },
+      { threshold: 625_000, rate: 5 }
     ].freeze
 
     STANDARD_BANDS = [
-      { threshold: 125_000, rate: 0 },
-      { threshold: 250_000, rate: 2 },
+      { threshold: 250_000, rate: 0 },
       { threshold: 925_000, rate: 5 },
       { threshold: 1_500_000, rate: 10 },
       { threshold: nil, rate: 12 }
     ].freeze
 
-    FIRST_TIME_BUYER_THRESHOLD = 500_000
+    FIRST_TIME_BUYER_THRESHOLD = 625_000
     SECOND_HOME_ADDITIONAL_TAX = 3
 
     def first_time_ineligible?
