@@ -1,5 +1,6 @@
 cy:
   land_transaction_tax:
+    banner_message: "This calculator is correct for property transactions completed up to and including 9 October 2022. It will be updated with the new rates on 10 October 2022 for transactions on and after this date."
     meta:
       title: "Treth Trafodiadau Tir (LTT) - Cyfrifiannell Treth Stamp Cymru"
       description: "Defnyddiwch ein cyfrifiannell Treth Trafodiadau Tir (LTT) i gyfrifo faint o LTT (Treth Stamp yn flaenorol) y bydd angen ichi ei thalu ar eich cartref yn yr Alban"
