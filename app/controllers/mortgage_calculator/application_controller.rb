@@ -7,6 +7,11 @@ module MortgageCalculator
     helper 'mortgage_calculator/ui_components'
     helper_method :disable_responsiveness?
 
+    def show_update_banner?
+      false
+    end
+    helper_method :show_update_banner?
+
     protected
 
     def disable_responsiveness?

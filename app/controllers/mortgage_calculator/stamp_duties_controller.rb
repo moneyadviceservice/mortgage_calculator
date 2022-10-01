@@ -18,5 +18,10 @@ module MortgageCalculator
       ['scotland', 'wales']
     end
     helper_method :other_countries
+
+    def show_update_banner?
+      true
+    end
+    helper_method :show_update_banner?
   end
 end
