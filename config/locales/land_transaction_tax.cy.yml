@@ -9,7 +9,7 @@ cy:
     tooltip_hide: cuddio cymorth
     tool_name: "treth-trafodiadau-tir"
     heading: "Cyfrifiannell Treth Trafodiadau Tir"
-    heading_description: "Mae’n rhaid i chi dalu Treth Trafodiadau Tir os ydych yn prynu eiddo neu dir dros bris penodol yng Nghymru. Y trothwy presennol yw £180,000 ar gyfer eiddo preswyl.Efallai bydd cyfraddau preswyl uwch yn berthnasol os ydych eisoes yn berchen ar un neu fwy eiddo preswyl. Mae’n rhaid i chi anfon ffurflen dychweliad LTT i Awdurdod Refeniw Cymru a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad)."
+    heading_description: "Mae’n rhaid i chi dalu Treth Trafodiadau Tir os ydych yn prynu eiddo neu dir dros bris penodol yng Nghymru. Y trothwy presennol yw £225,000 ar gyfer eiddo preswyl.Efallai bydd cyfraddau preswyl uwch yn berthnasol os ydych eisoes yn berchen ar un neu fwy eiddo preswyl. Mae’n rhaid i chi anfon ffurflen dychweliad LTT i Awdurdod Refeniw Cymru a thalu'r dreth cyn pen 30 diwrnod o'r diwrnod ar ôl i chi gwblhau (neu ddyddiad effeithiol arall y trafodiad)."
     subtitle_paras_html: |
       <p>Mae rhaid i chi dalu Treth Trafodiadau Tir os byddwch yn prynu eiddo neu dir dros bris penodol yng Nghymru.</p>
       <p>Bydd y gyfrifiannell hon yn eich helpu i gyfrifo faint mae rhaid i chi ei dalu os ydych yn prynu eiddo preswyl.</p>
@@ -43,7 +43,7 @@ cy:
     how_calculated_table_next: "Mae'r tabl cyntaf isod yn dangos y cyfraddau LTT byddai rhywun sy'n <b>prynu eu cartref nesaf</b> yn ei dalu."
     how_calculated_table_second: "Mae'r tabl cyntaf isod yn dangos y cyfraddau LTT byddai rhywun sy'n <b>prynu eu cartref nesaf</b> yn ei dalu."
     how_calculated_additional: "Os yw’r eiddo’n <b>eiddo ychwanegol neu’n ail gartref</b>, efallai y bydd y cyfraddau preswyl uwch a ddangosir yn yr ail dabl isod yn berthnasol."
-    how_calculated_extra: "Ar gyfer eiddo sengl mae LTT wedi'i heithrio ar y £180,000 cyntaf."
+    how_calculated_extra: "Ar gyfer eiddo sengl mae LTT wedi'i heithrio ar y £225,000 cyntaf."
     describe_price_field: "Gwnewch yn siŵr eich bod yn clirio'r rhif presennol cyn rhoi un newydd i mewn."
     activemodel:
       attributes:
