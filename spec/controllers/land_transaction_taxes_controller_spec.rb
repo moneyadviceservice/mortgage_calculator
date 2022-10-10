@@ -10,18 +10,13 @@ module MortgageCalculator
           [
             {
               start: 0,
-              end: 180_000,
+              end: 225_000,
               rate: 0
             },
             {
-              start: 180_000.01,
-              end: 250_000,
-              rate: 3.5
-            },
-            {
-              start: 250_000.01,
+              start: 225_000.01,
               end: 400_000,
-              rate: 5
+              rate: 6
             },
             {
               start: 400_000.01,
@@ -99,7 +94,6 @@ module MortgageCalculator
           expect(response).to render_template('show')
         end
       end
-
     end
   end
 end

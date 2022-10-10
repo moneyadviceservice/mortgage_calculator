@@ -1,6 +1,6 @@
 en:
   land_transaction_tax:
-    banner_message: "This calculator is correct for property transactions completed up to and including 9 October 2022. It will be updated with the new rates on 10 October 2022 for transactions on and after this date."
+    banner_message: "Land transaction tax rates in Wales changed on 10 October 2022 and we updated this calculator with the new rates."
     meta:
       title: "Land Transaction Tax (LTT) - Welsh Stamp Duty Calculator"
       description: "Use our Land Transaction Tax (LTT) calculator to calculate how much LTT (formerly Stamp Duty) you'll need to pay on your home in Scotland"
@@ -9,7 +9,7 @@ en:
     tooltip_hide: hide help
     tool_name: "land-transaction-tax-calculator"
     heading: "Land Transaction Tax (LTT) calculator"
-    heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £180,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
+    heading_description: "You must pay Land Transaction tax if you buy a property or land over a certain price in Wales. The current threshold is £225,000 for residential properties. Higher residential rates may apply if you already own one or more residential properties. However, if you are replacing your main residence the higher rates may not apply.  You must send an LTT return to Welsh Revenue Authority and pay the tax within 30 days of the day after completion (or other effective date of the transaction)."
     subtitle_paras_html: |
       <p>You must pay Land Transaction Tax if you buy a property or land over a certain price in Wales.</p>
       <p>This calculator will help you work out how much you have to pay if you are buying residential property.</p>
@@ -42,7 +42,7 @@ en:
     how_calculated_table_next: "The table below shows the rates of Land Transaction Tax someone <b>buying their next home</b> would pay."
     how_calculated_table_second: "The table below shows the rates of Land Transaction Tax someone <b>buying their next home</b> would pay."
     how_calculated_additional: "If the property is an <b>additional property or second home</b>, the higher residential rates shown in the second table below may apply."
-    how_calculated_extra: "For a single property LTT is exempt on the first £180,000."
+    how_calculated_extra: "For a single property LTT is exempt on the first £225,000."
     describe_price_field: Make sure to clear the existing number before entering the new number.
     activemodel:
       attributes:

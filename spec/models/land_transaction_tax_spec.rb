@@ -65,12 +65,12 @@ describe MortgageCalculator::LandTransactionTax do
     { price: 39_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 39_000 },
     { price: 40_000,  buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 40_000 },
     { price: 179_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 179_000 },
-    { price: 190_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 350,  percentage_tax: 0.18,   precision: 0.1, total_due: 190_350 },
-    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 2950,  percentage_tax: 1.13,   precision: 0.1, total_due: 262_950 },
-    { price: 333_333, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 6616.65,  percentage_tax: 1.98,   precision: 0.1, total_due: 339_949.65 },
-    { price: 467_895, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 15042.125,  percentage_tax: 3.21,   precision: 0.1, total_due: 482_937.125 },
-    { price: 800_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 41200,  percentage_tax: 5.15,   precision: 0.1, total_due: 841_200 },
-    { price: 2_000_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 171200,  percentage_tax: 8.56,   precision: 0.1, total_due: 2_171_200 }
+    { price: 190_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 0,  percentage_tax: 0,   precision: 0.1, total_due: 190_000 },
+    { price: 260_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 2100,  percentage_tax: 0.80,   precision: 0.1, total_due: 262_100 },
+    { price: 333_333, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 6499.98,  percentage_tax: 1.94,   precision: 0.1, total_due: 339_832.98 },
+    { price: 467_895, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 15592.125,  percentage_tax: 3.33,   precision: 0.1, total_due: 483_487.125 },
+    { price: 800_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 41750,  percentage_tax: 5.15,   precision: 0.1, total_due: 841_750 },
+    { price: 2_000_000, buyer_type: 'isNextHome', phase: :phase_3, tax_due: 171750,  percentage_tax: 8.56,   precision: 0.1, total_due: 2_171_750 }
   ]
 
   describe 'calculation scenarios' do

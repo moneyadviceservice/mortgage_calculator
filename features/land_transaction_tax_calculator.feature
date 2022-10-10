@@ -15,19 +15,12 @@ Feature: Land Transaction Tax Calculator
 
   Examples:
     | price   | duty       | effective tax | completion date |
-    | 39000   | 0          | 0.00%         | 2021-7-21       |
-    | 40000   | 0          | 0.00%         | 2021-7-21       |
-    | 179000  | 0          | 0.00%         | 2021-7-21       |
-    | 190000  | 350        | 0.18%         | 2021-7-21       |
-    | 260000  | 2,950      | 1.13%         | 2021-7-21       |
-    | 333333  | 6,616.65   | 1.98%         | 2021-7-21       |
-    | 467895  | 15,042.13  | 3.21%         | 2021-7-21       |
-    | 800000  | 41,200     | 5.15%         | 2021-7-21       |
-    | 2000000 | 171,200    | 8.56%         | 2021-7-21       |
-    | 39000   | 0          | 0%            | 2021-4-21       |
-    | 40000   | 0          | 0%            | 2021-4-21       |
-    | 145000  | 0          | 0%            | 2021-4-21       |
-
+    | 190000  | 0          | 0.00%         | 2021-7-21       |
+    | 260000  | 2,100      | 0.81%         | 2021-7-21       |
+    | 333333  | 6,499.98   | 1.95%         | 2021-7-21       |
+    | 467895  | 15,592.13  | 3.33%         | 2021-7-21       |
+    | 800000  | 41,750     | 5.22%         | 2021-7-21       |
+    | 2000000 | 171,750    | 8.59%         | 2021-7-21       |
 
   @javascript
   Scenario Outline: tax for next home
@@ -38,39 +31,32 @@ Feature: Land Transaction Tax Calculator
 
   Examples:
     | price   | duty       | effective tax | completion date |
-    | 39000   | 0          | 0.00%         | 2021-7-21       |
-    | 40000   | 0          | 0.00%         | 2021-7-21       |
-    | 179000  | 0          | 0.00%         | 2021-7-21       |
-    | 190000  | 350        | 0.18%         | 2021-7-21       |
-    | 260000  | 2,950      | 1.13%         | 2021-7-21       |
-    | 333333  | 6,616.65   | 1.98%         | 2021-7-21       |
-    | 467895  | 15,042.13  | 3.21%         | 2021-7-21       |
-    | 800000  | 41,200     | 5.15%         | 2021-7-21       |
-    | 2000000 | 171,200    | 8.56%         | 2021-7-21       |
-    | 39000   | 0          | 0%            | 2021-4-21       |
-    | 40000   | 0          | 0%            | 2021-4-21       |
-    | 145000  | 0          | 0%            | 2021-4-21       |
-    | 185000  | 0          | 0%            | 2021-4-21       |
+    | 190000  | 0          | 0.00%         | 2021-7-21       |
+    | 260000  | 2,100      | 0.81%         | 2021-7-21       |
+    | 333333  | 6,499.98   | 1.95%         | 2021-7-21       |
+    | 467895  | 15,592.13  | 3.33%         | 2021-7-21       |
+    | 800000  | 41,750     | 5.22%         | 2021-7-21       |
+    | 2000000 | 171,750    | 8.59%         | 2021-7-21       |
 
   Scenario: I recalculate for next home
     When I enter a house price of 275000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£3,700"
+    And I see the stamp duty I will have to pay is "£3,000"
     Then I reenter my house price with "490000"
     And I click next again
-    And I see the stamp duty I will have to pay is "£16,700"
-    And I see the effective tax rate is "3.41%"
+    And I see the stamp duty I will have to pay is "£17,250"
+    And I see the effective tax rate is "3.52%"
 
   @javascript
   Scenario: I recalculate for next home
     When I enter a house price of 275000
     And I am a next home buyer
     And I click next
-    And I see the stamp duty I will have to pay is "£3,700"
+    And I see the stamp duty I will have to pay is "£3,000"
     Then I reenter my house price with "490000"
     And I click next again
-    And I see the stamp duty I will have to pay is "£16,700"
+    And I see the stamp duty I will have to pay is "£17,250"
 
   Scenario Outline: Buy to let buyer
     Given I am buying an additional property or second home
