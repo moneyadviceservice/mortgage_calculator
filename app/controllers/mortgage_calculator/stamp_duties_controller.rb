@@ -20,7 +20,7 @@ module MortgageCalculator
     helper_method :other_countries
 
     def show_update_banner?
-      true
+      false
     end
     helper_method :show_update_banner?
   end
