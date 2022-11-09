@@ -46,8 +46,8 @@ cy:
         mortgage_calculator/land_and_buildings_transaction_tax:
           price: "Pris eiddo"
     results:
-      title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
-      second_title: "Y Treth Trafodion Tir ac Adeiladau i'w thalu yw"
+      title: "Treth Trafodiadau Tir i'w dalu yw"
+      second_title: "Treth Trafodiadau Tir i'w dalu yw"
       sentence: "Y gyfradd dreth effeithiol yw %{percentage}"
       sentence_prefix: "Y gyfradd dreth effeithiol yw"
       sentence_suffix: "%"

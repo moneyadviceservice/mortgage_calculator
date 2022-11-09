@@ -5,12 +5,6 @@
 <% end %>
 
 <div ng-controller="CalculatorCtrl" class="mortgagecalc__container stamp-duty">
-  <div class="global-alert--warning global-alert--in-page" style="margin-bottom: 1.75rem;">
-    <div class="global-alert__content-container">
-      <p class="global-alert__message"><%= t("land_transaction_tax.banner_message") %></p>
-    </div>
-  </div>
-
   <% @ltt.errors.full_messages.each do |message| %>
     <span style="color:red;"><%= message %></span>
   <% end %>
