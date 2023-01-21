@@ -23,15 +23,6 @@
     <%= javascript_include_tag "mortgage_calculator/application" %>
 <% end %>
 
-<% content_for(:javascripts) do %>
-  <% if Rails.env.production? || Rails.env.qa? %>
-    <script
-      src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
-      data-apikey="<%= MortgageCalculator.bug_snag_key %>">
-    </script>
-  <% end %>
-<% end %>
-
 <% content_for(:analytics) do %>
   <script type='text/javascript'>
     var dataLayer = dataLayer || [];
