@@ -1,7 +1,18 @@
-
 ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + "../../../spec/dummy"
 
-require 'mas/development_dependencies/cucumber/env'
+require 'cucumber/rails'
+
+require 'capybara'
+require 'capybara/poltergeist'
+require 'site_prism'
+
+Time.zone = 'London'
+
+ActionController::Base.allow_rescue = false
+
+Cucumber::Rails::Database.autorun_database_cleaner = false
+
+Capybara.javascript_driver = :poltergeist
 
 SitePrism.configure do |config|
   config.use_implicit_waits = true
@@ -29,5 +40,4 @@ def calculations
   examples = YAML.load_file(
     Rails.root.join('../../spec/fixtures/calculations.yml').to_s
     )
-
 end
