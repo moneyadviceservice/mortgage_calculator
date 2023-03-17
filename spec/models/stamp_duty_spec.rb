@@ -114,6 +114,7 @@ describe MortgageCalculator::StampDuty do
           end
         )
         end
+
         its(:total_due) { is_expected.to (scenario[:total_due] == 0 ? be_zero : eq(scenario[:total_due])) }
       end
     end
