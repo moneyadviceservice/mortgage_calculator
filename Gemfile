@@ -46,6 +46,7 @@ group :test do
   gem 'launchy'
   gem 'mas-templating'
   gem 'multi_test', '0.1.2'
+  gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'poltergeist'
   gem 'rspec-its'
   gem 'rspec_junit_formatter'

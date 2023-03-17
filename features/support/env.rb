@@ -4,6 +4,7 @@ require 'cucumber/rails'
 
 require 'capybara'
 require 'capybara/poltergeist'
+require 'phantomjs/poltergeist'
 require 'site_prism'
 
 Time.zone = 'London'
@@ -11,6 +12,10 @@ Time.zone = 'London'
 ActionController::Base.allow_rescue = false
 
 Cucumber::Rails::Database.autorun_database_cleaner = false
+
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, phantomjs: Phantomjs.path)
+end
 
 Capybara.javascript_driver = :poltergeist
 
