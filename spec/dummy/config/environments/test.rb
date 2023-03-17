@@ -1,3 +1,5 @@
+Warning.ignore(/rb_check_safe_obj will be removed in Ruby 3.0/)
+
 Dummy::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 

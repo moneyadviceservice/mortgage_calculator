@@ -24,6 +24,7 @@ gem 'bigdecimal', '1.3.5'
 gem 'bowndler', git: 'https://github.com/moneyadviceservice/bowndler'
 gem 'dough-ruby', github: 'moneyadviceservice/dough', branch: 'PostMessages_v5.45', ref: '0bf4b23a'
 gem 'meta-tags'
+gem 'warning', '~> 1.3'
 
 group :test, :development do
   gem 'better_errors'
