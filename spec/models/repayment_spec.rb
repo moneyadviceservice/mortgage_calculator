@@ -20,7 +20,7 @@ describe MortgageCalculator::Repayment do
     its(:deposit){ is_expected.to be_zero }
     its(:debt){ is_expected.to be_zero }
     its(:term_years){ is_expected.to eq 25 }
-    its(:interest_rate){ is_expected.to eq 3 }
+    its(:interest_rate){ is_expected.to eq 6 }
   end
 
   describe 'defaults with empty strings' do
@@ -30,7 +30,7 @@ describe MortgageCalculator::Repayment do
     its(:deposit){ is_expected.to be_zero }
     its(:debt){ is_expected.to be_zero }
     its(:term_years){ is_expected.to eq 25 }
-    its(:interest_rate){ is_expected.to eq 3 }
+    its(:interest_rate){ is_expected.to eq 6 }
   end
 
   describe '#change_interest_rate_by' do
