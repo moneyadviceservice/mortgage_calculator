@@ -232,7 +232,7 @@ Then(/^the remaining per month is expected to be "([^"]*)"$/) do |remaining|
 end
 
 Then(/^the amount on interest increase is expected to be "([^"]*)"$/) do |amount|
-  expect(step_three.what_if_changes).to have_content("If interest rates rise by 3%, your monthly repayment will rise to #{amount}")
+  expect(step_three.what_if_changes).to have_content("If interest rates rise by 3 percentage points, your monthly repayment will rise to #{amount}")
 end
 
 Then(/^the buffer on interest increase is expected to be "([^"]*)"$/) do |buffer|
@@ -289,7 +289,7 @@ Then(/^I should see the correct results for a single applicant$/) do
   expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('45%')
   expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('£3,181.80')
   expect(js_test? ? step_three.remaining_js : step_three.remaining).to have_text('£2,281.80')
-  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '3%' : '2%')
+  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '3 percentage points' : '2 percentage points')
   expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '£3,019.43' : '£2,103.35')
   expect(js_test? ? step_three.what_if_remaining_js : step_three.what_if_remaining).to have_text(js_test? ? '£1,580.57' : '£1,496.65')
 end
@@ -307,7 +307,7 @@ Then(/^I should be able to tweak the results by adjusting the interest rate text
   expect(step_three.total_leftover_js).to have_text('51%')
   expect(step_three.total_leftover_js).to have_text('£3,600.84')
   expect(step_three.remaining_js).to have_text('£2,700.84')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,542.99')
   expect(step_three.what_if_remaining_js).to have_text('£2,057.01')
 
@@ -327,7 +327,7 @@ Then(/^I should be able to tweak the results by adjusting the interest rate slid
   expect(step_three.total_leftover_js).to have_text('51%')
   expect(step_three.total_leftover_js).to have_text('£3,600.84')
   expect(step_three.remaining_js).to have_text('£2,700.84')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,542.99')
   expect(step_three.what_if_remaining_js).to have_text('£2,057.01')
 
@@ -347,7 +347,7 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term text
   expect(step_three.total_leftover_js).to have_text('46%')
   expect(step_three.total_leftover_js).to have_text('£3,220.03')
   expect(step_three.remaining_js).to have_text('£2,320.03')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,988.94')
   expect(step_three.what_if_remaining_js).to have_text('£1,611.06')
 
@@ -367,7 +367,7 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term slid
   expect(step_three.total_leftover_js).to have_text('46%')
   expect(step_three.total_leftover_js).to have_text('£3,220.03')
   expect(step_three.remaining_js).to have_text('£2,320.03')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,988.94')
   expect(step_three.what_if_remaining_js).to have_text('£1,611.06')
 

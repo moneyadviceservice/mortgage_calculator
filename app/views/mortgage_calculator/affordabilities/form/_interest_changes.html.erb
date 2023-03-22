@@ -1,7 +1,7 @@
 <% if @affordability.valid? %>
   <p ng-hide="js" class="results t-what-if-changes">
     <%= t "affordability.interest_changer.changes_by_would_increase_html",
-           percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
+           percent: interest_rate_change_amount,
            repayment: "<strong>#{number_to_currency @changer.monthly_payment}</strong>".html_safe %>
   </p>
 
@@ -13,7 +13,7 @@
 
 <p class="rendered-from-js results t-what-if-changes-js">
   <%= t "affordability.interest_changer.changes_by_would_increase_html",
-         percent: "<strong>#{number_to_percentage interest_rate_change_amount, precision: 0}</strong>".html_safe,
+         percent: interest_rate_change_amount,
          repayment: "<strong>{{ affordability.monthlyRepaymentAfterDefaultInterestRateChange() | customCurrency:'£' }}</strong>".html_safe %>
 </p>
 

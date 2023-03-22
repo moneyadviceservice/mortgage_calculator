@@ -138,7 +138,7 @@ en:
         affordability_html: 'Your budget is <span class="risk__accent">not overstretched</span> and you can meet these repayments. But think ahead - if interest rates rise, could you afford this mortgage?'
     interest_changer:
       title: "What if interest rates rise?"
-      changes_by_would_increase_html: "If interest rates rise by %{percent}, your monthly repayment will rise to %{repayment}."
+      changes_by_would_increase_html: "If interest rates rise by <strong>%{percent} percentage points</strong>, your monthly repayment will rise to %{repayment}."
       remaining_html: "Your remaining budget will be %{remaining} per month."
     monthly_repayment:
       estimated_html: 'Your estimated mortgage repayments per month will be approximately: <span class="accent">%{repayment}</span>'
