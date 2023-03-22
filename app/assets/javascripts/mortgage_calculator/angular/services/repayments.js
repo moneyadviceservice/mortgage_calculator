@@ -1,7 +1,7 @@
 'use strict';
 
 App.factory('Repayments', function() {
-  var DEFAULT_ANNUAL_INTEREST_RATE = 3
+  var DEFAULT_ANNUAL_INTEREST_RATE = 6
     , INTEREST_RATE_STEP           = 0.25
     , MIN_ANNUAL_INTEREST_RATE     = 1
     , MAX_ANNUAL_INTEREST_RATE     = 15

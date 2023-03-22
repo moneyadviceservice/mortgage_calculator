@@ -9,20 +9,20 @@ describe MortgageCalculator::InterestOnly do
     its(:price){ is_expected.to be_zero }
     its(:deposit){ is_expected.to be_zero }
     its(:term_years){ is_expected.to eq 25 }
-    its(:interest_rate){ is_expected.to eq 3 }
+    its(:interest_rate){ is_expected.to eq 6 }
   end
 
   describe 'mortgage attributes' do
     its(:price){ is_expected.to eq 120000 }
     its(:deposit){ is_expected.to eq 20000 }
     its(:term_years){ is_expected.to eq 25 }
-    its(:interest_rate){ is_expected.to eq 3 }
+    its(:interest_rate){ is_expected.to eq 6 }
   end
 
   describe 'change_interest_rate_by' do
     before{ subject.change_interest_rate_by(1) }
 
-    its(:interest_rate){ is_expected.to eq 4 }
+    its(:interest_rate){ is_expected.to eq 7 }
   end
 
   describe 'with custom inputs' do
@@ -34,8 +34,8 @@ describe MortgageCalculator::InterestOnly do
 
   context 'methods' do
     its(:debt){ is_expected.to eq 100000 }
-    its(:monthly_payment){ is_expected.to eq 250 }
-    its(:total_interest){ is_expected.to eq 75000 }
-    its(:total_payable){ is_expected.to eq 175000 }
+    its(:monthly_payment){ is_expected.to eq 500 }
+    its(:total_interest){ is_expected.to eq 150000 }
+    its(:total_payable){ is_expected.to eq 250000 }
   end
 end

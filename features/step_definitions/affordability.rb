@@ -8,7 +8,7 @@ end
 When(/^I enter all details for single applicant$/) do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
-  step_one.monthly_net_income.set "6000"
+  step_one.monthly_net_income.set "7000"
   step_one.next.click
   step_two.credit_repayments.set "300"
   step_two.utilities.set "300"
@@ -232,7 +232,7 @@ Then(/^the remaining per month is expected to be "([^"]*)"$/) do |remaining|
 end
 
 Then(/^the amount on interest increase is expected to be "([^"]*)"$/) do |amount|
-  expect(step_three.what_if_changes).to have_content("If interest rates rise by 3%, your monthly repayment will rise to #{amount}")
+  expect(step_three.what_if_changes).to have_content("If interest rates rise by 3 percentage points, your monthly repayment will rise to #{amount}")
 end
 
 Then(/^the buffer on interest increase is expected to be "([^"]*)"$/) do |buffer|
@@ -282,16 +282,16 @@ Given(/^I visit the Syndicated Affordability page$/) do
 end
 
 Then(/^I should see the correct results for a single applicant$/) do
-  expect(js_test? ? step_three.repayments_js : step_three.repayments).to have_text('£1,706.21')
-  expect(js_test? ? step_three.risk_chart_js : step_three.risk_chart).to have_text('53%')
-  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('53%')
-  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('£3,206.21')
-  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('47%')
-  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('£2,793.79')
-  expect(js_test? ? step_three.remaining_js : step_three.remaining).to have_text('£1,893.79')
-  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '3%' : '2%')
-  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '£2,318.20' : '£2,103.35')
-  expect(js_test? ? step_three.what_if_remaining_js : step_three.what_if_remaining).to have_text(js_test? ? '£1,281.80' : '£1,496.65')
+  expect(js_test? ? step_three.repayments_js : step_three.repayments).to have_text('£2,318.20')
+  expect(js_test? ? step_three.risk_chart_js : step_three.risk_chart).to have_text('55%')
+  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('55%')
+  expect(js_test? ? step_three.essentials_js : step_three.essentials).to have_text('£3,818.20')
+  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('45%')
+  expect(js_test? ? step_three.total_leftover_js : step_three.total_leftover).to have_text('£3,181.80')
+  expect(js_test? ? step_three.remaining_js : step_three.remaining).to have_text('£2,281.80')
+  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '3 percentage points' : '2 percentage points')
+  expect(js_test? ? step_three.what_if_changes_js : step_three.what_if_changes).to have_text(js_test? ? '£3,019.43' : '£2,103.35')
+  expect(js_test? ? step_three.what_if_remaining_js : step_three.what_if_remaining).to have_text(js_test? ? '£1,580.57' : '£1,496.65')
 end
 
 # Only runs as a javascript test
@@ -301,15 +301,15 @@ Then(/^I should be able to tweak the results by adjusting the interest rate text
   step_three.interest_rate.set(4)
 
   expect(step_three.repayments_js).to have_text('£1,899.16')
-  expect(step_three.risk_chart_js).to have_text('57%')
-  expect(step_three.essentials_js).to have_text('57%')
+  expect(step_three.risk_chart_js).to have_text('49%')
+  expect(step_three.essentials_js).to have_text('49%')
   expect(step_three.essentials_js).to have_text('£3,399.16')
-  expect(step_three.total_leftover_js).to have_text('43%')
-  expect(step_three.total_leftover_js).to have_text('£2,600.84')
-  expect(step_three.remaining_js).to have_text('£1,700.84')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.total_leftover_js).to have_text('51%')
+  expect(step_three.total_leftover_js).to have_text('£3,600.84')
+  expect(step_three.remaining_js).to have_text('£2,700.84')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,542.99')
-  expect(step_three.what_if_remaining_js).to have_text('£1,057.01')
+  expect(step_three.what_if_remaining_js).to have_text('£2,057.01')
 
   step_three.interest_rate_slider.set(3)
 end
@@ -321,15 +321,15 @@ Then(/^I should be able to tweak the results by adjusting the interest rate slid
   step_three.interest_rate_slider.set(4)
 
   expect(step_three.repayments_js).to have_text('£1,899.16')
-  expect(step_three.risk_chart_js).to have_text('57%')
-  expect(step_three.essentials_js).to have_text('57%')
+  expect(step_three.risk_chart_js).to have_text('49%')
+  expect(step_three.essentials_js).to have_text('49%')
   expect(step_three.essentials_js).to have_text('£3,399.16')
-  expect(step_three.total_leftover_js).to have_text('43%')
-  expect(step_three.total_leftover_js).to have_text('£2,600.84')
-  expect(step_three.remaining_js).to have_text('£1,700.84')
-  expect(step_three.what_if_changes_js).to have_text('3%')
+  expect(step_three.total_leftover_js).to have_text('51%')
+  expect(step_three.total_leftover_js).to have_text('£3,600.84')
+  expect(step_three.remaining_js).to have_text('£2,700.84')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
   expect(step_three.what_if_changes_js).to have_text('£2,542.99')
-  expect(step_three.what_if_remaining_js).to have_text('£1,057.01')
+  expect(step_three.what_if_remaining_js).to have_text('£2,057.01')
 
   step_three.interest_rate_slider.set(3)
 end
@@ -340,16 +340,16 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term text
 
   step_three.term_years.set(26)
 
-  expect(step_three.repayments_js).to have_text('£1,662.21')
-  expect(step_three.risk_chart_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('£3,162.21')
-  expect(step_three.total_leftover_js).to have_text('47%')
-  expect(step_three.total_leftover_js).to have_text('£2,837.79')
-  expect(step_three.remaining_js).to have_text('£1,937.79')
-  expect(step_three.what_if_changes_js).to have_text('3%')
-  expect(step_three.what_if_changes_js).to have_text('£2,279.97')
-  expect(step_three.what_if_remaining_js).to have_text('£1,320.03')
+  expect(step_three.repayments_js).to have_text('£2,279.97')
+  expect(step_three.risk_chart_js).to have_text('54%')
+  expect(step_three.essentials_js).to have_text('54%')
+  expect(step_three.essentials_js).to have_text('£3,779.97')
+  expect(step_three.total_leftover_js).to have_text('46%')
+  expect(step_three.total_leftover_js).to have_text('£3,220.03')
+  expect(step_three.remaining_js).to have_text('£2,320.03')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
+  expect(step_three.what_if_changes_js).to have_text('£2,988.94')
+  expect(step_three.what_if_remaining_js).to have_text('£1,611.06')
 
   step_three.term_years.set(25)
 end
@@ -360,16 +360,16 @@ Then(/^I should be able to tweak the results by adjusting the mortgage term slid
 
   step_three.term_years_slider.set(26)
 
-  expect(step_three.repayments_js).to have_text('£1,662.21')
-  expect(step_three.risk_chart_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('53%')
-  expect(step_three.essentials_js).to have_text('£3,162.21')
-  expect(step_three.total_leftover_js).to have_text('47%')
-  expect(step_three.total_leftover_js).to have_text('£2,837.79')
-  expect(step_three.remaining_js).to have_text('£1,937.79')
-  expect(step_three.what_if_changes_js).to have_text('3%')
-  expect(step_three.what_if_changes_js).to have_text('£2,279.97')
-  expect(step_three.what_if_remaining_js).to have_text('£1,320.03')
+  expect(step_three.repayments_js).to have_text('£2,279.97')
+  expect(step_three.risk_chart_js).to have_text('54%')
+  expect(step_three.essentials_js).to have_text('54%')
+  expect(step_three.essentials_js).to have_text('£3,779.97')
+  expect(step_three.total_leftover_js).to have_text('46%')
+  expect(step_three.total_leftover_js).to have_text('£3,220.03')
+  expect(step_three.remaining_js).to have_text('£2,320.03')
+  expect(step_three.what_if_changes_js).to have_text('3 percentage points')
+  expect(step_three.what_if_changes_js).to have_text('£2,988.94')
+  expect(step_three.what_if_remaining_js).to have_text('£1,611.06')
 
   step_three.term_years.set(25)
 end
@@ -381,7 +381,7 @@ end
 When("I enter all details for single applicant at medium risk") do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
-  step_one.monthly_net_income.set "6000"
+  step_one.monthly_net_income.set "7000"
   step_one.next.click
   step_two.credit_repayments.set "300"
   step_two.utilities.set "300"
@@ -398,7 +398,7 @@ end
 When("I enter all details for single applicant at low risk") do
   step_one.annual_income.set "100000"
   step_one.extra_income.set "10000"
-  step_one.monthly_net_income.set "6000"
+  step_one.monthly_net_income.set "7000"
   step_one.next.click
   step_two.next.click
 end

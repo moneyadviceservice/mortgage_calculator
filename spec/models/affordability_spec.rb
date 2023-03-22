@@ -183,7 +183,7 @@ module MortgageCalculator
 
     describe '#risk_percentage' do
       it "is (monthly mortgage repayments + commited costs) / take home" do
-        expect(subject.risk_percentage.to_i).to eql(41)
+        expect(subject.risk_percentage.to_i).to eql(52)
       end
 
       context 'when over 100%' do
@@ -253,7 +253,7 @@ module MortgageCalculator
 
     describe '#remaining' do
       it 'returns remaining amount per month' do
-        expect(subject.remaining.to_i).to eql(2914)
+        expect(subject.remaining.to_i).to eql(2273)
       end
     end
 
@@ -303,13 +303,13 @@ module MortgageCalculator
 
     describe '#budget_outgoing' do
       it 'returns mortgage repayment + fix + committed costs' do
-        expect(subject.budget_outgoing.to_i).to eql(2485)
+        expect(subject.budget_outgoing.to_i).to eql(3126)
       end
     end
 
     describe '#budget_leftover' do
       it 'returns net monthly - budget_outgoing' do
-        expect(subject.budget_leftover.to_i).to eql(3514)
+        expect(subject.budget_leftover.to_i).to eql(2873)
       end
     end
 

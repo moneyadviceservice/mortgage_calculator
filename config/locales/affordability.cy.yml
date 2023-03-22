@@ -138,7 +138,7 @@ cy:
         affordability_html: 'Nid yw’ch cyllideb <span class="risk__accent">wedi ei hestyn yn ormodol</span> a gallwch wneud yr ad-daliadau hyn. Ond cynlluniwch ymlaen – os yw cyfraddau llog yn codi, a allech chi fforddio’r morgais hwn?'
     interest_changer:
       title: "Beth os bydd cyfraddau llog yn codi?"
-      changes_by_would_increase_html: "Os yw cyfraddau llog yn codi o %{percent}, bydd eich ad-daliad misol yn codi i %{repayment}."
+      changes_by_would_increase_html: "Os yw cyfraddau llog yn codi o <strong>%{percent} pwynt canran</strong>, bydd eich ad-daliad misol yn codi i %{repayment}."
       remaining_html: "Bydd eich cyllideb sy’n weddill yn %{remaining} y mis."
     monthly_repayment:
       estimated_html: 'Bydd eich ad-daliadau morgais amcangyfrifol y mis tua: <span class="accent">%{repayment}</span>'
